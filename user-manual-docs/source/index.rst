@@ -15,6 +15,7 @@ Seabot2 documentation
    dev-guide/upload_install_seabot
    dev-guide/start_mission
    dev-guide/debug_seabot2
+   api-link
 
 .. toctree::
    :maxdepth: 2

@@ -1,0 +1,8 @@
+C++ API Reference
+=================
+
+The full generated C++ API reference is available here:
+
+`Open the Seabot2 ROS2 API (Sphinx + Breathe + Exhale) <../../../api-docs/build/html/index.html>`_
+
+`Open the Seabot2 ROS2 API (Doxygen) <../../../api-docs/source/_doxygen/html/index.html>`_

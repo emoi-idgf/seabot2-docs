@@ -40,7 +40,6 @@ Then, every time you want to launch U-Center, simply run:
 
    wine your-installation-path/u-center.exe
 
----
 
 2. Emulate the Remote Serial Port on Your Local Machine Using *socat*
 --------------------------------------------------------------------------
