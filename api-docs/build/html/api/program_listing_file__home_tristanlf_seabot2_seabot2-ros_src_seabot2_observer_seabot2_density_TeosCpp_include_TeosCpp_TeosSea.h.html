@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File TeosSea.h &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File TeosSea.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_observer_seabot2_density_TeosCpp_include_TeosCpp_TeosSea.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-teossea-h">
+<span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-observer-seabot2-density-teoscpp-include-teoscpp-teossea-h"></span><h1>Program Listing for File TeosSea.h<a class="headerlink" href="#program-listing-for-file-teossea-h" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_observer_seabot2_density_TeosCpp_include_TeosCpp_TeosSea.h.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-observer-seabot2-density-teoscpp-include-teoscpp-teossea-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef TEOSSEA_H</span>
+<span class="cp">#define TEOSSEA_H</span>
+
+
+<span class="cm">/******************************************</span>
+<span class="cm">  &quot;TeosSea.h&quot; Version 1.06</span>
+<span class="cm">  by Randall Kent Whited</span>
+<span class="cm">  rkwhited@gmail.com</span>
+<span class="cm">  --------------------------------</span>
+<span class="cm">  This is a modification of the</span>
+<span class="cm">  TEOS-10 file &quot;gswteos-10.h&quot;</span>
+<span class="cm">  as adapted from the TEOS-10</span>
+<span class="cm">  C version 3.05 http://www.teos-10.org</span>
+<span class="cm">  ---------------------------------------</span>
+<span class="cm">  OR converted from .m Matlab files in</span>
+<span class="cm">  the Teos-10 Matlab version at</span>
+<span class="cm">  http://www.teos-10.org</span>
+<span class="cm">  ---------------------------------------</span>
+<span class="cm">  All copyrights and all license issues</span>
+<span class="cm">  are the same as for the C version</span>
+<span class="cm">*******************************************/</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;TeosBase.h&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="cm">/***************************</span>
+<span class="cm">  TEOS C++ CLASS</span>
+<span class="cm">  ------------------------</span>
+<span class="cm">  TEOS descriptions of the</span>
+<span class="cm">  methods are in the .cpp</span>
+<span class="cm">  file.</span>
+<span class="cm">***************************/</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TeosSea</span><span class="o">:</span><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="n">TeosBase</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<span class="w">        </span><span class="n">TeosSea</span><span class="p">();</span>
+<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">TeosSea</span><span class="p">();</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_adiabatic_lapse_rate_from_ct</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_alpha_on_beta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_alpha_wrt_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_beta_const_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_cabbeling</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_cabbeling_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_c_from_sp</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sp</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_cp_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_ct_from_entropy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">entropy</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_ct_from_rho_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">rho</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CT</span><span class="p">,</span>
+<span class="w">                                            </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">CT_multiple</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_ct_first_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_pt</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_ct_second_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_sa_sa</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_sa_pt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_pt_pt</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_enthalpy_first_derivatives_wrt_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">h_SA_wrt_t</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">h_T_wrt_t</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">h_P_wrt_t</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_enthalpy_second_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">h_sa_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">h_sa_ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">h_ct_ct</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_entropy_from_pt</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pt</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_entropy_from_t</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="nf">gsw_geo_strf_dyn_height</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">p_ref</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n_levels</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">dyn_height</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w">    </span><span class="nf">gsw_geo_strf_dyn_height_1</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">p_ref</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n_levels</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">dyn_height</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">max_dp_i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">interp_method</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_internal_energy_first_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_CT</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_P</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_internal_energy_first_derivatives_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_SA</span><span class="p">,</span>
+<span class="w">                </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_P</span><span class="p">);</span>
+
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_internal_energy_second_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                                                     </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_SA_SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_SA_CT</span><span class="p">,</span>
+<span class="w">                                                     </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_CT_CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_SA_P</span><span class="p">,</span>
+<span class="w">                                                   </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u_CT_P</span><span class="p">);</span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_isopycnal_slope_ratio</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                                       </span><span class="kt">double</span><span class="w"> </span><span class="n">p_ref</span><span class="o">=</span><span class="mf">0.0</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_latentheat_evap_ct</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_latentheat_evap_t</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w">    </span><span class="nf">gsw_linear_interp_SA_CT_for_dh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nz</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p_i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n_i</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa_i</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_i</span><span class="p">);</span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_ntp_pt_vs_CT_ratio</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_p_sequence</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">max_dp_i</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pseq</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">nps</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_pot_rho_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p_ref</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_pt_first_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pt_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pt_ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_pt_from_entropy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">entropy</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_pt_second_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pt_sa_sa</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pt_sa_ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">pt_ct_ct</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w">    </span><span class="nf">gsw_refine_grid_for_dh</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p_ref</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nz</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">dp</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p_i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ni_max</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_indices</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p_ref_ind_ptr</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_rho_alpha_beta_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                                                    </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rho_CT_exact</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">alpha_CT_exact</span><span class="p">,</span>
+<span class="w">                                                    </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">beta_CT_exact</span><span class="p">);</span>
+
+<span class="w">      </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_rho_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_rho_second_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_sa_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_sa_ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_ct_ct</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_sa_p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_ct_p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_rho_first_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">drho_dsa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">drho_dct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">drho_dp</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_rho_first_derivatives_wrt_enthalpy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_h</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_rho_second_derivatives_wrt_enthalpy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_sa_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_sa_h</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rho_h_h</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_rho_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_rr68_interp_sa_ct</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">int</span><span class="w"> </span><span class="n">mp</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p_i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mp_i</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa_i</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct_i</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sa_from_rho</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">rho</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma0</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma0_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma0_pt0_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">pt0</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma1</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma1_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma2</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma2_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma3</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma3_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma4</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sigma4_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sound_speed</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sound_speed_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sound_speed_t_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sp_from_sk</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sk</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sp_from_sr</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sr</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sp_from_sstar</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sstar</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="kt">double</span><span class="w"> </span><span class="n">lon</span><span class="p">,</span><span class="kt">double</span><span class="w"> </span><span class="n">lat</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_sp_salinometer</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">rt</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">t</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_specvol_alpha_beta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">specvol</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">alpha</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">beta</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_specvol_anom_standard</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_specvol_first_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_specvol_first_derivatives_wrt_enthalpy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_h</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_specvol_second_derivatives</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa_ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_ct_ct</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa_p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_ct_p</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_specvol_second_derivatives_wrt_enthalpy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa_sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_sa_h</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">v_h_h</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_spiciness0</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_spiciness1</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_spiciness2</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_t_from_entropy</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">entropy</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">void</span><span class="w"> </span><span class="nf">gsw_t_from_rho_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">rho</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">t</span><span class="p">,</span>
+<span class="w">                                          </span><span class="kt">double</span><span class="w"> </span><span class="o">&amp;</span><span class="n">t_multiple</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_thermobaric</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">gsw_thermobaric_ct_exact</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">SA</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">p</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">void</span><span class="w">   </span><span class="nf">gsw_turner_rsubrho</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">sa</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">ct</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">int</span><span class="w"> </span><span class="n">nz</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">tu</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">rsubrho</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">p_mid</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="nf">gsw_util_interp1q_int</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">iy</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">int</span><span class="w"> </span><span class="n">nxi</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">x_i</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">y_i</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="nf">gsw_util_linear_interp</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nx</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ny</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nxi</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">x_i</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">y_i</span><span class="p">);</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w">    </span><span class="nf">gsw_util_pchip_interp</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span>
+<span class="w">                 </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">xi</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="o">*</span><span class="n">yi</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ni</span><span class="p">);</span>
+
+<span class="p">};</span>
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

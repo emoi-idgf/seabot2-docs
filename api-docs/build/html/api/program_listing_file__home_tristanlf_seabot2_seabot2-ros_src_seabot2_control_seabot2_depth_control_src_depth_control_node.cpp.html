@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File depth_control_node.cpp &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File depth_control_node.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_control_seabot2_depth_control_src_depth_control_node.cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-depth-control-node-cpp">
+<span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-control-seabot2-depth-control-src-depth-control-node-cpp"></span><h1>Program Listing for File depth_control_node.cpp<a class="headerlink" href="#program-listing-for-file-depth-control-node-cpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_control_seabot2_depth_control_src_depth_control_node.cpp.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-control-seabot2-depth-control-src-depth-control-node-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control_node.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;seabot2_depth_control/depth_control_node.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="o">::</span><span class="nn">placeholders</span><span class="p">;</span>
+
+<span class="n">DepthControlNode</span><span class="o">::</span><span class="n">DepthControlNode</span><span class="p">()</span>
+<span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;depth_control_node&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">dc_</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">())</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">callback_group_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_callback_group</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">CallbackGroupType</span><span class="o">::</span><span class="n">Reentrant</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">init_parameters</span><span class="p">();</span>
+<span class="w">  </span><span class="n">init_interfaces</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">loop_dt_</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">),</span><span class="w"> </span><span class="n">callback_group_</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Depth_control_node] Start Ok&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">init_parameters</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;loop_dt_&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">loop_dt_</span><span class="p">.</span><span class="n">count</span><span class="p">()));</span>
+<span class="w">  </span><span class="n">loop_dt_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;dt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loop_dt_</span><span class="p">.</span><span class="n">count</span><span class="p">()));</span>
+
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;physics_rho&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">physics_rho_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;physics_g&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">physics_g_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;robot_mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">robot_mass_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;robot_diameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">robot_diameter_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;screw_thread&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">screw_thread_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;tick_per_turn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">tick_per_turn_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;motor_max_rpm_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">motor_max_rpm_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;piston_diameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_diameter_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;piston_max_tick_value&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_max_tick_value_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;root_regulation&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">root_regulation_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;limit_depth_regulation&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">limit_depth_control_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;flow_piston_sink&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">flow_piston_sink_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;piston_hysteresis&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_hysteresis_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;piston_max_velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">flow_max_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hold_depth_enable&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_enable_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hold_depth_validation_duration&quot;</span><span class="p">,</span>
+<span class="w">                                 </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_validation_duration_</span><span class="p">.</span><span class="n">seconds</span><span class="p">()));</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hold_depth_value_enter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_value_enter_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hold_depth_value_exit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_value_exit_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hold_velocity_enter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_velocity_enter_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;hold_velocity_exit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_velocity_exit_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;delta_velocity_lb&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_velocity_lb_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;delta_velocity_ub&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_velocity_ub_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;delta_position_lb&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_position_lb_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;delta_position_ub&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_position_ub_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;control_filter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">control_filter_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;piston_flow_security_percentage&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_flow_security_percentage_</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// this-&gt;declare_parameter&lt;double&gt;(&quot;cf_estimation&quot;, dc_.Cf_);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">debug_</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;solver_velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solver_velocity_</span><span class="p">);</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="s">&quot;solver_alpha&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solver_alpha_</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">physics_rho_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;physics_rho&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">physics_rho_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">physics_g_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;physics_g&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">physics_g_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">robot_mass_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;physics_mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">robot_mass_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">robot_diameter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;robot_diameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">robot_diameter_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">screw_thread_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;screw_thread&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">screw_thread_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">tick_per_turn_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;tick_per_turn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">tick_per_turn_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">motor_max_rpm_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;motor_max_rpm_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">motor_max_rpm_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_diameter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;piston_diameter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_diameter_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_max_tick_value_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;piston_max_tick_value&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_max_tick_value_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">root_regulation_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;root_regulation&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">root_regulation_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">limit_depth_control_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;limit_depth_control&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">limit_depth_control_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">flow_piston_sink_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;flow_piston_sink&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">flow_piston_sink_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_hysteresis_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;piston_hysteresis&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_hysteresis_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">flow_max_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;piston_max_velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">flow_max_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_enable_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;hold_depth_enable&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_enable_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_validation_duration_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;hold_depth_validation_duration&quot;</span><span class="p">,</span>
+<span class="w">                               </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_validation_duration_</span><span class="p">.</span><span class="n">seconds</span><span class="p">()))));</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_value_enter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;hold_depth_value_enter&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_value_enter_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_value_exit_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;hold_depth_value_exit&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_depth_value_exit_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_velocity_enter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;hold_velocity_enter&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_velocity_enter_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_velocity_exit_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;hold_velocity_exit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">hold_velocity_exit_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_velocity_lb_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;delta_velocity_lb&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_velocity_lb_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_velocity_ub_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;delta_velocity_ub&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_velocity_ub_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_position_lb_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;delta_position_lb&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_position_lb_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_position_ub_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;delta_position_ub&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">delta_position_ub_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">control_filter_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;control_filter&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">control_filter_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_flow_security_percentage_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;piston_flow_security_percentage&quot;</span><span class="p">,</span>
+<span class="w">                                                                  </span><span class="n">dc_</span><span class="p">.</span>
+<span class="w">      </span><span class="n">piston_flow_security_percentage_</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// dc_.Cf_ = this-&gt;get_parameter_or(&quot;cf_estimation&quot;, dc_.Cf_);</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">debug_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;debug&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">debug_</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_coeff</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">solver_velocity_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;solver_velocity&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solver_velocity_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">solver_alpha_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;solver_alpha&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">solver_alpha_</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solver_velocity_</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">solver_velocity_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">add_to_memory</span><span class="p">(</span><span class="n">solver_alpha_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">solver_velocity_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">kalman_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">KalmanState</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_state</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">velocity</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">msg</span><span class="p">.</span><span class="n">depth</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">msg</span><span class="p">.</span><span class="n">chi</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">msg</span><span class="p">.</span><span class="n">chi2</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">msg</span><span class="p">.</span><span class="n">cz</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">msg</span><span class="p">.</span><span class="n">offset_total</span><span class="p">,</span>
+<span class="w">                     </span><span class="n">msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">piston_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PistonState</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_piston</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">msg</span><span class="p">.</span><span class="n">switch_top</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">msg</span><span class="p">.</span><span class="n">switch_bottom</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">msg</span><span class="p">.</span><span class="n">state</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">depth_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthPose</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_depth</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">depth</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">pressure</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">safety_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">SafetyStatus2</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_safety</span><span class="p">(</span><span class="o">!</span><span class="n">msg</span><span class="p">.</span><span class="n">global_safety_valid</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">limit_depth</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">depth_set_point_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_waypoint</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">depth</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">msg</span><span class="p">.</span><span class="n">limit_velocity</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">msg</span><span class="p">.</span><span class="n">enable_control</span><span class="p">);</span>
+<span class="w">  </span><span class="n">enable_control_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">enable_control</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Debug</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">AlphaDebug</span><span class="w"> </span><span class="n">msg_alpha_debug</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg_alpha_debug</span><span class="p">.</span><span class="n">approach_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dc_</span><span class="p">.</span><span class="n">approach_velocity_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">publisher_alpha_debug_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">msg_alpha_debug</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">init_interfaces</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">subscriber_kalman_data_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">KalmanState</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/observer/kalman&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">kalman_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">subscriber_state_data_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PistonState</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/driver/piston&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">piston_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">subscriber_depth_data_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthPose</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/observer/depth&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">depth_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">subscriber_temperature_data_</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">TemperatureSensorData</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/observer/temperature&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">temperature_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">subscriber_mission_data_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/mission/depth_control_set_point&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">depth_set_point_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">subscriber_safety_data_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">SafetyStatus2</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/safety/safety&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">safety_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="w">  </span><span class="n">subscriber_density_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Density</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">        </span><span class="s">&quot;/observer/density&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">density_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+
+<span class="w">  </span><span class="n">publisher_piston_</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PistonSetPoint</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;/driver/piston_set_point&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">publisher_debug_</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlDebug</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;depth_control_debug&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">publisher_alpha_debug_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_publisher</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">AlphaDebug</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;alpha_debug&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">service_alpha_computation_</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_service</span><span class="o">&lt;</span><span class="n">seabot2_srvs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">AlphaMission</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;alpha_mission&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">alpha_mission_pre_computation</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">,</span><span class="w"> </span><span class="n">_2</span><span class="p">,</span><span class="w"> </span><span class="n">_3</span><span class="p">));</span>
+
+<span class="w">  </span><span class="n">service_alpha_generation_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_service</span><span class="o">&lt;</span><span class="n">std_srvs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">Trigger</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;alpha_generation&quot;</span><span class="p">,</span>
+<span class="w">                                                                             </span><span class="n">bind</span><span class="p">(</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">alpha_generation</span><span class="p">,</span>
+<span class="w">                                                                                 </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">,</span><span class="w"> </span><span class="n">_2</span><span class="p">,</span><span class="w"> </span><span class="n">_3</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">alpha_mission_pre_computation</span><span class="p">(</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rmw_request_id_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">request_header</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">seabot2_srvs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">AlphaMission</span><span class="o">::</span><span class="n">Request</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="n">request</span><span class="p">,</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">seabot2_srvs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">AlphaMission</span><span class="o">::</span><span class="n">Response</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="n">response</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Depth_control_node] Received velocity computation request&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">velocity_limits_requests_</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="n">velocity_limits_requests_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">request</span><span class="o">-&gt;</span><span class="n">velocity_limits</span><span class="p">);</span>
+<span class="w">  </span><span class="n">velocity_limits_computations_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">alpha_generation</span><span class="p">(</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">rmw_request_id_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">request_header</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">std_srvs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">Trigger</span><span class="o">::</span><span class="n">Request</span><span class="o">&gt;</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">std_srvs</span><span class="o">::</span><span class="n">srv</span><span class="o">::</span><span class="n">Trigger</span><span class="o">::</span><span class="n">Response</span><span class="o">&gt;</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">generate_velocity_pairs</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">density_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Density</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_density</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">density</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">temperature_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">TemperatureSensorData</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">update_temperature</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">temperature</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">velocity_limits_computations_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">velocity_limits_computations_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="n">timer_</span><span class="o">-&gt;</span><span class="n">cancel</span><span class="p">();</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DepthControl</span><span class="o">::</span><span class="n">STATE_COMPUTE_ALPHA</span><span class="p">;</span>
+<span class="w">    </span><span class="n">publish_message</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">velocity</span><span class="o">:</span><span class="w"> </span><span class="n">velocity_limits_requests_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">//publish_message();</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">compute_alpha</span><span class="p">(</span><span class="n">velocity</span><span class="p">);</span>
+<span class="w">      </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span>
+<span class="w">        </span><span class="s">&quot;[Depth_control_node] Velocity was computed for beta = %f, alpha = %f&quot;</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">velocity</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">result</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DepthControl</span><span class="o">::</span><span class="n">STATE_SURFACE</span><span class="p">;</span>
+<span class="w">    </span><span class="n">timer_</span><span class="o">-&gt;</span><span class="n">reset</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">state_machine_step</span><span class="p">(</span><span class="n">loop_dt_</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">());</span>
+<span class="w">  </span><span class="n">publish_message</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">generate_velocity_pairs</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">set_test_in_memory</span><span class="p">(</span><span class="nb">false</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.3</span><span class="p">;</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.001</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">compute_alpha</span><span class="p">(</span><span class="n">velocity</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">ofstream</span><span class="w"> </span><span class="n">file</span><span class="p">(</span><span class="s">&quot;alpha_values.txt&quot;</span><span class="p">);</span>
+
+
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="o">:</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">get_computed_memory</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">file</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">value</span><span class="o">:</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">get_computed_memory</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">dc_</span><span class="p">.</span><span class="n">alpha_solver_</span><span class="p">.</span><span class="n">set_test_in_memory</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="n">file</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">DepthControlNode</span><span class="o">::</span><span class="n">publish_message</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PistonSetPoint</span><span class="w"> </span><span class="n">msg_piston</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg_piston</span><span class="p">.</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">round</span><span class="p">(</span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_set_point_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">msg_piston</span><span class="p">.</span><span class="n">exit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">is_exit_</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">enable_control_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">publisher_piston_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">msg_piston</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlDebug</span><span class="w"> </span><span class="n">debug_msg_</span><span class="p">;</span>
+<span class="w">  </span><span class="n">debug_msg_</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">regulation_state_</span><span class="p">;</span>
+<span class="w">  </span><span class="n">debug_msg_</span><span class="p">.</span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">u_debug_</span><span class="p">;</span>
+<span class="w">  </span><span class="n">debug_msg_</span><span class="p">.</span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">dy_debug_</span><span class="p">;</span>
+<span class="w">  </span><span class="n">debug_msg_</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dc_</span><span class="p">.</span><span class="n">y_debug_</span><span class="p">;</span>
+<span class="w">  </span><span class="n">debug_msg_</span><span class="p">.</span><span class="n">piston_set_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">(</span><span class="n">dc_</span><span class="p">.</span><span class="n">piston_set_point_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">publisher_debug_</span><span class="o">-&gt;</span><span class="n">publish</span><span class="p">(</span><span class="n">debug_msg_</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">DepthControlNode</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">executors</span><span class="o">::</span><span class="n">MultiThreadedExecutor</span><span class="w"> </span><span class="n">executor</span><span class="p">;</span>
+<span class="w">  </span><span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="w">  </span><span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

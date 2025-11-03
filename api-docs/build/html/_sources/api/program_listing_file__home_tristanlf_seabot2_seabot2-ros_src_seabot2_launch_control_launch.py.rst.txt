@@ -1,0 +1,71 @@
+
+.. _program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_launch_control_launch.py:
+
+Program Listing for File control_launch.py
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_launch_control_launch.py>` (``/home/tristanlf/seabot2/seabot2-ros/src/seabot2/launch/control_launch.py``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: py
+
+   import os
+   from ament_index_python.packages import get_package_share_directory
+   from launch import LaunchDescription
+   from launch_ros.actions import Node
+   import numpy as np
+   import yaml
+   import sys
+   
+   def generate_launch_description():
+       home_path = os.path.expanduser('~')
+       parameters_file_list = []
+   
+       config_control = os.path.join(
+           home_path,
+           'config/default/',  # Directory where yaml are
+           'control.yaml'  # Name of the file
+       )
+       if os.path.exists(config_control):
+           parameters_file_list.append(config_control)
+   
+       config_physics = os.path.join(
+           home_path,
+           'config/default/',  # Directory where yaml are
+           'physics.yaml'  # Name of the file
+       )
+       if os.path.exists(config_physics):
+           parameters_file_list.append(config_control)
+   
+       # Load alpha values
+       file_alpha = home_path + "/config/default/alpha_values.txt"
+       if os.path.exists(file_alpha):
+           data = np.loadtxt(file_alpha)
+           parameters_file_list.append({'solver_alpha': data[0].tolist()})
+           parameters_file_list.append({'solver_velocity': data[1].tolist()})
+   
+       seabot2_depth_control = Node(
+           package='seabot2_depth_control',
+           executable='depth_control_node',
+           namespace='control',
+           name='depth_control_node',
+           respawn=True,
+           respawn_delay=4,
+           parameters=parameters_file_list
+       )
+   
+       seabot2_heading_control = Node(
+           package='seabot2_heading_control',
+           executable='heading_control_node',
+           namespace='control',
+           name='heading_control_node',
+           respawn=True,
+           respawn_delay=4,
+           parameters=parameters_file_list
+       )
+   
+       return LaunchDescription([
+           seabot2_depth_control,
+           seabot2_heading_control
+       ])

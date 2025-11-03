@@ -1,0 +1,14 @@
+.. _exhale_define_group__BME280_1ga75df0ff360627c3efdd98ad38a92dab0:
+
+Define BME280_FILTER_COEFF_4
+============================
+
+- Defined in :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_pressure_bme280_driver_include_pressure_bme280_driver_bme280_defs.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: BME280_FILTER_COEFF_4
+   :project: seabot2

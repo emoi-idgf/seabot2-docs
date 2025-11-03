@@ -1,0 +1,248 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File pressure_ms5803.cpp &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File pressure_ms5803.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_pressure_ms5803_driver_src_pressure_ms5803.cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-pressure-ms5803-cpp">
+<span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-pressure-ms5803-driver-src-pressure-ms5803-cpp"></span><h1>Program Listing for File pressure_ms5803.cpp<a class="headerlink" href="#program-listing-for-file-pressure-ms5803-cpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_pressure_ms5803_driver_src_pressure_ms5803.cpp.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-pressure-ms5803-driver-src-pressure-ms5803-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;pressure_ms5803_driver/pressure_ms5803.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/ioctl.h&gt;</span>
+
+
+<span class="cp">#define T_MIN 0.0</span>
+<span class="cp">#define T_MAX 50.0</span>
+<span class="cp">#define T_REF 20.0</span>
+<span class="cp">#define P_MAX 14.0</span>
+<span class="cp">#define P_MIN 0.0</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="n">Pressure_ms5803</span><span class="o">::~</span><span class="n">Pressure_ms5803</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">file_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="n">close</span><span class="p">(</span><span class="n">file_</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">reset</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2c_smbus_write_byte</span><span class="p">(</span><span class="n">file_</span><span class="p">,</span><span class="w"> </span><span class="n">CMD_RESET</span><span class="p">);</span>
+<span class="w">    </span><span class="n">usleep</span><span class="p">(</span><span class="mi">30000</span><span class="p">);</span><span class="w"> </span><span class="c1">// 28ms reload for the sensor (?)</span>
+<span class="w">    </span><span class="c1">//  usleep(30000);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">res</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Error reseting sensor&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Reset ok&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">i2c_open</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">file_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="n">i2c_periph_</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="n">O_RDWR</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Failed to open the I2C bus (%s)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i2c_periph_</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">        </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ioctl</span><span class="p">(</span><span class="n">file_</span><span class="p">,</span><span class="w"> </span><span class="n">I2C_SLAVE</span><span class="p">,</span><span class="w"> </span><span class="n">i2c_addr_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Failed to acquire bus access and/or talk to slave (0x%X)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">I2C_SLAVE</span><span class="p">);</span>
+<span class="w">        </span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">init_sensor</span><span class="p">(){</span>
+<span class="w">    </span><span class="n">i2c_open</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">RCLCPP_DEBUG</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Sensor initialization&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">reset</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">return_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">C_</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__u8</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CMD_PROM</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">i</span><span class="p">;</span>
+<span class="w">            </span><span class="n">i2c_smbus_read_i2c_block_data</span><span class="p">(</span><span class="n">file_</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span>
+<span class="w">            </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Error Reading 0x%X&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="p">);</span>
+<span class="w">            </span><span class="n">return_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">C_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">buff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">buff</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">string</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] C&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">to_string</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="o">+</span><span class="w"> </span><span class="n">to_string</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">        </span><span class="n">RCLCPP_DEBUG</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="n">text</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">return_val</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="n">RCLCPP_DEBUG</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Sensor Read PROM OK&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">return_val</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">measure</span><span class="p">(){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">measure_D1</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">measure_D2</span><span class="p">()){</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">compute</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">compute</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">D2_</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">TEMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="o">+</span><span class="p">((</span><span class="n">dT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="mi">6</span><span class="p">]))</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">23</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">OFF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">7</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">SENS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">C_</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">T2</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int64_t</span><span class="w"> </span><span class="n">OFF2</span><span class="p">,</span><span class="w"> </span><span class="n">SENS2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">TEMP</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2000</span><span class="p">){</span>
+<span class="w">        </span><span class="n">T2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">33</span><span class="p">;</span>
+<span class="w">        </span><span class="n">OFF2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="mi">-2000</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="mi">-2000</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SENS2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="mi">-2000</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="mi">-2000</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">TEMP</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">-1500</span><span class="p">){</span>
+<span class="w">            </span><span class="n">OFF2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1500</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="o">+</span><span class="mi">1500</span><span class="p">);</span>
+<span class="w">            </span><span class="n">SENS2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1500</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1500</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">T2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">37</span><span class="p">;</span>
+<span class="w">        </span><span class="n">OFF2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="mi">-2000</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">TEMP</span><span class="mi">-2000</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<span class="w">        </span><span class="n">SENS2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">TEMP</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">T2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">OFF</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">OFF2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SENS</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">SENS2</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(((</span><span class="n">D1_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SENS</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">21</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">OFF</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">temperature_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">TEMP</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100.</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pressure_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">P</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10000.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">temperature_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">t_min_out_range_</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">temperature_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">t_max_out_range_</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pressure_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p_min_out_range_</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pressure_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_max_out_range_</span><span class="p">){</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">n_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span>
+<span class="w">            </span><span class="n">RCLCPP_WARN</span><span class="p">(</span><span class="n">n_</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Pressure_ms5803] Data out of range (p=%f t=%f)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pressure_</span><span class="p">,</span><span class="w"> </span><span class="n">temperature_</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">pressure_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p_min_out_range_</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">pressure_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">p_max_out_range_</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">getI2CAddr</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i2c_addr_</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">setI2CAddr</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i2CAddr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">i2c_addr_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2CAddr</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">getI2CPeriph</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">i2c_periph_</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">setI2CPeriph</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2CPeriph</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">i2c_periph_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2CPeriph</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">setD1</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">u_int32_t</span><span class="w"> </span><span class="n">d1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">D1_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">Pressure_ms5803</span><span class="o">::</span><span class="n">setD2</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">u_int32_t</span><span class="w"> </span><span class="n">d2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">D2_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d2</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File screen_node.cpp &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File screen_node.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_seabot2_screen_driver_src_screen_node.cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-screen-node-cpp">
+<span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-seabot2-screen-driver-src-screen-node-cpp"></span><h1>Program Listing for File screen_node.cpp<a class="headerlink" href="#program-listing-for-file-screen-node-cpp" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_seabot2_screen_driver_src_screen_node.cpp.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-seabot2-screen-driver-src-screen-node-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;seabot2_screen_driver/screen_node.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;net/if.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;arpa/inet.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netdb.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ifaddrs.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">placeholders</span><span class="p">;</span>
+
+<span class="n">ScreenNode</span><span class="o">::</span><span class="n">ScreenNode</span><span class="p">()</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="s">&quot;screen_node&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">screen_</span><span class="p">(</span><span class="k">this</span><span class="p">){</span>
+<span class="w">    </span><span class="n">get_ip</span><span class="p">();</span>
+<span class="w">    </span><span class="n">get_hostname</span><span class="p">();</span>
+<span class="w">    </span><span class="n">init_parameters</span><span class="p">();</span>
+<span class="w">    </span><span class="n">init_topics</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">screen_</span><span class="p">.</span><span class="n">i2c_open</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">timer_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_wall_timer</span><span class="p">(</span>
+<span class="w">            </span><span class="n">loop_dt_</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Screen_node] Start Ok&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">ScreenNode</span><span class="o">::~</span><span class="n">ScreenNode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_robot_status</span><span class="p">(</span><span class="n">Screen</span><span class="o">::</span><span class="n">Robot_Status</span><span class="o">::</span><span class="n">ERROR</span><span class="p">);</span>
+<span class="w">    </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_screen</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">timer_callback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">depth_</span><span class="o">&lt;</span><span class="n">depth_no_update_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">get_ip</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_ip</span><span class="p">(</span><span class="n">ip_</span><span class="p">);</span>
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_pressure</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">pressure_</span><span class="p">));</span>
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_temperature</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">temperature_</span><span class="o">*</span><span class="mf">10.</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_voltage</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">voltage_</span><span class="o">*</span><span class="mf">10.</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_current_waypoint</span><span class="p">(</span><span class="n">wp_id_</span><span class="p">);</span>
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_number_waypoints</span><span class="p">(</span><span class="n">wp_max_</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">t_remain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">time_next_wp_</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">()).</span><span class="n">seconds</span><span class="p">();</span><span class="w"> </span><span class="n">t_remain</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">99</span><span class="o">*</span><span class="mi">60</span><span class="p">)</span>
+<span class="w">            </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_remaining_time</span><span class="p">(</span><span class="mi">99</span><span class="p">,</span><span class="mi">59</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">t_remain</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_remaining_time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_remaining_time</span><span class="p">(</span><span class="n">floor</span><span class="p">(</span><span class="n">t_remain</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">60.0</span><span class="p">),</span><span class="w"> </span><span class="n">t_remain</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">60</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_robot_status</span><span class="p">(</span><span class="n">status_</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kt">time_t</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">time</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">   </span><span class="c1">// get time now</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tm</span><span class="w"> </span><span class="o">*</span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">localtime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">t</span><span class="p">);</span>
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_time</span><span class="p">(</span><span class="n">now</span><span class="o">-&gt;</span><span class="n">tm_hour</span><span class="p">,</span><span class="w"> </span><span class="n">now</span><span class="o">-&gt;</span><span class="n">tm_min</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_hygro</span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">hygro_</span><span class="p">));</span>
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_mission_name</span><span class="p">(</span><span class="n">mission_name_</span><span class="p">);</span>
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_robot_name</span><span class="p">(</span><span class="n">robot_name_</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">screen_</span><span class="p">.</span><span class="n">write_screen</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">init_parameters</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;i2c_periph&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">screen_</span><span class="p">.</span><span class="n">getI2CPeriph</span><span class="p">());</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;i2c_address&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">screen_</span><span class="p">.</span><span class="n">getI2CAddr</span><span class="p">());</span>
+<span class="w">    </span><span class="n">screen_</span><span class="p">.</span><span class="n">setI2CPeriph</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;i2c_periph&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">screen_</span><span class="p">.</span><span class="n">getI2CPeriph</span><span class="p">()));</span>
+<span class="w">    </span><span class="n">screen_</span><span class="p">.</span><span class="n">setI2CAddr</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;i2c_address&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">screen_</span><span class="p">.</span><span class="n">getI2CAddr</span><span class="p">()));</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">long</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;loop_dt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loop_dt_</span><span class="p">.</span><span class="n">count</span><span class="p">());</span>
+<span class="w">    </span><span class="n">loop_dt_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">milliseconds</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;loop_dt&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">loop_dt_</span><span class="p">.</span><span class="n">count</span><span class="p">()));</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">declare_parameter</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;depth_no_update&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">depth_no_update_</span><span class="p">);</span>
+<span class="w">    </span><span class="n">depth_no_update_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_parameter_or</span><span class="p">(</span><span class="s">&quot;depth_no_update&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">depth_no_update_</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">init_topics</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="n">subscriber_sensor_internal_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Bme280Data</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;/driver/pressure_internal&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">topic_internal_pressure_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">subscriber_mission_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">MissionState</span><span class="w"> </span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;/mission/mission_state&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">waypoint_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">subscriber_power_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PowerState</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;/driver/power&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">power_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+
+<span class="w">    </span><span class="n">subscriber_safety_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">create_subscription</span><span class="o">&lt;</span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">SafetyStatus2</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">            </span><span class="s">&quot;/safety/safety&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">bind</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">safety_callback</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">_1</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">get_hostname</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">hostname</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span>
+<span class="w">    </span><span class="n">gethostname</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">);</span>
+<span class="w">    </span><span class="n">robot_name_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hostname</span><span class="p">;</span>
+<span class="w">    </span><span class="n">RCLCPP_INFO</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">get_logger</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;[Screen_node] Hostname = %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">robot_name_</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">get_ip</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="o">:</span><span class="n">ip_</span><span class="p">){</span>
+<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">ifaddrs</span><span class="w"> </span><span class="o">*</span><span class="n">ifaddr</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">getifaddrs</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ifaddr</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ifaddrs</span><span class="w"> </span><span class="o">*</span><span class="n">ifa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifaddr</span><span class="p">;</span><span class="w"> </span><span class="n">ifa</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"> </span><span class="n">ifa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ifa</span><span class="o">-&gt;</span><span class="n">ifa_next</span><span class="p">){</span>
+<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">host</span><span class="p">[</span><span class="n">NI_MAXHOST</span><span class="p">];</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ifa</span><span class="o">-&gt;</span><span class="n">ifa_addr</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getnameinfo</span><span class="p">(</span><span class="n">ifa</span><span class="o">-&gt;</span><span class="n">ifa_addr</span><span class="p">,</span>
+<span class="w">            </span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="p">),</span>
+<span class="w">            </span><span class="n">host</span><span class="p">,</span>
+<span class="w">            </span><span class="n">NI_MAXHOST</span><span class="p">,</span>
+<span class="w">            </span><span class="k">nullptr</span><span class="p">,</span>
+<span class="w">            </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="n">NI_NUMERICHOST</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">((</span><span class="n">strcmp</span><span class="p">(</span><span class="n">ifa</span><span class="o">-&gt;</span><span class="n">ifa_name</span><span class="p">,</span><span class="s">&quot;wlan0&quot;</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">ifa</span><span class="o">-&gt;</span><span class="n">ifa_addr</span><span class="o">-&gt;</span><span class="n">sa_family</span><span class="o">==</span><span class="n">AF_INET</span><span class="p">)){</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">return</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">istringstream</span><span class="w"> </span><span class="n">ss</span><span class="p">(</span><span class="n">string</span><span class="p">(</span><span class="n">host</span><span class="p">)</span><span class="o">+</span><span class="s">&quot;.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">val</span><span class="p">;</span>
+<span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">ss</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;.&#39;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">ip_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stoi</span><span class="p">(</span><span class="n">val</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">freeifaddrs</span><span class="p">(</span><span class="n">ifaddr</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">topic_internal_pressure_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Bme280Data</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msg</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pressure_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">pressure</span><span class="p">;</span>
+<span class="w">    </span><span class="n">temperature_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">temperature</span><span class="p">;</span>
+<span class="w">    </span><span class="n">hygro_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">humidity</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">spin</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">ScreenNode</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">waypoint_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">MissionState</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msg</span><span class="p">){</span>
+<span class="w">    </span><span class="n">wp_id_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">waypoint_id</span><span class="p">;</span>
+<span class="w">    </span><span class="n">wp_max_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">waypoint_length</span><span class="p">;</span>
+<span class="w">    </span><span class="n">time_next_wp_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">now</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="o">::</span><span class="n">from_seconds</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">time_to_next_waypoint</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">power_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">PowerState</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msg</span><span class="p">){</span>
+<span class="w">    </span><span class="n">voltage_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">battery_volt</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">ScreenNode</span><span class="o">::</span><span class="n">safety_callback</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">SafetyStatus2</span><span class="w"> </span><span class="o">&amp;</span><span class="n">msg</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">global_safety_valid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">status_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Screen</span><span class="o">::</span><span class="n">OK</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<span class="w">        </span><span class="n">status_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Screen</span><span class="o">::</span><span class="n">ERROR</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

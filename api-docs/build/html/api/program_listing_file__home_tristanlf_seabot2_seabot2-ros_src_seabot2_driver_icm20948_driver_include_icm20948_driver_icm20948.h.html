@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File icm20948.h &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File icm20948.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_icm20948_driver_include_icm20948_driver_icm20948.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-icm20948-h">
+<span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-icm20948-driver-include-icm20948-driver-icm20948-h"></span><h1>Program Listing for File icm20948.h<a class="headerlink" href="#program-listing-for-file-icm20948-h" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_icm20948_driver_include_icm20948_driver_icm20948.h.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-icm20948-driver-include-icm20948-driver-icm20948-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
+<span class="c1">// Created by lemezoth</span>
+<span class="c1">//</span>
+
+<span class="cp">#ifndef BUILD_ICM20948_H</span>
+<span class="cp">#define BUILD_ICM20948_H</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;array&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;icm20948_register.h&quot;</span>
+
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">ICM20948</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">   </span><span class="n">ICM20948</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+
+<span class="w">   </span><span class="o">~</span><span class="n">ICM20948</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">init</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">get_measure</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">acc_x_</span><span class="p">{},</span><span class="w"> </span><span class="n">acc_y_</span><span class="p">{},</span><span class="w"> </span><span class="n">acc_z_</span><span class="p">{};</span>
+<span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">gyro_x_</span><span class="p">{},</span><span class="w"> </span><span class="n">gyro_y_</span><span class="p">{},</span><span class="w"> </span><span class="n">gyro_z_</span><span class="p">{};</span>
+<span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">mag_x_</span><span class="p">{},</span><span class="w"> </span><span class="n">mag_y_</span><span class="p">{},</span><span class="w"> </span><span class="n">mag_z_</span><span class="p">{};</span>
+
+<span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">temp_</span><span class="p">{};</span>
+
+<span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">accel_x_bias_</span><span class="p">{},</span><span class="w"> </span><span class="n">accel_y_bias_</span><span class="p">{},</span><span class="w"> </span><span class="n">accel_z_bias_</span><span class="p">{};</span>
+
+<span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">mag_x_old_</span><span class="p">{},</span><span class="w"> </span><span class="n">mag_y_old_</span><span class="p">{},</span><span class="w"> </span><span class="n">mag_z_old_</span><span class="p">{};</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">nb_not_update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">   </span><span class="kt">bool</span><span class="w"> </span><span class="n">mag_data_has_been_skipped_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">bool</span><span class="w"> </span><span class="n">mag_data_is_ready_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">bool</span><span class="w"> </span><span class="n">mag_sensor_magnetic_overflow_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">spi_bus_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">spi_device_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyro_dlpfcfg_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GYRO_DLPFCFG_BW23HZ</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyro_fs_sel_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GYRO_FS_SEL_250DPS</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyro_fchoice_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyro_avgcfg_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GYRO_AVGCFG_128X</span><span class="p">;</span><span class="w"> </span><span class="c1">// For low power mode only</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyro_smplrt_div_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span><span class="w"> </span><span class="c1">// =&gt; 1.1 kHz/(1+GYRO_SMPLRT_DIV[7:0]) | 21 =&gt; 50Hz (ODR) | MAX 255</span>
+
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_smplrt_div_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1.125 kHz/(1+ACCEL_SMPLRT_DIV[11:0]) =&gt; 1.125 kHz/(1+21) = 52.5Hz (ODR)</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_dlpfcfg_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ACCEL_DLPFCFG_BW50HZ</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_fs_sel_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ACCEL_FS_SEL_4G</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_fchoice_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">acc_dec3Cfg_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ACCEL_DEC3CFG_32X</span><span class="p">;</span><span class="w"> </span><span class="c1">// For low power mode only</span>
+
+<span class="w">   </span><span class="c1">// Interruption Wakeup On Move (WOM)</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_intel_en_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Disable wake on motion</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_intel_mode_int_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accel_intel_thr_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accel_sensitivity_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">2.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">,</span><span class="w"> </span><span class="mf">4.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">,</span><span class="w"> </span><span class="mf">8.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">,</span><span class="w"> </span><span class="mf">16.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">};</span>
+<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gyro_sensitivity_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">250.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">,</span><span class="w"> </span><span class="mf">500.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">,</span><span class="w"> </span><span class="mf">2000.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32767.</span><span class="p">};</span>
+<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gyro_full_scale_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">250.</span><span class="p">,</span><span class="w"> </span><span class="mf">500.</span><span class="p">,</span><span class="w"> </span><span class="mf">1000.</span><span class="p">,</span><span class="w"> </span><span class="mf">2000.</span><span class="p">};</span>
+<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">accel_full_scale_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">2.</span><span class="p">,</span><span class="w"> </span><span class="mf">4.</span><span class="p">,</span><span class="w"> </span><span class="mf">8.</span><span class="p">,</span><span class="w"> </span><span class="mf">16.</span><span class="p">};</span>
+
+<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">mag_sensitivity_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4912.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">32752.0</span><span class="p">;</span>
+<span class="w">   </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">mag_normalization_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">50.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// mean value of the magnetic field</span>
+<span class="w">   </span><span class="n">AK09916_mode_e</span><span class="w"> </span><span class="n">mag_mode_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AK09916_mode_cont_50hz</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2c_smplrt_div_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// 1.1 kHz/(2^((odr_config[3:0])), 4=&gt;68.75 // 1 ? || MAX = 15</span>
+
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">slv4_dly_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0x04</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2c_slv0_delay_en_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0x01</span>
+
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2c_frequency_clk_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x07</span><span class="p">;</span><span class="w"> </span><span class="c1">// 7 recommended</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2c_lp_mode_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span><span class="w"> </span><span class="c1">// 0x01</span>
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2c_if_dis_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x01</span><span class="p">;</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">spi_fd_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">speed_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6000000</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">current_bank_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+
+<span class="w">   </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">cs_change_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">   </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">delay_usecs_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">open_spi</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">spi_bus</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">spi_device</span><span class="p">);</span>
+
+<span class="w">   </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">readRegister</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">reg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">writeRegister</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">reg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">writeRegister</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">reg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">check_write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinUserCtrl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dmpEn</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fifoEn</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cMstEn</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cIfDis</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dmpRst</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">sramRst</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cMstRst</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinLpConfig</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cMstCycle</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accelCycle</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyroCycle</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinPwrMgmt1</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">deviceRst</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">sleep</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">lpEn</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">tempDis</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">clkSel</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinPwrMgmt2</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">disableAccel</span><span class="p">,</span>
+<span class="w">                                  </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">disableGyro</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">joinGyroSmplrtDiv</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyroSmplrtDiv</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinGyroConfig1</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyroDlpfCfg</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyroFsSel</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyroFchoice</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinGyroConfig2</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">xGyroCten</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">yGyroCten</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">zGyroCten</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">gyroAvgcfg</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinAccelSmplrtDiv1</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">accelSmplrtDiv</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinAccelSmplrtDiv2</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">accelSmplrtDiv</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinAccelIntelCtrl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accelIntelEn</span><span class="p">,</span>
+<span class="w">                                        </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accelIntelModeInt</span><span class="p">);</span>
+
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinAccelConfig</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accelDlpfcfg</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accelFsSel</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">accelFchoice</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinAccelConfig2</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">axStEnReg</span><span class="p">,</span>
+<span class="w">                                      </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">ayStEnReg</span><span class="p">,</span>
+<span class="w">                                      </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">azStEnReg</span><span class="p">,</span>
+<span class="w">                                      </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dec3Cfg</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinBankId</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">bank_id</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinMstCtrl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">multMstEn</span>
+<span class="w">                                 </span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cMstPNsr</span>
+<span class="w">                                 </span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cMstClk</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinIntEnable</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">regWofEn</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">womIntEn</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pllRdyEn</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">dmpInt1En</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cMstIntEn</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinI2cMstDelayCtrl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">delayEsShadow</span><span class="p">,</span>
+<span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv4DelayEn</span><span class="p">,</span>
+<span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv3DelayEn</span><span class="p">,</span>
+<span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv2DelayEn</span><span class="p">,</span>
+<span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv1DelayEn</span><span class="p">,</span>
+<span class="w">                                         </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv0DelayEn</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinI2cSlv4Ctrl</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv4En</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv4IntEn</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv4RegDis</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">i2cSlv4Dly</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">static</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="nf">imuJoinIntPinCfg</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1Actl</span><span class="p">,</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1Open</span><span class="p">,</span>
+<span class="w">     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1LatchEn</span><span class="p">,</span>
+<span class="w">      </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1Anyrd2Clear</span><span class="p">,</span>
+<span class="w">                                   </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1FsyncLvl</span><span class="p">,</span>
+<span class="w">                                    </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1FsyncEn</span><span class="p">,</span>
+<span class="w">                                     </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">int1BypassEn</span><span class="p">);</span>
+
+<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">dump_bank</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">&amp;</span><span class="n">bank_id</span><span class="p">);</span>
+
+<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">dump_ak09916</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">void</span><span class="w"> </span><span class="nf">dump_icm20948</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">reset_i2c_slv4</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">reset_i2c</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">select_bank</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">bank_id</span><span class="p">);</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">i2c_master_reset</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">bool</span><span class="w"> </span><span class="nf">test_who_i_am_mag</span><span class="p">();</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_mag_mode</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">AK09916_mode_e</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mode</span><span class="p">);</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">init_magnetometer</span><span class="p">();</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">write_i2c_AK09916_byte</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">reg</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="nf">read_i2c_AK09916_byte</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">reg</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="cp">#endif </span><span class="c1">//BUILD_ICM20948_H</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class LogData &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class LogParameterNode" href="classLogParameterNode.html" />
+    <link rel="prev" title="Class LightNode" href="classLightNode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
+      <li class="breadcrumb-item active">Class LogData</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/classLogData.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-logdata">
+<span id="exhale-class-classlogdata"></span><h1>Class LogData<a class="headerlink" href="#class-logdata" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_seabot2_iridium_driver_include_seabot2_iridium_driver_sbd_log_data.h.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-seabot2-iridium-driver-include-seabot2-iridium-driver-sbd-log-data-h"><span class="std std-ref">File log_data.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47LogData">
+<span id="_CPPv37LogData"></span><span id="_CPPv27LogData"></span><span id="LogData"></span><span class="target" id="classLogData"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LogData</span></span></span><a class="headerlink" href="#_CPPv47LogData" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8MSG_TYPEE">
+<span id="_CPPv3N7LogData8MSG_TYPEE"></span><span id="_CPPv2N7LogData8MSG_TYPEE"></span><span class="target" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MSG_TYPE</span></span></span><a class="headerlink" href="#_CPPv4N7LogData8MSG_TYPEE" title="Link to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8MSG_TYPE9LOG_STATEE">
+<span id="_CPPv3N7LogData8MSG_TYPE9LOG_STATEE"></span><span id="_CPPv2N7LogData8MSG_TYPE9LOG_STATEE"></span><span class="target" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19aefda1573a760c76968816d00051a16ff"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LOG_STATE</span></span></span><a class="headerlink" href="#_CPPv4N7LogData8MSG_TYPE9LOG_STATEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8MSG_TYPE9CMD_SLEEPE">
+<span id="_CPPv3N7LogData8MSG_TYPE9CMD_SLEEPE"></span><span id="_CPPv2N7LogData8MSG_TYPE9CMD_SLEEPE"></span><span class="target" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a646d614604aa6e59a1efcfa3b1bfbce9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CMD_SLEEP</span></span></span><a class="headerlink" href="#_CPPv4N7LogData8MSG_TYPE9CMD_SLEEPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8MSG_TYPE14CMD_PARAMETERSE">
+<span id="_CPPv3N7LogData8MSG_TYPE14CMD_PARAMETERSE"></span><span id="_CPPv2N7LogData8MSG_TYPE14CMD_PARAMETERSE"></span><span class="target" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a4fba8815876ffe1ad8136d3a458e7367"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CMD_PARAMETERS</span></span></span><a class="headerlink" href="#_CPPv4N7LogData8MSG_TYPE14CMD_PARAMETERSE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8MSG_TYPE15CMD_MISSION_NEWE">
+<span id="_CPPv3N7LogData8MSG_TYPE15CMD_MISSION_NEWE"></span><span id="_CPPv2N7LogData8MSG_TYPE15CMD_MISSION_NEWE"></span><span class="target" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CMD_MISSION_NEW</span></span></span><a class="headerlink" href="#_CPPv4N7LogData8MSG_TYPE15CMD_MISSION_NEWE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8MSG_TYPE16CMD_MISSION_KEEPE">
+<span id="_CPPv3N7LogData8MSG_TYPE16CMD_MISSION_KEEPE"></span><span id="_CPPv2N7LogData8MSG_TYPE16CMD_MISSION_KEEPE"></span><span class="target" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6259f3cfad37ad044a4dc84a563f147d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CMD_MISSION_KEEP</span></span></span><a class="headerlink" href="#_CPPv4N7LogData8MSG_TYPE16CMD_MISSION_KEEPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData7LogDataEv">
+<span id="_CPPv3N7LogData7LogDataEv"></span><span id="_CPPv2N7LogData7LogDataEv"></span><span id="LogData::LogData"></span><span class="target" id="classLogData_1afc434ed336a6c1273a4fe406879b4980"></span><span class="sig-name descname"><span class="n"><span class="pre">LogData</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N7LogData7LogDataEv" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#classLogData"><span class="std std-ref">LogData</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData19deserialize_log_CMDERKNSt6stringE">
+<span id="_CPPv3N7LogData19deserialize_log_CMDERKNSt6stringE"></span><span id="_CPPv2N7LogData19deserialize_log_CMDERKNSt6stringE"></span><span id="LogData::deserialize_log_CMD__ssCR"></span><span class="target" id="classLogData_1a3b7cbad4fcc481399b5b25e6b1754452"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deserialize_log_CMD</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">raw_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData19deserialize_log_CMDERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>deserialize_log_CMD </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> – </p></li>
+<li><p><strong>type</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData19serialize_log_stateERKx">
+<span id="_CPPv3N7LogData19serialize_log_stateERKx"></span><span id="_CPPv2N7LogData19serialize_log_stateERKx"></span><span id="LogData::serialize_log_state__l-lCR"></span><span class="target" id="classLogData_1aca2914c2e2d1bccf714e67e6456abf26"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">serialize_log_state</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData19serialize_log_stateERKx" title="Link to this definition"></a><br /></dt>
+<dd><p>serialize_log_state </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData25deserialize_log_CMD_sleepERKNSt6stringE">
+<span id="_CPPv3N7LogData25deserialize_log_CMD_sleepERKNSt6stringE"></span><span id="_CPPv2N7LogData25deserialize_log_CMD_sleepERKNSt6stringE"></span><span id="LogData::deserialize_log_CMD_sleep__ssCR"></span><span class="target" id="classLogData_1ac7d8e8285e050694af109058cfb5e608"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deserialize_log_CMD_sleep</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData25deserialize_log_CMD_sleepERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>deserialize_log_CMD_sleep </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData27deserialize_log_CMD_missionERKNSt6stringE">
+<span id="_CPPv3N7LogData27deserialize_log_CMD_missionERKNSt6stringE"></span><span id="_CPPv2N7LogData27deserialize_log_CMD_missionERKNSt6stringE"></span><span id="LogData::deserialize_log_CMD_mission__ssCR"></span><span class="target" id="classLogData_1a88e78f645e3ae3c424678b81a134300c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deserialize_log_CMD_mission</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData27deserialize_log_CMD_missionERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>deserialize_log_CMD_mission </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData30deserialize_log_CMD_parametersERKNSt6stringE">
+<span id="_CPPv3N7LogData30deserialize_log_CMD_parametersERKNSt6stringE"></span><span id="_CPPv2N7LogData30deserialize_log_CMD_parametersERKNSt6stringE"></span><span id="LogData::deserialize_log_CMD_parameters__ssCR"></span><span class="target" id="classLogData_1ac03c8d72a6a6cbff4802856218d31451"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deserialize_log_CMD_parameters</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData30deserialize_log_CMD_parametersERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>deserialize_log_CMD_parameters </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData9time_now_E">
+<span id="_CPPv3N7LogData9time_now_E"></span><span id="_CPPv2N7LogData9time_now_E"></span><span id="LogData::time_now___double"></span><span class="target" id="classLogData_1a06995f751c6ffac74b800f643f1c5223"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_now_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N7LogData9time_now_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData11gnss_speed_E">
+<span id="_CPPv3N7LogData11gnss_speed_E"></span><span id="_CPPv2N7LogData11gnss_speed_E"></span><span id="LogData::gnss_speed___double"></span><span class="target" id="classLogData_1a7cd510440d726844d62b6fc0c1153133"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_speed_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">4.2</span></span><a class="headerlink" href="#_CPPv4N7LogData11gnss_speed_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData13gnss_heading_E">
+<span id="_CPPv3N7LogData13gnss_heading_E"></span><span id="_CPPv2N7LogData13gnss_heading_E"></span><span id="LogData::gnss_heading___double"></span><span class="target" id="classLogData_1ac589dc0bfc5565eb16d75375cc6f6e7a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_heading_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">242.0</span></span><a class="headerlink" href="#_CPPv4N7LogData13gnss_heading_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData8battery_E">
+<span id="_CPPv3N7LogData8battery_E"></span><span id="_CPPv2N7LogData8battery_E"></span><span id="LogData::battery___double"></span><span class="target" id="classLogData_1ac7ce5e324a2c78219422628e3c427a87"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">battery_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10.0</span></span><a class="headerlink" href="#_CPPv4N7LogData8battery_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData9gnss_lat_E">
+<span id="_CPPv3N7LogData9gnss_lat_E"></span><span id="_CPPv2N7LogData9gnss_lat_E"></span><span id="LogData::gnss_lat___double"></span><span class="target" id="classLogData_1a006bf445b4ae61dac1d29aa29bd3dc58"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_lat_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N7LogData9gnss_lat_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData10gnss_long_E">
+<span id="_CPPv3N7LogData10gnss_long_E"></span><span id="_CPPv2N7LogData10gnss_long_E"></span><span id="LogData::gnss_long___double"></span><span class="target" id="classLogData_1ab6fec6d6f048cbd33bc879ab5790f63f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_long_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N7LogData10gnss_long_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData15gnss_mean_east_E">
+<span id="_CPPv3N7LogData15gnss_mean_east_E"></span><span id="_CPPv2N7LogData15gnss_mean_east_E"></span><span id="LogData::gnss_mean_east___double"></span><span class="target" id="classLogData_1abb6bec8954b83af189ca1311cf7d49c1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_mean_east_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42.0</span></span><a class="headerlink" href="#_CPPv4N7LogData15gnss_mean_east_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData16gnss_mean_north_E">
+<span id="_CPPv3N7LogData16gnss_mean_north_E"></span><span id="_CPPv2N7LogData16gnss_mean_north_E"></span><span id="LogData::gnss_mean_north___double"></span><span class="target" id="classLogData_1ab0549769f8c10f67cea7cb5a3bc9a4fc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_mean_north_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">6000042.0</span></span><a class="headerlink" href="#_CPPv4N7LogData16gnss_mean_north_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData18gnss_mean_heading_E">
+<span id="_CPPv3N7LogData18gnss_mean_heading_E"></span><span id="_CPPv2N7LogData18gnss_mean_heading_E"></span><span id="LogData::gnss_mean_heading___double"></span><span class="target" id="classLogData_1a2328f82545ee790b7064fde98cdc11bc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gnss_mean_heading_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">242.0</span></span><a class="headerlink" href="#_CPPv4N7LogData18gnss_mean_heading_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData18internal_pressure_E">
+<span id="_CPPv3N7LogData18internal_pressure_E"></span><span id="_CPPv2N7LogData18internal_pressure_E"></span><span id="LogData::internal_pressure___double"></span><span class="target" id="classLogData_1a2173763d4b894d7b6716a073bdcc75db"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">internal_pressure_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">742.0</span></span><a class="headerlink" href="#_CPPv4N7LogData18internal_pressure_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData21internal_temperature_E">
+<span id="_CPPv3N7LogData21internal_temperature_E"></span><span id="_CPPv2N7LogData21internal_temperature_E"></span><span id="LogData::internal_temperature___double"></span><span class="target" id="classLogData_1aab7245681f39e4e75d017e98c7efd95b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">internal_temperature_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42.0</span></span><a class="headerlink" href="#_CPPv4N7LogData21internal_temperature_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData18internal_humidity_E">
+<span id="_CPPv3N7LogData18internal_humidity_E"></span><span id="_CPPv2N7LogData18internal_humidity_E"></span><span id="LogData::internal_humidity___double"></span><span class="target" id="classLogData_1af61522bd6cc153fbbe0c6cb677c7f77f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">internal_humidity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N7LogData18internal_humidity_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData17current_waypoint_E">
+<span id="_CPPv3N7LogData17current_waypoint_E"></span><span id="_CPPv2N7LogData17current_waypoint_E"></span><span id="LogData::current_waypoint___unsigned-i"></span><span class="target" id="classLogData_1ae71a823ec77fb9555ad3d613198254d7"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_waypoint_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">42</span></span><a class="headerlink" href="#_CPPv4N7LogData17current_waypoint_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData11sleep_time_E">
+<span id="_CPPv3N7LogData11sleep_time_E"></span><span id="_CPPv2N7LogData11sleep_time_E"></span><span id="LogData::sleep_time___unsigned-i"></span><span class="target" id="classLogData_1a1c4b71dd9a1189b11f38ebc3e89c5253"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sleep_time_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7LogData11sleep_time_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData14waypoint_list_E">
+<span id="_CPPv3N7LogData14waypoint_list_E"></span><span id="_CPPv2N7LogData14waypoint_list_E"></span><span id="LogData::waypoint_list___std::vector:Waypoint:"></span><span class="target" id="classLogData_1aa0381f9cd0b1f945714823fcdaea5e8f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classWaypoint.html#_CPPv48Waypoint" title="Waypoint"><span class="n"><span class="pre">Waypoint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waypoint_list_</span></span></span><a class="headerlink" href="#_CPPv4N7LogData14waypoint_list_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData12offset_east_E">
+<span id="_CPPv3N7LogData12offset_east_E"></span><span id="_CPPv2N7LogData12offset_east_E"></span><span id="LogData::offset_east___double"></span><span class="target" id="classLogData_1abebfbb4e269f1eaa3a6b21ff7a3bdacd"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">offset_east_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N7LogData12offset_east_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData13offset_north_E">
+<span id="_CPPv3N7LogData13offset_north_E"></span><span id="_CPPv2N7LogData13offset_north_E"></span><span id="LogData::offset_north___double"></span><span class="target" id="classLogData_1acc6472bff8a96df148c498b6e311d1cf"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">offset_north_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N7LogData13offset_north_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData15enable_mission_E">
+<span id="_CPPv3N7LogData15enable_mission_E"></span><span id="_CPPv2N7LogData15enable_mission_E"></span><span id="LogData::enable_mission___b"></span><span class="target" id="classLogData_1ab38e39b11b4696163e097163e9287b7b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_mission_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7LogData15enable_mission_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData13enable_flash_E">
+<span id="_CPPv3N7LogData13enable_flash_E"></span><span id="_CPPv2N7LogData13enable_flash_E"></span><span id="LogData::enable_flash___b"></span><span class="target" id="classLogData_1a8db6160adddb878da4142ddb6bc5b1bf"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_flash_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7LogData13enable_flash_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData13enable_depth_E">
+<span id="_CPPv3N7LogData13enable_depth_E"></span><span id="_CPPv2N7LogData13enable_depth_E"></span><span id="LogData::enable_depth___b"></span><span class="target" id="classLogData_1a9d9dae91feb3ab2498f2c84b1952c5a6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_depth_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7LogData13enable_depth_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData14enable_engine_E">
+<span id="_CPPv3N7LogData14enable_engine_E"></span><span id="_CPPv2N7LogData14enable_engine_E"></span><span id="LogData::enable_engine___b"></span><span class="target" id="classLogData_1a658f0eb5c2079149412997f80bb2f5c1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enable_engine_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7LogData14enable_engine_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData18last_cmd_received_E">
+<span id="_CPPv3N7LogData18last_cmd_received_E"></span><span id="_CPPv2N7LogData18last_cmd_received_E"></span><span id="LogData::last_cmd_received___unsigned-i"></span><span class="target" id="classLogData_1a3152955a76aaf2aeadbf97d73bd0bb18"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">last_cmd_received_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7LogData18last_cmd_received_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData15period_message_E">
+<span id="_CPPv3N7LogData15period_message_E"></span><span id="_CPPv2N7LogData15period_message_E"></span><span id="LogData::period_message___unsigned-i"></span><span class="target" id="classLogData_1a52f84dba6a1758c343f558696fa5e4dd"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">period_message_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">15</span></span><a class="headerlink" href="#_CPPv4N7LogData15period_message_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData27safety_global_safety_valid_E">
+<span id="_CPPv3N7LogData27safety_global_safety_valid_E"></span><span id="_CPPv2N7LogData27safety_global_safety_valid_E"></span><span id="LogData::safety_global_safety_valid___b"></span><span class="target" id="classLogData_1a215b780805044b81368683aea57ab2b3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_global_safety_valid_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData27safety_global_safety_valid_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData27safety_published_frequency_E">
+<span id="_CPPv3N7LogData27safety_published_frequency_E"></span><span id="_CPPv2N7LogData27safety_published_frequency_E"></span><span id="LogData::safety_published_frequency___b"></span><span class="target" id="classLogData_1ace97e70198f38ca5767ae3f8c8919f43"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_published_frequency_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData27safety_published_frequency_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData19safety_depth_limit_E">
+<span id="_CPPv3N7LogData19safety_depth_limit_E"></span><span id="_CPPv2N7LogData19safety_depth_limit_E"></span><span id="LogData::safety_depth_limit___b"></span><span class="target" id="classLogData_1ab557ecc757ef00a153a18b7547ebe856"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_depth_limit_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData19safety_depth_limit_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData23safety_batteries_limit_E">
+<span id="_CPPv3N7LogData23safety_batteries_limit_E"></span><span id="_CPPv2N7LogData23safety_batteries_limit_E"></span><span id="LogData::safety_batteries_limit___b"></span><span class="target" id="classLogData_1a70454d1aa1e62f82dcccf93dd10ddc5a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_batteries_limit_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData23safety_batteries_limit_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData24safety_depressurization_E">
+<span id="_CPPv3N7LogData24safety_depressurization_E"></span><span id="_CPPv2N7LogData24safety_depressurization_E"></span><span id="LogData::safety_depressurization___b"></span><span class="target" id="classLogData_1a4442f061f8ede0f7dcce3d1b887960bb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_depressurization_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData24safety_depressurization_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData16safety_seafloor_E">
+<span id="_CPPv3N7LogData16safety_seafloor_E"></span><span id="_CPPv2N7LogData16safety_seafloor_E"></span><span id="LogData::safety_seafloor___b"></span><span class="target" id="classLogData_1a0e740e0944372202073863a436654ff8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_seafloor_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData16safety_seafloor_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData14safety_piston_E">
+<span id="_CPPv3N7LogData14safety_piston_E"></span><span id="_CPPv2N7LogData14safety_piston_E"></span><span id="LogData::safety_piston___b"></span><span class="target" id="classLogData_1a7546b2aab01e3cffc07d4e4e11966d74"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_piston_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData14safety_piston_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData18safety_zero_depth_E">
+<span id="_CPPv3N7LogData18safety_zero_depth_E"></span><span id="_CPPv2N7LogData18safety_zero_depth_E"></span><span id="LogData::safety_zero_depth___b"></span><span class="target" id="classLogData_1a2bf42ce73af96525ccae6ddfc3fce25e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_zero_depth_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7LogData18safety_zero_depth_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData9msg_type_E">
+<span id="_CPPv3N7LogData9msg_type_E"></span><span id="_CPPv2N7LogData9msg_type_E"></span><span id="LogData::msg_type___MSG_TYPE"></span><span class="target" id="classLogData_1a69026134c4c4ddb74d8d46fe17884c10"></span><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPEE" title="LogData::MSG_TYPE"><span class="n"><span class="pre">MSG_TYPE</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">msg_type_</span></span></span><a class="headerlink" href="#_CPPv4N7LogData9msg_type_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData10write_fileERKNSt6stringERKNSt6stringEKj">
+<span id="_CPPv3N7LogData10write_fileERKNSt6stringERKNSt6stringEKj"></span><span id="_CPPv2N7LogData10write_fileERKNSt6stringERKNSt6stringEKj"></span><span id="LogData::write_file__ssCR.ssCR.unsigned-iC"></span><span class="target" id="classLogData_1a277f0b12a7614b7b9ff4e6c752ef0b6f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_file</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">data</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_bits</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">NB_BITS_LOG1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData10write_fileERKNSt6stringERKNSt6stringEKj" title="Link to this definition"></a><br /></dt>
+<dd><p>write_file </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> – </p></li>
+<li><p><strong>data</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7LogData9read_fileERKNSt6stringE">
+<span id="_CPPv3N7LogData9read_fileERKNSt6stringE"></span><span id="_CPPv2N7LogData9read_fileERKNSt6stringE"></span><span id="LogData::read_file__ssCR"></span><span class="target" id="classLogData_1adec5e67b706c873cb7a8d20876a6c081"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_file</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7LogData9read_fileERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>read_file </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_name</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classLightNode.html" class="btn btn-neutral float-left" title="Class LightNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classLogParameterNode.html" class="btn btn-neutral float-right" title="Class LogParameterNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

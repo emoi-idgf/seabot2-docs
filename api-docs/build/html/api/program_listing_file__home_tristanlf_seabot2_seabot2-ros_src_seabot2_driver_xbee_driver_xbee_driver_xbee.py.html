@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File xbee.py &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Program Listing for File xbee.py</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_xbee_driver_xbee_driver_xbee.py.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-xbee-py">
+<span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-xbee-driver-xbee-driver-xbee-py"></span><h1>Program Listing for File xbee.py<a class="headerlink" href="#program-listing-for-file-xbee-py" title="Link to this heading"></a></h1>
+<p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_xbee_driver_xbee_driver_xbee.py.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-driver-xbee-driver-xbee-driver-xbee-py"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/xbee_driver/xbee_driver/xbee.py</span></code>)</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">rclpy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rclpy.node</span><span class="w"> </span><span class="kn">import</span> <span class="n">Node</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">digi.xbee.devices</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">socket</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">SafetyStatus2</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bme280Data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">PowerState</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">GpsFix</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">GnssPose</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">DepthPose</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">MissionState</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">XbeeMessageLogState</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">seabot2_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">XbeeMessageHeader</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geometry_msgs.msg</span><span class="w"> </span><span class="kn">import</span> <span class="n">Twist</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">nb_bit</span><span class="p">,</span> <span class="n">start_bit</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">flag_debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;val init =&quot;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">value_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">nb_bit</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">value_max</span> <span class="o">-</span> <span class="n">value_min</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="n">value_min</span><span class="p">),</span> <span class="n">value_max</span><span class="p">)</span> <span class="o">-</span> <span class="n">value_min</span><span class="p">)</span> <span class="o">*</span> <span class="n">scale</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value_min</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">nb_bit</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">start_bit</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">|</span> <span class="p">(</span><span class="n">mask</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">val</span> <span class="o">&lt;&lt;</span> <span class="n">start_bit</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">flag_debug</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;val_min =&quot;</span><span class="p">,</span> <span class="n">value_min</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;scale = &quot;</span><span class="p">,</span> <span class="n">scale</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;val = &quot;</span><span class="p">,</span> <span class="n">val</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">nb_bit</span> <span class="o">+</span> <span class="n">start_bit</span><span class="p">,</span> <span class="n">val</span> <span class="o">/</span> <span class="n">scale</span> <span class="o">+</span> <span class="n">value_min</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">nb_bit</span><span class="p">,</span> <span class="n">start_bit</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">nb_bit</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="c1"># data is byte array, convert to int</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">&gt;&gt;</span> <span class="n">start_bit</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">mask</span>
+    <span class="k">if</span> <span class="n">value_min</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">scale</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">nb_bit</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">value_max</span> <span class="o">-</span> <span class="n">value_min</span><span class="p">)</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">/</span> <span class="n">scale</span> <span class="o">+</span> <span class="n">value_min</span>
+    <span class="k">return</span> <span class="n">v</span><span class="p">,</span> <span class="n">start_bit</span> <span class="o">+</span> <span class="n">nb_bit</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">XbeeNode</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s1">&#39;xbee_node&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Interfaces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_mission</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_depth</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_mission_state</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_gnss_pose</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_gnss_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_power_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_internal_sensor_filter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_safety_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_log_state</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Log state variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_global_safety_valid</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_published_frequency</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_depth_limit</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_batteries_limit</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_depressurization</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_seafloor</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_piston</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_zero_depth</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_pressure</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_temperature</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_humidity</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">battery</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">valid_fix</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_latitude</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_longitude</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_heading</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_speed</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_mean_east</span> <span class="o">=</span> <span class="mf">0.0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_mean_north</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">depth</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_waypoint</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mission_mode</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Manual control variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Remote target for manual commands</span>
+
+        <span class="c1"># Xbee message types</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">CMD_MSG_TYPE</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;LOG_STATE&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;CMD_SLEEP&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;CMD_PARAMETERS&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;CMD_MISSION_NEW&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                             <span class="s2">&quot;CMD_MISSION_KEEP&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;THRUSTERS_CMD&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_cmd_received</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="c1"># Get hostname of device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">gethostname</span><span class="p">()</span>
+        <span class="c1"># limit size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hostname</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">21</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span>
+
+        <span class="c1"># Test if hostname starts with &quot;seabot&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;seabot&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hostname : &quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span><span class="p">)</span>
+
+        <span class="c1"># Parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee_network_id</span> <span class="o">=</span> <span class="mh">0x42</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee_encryption_key</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIFKLMNOP&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee_node_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_between_communication</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial_baudrate</span> <span class="o">=</span> <span class="mi">9600</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tx_power</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># 0=2mW, 1=5mW, 2=10mW, 3=16mW, 4=32mW</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">routing_mode</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Non routing device</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="c1"># ID of the remote target for manual commands, -1 means no target, 0 means broadcast</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manual_heading_control</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># If True, the manual command will be sent to the cmd_vel_heading topic and heading regulation will be used, otherwise raw commands will be sent to cmd_vel</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial_port</span> <span class="o">=</span> <span class="s2">&quot;/dev/ttyMAX0&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span> <span class="k">else</span> <span class="s2">&quot;/dev/ttyUSB0&quot;</span>
+
+        <span class="c1"># Initialization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_interfaces</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">init_parameters</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_between_communication</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>
+
+        <span class="c1"># Connect to xbee</span>
+        <span class="c1"># https://xbplib.readthedocs.io/en/latest/index.html</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span> <span class="o">=</span> <span class="n">XBeeDevice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial_port</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">serial_baudrate</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">open</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_xbee</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">get_network</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span><span class="p">:</span>
+            <span class="c1"># Start the discovery process and wait for it to be over.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">set_discovery_options</span><span class="p">({</span><span class="n">DiscoveryOptions</span><span class="o">.</span><span class="n">DISCOVER_MYSELF</span><span class="p">})</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">set_discovery_timeout</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># seconds</span>
+
+            <span class="c1"># Add the device discovered callback.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">add_discovery_process_finished_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xnet_discovery_callbackxnet_discovery_callback</span><span class="p">)</span>
+
+            <span class="c1"># Start the discovery process.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">start_discovery_process</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Starting the discovery process...&quot;</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Xbee Adress: &quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">get_64bit_addr</span><span class="p">())</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">configure_xbee</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">read_device_info</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">set_node_id</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xbee_node_id</span><span class="p">)</span>
+
+        <span class="c1"># Disable apply changes</span>
+        <span class="c1"># This is needed to set the parameters without applying them immediately and applying them all at once at the end.</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">is_apply_changes_enabled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">enable_apply_changes</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Set network ID </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">xbee_network_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">set_parameter</span><span class="p">(</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xbee_network_id</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">))</span>
+
+        <span class="c1"># Set encryption key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Set encryption key </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">xbee_encryption_key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">set_parameter</span><span class="p">(</span><span class="s1">&#39;KY&#39;</span><span class="p">,</span> <span class="nb">bytearray</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xbee_encryption_key</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+
+        <span class="c1"># Set encryption enable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Enable Encryption&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">set_parameter</span><span class="p">(</span><span class="s1">&#39;EE&#39;</span><span class="p">,</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\x01</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="c1"># TX Power Level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Set TX power level = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">tx_power</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">set_parameter</span><span class="p">(</span><span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tx_power</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">))</span>
+
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Set Routing node (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">routing_mode</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">set_parameter</span><span class="p">(</span><span class="s1">&#39;CE&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">routing_mode</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;big&#39;</span><span class="p">))</span>
+
+        <span class="c1"># Apply changes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;Apply changes &amp; write&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">apply_changes</span><span class="p">()</span>
+        <span class="c1"># Write changes (to flash).</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">write_changes</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">add_data_received_callback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_received_callbackdata_received_callback</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">xnet_discovery_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">status</span> <span class="o">==</span> <span class="n">NetworkDiscoveryStatus</span><span class="o">.</span><span class="n">ERROR_READ_TIMEOUT</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Read timeout error&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="n">NetworkDiscoveryStatus</span><span class="o">.</span><span class="n">ERROR_NET_DISCOVER</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error executing node discovery&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="n">NetworkDiscoveryStatus</span><span class="o">.</span><span class="n">ERROR_GENERAL</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error while discovering network&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="n">NetworkDiscoveryStatus</span><span class="o">.</span><span class="n">CANCEL</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Discovery process cancelled&quot;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">status</span> <span class="o">==</span> <span class="n">NetworkDiscoveryStatus</span><span class="o">.</span><span class="n">SUCCESS</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Discovery process finished successfully&quot;</span><span class="p">)</span>
+
+            <span class="n">nodes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">get_devices</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span><span class="si">}</span><span class="s2"> nodes in the network :&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node: </span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">get_node_id</span><span class="p">()</span><span class="si">}</span><span class="s2">, Address: </span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">get_64bit_addr</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">get_device_by_node_id</span><span class="p">(</span><span class="s2">&quot;seabot&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span><span class="p">))</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Remote target with node ID &#39;seabot</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span><span class="si">}</span><span class="s2">&#39; not found, cannot send manual command&quot;</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_received_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xbee_message</span><span class="p">):</span>
+        <span class="c1"># ToDo : process the callback</span>
+        <span class="n">node_address</span> <span class="o">=</span> <span class="n">xbee_message</span><span class="o">.</span><span class="n">remote_device</span><span class="o">.</span><span class="n">get_64bit_addr</span><span class="p">()</span>
+        <span class="n">node_name</span> <span class="o">=</span> <span class="n">xbee_message</span><span class="o">.</span><span class="n">remote_device</span><span class="o">.</span><span class="n">get_node_id</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">node_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Received data from unknown node with address </span><span class="si">{</span><span class="n">node_address</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">is_discovery_running</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">start_discovery_process</span><span class="p">()</span>  <span class="c1"># restart discovery process to get the name of the node</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Restarting discovery process to get the name of the node&quot;</span><span class="p">)</span>
+        <span class="n">message_timestamp</span> <span class="o">=</span> <span class="n">xbee_message</span><span class="o">.</span><span class="n">timestamp</span>
+        <span class="n">message_is_broadcast</span> <span class="o">=</span> <span class="n">xbee_message</span><span class="o">.</span><span class="n">is_broadcast</span>
+
+        <span class="c1"># Test if size of a message is correct</span>
+        <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">xbee_message</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">xbee_message</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;little&#39;</span><span class="p">)</span> <span class="c1"># test if little or big endian</span>
+            <span class="n">message_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deserialize_log_type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">message_type</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">CMD_MSG_TYPE</span><span class="p">[</span><span class="s2">&quot;LOG_STATE&quot;</span><span class="p">]:</span>
+                <span class="n">data_decoded</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">deserialize_log_state</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Received data from </span><span class="si">{</span><span class="n">node_name</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">node_address</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1"> </span><span class="si">{</span><span class="n">data_decoded</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                <span class="n">message_log_state</span> <span class="o">=</span> <span class="n">XbeeMessageLogState</span><span class="p">()</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">xbee_header</span> <span class="o">=</span> <span class="n">XbeeMessageHeader</span><span class="p">()</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">xbee_header</span><span class="o">.</span><span class="n">xbee_address</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">node_address</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">xbee_header</span><span class="o">.</span><span class="n">node_name</span> <span class="o">=</span> <span class="n">node_name</span> <span class="k">if</span> <span class="n">node_name</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">xbee_header</span><span class="o">.</span><span class="n">is_broadcast</span> <span class="o">=</span> <span class="n">message_is_broadcast</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">xbee_header</span><span class="o">.</span><span class="n">message_type</span> <span class="o">=</span> <span class="n">message_type</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_global_safety_valid</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;global_safety_valid&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_published_frequency</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;published_frequency&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_depth_limit</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;depth_limit&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_batteries_limit</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;batteries_limit&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_depressurization</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;depressurization&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_seafloor</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;seafloor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_piston</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;piston&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">safety_zero_depth</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;zero_depth&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="kc">False</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">fix_latitude</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">fix_longitude</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">gnss_speed</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;speed&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">gnss_heading</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;heading&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">battery</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;battery&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">internal_pressure</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;pressure&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">internal_temperature</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">internal_humidity</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;humidity&quot;</span><span class="p">])</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">current_waypoint</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;waypoint&quot;</span><span class="p">]</span>
+                <span class="n">message_log_state</span><span class="o">.</span><span class="n">last_cmd_received</span> <span class="o">=</span> <span class="n">data_decoded</span><span class="p">[</span><span class="s2">&quot;last_cmd_received&quot;</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">publisher_log_state</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">message_log_state</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="n">message_type</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">CMD_MSG_TYPE</span><span class="p">[</span><span class="s2">&quot;THRUSTERS_CMD&quot;</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span><span class="p">:</span>
+                    <span class="n">bit_position</span> <span class="o">=</span> <span class="mi">0</span>
+                    <span class="n">message_type</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+                    <span class="n">linear_x</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+                    <span class="n">angular_z</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="n">Twist</span><span class="p">()</span>
+                    <span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">linear_x</span><span class="p">)</span><span class="o">/</span><span class="mf">100.</span><span class="o">-</span><span class="mi">1</span>
+                    <span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">angular_z</span><span class="p">)</span><span class="o">/</span><span class="mf">100.</span><span class="o">-</span><span class="mi">1</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">publisher_manual_velocity</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Received manual command from </span><span class="si">{</span><span class="n">node_name</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">node_address</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="s1">&#39;</span>
+                                            <span class="sa">f</span><span class="s1">&#39;linear_x=</span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s1">, angular_z=</span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Received manual command from </span><span class="si">{</span><span class="n">node_name</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">node_address</span><span class="si">}</span><span class="s1">), but not a seabot, ignoring&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Received unknown message </span><span class="si">{</span><span class="n">node_name</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">node_address</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;serial_port&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">serial_port</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;serial_baudrate&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">serial_baudrate</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;xbee_node_id&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xbee_node_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;time_between_communication&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_between_communication</span><span class="p">)</span>  <span class="c1"># in seconds</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;xbee_encryption_key&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xbee_encryption_key</span><span class="p">)</span>  <span class="c1"># 16 bytes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;xbee_network_id&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">xbee_network_id</span><span class="p">)</span>  <span class="c1"># between 0x0 and 0x7FFF</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;tx_power&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tx_power</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;routing_mode&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">routing_mode</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;manual_remote_id&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span><span class="p">)</span>  <span class="c1"># ID of the remote target for manual commands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;manual_heading_control&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_heading_control</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial_port</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;serial_port&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">string_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial_baudrate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;serial_baudrate&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">integer_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">time_between_communication</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span>
+            <span class="s1">&#39;time_between_communication&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">integer_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee_node_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;xbee_node_id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">string_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee_encryption_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;xbee_encryption_key&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">string_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">xbee_network_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;xbee_network_id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">integer_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tx_power</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;tx_power&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">integer_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">routing_mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;routing_mode&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">integer_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;manual_remote_id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">integer_value</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">manual_heading_control</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s1">&#39;manual_heading_control&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_parameter_value</span><span class="p">()</span><span class="o">.</span><span class="n">bool_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_interfaces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_safety_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">SafetyStatus2</span><span class="p">,</span>
+                                                                 <span class="s1">&#39;/safety/safety&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">safety_callbacksafety_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_internal_sensor_filter</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Bme280Data</span><span class="p">,</span> <span class="s1">&#39;/observer/pressure_internal&#39;</span><span class="p">,</span>
+                                                                            <span class="bp">self</span><span class="o">.</span><span class="n">internal_sensor_callbackinternal_sensor_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_power_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">PowerState</span><span class="p">,</span> <span class="s1">&#39;/observer/power&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">power_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_gnss_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">GpsFix</span><span class="p">,</span> <span class="s1">&#39;/driver/fix&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gpsd_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_gnss_pose</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">GnssPose</span><span class="p">,</span>
+                                                               <span class="s1">&#39;/observer/pose_mean&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gnss_pose_callbackgnss_pose_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_depth</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">DepthPose</span><span class="p">,</span> <span class="s1">&#39;/observer/depth&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_mission_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">MissionState</span><span class="p">,</span> <span class="s1">&#39;/mission/mission_state&#39;</span><span class="p">,</span>
+                                                                    <span class="bp">self</span><span class="o">.</span><span class="n">mission_callbackmission_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">publisher_log_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">XbeeMessageLogState</span><span class="p">,</span> <span class="s1">&#39;/com/xbee/log_state&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_heading_control</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">publisher_manual_velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;cmd_vel_heading&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;[Manual heading control enabled, publishing to cmd_vel_heading&quot;</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">publisher_manual_velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;/cmd_vel&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Manual heading control disabled, publishing to /cmd_vel&quot;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">subscription_manual_velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">Twist</span><span class="p">,</span> <span class="s1">&#39;/cmd_vel&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_velocity_callback</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">safety_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_global_safety_valid</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">global_safety_valid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_published_frequency</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">published_frequency</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_depth_limit</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">depth_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_batteries_limit</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">batteries_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_depressurization</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">depressurization</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_seafloor</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">seafloor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_piston</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">piston</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">safety_zero_depth</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">zero_depth</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">internal_sensor_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_pressure</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">pressure</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_temperature</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">temperature</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">internal_humidity</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">humidity</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gpsd_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">valid_fix</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">mode</span> <span class="o">&gt;</span> <span class="n">GpsFix</span><span class="o">.</span><span class="n">MODE_NO_FIX</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_latitude</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">latitude</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">latitude</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fix_longitude</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">longitude</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">power_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">battery</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">battery_volt</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">gnss_pose_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_heading</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">heading</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">heading</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_speed</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">velocity</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">velocity</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_mean_east</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">east</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">east</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gnss_mean_north</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">north</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">north</span><span class="p">)</span> <span class="k">else</span> <span class="mf">0.</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">depth_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">depth</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">depth</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">mission_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_waypoint</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">waypoint_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mission_mode</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">mode</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">manual_velocity_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+
+        <span class="c1"># If the manual target ID is -1, it means no target, so we do not send the command</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;No manual target ID set, not sending command to xbee&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Remote target not discovered, discovering...&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">discover_remote</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Serialize the command to send to the xbee</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="mb">0b0</span>
+        <span class="n">bit_position</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">message_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CMD_MSG_TYPE</span><span class="p">[</span><span class="s2">&quot;THRUSTERS_CMD&quot;</span><span class="p">]</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">message_type</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sending manual command to xbee: linear_x=</span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, angular_z=</span><span class="si">{</span><span class="n">msg</span><span class="o">.</span><span class="n">angular</span><span class="o">.</span><span class="n">z</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Send the command to the xbee</span>
+        <span class="c1"># If the manual target ID is 0, it means broadcast, so we send the command to all xbee devices</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">manual_remote_id</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">send_data_broadcast</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">((</span><span class="n">bit_position</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;little&#39;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">send_data_async</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">manual_remote</span><span class="p">,</span><span class="n">data</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">((</span><span class="n">bit_position</span><span class="o">+</span><span class="mi">7</span><span class="p">)</span><span class="o">//</span><span class="mi">8</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;little&#39;</span><span class="p">))</span>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Send data to xbee</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hostname_is_seabot</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">depth</span> <span class="o">&lt;</span> <span class="mf">0.5</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">mission_mode</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">xbee</span><span class="o">.</span><span class="n">send_data_broadcast</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serialize_log_state</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">discover_remote</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">node_id</span><span class="p">):</span>
+        <span class="n">remote</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xnet</span><span class="o">.</span><span class="n">discover_device</span><span class="p">(</span><span class="s2">&quot;seabot&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">node_id</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">remote</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Remote target not found&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Remote target </span><span class="si">{</span><span class="n">remote</span><span class="o">.</span><span class="n">get_node_id</span><span class="p">()</span><span class="si">}</span><span class="s2"> discovered with address </span><span class="si">{</span><span class="n">remote</span><span class="o">.</span><span class="n">get_64bit_addr</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">remote</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">serialize_log_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">bit_position</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="mb">0b0</span>
+        <span class="n">message_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">CMD_MSG_TYPE</span><span class="p">[</span><span class="s2">&quot;LOG_STATE&quot;</span><span class="p">]</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_global_safety_valid</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">0</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_published_frequency</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">1</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_depth_limit</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_batteries_limit</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_depressurization</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_seafloor</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_piston</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">6</span>
+        <span class="n">state</span> <span class="o">|=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">safety_zero_depth</span> <span class="o">&amp;</span> <span class="mh">0x1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="mi">7</span>
+
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">message_type</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fix_latitude</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=-</span><span class="mf">90.0</span><span class="p">,</span>
+                                               <span class="n">value_max</span><span class="o">=</span><span class="mf">90.0</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fix_longitude</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span>
+                                               <span class="n">value_max</span><span class="o">=</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gnss_speed</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span>
+                                               <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gnss_heading</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">359.0</span><span class="p">,</span>
+                                               <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">battery</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">16.8</span><span class="p">,</span>
+                                               <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">internal_pressure</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">680.0</span><span class="p">,</span>
+                                               <span class="n">value_max</span><span class="o">=</span><span class="mf">800.0</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">internal_temperature</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">8.0</span><span class="p">,</span>
+                                               <span class="n">value_max</span><span class="o">=</span><span class="mf">50.0</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">internal_humidity</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">50.0</span><span class="p">,</span>
+                                               <span class="n">value_max</span><span class="o">=</span><span class="mf">100.0</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_waypoint</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">serialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_cmd_received</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">flag_debug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">bit_position</span> <span class="o">/</span> <span class="mi">8</span><span class="p">),</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;little&#39;</span><span class="p">),</span> <span class="n">message_type</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">deserialize_log_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">bit_position</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">message_type</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">message_type</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">deserialize_log_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">bit_position</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">data_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">message_type</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;message_type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">message_type</span>
+        <span class="n">latitude</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=-</span><span class="mf">90.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">90.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;latitude&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude</span>
+        <span class="n">longitude</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=-</span><span class="mf">180.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">180.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;longitude&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude</span>
+        <span class="n">speed</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">speed</span>
+        <span class="n">heading</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">359.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;heading&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">heading</span>
+        <span class="n">state</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;global_safety_valid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;published_frequency&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;depth_limit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;batteries_limit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;depressurization&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;seafloor&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;piston&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">6</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;state&quot;</span><span class="p">][</span><span class="s2">&quot;zero_depth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span> <span class="o">&gt;&gt;</span> <span class="mi">7</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x1</span>
+        <span class="n">battery</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">12.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">16.8</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;battery&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">battery</span>
+        <span class="n">pressure</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">680.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">800.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;pressure&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pressure</span>
+        <span class="n">temperature</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">8.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">50.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temperature</span>
+        <span class="n">humidity</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">,</span> <span class="n">value_min</span><span class="o">=</span><span class="mf">50.0</span><span class="p">,</span> <span class="n">value_max</span><span class="o">=</span><span class="mf">100.0</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;humidity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">humidity</span>
+        <span class="n">waypoint</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;waypoint&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">waypoint</span>
+        <span class="n">last_cmd_received</span><span class="p">,</span> <span class="n">bit_position</span> <span class="o">=</span> <span class="n">deserialize_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">bit_position</span><span class="p">)</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s2">&quot;last_cmd_received&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">last_cmd_received</span>
+        <span class="k">return</span> <span class="n">data_dict</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="n">xbee_node</span> <span class="o">=</span> <span class="n">XbeeNode</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">xbee_node</span><span class="p">)</span>
+
+    <span class="n">xbee_node</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,768 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class DepthControl &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+      <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class DepthControlNode" href="classDepthControlNode.html" />
+    <link rel="prev" title="Class DensityNode" href="classDensityNode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 ROS2 API
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 ROS2 API</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
+      <li class="breadcrumb-item active">Class DepthControl</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/classDepthControl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-depthcontrol">
+<span id="exhale-class-classdepthcontrol"></span><h1>Class DepthControl<a class="headerlink" href="#class-depthcontrol" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_control_seabot2_depth_control_include_seabot2_depth_control_depth_control.h.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-control-seabot2-depth-control-include-seabot2-depth-control-depth-control-h"><span class="std std-ref">File depth_control.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv412DepthControl">
+<span id="_CPPv312DepthControl"></span><span id="_CPPv212DepthControl"></span><span id="DepthControl"></span><span class="target" id="classDepthControl"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DepthControl</span></span></span><a class="headerlink" href="#_CPPv412DepthControl" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINEE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINEE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINEE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_MACHINE</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINEE" title="Link to this definition"></a><br /></dt>
+<dd><p>State machine. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE13STATE_SURFACEE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE13STATE_SURFACEE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE13STATE_SURFACEE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410a1e7b94218ff6f0840e5f24022e818847"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_SURFACE</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE13STATE_SURFACEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE10STATE_SINKE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE10STATE_SINKE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE10STATE_SINKE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410a59acb79a177140ede8280416e84c01f9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_SINK</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE10STATE_SINKE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE13STATE_CONTROLE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE13STATE_CONTROLE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE13STATE_CONTROLE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410a9ab181ebf6d5d1293759ab6911cea3a5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_CONTROL</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE13STATE_CONTROLE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE18STATE_PISTON_ISSUEE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE18STATE_PISTON_ISSUEE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE18STATE_PISTON_ISSUEE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410a81e0ccaff81b4c47aae231cd86601ef6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_PISTON_ISSUE</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE18STATE_PISTON_ISSUEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE16STATE_HOLD_DEPTHE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE16STATE_HOLD_DEPTHE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE16STATE_HOLD_DEPTHE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410a5dd9595d163a47c82a66f4c6847da4e8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_HOLD_DEPTH</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE16STATE_HOLD_DEPTHE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE19STATE_COMPUTE_ALPHAE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE19STATE_COMPUTE_ALPHAE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE19STATE_COMPUTE_ALPHAE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410afafafc96ef1fab50dafdae907c409acb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_COMPUTE_ALPHA</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE19STATE_COMPUTE_ALPHAE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13STATE_MACHINE10STATE_STOPE">
+<span id="_CPPv3N12DepthControl13STATE_MACHINE10STATE_STOPE"></span><span id="_CPPv2N12DepthControl13STATE_MACHINE10STATE_STOPE"></span><span class="target" id="classDepthControl_1aa4127b865173986676f7bade1c461410a4adcfedab85471703dfb08eb9612c2d3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">STATE_STOP</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13STATE_MACHINE10STATE_STOPE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12DepthControlERKN6rclcpp4TimeE">
+<span id="_CPPv3N12DepthControl12DepthControlERKN6rclcpp4TimeE"></span><span id="_CPPv2N12DepthControl12DepthControlERKN6rclcpp4TimeE"></span><span id="DepthControl::DepthControl__rclcpp::TimeCR"></span><span class="target" id="classDepthControl_1aa9e38ed429a26de27ea4d4a6fb6e60ec"></span><span class="sig-name descname"><span class="n"><span class="pre">DepthControl</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">start_time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl12DepthControlERKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12update_stateERKdRKdRKdRKdRKdRKdRKN6rclcpp4TimeE">
+<span id="_CPPv3N12DepthControl12update_stateERKdRKdRKdRKdRKdRKdRKN6rclcpp4TimeE"></span><span id="_CPPv2N12DepthControl12update_stateERKdRKdRKdRKdRKdRKdRKN6rclcpp4TimeE"></span><span id="DepthControl::update_state__doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.doubleCR.rclcpp::TimeCR"></span><span class="target" id="classDepthControl_1a372e47e9230e163518a68d4ad5425fe2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_state</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">velocity</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">depth</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">chi</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">chi2</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cz</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">offset_total</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time_update</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl12update_stateERKdRKdRKdRKdRKdRKdRKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the state of the depth control. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>velocity</strong> – </p></li>
+<li><p><strong>depth</strong> – </p></li>
+<li><p><strong>offset</strong> – </p></li>
+<li><p><strong>chi</strong> – </p></li>
+<li><p><strong>chi2</strong> – </p></li>
+<li><p><strong>cz</strong> – </p></li>
+<li><p><strong>volume_air</strong> – </p></li>
+<li><p><strong>offset_total</strong> – </p></li>
+<li><p><strong>time_update</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13update_pistonERKiRKbRKbRKiRKN6rclcpp4TimeE">
+<span id="_CPPv3N12DepthControl13update_pistonERKiRKbRKbRKiRKN6rclcpp4TimeE"></span><span id="_CPPv2N12DepthControl13update_pistonERKiRKbRKbRKiRKN6rclcpp4TimeE"></span><span id="DepthControl::update_piston__iCR.bCR.bCR.iCR.rclcpp::TimeCR"></span><span class="target" id="classDepthControl_1a7f6b69209cac7b85d932b7b8b7eb4934"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_piston</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">position</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">switch_top</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">switch_bottom</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time_update</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl13update_pistonERKiRKbRKbRKiRKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the data from the piston. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> – </p></li>
+<li><p><strong>switch_top</strong> – </p></li>
+<li><p><strong>switch_bottom</strong> – </p></li>
+<li><p><strong>state</strong> – </p></li>
+<li><p><strong>time_update</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12update_depthERKdRKd">
+<span id="_CPPv3N12DepthControl12update_depthERKdRKd"></span><span id="_CPPv2N12DepthControl12update_depthERKdRKd"></span><span id="DepthControl::update_depth__doubleCR.doubleCR"></span><span class="target" id="classDepthControl_1a39c4c52aa8f83ed2df1c0c435194706c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_depth</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">depth</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pressure</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl12update_depthERKdRKd" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the data from depth. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>depth</strong> – [in m] </p></li>
+<li><p><strong>pressure</strong> – [in bar] </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13update_safetyERKbRKf">
+<span id="_CPPv3N12DepthControl13update_safetyERKbRKf"></span><span id="_CPPv2N12DepthControl13update_safetyERKbRKf"></span><span id="DepthControl::update_safety__bCR.floatCR"></span><span class="target" id="classDepthControl_1a59a30728a2b9c595f95c680aed1dcce7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_safety</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">emergency</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">limit_depth</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl13update_safetyERKbRKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the data from safety. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>emergency</strong> – </p></li>
+<li><p><strong>limit_depth</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl15update_waypointERKfRKdRKN6rclcpp4TimeERKb">
+<span id="_CPPv3N12DepthControl15update_waypointERKfRKdRKN6rclcpp4TimeERKb"></span><span id="_CPPv2N12DepthControl15update_waypointERKfRKdRKN6rclcpp4TimeERKb"></span><span id="DepthControl::update_waypoint__floatCR.doubleCR.rclcpp::TimeCR.bCR"></span><span class="target" id="classDepthControl_1a5dad07bebba8979720a499cce990d86b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_waypoint</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">depth</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">limit_velocity</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time_update</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">enable_control</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl15update_waypointERKfRKdRKN6rclcpp4TimeERKb" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the data from the mission. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>depth</strong> – </p></li>
+<li><p><strong>limit_velocity</strong> – </p></li>
+<li><p><strong>time_update</strong> – </p></li>
+<li><p><strong>enable_control</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl14update_densityERKf">
+<span id="_CPPv3N12DepthControl14update_densityERKf"></span><span id="_CPPv2N12DepthControl14update_densityERKf"></span><span id="DepthControl::update_density__floatCR"></span><span class="target" id="classDepthControl_1a32465b4c8135b6c8098e2a177ee319af"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_density</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">density</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl14update_densityERKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the data from density. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>density</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18update_temperatureERKf">
+<span id="_CPPv3N12DepthControl18update_temperatureERKf"></span><span id="_CPPv2N12DepthControl18update_temperatureERKf"></span><span id="DepthControl::update_temperature__floatCR"></span><span class="target" id="classDepthControl_1ab70c0372dcb3096f4ce7a9861cf66e29"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_temperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl18update_temperatureERKf" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the data from temperature. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>temperature</strong> – [in degree celsius] </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl9compute_uEdd">
+<span id="_CPPv3N12DepthControl9compute_uEdd"></span><span id="_CPPv2N12DepthControl9compute_uEdd"></span><span id="DepthControl::compute_u__double.double"></span><span class="target" id="classDepthControl_1a2ad0870b8b131eb27a8ed821f640bfbc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compute_u</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">set_point</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">limit_velocity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl9compute_uEdd" title="Link to this definition"></a><br /></dt>
+<dd><p>Compute the command associated to the depth control. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>set_point</strong> – </p></li>
+<li><p><strong>limit_velocity</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12update_coeffEv">
+<span id="_CPPv3N12DepthControl12update_coeffEv"></span><span id="_CPPv2N12DepthControl12update_coeffEv"></span><span id="DepthControl::update_coeff"></span><span class="target" id="classDepthControl_1ae7f6a2a229fd4412209a2c99540fbea6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_coeff</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl12update_coeffEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Update coefficients computed from parameters. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18state_machine_stepERKN6rclcpp8DurationERKN6rclcpp4TimeE">
+<span id="_CPPv3N12DepthControl18state_machine_stepERKN6rclcpp8DurationERKN6rclcpp4TimeE"></span><span id="_CPPv2N12DepthControl18state_machine_stepERKN6rclcpp8DurationERKN6rclcpp4TimeE"></span><span id="DepthControl::state_machine_step__rclcpp::DurationCR.rclcpp::TimeCR"></span><span class="target" id="classDepthControl_1ac4651652dc7c2a0d9dcf7d5765bfe67e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state_machine_step</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Duration</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dt</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">current_time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl18state_machine_stepERKN6rclcpp8DurationERKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Update the state machine. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dt</strong> – </p></li>
+<li><p><strong>current_time</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the command to send to the piston </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl14set_start_timeERKN6rclcpp4TimeE">
+<span id="_CPPv3N12DepthControl14set_start_timeERKN6rclcpp4TimeE"></span><span id="_CPPv2N12DepthControl14set_start_timeERKN6rclcpp4TimeE"></span><span id="DepthControl::set_start_time__rclcpp::TimeCR"></span><span class="target" id="classDepthControl_1a243f24f6f62b11d575a06881d7a18c16"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_start_time</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">start_time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl14set_start_timeERKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Set the start time of the depth control. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>start_time</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl9update_ABEv">
+<span id="_CPPv3N12DepthControl9update_ABEv"></span><span id="_CPPv2N12DepthControl9update_ABEv"></span><span id="DepthControl::update_AB"></span><span class="target" id="classDepthControl_1a3b07f56e22380852e88ca3cf6911a4d7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_AB</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl9update_ABEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Update coefficients A and B </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK12DepthControl14fz_computationEd">
+<span id="_CPPv3NK12DepthControl14fz_computationEd"></span><span id="_CPPv2NK12DepthControl14fz_computationEd"></span><span id="DepthControl::fz_computation__doubleC"></span><span class="target" id="classDepthControl_1acb75181f01e2f3d3816d9c1ce98519d6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_computation</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">velocity</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12DepthControl14fz_computationEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK12DepthControl25fz_derivative_computationEd">
+<span id="_CPPv3NK12DepthControl25fz_derivative_computationEd"></span><span id="_CPPv2NK12DepthControl25fz_derivative_computationEd"></span><span id="DepthControl::fz_derivative_computation__doubleC"></span><span class="target" id="classDepthControl_1a3409274ce6627e6b6eb5fb453d4c8527"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_derivative_computation</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">velocity</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12DepthControl25fz_derivative_computationEd" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl6debug_E">
+<span id="_CPPv3N12DepthControl6debug_E"></span><span id="_CPPv2N12DepthControl6debug_E"></span><span id="DepthControl::debug___b"></span><span class="target" id="classDepthControl_1a07b15b4ea2453394f39861d4f57ed326"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N12DepthControl6debug_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13alpha_solver_E">
+<span id="_CPPv3N12DepthControl13alpha_solver_E"></span><span id="_CPPv2N12DepthControl13alpha_solver_E"></span><span id="DepthControl::alpha_solver___AlphaSolver"></span><span class="target" id="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c"></span><a class="reference internal" href="classAlphaSolver.html#_CPPv411AlphaSolver" title="AlphaSolver"><span class="n"><span class="pre">AlphaSolver</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">alpha_solver_</span></span></span><a class="headerlink" href="#_CPPv4N12DepthControl13alpha_solver_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Variable. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl10emergency_E">
+<span id="_CPPv3N12DepthControl10emergency_E"></span><span id="_CPPv2N12DepthControl10emergency_E"></span><span id="DepthControl::emergency___b"></span><span class="target" id="classDepthControl_1a3011e548c11fb4e45c696c040a7492e1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">emergency_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N12DepthControl10emergency_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12limit_depth_E">
+<span id="_CPPv3N12DepthControl12limit_depth_E"></span><span id="_CPPv2N12DepthControl12limit_depth_E"></span><span id="DepthControl::limit_depth___float"></span><span class="target" id="classDepthControl_1a411f5a2fbae7d78ba0f31cb9a5ce66a1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">limit_depth_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl12limit_depth_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12physics_rho_E">
+<span id="_CPPv3N12DepthControl12physics_rho_E"></span><span id="_CPPv2N12DepthControl12physics_rho_E"></span><span id="DepthControl::physics_rho___double"></span><span class="target" id="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">physics_rho_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1000.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl12physics_rho_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Physical characteristics. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl10physics_g_E">
+<span id="_CPPv3N12DepthControl10physics_g_E"></span><span id="_CPPv2N12DepthControl10physics_g_E"></span><span id="DepthControl::physics_g___double"></span><span class="target" id="classDepthControl_1ab6743c1a698eea72aa2ce5e830ea9419"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">physics_g_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">9.81</span></span><a class="headerlink" href="#_CPPv4N12DepthControl10physics_g_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl11robot_mass_E">
+<span id="_CPPv3N12DepthControl11robot_mass_E"></span><span id="_CPPv2N12DepthControl11robot_mass_E"></span><span id="DepthControl::robot_mass___double"></span><span class="target" id="classDepthControl_1a1ad45fb4e3a6213e60be3139d899a2c0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">robot_mass_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">12.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl11robot_mass_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl17robot_added_mass_E">
+<span id="_CPPv3N12DepthControl17robot_added_mass_E"></span><span id="_CPPv2N12DepthControl17robot_added_mass_E"></span><span id="DepthControl::robot_added_mass___double"></span><span class="target" id="classDepthControl_1adbf048468788abf5ac6d9e839f9f70f9"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">robot_added_mass_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2.51</span></span><a class="headerlink" href="#_CPPv4N12DepthControl17robot_added_mass_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl15robot_diameter_E">
+<span id="_CPPv3N12DepthControl15robot_diameter_E"></span><span id="_CPPv2N12DepthControl15robot_diameter_E"></span><span id="DepthControl::robot_diameter___double"></span><span class="target" id="classDepthControl_1a5ab5866c2ec4f635a9d9dc917135bc52"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">robot_diameter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.125</span></span><a class="headerlink" href="#_CPPv4N12DepthControl15robot_diameter_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13screw_thread_E">
+<span id="_CPPv3N12DepthControl13screw_thread_E"></span><span id="_CPPv2N12DepthControl13screw_thread_E"></span><span id="DepthControl::screw_thread___double"></span><span class="target" id="classDepthControl_1aa3e413a415d43b1ed90e81035d455deb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">screw_thread_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.e-3</span></span><a class="headerlink" href="#_CPPv4N12DepthControl13screw_thread_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl14tick_per_turn_E">
+<span id="_CPPv3N12DepthControl14tick_per_turn_E"></span><span id="_CPPv2N12DepthControl14tick_per_turn_E"></span><span id="DepthControl::tick_per_turn___double"></span><span class="target" id="classDepthControl_1a7ebda0fccee8177240aad732c770d337"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tick_per_turn_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2048</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><a class="headerlink" href="#_CPPv4N12DepthControl14tick_per_turn_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl16piston_diameter_E">
+<span id="_CPPv3N12DepthControl16piston_diameter_E"></span><span id="_CPPv2N12DepthControl16piston_diameter_E"></span><span id="DepthControl::piston_diameter___double"></span><span class="target" id="classDepthControl_1ac7f6dba2b1f92c550a1b90d5f9880647"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_diameter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.045</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16piston_diameter_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl22piston_max_tick_value_E">
+<span id="_CPPv3N12DepthControl22piston_max_tick_value_E"></span><span id="_CPPv2N12DepthControl22piston_max_tick_value_E"></span><span id="DepthControl::piston_max_tick_value___double"></span><span class="target" id="classDepthControl_1aa0f81d9d6ff5413aa0e3d949253ae03b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_max_tick_value_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1146880</span></span><a class="headerlink" href="#_CPPv4N12DepthControl22piston_max_tick_value_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl17degree_to_kelvin_E">
+<span id="_CPPv3N12DepthControl17degree_to_kelvin_E"></span><span id="_CPPv2N12DepthControl17degree_to_kelvin_E"></span><span id="DepthControl::degree_to_kelvin___doubleC"></span><span class="target" id="classDepthControl_1a7fe6d0f2852df4467f7c9dbf4d348935"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">degree_to_kelvin_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">273.15</span></span><a class="headerlink" href="#_CPPv4N12DepthControl17degree_to_kelvin_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl15tick_to_volume_E">
+<span id="_CPPv3N12DepthControl15tick_to_volume_E"></span><span id="_CPPv2N12DepthControl15tick_to_volume_E"></span><span id="DepthControl::tick_to_volume___double"></span><span class="target" id="classDepthControl_1a873f195fc16ee70cc0ef656be5d7881d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tick_to_volume_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl13screw_thread_E" title="DepthControl::screw_thread_"><span class="n"><span class="pre">screw_thread_</span></span></a><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl14tick_per_turn_E" title="DepthControl::tick_per_turn_"><span class="n"><span class="pre">tick_per_turn_</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><span class="n"><span class="pre">pow</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl16piston_diameter_E" title="DepthControl::piston_diameter_"><span class="n"><span class="pre">piston_diameter_</span></span></a><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">2.0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><span class="n"><span class="pre">M_PI</span></span><a class="headerlink" href="#_CPPv4N12DepthControl15tick_to_volume_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl8coeff_A_E">
+<span id="_CPPv3N12DepthControl8coeff_A_E"></span><span id="_CPPv2N12DepthControl8coeff_A_E"></span><span id="DepthControl::coeff_A___double"></span><span class="target" id="classDepthControl_1a770f4de8b01b4ccfe9177def2407e163"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coeff_A_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl10physics_g_E" title="DepthControl::physics_g_"><span class="n"><span class="pre">physics_g_</span></span></a><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl12physics_rho_E" title="DepthControl::physics_rho_"><span class="n"><span class="pre">physics_rho_</span></span></a><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl17robot_added_mass_E" title="DepthControl::robot_added_mass_"><span class="n"><span class="pre">robot_added_mass_</span></span></a><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl11robot_mass_E" title="DepthControl::robot_mass_"><span class="n"><span class="pre">robot_mass_</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N12DepthControl8coeff_A_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl8coeff_B_E">
+<span id="_CPPv3N12DepthControl8coeff_B_E"></span><span id="_CPPv2N12DepthControl8coeff_B_E"></span><span id="DepthControl::coeff_B___double"></span><span class="target" id="classDepthControl_1a690b60fe3d02fe5d7212b7dd31d7271a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coeff_B_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.5</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl12physics_rho_E" title="DepthControl::physics_rho_"><span class="n"><span class="pre">physics_rho_</span></span></a><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl17robot_added_mass_E" title="DepthControl::robot_added_mass_"><span class="n"><span class="pre">robot_added_mass_</span></span></a><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl11robot_mass_E" title="DepthControl::robot_mass_"><span class="n"><span class="pre">robot_mass_</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N12DepthControl8coeff_B_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl36fz_model_boundary_velocity_positive_E">
+<span id="_CPPv3N12DepthControl36fz_model_boundary_velocity_positive_E"></span><span id="_CPPv2N12DepthControl36fz_model_boundary_velocity_positive_E"></span><span id="DepthControl::fz_model_boundary_velocity_positive___doubleC"></span><span class="target" id="classDepthControl_1a71fe2a1ffe1929e1c7f458f7e961fd5f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_model_boundary_velocity_positive_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.267911611144239</span></span><a class="headerlink" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_positive_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl36fz_model_boundary_velocity_negative_E">
+<span id="_CPPv3N12DepthControl36fz_model_boundary_velocity_negative_E"></span><span id="_CPPv2N12DepthControl36fz_model_boundary_velocity_negative_E"></span><span id="DepthControl::fz_model_boundary_velocity_negative___doubleC"></span><span class="target" id="classDepthControl_1a86aaf81a8dd7b663f5d0c5439d3a6c3e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_model_boundary_velocity_negative_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">0.272937623109179</span></span><a class="headerlink" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_negative_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl41fz_derivative_at_model_boundary_positive_E">
+<span id="_CPPv3N12DepthControl41fz_derivative_at_model_boundary_positive_E"></span><span id="_CPPv2N12DepthControl41fz_derivative_at_model_boundary_positive_E"></span><span id="DepthControl::fz_derivative_at_model_boundary_positive___doubleC"></span><span class="target" id="classDepthControl_1aa69a7eb881dba7434828fb4b917ac6d4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_derivative_at_model_boundary_positive_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NK12DepthControl25fz_derivative_computationEd" title="DepthControl::fz_derivative_computation"><span class="n"><span class="pre">fz_derivative_computation</span></span></a><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_positive_E" title="DepthControl::fz_model_boundary_velocity_positive_"><span class="n"><span class="pre">fz_model_boundary_velocity_positive_</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N12DepthControl41fz_derivative_at_model_boundary_positive_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl37fz_offset_at_model_boundary_positive_E">
+<span id="_CPPv3N12DepthControl37fz_offset_at_model_boundary_positive_E"></span><span id="_CPPv2N12DepthControl37fz_offset_at_model_boundary_positive_E"></span><span id="DepthControl::fz_offset_at_model_boundary_positive___doubleC"></span><span class="target" id="classDepthControl_1af61b7102d5232e9e0aa19e4010f5e9d2"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_offset_at_model_boundary_positive_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NK12DepthControl14fz_computationEd" title="DepthControl::fz_computation"><span class="n"><span class="pre">fz_computation</span></span></a><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_positive_E" title="DepthControl::fz_model_boundary_velocity_positive_"><span class="n"><span class="pre">fz_model_boundary_velocity_positive_</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl41fz_derivative_at_model_boundary_positive_E" title="DepthControl::fz_derivative_at_model_boundary_positive_"><span class="n"><span class="pre">fz_derivative_at_model_boundary_positive_</span></span></a><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_positive_E" title="DepthControl::fz_model_boundary_velocity_positive_"><span class="n"><span class="pre">fz_model_boundary_velocity_positive_</span></span></a><a class="headerlink" href="#_CPPv4N12DepthControl37fz_offset_at_model_boundary_positive_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl41fz_derivative_at_model_boundary_negative_E">
+<span id="_CPPv3N12DepthControl41fz_derivative_at_model_boundary_negative_E"></span><span id="_CPPv2N12DepthControl41fz_derivative_at_model_boundary_negative_E"></span><span id="DepthControl::fz_derivative_at_model_boundary_negative___doubleC"></span><span class="target" id="classDepthControl_1ad8019f3eb15afafdc9f6401f7d3cdbc0"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_derivative_at_model_boundary_negative_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NK12DepthControl25fz_derivative_computationEd" title="DepthControl::fz_derivative_computation"><span class="n"><span class="pre">fz_derivative_computation</span></span></a><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_negative_E" title="DepthControl::fz_model_boundary_velocity_negative_"><span class="n"><span class="pre">fz_model_boundary_velocity_negative_</span></span></a><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N12DepthControl41fz_derivative_at_model_boundary_negative_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl37fz_offset_at_model_boundary_negative_E">
+<span id="_CPPv3N12DepthControl37fz_offset_at_model_boundary_negative_E"></span><span id="_CPPv2N12DepthControl37fz_offset_at_model_boundary_negative_E"></span><span id="DepthControl::fz_offset_at_model_boundary_negative___doubleC"></span><span class="target" id="classDepthControl_1accef033c8fd35192ed75c9caf684006a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fz_offset_at_model_boundary_negative_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4NK12DepthControl14fz_computationEd" title="DepthControl::fz_computation"><span class="n"><span class="pre">fz_computation</span></span></a><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_negative_E" title="DepthControl::fz_model_boundary_velocity_negative_"><span class="n"><span class="pre">fz_model_boundary_velocity_negative_</span></span></a><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl41fz_derivative_at_model_boundary_negative_E" title="DepthControl::fz_derivative_at_model_boundary_negative_"><span class="n"><span class="pre">fz_derivative_at_model_boundary_negative_</span></span></a><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_negative_E" title="DepthControl::fz_model_boundary_velocity_negative_"><span class="n"><span class="pre">fz_model_boundary_velocity_negative_</span></span></a><a class="headerlink" href="#_CPPv4N12DepthControl37fz_offset_at_model_boundary_negative_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl16root_regulation_E">
+<span id="_CPPv3N12DepthControl16root_regulation_E"></span><span id="_CPPv2N12DepthControl16root_regulation_E"></span><span id="DepthControl::root_regulation___double"></span><span class="target" id="classDepthControl_1a901eb8800886555607963d28a46cd247"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">root_regulation_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">0.2</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16root_regulation_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Compute regulation constant. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl20limit_depth_control_E">
+<span id="_CPPv3N12DepthControl20limit_depth_control_E"></span><span id="_CPPv2N12DepthControl20limit_depth_control_E"></span><span id="DepthControl::limit_depth_control___double"></span><span class="target" id="classDepthControl_1aeeb3dba2fb490cb18a26c712d0266b77"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">limit_depth_control_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.5</span></span><a class="headerlink" href="#_CPPv4N12DepthControl20limit_depth_control_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl17flow_piston_sink_E">
+<span id="_CPPv3N12DepthControl17flow_piston_sink_E"></span><span id="_CPPv2N12DepthControl17flow_piston_sink_E"></span><span id="DepthControl::flow_piston_sink___double"></span><span class="target" id="classDepthControl_1a99600b6dd5902df4f38c91ecea8b6233"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flow_piston_sink_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">5e-7</span></span><a class="headerlink" href="#_CPPv4N12DepthControl17flow_piston_sink_E" title="Link to this definition"></a><br /></dt>
+<dd><p>m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl32piston_reach_position_dead_zone_E">
+<span id="_CPPv3N12DepthControl32piston_reach_position_dead_zone_E"></span><span id="_CPPv2N12DepthControl32piston_reach_position_dead_zone_E"></span><span id="DepthControl::piston_reach_position_dead_zone___double"></span><span class="target" id="classDepthControl_1ac479147c93b89ebd0b98759298c674bf"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_reach_position_dead_zone_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">50.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl32piston_reach_position_dead_zone_E" title="Link to this definition"></a><br /></dt>
+<dd><p>m3/s </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18piston_hysteresis_E">
+<span id="_CPPv3N12DepthControl18piston_hysteresis_E"></span><span id="_CPPv2N12DepthControl18piston_hysteresis_E"></span><span id="DepthControl::piston_hysteresis___double"></span><span class="target" id="classDepthControl_1ae873795e04353ec099ae4c28de869eab"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_hysteresis_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.6</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18piston_hysteresis_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl14motor_max_rpm_E">
+<span id="_CPPv3N12DepthControl14motor_max_rpm_E"></span><span id="_CPPv2N12DepthControl14motor_max_rpm_E"></span><span id="DepthControl::motor_max_rpm___double"></span><span class="target" id="classDepthControl_1aa453367ec30b6ebb48355d730e51f0f6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">motor_max_rpm_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">38.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl14motor_max_rpm_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl9flow_max_E">
+<span id="_CPPv3N12DepthControl9flow_max_E"></span><span id="_CPPv2N12DepthControl9flow_max_E"></span><span id="DepthControl::flow_max___double"></span><span class="target" id="classDepthControl_1a2d3a15ffc910793830f608ee5c455f35"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flow_max_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N12DepthControl14motor_max_rpm_E" title="DepthControl::motor_max_rpm_"><span class="n"><span class="pre">motor_max_rpm_</span></span></a><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">60.</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl14tick_per_turn_E" title="DepthControl::tick_per_turn_"><span class="n"><span class="pre">tick_per_turn_</span></span></a><span class="w"> </span><span class="o"><span class="pre">*</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl15tick_to_volume_E" title="DepthControl::tick_to_volume_"><span class="n"><span class="pre">tick_to_volume_</span></span></a><a class="headerlink" href="#_CPPv4N12DepthControl9flow_max_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl32piston_flow_security_percentage_E">
+<span id="_CPPv3N12DepthControl32piston_flow_security_percentage_E"></span><span id="_CPPv2N12DepthControl32piston_flow_security_percentage_E"></span><span id="DepthControl::piston_flow_security_percentage___double"></span><span class="target" id="classDepthControl_1a9453df97db241b35dbcbf192e65405f2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_flow_security_percentage_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.5</span></span><a class="headerlink" href="#_CPPv4N12DepthControl32piston_flow_security_percentage_E" title="Link to this definition"></a><br /></dt>
+<dd><p>in m3/sec </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18hold_depth_enable_E">
+<span id="_CPPv3N12DepthControl18hold_depth_enable_E"></span><span id="_CPPv2N12DepthControl18hold_depth_enable_E"></span><span id="DepthControl::hold_depth_enable___b"></span><span class="target" id="classDepthControl_1ab23c5141cfa6aaae39c4e161bda2b21f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_depth_enable_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18hold_depth_enable_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Hold depth parameters. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl31hold_depth_validation_duration_E">
+<span id="_CPPv3N12DepthControl31hold_depth_validation_duration_E"></span><span id="_CPPv2N12DepthControl31hold_depth_validation_duration_E"></span><span id="DepthControl::hold_depth_validation_duration___rclcpp::Duration"></span><span class="target" id="classDepthControl_1ab4cd21949282bcd5a4e41be058374b70"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Duration</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_depth_validation_duration_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">30</span></span><span class="n"><span class="pre">s</span></span><a class="headerlink" href="#_CPPv4N12DepthControl31hold_depth_validation_duration_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl27hold_depth_validation_time_E">
+<span id="_CPPv3N12DepthControl27hold_depth_validation_time_E"></span><span id="_CPPv2N12DepthControl27hold_depth_validation_time_E"></span><span id="DepthControl::hold_depth_validation_time___rclcpp::Time"></span><span class="target" id="classDepthControl_1a5a6b1b5ef2f8fb5a98e5851754e8a449"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_depth_validation_time_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N12DepthControl27hold_depth_validation_time_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl22hold_depth_validation_E">
+<span id="_CPPv3N12DepthControl22hold_depth_validation_E"></span><span id="_CPPv2N12DepthControl22hold_depth_validation_E"></span><span id="DepthControl::hold_depth_validation___b"></span><span class="target" id="classDepthControl_1a794580981df0e68f66b776a049758d52"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_depth_validation_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N12DepthControl22hold_depth_validation_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl23hold_depth_value_enter_E">
+<span id="_CPPv3N12DepthControl23hold_depth_value_enter_E"></span><span id="_CPPv2N12DepthControl23hold_depth_value_enter_E"></span><span id="DepthControl::hold_depth_value_enter___double"></span><span class="target" id="classDepthControl_1aef7351f3662d9e60cc1bed8266b1fb06"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_depth_value_enter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl23hold_depth_value_enter_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl22hold_depth_value_exit_E">
+<span id="_CPPv3N12DepthControl22hold_depth_value_exit_E"></span><span id="_CPPv2N12DepthControl22hold_depth_value_exit_E"></span><span id="DepthControl::hold_depth_value_exit___double"></span><span class="target" id="classDepthControl_1aa10434c9421f25f5281f195b58675069"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_depth_value_exit_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl22hold_depth_value_exit_E" title="Link to this definition"></a><br /></dt>
+<dd><p>m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl20hold_velocity_enter_E">
+<span id="_CPPv3N12DepthControl20hold_velocity_enter_E"></span><span id="_CPPv2N12DepthControl20hold_velocity_enter_E"></span><span id="DepthControl::hold_velocity_enter___double"></span><span class="target" id="classDepthControl_1a544e36c1e036a249574637acf6d4253d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_velocity_enter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl20hold_velocity_enter_E" title="Link to this definition"></a><br /></dt>
+<dd><p>m </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl19hold_velocity_exit_E">
+<span id="_CPPv3N12DepthControl19hold_velocity_exit_E"></span><span id="_CPPv2N12DepthControl19hold_velocity_exit_E"></span><span id="DepthControl::hold_velocity_exit___double"></span><span class="target" id="classDepthControl_1a1f936e9c5dd54976e8921441e442161d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hold_velocity_exit_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl19hold_velocity_exit_E" title="Link to this definition"></a><br /></dt>
+<dd><p>m/s </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl15control_filter_E">
+<span id="_CPPv3N12DepthControl15control_filter_E"></span><span id="_CPPv2N12DepthControl15control_filter_E"></span><span id="DepthControl::control_filter___b"></span><span class="target" id="classDepthControl_1a65b156b416bf16565ded205926903b15"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">control_filter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N12DepthControl15control_filter_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18delta_velocity_lb_E">
+<span id="_CPPv3N12DepthControl18delta_velocity_lb_E"></span><span id="_CPPv2N12DepthControl18delta_velocity_lb_E"></span><span id="DepthControl::delta_velocity_lb___double"></span><span class="target" id="classDepthControl_1aa19682558432a49f98adc4e69f069d76"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delta_velocity_lb_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1e-3</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18delta_velocity_lb_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18delta_velocity_ub_E">
+<span id="_CPPv3N12DepthControl18delta_velocity_ub_E"></span><span id="_CPPv2N12DepthControl18delta_velocity_ub_E"></span><span id="DepthControl::delta_velocity_ub___double"></span><span class="target" id="classDepthControl_1a1117d35f953065e3a72a4837b348a27f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delta_velocity_ub_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-3</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18delta_velocity_ub_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18delta_position_lb_E">
+<span id="_CPPv3N12DepthControl18delta_position_lb_E"></span><span id="_CPPv2N12DepthControl18delta_position_lb_E"></span><span id="DepthControl::delta_position_lb___double"></span><span class="target" id="classDepthControl_1a6b948e5653c56e15b99916ef81f9fd6a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delta_position_lb_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">10e-3</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18delta_position_lb_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18delta_position_ub_E">
+<span id="_CPPv3N12DepthControl18delta_position_ub_E"></span><span id="_CPPv2N12DepthControl18delta_position_ub_E"></span><span id="DepthControl::delta_position_ub___double"></span><span class="target" id="classDepthControl_1ac7470eeeca4df9fb0197554d1750c69f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delta_position_ub_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10e-3</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18delta_position_ub_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl20safety_time_no_data_E">
+<span id="_CPPv3N12DepthControl20safety_time_no_data_E"></span><span id="_CPPv2N12DepthControl20safety_time_no_data_E"></span><span id="DepthControl::safety_time_no_data___rclcpp::Duration"></span><span class="target" id="classDepthControl_1a276df80b9ebdc77ec3f63b3b9b190089"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Duration</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">safety_time_no_data_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">5</span></span><span class="n"><span class="pre">s</span></span><a class="headerlink" href="#_CPPv4N12DepthControl20safety_time_no_data_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl16piston_position_E">
+<span id="_CPPv3N12DepthControl16piston_position_E"></span><span id="_CPPv2N12DepthControl16piston_position_E"></span><span id="DepthControl::piston_position___l"></span><span class="target" id="classDepthControl_1a16471dfb5798872cbba6ddd686aac8f1"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_position_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16piston_position_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18piston_switch_top_E">
+<span id="_CPPv3N12DepthControl18piston_switch_top_E"></span><span id="_CPPv2N12DepthControl18piston_switch_top_E"></span><span id="DepthControl::piston_switch_top___b"></span><span class="target" id="classDepthControl_1a8d9d11c6820784b81e5bb939f9367065"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_switch_top_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18piston_switch_top_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl21piston_switch_bottom_E">
+<span id="_CPPv3N12DepthControl21piston_switch_bottom_E"></span><span id="_CPPv2N12DepthControl21piston_switch_bottom_E"></span><span id="DepthControl::piston_switch_bottom___b"></span><span class="target" id="classDepthControl_1afce8cb443c18ca3e2e73e828f9755d05"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_switch_bottom_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N12DepthControl21piston_switch_bottom_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13piston_state_E">
+<span id="_CPPv3N12DepthControl13piston_state_E"></span><span id="_CPPv2N12DepthControl13piston_state_E"></span><span id="DepthControl::piston_state___i"></span><span class="target" id="classDepthControl_1ab796a883665d94cf4ea62c9aff0c767e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_state_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl13piston_state_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl17piston_set_point_E">
+<span id="_CPPv3N12DepthControl17piston_set_point_E"></span><span id="_CPPv2N12DepthControl17piston_set_point_E"></span><span id="DepthControl::piston_set_point___double"></span><span class="target" id="classDepthControl_1a801df5bac2d9b3aa0b092738dff4fa4d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_set_point_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl17piston_set_point_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl8is_exit_E">
+<span id="_CPPv3N12DepthControl8is_exit_E"></span><span id="_CPPv2N12DepthControl8is_exit_E"></span><span id="DepthControl::is_exit___b"></span><span class="target" id="classDepthControl_1ad865b28866049d5808b0da77d339e9a6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">is_exit_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N12DepthControl8is_exit_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl26time_last_kalman_callback_E">
+<span id="_CPPv3N12DepthControl26time_last_kalman_callback_E"></span><span id="_CPPv2N12DepthControl26time_last_kalman_callback_E"></span><span id="DepthControl::time_last_kalman_callback___rclcpp::Time"></span><span class="target" id="classDepthControl_1a544336d8e93bf4f0595809df63796329"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_last_kalman_callback_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N12DepthControl26time_last_kalman_callback_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Callback data. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl26time_last_piston_callback_E">
+<span id="_CPPv3N12DepthControl26time_last_piston_callback_E"></span><span id="_CPPv2N12DepthControl26time_last_piston_callback_E"></span><span id="DepthControl::time_last_piston_callback___rclcpp::Time"></span><span class="target" id="classDepthControl_1a222f7fcde439d6d706121e5f48ebdce3"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_last_piston_callback_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N12DepthControl26time_last_piston_callback_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl16kalman_velocity_E">
+<span id="_CPPv3N12DepthControl16kalman_velocity_E"></span><span id="_CPPv2N12DepthControl16kalman_velocity_E"></span><span id="DepthControl::kalman_velocity___double"></span><span class="target" id="classDepthControl_1a0e327ec247f4841207cbce922e074f73"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kalman_velocity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16kalman_velocity_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13kalman_depth_E">
+<span id="_CPPv3N12DepthControl13kalman_depth_E"></span><span id="_CPPv2N12DepthControl13kalman_depth_E"></span><span id="DepthControl::kalman_depth___double"></span><span class="target" id="classDepthControl_1a339094eaaa76ccb89252027f69f8213b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kalman_depth_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl13kalman_depth_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl20kalman_total_offset_E">
+<span id="_CPPv3N12DepthControl20kalman_total_offset_E"></span><span id="_CPPv2N12DepthControl20kalman_total_offset_E"></span><span id="DepthControl::kalman_total_offset___double"></span><span class="target" id="classDepthControl_1a8f24eef83e0bdf458ae69234c2c0de49"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kalman_total_offset_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">100.e-6</span></span><a class="headerlink" href="#_CPPv4N12DepthControl20kalman_total_offset_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl11kalman_chi_E">
+<span id="_CPPv3N12DepthControl11kalman_chi_E"></span><span id="_CPPv2N12DepthControl11kalman_chi_E"></span><span id="DepthControl::kalman_chi___double"></span><span class="target" id="classDepthControl_1ac9afb26121da2cb326bf8e7b1ca5e5f0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kalman_chi_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl11kalman_chi_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12kalman_chi2_E">
+<span id="_CPPv3N12DepthControl12kalman_chi2_E"></span><span id="_CPPv2N12DepthControl12kalman_chi2_E"></span><span id="DepthControl::kalman_chi2___double"></span><span class="target" id="classDepthControl_1aa364580ac5cd3ab8c72c78832e95a720"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kalman_chi2_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl12kalman_chi2_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl10kalman_cz_E">
+<span id="_CPPv3N12DepthControl10kalman_cz_E"></span><span id="_CPPv2N12DepthControl10kalman_cz_E"></span><span id="DepthControl::kalman_cz___double"></span><span class="target" id="classDepthControl_1a1f5131a1c31e5d086d9155e1f89240c0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kalman_cz_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">3.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl10kalman_cz_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl14piston_volume_E">
+<span id="_CPPv3N12DepthControl14piston_volume_E"></span><span id="_CPPv2N12DepthControl14piston_volume_E"></span><span id="DepthControl::piston_volume___double"></span><span class="target" id="classDepthControl_1ad559226bb22bb926841f2b917f41d288"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_volume_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.</span></span><a class="headerlink" href="#_CPPv4N12DepthControl14piston_volume_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13depth_fusion_E">
+<span id="_CPPv3N12DepthControl13depth_fusion_E"></span><span id="_CPPv2N12DepthControl13depth_fusion_E"></span><span id="DepthControl::depth_fusion___double"></span><span class="target" id="classDepthControl_1aa61e76c569b2093004bbc981e33a5e9d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depth_fusion_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl13depth_fusion_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl16depth_set_point_E">
+<span id="_CPPv3N12DepthControl16depth_set_point_E"></span><span id="_CPPv2N12DepthControl16depth_set_point_E"></span><span id="DepthControl::depth_set_point___double"></span><span class="target" id="classDepthControl_1a8a024f440da0eff3d5ae72ab47662623"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depth_set_point_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16depth_set_point_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl15limit_velocity_E">
+<span id="_CPPv3N12DepthControl15limit_velocity_E"></span><span id="_CPPv2N12DepthControl15limit_velocity_E"></span><span id="DepthControl::limit_velocity___double"></span><span class="target" id="classDepthControl_1a7e9789482747830f9ac3b541539ba667"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">limit_velocity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl15limit_velocity_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl20limit_velocity_last_E">
+<span id="_CPPv3N12DepthControl20limit_velocity_last_E"></span><span id="_CPPv2N12DepthControl20limit_velocity_last_E"></span><span id="DepthControl::limit_velocity_last___double"></span><span class="target" id="classDepthControl_1af5f99e6f53622a8a8912b7de33b1ac1c"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">limit_velocity_last_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl20limit_velocity_last_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl18approach_velocity_E">
+<span id="_CPPv3N12DepthControl18approach_velocity_E"></span><span id="_CPPv2N12DepthControl18approach_velocity_E"></span><span id="DepthControl::approach_velocity___double"></span><span class="target" id="classDepthControl_1a4c0506195d6e946fdf7c907815ccad0d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">approach_velocity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl18approach_velocity_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl12temperature_E">
+<span id="_CPPv3N12DepthControl12temperature_E"></span><span id="_CPPv2N12DepthControl12temperature_E"></span><span id="DepthControl::temperature___double"></span><span class="target" id="classDepthControl_1a2a376cf8a29cdee741d00cc45784097f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">temperature_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">288.15</span></span><a class="headerlink" href="#_CPPv4N12DepthControl12temperature_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl9pressure_E">
+<span id="_CPPv3N12DepthControl9pressure_E"></span><span id="_CPPv2N12DepthControl9pressure_E"></span><span id="DepthControl::pressure___double"></span><span class="target" id="classDepthControl_1a99b40b2e7248bd6def2efb6e0a3957b8"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressure_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">101325</span></span><a class="headerlink" href="#_CPPv4N12DepthControl9pressure_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl24last_waypoint_max_delay_E">
+<span id="_CPPv3N12DepthControl24last_waypoint_max_delay_E"></span><span id="_CPPv2N12DepthControl24last_waypoint_max_delay_E"></span><span id="DepthControl::last_waypoint_max_delay___std::chrono::milliseconds"></span><span class="target" id="classDepthControl_1a7006b0427c30dbcd88aa7e5a8703ac02"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">chrono</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">milliseconds</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">last_waypoint_max_delay_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">5</span></span><span class="n"><span class="pre">s</span></span><a class="headerlink" href="#_CPPv4N12DepthControl24last_waypoint_max_delay_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl19last_waypoint_time_E">
+<span id="_CPPv3N12DepthControl19last_waypoint_time_E"></span><span id="_CPPv2N12DepthControl19last_waypoint_time_E"></span><span id="DepthControl::last_waypoint_time___rclcpp::Time"></span><span class="target" id="classDepthControl_1a05c6ef66ded390b4d9fc90c021f95430"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">last_waypoint_time_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N12DepthControl19last_waypoint_time_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl17regulation_state_E">
+<span id="_CPPv3N12DepthControl17regulation_state_E"></span><span id="_CPPv2N12DepthControl17regulation_state_E"></span><span id="DepthControl::regulation_state___STATE_MACHINE"></span><span class="target" id="classDepthControl_1a264b6de435ce7b0a051802afad3903c6"></span><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINEE" title="DepthControl::STATE_MACHINE"><span class="n"><span class="pre">STATE_MACHINE</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">regulation_state_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE13STATE_SURFACEE" title="DepthControl::STATE_SURFACE"><span class="n"><span class="pre">STATE_SURFACE</span></span></a><a class="headerlink" href="#_CPPv4N12DepthControl17regulation_state_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl8y_debug_E">
+<span id="_CPPv3N12DepthControl8y_debug_E"></span><span id="_CPPv2N12DepthControl8y_debug_E"></span><span id="DepthControl::y_debug___double"></span><span class="target" id="classDepthControl_1ac42344eeda10d9c508e1ce7f818c872d"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y_debug_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl8y_debug_E" title="Link to this definition"></a><br /></dt>
+<dd><p>Debug. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl9dy_debug_E">
+<span id="_CPPv3N12DepthControl9dy_debug_E"></span><span id="_CPPv2N12DepthControl9dy_debug_E"></span><span id="DepthControl::dy_debug___double"></span><span class="target" id="classDepthControl_1af522038aba0a81df9aed4fa446b3e3f6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dy_debug_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl9dy_debug_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl8u_debug_E">
+<span id="_CPPv3N12DepthControl8u_debug_E"></span><span id="_CPPv2N12DepthControl8u_debug_E"></span><span id="DepthControl::u_debug___double"></span><span class="target" id="classDepthControl_1afcb3b799c7fbbc92d401e9b1836f5eff"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">u_debug_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl8u_debug_E" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl10optimize_uERNSt5arrayIdXL4EEEE">
+<span id="_CPPv3N12DepthControl10optimize_uERNSt5arrayIdXL4EEEE"></span><span id="_CPPv2N12DepthControl10optimize_uERNSt5arrayIdX4EEE"></span><span id="DepthControl::optimize_u__std::array:double.4:R"></span><span class="target" id="classDepthControl_1a9f06b862197fc1d9edba534d9bf10ceb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">optimize_u</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">u_tab</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12DepthControl10optimize_uERNSt5arrayIdXL4EEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>Optimize the command to reduce power consumptionr. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u_tab</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N12DepthControl15PISTON_STATE_OKE">
+<span id="_CPPv3N12DepthControl15PISTON_STATE_OKE"></span><span id="_CPPv2N12DepthControl15PISTON_STATE_OKE"></span><span id="DepthControl::PISTON_STATE_OK__iC"></span><span class="target" id="classDepthControl_1aa9835a33cd9007caabc8598e9571687f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PISTON_STATE_OK</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><a class="headerlink" href="#_CPPv4N12DepthControl15PISTON_STATE_OKE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classDensityNode.html" class="btn btn-neutral float-left" title="Class DensityNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classDepthControlNode.html" class="btn btn-neutral float-right" title="Class DepthControlNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

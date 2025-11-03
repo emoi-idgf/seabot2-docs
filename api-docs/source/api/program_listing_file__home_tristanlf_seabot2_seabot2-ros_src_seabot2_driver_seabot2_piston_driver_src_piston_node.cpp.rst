@@ -1,0 +1,121 @@
+
+.. _program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_seabot2_piston_driver_src_piston_node.cpp:
+
+Program Listing for File piston_node.cpp
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_seabot2_piston_driver_src_piston_node.cpp>` (``/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston_node.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include "seabot2_piston_driver/piston_node.h"
+   
+   using namespace placeholders;
+   
+   PistonNode::PistonNode()
+           : Node("piston_node"), piston_(this){
+   
+       init_parameters();
+       init_interfaces();
+   
+       piston_.i2c_open();
+   
+       // Reset the position of the piston to ensure correct initialization
+       while(piston_.set_piston_reset()!=EXIT_SUCCESS){
+           usleep(500000); // 500ms sleep
+       }
+   
+       timer_ = this->create_wall_timer(
+               loop_dt_, std::bind(&PistonNode::timer_callback, this));
+   
+       RCLCPP_INFO(this->get_logger(), "[Piston_node] Start Ok");
+   }
+   
+   void PistonNode::timer_callback() {
+       if(piston_.get_all_data()==EXIT_SUCCESS){
+           seabot2_msgs::msg::PistonState state_msg;
+           state_msg.header.stamp = this->now();
+   
+           state_msg.position = piston_.position_;
+           state_msg.position_set_point = piston_.position_set_point_;
+           state_msg.switch_top = piston_.switch_top_;
+           state_msg.switch_bottom = piston_.switch_bottom_;
+           state_msg.enable = piston_.enable_;
+           state_msg.motor_sens = piston_.motor_sens_;
+           state_msg.state = piston_.state_;
+           state_msg.motor_speed_set_point = piston_.motor_set_point_;
+           state_msg.motor_speed = piston_.motor_cmd_;
+           state_msg.battery_voltage = piston_.battery_voltage_;
+           state_msg.motor_current = piston_.motor_current_;
+   
+           publisher_piston_state_->publish(state_msg);
+       }
+       if((this->now()-time_last_cmd_received_)>delay_no_data_ && piston_.state_ != Piston::PISTON_EXIT){
+           if (piston_.set_piston_exit() == EXIT_FAILURE) {
+               RCLCPP_WARN(this->get_logger(), "[Piston_node] Error setting piston exit");
+           }
+       }
+   }
+   
+   void PistonNode::init_parameters() {
+       this->declare_parameter<long>("loop_dt", loop_dt_.count());
+       loop_dt_ = std::chrono::milliseconds(this->get_parameter_or("loop_dt", loop_dt_.count()));
+   
+       this->declare_parameter<std::string>("i2c_periph", piston_.getI2CPeriph());
+       this->declare_parameter<int>("i2c_address", piston_.getI2CAddr());
+   
+       piston_.setI2CPeriph(this->get_parameter_or("i2c_periph", piston_.getI2CPeriph()));
+       piston_.setI2CAddr(this->get_parameter_or("i2c_address", piston_.getI2CAddr()));
+   
+        this->declare_parameter<int>("delay_reset_if_no_data", delay_no_data_.count());
+       delay_no_data_ = std::chrono::seconds(this->get_parameter_or("delay_reset_if_no_data",
+                                                         std::chrono::duration_cast<std::chrono::seconds>(delay_no_data_).count()));
+   
+       this->declare_parameter<double>("bridge_R1", piston_.R1_);
+       this->declare_parameter<double>("bridge_R2", piston_.R2_);
+       piston_.R1_ = this->get_parameter_or("bridge_R1", piston_.R1_);
+       piston_.R2_ = this->get_parameter_or("bridge_R2", piston_.R2_);
+   }
+   
+   void PistonNode::topic_position_set_point_callback(const seabot2_msgs::msg::PistonSetPoint &msg){
+       time_last_cmd_received_ = this->now();
+   
+       if(msg.exit){
+           if(piston_.state_ != Piston::PISTON_EXIT) {
+               if (piston_.set_piston_exit() == EXIT_FAILURE) {
+                   RCLCPP_WARN(this->get_logger(), "[Piston_node] Error setting piston exit");
+               }
+           }
+       }
+       else{
+           if(piston_.state_ == Piston::PISTON_EXIT){
+               piston_.set_piston_regulation();
+               cpt_piston_error_++;
+               if(cpt_piston_error_ == cpt_piston_error_max_reset_){
+                   piston_.set_piston_reset();
+               }
+           }
+           else if(last_cmd_ != msg.position || piston_.position_set_point_ != msg.position) {
+               cpt_piston_error_ = 0;
+               if(piston_.set_position(msg.position) == EXIT_SUCCESS) {
+                   last_cmd_ = msg.position;
+               }
+           }
+       }
+   }
+   
+   void PistonNode::init_interfaces() {
+       publisher_piston_state_ = this->create_publisher<seabot2_msgs::msg::PistonState>("piston", 1);
+   
+       subscription_position_set_point_ = this->create_subscription<seabot2_msgs::msg::PistonSetPoint>(
+               "piston_set_point", 10, std::bind(&PistonNode::topic_position_set_point_callback, this, _1));
+   }
+   
+   int main(int argc, char *argv[]) {
+       rclcpp::init(argc, argv);
+       rclcpp::spin(std::make_shared<PistonNode>());
+       rclcpp::shutdown();
+       return 0;
+   }
