@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classWaypointSeafloorLanding" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>WaypointSeafloorLanding</compoundname>
+    <basecompoundref refid="classWaypoint" prot="public" virt="non-virtual">Waypoint</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWaypointSeafloorLanding_1a547bf00648afa28850bcd2483c9103f7" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WaypointSeafloorLanding::WaypointSeafloorLanding</definition>
+        <argsstring>(Mission *mission)</argsstring>
+        <name>WaypointSeafloorLanding</name>
+        <qualifiedname>WaypointSeafloorLanding::WaypointSeafloorLanding</qualifiedname>
+        <param>
+          <type><ref refid="classMission" kindref="compound">Mission</ref> *</type>
+          <declname>mission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="43" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classWaypointSeafloorLanding_1a01e44e766d059ad7c8ac23e4b084ef70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WaypointSeafloorLanding::~WaypointSeafloorLanding</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~WaypointSeafloorLanding</name>
+        <qualifiedname>WaypointSeafloorLanding::~WaypointSeafloorLanding</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classWaypointSeafloorLanding_1a7c0508c8708ebbdf22657f953bf625de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WaypointSeafloorLanding::process</definition>
+        <argsstring>(const rclcpp::Time &amp;time) override</argsstring>
+        <name>process</name>
+        <qualifiedname>WaypointSeafloorLanding::process</qualifiedname>
+        <reimplements refid="classWaypoint_1aae9e95a58a5309b3849bd97b0c9cd2e8">process</reimplements>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>process </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Waypoint</label>
+        <link refid="classWaypoint"/>
+      </node>
+      <node id="1">
+        <label>WaypointSeafloorLanding</label>
+        <link refid="classWaypointSeafloorLanding"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Mission</label>
+        <link refid="classMission"/>
+      </node>
+      <node id="2">
+        <label>Waypoint</label>
+        <link refid="classWaypoint"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mission_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>WaypointSeafloorLanding</label>
+        <link refid="classWaypointSeafloorLanding"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="41" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="41" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classWaypoint_1a7d5cd3970869c646b4e86e986996b8a3" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>depth</name></member>
+      <member refid="classWaypoint_1ac2c73435c531a01c6dd830f0b226e19f" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>duration</name></member>
+      <member refid="classWaypoint_1a425cd7f3bcd3e57818e7d6447a313e50" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>east</name></member>
+      <member refid="classWaypoint_1a175f6c7ecf0cd7014f6a48d5cc3638f7" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>enable_thrusters</name></member>
+      <member refid="classWaypoint_1af5d91ed57ac82236555ad0abacee187e" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>mission_</name></member>
+      <member refid="classWaypoint_1a07352276950a2e7f20618cd033fcc043" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>mode</name></member>
+      <member refid="classWaypoint_1a50285f06fcf53385e2092f66db354a8c" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>north</name></member>
+      <member refid="classWaypointSeafloorLanding_1a7c0508c8708ebbdf22657f953bf625de" prot="public" virt="virtual"><scope>WaypointSeafloorLanding</scope><name>process</name></member>
+      <member refid="classWaypoint_1a331d69d04562574f810e752d16f83c21" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>seafloor_landing</name></member>
+      <member refid="classWaypoint_1a2eb82758cba0567b34176fc325bbd8fa" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>time_end</name></member>
+      <member refid="classWaypoint_1a5b806ea31179bb7287694907120d58f7" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>velocity</name></member>
+      <member refid="classWaypoint_1a5ecb81fe7f365f3249a1a6e2ec25984c" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>Waypoint</name></member>
+      <member refid="classWaypoint_1a9b96693d5d4493fa9bc32d8a38b9ef33" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>Waypoint</name></member>
+      <member refid="classWaypoint_1a44b95eeea311645199d18144d101b2d2" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>Waypoint</name></member>
+      <member refid="classWaypointSeafloorLanding_1a547bf00648afa28850bcd2483c9103f7" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>WaypointSeafloorLanding</name></member>
+      <member refid="classWaypoint_1a8108d386384cd92289885f224289386d" prot="public" virt="virtual"><scope>WaypointSeafloorLanding</scope><name>~Waypoint</name></member>
+      <member refid="classWaypointSeafloorLanding_1a01e44e766d059ad7c8ac23e4b084ef70" prot="public" virt="non-virtual"><scope>WaypointSeafloorLanding</scope><name>~WaypointSeafloorLanding</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,637 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classICM20948Node" kind="class" language="C++" prot="public">
+    <compoundname>ICM20948Node</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classICM20948Node_1a2d75ae0337234791c3394d019de752e6" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr ICM20948Node::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>ICM20948Node::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="28" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a8a3429b771dccf440037f0ec7bc86b37" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds ICM20948Node::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>ICM20948Node::loop_dt_</qualifiedname>
+        <initializer>= 20ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="29" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a071adefa1c2bad11daf2ce972222c694" prot="private" static="no" mutable="no">
+        <type><ref refid="classICM20948" kindref="compound">ICM20948</ref></type>
+        <definition>ICM20948 ICM20948Node::icm20948_</definition>
+        <argsstring></argsstring>
+        <name>icm20948_</name>
+        <qualifiedname>ICM20948Node::icm20948_</qualifiedname>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="31" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1ad01a42e742bac59aca1ce5f5ddbcdd6b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::RawData &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::RawData&gt;::SharedPtr ICM20948Node::publisher_raw_data_</definition>
+        <argsstring></argsstring>
+        <name>publisher_raw_data_</name>
+        <qualifiedname>ICM20948Node::publisher_raw_data_</qualifiedname>
+        <briefdescription>
+<para>Topics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="34" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1aa4414e6e9447354ca1d460b61515c2f9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::RawData &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::RawData&gt;::SharedPtr ICM20948Node::publisher_calibrated_data_</definition>
+        <argsstring></argsstring>
+        <name>publisher_calibrated_data_</name>
+        <qualifiedname>ICM20948Node::publisher_calibrated_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="35" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a0be4dca0b21cc8d6a5a96adfb8de1633" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::RPY &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::RPY&gt;::SharedPtr ICM20948Node::publisher_rpy_</definition>
+        <argsstring></argsstring>
+        <name>publisher_rpy_</name>
+        <qualifiedname>ICM20948Node::publisher_rpy_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="36" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1ad05b5f64d1d068661b9986d270d24996" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::DebugFusion &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::DebugFusion&gt;::SharedPtr ICM20948Node::publisher_debug_fusion_</definition>
+        <argsstring></argsstring>
+        <name>publisher_debug_fusion_</name>
+        <qualifiedname>ICM20948Node::publisher_debug_fusion_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="37" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a5a04205bfac9a46e6df89fc4a5e4a424" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ICM20948Node::publish_raw_data_</definition>
+        <argsstring></argsstring>
+        <name>publish_raw_data_</name>
+        <qualifiedname>ICM20948Node::publish_raw_data_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="39" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1af85bcd89c2219146b9504d8d441181a4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ICM20948Node::publish_calibrated_data_</definition>
+        <argsstring></argsstring>
+        <name>publish_calibrated_data_</name>
+        <qualifiedname>ICM20948Node::publish_calibrated_data_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="40" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a568626da4b63b3f33b800dd6b68cadd6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ICM20948Node::publish_rpy_</definition>
+        <argsstring></argsstring>
+        <name>publish_rpy_</name>
+        <qualifiedname>ICM20948Node::publish_rpy_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="41" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1aaa5b2108d047bfaf76038657935e8502" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ICM20948Node::publish_debug_fusion_</definition>
+        <argsstring></argsstring>
+        <name>publish_debug_fusion_</name>
+        <qualifiedname>ICM20948Node::publish_debug_fusion_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="42" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a50fe77e40d34851455e3fd7badf8e6fe" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref></type>
+        <definition>FusionMatrix ICM20948Node::gyroscopeMisalignment_</definition>
+        <argsstring></argsstring>
+        <name>gyroscopeMisalignment_</name>
+        <qualifiedname>ICM20948Node::gyroscopeMisalignment_</qualifiedname>
+        <initializer>= {1.0f, 0.0f, 0.0f,
+                                           0.0f, 1.0f, 0.0f,
+                                           0.0f, 0.0f, 1.0f}</initializer>
+        <briefdescription>
+<para>Parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="47" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a6713e9485bd86d6a801d745ff19914b4" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::gyroscopeSensitivity_</definition>
+        <argsstring></argsstring>
+        <name>gyroscopeSensitivity_</name>
+        <qualifiedname>ICM20948Node::gyroscopeSensitivity_</qualifiedname>
+        <initializer>= {1.0f, 1.0f, 1.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="50" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a0a460c0bb1b4360d5749e3dbb41d425d" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::gyroscopeOffset_</definition>
+        <argsstring></argsstring>
+        <name>gyroscopeOffset_</name>
+        <qualifiedname>ICM20948Node::gyroscopeOffset_</qualifiedname>
+        <initializer>= {0.0f, 0.0f, 0.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="51" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1acf70ad3c3406eb59a75c88ee7fec993e" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref></type>
+        <definition>FusionMatrix ICM20948Node::accelerometerMisalignment_</definition>
+        <argsstring></argsstring>
+        <name>accelerometerMisalignment_</name>
+        <qualifiedname>ICM20948Node::accelerometerMisalignment_</qualifiedname>
+        <initializer>= gyroscopeMisalignment_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="52" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a96dd0db60889a57a67b3b4687b737902" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::accelerometerSensitivity_</definition>
+        <argsstring></argsstring>
+        <name>accelerometerSensitivity_</name>
+        <qualifiedname>ICM20948Node::accelerometerSensitivity_</qualifiedname>
+        <initializer>= {1.0f, 1.0f, 1.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="53" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a9e0625298a5cbc4462feb93fa9e6c6a5" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::accelerometerOffset_</definition>
+        <argsstring></argsstring>
+        <name>accelerometerOffset_</name>
+        <qualifiedname>ICM20948Node::accelerometerOffset_</qualifiedname>
+        <initializer>= {0.0f, 0.0f, 0.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="54" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a45a3afb46abd064490ceb7e3b2d9de8f" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref></type>
+        <definition>FusionMatrix ICM20948Node::magnetometerMisalignment_</definition>
+        <argsstring></argsstring>
+        <name>magnetometerMisalignment_</name>
+        <qualifiedname>ICM20948Node::magnetometerMisalignment_</qualifiedname>
+        <initializer>= {1.0f, 0.0f, 0.0f,
+                                              0.0f, 1.0f, 0.0f,
+                                              0.0f, 0.0f, 1.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="55" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a509486e7a2e3350e052ba7564d81fc9f" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::magnetometerSensitivity_</definition>
+        <argsstring></argsstring>
+        <name>magnetometerSensitivity_</name>
+        <qualifiedname>ICM20948Node::magnetometerSensitivity_</qualifiedname>
+        <initializer>= {1.0f, 1.0f, 1.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="58" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1aaa3fec2831b277290c1e6d380e38e12e" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::magnetometerOffset_</definition>
+        <argsstring></argsstring>
+        <name>magnetometerOffset_</name>
+        <qualifiedname>ICM20948Node::magnetometerOffset_</qualifiedname>
+        <initializer>= {0.0f, 0.0f, 0.0f}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="59" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a0f375e086c0867046ee38dc6fb303986" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref></type>
+        <definition>FusionMatrix ICM20948Node::softIronMatrix_</definition>
+        <argsstring></argsstring>
+        <name>softIronMatrix_</name>
+        <qualifiedname>ICM20948Node::softIronMatrix_</qualifiedname>
+        <initializer>= {1.0, 0.0, 0.0,
+                                    0.0, 1.0, 0.0,
+                                    0.0, 0.0, 1.0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="60" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1ab7be4a71a8b47da4c6b27e4ce14a82b4" prot="private" static="no" mutable="no">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector ICM20948Node::hardIronOffset_</definition>
+        <argsstring></argsstring>
+        <name>hardIronOffset_</name>
+        <qualifiedname>ICM20948Node::hardIronOffset_</qualifiedname>
+        <initializer>= {0., 0., 0.}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="64" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1aa60feedd51b390d0034b2faaf44b7483" prot="private" static="no" mutable="no">
+        <type><ref refid="structFusionOffset" kindref="compound">FusionOffset</ref></type>
+        <definition>FusionOffset ICM20948Node::offset_</definition>
+        <argsstring></argsstring>
+        <name>offset_</name>
+        <qualifiedname>ICM20948Node::offset_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="65" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a56bcbe365fe41468e8de2c351f60a547" prot="private" static="no" mutable="no">
+        <type><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref></type>
+        <definition>FusionAhrs ICM20948Node::ahrs_</definition>
+        <argsstring></argsstring>
+        <name>ahrs_</name>
+        <qualifiedname>ICM20948Node::ahrs_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="66" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a4bd9816f990d696b99ed61c39ef4c24b" prot="private" static="no" mutable="no">
+        <type><ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref></type>
+        <definition>FusionConvention ICM20948Node::convention_</definition>
+        <argsstring></argsstring>
+        <name>convention_</name>
+        <qualifiedname>ICM20948Node::convention_</qualifiedname>
+        <initializer>= FusionConventionNwu</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="67" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a95050723be62a8d5f1c9094ef1423683" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ICM20948Node::fusion_gain_</definition>
+        <argsstring></argsstring>
+        <name>fusion_gain_</name>
+        <qualifiedname>ICM20948Node::fusion_gain_</qualifiedname>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="68" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a84416d0b8b8c1d8db5ca320d2564138d" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ICM20948Node::sample_rate_</definition>
+        <argsstring></argsstring>
+        <name>sample_rate_</name>
+        <qualifiedname>ICM20948Node::sample_rate_</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="69" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1ab20bf03ac91f32b3397410cad5a106be" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time ICM20948Node::last_time_fusion_</definition>
+        <argsstring></argsstring>
+        <name>last_time_fusion_</name>
+        <qualifiedname>ICM20948Node::last_time_fusion_</qualifiedname>
+        <initializer>= rclcpp::Time(0., RCL_STEADY_TIME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="70" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a26a012bf2c592f6ada66aba29cabaefb" prot="private" static="no" mutable="no">
+        <type>rclcpp::Clock</type>
+        <definition>rclcpp::Clock ICM20948Node::steady_clock_</definition>
+        <argsstring></argsstring>
+        <name>steady_clock_</name>
+        <qualifiedname>ICM20948Node::steady_clock_</qualifiedname>
+        <initializer>= rclcpp::Clock(RCL_STEADY_TIME)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="71" column="19" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a64114c643476502f963fc87e8469cc50" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ICM20948Node::acceleration_rejection_</definition>
+        <argsstring></argsstring>
+        <name>acceleration_rejection_</name>
+        <qualifiedname>ICM20948Node::acceleration_rejection_</qualifiedname>
+        <initializer>= 3.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="72" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1ada3946fbda2165c13d93a98313a1e6bd" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ICM20948Node::magnetic_rejection_</definition>
+        <argsstring></argsstring>
+        <name>magnetic_rejection_</name>
+        <qualifiedname>ICM20948Node::magnetic_rejection_</qualifiedname>
+        <initializer>= 3.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="73" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classICM20948Node_1a6eda6d7da1f270d01c9c4c9d4037c9e9" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ICM20948Node::recovery_trigger_period_</definition>
+        <argsstring></argsstring>
+        <name>recovery_trigger_period_</name>
+        <qualifiedname>ICM20948Node::recovery_trigger_period_</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="74" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classICM20948Node_1a28a6f6aaef14cf172f6a3799f8a7dfce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ICM20948Node::ICM20948Node</definition>
+        <argsstring>()</argsstring>
+        <name>ICM20948Node</name>
+        <qualifiedname>ICM20948Node::ICM20948Node</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="23" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" bodystart="7" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ICM20948Node::compute_ahrs</definition>
+        <argsstring>()</argsstring>
+        <name>compute_ahrs</name>
+        <qualifiedname>ICM20948Node::compute_ahrs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="76" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" bodystart="176" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classICM20948Node_1a08c73f04f9a0174b2c519355f279eaf6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ICM20948Node::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>ICM20948Node::init_parameters</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="83" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" bodystart="24" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classICM20948Node_1a0ee3ea2763b1a9faea7ad87d2c353113" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ICM20948Node::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>ICM20948Node::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces to this node (publishers &amp; subscribers) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="88" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" bodystart="139" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classICM20948Node_1a98c751e7fdf90985604bec6652ac0826" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ICM20948Node::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>ICM20948Node::timer_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer callback </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="93" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" bodystart="146" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ICM20948Node</label>
+        <link refid="classICM20948Node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ICM20948Node</label>
+        <link refid="classICM20948Node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" line="21" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h" bodystart="21" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classICM20948Node_1a64114c643476502f963fc87e8469cc50" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>acceleration_rejection_</name></member>
+      <member refid="classICM20948Node_1acf70ad3c3406eb59a75c88ee7fec993e" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>accelerometerMisalignment_</name></member>
+      <member refid="classICM20948Node_1a9e0625298a5cbc4462feb93fa9e6c6a5" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>accelerometerOffset_</name></member>
+      <member refid="classICM20948Node_1a96dd0db60889a57a67b3b4687b737902" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>accelerometerSensitivity_</name></member>
+      <member refid="classICM20948Node_1a56bcbe365fe41468e8de2c351f60a547" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>ahrs_</name></member>
+      <member refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>compute_ahrs</name></member>
+      <member refid="classICM20948Node_1a4bd9816f990d696b99ed61c39ef4c24b" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>convention_</name></member>
+      <member refid="classICM20948Node_1a95050723be62a8d5f1c9094ef1423683" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>fusion_gain_</name></member>
+      <member refid="classICM20948Node_1a50fe77e40d34851455e3fd7badf8e6fe" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>gyroscopeMisalignment_</name></member>
+      <member refid="classICM20948Node_1a0a460c0bb1b4360d5749e3dbb41d425d" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>gyroscopeOffset_</name></member>
+      <member refid="classICM20948Node_1a6713e9485bd86d6a801d745ff19914b4" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>gyroscopeSensitivity_</name></member>
+      <member refid="classICM20948Node_1ab7be4a71a8b47da4c6b27e4ce14a82b4" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>hardIronOffset_</name></member>
+      <member refid="classICM20948Node_1a071adefa1c2bad11daf2ce972222c694" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>icm20948_</name></member>
+      <member refid="classICM20948Node_1a28a6f6aaef14cf172f6a3799f8a7dfce" prot="public" virt="non-virtual"><scope>ICM20948Node</scope><name>ICM20948Node</name></member>
+      <member refid="classICM20948Node_1a0ee3ea2763b1a9faea7ad87d2c353113" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>init_interfaces</name></member>
+      <member refid="classICM20948Node_1a08c73f04f9a0174b2c519355f279eaf6" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>init_parameters</name></member>
+      <member refid="classICM20948Node_1ab20bf03ac91f32b3397410cad5a106be" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>last_time_fusion_</name></member>
+      <member refid="classICM20948Node_1a8a3429b771dccf440037f0ec7bc86b37" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>loop_dt_</name></member>
+      <member refid="classICM20948Node_1ada3946fbda2165c13d93a98313a1e6bd" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>magnetic_rejection_</name></member>
+      <member refid="classICM20948Node_1a45a3afb46abd064490ceb7e3b2d9de8f" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>magnetometerMisalignment_</name></member>
+      <member refid="classICM20948Node_1aaa3fec2831b277290c1e6d380e38e12e" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>magnetometerOffset_</name></member>
+      <member refid="classICM20948Node_1a509486e7a2e3350e052ba7564d81fc9f" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>magnetometerSensitivity_</name></member>
+      <member refid="classICM20948Node_1aa60feedd51b390d0034b2faaf44b7483" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>offset_</name></member>
+      <member refid="classICM20948Node_1af85bcd89c2219146b9504d8d441181a4" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publish_calibrated_data_</name></member>
+      <member refid="classICM20948Node_1aaa5b2108d047bfaf76038657935e8502" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publish_debug_fusion_</name></member>
+      <member refid="classICM20948Node_1a5a04205bfac9a46e6df89fc4a5e4a424" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publish_raw_data_</name></member>
+      <member refid="classICM20948Node_1a568626da4b63b3f33b800dd6b68cadd6" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publish_rpy_</name></member>
+      <member refid="classICM20948Node_1aa4414e6e9447354ca1d460b61515c2f9" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publisher_calibrated_data_</name></member>
+      <member refid="classICM20948Node_1ad05b5f64d1d068661b9986d270d24996" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publisher_debug_fusion_</name></member>
+      <member refid="classICM20948Node_1ad01a42e742bac59aca1ce5f5ddbcdd6b" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publisher_raw_data_</name></member>
+      <member refid="classICM20948Node_1a0be4dca0b21cc8d6a5a96adfb8de1633" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>publisher_rpy_</name></member>
+      <member refid="classICM20948Node_1a6eda6d7da1f270d01c9c4c9d4037c9e9" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>recovery_trigger_period_</name></member>
+      <member refid="classICM20948Node_1a84416d0b8b8c1d8db5ca320d2564138d" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>sample_rate_</name></member>
+      <member refid="classICM20948Node_1a0f375e086c0867046ee38dc6fb303986" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>softIronMatrix_</name></member>
+      <member refid="classICM20948Node_1a26a012bf2c592f6ada66aba29cabaefb" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>steady_clock_</name></member>
+      <member refid="classICM20948Node_1a2d75ae0337234791c3394d019de752e6" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>timer_</name></member>
+      <member refid="classICM20948Node_1a98c751e7fdf90985604bec6652ac0826" prot="private" virt="non-virtual"><scope>ICM20948Node</scope><name>timer_callback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="temperature__profile_8h" kind="file" language="C++">
+    <compoundname>temperature_profile.h</compoundname>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">eigen3/Eigen/Dense</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">deque</includes>
+    <includedby refid="temperature__profile__node_8hpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile_node.hpp</includedby>
+    <includedby refid="temperature__profile_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/temperature_profile.cpp</includedby>
+    <includedby refid="simulator_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h</label>
+        <link refid="temperature__profile_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>deque</label>
+      </node>
+      <node id="3">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h</label>
+        <link refid="temperature__profile_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile_node.hpp</label>
+        <link refid="temperature__profile__node_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator.h</label>
+        <link refid="simulator_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator_node.hpp</label>
+        <link refid="simulator__node_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classTemperatureProfile" prot="public">TemperatureProfile</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>lemezoth<sp/>on<sp/>12/11/22.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUILD_TEMPERATURE_PROFILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUILD_TEMPERATURE_PROFILE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Eigen;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classTemperatureProfile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTemperatureProfile" kindref="compound">TemperatureProfile</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperatureProfile" kindref="compound">TemperatureProfile</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::deque&lt;std::pair&lt;double,<sp/>double&gt;&gt;<sp/>temperature_depth_data_;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_kalman_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_valid_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>time_last_predict_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/>forecast_dt_<sp/>=<sp/>0ms;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max_number_data_<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>profile_slope_<sp/>=<sp/>-0.3;<sp/></highlight><highlight class="comment">//<sp/>m/°C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>profile_intercept_<sp/>=<sp/>-5.0;<sp/></highlight><highlight class="comment">//<sp/>m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperatureProfile_1a18e41d78be8873e916b3ef04c8377120" kindref="member">update_temperature</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>depth);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperatureProfile_1a34a785469b46a1486d54acc9b289eee0" kindref="member">compute_profile</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_TEMPERATURE_PROFILE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h"/>
+  </compounddef>
+</doxygen>

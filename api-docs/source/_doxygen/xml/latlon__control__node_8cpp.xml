@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="latlon__control__node_8cpp" kind="file" language="C++">
+    <compoundname>latlon_control_node.cpp</compoundname>
+    <includes refid="latlon__control__node_8hpp" local="yes">seabot2_latlon_control/latlon_control_node.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>seabot2_latlon_control/latlon_control.h</label>
+        <link refid="latlon__control_8h_source"/>
+      </node>
+      <node id="2">
+        <label>seabot2_latlon_control/latlon_control_node.hpp</label>
+        <link refid="latlon__control__node_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp</label>
+        <link refid="latlon__control__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>geometry_msgs/msg/twist.hpp</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="5">
+        <label>seabot2_msgs/msg/gps_fix.hpp</label>
+      </node>
+      <node id="6">
+        <label>seabot2_msgs/msg/raw_data.hpp</label>
+      </node>
+      <node id="7">
+        <label>seabot2_msgs/msg/safety_status2.hpp</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="latlon__control__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" line="87" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="87" bodyend="94"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_latlon_control/latlon_control_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">LatLonControlNode::LatLonControlNode()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">:<sp/>Node(</highlight><highlight class="stringliteral">&quot;latlon_control_node&quot;</highlight><highlight class="normal">),<sp/>llc_()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;LatLonControlNode::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[LatLon_control_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">LatLonControlNode::~LatLonControlNode()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[LatLon_control_node]<sp/>Shutdown&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LatLonControlNode::init_parameters()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt_&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(loop_dt_.count()));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;lat_set_point&quot;</highlight><highlight class="normal">,<sp/>llc_.lat_set_point_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;lon_set_point&quot;</highlight><highlight class="normal">,<sp/>llc_.lon_set_point_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;linear_velocity_max&quot;</highlight><highlight class="normal">,<sp/>llc_.linear_velocity_max_);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;angular_velocity_max&quot;</highlight><highlight class="normal">,<sp/>llc_.angular_velocity_max_);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;distance_threshold_slowing_down&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>llc_.distance_threshold_slowing_down_);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>llc_.lat_set_point_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;lat_set_point&quot;</highlight><highlight class="normal">,<sp/>llc_.lat_set_point_);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>llc_.lon_set_point_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;lon_set_point&quot;</highlight><highlight class="normal">,<sp/>llc_.lon_set_point_);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>llc_.linear_velocity_max_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;linear_velocity_max&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>llc_.linear_velocity_max_);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>llc_.angular_velocity_max_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;angular_velocity_max&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>llc_.angular_velocity_max_);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>llc_.distance_threshold_slowing_down_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;distance_threshold_slowing_down&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>llc_.distance_threshold_slowing_down_);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LatLonControlNode::init_interfaces()</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>subscriber_gps_fix_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::GpsFix&gt;(</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/gps_fix&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;LatLonControlNode::gps_fix_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>subscriber_imu_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::RawData&gt;(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/imu&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;LatLonControlNode::imu_data_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>subscriber_safety_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;(</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/safety/safety&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;LatLonControlNode::safety_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>publisher_thrusters_cmd_<sp/>=<sp/>this-&gt;create_publisher&lt;geometry_msgs::msg::Twist&gt;(</highlight><highlight class="stringliteral">&quot;cmd_engine&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LatLonControlNode::timer_callback()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>llc_.compute_control_commands();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>thruster<sp/>commands<sp/>based<sp/>on<sp/>the<sp/>lat/lon<sp/>control<sp/>logic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Twist<sp/>thrusters_cmd;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>thrusters_cmd.linear.x<sp/>=<sp/>llc_.get_linear_velocity();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>thrusters_cmd.angular.z<sp/>=<sp/>llc_.get_angular_velocity();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>publisher_thrusters_cmd_-&gt;publish(thrusters_cmd);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LatLonControlNode::imu_data_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::RawData<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>lat/lon<sp/>control<sp/>with<sp/>IMU<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>llc_.update_heading(msg.mag.z);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LatLonControlNode::gps_fix_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GpsFix<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>lat/lon<sp/>control<sp/>with<sp/>GPS<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>llc_.update_lat_lon(msg.latitude,<sp/>msg.longitude);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LatLonControlNode::safety_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>llc_.update_safety(msg.global_safety_valid);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>node<sp/>=<sp/>std::make_shared&lt;LatLonControlNode&gt;();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>rclcpp::spin(node);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp"/>
+  </compounddef>
+</doxygen>

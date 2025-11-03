@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classHeadingControlNode" kind="class" language="C++" prot="public">
+    <compoundname>HeadingControlNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classHeadingControlNode_1a43c83a9e065c5b158e351492d5c99db0" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr HeadingControlNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>HeadingControlNode::timer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="20" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a299b359ebfc04fec890044cded191627" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds HeadingControlNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>HeadingControlNode::loop_dt_</qualifiedname>
+        <initializer>= 200ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="21" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a8da5b627deaf8a8e5c9395d972f7df7c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HeadingControlNode::angular_velocity_max_</definition>
+        <argsstring></argsstring>
+        <name>angular_velocity_max_</name>
+        <qualifiedname>HeadingControlNode::angular_velocity_max_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="24" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1aa14e111b36492fb03c2aa62a652707dd" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds HeadingControlNode::delay_stop_</definition>
+        <argsstring></argsstring>
+        <name>delay_stop_</name>
+        <qualifiedname>HeadingControlNode::delay_stop_</qualifiedname>
+        <initializer>= 200ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="25" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a2d49d3b4ad2d52bdad95d7dec5dfd055" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HeadingControlNode::heading_</definition>
+        <argsstring></argsstring>
+        <name>heading_</name>
+        <qualifiedname>HeadingControlNode::heading_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="28" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a94acff5e2868c1ea3d8ef9452e018237" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HeadingControlNode::angular_cmd_</definition>
+        <argsstring></argsstring>
+        <name>angular_cmd_</name>
+        <qualifiedname>HeadingControlNode::angular_cmd_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="29" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a0a495923c3a411ee73101353a9b21274" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HeadingControlNode::linear_cmd_</definition>
+        <argsstring></argsstring>
+        <name>linear_cmd_</name>
+        <qualifiedname>HeadingControlNode::linear_cmd_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="30" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1aca3090ad89ef6d48b2a41067c656d20f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time HeadingControlNode::velocity_heading_time_last_</definition>
+        <argsstring></argsstring>
+        <name>velocity_heading_time_last_</name>
+        <qualifiedname>HeadingControlNode::velocity_heading_time_last_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="31" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a7997bdacbf3cc2ff8a92a2349dfbee0a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::RPY &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::RPY&gt;::SharedPtr HeadingControlNode::imu_sub_</definition>
+        <argsstring></argsstring>
+        <name>imu_sub_</name>
+        <qualifiedname>HeadingControlNode::imu_sub_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="52" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a96c608315af923aa113dcae47c2aa79b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; geometry_msgs::msg::Twist &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;geometry_msgs::msg::Twist&gt;::SharedPtr HeadingControlNode::cmd_vel_heading_sub_</definition>
+        <argsstring></argsstring>
+        <name>cmd_vel_heading_sub_</name>
+        <qualifiedname>HeadingControlNode::cmd_vel_heading_sub_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="53" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classHeadingControlNode_1a8f7bd771cd9fb0dd3bf33f16b379c788" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::Velocity &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::Velocity&gt;::SharedPtr HeadingControlNode::control_pub_</definition>
+        <argsstring></argsstring>
+        <name>control_pub_</name>
+        <qualifiedname>HeadingControlNode::control_pub_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="54" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHeadingControlNode_1a0448a42bc211298fffe8723cecee2a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HeadingControlNode::HeadingControlNode</definition>
+        <argsstring>()</argsstring>
+        <name>HeadingControlNode</name>
+        <qualifiedname>HeadingControlNode::HeadingControlNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="17" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/src/heading_control_node.cpp" bodystart="11" bodyend="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classHeadingControlNode_1aba31f225927936f428d5816eb1933cd0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HeadingControlNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>HeadingControlNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="36" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/src/heading_control_node.cpp" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classHeadingControlNode_1a3f786997cab77dbfed834ed94e631f62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HeadingControlNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>HeadingControlNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="41" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/src/heading_control_node.cpp" bodystart="39" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classHeadingControlNode_1adfc74d4857b3f0590c8f84355c5b9802" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HeadingControlNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>HeadingControlNode::timer_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer callback </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Choose input source</para>
+<para>Case manual cmd send in the last delay_stop_</para>
+<para>Generate message</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="46" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/src/heading_control_node.cpp" bodystart="51" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classHeadingControlNode_1a035c6bde4065f6748a93dc558d90fa0b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HeadingControlNode::imu_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::RPY &amp;msg)</argsstring>
+        <name>imu_callback</name>
+        <qualifiedname>HeadingControlNode::imu_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::RPY &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="48" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/src/heading_control_node.cpp" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classHeadingControlNode_1aefe6ab378d7b8578ace0b4b939cb4330" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HeadingControlNode::cmd_vel_heading_callback</definition>
+        <argsstring>(const geometry_msgs::msg::Twist &amp;msg)</argsstring>
+        <name>cmd_vel_heading_callback</name>
+        <qualifiedname>HeadingControlNode::cmd_vel_heading_callback</qualifiedname>
+        <param>
+          <type>const geometry_msgs::msg::Twist &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="50" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/src/heading_control_node.cpp" bodystart="80" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HeadingControlNode</label>
+        <link refid="classHeadingControlNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HeadingControlNode</label>
+        <link refid="classHeadingControlNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" line="14" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_heading_control/include/seabot2_heading_control/heading_control_node.hpp" bodystart="15" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classHeadingControlNode_1a94acff5e2868c1ea3d8ef9452e018237" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>angular_cmd_</name></member>
+      <member refid="classHeadingControlNode_1a8da5b627deaf8a8e5c9395d972f7df7c" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>angular_velocity_max_</name></member>
+      <member refid="classHeadingControlNode_1aefe6ab378d7b8578ace0b4b939cb4330" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>cmd_vel_heading_callback</name></member>
+      <member refid="classHeadingControlNode_1a96c608315af923aa113dcae47c2aa79b" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>cmd_vel_heading_sub_</name></member>
+      <member refid="classHeadingControlNode_1a8f7bd771cd9fb0dd3bf33f16b379c788" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>control_pub_</name></member>
+      <member refid="classHeadingControlNode_1aa14e111b36492fb03c2aa62a652707dd" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>delay_stop_</name></member>
+      <member refid="classHeadingControlNode_1a2d49d3b4ad2d52bdad95d7dec5dfd055" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>heading_</name></member>
+      <member refid="classHeadingControlNode_1a0448a42bc211298fffe8723cecee2a53" prot="public" virt="non-virtual"><scope>HeadingControlNode</scope><name>HeadingControlNode</name></member>
+      <member refid="classHeadingControlNode_1a035c6bde4065f6748a93dc558d90fa0b" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>imu_callback</name></member>
+      <member refid="classHeadingControlNode_1a7997bdacbf3cc2ff8a92a2349dfbee0a" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>imu_sub_</name></member>
+      <member refid="classHeadingControlNode_1a3f786997cab77dbfed834ed94e631f62" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>init_interfaces</name></member>
+      <member refid="classHeadingControlNode_1aba31f225927936f428d5816eb1933cd0" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>init_parameters</name></member>
+      <member refid="classHeadingControlNode_1a0a495923c3a411ee73101353a9b21274" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>linear_cmd_</name></member>
+      <member refid="classHeadingControlNode_1a299b359ebfc04fec890044cded191627" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>loop_dt_</name></member>
+      <member refid="classHeadingControlNode_1a43c83a9e065c5b158e351492d5c99db0" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>timer_</name></member>
+      <member refid="classHeadingControlNode_1adfc74d4857b3f0590c8f84355c5b9802" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>timer_callback</name></member>
+      <member refid="classHeadingControlNode_1aca3090ad89ef6d48b2a41067c656d20f" prot="private" virt="non-virtual"><scope>HeadingControlNode</scope><name>velocity_heading_time_last_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

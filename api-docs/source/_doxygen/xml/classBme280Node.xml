@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classBme280Node" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>Bme280Node</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBme280Node_1aca0ff09e6550027dddcb16c2402ba624" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr Bme280Node::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>Bme280Node::timer_</qualifiedname>
+        <briefdescription>
+<para>Variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="39" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1a57b96ee36ae26e53f69eb37fe6326474" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds Bme280Node::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>Bme280Node::loop_dt_</qualifiedname>
+        <initializer>= 200ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="40" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1aaa4c9e1b9a61e56863e9521b51a72eff" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr Bme280Node::publisher_sensor_</definition>
+        <argsstring></argsstring>
+        <name>publisher_sensor_</name>
+        <qualifiedname>Bme280Node::publisher_sensor_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="42" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1aa245cd7550604cf55c9c0cb1099d6bfe" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Bme280Node::pressure_</definition>
+        <argsstring></argsstring>
+        <name>pressure_</name>
+        <qualifiedname>Bme280Node::pressure_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="44" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1afba1a4a1b9f28c1ffc8d324225f0ba87" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Bme280Node::temperature_</definition>
+        <argsstring></argsstring>
+        <name>temperature_</name>
+        <qualifiedname>Bme280Node::temperature_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="45" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1ac6b4a5095ea5ed4655e789f2eb45754c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Bme280Node::humidity_</definition>
+        <argsstring></argsstring>
+        <name>humidity_</name>
+        <qualifiedname>Bme280Node::humidity_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="46" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1a5ca705432c362c2e2266e991eb8d5940" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Bme280Node::i2c_periph_</definition>
+        <argsstring></argsstring>
+        <name>i2c_periph_</name>
+        <qualifiedname>Bme280Node::i2c_periph_</qualifiedname>
+        <initializer>= &quot;/dev/i2c-0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="48" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1a202d415634be22444c1a0de132289be4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Bme280Node::primary_i2c_address_</definition>
+        <argsstring></argsstring>
+        <name>primary_i2c_address_</name>
+        <qualifiedname>Bme280Node::primary_i2c_address_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBme280Node_1a48a41acb1c07393d18a469a9fa9945c5" prot="private" static="no" mutable="no">
+        <type>struct <ref refid="structbme280__dev" kindref="compound">bme280_dev</ref></type>
+        <definition>struct bme280_dev Bme280Node::dev_</definition>
+        <argsstring></argsstring>
+        <name>dev_</name>
+        <qualifiedname>Bme280Node::dev_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="50" column="21" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBme280Node_1a61188bbfa0fe52742a601923d0578881" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Bme280Node::Bme280Node</definition>
+        <argsstring>()</argsstring>
+        <name>Bme280Node</name>
+        <qualifiedname>Bme280Node::Bme280Node</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="24" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="24" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classBme280Node_1a6418f8a8acc56216ae3597b2d34d7ddd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>Bme280Node::timer_callback</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="57" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="35" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classBme280Node_1aa03f38d39e8787ff5a96349ab4cabebe" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::print_sensor_mode</definition>
+        <argsstring>() const</argsstring>
+        <name>print_sensor_mode</name>
+        <qualifiedname>Bme280Node::print_sensor_mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="62" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classBme280Node_1a8e26815c7eca86dea8ee57c1533c4010" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::sensor_init</definition>
+        <argsstring>()</argsstring>
+        <name>sensor_init</name>
+        <qualifiedname>Bme280Node::sensor_init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Recommended mode of operation: Indoor navigation</para>
+<para>16X</para>
+<para>2X</para>
+<para>16</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="67" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="52" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classBme280Node_1a864a36e2bc6be131739ffd813b473bb8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::print_calib_settings</definition>
+        <argsstring>() const</argsstring>
+        <name>print_calib_settings</name>
+        <qualifiedname>Bme280Node::print_calib_settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="72" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="110" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classBme280Node_1a7a18a072d759480cea1a6ef1c36de1b8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::print_settings</definition>
+        <argsstring>() const</argsstring>
+        <name>print_settings</name>
+        <qualifiedname>Bme280Node::print_settings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="77" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="133" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classBme280Node_1aeacb8095615b36dd37f78db2717c6308" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>Bme280Node::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>I2C</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="82" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="24" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classBme280Node_1a530fdfd657c2a913e0b98d3f77d1c7d5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bme280Node::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>Bme280Node::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="87" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="149" bodyend="151"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Bme280Node</label>
+        <link refid="classBme280Node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Bme280Node</label>
+        <link refid="classBme280Node"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="22" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="22" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classBme280Node_1a61188bbfa0fe52742a601923d0578881" prot="public" virt="non-virtual"><scope>Bme280Node</scope><name>Bme280Node</name></member>
+      <member refid="classBme280Node_1a48a41acb1c07393d18a469a9fa9945c5" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>dev_</name></member>
+      <member refid="classBme280Node_1ac6b4a5095ea5ed4655e789f2eb45754c" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>humidity_</name></member>
+      <member refid="classBme280Node_1a5ca705432c362c2e2266e991eb8d5940" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>i2c_periph_</name></member>
+      <member refid="classBme280Node_1a530fdfd657c2a913e0b98d3f77d1c7d5" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>init_interfaces</name></member>
+      <member refid="classBme280Node_1aeacb8095615b36dd37f78db2717c6308" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>init_parameters</name></member>
+      <member refid="classBme280Node_1a57b96ee36ae26e53f69eb37fe6326474" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>loop_dt_</name></member>
+      <member refid="classBme280Node_1aa245cd7550604cf55c9c0cb1099d6bfe" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>pressure_</name></member>
+      <member refid="classBme280Node_1a202d415634be22444c1a0de132289be4" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>primary_i2c_address_</name></member>
+      <member refid="classBme280Node_1a864a36e2bc6be131739ffd813b473bb8" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>print_calib_settings</name></member>
+      <member refid="classBme280Node_1aa03f38d39e8787ff5a96349ab4cabebe" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>print_sensor_mode</name></member>
+      <member refid="classBme280Node_1a7a18a072d759480cea1a6ef1c36de1b8" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>print_settings</name></member>
+      <member refid="classBme280Node_1aaa4c9e1b9a61e56863e9521b51a72eff" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>publisher_sensor_</name></member>
+      <member refid="classBme280Node_1a8e26815c7eca86dea8ee57c1533c4010" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>sensor_init</name></member>
+      <member refid="classBme280Node_1afba1a4a1b9f28c1ffc8d324225f0ba87" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>temperature_</name></member>
+      <member refid="classBme280Node_1aca0ff09e6550027dddcb16c2402ba624" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>timer_</name></member>
+      <member refid="classBme280Node_1a6418f8a8acc56216ae3597b2d34d7ddd" prot="private" virt="non-virtual"><scope>Bme280Node</scope><name>timer_callback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

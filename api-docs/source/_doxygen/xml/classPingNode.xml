@@ -1,0 +1,420 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPingNode" kind="class" language="C++" prot="public">
+    <compoundname>PingNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPingNode_1af3224f003cbb4d3503d97961309fb4b4" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::Profile &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::Profile&gt;::SharedPtr PingNode::publisher_profile_</definition>
+        <argsstring></argsstring>
+        <name>publisher_profile_</name>
+        <qualifiedname>PingNode::publisher_profile_</qualifiedname>
+        <briefdescription>
+<para>Topics / Services. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="29" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a4b8fc305e8beff775a2403434189ee4e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr PingNode::service_ping_enable_</definition>
+        <argsstring></argsstring>
+        <name>service_ping_enable_</name>
+        <qualifiedname>PingNode::service_ping_enable_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="30" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a42698c52cca315db1634448a54649b50" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Density &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::Density&gt;::SharedPtr PingNode::subscriber_density_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_density_</name>
+        <qualifiedname>PingNode::subscriber_density_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="31" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a0151c0a3e096780418dc5724c08452bb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string PingNode::uart_port_</definition>
+        <argsstring></argsstring>
+        <name>uart_port_</name>
+        <qualifiedname>PingNode::uart_port_</qualifiedname>
+        <initializer>= &quot;/dev/ping1D&quot;</initializer>
+        <briefdescription>
+<para>Variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="34" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a435a5400a300676864a4d43a9034bc40" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PingNode::uart_baudrate_</definition>
+        <argsstring></argsstring>
+        <name>uart_baudrate_</name>
+        <qualifiedname>PingNode::uart_baudrate_</qualifiedname>
+        <initializer>= 115200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="35" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a319fef688f70025cc36d4551243b7283" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Ping1d &gt;</type>
+        <definition>std::unique_ptr&lt;Ping1d&gt; PingNode::device_</definition>
+        <argsstring></argsstring>
+        <name>device_</name>
+        <qualifiedname>PingNode::device_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="36" column="21" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1af4b64a3dc591531c9739d67d4d28ba1d" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; AbstractLink &gt;</type>
+        <definition>std::shared_ptr&lt;AbstractLink&gt; PingNode::port_</definition>
+        <argsstring></argsstring>
+        <name>port_</name>
+        <qualifiedname>PingNode::port_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="37" column="21" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a52b27966e78dfa2436304107d3f07e77" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PingNode::enable_ping_</definition>
+        <argsstring></argsstring>
+        <name>enable_ping_</name>
+        <qualifiedname>PingNode::enable_ping_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="39" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1ac382216926514bdb9c8c90099277bf28" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PingNode::mode_auto_</definition>
+        <argsstring></argsstring>
+        <name>mode_auto_</name>
+        <qualifiedname>PingNode::mode_auto_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="40" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PingNode::speed_of_sound_</definition>
+        <argsstring></argsstring>
+        <name>speed_of_sound_</name>
+        <qualifiedname>PingNode::speed_of_sound_</qualifiedname>
+        <initializer>= 1550.0</initializer>
+        <briefdescription>
+<para>mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="41" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PingNode::ping_interval_</definition>
+        <argsstring></argsstring>
+        <name>ping_interval_</name>
+        <qualifiedname>PingNode::ping_interval_</qualifiedname>
+        <initializer>= 200</initializer>
+        <briefdescription>
+<para>speed of sound [m/s] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="42" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PingNode::gain_setting_</definition>
+        <argsstring></argsstring>
+        <name>gain_setting_</name>
+        <qualifiedname>PingNode::gain_setting_</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>interval [ms] </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="43" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPingNode_1aa805236489cd2fc359d2a6fcf5cbbce6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PingNode::PingNode</definition>
+        <argsstring>()</argsstring>
+        <name>PingNode</name>
+        <qualifiedname>PingNode::PingNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="16" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="11" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PingNode::~PingNode</definition>
+        <argsstring>()</argsstring>
+        <name>~PingNode</name>
+        <qualifiedname>PingNode::~PingNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Diseable ping</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="17" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PingNode::wait_message</definition>
+        <argsstring>() const</argsstring>
+        <name>wait_message</name>
+        <qualifiedname>PingNode::wait_message</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="24" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="65" bodyend="89"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPingNode_1ae0d087431f254d15d4012908ff05c59d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PingNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>PingNode::init_parameters</qualifiedname>
+        <briefdescription>
+<para>gain [1, 2, 3, 4, 5, 6] </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="48" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="91" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classPingNode_1a2f15fbe9b868b6413073f2d2b1bdab86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PingNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>PingNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of the node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="135" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classPingNode_1adb6df8a47d84af4e45111dba7db3dc7a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PingNode::init_driver</definition>
+        <argsstring>()</argsstring>
+        <name>init_driver</name>
+        <qualifiedname>PingNode::init_driver</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init the ping1D driver </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Set mode</para>
+<para>Set speed of sound</para>
+<para>Set interval</para>
+<para>Set gain</para>
+<para>Set ping enable</para>
+<para>Ask for continuous stream of data</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="58" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="35" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classPingNode_1a5b1593576a680a0f014122244208f7c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PingNode::ping_enable_callback</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; response)</argsstring>
+        <name>ping_enable_callback</name>
+        <qualifiedname>PingNode::ping_enable_callback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Set ping enable</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="66" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="117" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classPingNode_1aa6e57617278ef6a7b91b7941e472468d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PingNode::sound_speed_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::Density &amp;msg)</argsstring>
+        <name>sound_speed_callback</name>
+        <qualifiedname>PingNode::sound_speed_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::Density &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback of the sound speed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Set speed of sound</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="74" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="110" bodyend="115"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PingNode</label>
+        <link refid="classPingNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PingNode</label>
+        <link refid="classPingNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" line="14" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h" bodystart="14" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classPingNode_1a319fef688f70025cc36d4551243b7283" prot="private" virt="non-virtual"><scope>PingNode</scope><name>device_</name></member>
+      <member refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" prot="private" virt="non-virtual"><scope>PingNode</scope><name>enable_ping_</name></member>
+      <member refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" prot="private" virt="non-virtual"><scope>PingNode</scope><name>gain_setting_</name></member>
+      <member refid="classPingNode_1adb6df8a47d84af4e45111dba7db3dc7a" prot="private" virt="non-virtual"><scope>PingNode</scope><name>init_driver</name></member>
+      <member refid="classPingNode_1a2f15fbe9b868b6413073f2d2b1bdab86" prot="private" virt="non-virtual"><scope>PingNode</scope><name>init_interfaces</name></member>
+      <member refid="classPingNode_1ae0d087431f254d15d4012908ff05c59d" prot="private" virt="non-virtual"><scope>PingNode</scope><name>init_parameters</name></member>
+      <member refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" prot="private" virt="non-virtual"><scope>PingNode</scope><name>mode_auto_</name></member>
+      <member refid="classPingNode_1a5b1593576a680a0f014122244208f7c5" prot="private" virt="non-virtual"><scope>PingNode</scope><name>ping_enable_callback</name></member>
+      <member refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" prot="private" virt="non-virtual"><scope>PingNode</scope><name>ping_interval_</name></member>
+      <member refid="classPingNode_1aa805236489cd2fc359d2a6fcf5cbbce6" prot="public" virt="non-virtual"><scope>PingNode</scope><name>PingNode</name></member>
+      <member refid="classPingNode_1af4b64a3dc591531c9739d67d4d28ba1d" prot="private" virt="non-virtual"><scope>PingNode</scope><name>port_</name></member>
+      <member refid="classPingNode_1af3224f003cbb4d3503d97961309fb4b4" prot="private" virt="non-virtual"><scope>PingNode</scope><name>publisher_profile_</name></member>
+      <member refid="classPingNode_1a4b8fc305e8beff775a2403434189ee4e" prot="private" virt="non-virtual"><scope>PingNode</scope><name>service_ping_enable_</name></member>
+      <member refid="classPingNode_1aa6e57617278ef6a7b91b7941e472468d" prot="private" virt="non-virtual"><scope>PingNode</scope><name>sound_speed_callback</name></member>
+      <member refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" prot="private" virt="non-virtual"><scope>PingNode</scope><name>speed_of_sound_</name></member>
+      <member refid="classPingNode_1a42698c52cca315db1634448a54649b50" prot="private" virt="non-virtual"><scope>PingNode</scope><name>subscriber_density_</name></member>
+      <member refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" prot="private" virt="non-virtual"><scope>PingNode</scope><name>uart_baudrate_</name></member>
+      <member refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" prot="private" virt="non-virtual"><scope>PingNode</scope><name>uart_port_</name></member>
+      <member refid="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" prot="public" virt="non-virtual"><scope>PingNode</scope><name>wait_message</name></member>
+      <member refid="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" prot="public" virt="non-virtual"><scope>PingNode</scope><name>~PingNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

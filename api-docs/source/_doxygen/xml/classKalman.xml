@@ -1,0 +1,1613 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classKalman" kind="class" language="C++" prot="public">
+    <compoundname>Kalman</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classKalman_1a7183d860e1be2e87f587ea4f0b471f7d" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Kalman::NB_MESURES</definition>
+        <argsstring></argsstring>
+        <name>NB_MESURES</name>
+        <qualifiedname>Kalman::NB_MESURES</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="17" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1aa25ad8dd293eb8fae83c4f013d47842d" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Kalman::NB_STATES</definition>
+        <argsstring></argsstring>
+        <name>NB_STATES</name>
+        <qualifiedname>Kalman::NB_STATES</qualifiedname>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="18" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a552d9c0de6f8ecc4fd42ba52a5cf0a7d" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Kalman::NB_COMMAND</definition>
+        <argsstring></argsstring>
+        <name>NB_COMMAND</name>
+        <qualifiedname>Kalman::NB_COMMAND</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="19" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classKalman_1a861938a9da523402c2bb886416e94505" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::physics_rho_</definition>
+        <argsstring></argsstring>
+        <name>physics_rho_</name>
+        <qualifiedname>Kalman::physics_rho_</qualifiedname>
+        <initializer>=  1000.0</initializer>
+        <briefdescription>
+<para>Physical characteristics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="45" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1af868078cbc87d644df99a599f3c48970" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::physics_g_</definition>
+        <argsstring></argsstring>
+        <name>physics_g_</name>
+        <qualifiedname>Kalman::physics_g_</qualifiedname>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="46" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a7c4ab7c162a86cbe903beaa8ed4fcda2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::robot_mass_</definition>
+        <argsstring></argsstring>
+        <name>robot_mass_</name>
+        <qualifiedname>Kalman::robot_mass_</qualifiedname>
+        <initializer>=  12.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="47" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a26bb768204ff4a1b73c90e9182f23ab9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::robot_added_mass_</definition>
+        <argsstring></argsstring>
+        <name>robot_added_mass_</name>
+        <qualifiedname>Kalman::robot_added_mass_</qualifiedname>
+        <initializer>=  2.51</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="48" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ad35c93e6cf555e0c89941367079ae30f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::robot_diameter_</definition>
+        <argsstring></argsstring>
+        <name>robot_diameter_</name>
+        <qualifiedname>Kalman::robot_diameter_</qualifiedname>
+        <initializer>=  0.125</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="49" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1abecf5de87e1975aa005502cad5989a94" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::screw_thread_</definition>
+        <argsstring></argsstring>
+        <name>screw_thread_</name>
+        <qualifiedname>Kalman::screw_thread_</qualifiedname>
+        <initializer>=  1.e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="50" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1afcea999f1b9ee0cea9ca8c049c3ea26c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::tick_per_turn_</definition>
+        <argsstring></argsstring>
+        <name>tick_per_turn_</name>
+        <qualifiedname>Kalman::tick_per_turn_</qualifiedname>
+        <initializer>=  2048*4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="51" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a583a5c9871d8221b74c245c337651958" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::piston_diameter_</definition>
+        <argsstring></argsstring>
+        <name>piston_diameter_</name>
+        <qualifiedname>Kalman::piston_diameter_</qualifiedname>
+        <initializer>=  0.045</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="52" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a1bc94b7ad88e27d5f02d34c611e53e06" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::piston_max_tick_</definition>
+        <argsstring></argsstring>
+        <name>piston_max_tick_</name>
+        <qualifiedname>Kalman::piston_max_tick_</qualifiedname>
+        <initializer>=  1146880</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="53" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a36be908e7ea63cc3e14a9ce996a683fa" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::degree_to_kelvin_</definition>
+        <argsstring></argsstring>
+        <name>degree_to_kelvin_</name>
+        <qualifiedname>Kalman::degree_to_kelvin_</qualifiedname>
+        <initializer>= 273.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="54" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a7bf75fdfd5ecf5b23c7a1d8df2930784" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::tick_to_volume_</definition>
+        <argsstring></argsstring>
+        <name>tick_to_volume_</name>
+        <qualifiedname>Kalman::tick_to_volume_</qualifiedname>
+        <initializer>= (screw_thread_/tick_per_turn_)*pow(piston_diameter_/2.0, 2)*<ref refid="FusionMath_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="57" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a4c966fab1ead5fb74a92bd6d83a9c53d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::coeff_A_</definition>
+        <argsstring></argsstring>
+        <name>coeff_A_</name>
+        <qualifiedname>Kalman::coeff_A_</qualifiedname>
+        <initializer>= physics_g_ * <ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref> / (robot_added_mass_ + robot_mass_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="58" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1abbc8cb07b0215d112f31ac9a2e0bb82e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::coeff_B_</definition>
+        <argsstring></argsstring>
+        <name>coeff_B_</name>
+        <qualifiedname>Kalman::coeff_B_</qualifiedname>
+        <initializer>= 0.5 * <ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref> / (robot_added_mass_ + robot_mass_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="60" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ace87e975b24ae7786e8755de84a2b794" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::fz_model_boundary_velocity_positive_</definition>
+        <argsstring></argsstring>
+        <name>fz_model_boundary_velocity_positive_</name>
+        <qualifiedname>Kalman::fz_model_boundary_velocity_positive_</qualifiedname>
+        <initializer>= 0.267911611144239</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="62" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a256c3f7c16b80d817d09a5d7c87145db" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::fz_model_boundary_velocity_negative_</definition>
+        <argsstring></argsstring>
+        <name>fz_model_boundary_velocity_negative_</name>
+        <qualifiedname>Kalman::fz_model_boundary_velocity_negative_</qualifiedname>
+        <initializer>= -0.272937623109179</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="63" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a25c8b4b0654a66e55af4d7ec47384057" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::fz_derivative_at_model_boundary_positive_</definition>
+        <argsstring></argsstring>
+        <name>fz_derivative_at_model_boundary_positive_</name>
+        <qualifiedname>Kalman::fz_derivative_at_model_boundary_positive_</qualifiedname>
+        <initializer>= fz_derivative_computation(fz_model_boundary_velocity_positive_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="65" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a081386302806c73cae175ccb2f0de758" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::fz_offset_at_model_boundary_positive_</definition>
+        <argsstring></argsstring>
+        <name>fz_offset_at_model_boundary_positive_</name>
+        <qualifiedname>Kalman::fz_offset_at_model_boundary_positive_</qualifiedname>
+        <initializer>= fz_computation(fz_model_boundary_velocity_positive_)
+                                        - fz_derivative_at_model_boundary_positive_ * fz_model_boundary_velocity_positive_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="66" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1aade6d6d97db7d8aafc37e8bfdf9067f4" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::fz_derivative_at_model_boundary_negative_</definition>
+        <argsstring></argsstring>
+        <name>fz_derivative_at_model_boundary_negative_</name>
+        <qualifiedname>Kalman::fz_derivative_at_model_boundary_negative_</qualifiedname>
+        <initializer>= fz_derivative_computation(fz_model_boundary_velocity_negative_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="68" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a176b8f7a00354750cdc590c67ee8f2f5" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double Kalman::fz_offset_at_model_boundary_negative_</definition>
+        <argsstring></argsstring>
+        <name>fz_offset_at_model_boundary_negative_</name>
+        <qualifiedname>Kalman::fz_offset_at_model_boundary_negative_</qualifiedname>
+        <initializer>= fz_computation(fz_model_boundary_velocity_negative_)
+                                        - fz_derivative_at_model_boundary_negative_ * fz_model_boundary_velocity_negative_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="69" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1adaca83ae00178f27655c0deddfebd761" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::piston_max_volume_</definition>
+        <argsstring></argsstring>
+        <name>piston_max_volume_</name>
+        <qualifiedname>Kalman::piston_max_volume_</qualifiedname>
+        <initializer>= piston_max_tick_ * tick_to_volume_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="72" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::enable_kalman_depth_</definition>
+        <argsstring></argsstring>
+        <name>enable_kalman_depth_</name>
+        <qualifiedname>Kalman::enable_kalman_depth_</qualifiedname>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+<para>Initialization variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="75" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1aa22eb820309998a3f6e923e296863d92" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::piston_volume_eq_init_</definition>
+        <argsstring></argsstring>
+        <name>piston_volume_eq_init_</name>
+        <qualifiedname>Kalman::piston_volume_eq_init_</qualifiedname>
+        <initializer>=  90e-6</initializer>
+        <briefdescription>
+<para>m </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="76" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a0b3a64041aef94c22ac767a662b06825" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::init_chi_</definition>
+        <argsstring></argsstring>
+        <name>init_chi_</name>
+        <qualifiedname>Kalman::init_chi_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>m3 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="77" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::init_chi2_</definition>
+        <argsstring></argsstring>
+        <name>init_chi2_</name>
+        <qualifiedname>Kalman::init_chi2_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>m3/m </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="78" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::init_cz_</definition>
+        <argsstring></argsstring>
+        <name>init_cz_</name>
+        <qualifiedname>Kalman::init_cz_</qualifiedname>
+        <initializer>= 2.0</initializer>
+        <briefdescription>
+<para>m3/m2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="79" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a57a0c2cf2b6b1797e3759d964bfef8a7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::init_volume_air_</definition>
+        <argsstring></argsstring>
+        <name>init_volume_air_</name>
+        <qualifiedname>Kalman::init_volume_air_</qualifiedname>
+        <initializer>= 5e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="80" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1afc6d793f745fba02cde29a93b518f9c4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_velocity_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_velocity_</name>
+        <qualifiedname>Kalman::gamma_alpha_velocity_</qualifiedname>
+        <initializer>=  1e-4</initializer>
+        <briefdescription>
+<para>(V*P/T) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="82" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a7375d024a62eeb83b8b69bf97db48636" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_depth_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_depth_</name>
+        <qualifiedname>Kalman::gamma_alpha_depth_</qualifiedname>
+        <initializer>=  1e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="83" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a6b0770d945a60c98981161ed6a0c253b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_offset_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_offset_</name>
+        <qualifiedname>Kalman::gamma_alpha_offset_</qualifiedname>
+        <initializer>=  1e-9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="84" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a22e76c1b8640087c2c740da42d97cec2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_chi_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_chi_</name>
+        <qualifiedname>Kalman::gamma_alpha_chi_</qualifiedname>
+        <initializer>=  1e-15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="85" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a4a8fc47a3a8ee704d56e16874cb15af8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_chi2_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_chi2_</name>
+        <qualifiedname>Kalman::gamma_alpha_chi2_</qualifiedname>
+        <initializer>=  1e-15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="86" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a19c41484a799df541d8bcc2c4fbf9c9b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_cz_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_cz_</name>
+        <qualifiedname>Kalman::gamma_alpha_cz_</qualifiedname>
+        <initializer>=  1e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="87" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ae16e02d90a917c4dccf1f2cec1ee0325" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_alpha_volume_air_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_volume_air_</name>
+        <qualifiedname>Kalman::gamma_alpha_volume_air_</qualifiedname>
+        <initializer>=  1e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="88" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a3c86641240d48dfeafa5ab76ddf57550" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_velocity_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_velocity_</name>
+        <qualifiedname>Kalman::gamma_init_velocity_</qualifiedname>
+        <initializer>=  1e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="90" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1aab374d808bc54a7c96b02b52c54f53b2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_depth_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_depth_</name>
+        <qualifiedname>Kalman::gamma_init_depth_</qualifiedname>
+        <initializer>=  1.0e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="91" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1abfa6f2ea4acf1f23162348d7d3df7e8e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_offset_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_offset_</name>
+        <qualifiedname>Kalman::gamma_init_offset_</qualifiedname>
+        <initializer>= 1e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="92" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a55dd2809dcefc50c3efde0d7e1317de8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_chi_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_chi_</name>
+        <qualifiedname>Kalman::gamma_init_chi_</qualifiedname>
+        <initializer>= 1e-10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="93" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1acc849a6121b93e1fc14e017475c4c2b7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_chi2_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_chi2_</name>
+        <qualifiedname>Kalman::gamma_init_chi2_</qualifiedname>
+        <initializer>=  1e-10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="94" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ac7a19c5e5e69810d0625466577104e73" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_cz_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_cz_</name>
+        <qualifiedname>Kalman::gamma_init_cz_</qualifiedname>
+        <initializer>=  0.01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="95" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ad1587da685ee4a1438b6cdff0f71ed70" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_init_volume_air_</definition>
+        <argsstring></argsstring>
+        <name>gamma_init_volume_air_</name>
+        <qualifiedname>Kalman::gamma_init_volume_air_</qualifiedname>
+        <initializer>=  1e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="96" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1af5704e5e67c341f26cf60ddc88a79af3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::gamma_beta_depth_</definition>
+        <argsstring></argsstring>
+        <name>gamma_beta_depth_</name>
+        <qualifiedname>Kalman::gamma_beta_depth_</qualifiedname>
+        <initializer>=  1e-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="98" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a942f9880111769cda6e8baf5939de8a4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::fusion_depth_</definition>
+        <argsstring></argsstring>
+        <name>fusion_depth_</name>
+        <qualifiedname>Kalman::fusion_depth_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+<para>Callback data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="102" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ac513ad50b3b84f41c3bf88372214ef3b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::fusion_velocity_</definition>
+        <argsstring></argsstring>
+        <name>fusion_velocity_</name>
+        <qualifiedname>Kalman::fusion_velocity_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="103" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ac19433f461c4580842d33356b3f1351e" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time Kalman::fusion_stamp_</definition>
+        <argsstring></argsstring>
+        <name>fusion_stamp_</name>
+        <qualifiedname>Kalman::fusion_stamp_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="104" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a2594ddee489629c77fc8bf2bceaf1136" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::piston_position_</definition>
+        <argsstring></argsstring>
+        <name>piston_position_</name>
+        <qualifiedname>Kalman::piston_position_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="106" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a316573ee3a5ac6551b6d10900c9b3568" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time Kalman::piston_stamp_</definition>
+        <argsstring></argsstring>
+        <name>piston_stamp_</name>
+        <qualifiedname>Kalman::piston_stamp_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="107" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a0d5985a20d3e7b437bf1d29d251cf233" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::temperature_</definition>
+        <argsstring></argsstring>
+        <name>temperature_</name>
+        <qualifiedname>Kalman::temperature_</qualifiedname>
+        <initializer>= 288.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="109" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1acd155be96ac525872469e13183ac60f8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::pressure_</definition>
+        <argsstring></argsstring>
+        <name>pressure_</name>
+        <qualifiedname>Kalman::pressure_</qualifiedname>
+        <initializer>= 101325.0</initializer>
+        <briefdescription>
+<para>in K (15°C) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="110" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1aeb4208c32e041e59377f815334651bbb" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_STATES, 1 &gt;</type>
+        <definition>Matrix&lt;double, NB_STATES, 1&gt; Kalman::xhat_</definition>
+        <argsstring></argsstring>
+        <name>xhat_</name>
+        <qualifiedname>Kalman::xhat_</qualifiedname>
+        <initializer>= Matrix&lt;double, NB_STATES, 1&gt;::Zero()</initializer>
+        <briefdescription>
+<para>in Pa (1013.23 hPa) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classKalman" kindref="compound">Kalman</ref> variables </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="124" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a9c12508cb130c1c3c4ef7045d37c4804" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_STATES, 1 &gt;</type>
+        <definition>Matrix&lt;double,NB_STATES, 1&gt; Kalman::x_forcast_</definition>
+        <argsstring></argsstring>
+        <name>x_forcast_</name>
+        <qualifiedname>Kalman::x_forcast_</qualifiedname>
+        <initializer>= Matrix&lt;double, NB_STATES, 1&gt;::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="125" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a33ad3fabbe82c832b1f7b9183f713a77" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_STATES, NB_STATES &gt;</type>
+        <definition>Matrix&lt;double,NB_STATES,NB_STATES&gt; Kalman::gamma_</definition>
+        <argsstring></argsstring>
+        <name>gamma_</name>
+        <qualifiedname>Kalman::gamma_</qualifiedname>
+        <initializer>= Matrix&lt;double,NB_STATES,NB_STATES&gt;::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="126" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a6aea2773c24825d3be4b6c86d141222a" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_STATES, NB_STATES &gt;</type>
+        <definition>Matrix&lt;double,NB_STATES, NB_STATES&gt; Kalman::gamma_forcast_</definition>
+        <argsstring></argsstring>
+        <name>gamma_forcast_</name>
+        <qualifiedname>Kalman::gamma_forcast_</qualifiedname>
+        <initializer>= Matrix&lt;double,NB_STATES,NB_STATES&gt;::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="127" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a9e371268ffbb5f9e0e0e38f1d3d4f98d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Kalman::offset_total_</definition>
+        <argsstring></argsstring>
+        <name>offset_total_</name>
+        <qualifiedname>Kalman::offset_total_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="128" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ac9d916cd49e20e51df06dcb3c943ae53" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_STATES, NB_STATES &gt;</type>
+        <definition>Matrix&lt;double, NB_STATES, NB_STATES&gt; Kalman::gamma_alpha_</definition>
+        <argsstring></argsstring>
+        <name>gamma_alpha_</name>
+        <qualifiedname>Kalman::gamma_alpha_</qualifiedname>
+        <initializer>= Matrix&lt;double, NB_STATES, NB_STATES&gt;::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="130" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1ad12865c594ade9867bb394d6f1cce99f" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_MESURES, NB_MESURES &gt;</type>
+        <definition>Matrix&lt;double, NB_MESURES, NB_MESURES&gt; Kalman::gamma_beta_</definition>
+        <argsstring></argsstring>
+        <name>gamma_beta_</name>
+        <qualifiedname>Kalman::gamma_beta_</qualifiedname>
+        <initializer>= Matrix&lt;double, NB_MESURES, NB_MESURES&gt;::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="131" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a4fe5b7e651c09e3df593f29222ed0fff" prot="public" static="no" mutable="no">
+        <type>Matrix&lt; double, NB_MESURES, NB_STATES &gt;</type>
+        <definition>Matrix&lt;double, NB_MESURES, NB_STATES&gt; Kalman::Ck_</definition>
+        <argsstring></argsstring>
+        <name>Ck_</name>
+        <qualifiedname>Kalman::Ck_</qualifiedname>
+        <initializer>= Matrix&lt;double, NB_MESURES, NB_STATES&gt;::Zero()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="132" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1a79e18e63a1317aeeb0e6f2204090e112" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Kalman::enable_kalman_</definition>
+        <argsstring></argsstring>
+        <name>enable_kalman_</name>
+        <qualifiedname>Kalman::enable_kalman_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="134" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1aa3fb4c4d27dd24b70412684e12782ee4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Kalman::is_valid_</definition>
+        <argsstring></argsstring>
+        <name>is_valid_</name>
+        <qualifiedname>Kalman::is_valid_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="135" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1acf1ee446ffc42d56491b09b74cae228d" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time Kalman::time_last_predict_</definition>
+        <argsstring></argsstring>
+        <name>time_last_predict_</name>
+        <qualifiedname>Kalman::time_last_predict_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="136" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalman_1acee7485d7845e70ee42da0cad3ac4aca" prot="public" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds Kalman::forecast_dt_</definition>
+        <argsstring></argsstring>
+        <name>forecast_dt_</name>
+        <qualifiedname>Kalman::forecast_dt_</qualifiedname>
+        <initializer>= 0ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="137" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKalman_1a0b487a843716cd64125c1206370cf03c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Kalman::Kalman</definition>
+        <argsstring>()</argsstring>
+        <name>Kalman</name>
+        <qualifiedname>Kalman::Kalman</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="25" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a1518ee4912a7f07c65214d43633cc008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::init_parameters</definition>
+        <argsstring>(const rclcpp::Time &amp;init_time)</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>Kalman::init_parameters</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>init_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="30" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="7" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a73e981ef539568465af64bb5738795f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::update_density</definition>
+        <argsstring>(double physics_rho)</argsstring>
+        <name>update_density</name>
+        <qualifiedname>Kalman::update_density</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>physics_rho</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>physics_rho</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="36" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1ae0c4a1dd6458d129bf233ae39b14b374" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Kalman::fz_computation</definition>
+        <argsstring>(double velocity) const</argsstring>
+        <name>fz_computation</name>
+        <qualifiedname>Kalman::fz_computation</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="38" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="31" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a0f785421890a99320d13cd40325a919c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Kalman::fz_derivative_computation</definition>
+        <argsstring>(double velocity) const</argsstring>
+        <name>fz_derivative_computation</name>
+        <qualifiedname>Kalman::fz_derivative_computation</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="40" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a94583a3b9485c49461ba11c347bd5699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::compute_kalman</definition>
+        <argsstring>(bool new_depth_data=false, bool new_piston_data=false)</argsstring>
+        <name>compute_kalman</name>
+        <qualifiedname>Kalman::compute_kalman</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>new_depth_data</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>new_piston_data</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_depth_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_piston_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Case kalman enable</para>
+<para>Forecast</para>
+<para>Reset <ref refid="classKalman" kindref="compound">Kalman</ref> if divergence Link with safety node ?</para>
+<para>Case where kalman is not enable, then follow fusion data</para>
+<para>Compute offset total in both cases</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="196" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="198" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a7b5b5dba4996dd71f4eab859650212b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::set_new_piston_data</definition>
+        <argsstring>(double position, double set_point, const rclcpp::Time &amp;stamp)</argsstring>
+        <name>set_new_piston_data</name>
+        <qualifiedname>Kalman::set_new_piston_data</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>set_point</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>stamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>set_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="204" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="176" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a9c6833da97e03ecfffcd99b02dd174ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::set_new_depth_data</definition>
+        <argsstring>(double depth, double velocity, const rclcpp::Time &amp;stamp)</argsstring>
+        <name>set_new_depth_data</name>
+        <qualifiedname>Kalman::set_new_depth_data</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>stamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="212" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="182" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a37341b6d877ba1d00d1c2474f29f947b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::update_temperature</definition>
+        <argsstring>(double temperature)</argsstring>
+        <name>update_temperature</name>
+        <qualifiedname>Kalman::update_temperature</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="218" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1aec6153fb4063a3e19b7f3c23df921ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::update_pressure</definition>
+        <argsstring>(double pressure)</argsstring>
+        <name>update_pressure</name>
+        <qualifiedname>Kalman::update_pressure</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>pressure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pressure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[absolute, in bar] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="224" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a90b50a7d29f720b3691b44cf0dfdf5bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::update_coeffAB</definition>
+        <argsstring>()</argsstring>
+        <name>update_coeffAB</name>
+        <qualifiedname>Kalman::update_coeffAB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the coefficients of the equation of state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="229" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classKalman_1a78b8f3c5d6d20ca45d4645218ba328f7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Matrix&lt; double, NB_STATES, 1 &gt;</type>
+        <definition>Matrix&lt; double, Kalman::NB_STATES, 1 &gt; Kalman::f_dyn</definition>
+        <argsstring>(const Matrix&lt; double, NB_STATES, 1 &gt; &amp;x, const Matrix&lt; double, NB_COMMAND, 1 &gt; &amp;u) const</argsstring>
+        <name>f_dyn</name>
+        <qualifiedname>Kalman::f_dyn</qualifiedname>
+        <param>
+          <type>const Matrix&lt; double, NB_STATES, 1 &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const Matrix&lt; double, NB_COMMAND, 1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="147" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="60" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a1aedea88f90be395ca080600d38305ee" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::kalman_predict</definition>
+        <argsstring>(Matrix&lt; double, NB_STATES, 1 &gt; &amp;x, Matrix&lt; double, NB_STATES, NB_STATES &gt; &amp;gamma, const Matrix&lt; double, NB_COMMAND, 1 &gt; &amp;u, const Matrix&lt; double, NB_STATES, NB_STATES &gt; &amp;gamma_alpha, const double &amp;dt) const</argsstring>
+        <name>kalman_predict</name>
+        <qualifiedname>Kalman::kalman_predict</qualifiedname>
+        <param>
+          <type>Matrix&lt; double, NB_STATES, 1 &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Matrix&lt; double, NB_STATES, NB_STATES &gt; &amp;</type>
+          <declname>gamma</declname>
+        </param>
+        <param>
+          <type>const Matrix&lt; double, NB_COMMAND, 1 &gt; &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const Matrix&lt; double, NB_STATES, NB_STATES &gt; &amp;</type>
+          <declname>gamma_alpha</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gamma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gamma_alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="158" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="88" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a4b5e3ae7739c605de3af41ca4d319469" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::init_kalman</definition>
+        <argsstring>()</argsstring>
+        <name>init_kalman</name>
+        <qualifiedname>Kalman::init_kalman</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="181" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="135" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalman_1a4554420150b71ae519e50a08c3963d5c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Kalman::is_out_of_range</definition>
+        <argsstring>(const Matrix&lt; double, NB_STATES, 1 &gt; &amp;xhat) const</argsstring>
+        <name>is_out_of_range</name>
+        <qualifiedname>Kalman::is_out_of_range</qualifiedname>
+        <param>
+          <type>const Matrix&lt; double, NB_STATES, 1 &gt; &amp;</type>
+          <declname>xhat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if state of <ref refid="classKalman" kindref="compound">Kalman</ref> filter is out of range of admissible values <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xhat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="188" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="169" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classKalman_1ace87df1ca03dcab6a3e84d0226eaad3a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Kalman::kalman_correc</definition>
+        <argsstring>(Matrix&lt; double, NB_STATES, 1 &gt; &amp;x, Matrix&lt; double, NB_STATES, NB_STATES &gt; &amp;gamma, const Matrix&lt; double, NB_MESURES, 1 &gt; &amp;y, const Matrix&lt; double, NB_MESURES, NB_MESURES &gt; &amp;gamma_beta, const Matrix&lt; double, NB_MESURES, NB_STATES &gt; &amp;Ck)</argsstring>
+        <name>kalman_correc</name>
+        <qualifiedname>Kalman::kalman_correc</qualifiedname>
+        <param>
+          <type>Matrix&lt; double, NB_STATES, 1 &gt; &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>Matrix&lt; double, NB_STATES, NB_STATES &gt; &amp;</type>
+          <declname>gamma</declname>
+        </param>
+        <param>
+          <type>const Matrix&lt; double, NB_MESURES, 1 &gt; &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const Matrix&lt; double, NB_MESURES, NB_MESURES &gt; &amp;</type>
+          <declname>gamma_beta</declname>
+        </param>
+        <param>
+          <type>const Matrix&lt; double, NB_MESURES, NB_STATES &gt; &amp;</type>
+          <declname>Ck</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gamma</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gamma_beta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Ck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="172" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp" bodystart="118" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" line="15" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h" bodystart="15" bodyend="231"/>
+    <listofallmembers>
+      <member refid="classKalman_1a4fe5b7e651c09e3df593f29222ed0fff" prot="public" virt="non-virtual"><scope>Kalman</scope><name>Ck_</name></member>
+      <member refid="classKalman_1a4c966fab1ead5fb74a92bd6d83a9c53d" prot="public" virt="non-virtual"><scope>Kalman</scope><name>coeff_A_</name></member>
+      <member refid="classKalman_1abbc8cb07b0215d112f31ac9a2e0bb82e" prot="public" virt="non-virtual"><scope>Kalman</scope><name>coeff_B_</name></member>
+      <member refid="classKalman_1a94583a3b9485c49461ba11c347bd5699" prot="public" virt="non-virtual"><scope>Kalman</scope><name>compute_kalman</name></member>
+      <member refid="classKalman_1a36be908e7ea63cc3e14a9ce996a683fa" prot="public" virt="non-virtual"><scope>Kalman</scope><name>degree_to_kelvin_</name></member>
+      <member refid="classKalman_1a79e18e63a1317aeeb0e6f2204090e112" prot="public" virt="non-virtual"><scope>Kalman</scope><name>enable_kalman_</name></member>
+      <member refid="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" prot="public" virt="non-virtual"><scope>Kalman</scope><name>enable_kalman_depth_</name></member>
+      <member refid="classKalman_1a78b8f3c5d6d20ca45d4645218ba328f7" prot="private" virt="non-virtual"><scope>Kalman</scope><name>f_dyn</name></member>
+      <member refid="classKalman_1acee7485d7845e70ee42da0cad3ac4aca" prot="public" virt="non-virtual"><scope>Kalman</scope><name>forecast_dt_</name></member>
+      <member refid="classKalman_1a942f9880111769cda6e8baf5939de8a4" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fusion_depth_</name></member>
+      <member refid="classKalman_1ac19433f461c4580842d33356b3f1351e" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fusion_stamp_</name></member>
+      <member refid="classKalman_1ac513ad50b3b84f41c3bf88372214ef3b" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fusion_velocity_</name></member>
+      <member refid="classKalman_1ae0c4a1dd6458d129bf233ae39b14b374" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_computation</name></member>
+      <member refid="classKalman_1aade6d6d97db7d8aafc37e8bfdf9067f4" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_derivative_at_model_boundary_negative_</name></member>
+      <member refid="classKalman_1a25c8b4b0654a66e55af4d7ec47384057" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_derivative_at_model_boundary_positive_</name></member>
+      <member refid="classKalman_1a0f785421890a99320d13cd40325a919c" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_derivative_computation</name></member>
+      <member refid="classKalman_1a256c3f7c16b80d817d09a5d7c87145db" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_model_boundary_velocity_negative_</name></member>
+      <member refid="classKalman_1ace87e975b24ae7786e8755de84a2b794" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_model_boundary_velocity_positive_</name></member>
+      <member refid="classKalman_1a176b8f7a00354750cdc590c67ee8f2f5" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_offset_at_model_boundary_negative_</name></member>
+      <member refid="classKalman_1a081386302806c73cae175ccb2f0de758" prot="public" virt="non-virtual"><scope>Kalman</scope><name>fz_offset_at_model_boundary_positive_</name></member>
+      <member refid="classKalman_1a33ad3fabbe82c832b1f7b9183f713a77" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_</name></member>
+      <member refid="classKalman_1ac9d916cd49e20e51df06dcb3c943ae53" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_</name></member>
+      <member refid="classKalman_1a4a8fc47a3a8ee704d56e16874cb15af8" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_chi2_</name></member>
+      <member refid="classKalman_1a22e76c1b8640087c2c740da42d97cec2" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_chi_</name></member>
+      <member refid="classKalman_1a19c41484a799df541d8bcc2c4fbf9c9b" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_cz_</name></member>
+      <member refid="classKalman_1a7375d024a62eeb83b8b69bf97db48636" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_depth_</name></member>
+      <member refid="classKalman_1a6b0770d945a60c98981161ed6a0c253b" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_offset_</name></member>
+      <member refid="classKalman_1afc6d793f745fba02cde29a93b518f9c4" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_velocity_</name></member>
+      <member refid="classKalman_1ae16e02d90a917c4dccf1f2cec1ee0325" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_alpha_volume_air_</name></member>
+      <member refid="classKalman_1ad12865c594ade9867bb394d6f1cce99f" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_beta_</name></member>
+      <member refid="classKalman_1af5704e5e67c341f26cf60ddc88a79af3" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_beta_depth_</name></member>
+      <member refid="classKalman_1a6aea2773c24825d3be4b6c86d141222a" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_forcast_</name></member>
+      <member refid="classKalman_1acc849a6121b93e1fc14e017475c4c2b7" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_chi2_</name></member>
+      <member refid="classKalman_1a55dd2809dcefc50c3efde0d7e1317de8" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_chi_</name></member>
+      <member refid="classKalman_1ac7a19c5e5e69810d0625466577104e73" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_cz_</name></member>
+      <member refid="classKalman_1aab374d808bc54a7c96b02b52c54f53b2" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_depth_</name></member>
+      <member refid="classKalman_1abfa6f2ea4acf1f23162348d7d3df7e8e" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_offset_</name></member>
+      <member refid="classKalman_1a3c86641240d48dfeafa5ab76ddf57550" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_velocity_</name></member>
+      <member refid="classKalman_1ad1587da685ee4a1438b6cdff0f71ed70" prot="public" virt="non-virtual"><scope>Kalman</scope><name>gamma_init_volume_air_</name></member>
+      <member refid="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" prot="public" virt="non-virtual"><scope>Kalman</scope><name>init_chi2_</name></member>
+      <member refid="classKalman_1a0b3a64041aef94c22ac767a662b06825" prot="public" virt="non-virtual"><scope>Kalman</scope><name>init_chi_</name></member>
+      <member refid="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" prot="public" virt="non-virtual"><scope>Kalman</scope><name>init_cz_</name></member>
+      <member refid="classKalman_1a4b5e3ae7739c605de3af41ca4d319469" prot="private" virt="non-virtual"><scope>Kalman</scope><name>init_kalman</name></member>
+      <member refid="classKalman_1a1518ee4912a7f07c65214d43633cc008" prot="public" virt="non-virtual"><scope>Kalman</scope><name>init_parameters</name></member>
+      <member refid="classKalman_1a57a0c2cf2b6b1797e3759d964bfef8a7" prot="public" virt="non-virtual"><scope>Kalman</scope><name>init_volume_air_</name></member>
+      <member refid="classKalman_1a4554420150b71ae519e50a08c3963d5c" prot="private" virt="non-virtual"><scope>Kalman</scope><name>is_out_of_range</name></member>
+      <member refid="classKalman_1aa3fb4c4d27dd24b70412684e12782ee4" prot="public" virt="non-virtual"><scope>Kalman</scope><name>is_valid_</name></member>
+      <member refid="classKalman_1a0b487a843716cd64125c1206370cf03c" prot="public" virt="non-virtual"><scope>Kalman</scope><name>Kalman</name></member>
+      <member refid="classKalman_1ace87df1ca03dcab6a3e84d0226eaad3a" prot="private" virt="non-virtual"><scope>Kalman</scope><name>kalman_correc</name></member>
+      <member refid="classKalman_1a1aedea88f90be395ca080600d38305ee" prot="private" virt="non-virtual"><scope>Kalman</scope><name>kalman_predict</name></member>
+      <member refid="classKalman_1a552d9c0de6f8ecc4fd42ba52a5cf0a7d" prot="public" virt="non-virtual"><scope>Kalman</scope><name>NB_COMMAND</name></member>
+      <member refid="classKalman_1a7183d860e1be2e87f587ea4f0b471f7d" prot="public" virt="non-virtual"><scope>Kalman</scope><name>NB_MESURES</name></member>
+      <member refid="classKalman_1aa25ad8dd293eb8fae83c4f013d47842d" prot="public" virt="non-virtual"><scope>Kalman</scope><name>NB_STATES</name></member>
+      <member refid="classKalman_1a9e371268ffbb5f9e0e0e38f1d3d4f98d" prot="public" virt="non-virtual"><scope>Kalman</scope><name>offset_total_</name></member>
+      <member refid="classKalman_1af868078cbc87d644df99a599f3c48970" prot="public" virt="non-virtual"><scope>Kalman</scope><name>physics_g_</name></member>
+      <member refid="classKalman_1a861938a9da523402c2bb886416e94505" prot="public" virt="non-virtual"><scope>Kalman</scope><name>physics_rho_</name></member>
+      <member refid="classKalman_1a583a5c9871d8221b74c245c337651958" prot="public" virt="non-virtual"><scope>Kalman</scope><name>piston_diameter_</name></member>
+      <member refid="classKalman_1a1bc94b7ad88e27d5f02d34c611e53e06" prot="public" virt="non-virtual"><scope>Kalman</scope><name>piston_max_tick_</name></member>
+      <member refid="classKalman_1adaca83ae00178f27655c0deddfebd761" prot="public" virt="non-virtual"><scope>Kalman</scope><name>piston_max_volume_</name></member>
+      <member refid="classKalman_1a2594ddee489629c77fc8bf2bceaf1136" prot="public" virt="non-virtual"><scope>Kalman</scope><name>piston_position_</name></member>
+      <member refid="classKalman_1a316573ee3a5ac6551b6d10900c9b3568" prot="public" virt="non-virtual"><scope>Kalman</scope><name>piston_stamp_</name></member>
+      <member refid="classKalman_1aa22eb820309998a3f6e923e296863d92" prot="public" virt="non-virtual"><scope>Kalman</scope><name>piston_volume_eq_init_</name></member>
+      <member refid="classKalman_1acd155be96ac525872469e13183ac60f8" prot="public" virt="non-virtual"><scope>Kalman</scope><name>pressure_</name></member>
+      <member refid="classKalman_1a26bb768204ff4a1b73c90e9182f23ab9" prot="public" virt="non-virtual"><scope>Kalman</scope><name>robot_added_mass_</name></member>
+      <member refid="classKalman_1ad35c93e6cf555e0c89941367079ae30f" prot="public" virt="non-virtual"><scope>Kalman</scope><name>robot_diameter_</name></member>
+      <member refid="classKalman_1a7c4ab7c162a86cbe903beaa8ed4fcda2" prot="public" virt="non-virtual"><scope>Kalman</scope><name>robot_mass_</name></member>
+      <member refid="classKalman_1abecf5de87e1975aa005502cad5989a94" prot="public" virt="non-virtual"><scope>Kalman</scope><name>screw_thread_</name></member>
+      <member refid="classKalman_1a9c6833da97e03ecfffcd99b02dd174ec" prot="public" virt="non-virtual"><scope>Kalman</scope><name>set_new_depth_data</name></member>
+      <member refid="classKalman_1a7b5b5dba4996dd71f4eab859650212b8" prot="public" virt="non-virtual"><scope>Kalman</scope><name>set_new_piston_data</name></member>
+      <member refid="classKalman_1a0d5985a20d3e7b437bf1d29d251cf233" prot="public" virt="non-virtual"><scope>Kalman</scope><name>temperature_</name></member>
+      <member refid="classKalman_1afcea999f1b9ee0cea9ca8c049c3ea26c" prot="public" virt="non-virtual"><scope>Kalman</scope><name>tick_per_turn_</name></member>
+      <member refid="classKalman_1a7bf75fdfd5ecf5b23c7a1d8df2930784" prot="public" virt="non-virtual"><scope>Kalman</scope><name>tick_to_volume_</name></member>
+      <member refid="classKalman_1acf1ee446ffc42d56491b09b74cae228d" prot="public" virt="non-virtual"><scope>Kalman</scope><name>time_last_predict_</name></member>
+      <member refid="classKalman_1a90b50a7d29f720b3691b44cf0dfdf5bb" prot="public" virt="non-virtual"><scope>Kalman</scope><name>update_coeffAB</name></member>
+      <member refid="classKalman_1a73e981ef539568465af64bb5738795f0" prot="public" virt="non-virtual"><scope>Kalman</scope><name>update_density</name></member>
+      <member refid="classKalman_1aec6153fb4063a3e19b7f3c23df921ef3" prot="public" virt="non-virtual"><scope>Kalman</scope><name>update_pressure</name></member>
+      <member refid="classKalman_1a37341b6d877ba1d00d1c2474f29f947b" prot="public" virt="non-virtual"><scope>Kalman</scope><name>update_temperature</name></member>
+      <member refid="classKalman_1a9c12508cb130c1c3c4ef7045d37c4804" prot="public" virt="non-virtual"><scope>Kalman</scope><name>x_forcast_</name></member>
+      <member refid="classKalman_1aeb4208c32e041e59377f815334651bbb" prot="public" virt="non-virtual"><scope>Kalman</scope><name>xhat_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

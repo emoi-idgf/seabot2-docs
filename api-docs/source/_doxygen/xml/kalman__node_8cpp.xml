@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="kalman__node_8cpp" kind="file" language="C++">
+    <compoundname>kalman_node.cpp</compoundname>
+    <includes refid="kalman__node_8hpp" local="yes">seabot2_kalman/kalman_node.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>seabot2_kalman/kalman.h</label>
+        <link refid="kalman_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seabot2_kalman/kalman_node.hpp</label>
+        <link refid="kalman__node_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp</label>
+        <link refid="kalman__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cmath</label>
+      </node>
+      <node id="5">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="10">
+        <label>seabot2_msgs/msg/density.hpp</label>
+      </node>
+      <node id="8">
+        <label>seabot2_msgs/msg/depth_pose.hpp</label>
+      </node>
+      <node id="9">
+        <label>seabot2_msgs/msg/kalman_state.hpp</label>
+      </node>
+      <node id="7">
+        <label>seabot2_msgs/msg/piston_state.hpp</label>
+      </node>
+      <node id="11">
+        <label>seabot2_msgs/msg/pressure_sensor_data.hpp</label>
+      </node>
+      <node id="12">
+        <label>seabot2_msgs/msg/temperature_sensor_data.hpp</label>
+      </node>
+      <node id="13">
+        <label>std_msgs/msg/int32.hpp</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="kalman__node_8cpp_1a638b85ceffac097c2aa79b76ba8c055e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(const int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" line="153" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="153" bodyend="158"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_kalman/kalman_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">KalmanNode::KalmanNode()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;kalman_node&quot;</highlight><highlight class="normal">),<sp/>k_(){</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Kalman_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::init_parameters()<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt_&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count());</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;physics_rho&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;physics_g&quot;</highlight><highlight class="normal">,<sp/>k_.physics_g_);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;robot_mass&quot;</highlight><highlight class="normal">,<sp/>k_.robot_mass_);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;robot_diameter&quot;</highlight><highlight class="normal">,<sp/>k_.robot_diameter_);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;screw_thread&quot;</highlight><highlight class="normal">,<sp/>k_.screw_thread_);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;tick_per_turn&quot;</highlight><highlight class="normal">,<sp/>k_.tick_per_turn_);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_diameter&quot;</highlight><highlight class="normal">,<sp/>k_.piston_diameter_);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_max_tick_value&quot;</highlight><highlight class="normal">,<sp/>k_.piston_max_tick_);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;enable_kalman_depth&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" kindref="member">enable_kalman_depth_</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_volume_eq_init&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1aa22eb820309998a3f6e923e296863d92" kindref="member">piston_volume_eq_init_</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;init_chi&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a0b3a64041aef94c22ac767a662b06825" kindref="member">init_chi_</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;init_chi2&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" kindref="member">init_chi2_</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;init_cz&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" kindref="member">init_cz_</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;init_volume_air&quot;</highlight><highlight class="normal">,<sp/>k_.init_volume_air_);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_velocity&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1afc6d793f745fba02cde29a93b518f9c4" kindref="member">gamma_alpha_velocity_</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_depth&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_depth_);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_offset&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_offset_);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_chi&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_chi_);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_chi2&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_chi2_);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_cz&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_cz_);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_alpha_volume_air&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_volume_air_);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_velocity&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_velocity_);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_depth&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_depth_);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_offset&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_offset_);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_chi&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_chi_);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_chi2&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_chi2_);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_cz&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_cz_);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_init_volume_air&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_volume_air_);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;gamma_beta_depth&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_beta_depth_);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;physics_rho&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.physics_g_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;physics_g&quot;</highlight><highlight class="normal">,<sp/>k_.physics_g_);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.robot_mass_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;physics_mass&quot;</highlight><highlight class="normal">,<sp/>k_.robot_mass_);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.robot_diameter_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;robot_diameter&quot;</highlight><highlight class="normal">,<sp/>k_.robot_diameter_);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.screw_thread_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;screw_thread&quot;</highlight><highlight class="normal">,<sp/>k_.screw_thread_);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.tick_per_turn_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;tick_per_turn&quot;</highlight><highlight class="normal">,<sp/>k_.tick_per_turn_);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.piston_diameter_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_diameter&quot;</highlight><highlight class="normal">,<sp/>k_.piston_diameter_);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.piston_max_tick_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_max_tick&quot;</highlight><highlight class="normal">,<sp/>k_.piston_max_tick_);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" kindref="member">enable_kalman_depth_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;enable_kalman_depth&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" kindref="member">enable_kalman_depth_</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1aa22eb820309998a3f6e923e296863d92" kindref="member">piston_volume_eq_init_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_volume_eq_init&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1aa22eb820309998a3f6e923e296863d92" kindref="member">piston_volume_eq_init_</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a0b3a64041aef94c22ac767a662b06825" kindref="member">init_chi_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;init_chi&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a0b3a64041aef94c22ac767a662b06825" kindref="member">init_chi_</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" kindref="member">init_chi2_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;init_chi2&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" kindref="member">init_chi2_</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volume_air<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;init_volume_air&quot;</highlight><highlight class="normal">,<sp/>k_.init_volume_air_);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.init_volume_air_<sp/>=<sp/>volume_air*k_.<ref refid="classKalman_1acd155be96ac525872469e13183ac60f8" kindref="member">pressure_</ref>/k_.temperature_;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" kindref="member">init_cz_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;init_cz&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" kindref="member">init_cz_</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1afc6d793f745fba02cde29a93b518f9c4" kindref="member">gamma_alpha_velocity_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_velocity&quot;</highlight><highlight class="normal">,<sp/>k_.<ref refid="classKalman_1afc6d793f745fba02cde29a93b518f9c4" kindref="member">gamma_alpha_velocity_</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_alpha_depth_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_depth&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_depth_);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_alpha_offset_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_offset&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_offset_);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_alpha_chi_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_chi&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_chi_);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_alpha_chi2_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_chi2&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_chi2_);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_alpha_cz_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_cz&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_cz_);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_alpha_volume_air_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_alpha_volume_air&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_alpha_volume_air_);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_velocity_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_velocity&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_velocity_);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_depth_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_depth&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_depth_);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_offset_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_offset&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_offset_);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_chi_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_chi&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_chi_);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_chi2_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_chi2&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_chi2_);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_cz_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_cz&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_cz_);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_volume_air<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_init_volume_air&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_init_volume_air_);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_init_volume_air_<sp/>=<sp/>gamma_init_volume_air*k_.<ref refid="classKalman_1acd155be96ac525872469e13183ac60f8" kindref="member">pressure_</ref>/k_.temperature_;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.gamma_beta_depth_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gamma_beta_depth&quot;</highlight><highlight class="normal">,<sp/>k_.gamma_beta_depth_);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.init_parameters(this-&gt;now());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::state_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PistonState<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a7b5b5dba4996dd71f4eab859650212b8" kindref="member">set_new_piston_data</ref>(msg.position,<sp/>msg.position_set_point,<sp/>msg.header.stamp);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::depth_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1aec6153fb4063a3e19b7f3c23df921ef3" kindref="member">update_pressure</ref>(msg.pressure<sp/>+<sp/>msg.zero_depth_pressure);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a9c6833da97e03ecfffcd99b02dd174ec" kindref="member">set_new_depth_data</ref>(msg.depth,<sp/>msg.velocity,<sp/>msg.header.stamp);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>publish_data();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::density_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a73e981ef539568465af64bb5738795f0" kindref="member">update_density</ref>(msg.density);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::temperature_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>k_.<ref refid="classKalman_1a37341b6d877ba1d00d1c2474f29f947b" kindref="member">update_temperature</ref>(msg.temperature);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::init_interfaces()<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_kalman_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::KalmanState&gt;(</highlight><highlight class="stringliteral">&quot;kalman&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_state_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PistonState&gt;(</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/piston&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;KalmanNode::state_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_depth_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::DepthPose&gt;(</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/depth&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;KalmanNode::depth_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_density_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Density&gt;(</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/density&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;KalmanNode::density_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_temperature_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;(</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/temperature&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;KalmanNode::temperature_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>KalmanNode::publish_data()<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>seabot2_msgs::msg::KalmanState<sp/>msg;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,Kalman::NB_STATES,<sp/>1&gt;<sp/>x<sp/>=<sp/>k_.x_forcast_;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.velocity<sp/>=<sp/>x(0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.depth<sp/>=<sp/>x(1);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.offset<sp/>=<sp/>x(2);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.chi<sp/>=<sp/>x(3);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.chi2<sp/>=<sp/>x(4);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.cz<sp/>=<sp/>x(5);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.volume_air<sp/>=<sp/>x(6);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.offset_total<sp/>=<sp/>k_.offset_total_;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.header.stamp<sp/>=<sp/>k_.time_last_predict_;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[0]<sp/>=<sp/>k_.gamma_forcast_(0,0);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[1]<sp/>=<sp/>k_.gamma_forcast_(1,1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[2]<sp/>=<sp/>k_.gamma_forcast_(2,2);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[3]<sp/>=<sp/>k_.gamma_forcast_(3,3);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[4]<sp/>=<sp/>k_.gamma_forcast_(4,4);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[5]<sp/>=<sp/>k_.gamma_forcast_(5,5);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.variance[6]<sp/>=<sp/>k_.gamma_forcast_(6,6);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>msg.valid<sp/>=<sp/>k_.is_valid_;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_kalman_-&gt;publish(msg);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;KalmanNode&gt;());</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp"/>
+  </compounddef>
+</doxygen>

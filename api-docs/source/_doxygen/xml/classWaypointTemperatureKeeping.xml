@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classWaypointTemperatureKeeping" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>WaypointTemperatureKeeping</compoundname>
+    <basecompoundref refid="classWaypoint" prot="public" virt="non-virtual">Waypoint</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classWaypointTemperatureKeeping_1ae5cdc734abd5f56c70cb4767f3308589" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double WaypointTemperatureKeeping::temperature_</definition>
+        <argsstring></argsstring>
+        <name>temperature_</name>
+        <qualifiedname>WaypointTemperatureKeeping::temperature_</qualifiedname>
+        <initializer>= 20.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="63" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWaypointTemperatureKeeping_1a8850db4255cf154af561ff4872a9b2fd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double WaypointTemperatureKeeping::depth_set_point_accumulator_</definition>
+        <argsstring></argsstring>
+        <name>depth_set_point_accumulator_</name>
+        <qualifiedname>WaypointTemperatureKeeping::depth_set_point_accumulator_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="64" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWaypointTemperatureKeeping_1aeac391d15406fdf0bcd473093618ae4a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double WaypointTemperatureKeeping::coeff_K_</definition>
+        <argsstring></argsstring>
+        <name>coeff_K_</name>
+        <qualifiedname>WaypointTemperatureKeeping::coeff_K_</qualifiedname>
+        <initializer>= 0.03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="65" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classWaypointTemperatureKeeping_1a41bdf3638225ee4a143298e30bd30511" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double WaypointTemperatureKeeping::error_temperature_</definition>
+        <argsstring></argsstring>
+        <name>error_temperature_</name>
+        <qualifiedname>WaypointTemperatureKeeping::error_temperature_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="66" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classWaypointTemperatureKeeping_1acd380ad631127ba9293b5fb1fe3424e6" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>WaypointTemperatureKeeping::WaypointTemperatureKeeping</definition>
+        <argsstring>(Mission *mission)</argsstring>
+        <name>WaypointTemperatureKeeping</name>
+        <qualifiedname>WaypointTemperatureKeeping::WaypointTemperatureKeeping</qualifiedname>
+        <param>
+          <type><ref refid="classMission" kindref="compound">Mission</ref> *</type>
+          <declname>mission</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="55" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classWaypointTemperatureKeeping_1a0a9563832f519a12e0b3a7b129cdd997" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WaypointTemperatureKeeping::~WaypointTemperatureKeeping</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~WaypointTemperatureKeeping</name>
+        <qualifiedname>WaypointTemperatureKeeping::~WaypointTemperatureKeeping</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="56" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classWaypointTemperatureKeeping_1a7c578d5be2090fd7a68f4ccbc83da54f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WaypointTemperatureKeeping::process</definition>
+        <argsstring>(const rclcpp::Time &amp;time) override</argsstring>
+        <name>process</name>
+        <qualifiedname>WaypointTemperatureKeeping::process</qualifiedname>
+        <reimplements refid="classWaypoint_1aae9e95a58a5309b3849bd97b0c9cd2e8">process</reimplements>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>process </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="61" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp" bodystart="28" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Waypoint</label>
+        <link refid="classWaypoint"/>
+      </node>
+      <node id="1">
+        <label>WaypointTemperatureKeeping</label>
+        <link refid="classWaypointTemperatureKeeping"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Mission</label>
+        <link refid="classMission"/>
+      </node>
+      <node id="2">
+        <label>Waypoint</label>
+        <link refid="classWaypoint"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mission_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>WaypointTemperatureKeeping</label>
+        <link refid="classWaypointTemperatureKeeping"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="53" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="53" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classWaypointTemperatureKeeping_1aeac391d15406fdf0bcd473093618ae4a" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>coeff_K_</name></member>
+      <member refid="classWaypoint_1a7d5cd3970869c646b4e86e986996b8a3" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>depth</name></member>
+      <member refid="classWaypointTemperatureKeeping_1a8850db4255cf154af561ff4872a9b2fd" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>depth_set_point_accumulator_</name></member>
+      <member refid="classWaypoint_1ac2c73435c531a01c6dd830f0b226e19f" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>duration</name></member>
+      <member refid="classWaypoint_1a425cd7f3bcd3e57818e7d6447a313e50" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>east</name></member>
+      <member refid="classWaypoint_1a175f6c7ecf0cd7014f6a48d5cc3638f7" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>enable_thrusters</name></member>
+      <member refid="classWaypointTemperatureKeeping_1a41bdf3638225ee4a143298e30bd30511" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>error_temperature_</name></member>
+      <member refid="classWaypoint_1af5d91ed57ac82236555ad0abacee187e" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>mission_</name></member>
+      <member refid="classWaypoint_1a07352276950a2e7f20618cd033fcc043" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>mode</name></member>
+      <member refid="classWaypoint_1a50285f06fcf53385e2092f66db354a8c" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>north</name></member>
+      <member refid="classWaypointTemperatureKeeping_1a7c578d5be2090fd7a68f4ccbc83da54f" prot="public" virt="virtual"><scope>WaypointTemperatureKeeping</scope><name>process</name></member>
+      <member refid="classWaypoint_1a331d69d04562574f810e752d16f83c21" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>seafloor_landing</name></member>
+      <member refid="classWaypointTemperatureKeeping_1ae5cdc734abd5f56c70cb4767f3308589" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>temperature_</name></member>
+      <member refid="classWaypoint_1a2eb82758cba0567b34176fc325bbd8fa" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>time_end</name></member>
+      <member refid="classWaypoint_1a5b806ea31179bb7287694907120d58f7" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>velocity</name></member>
+      <member refid="classWaypoint_1a5ecb81fe7f365f3249a1a6e2ec25984c" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>Waypoint</name></member>
+      <member refid="classWaypoint_1a9b96693d5d4493fa9bc32d8a38b9ef33" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>Waypoint</name></member>
+      <member refid="classWaypoint_1a44b95eeea311645199d18144d101b2d2" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>Waypoint</name></member>
+      <member refid="classWaypointTemperatureKeeping_1acd380ad631127ba9293b5fb1fe3424e6" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>WaypointTemperatureKeeping</name></member>
+      <member refid="classWaypoint_1a8108d386384cd92289885f224289386d" prot="public" virt="virtual"><scope>WaypointTemperatureKeeping</scope><name>~Waypoint</name></member>
+      <member refid="classWaypointTemperatureKeeping_1a0a9563832f519a12e0b3a7b129cdd997" prot="public" virt="non-virtual"><scope>WaypointTemperatureKeeping</scope><name>~WaypointTemperatureKeeping</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

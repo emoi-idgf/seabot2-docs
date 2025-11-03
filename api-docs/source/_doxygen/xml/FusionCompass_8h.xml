@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="FusionCompass_8h" kind="file" language="C++">
+    <compoundname>FusionCompass.h</compoundname>
+    <includes refid="FusionConvention_8h" local="yes">FusionConvention.h</includes>
+    <includes refid="FusionMath_8h" local="yes">FusionMath.h</includes>
+    <includedby refid="Fusion_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/Fusion.h</includedby>
+    <includedby refid="FusionCompass_8c" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.h</label>
+        <link refid="FusionCompass_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>FusionConvention.h</label>
+        <link refid="FusionConvention_8h"/>
+      </node>
+      <node id="3">
+        <label>FusionMath.h</label>
+        <link refid="FusionMath_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/Fusion.h</label>
+        <link refid="Fusion_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c</label>
+        <link refid="FusionCompass_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.h</label>
+        <link refid="FusionCompass_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/FusionConverter.h</label>
+        <link refid="FusionConverter_8h_source"/>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h</label>
+        <link refid="icm20948__node_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="FusionCompass_8h_1a84edef505185c1a5fd2ad3b1d97071ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FusionCompassCalculateHeading</definition>
+        <argsstring>(const FusionConvention convention, const FusionVector accelerometer, const FusionVector magnetometer)</argsstring>
+        <name>FusionCompassCalculateHeading</name>
+        <param>
+          <type>const <ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref></type>
+          <declname>convention</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+          <declname>accelerometer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+          <declname>magnetometer</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the magnetic heading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convention</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Earth axes convention. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>accelerometer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Accelerometer measurement in any calibrated units. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>magnetometer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Magnetometer measurement in any calibrated units. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Heading angle in degrees. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.h" line="20" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c" bodystart="25" bodyend="46" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.h" declline="20" declcolumn="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Tilt-compensated compass to calculate the magnetic heading using accelerometer and magnetometer measurements. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Seb Madgwick </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUSION_COMPASS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUSION_COMPASS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FusionConvention_8h" kindref="compound">FusionConvention.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FusionMath_8h" kindref="compound">FusionMath.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="FusionCompass_8h_1a84edef505185c1a5fd2ad3b1d97071ff" kindref="member">FusionCompassCalculateHeading</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref><sp/>convention,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>magnetometer);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.h"/>
+  </compounddef>
+</doxygen>

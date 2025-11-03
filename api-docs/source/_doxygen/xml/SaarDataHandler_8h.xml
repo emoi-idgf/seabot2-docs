@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="SaarDataHandler_8h" kind="file" language="C++">
+    <compoundname>SaarDataHandler.h</compoundname>
+    <includedby refid="TeosBase_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosBase.h</includedby>
+    <includedby refid="delta__sa__ref_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/delta_sa_ref.h</includedby>
+    <includedby refid="saar__ref_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/saar_ref.h</includedby>
+    <includedby refid="SaarDataHandler_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/SaarDataHandler.cpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h</label>
+        <link refid="SaarDataHandler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosBase.h</label>
+        <link refid="TeosBase_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosIce.h</label>
+        <link refid="TeosIce_8h_source"/>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h</label>
+        <link refid="TeosSea_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/delta_sa_ref.h</label>
+        <link refid="delta__sa__ref_8h_source"/>
+      </node>
+      <node id="9">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/saar_ref.h</label>
+        <link refid="saar__ref_8h_source"/>
+      </node>
+      <node id="5">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp</label>
+        <link refid="density__node_8hpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator.h</label>
+        <link refid="simulator_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator_node.hpp</label>
+        <link refid="simulator__node_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSaarDataHandler" prot="public">SaarDataHandler</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a6134da8d1cb8c9a07a161ed8c1b5f280" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double SAAR_ERROR_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>SAAR_ERROR_LIMIT</name>
+        <initializer>= 1e10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>array limit violation notice </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="26" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1abe7d7976e9d2005fff56d26b8592369a" prot="public" static="no" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned sdata_lat_max</definition>
+        <argsstring></argsstring>
+        <name>sdata_lat_max</name>
+        <initializer>= 45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>data array sizes that define boundaries (0-max) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="29" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a3439619f4b95602739af0837f1ec1501" prot="public" static="no" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned sdata_long_max</definition>
+        <argsstring></argsstring>
+        <name>sdata_long_max</name>
+        <initializer>= 91</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="30" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a739c69e66c564cd866262ff8519f1e68" prot="public" static="no" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned ndepth_ref_max</definition>
+        <argsstring></argsstring>
+        <name>ndepth_ref_max</name>
+        <initializer>= 4095</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="31" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a52166d9123c7a68de6b1775acc5b9597" prot="public" static="no" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned delta_sa_max</definition>
+        <argsstring></argsstring>
+        <name>delta_sa_max</name>
+        <initializer>= 111628</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="38" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a8fb7cee75547a4835c23b9e2eaafd597" prot="public" static="no" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned saar_max</definition>
+        <argsstring></argsstring>
+        <name>saar_max</name>
+        <initializer>= 111921</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="39" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a6eb29fcdf8d90d86d529c9c11e51e122" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gsw_nx</definition>
+        <argsstring></argsstring>
+        <name>gsw_nx</name>
+        <initializer>= 91</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used in various SAAR-using methods/member functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="42" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1a99a98c49c8ff3b655131b1fd80853368" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gsw_ny</definition>
+        <argsstring></argsstring>
+        <name>gsw_ny</name>
+        <initializer>= 45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="43" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="SaarDataHandler_8h_1ab9212eaff794b1b73b257f7d6cc8714d" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int gsw_nz</definition>
+        <argsstring></argsstring>
+        <name>gsw_nz</name>
+        <initializer>= 45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" line="44" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAARDATAHANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAARDATAHANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/***************************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>Version<sp/>1.06</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>by<sp/>Randall<sp/>Kent<sp/>Whited</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>rkwhited@gmail.com</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>------------------</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>This<sp/>is<sp/>a<sp/>modification<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>TEOS-10<sp/>file<sp/>&quot;gsw_saar_data.c&quot;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>as<sp/>adapted<sp/>from<sp/>the<sp/>TEOS-10</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>C<sp/>version<sp/>3.05</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>http://www.teos-10.org</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>-------------------------------------</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>About<sp/>a<sp/>40%<sp/>reduction<sp/>in<sp/>file<sp/>size</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>(disk<sp/>space<sp/>&amp;<sp/>memory<sp/>use)<sp/>resulted,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>in<sp/>the<sp/>debug<sp/>compilation.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>-------------------------------------</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>All<sp/>copyrights<sp/>and<sp/>all<sp/>license<sp/>issues</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>are<sp/>the<sp/>same<sp/>as<sp/>for<sp/>the<sp/>C<sp/>version</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">****************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>SAAR_ERROR_LIMIT<sp/>=<sp/>1e10;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>sdata_lat_max<sp/>=<sp/>45;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>sdata_long_max<sp/>=<sp/>91;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>ndepth_ref_max<sp/>=<sp/>4095;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*******************************************</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/>These<sp/>next<sp/>two<sp/>VLA<sp/>(very<sp/>large<sp/>arrays)</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/>were<sp/>re-designed<sp/>by<sp/>removing<sp/>a<sp/>meg<sp/>or<sp/>so</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/>of<sp/>repeated-value<sp/>sections<sp/>and<sp/>then</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/>&apos;mapping&apos;<sp/>into<sp/>the<sp/>new<sp/>locations.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">********************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>delta_sa_max<sp/>=<sp/>111628;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>saar_max<sp/>=<sp/>111921;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gsw_nx<sp/>=<sp/>91;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gsw_ny<sp/>=<sp/>45;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gsw_nz<sp/>=<sp/>45;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/****************************************</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/>SAAR<sp/>data-array<sp/>access<sp/>by<sp/>C++</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/>&quot;getter&quot;<sp/>methods/member<sp/>functions</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/>-------------------------------------</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/>The<sp/>parameter<sp/>&quot;pos&quot;<sp/>is<sp/>the<sp/>zero-based</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/>original<sp/>array<sp/>position<sp/>of<sp/>the<sp/>data</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/>value<sp/>being<sp/>sought.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/>-------------------------------------</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/>Objects<sp/>of<sp/>this<sp/>class<sp/>handle<sp/>array</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/>data<sp/>that<sp/>was<sp/>originally<sp/>placed<sp/>in</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/>the<sp/>&quot;gsw_saar_data.c&quot;<sp/>file.</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">****************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classSaarDataHandler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSaarDataHandler" kindref="compound">SaarDataHandler</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSaarDataHandler_1aa0d0cd08e5d6fc949656f025f5d6f884" kindref="member">SaarDataHandler</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classSaarDataHandler_1aac2e16e12b52403d14766472d76a76e0" kindref="member">~SaarDataHandler</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_p_ref(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSaarDataHandler_1af2be534b7b3f970115a7f03166b9f45d" kindref="member">get_lats_ref</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_longs_ref(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_saar_ref(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_ndepth_ref(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_delta_sa_ref(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getSaarValue(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>tpos);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>getDeltaSaValue(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>tpos);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>getSaarArrayPos(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>valPos);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>getDeltaSaArrayPos(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>valPos);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>getOffset(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>arrayNumber,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isSaar);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SAARDATAHANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/SaarDataHandler.h"/>
+  </compounddef>
+</doxygen>

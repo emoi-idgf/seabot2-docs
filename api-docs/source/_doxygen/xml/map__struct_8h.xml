@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="map__struct_8h" kind="file" language="C++">
+    <compoundname>map_struct.h</compoundname>
+    <includedby refid="delta__sa__ref__map_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/delta_sa_ref_map.h</includedby>
+    <includedby refid="saar__ref__map_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/saar_ref_map.h</includedby>
+    <includedby refid="SaarDataHandler_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/SaarDataHandler.cpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/delta_sa_ref_map.h</label>
+        <link refid="delta__sa__ref__map_8h_source"/>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/map_struct.h</label>
+        <link refid="map__struct_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/saar_ref_map.h</label>
+        <link refid="saar__ref__map_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structARRAYINFO" prot="public">ARRAYINFO</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="map__struct_8h_1afd8235a906ed076bf9b6ff9fd1837fab" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double repeatSectionValue</definition>
+        <argsstring></argsstring>
+        <name>repeatSectionValue</name>
+        <initializer>= 8.9999999999999998e+90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/map_struct.h" line="16" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/map_struct.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MAP_STRUCT_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP_STRUCT_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*************************</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/>Version<sp/>1.06</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>by<sp/>Randall<sp/>Kent<sp/>Whited</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>rkwhited@gmail.com</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">**************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/*************************************</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">(the<sp/>value<sp/>repeated<sp/>in<sp/>original)</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">&quot;replaced&quot;<sp/>in<sp/>VLA<sp/>(very<sp/>large<sp/>arrays)</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">**************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>repeatSectionValue<sp/>=<sp/>8.9999999999999998e+90;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structARRAYINFO" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structARRAYINFO" kindref="compound">ARRAYINFO</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="structARRAYINFO_1a3ba5c10fc50579eeffba91d631f0afcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structARRAYINFO_1a3ba5c10fc50579eeffba91d631f0afcc" kindref="member">begins</ref>;</highlight></codeline>
+<codeline lineno="24" refid="structARRAYINFO_1acba08546d9e2ea110a865fa3f32288f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structARRAYINFO_1acba08546d9e2ea110a865fa3f32288f3" kindref="member">ends</ref>;</highlight></codeline>
+<codeline lineno="26" refid="structARRAYINFO_1a5a6d61ae51a8e62c660b5955ac59cd1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structARRAYINFO_1a5a6d61ae51a8e62c660b5955ac59cd1e" kindref="member">elements</ref>;</highlight></codeline>
+<codeline lineno="28" refid="structARRAYINFO_1ab3e88525de6e1dcf668b4b81e06da2db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structARRAYINFO_1ab3e88525de6e1dcf668b4b81e06da2db" kindref="member">wasRepeatValue</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="structARRAYINFO_1a50de2b5e73180683ebf525c87c396b91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structARRAYINFO_1a50de2b5e73180683ebf525c87c396b91" kindref="member">init</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structARRAYINFO_1a3ba5c10fc50579eeffba91d631f0afcc" kindref="member">begins</ref><sp/>=<sp/><ref refid="structARRAYINFO_1acba08546d9e2ea110a865fa3f32288f3" kindref="member">ends</ref><sp/>=<sp/><ref refid="structARRAYINFO_1a5a6d61ae51a8e62c660b5955ac59cd1e" kindref="member">elements</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structARRAYINFO_1ab3e88525de6e1dcf668b4b81e06da2db" kindref="member">wasRepeatValue</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MAP_STRUCT_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/map_struct.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPressure__ms5803" kind="class" language="C++" prot="public">
+    <compoundname>Pressure_ms5803</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPressure__ms5803_1a8d8baa7bd35bcc78c54b0fb6057f51c0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node *</type>
+        <definition>rclcpp::Node* Pressure_ms5803::n_</definition>
+        <argsstring></argsstring>
+        <name>n_</name>
+        <qualifiedname>Pressure_ms5803::n_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="122" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1a82f48ed1be32d1e342199d64d40f1254" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Pressure_ms5803::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <qualifiedname>Pressure_ms5803::file_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Pointer to rclcpp Node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="124" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1a6f5c9f2087a349a2d0ff261eb7fcde82" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Pressure_ms5803::i2c_addr_</definition>
+        <argsstring></argsstring>
+        <name>i2c_addr_</name>
+        <qualifiedname>Pressure_ms5803::i2c_addr_</qualifiedname>
+        <initializer>= 0x76</initializer>
+        <briefdescription>
+<para>File to the i2c port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="126" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1ae703ee6ef5b4bc2b538a67b8b45b17c9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Pressure_ms5803::i2c_periph_</definition>
+        <argsstring></argsstring>
+        <name>i2c_periph_</name>
+        <qualifiedname>Pressure_ms5803::i2c_periph_</qualifiedname>
+        <initializer>= &quot;/dev/i2c-0&quot;</initializer>
+        <briefdescription>
+<para>I2C add of the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="127" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1ab9474617ac4add52ec39a0faa7ff2e91" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Pressure_ms5803::p_min_out_range_</definition>
+        <argsstring></argsstring>
+        <name>p_min_out_range_</name>
+        <qualifiedname>Pressure_ms5803::p_min_out_range_</qualifiedname>
+        <initializer>= 0.7</initializer>
+        <briefdescription>
+<para>I2C port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="131" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1a737078afa5bade48554505b295a794fa" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Pressure_ms5803::p_max_out_range_</definition>
+        <argsstring></argsstring>
+        <name>p_max_out_range_</name>
+        <qualifiedname>Pressure_ms5803::p_max_out_range_</qualifiedname>
+        <initializer>= 15.0</initializer>
+        <briefdescription>
+<para>minimum pression allowed in bar </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="132" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1aacdf3fbe9ec8f4dde7e52960c38820b8" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Pressure_ms5803::t_min_out_range_</definition>
+        <argsstring></argsstring>
+        <name>t_min_out_range_</name>
+        <qualifiedname>Pressure_ms5803::t_min_out_range_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>maximum pression allowed in bar </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="133" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1ac3a60ab3718341e35fb9d1f9410639ae" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Pressure_ms5803::t_max_out_range_</definition>
+        <argsstring></argsstring>
+        <name>t_max_out_range_</name>
+        <qualifiedname>Pressure_ms5803::t_max_out_range_</qualifiedname>
+        <initializer>= 80.0</initializer>
+        <briefdescription>
+<para>minimum temperature allowed in degree </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="134" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1a5033c2b5c385f82697c4a48cf92d7aa5" prot="private" static="no" mutable="no">
+        <type>std::array&lt; u_int16_t, 7 &gt;</type>
+        <definition>std::array&lt;u_int16_t, 7&gt; Pressure_ms5803::C_</definition>
+        <argsstring></argsstring>
+        <name>C_</name>
+        <qualifiedname>Pressure_ms5803::C_</qualifiedname>
+        <briefdescription>
+<para>maximum temperature allowed degree </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="136" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1ada91d9a21ab5adc8f1919bd0eb474879" prot="private" static="no" mutable="no">
+        <type>u_int32_t</type>
+        <definition>u_int32_t Pressure_ms5803::D1_</definition>
+        <argsstring></argsstring>
+        <name>D1_</name>
+        <qualifiedname>Pressure_ms5803::D1_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Factory calibration coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="138" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1a3c442d9deb74ccd5876f85d5fb2aea86" prot="private" static="no" mutable="no">
+        <type>u_int32_t</type>
+        <definition>u_int32_t Pressure_ms5803::D2_</definition>
+        <argsstring></argsstring>
+        <name>D2_</name>
+        <qualifiedname>Pressure_ms5803::D2_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="138" column="20" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1a3aa4b2d37507bb764ebed0d12c2c4e8d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Pressure_ms5803::pressure_</definition>
+        <argsstring></argsstring>
+        <name>pressure_</name>
+        <qualifiedname>Pressure_ms5803::pressure_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+<para>Digital pressure and temperature value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="140" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPressure__ms5803_1af02e2d1391261f6d5c0b1d4fba86ec9b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Pressure_ms5803::temperature_</definition>
+        <argsstring></argsstring>
+        <name>temperature_</name>
+        <qualifiedname>Pressure_ms5803::temperature_</qualifiedname>
+        <initializer>= 10.0</initializer>
+        <briefdescription>
+<para>in bar </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="141" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPressure__ms5803_1aea32d91682537074d28bb01771e9db40" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Pressure_ms5803::Pressure_ms5803</definition>
+        <argsstring>(rclcpp::Node *n)</argsstring>
+        <name>Pressure_ms5803</name>
+        <qualifiedname>Pressure_ms5803::Pressure_ms5803</qualifiedname>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor of the object <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the rclcpp node for RCLCPP_INFO </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="31" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1ae6e09c8634e2a1677fe99b80ce18a028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pressure_ms5803::~Pressure_ms5803</definition>
+        <argsstring>()</argsstring>
+        <name>~Pressure_ms5803</name>
+        <qualifiedname>Pressure_ms5803::~Pressure_ms5803</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="38" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a617d76972ba17bb95aacbee6866da4c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pressure_ms5803::init_sensor</definition>
+        <argsstring>()</argsstring>
+        <name>init_sensor</name>
+        <qualifiedname>Pressure_ms5803::init_sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize the sensor <simplesect kind="return"><para>true if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="44" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="42" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a3c9c9bab0bafc2ec403d81f06baff257" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pressure_ms5803::measure</definition>
+        <argsstring>()</argsstring>
+        <name>measure</name>
+        <qualifiedname>Pressure_ms5803::measure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ask sensor to measure pressure and temperature <simplesect kind="return"><para>true if successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="50" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1accde3fe0228bc91fc16abb1b611c885b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pressure_ms5803::reset</definition>
+        <argsstring>() const</argsstring>
+        <name>reset</name>
+        <qualifiedname>Pressure_ms5803::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ask the sensor to reset <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="56" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="18" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1affb1956a8e11ed9cbab83754c177f6dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Pressure_ms5803::get_pression</definition>
+        <argsstring>() const</argsstring>
+        <name>get_pression</name>
+        <qualifiedname>Pressure_ms5803::get_pression</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter to the pressure measured by <ref refid="classPressure__ms5803_1a3c9c9bab0bafc2ec403d81f06baff257" kindref="member">measure()</ref> <simplesect kind="return"><para></para>
+</simplesect>
+Getter to the pression measured by the sensor <simplesect kind="return"><para>pressure in bar </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="62" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="181" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a216fe2b1b9f22fb787c39ad870bb3103" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float Pressure_ms5803::get_temperature</definition>
+        <argsstring>() const</argsstring>
+        <name>get_temperature</name>
+        <qualifiedname>Pressure_ms5803::get_temperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Getter to the temperature measured by <ref refid="classPressure__ms5803_1a3c9c9bab0bafc2ec403d81f06baff257" kindref="member">measure()</ref> <simplesect kind="return"><para></para>
+</simplesect>
+Getter to the temperature measured by the sensor <simplesect kind="return"><para>temperature in degree </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="68" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a72f300ae7e178ae895f1abcb5139cf61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pressure_ms5803::compute</definition>
+        <argsstring>()</argsstring>
+        <name>compute</name>
+        <qualifiedname>Pressure_ms5803::compute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the pressure and temperature from the measured values <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Accurate temperature</para>
+<para>in bar (/10 if in mbar)</para>
+<para>detection of overpressure (&gt;50m)</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="74" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="73" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a8cc01e03963e6e89c47c3f51b9db332e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pressure_ms5803::getI2CAddr</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CAddr</name>
+        <qualifiedname>Pressure_ms5803::getI2CAddr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="80" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a6e3b83804fe12a3dc4fdb16b2f193ad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pressure_ms5803::setI2CAddr</definition>
+        <argsstring>(const int i2CAddr)</argsstring>
+        <name>setI2CAddr</name>
+        <qualifiedname>Pressure_ms5803::setI2CAddr</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>i2CAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2CAddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="86" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a164b940c121da90c5ff6d4e095c5935e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const string &amp; Pressure_ms5803::getI2CPeriph</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CPeriph</name>
+        <qualifiedname>Pressure_ms5803::getI2CPeriph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="92" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1afeab5f8d6c002da5f3f0c0fd165b8438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pressure_ms5803::setI2CPeriph</definition>
+        <argsstring>(const std::string &amp;i2CPeriph)</argsstring>
+        <name>setI2CPeriph</name>
+        <qualifiedname>Pressure_ms5803::setI2CPeriph</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>i2CPeriph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2CPeriph</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="98" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a32116f1d52dc7ce6161cfea4537f9fbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pressure_ms5803::setCoefficient</definition>
+        <argsstring>(const u_int16_t val, const long unsigned int index)</argsstring>
+        <name>setCoefficient</name>
+        <qualifiedname>Pressure_ms5803::setCoefficient</qualifiedname>
+        <param>
+          <type>const u_int16_t</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>const long unsigned int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="100" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1aef70029e5b1c2048a8a89851973bc48c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pressure_ms5803::setD1</definition>
+        <argsstring>(u_int32_t d1)</argsstring>
+        <name>setD1</name>
+        <qualifiedname>Pressure_ms5803::setD1</qualifiedname>
+        <param>
+          <type>u_int32_t</type>
+          <declname>d1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numericalPressure Set D1 value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="109" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1aca5b8750ba34bcf191f2e5a883792f7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pressure_ms5803::setD2</definition>
+        <argsstring>(u_int32_t d2)</argsstring>
+        <name>setD2</name>
+        <qualifiedname>Pressure_ms5803::setD2</qualifiedname>
+        <param>
+          <type>u_int32_t</type>
+          <declname>d2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numericalTemperature Set D2 value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="115" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="136" bodyend="138"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPressure__ms5803_1a965e6af5c90cef3956ece3a088eeea2d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Pressure_ms5803::i2c_open</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_open</name>
+        <qualifiedname>Pressure_ms5803::i2c_open</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="118" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/src/pressure_ms5803.cpp" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1a9da70a94bcf9a361d1097b5ebaca8502" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pressure_ms5803::measure_D1</definition>
+        <argsstring>()</argsstring>
+        <name>measure_D1</name>
+        <qualifiedname>Pressure_ms5803::measure_D1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read Digital Pressure <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="119" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="149" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classPressure__ms5803_1aa0b540af9f80d9ab38d4537875e14d7d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pressure_ms5803::measure_D2</definition>
+        <argsstring>()</argsstring>
+        <name>measure_D2</name>
+        <qualifiedname>Pressure_ms5803::measure_D2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read Digital Temperature <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="120" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="165" bodyend="175"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" line="24" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5803_driver/include/pressure_ms5803_driver/pressure_ms5803.h" bodystart="25" bodyend="143"/>
+    <listofallmembers>
+      <member refid="classPressure__ms5803_1a5033c2b5c385f82697c4a48cf92d7aa5" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>C_</name></member>
+      <member refid="classPressure__ms5803_1a72f300ae7e178ae895f1abcb5139cf61" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>compute</name></member>
+      <member refid="classPressure__ms5803_1ada91d9a21ab5adc8f1919bd0eb474879" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>D1_</name></member>
+      <member refid="classPressure__ms5803_1a3c442d9deb74ccd5876f85d5fb2aea86" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>D2_</name></member>
+      <member refid="classPressure__ms5803_1a82f48ed1be32d1e342199d64d40f1254" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>file_</name></member>
+      <member refid="classPressure__ms5803_1affb1956a8e11ed9cbab83754c177f6dc" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>get_pression</name></member>
+      <member refid="classPressure__ms5803_1a216fe2b1b9f22fb787c39ad870bb3103" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>get_temperature</name></member>
+      <member refid="classPressure__ms5803_1a8cc01e03963e6e89c47c3f51b9db332e" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>getI2CAddr</name></member>
+      <member refid="classPressure__ms5803_1a164b940c121da90c5ff6d4e095c5935e" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>getI2CPeriph</name></member>
+      <member refid="classPressure__ms5803_1a6f5c9f2087a349a2d0ff261eb7fcde82" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>i2c_addr_</name></member>
+      <member refid="classPressure__ms5803_1a965e6af5c90cef3956ece3a088eeea2d" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>i2c_open</name></member>
+      <member refid="classPressure__ms5803_1ae703ee6ef5b4bc2b538a67b8b45b17c9" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>i2c_periph_</name></member>
+      <member refid="classPressure__ms5803_1a617d76972ba17bb95aacbee6866da4c7" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>init_sensor</name></member>
+      <member refid="classPressure__ms5803_1a3c9c9bab0bafc2ec403d81f06baff257" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>measure</name></member>
+      <member refid="classPressure__ms5803_1a9da70a94bcf9a361d1097b5ebaca8502" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>measure_D1</name></member>
+      <member refid="classPressure__ms5803_1aa0b540af9f80d9ab38d4537875e14d7d" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>measure_D2</name></member>
+      <member refid="classPressure__ms5803_1a8d8baa7bd35bcc78c54b0fb6057f51c0" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>n_</name></member>
+      <member refid="classPressure__ms5803_1a737078afa5bade48554505b295a794fa" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>p_max_out_range_</name></member>
+      <member refid="classPressure__ms5803_1ab9474617ac4add52ec39a0faa7ff2e91" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>p_min_out_range_</name></member>
+      <member refid="classPressure__ms5803_1a3aa4b2d37507bb764ebed0d12c2c4e8d" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>pressure_</name></member>
+      <member refid="classPressure__ms5803_1aea32d91682537074d28bb01771e9db40" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>Pressure_ms5803</name></member>
+      <member refid="classPressure__ms5803_1accde3fe0228bc91fc16abb1b611c885b" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>reset</name></member>
+      <member refid="classPressure__ms5803_1a32116f1d52dc7ce6161cfea4537f9fbd" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>setCoefficient</name></member>
+      <member refid="classPressure__ms5803_1aef70029e5b1c2048a8a89851973bc48c" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>setD1</name></member>
+      <member refid="classPressure__ms5803_1aca5b8750ba34bcf191f2e5a883792f7b" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>setD2</name></member>
+      <member refid="classPressure__ms5803_1a6e3b83804fe12a3dc4fdb16b2f193ad2" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>setI2CAddr</name></member>
+      <member refid="classPressure__ms5803_1afeab5f8d6c002da5f3f0c0fd165b8438" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>setI2CPeriph</name></member>
+      <member refid="classPressure__ms5803_1ac3a60ab3718341e35fb9d1f9410639ae" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>t_max_out_range_</name></member>
+      <member refid="classPressure__ms5803_1aacdf3fbe9ec8f4dde7e52960c38820b8" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>t_min_out_range_</name></member>
+      <member refid="classPressure__ms5803_1af02e2d1391261f6d5c0b1d4fba86ec9b" prot="private" virt="non-virtual"><scope>Pressure_ms5803</scope><name>temperature_</name></member>
+      <member refid="classPressure__ms5803_1ae6e09c8634e2a1677fe99b80ce18a028" prot="public" virt="non-virtual"><scope>Pressure_ms5803</scope><name>~Pressure_ms5803</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

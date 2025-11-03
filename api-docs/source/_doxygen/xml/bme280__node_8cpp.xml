@@ -1,0 +1,376 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="bme280__node_8cpp" kind="file" language="C++">
+    <compoundname>bme280_node.cpp</compoundname>
+    <includes refid="bme280__node_8hpp" local="yes">pressure_bme280_driver/bme280_node.hpp</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">fcntl.h</includes>
+    <includes local="no">sys/ioctl.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>pressure_bme280_driver/bme280.h</label>
+        <link refid="bme280_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>bme280_defs.h</label>
+        <link refid="bme280__defs_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pressure_bme280_driver/bme280_node.hpp</label>
+        <link refid="bme280__node_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp</label>
+        <link refid="bme280__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>chrono</label>
+      </node>
+      <node id="14">
+        <label>cstdio</label>
+      </node>
+      <node id="16">
+        <label>cstdlib</label>
+      </node>
+      <node id="7">
+        <label>cstring</label>
+      </node>
+      <node id="18">
+        <label>fcntl.h</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>i2c/smbus.h</label>
+      </node>
+      <node id="12">
+        <label>linux/i2c-dev.h</label>
+      </node>
+      <node id="15">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="4">
+        <label>seabot2_msgs/msg/bme280_data.hpp</label>
+      </node>
+      <node id="11">
+        <label>stddef.h</label>
+      </node>
+      <node id="10">
+        <label>stdint.h</label>
+      </node>
+      <node id="19">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="17">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="bme280__node_8cpp_1a1c52ea79a1832a5f73afd49c7a106d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t user_i2c_read</definition>
+        <argsstring>(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)</argsstring>
+        <name>user_i2c_read</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>dev_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" line="12" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="12" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="bme280__node_8cpp_1a8560c855d9900415d2f146fd0b0bbbb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t user_i2c_write</definition>
+        <argsstring>(uint8_t dev_id, uint8_t reg_addr, uint8_t *reg_data, uint16_t len)</argsstring>
+        <name>user_i2c_write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>dev_id</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>reg_data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" line="16" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="bme280__node_8cpp_1adc86d5995b888a6f4ef7dd5647b94f8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void user_delay_ms</definition>
+        <argsstring>(uint32_t period)</argsstring>
+        <name>user_delay_ms</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" line="20" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="bme280__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" line="153" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp" bodystart="153" bodyend="158"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;pressure_bme280_driver/bme280_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fcntl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/ioctl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">int8_t<sp/>user_i2c_read(uint8_t<sp/>dev_id,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_smbus_read_i2c_block_data(file,<sp/>reg_addr,<sp/>len,<sp/>reg_data)<sp/>!=<sp/>len;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">int8_t<sp/>user_i2c_write(uint8_t<sp/>dev_id,<sp/>uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_smbus_write_i2c_block_data(file,<sp/>reg_addr,<sp/>len,<sp/>reg_data);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>user_delay_ms(uint32_t<sp/>period)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(period<sp/>*<sp/>1000);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::init_parameters()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>i2c_periph_);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;primary_i2c_address&quot;</highlight><highlight class="normal">,<sp/>primary_i2c_address_);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;get_parameter(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>i2c_periph_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;get_parameter(</highlight><highlight class="stringliteral">&quot;primary_i2c_address&quot;</highlight><highlight class="normal">,<sp/>primary_i2c_address_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::timer_callback()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>seabot2_msgs::msg::Bme280Data();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbme280__data" kindref="compound">bme280_data</ref><sp/>comp_data{};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int8_t<sp/>result<sp/>=<sp/><ref refid="group__BME280_1ga6671fea2c1e01f40029a653b9ab4410d" kindref="member">bme280_get_sensor_data</ref>(BME280_ALL,<sp/>&amp;comp_data,<sp/>&amp;dev_);<sp/>result==0)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pressure_<sp/>=<sp/>comp_data.pressure<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>humidity_<sp/>=<sp/>comp_data.humidity;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature_<sp/>=<sp/>comp_data.temperature;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.temperature<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(temperature_);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.pressure<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pressure_);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.humidity<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(humidity_);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_sensor_-&gt;publish(msg);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Error<sp/>reading<sp/>data<sp/>(%i)&quot;</highlight><highlight class="normal">,<sp/>result);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::sensor_init()<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sensor<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/>result<sp/>=<sp/>BME280_OK;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(primary_i2c_address_)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1a1f75cc7ecf84476a440ded0cd8c2fba7" kindref="member">dev_id</ref><sp/>=<sp/>BME280_I2C_ADDR_PRIM;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1a1f75cc7ecf84476a440ded0cd8c2fba7" kindref="member">dev_id</ref><sp/>=<sp/>BME280_I2C_ADDR_SEC;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1a937b25397d1455117b64b1380368d30c" kindref="member">intf</ref><sp/>=<sp/><ref refid="group__BME280_1gga142fcd9cb1e99b793488e9b3b1e6766eaae41ddfd32babefbce48e7b7671f46a2" kindref="member">BME280_I2C_INTF</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((file<sp/>=<sp/>open(i2c_periph_.c_str(),<sp/>O_RDWR))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Failed<sp/>to<sp/>open<sp/>the<sp/>I2C<sp/>bus<sp/>(%s)&quot;</highlight><highlight class="normal">,<sp/>i2c_periph_.c_str());</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ioctl(file,<sp/>I2C_SLAVE,<sp/>dev_.<ref refid="structbme280__dev_1a1f75cc7ecf84476a440ded0cd8c2fba7" kindref="member">dev_id</ref>)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Failed<sp/>to<sp/>acquire<sp/>bus<sp/>access<sp/>and/or<sp/>talk<sp/>to<sp/>slave<sp/>(0x%X)&quot;</highlight><highlight class="normal">,<sp/>I2C_SLAVE);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1a9a0ad5b467e2acc04a854878fe71bf7f" kindref="member">read</ref><sp/>=<sp/>user_i2c_read;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1a7d2437824573644b51b8514ca0ec294c" kindref="member">write</ref><sp/>=<sp/>user_i2c_write;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1a8f8957a3f4438239bd79b075691f0fd1" kindref="member">delay_ms</ref><sp/>=<sp/>user_delay_ms;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="group__BME280_1gaf0b7d7a19bb48ec9eb3651b79f0c3e85" kindref="member">bme280_init</ref>(&amp;dev_);<sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Calib<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result!=0)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Error<sp/>init<sp/>the<sp/>sensor<sp/>:<sp/>wrong<sp/>device<sp/>add<sp/>?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>print_calib_settings();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1ab09e8c0b2ff1ee7e7eb35540ad95acf5" kindref="member">osr_h</ref><sp/>=<sp/>BME280_OVERSAMPLING_1X;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a6359b35d9547f53dea01d893313c7dc3" kindref="member">osr_p</ref><sp/>=<sp/>BME280_OVERSAMPLING_2X;<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a49bf8f73813386b4dc37a9676230c263" kindref="member">osr_t</ref><sp/>=<sp/>BME280_OVERSAMPLING_2X;<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a46eae004d968b4fd9a89e5cb5748f1c1" kindref="member">filter</ref><sp/>=<sp/>BME280_FILTER_COEFF_2;<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a9c881ed1a45bfd9092260383f13c9fbc" kindref="member">standby_time</ref><sp/>=<sp/>BME280_STANDBY_TIME_125_MS;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>settings_sel<sp/>=<sp/>BME280_OSR_PRESS_SEL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>settings_sel<sp/>|=<sp/>BME280_OSR_TEMP_SEL;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>settings_sel<sp/>|=<sp/>BME280_OSR_HUM_SEL;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>settings_sel<sp/>|=<sp/>BME280_STANDBY_SEL;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>settings_sel<sp/>|=<sp/>BME280_FILTER_SEL;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="group__BME280_1ga5d436d907394fde22471347599948205" kindref="member">bme280_set_sensor_settings</ref>(settings_sel,<sp/>&amp;dev_);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result!=0)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Error<sp/>reading<sp/>the<sp/>settings&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>print_settings();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="group__BME280_1ga17a0eaeb97e43233af3e6aac8bd426d4" kindref="member">bme280_set_sensor_mode</ref>(BME280_NORMAL_MODE,<sp/>&amp;dev_);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result!=0)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Error<sp/>setting<sp/>the<sp/>sensor<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>print_sensor_mode();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>user_delay_ms(1500);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(result==0)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::print_calib_settings()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_T1<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.<ref refid="structbme280__calib__data_1af8eb813b4a350b19596105013792aee8" kindref="member">dig_T1</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_T2<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_T2);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_T3<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_T3);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P1<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P1);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P2<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P2);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P3<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P3);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P4<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P4);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P5<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P5);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P6<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P6);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P7<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P7);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P8<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P8);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_P9<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_P9);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_H1<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_H1);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_H2<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_H2);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_H3<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_H3);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_H4<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_H4);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_H5<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_H5);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dig_H6<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a8a57e57db020663dc3a8f3438cd6b399" kindref="member">calib_data</ref>.dig_H6);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::print_settings()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>dev__id<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a1f75cc7ecf84476a440ded0cd8c2fba7" kindref="member">dev_id</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>chip_id<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1a6147bb3590bc7d1b02c41454d13c81c0" kindref="member">chip_id</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>settings.filter<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a46eae004d968b4fd9a89e5cb5748f1c1" kindref="member">filter</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>settings.osr_h<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1ab09e8c0b2ff1ee7e7eb35540ad95acf5" kindref="member">osr_h</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>settings.osr_p<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a6359b35d9547f53dea01d893313c7dc3" kindref="member">osr_p</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>settings.osr_t<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a49bf8f73813386b4dc37a9676230c263" kindref="member">osr_t</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>settings.standby_time<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>dev_.<ref refid="structbme280__dev_1acd3efe8b8ac1e08f9cb21e8abec27042" kindref="member">settings</ref>.<ref refid="structbme280__settings_1a9c881ed1a45bfd9092260383f13c9fbc" kindref="member">standby_time</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::print_sensor_mode()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>sensor_mode;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__BME280_1ga4e9e8d290d842abb3262591ff9f64bc4" kindref="member">bme280_get_sensor_mode</ref>(&amp;sensor_mode,<sp/>&amp;dev_);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_DEBUG(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Pressure_BME280]<sp/>Sensor<sp/>Mode<sp/>=<sp/>%i&quot;</highlight><highlight class="normal">,<sp/>sensor_mode);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Bme280Node::init_interfaces()<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_sensor_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::Bme280Data&gt;(</highlight><highlight class="stringliteral">&quot;pressure_internal&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;Bme280Node&gt;());</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp"/>
+  </compounddef>
+</doxygen>

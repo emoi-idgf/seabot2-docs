@@ -1,0 +1,643 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScreen" kind="class" language="C++" prot="public">
+    <compoundname>Screen</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classScreen_1af256e44f3786823bd7b98d9e24aa7286" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Robot_Status</name>
+        <qualifiedname>Screen::Robot_Status</qualifiedname>
+        <enumvalue id="classScreen_1af256e44f3786823bd7b98d9e24aa7286a1be9083c7e23e9d67411d6a9ed53b6cf" prot="public">
+          <name>ERROR</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1af256e44f3786823bd7b98d9e24aa7286a46abad349129f23e7dfd3ef334e3da7a" prot="public">
+          <name>WARNING</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classScreen_1af256e44f3786823bd7b98d9e24aa7286ac6be54c0b755a845851d61eb6da1d8d2" prot="public">
+          <name>OK</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Status of the robot </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="126" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="126" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScreen_1a719abb2fa72e8d53e3153fbbbd78c246" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node *</type>
+        <definition>rclcpp::Node* Screen::n_</definition>
+        <argsstring></argsstring>
+        <name>n_</name>
+        <qualifiedname>Screen::n_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="152" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1a82561e8dd208a6dd197b0d8550cfe0f5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Screen::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <qualifiedname>Screen::file_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Pointer to rclcpp Node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="154" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1ac2bc7139609d8a5585bdc48b2d91845a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Screen::i2c_addr_</definition>
+        <argsstring></argsstring>
+        <name>i2c_addr_</name>
+        <qualifiedname>Screen::i2c_addr_</qualifiedname>
+        <initializer>= 0x3C</initializer>
+        <briefdescription>
+<para>File to the i2c port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="155" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreen_1a56e76d4dbe618c63d8faa6875f510cd8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Screen::i2c_periph_</definition>
+        <argsstring></argsstring>
+        <name>i2c_periph_</name>
+        <qualifiedname>Screen::i2c_periph_</qualifiedname>
+        <initializer>= &quot;/dev/i2c-0&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="157" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScreen_1aa106c370c90082d73c90175096fa298a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Screen::Screen</definition>
+        <argsstring>(rclcpp::Node *n)</argsstring>
+        <name>Screen</name>
+        <qualifiedname>Screen::Screen</qualifiedname>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classScreen" kindref="compound">Screen</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="43" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a4243bc17596af96415b09ac48205676d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Screen::~Screen</definition>
+        <argsstring>()</argsstring>
+        <name>~Screen</name>
+        <qualifiedname>Screen::~Screen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="47" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a697aef3818a7bb3706c6f28fb162c466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Screen::i2c_open</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_open</name>
+        <qualifiedname>Screen::i2c_open</qualifiedname>
+        <briefdescription>
+<para>Open the I2C device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="53" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="10" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a5f5b08c4d9c63c3892b630f7c0772093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_ip</definition>
+        <argsstring>(const std::array&lt; unsigned char, 4 &gt; &amp;data)</argsstring>
+        <name>write_ip</name>
+        <qualifiedname>Screen::write_ip</qualifiedname>
+        <param>
+          <type>const std::array&lt; unsigned char, 4 &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the IP to the screen <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the four value of the IP </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="59" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a12ff8b5cbaa3b0102eb6491354134f40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_pressure</definition>
+        <argsstring>(const short &amp;pressure)</argsstring>
+        <name>write_pressure</name>
+        <qualifiedname>Screen::write_pressure</qualifiedname>
+        <param>
+          <type>const short &amp;</type>
+          <declname>pressure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the pression <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pressure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in mbar [xxxx] mbar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="65" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a52e71d2bfdf924aeb22c48bffcfb6add" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_temperature</definition>
+        <argsstring>(const short &amp;temperature)</argsstring>
+        <name>write_temperature</name>
+        <qualifiedname>Screen::write_temperature</qualifiedname>
+        <param>
+          <type>const short &amp;</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the temperature <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in tenth of degree (205 for 20.5 deg) [xx.x] deg </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="71" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="54" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a7f8d7b75013753a743d369890576c2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_hygro</definition>
+        <argsstring>(const short &amp;hygro)</argsstring>
+        <name>write_hygro</name>
+        <qualifiedname>Screen::write_hygro</qualifiedname>
+        <param>
+          <type>const short &amp;</type>
+          <declname>hygro</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the hygrometer <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hygro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in percentage [xx]% </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="77" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1ae1e85e3aeba68656e08d6103679122ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_voltage</definition>
+        <argsstring>(const char &amp;volt)</argsstring>
+        <name>write_voltage</name>
+        <qualifiedname>Screen::write_voltage</qualifiedname>
+        <param>
+          <type>const char &amp;</type>
+          <declname>volt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the voltage of the battery <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>volt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in tenth of volt (125 for 12.5V) [xx.x] V </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="83" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a5f47aa050ef0c7c0bc8f8037ce2afef5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_robot_name</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>write_robot_name</name>
+        <qualifiedname>Screen::write_robot_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the name of the robot <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(max of 16 characters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>= <linebreak/>
+ </para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="89" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="72" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a6e38648ab3b277f473f319b712de5f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_mission_name</definition>
+        <argsstring>(const std::string &amp;mission_name)</argsstring>
+        <name>write_mission_name</name>
+        <qualifiedname>Screen::write_mission_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>mission_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the name of the mission <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mission_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(max of 16 characters) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>= <linebreak/>
+ </para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="95" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="84" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a25bc4741d8d8c67590116bb7557980c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_current_waypoint</definition>
+        <argsstring>(const unsigned char &amp;wp_id)</argsstring>
+        <name>write_current_waypoint</name>
+        <qualifiedname>Screen::write_current_waypoint</qualifiedname>
+        <param>
+          <type>const unsigned char &amp;</type>
+          <declname>wp_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the id of the current waypoint <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wp_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[0, 255] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="101" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a4b0e1e616cf1df4ce3f623beef143d64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_number_waypoints</definition>
+        <argsstring>(const unsigned char &amp;id_max)</argsstring>
+        <name>write_number_waypoints</name>
+        <qualifiedname>Screen::write_number_waypoints</qualifiedname>
+        <param>
+          <type>const unsigned char &amp;</type>
+          <declname>id_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the number of waypoint in the mission <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[0, 255] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="107" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a1b41caae7b225fb51b772c9a19e4fa9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_time</definition>
+        <argsstring>(const char &amp;hour, const char &amp;minute)</argsstring>
+        <name>write_time</name>
+        <qualifiedname>Screen::write_time</qualifiedname>
+        <param>
+          <type>const char &amp;</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>minute</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the Time <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>minute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="114" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="109" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a71ed9afc7fef88081837386844bfff21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_remaining_time</definition>
+        <argsstring>(const char &amp;minute, const char &amp;second)</argsstring>
+        <name>write_remaining_time</name>
+        <qualifiedname>Screen::write_remaining_time</qualifiedname>
+        <param>
+          <type>const char &amp;</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the remaining time before next waypoint <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="121" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="117" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a0f953206e5ebb8f6f74183094cec61c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_robot_status</definition>
+        <argsstring>(const Robot_Status &amp;status)</argsstring>
+        <name>write_robot_status</name>
+        <qualifiedname>Screen::write_robot_status</qualifiedname>
+        <param>
+          <type>const <ref refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286" kindref="member">Robot_Status</ref> &amp;</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the robot status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="132" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="125" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a81457d572fc382f6252987421a7efb2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::write_screen</definition>
+        <argsstring>()</argsstring>
+        <name>write_screen</name>
+        <qualifiedname>Screen::write_screen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write the screen with data sent </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="137" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="131" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a278d776926725fce7825216b20a34f58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Screen::getI2CAddr</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CAddr</name>
+        <qualifiedname>Screen::getI2CAddr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="143" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1a70d58ebd622cf12e7fb0de0b2e53f0a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::setI2CAddr</definition>
+        <argsstring>(int i2CAddr)</argsstring>
+        <name>setI2CAddr</name>
+        <qualifiedname>Screen::setI2CAddr</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i2CAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="145" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1aa0780210bc01f62cbe14f42cc6025597" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Screen::getI2CPeriph</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CPeriph</name>
+        <qualifiedname>Screen::getI2CPeriph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="147" column="24" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="34" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreen_1abf6e645c1ac6ec4f7fdfb666bc142a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Screen::setI2CPeriph</definition>
+        <argsstring>(const std::string &amp;i2CPeriph)</argsstring>
+        <name>setI2CPeriph</name>
+        <qualifiedname>Screen::setI2CPeriph</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>i2CPeriph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="149" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" line="37" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen.h" bodystart="38" bodyend="159"/>
+    <listofallmembers>
+      <member refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286a1be9083c7e23e9d67411d6a9ed53b6cf" prot="public" virt="non-virtual"><scope>Screen</scope><name>ERROR</name></member>
+      <member refid="classScreen_1a82561e8dd208a6dd197b0d8550cfe0f5" prot="private" virt="non-virtual"><scope>Screen</scope><name>file_</name></member>
+      <member refid="classScreen_1a278d776926725fce7825216b20a34f58" prot="public" virt="non-virtual"><scope>Screen</scope><name>getI2CAddr</name></member>
+      <member refid="classScreen_1aa0780210bc01f62cbe14f42cc6025597" prot="public" virt="non-virtual"><scope>Screen</scope><name>getI2CPeriph</name></member>
+      <member refid="classScreen_1ac2bc7139609d8a5585bdc48b2d91845a" prot="private" virt="non-virtual"><scope>Screen</scope><name>i2c_addr_</name></member>
+      <member refid="classScreen_1a697aef3818a7bb3706c6f28fb162c466" prot="public" virt="non-virtual"><scope>Screen</scope><name>i2c_open</name></member>
+      <member refid="classScreen_1a56e76d4dbe618c63d8faa6875f510cd8" prot="private" virt="non-virtual"><scope>Screen</scope><name>i2c_periph_</name></member>
+      <member refid="classScreen_1a719abb2fa72e8d53e3153fbbbd78c246" prot="private" virt="non-virtual"><scope>Screen</scope><name>n_</name></member>
+      <member refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286ac6be54c0b755a845851d61eb6da1d8d2" prot="public" virt="non-virtual"><scope>Screen</scope><name>OK</name></member>
+      <member refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286" prot="public" virt="non-virtual"><scope>Screen</scope><name>Robot_Status</name></member>
+      <member refid="classScreen_1aa106c370c90082d73c90175096fa298a" prot="public" virt="non-virtual"><scope>Screen</scope><name>Screen</name></member>
+      <member refid="classScreen_1a70d58ebd622cf12e7fb0de0b2e53f0a9" prot="public" virt="non-virtual"><scope>Screen</scope><name>setI2CAddr</name></member>
+      <member refid="classScreen_1abf6e645c1ac6ec4f7fdfb666bc142a8d" prot="public" virt="non-virtual"><scope>Screen</scope><name>setI2CPeriph</name></member>
+      <member refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286a46abad349129f23e7dfd3ef334e3da7a" prot="public" virt="non-virtual"><scope>Screen</scope><name>WARNING</name></member>
+      <member refid="classScreen_1a25bc4741d8d8c67590116bb7557980c7" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_current_waypoint</name></member>
+      <member refid="classScreen_1a7f8d7b75013753a743d369890576c2d5" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_hygro</name></member>
+      <member refid="classScreen_1a5f5b08c4d9c63c3892b630f7c0772093" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_ip</name></member>
+      <member refid="classScreen_1a6e38648ab3b277f473f319b712de5f95" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_mission_name</name></member>
+      <member refid="classScreen_1a4b0e1e616cf1df4ce3f623beef143d64" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_number_waypoints</name></member>
+      <member refid="classScreen_1a12ff8b5cbaa3b0102eb6491354134f40" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_pressure</name></member>
+      <member refid="classScreen_1a71ed9afc7fef88081837386844bfff21" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_remaining_time</name></member>
+      <member refid="classScreen_1a5f47aa050ef0c7c0bc8f8037ce2afef5" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_robot_name</name></member>
+      <member refid="classScreen_1a0f953206e5ebb8f6f74183094cec61c7" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_robot_status</name></member>
+      <member refid="classScreen_1a81457d572fc382f6252987421a7efb2b" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_screen</name></member>
+      <member refid="classScreen_1a52e71d2bfdf924aeb22c48bffcfb6add" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_temperature</name></member>
+      <member refid="classScreen_1a1b41caae7b225fb51b772c9a19e4fa9d" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_time</name></member>
+      <member refid="classScreen_1ae1e85e3aeba68656e08d6103679122ad" prot="public" virt="non-virtual"><scope>Screen</scope><name>write_voltage</name></member>
+      <member refid="classScreen_1a4243bc17596af96415b09ac48205676d" prot="public" virt="non-virtual"><scope>Screen</scope><name>~Screen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="FusionOffset_8h" kind="file" language="C++">
+    <compoundname>FusionOffset.h</compoundname>
+    <includes refid="FusionMath_8h" local="yes">FusionMath.h</includes>
+    <includedby refid="Fusion_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/Fusion.h</includedby>
+    <includedby refid="FusionOffset_8c" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>FusionMath.h</label>
+        <link refid="FusionMath_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h</label>
+        <link refid="FusionOffset_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/Fusion.h</label>
+        <link refid="Fusion_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c</label>
+        <link refid="FusionOffset_8c"/>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h</label>
+        <link refid="FusionOffset_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/FusionConverter.h</label>
+        <link refid="FusionConverter_8h_source"/>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h</label>
+        <link refid="icm20948__node_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structFusionOffset" prot="public">FusionOffset</innerclass>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="FusionOffset_8h_1a72ddbeac61763d6b4e12f6f9c064dd5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FusionOffsetInitialise</definition>
+        <argsstring>(FusionOffset *const offset, const unsigned int sampleRate)</argsstring>
+        <name>FusionOffsetInitialise</name>
+        <param>
+          <type><ref refid="structFusionOffset" kindref="compound">FusionOffset</ref> *const</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>sampleRate</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the gyroscope offset algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gyroscope offset algorithm structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample rate in Hz. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h" line="33" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" bodystart="40" bodyend="45" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="FusionOffset_8h_1a7a767f0f96ae165e5d90881be32400ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+        <definition>FusionVector FusionOffsetUpdate</definition>
+        <argsstring>(FusionOffset *const offset, FusionVector gyroscope)</argsstring>
+        <name>FusionOffsetUpdate</name>
+        <param>
+          <type><ref refid="structFusionOffset" kindref="compound">FusionOffset</ref> *const</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+          <declname>gyroscope</declname>
+        </param>
+        <briefdescription>
+<para>Updates the gyroscope offset algorithm and returns the corrected gyroscope measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gyroscope offset algorithm structure. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gyroscope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gyroscope measurement in degrees per second. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Corrected gyroscope measurement in degrees per second. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h" line="35" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" bodystart="54" bodyend="74" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h" declline="35" declcolumn="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Gyroscope offset correction algorithm for run-time calibration of the gyroscope offset. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Seb Madgwick </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FUSION_OFFSET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUSION_OFFSET_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FusionMath_8h" kindref="compound">FusionMath.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structFusionOffset" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>filterCoefficient;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timer;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscopeOffset;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/><ref refid="structFusionOffset" kindref="compound">FusionOffset</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionOffset_8h_1a72ddbeac61763d6b4e12f6f9c064dd5a" kindref="member">FusionOffsetInitialise</ref>(<ref refid="structFusionOffset" kindref="compound">FusionOffset</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sampleRate);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionOffset_8h_1a7a767f0f96ae165e5d90881be32400ef" kindref="member">FusionOffsetUpdate</ref>(<ref refid="structFusionOffset" kindref="compound">FusionOffset</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>offset,<sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.h"/>
+  </compounddef>
+</doxygen>

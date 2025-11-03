@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="screen_8cpp" kind="file" language="C++">
+    <compoundname>screen.cpp</compoundname>
+    <includes refid="screen_8h" local="yes">seabot2_screen_driver/screen.h</includes>
+    <includes local="yes">sys/ioctl.h</includes>
+    <includes local="no">iterator</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>seabot2_screen_driver/screen.h</label>
+        <link refid="screen_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp</label>
+        <link refid="screen_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>fcntl.h</label>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="10">
+        <label>i2c/smbus.h</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>iterator</label>
+      </node>
+      <node id="9">
+        <label>linux/i2c-dev.h</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="11">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="4">
+        <label>sys/types.h</label>
+      </node>
+      <node id="7">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_screen_driver/screen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sys/ioctl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">Screen::~Screen(){</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>close(file_);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a697aef3818a7bb3706c6f28fb162c466" kindref="member">Screen::i2c_open</ref>(){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>file_<sp/>=<sp/>open(i2c_periph_.c_str(),<sp/>O_RDWR);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Piston_driver]<sp/>Failed<sp/>to<sp/>open<sp/>the<sp/>I2C<sp/>bus<sp/>(%s)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>i2c_periph_.c_str(),<sp/>strerror(file_));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>ioctl(file_,<sp/>I2C_SLAVE,<sp/>i2c_addr_);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Piston_driver]<sp/>Failed<sp/>to<sp/>acquire<sp/>bus<sp/>access<sp/>and/or<sp/>talk<sp/>to<sp/>slave<sp/>(0x%X)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>I2C_SLAVE,<sp/>strerror(result));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a278d776926725fce7825216b20a34f58" kindref="member">Screen::getI2CAddr</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_addr_;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Screen::setI2CAddr(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_addr_<sp/>=<sp/>i2CAddr;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Screen::getI2CPeriph()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_periph_;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Screen::setI2CPeriph(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;i2CPeriph)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_periph_<sp/>=<sp/>i2CPeriph;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a5f5b08c4d9c63c3892b630f7c0772093" kindref="member">Screen::write_ip</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;unsigned<sp/>char,<sp/>4&gt;<sp/>&amp;data)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_i2c_block_data(file_,<sp/>REGISTER_IP,<sp/>4,<sp/>data.data())&lt;0)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>IP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a12ff8b5cbaa3b0102eb6491354134f40" kindref="member">Screen::write_pressure</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>&amp;pressure)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_word_data(file_,<sp/>REGISTER_PRESSURE,<sp/>pressure)&lt;0)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>pressure&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a52e71d2bfdf924aeb22c48bffcfb6add" kindref="member">Screen::write_temperature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>&amp;temperature)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_word_data(file_,<sp/>REGISTER_TEMPERATURE,<sp/>temperature)&lt;0)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>temperature&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a7f8d7b75013753a743d369890576c2d5" kindref="member">Screen::write_hygro</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>&amp;hygro)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_HYGRO,<sp/>hygro)&lt;0)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>hygro&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1ae1e85e3aeba68656e08d6103679122ad" kindref="member">Screen::write_voltage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;volt)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_VOLTAGE,<sp/>volt)&lt;0)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>voltage&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a5f47aa050ef0c7c0bc8f8037ce2afef5" kindref="member">Screen::write_robot_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name_c[SCREEN_ROBOT_NAME_SIZE+1];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>fill(begin(name_c),<sp/>end(name_c),<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;min((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)name.length(),<sp/>SCREEN_ROBOT_NAME_SIZE);<sp/>i++)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name_c[i]<sp/>=<sp/>name[i];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>name_c[SCREEN_ROBOT_NAME_SIZE]<sp/>=<sp/>0x0A;<sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_i2c_block_data(file_,<sp/>REGISTER_ROBOT_NAME,<sp/>SCREEN_ROBOT_NAME_SIZE+1,<sp/>name_c)&lt;0)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>name&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a6e38648ab3b277f473f319b712de5f95" kindref="member">Screen::write_mission_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;mission_name)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>mission_name_c[SCREEN_MISSION_NAME_SIZE+1];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>fill(begin(mission_name_c),<sp/>end(mission_name_c),<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;min((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)mission_name.length(),<sp/>SCREEN_MISSION_NAME_SIZE);<sp/>i++)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mission_name_c[i]<sp/>=<sp/>mission_name[i];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>mission_name_c[SCREEN_MISSION_NAME_SIZE]<sp/>=<sp/>0x0A;<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_i2c_block_data(file_,<sp/>REGISTER_MISSION_NAME,<sp/>SCREEN_MISSION_NAME_SIZE+1,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mission_name_c)&lt;0)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>name&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a25bc4741d8d8c67590116bb7557980c7" kindref="member">Screen::write_current_waypoint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;wp_id)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_WAYPOINT_ID,<sp/>wp_id)&lt;0)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>waypoint<sp/>id&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a4b0e1e616cf1df4ce3f623beef143d64" kindref="member">Screen::write_number_waypoints</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;id_max)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_NB_WAYPOINT,<sp/>id_max)&lt;0)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>waypoint<sp/>max<sp/>id&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a1b41caae7b225fb51b772c9a19e4fa9d" kindref="member">Screen::write_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;hour,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;minute)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>__u8<sp/>data[2]<sp/>=<sp/>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">__u8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(hour),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">__u8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(minute)};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_i2c_block_data(file_,<sp/>REGISTER_TIME,<sp/>2,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data)&lt;0)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>remaining<sp/>time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a71ed9afc7fef88081837386844bfff21" kindref="member">Screen::write_remaining_time</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;minute,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;second)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>__u8<sp/>data[2]<sp/>=<sp/>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">__u8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(minute),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">__u8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(second)};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_i2c_block_data(file_,<sp/>REGISTER_TIME_REMAINING,<sp/>2,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data)&lt;0)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>remaining<sp/>time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a0f953206e5ebb8f6f74183094cec61c7" kindref="member">Screen::write_robot_status</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286" kindref="member">Screen::Robot_Status</ref><sp/>&amp;status)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_STATUS,<sp/>status)&lt;0)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>status&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classScreen_1a81457d572fc382f6252987421a7efb2b" kindref="member">Screen::write_screen</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_WRITE_SCREEN,<sp/>0x01)<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Screen_driver]<sp/>I2C<sp/>Bus<sp/>Failure<sp/>-<sp/>Write<sp/>reset<sp/>screen&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(DELAY_SLEEP_US);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen.cpp"/>
+  </compounddef>
+</doxygen>

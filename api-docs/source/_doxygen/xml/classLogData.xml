@@ -1,0 +1,1377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classLogData" kind="class" language="C++" prot="public">
+    <compoundname>LogData</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classLogData_1a1936dccf5a381a560f22bd6276abaa19" prot="public" static="no" strong="no">
+        <type>unsigned int</type>
+        <name>MSG_TYPE</name>
+        <qualifiedname>LogData::MSG_TYPE</qualifiedname>
+        <enumvalue id="classLogData_1a1936dccf5a381a560f22bd6276abaa19aefda1573a760c76968816d00051a16ff" prot="public">
+          <name>LOG_STATE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a646d614604aa6e59a1efcfa3b1bfbce9" prot="public">
+          <name>CMD_SLEEP</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a4fba8815876ffe1ad8136d3a458e7367" prot="public">
+          <name>CMD_PARAMETERS</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d" prot="public">
+          <name>CMD_MISSION_NEW</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6259f3cfad37ad044a4dc84a563f147d" prot="public">
+          <name>CMD_MISSION_KEEP</name>
+          <initializer>=4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="74" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classLogData_1a06995f751c6ffac74b800f643f1c5223" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::time_now_</definition>
+        <argsstring></argsstring>
+        <name>time_now_</name>
+        <qualifiedname>LogData::time_now_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="217" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a7cd510440d726844d62b6fc0c1153133" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_speed_</definition>
+        <argsstring></argsstring>
+        <name>gnss_speed_</name>
+        <qualifiedname>LogData::gnss_speed_</qualifiedname>
+        <initializer>= 4.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="219" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ac589dc0bfc5565eb16d75375cc6f6e7a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_heading_</definition>
+        <argsstring></argsstring>
+        <name>gnss_heading_</name>
+        <qualifiedname>LogData::gnss_heading_</qualifiedname>
+        <initializer>= 242.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="220" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ac7ce5e324a2c78219422628e3c427a87" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::battery_</definition>
+        <argsstring></argsstring>
+        <name>battery_</name>
+        <qualifiedname>LogData::battery_</qualifiedname>
+        <initializer>= 10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="221" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a006bf445b4ae61dac1d29aa29bd3dc58" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_lat_</definition>
+        <argsstring></argsstring>
+        <name>gnss_lat_</name>
+        <qualifiedname>LogData::gnss_lat_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="222" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ab6fec6d6f048cbd33bc879ab5790f63f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_long_</definition>
+        <argsstring></argsstring>
+        <name>gnss_long_</name>
+        <qualifiedname>LogData::gnss_long_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="223" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1abb6bec8954b83af189ca1311cf7d49c1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_mean_east_</definition>
+        <argsstring></argsstring>
+        <name>gnss_mean_east_</name>
+        <qualifiedname>LogData::gnss_mean_east_</qualifiedname>
+        <initializer>= 42.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="225" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ab0549769f8c10f67cea7cb5a3bc9a4fc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_mean_north_</definition>
+        <argsstring></argsstring>
+        <name>gnss_mean_north_</name>
+        <qualifiedname>LogData::gnss_mean_north_</qualifiedname>
+        <initializer>= 6000042.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="226" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a2328f82545ee790b7064fde98cdc11bc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::gnss_mean_heading_</definition>
+        <argsstring></argsstring>
+        <name>gnss_mean_heading_</name>
+        <qualifiedname>LogData::gnss_mean_heading_</qualifiedname>
+        <initializer>= 242.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="227" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a2173763d4b894d7b6716a073bdcc75db" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::internal_pressure_</definition>
+        <argsstring></argsstring>
+        <name>internal_pressure_</name>
+        <qualifiedname>LogData::internal_pressure_</qualifiedname>
+        <initializer>= 742.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="230" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1aab7245681f39e4e75d017e98c7efd95b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::internal_temperature_</definition>
+        <argsstring></argsstring>
+        <name>internal_temperature_</name>
+        <qualifiedname>LogData::internal_temperature_</qualifiedname>
+        <initializer>= 42.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="231" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1af61522bd6cc153fbbe0c6cb677c7f77f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::internal_humidity_</definition>
+        <argsstring></argsstring>
+        <name>internal_humidity_</name>
+        <qualifiedname>LogData::internal_humidity_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="232" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ae71a823ec77fb9555ad3d613198254d7" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::current_waypoint_</definition>
+        <argsstring></argsstring>
+        <name>current_waypoint_</name>
+        <qualifiedname>LogData::current_waypoint_</qualifiedname>
+        <initializer>= 42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="234" column="19" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a1c4b71dd9a1189b11f38ebc3e89c5253" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::sleep_time_</definition>
+        <argsstring></argsstring>
+        <name>sleep_time_</name>
+        <qualifiedname>LogData::sleep_time_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="236" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1aa0381f9cd0b1f945714823fcdaea5e8f" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classWaypoint" kindref="compound">Waypoint</ref> &gt;</type>
+        <definition>std::vector&lt;Waypoint&gt; LogData::waypoint_list_</definition>
+        <argsstring></argsstring>
+        <name>waypoint_list_</name>
+        <qualifiedname>LogData::waypoint_list_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="238" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1abebfbb4e269f1eaa3a6b21ff7a3bdacd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::offset_east_</definition>
+        <argsstring></argsstring>
+        <name>offset_east_</name>
+        <qualifiedname>LogData::offset_east_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="239" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1acc6472bff8a96df148c498b6e311d1cf" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LogData::offset_north_</definition>
+        <argsstring></argsstring>
+        <name>offset_north_</name>
+        <qualifiedname>LogData::offset_north_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="240" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ab38e39b11b4696163e097163e9287b7b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::enable_mission_</definition>
+        <argsstring></argsstring>
+        <name>enable_mission_</name>
+        <qualifiedname>LogData::enable_mission_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="243" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a8db6160adddb878da4142ddb6bc5b1bf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::enable_flash_</definition>
+        <argsstring></argsstring>
+        <name>enable_flash_</name>
+        <qualifiedname>LogData::enable_flash_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="244" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a9d9dae91feb3ab2498f2c84b1952c5a6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::enable_depth_</definition>
+        <argsstring></argsstring>
+        <name>enable_depth_</name>
+        <qualifiedname>LogData::enable_depth_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="245" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a658f0eb5c2079149412997f80bb2f5c1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::enable_engine_</definition>
+        <argsstring></argsstring>
+        <name>enable_engine_</name>
+        <qualifiedname>LogData::enable_engine_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="246" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a3152955a76aaf2aeadbf97d73bd0bb18" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::last_cmd_received_</definition>
+        <argsstring></argsstring>
+        <name>last_cmd_received_</name>
+        <qualifiedname>LogData::last_cmd_received_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="248" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a52f84dba6a1758c343f558696fa5e4dd" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::period_message_</definition>
+        <argsstring></argsstring>
+        <name>period_message_</name>
+        <qualifiedname>LogData::period_message_</qualifiedname>
+        <initializer>= 15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="249" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a215b780805044b81368683aea57ab2b3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_global_safety_valid_</definition>
+        <argsstring></argsstring>
+        <name>safety_global_safety_valid_</name>
+        <qualifiedname>LogData::safety_global_safety_valid_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="251" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ace97e70198f38ca5767ae3f8c8919f43" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_published_frequency_</definition>
+        <argsstring></argsstring>
+        <name>safety_published_frequency_</name>
+        <qualifiedname>LogData::safety_published_frequency_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="252" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1ab557ecc757ef00a153a18b7547ebe856" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_depth_limit_</definition>
+        <argsstring></argsstring>
+        <name>safety_depth_limit_</name>
+        <qualifiedname>LogData::safety_depth_limit_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="253" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a70454d1aa1e62f82dcccf93dd10ddc5a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_batteries_limit_</definition>
+        <argsstring></argsstring>
+        <name>safety_batteries_limit_</name>
+        <qualifiedname>LogData::safety_batteries_limit_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="254" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a4442f061f8ede0f7dcce3d1b887960bb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_depressurization_</definition>
+        <argsstring></argsstring>
+        <name>safety_depressurization_</name>
+        <qualifiedname>LogData::safety_depressurization_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="255" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a0e740e0944372202073863a436654ff8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_seafloor_</definition>
+        <argsstring></argsstring>
+        <name>safety_seafloor_</name>
+        <qualifiedname>LogData::safety_seafloor_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="256" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a7546b2aab01e3cffc07d4e4e11966d74" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_piston_</definition>
+        <argsstring></argsstring>
+        <name>safety_piston_</name>
+        <qualifiedname>LogData::safety_piston_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="257" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a2bf42ce73af96525ccae6ddfc3fce25e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LogData::safety_zero_depth_</definition>
+        <argsstring></argsstring>
+        <name>safety_zero_depth_</name>
+        <qualifiedname>LogData::safety_zero_depth_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="258" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLogData_1a69026134c4c4ddb74d8d46fe17884c10" prot="public" static="no" mutable="no">
+        <type>MSG_TYPE</type>
+        <definition>MSG_TYPE LogData::msg_type_</definition>
+        <argsstring></argsstring>
+        <name>msg_type_</name>
+        <qualifiedname>LogData::msg_type_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="260" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLogData_1afc434ed336a6c1273a4fe406879b4980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LogData::LogData</definition>
+        <argsstring>()=default</argsstring>
+        <name>LogData</name>
+        <qualifiedname>LogData::LogData</qualifiedname>
+        <briefdescription>
+<para><ref refid="classLogData" kindref="compound">LogData</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="72" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1a3b7cbad4fcc481399b5b25e6b1754452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogData::deserialize_log_CMD</definition>
+        <argsstring>(const std::string &amp;raw_data)</argsstring>
+        <name>deserialize_log_CMD</name>
+        <qualifiedname>LogData::deserialize_log_CMD</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>raw_data</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_log_CMD </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="154" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="194" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1aca2914c2e2d1bccf714e67e6456abf26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string LogData::serialize_log_state</definition>
+        <argsstring>(const long long &amp;time)</argsstring>
+        <name>serialize_log_state</name>
+        <qualifiedname>LogData::serialize_log_state</qualifiedname>
+        <param>
+          <type>const long long &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>serialize_log_state </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Todo : change to serailize lat/long positioning instead of L93 message size in SBD0 = 30 bytes = 240 bits =&gt; message can be x2 in size 24bit for lat and long (about 1m positioning) =&gt; +6 bit</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="161" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="114" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1ac7d8e8285e050694af109058cfb5e608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogData::deserialize_log_CMD_sleep</definition>
+        <argsstring>(const std::string &amp;data)</argsstring>
+        <name>deserialize_log_CMD_sleep</name>
+        <qualifiedname>LogData::deserialize_log_CMD_sleep</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_log_CMD_sleep </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="168" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="15" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1a88e78f645e3ae3c424678b81a134300c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogData::deserialize_log_CMD_mission</definition>
+        <argsstring>(const std::string &amp;data)</argsstring>
+        <name>deserialize_log_CMD_mission</name>
+        <qualifiedname>LogData::deserialize_log_CMD_mission</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_log_CMD_mission </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="175" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="83" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1ac03c8d72a6a6cbff4802856218d31451" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogData::deserialize_log_CMD_parameters</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>deserialize_log_CMD_parameters</name>
+        <qualifiedname>LogData::deserialize_log_CMD_parameters</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_log_CMD_parameters </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="182" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="26" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLogData_1a29d7d1e0be2af4f37dd3e14f245d380c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::serialize_data</definition>
+        <argsstring>(T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, const double &amp;value, const double &amp;value_min, const double &amp;value_max)</argsstring>
+        <name>serialize_data</name>
+        <qualifiedname>LogData::serialize_data</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>nb_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>start_bit</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value_min</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value_max</declname>
+        </param>
+        <briefdescription>
+<para>serialize_data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="87" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="264" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1a70d486f1e05e065decf1d99153180bbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::deserialize_data</definition>
+        <argsstring>(T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, double &amp;value, const double &amp;value_min, const double &amp;value_max)</argsstring>
+        <name>deserialize_data</name>
+        <qualifiedname>LogData::deserialize_data</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>nb_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>start_bit</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value_min</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>value_max</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value_min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value_max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="100" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="278" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1a53477498e0d1b56c63d44f496287fbac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::serialize_data</definition>
+        <argsstring>(T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, const unsigned int &amp;value)</argsstring>
+        <name>serialize_data</name>
+        <qualifiedname>LogData::serialize_data</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>nb_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>start_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>serialize_data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="111" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="295" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1a58743312e43f31c6e3a69be445f27dbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::deserialize_data</definition>
+        <argsstring>(const T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, unsigned int &amp;value)</argsstring>
+        <name>deserialize_data</name>
+        <qualifiedname>LogData::deserialize_data</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>nb_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>start_bit</declname>
+        </param>
+        <param>
+          <type>unsigned int &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="122" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="303" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1a37f8a87f32fb51a0bb34e93cdebada41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::deserialize_data</definition>
+        <argsstring>(const T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, int &amp;value)</argsstring>
+        <name>deserialize_data</name>
+        <qualifiedname>LogData::deserialize_data</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>nb_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>start_bit</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="133" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="312" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1ab64a8d3f6be7c0ee46eb03c074490718" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::deserialize_data</definition>
+        <argsstring>(const T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, bool &amp;value)</argsstring>
+        <name>deserialize_data</name>
+        <qualifiedname>LogData::deserialize_data</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>nb_bit</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>start_bit</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>deserialize_data </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start_bit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="144" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="321" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1afd254b3f96a1d5ac95177b84d920153c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int LogData::deserialize_log_CMD_waypoint</definition>
+        <argsstring>(const std::string &amp;message, const unsigned int &amp;bit_position)</argsstring>
+        <name>deserialize_log_CMD_waypoint</name>
+        <qualifiedname>LogData::deserialize_log_CMD_waypoint</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const unsigned int &amp;</type>
+          <declname>bit_position</declname>
+        </param>
+        <briefdescription>
+<para>LogData::deserialize_log_CMD_waypoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>save_file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="214" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="43" bodyend="81"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classLogData_1a277f0b12a7614b7b9ff4e6c752ef0b6f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool LogData::write_file</definition>
+        <argsstring>(const std::string &amp;file_name, const std::string &amp;data, const unsigned int nb_bits=NB_BITS_LOG1)</argsstring>
+        <name>write_file</name>
+        <qualifiedname>LogData::write_file</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>nb_bits</declname>
+          <defval>NB_BITS_LOG1</defval>
+        </param>
+        <briefdescription>
+<para>write_file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="190" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="164" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classLogData_1adec5e67b706c873cb7a8d20876a6c081" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string LogData::read_file</definition>
+        <argsstring>(const std::string &amp;file_name)</argsstring>
+        <name>read_file</name>
+        <qualifiedname>LogData::read_file</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+<para>read_file </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="197" column="24" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp" bodystart="179" bodyend="192"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" line="66" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/log_data.h" bodystart="67" bodyend="261"/>
+    <listofallmembers>
+      <member refid="classLogData_1ac7ce5e324a2c78219422628e3c427a87" prot="public" virt="non-virtual"><scope>LogData</scope><name>battery_</name></member>
+      <member refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6259f3cfad37ad044a4dc84a563f147d" prot="public" virt="non-virtual"><scope>LogData</scope><name>CMD_MISSION_KEEP</name></member>
+      <member refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d" prot="public" virt="non-virtual"><scope>LogData</scope><name>CMD_MISSION_NEW</name></member>
+      <member refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19a4fba8815876ffe1ad8136d3a458e7367" prot="public" virt="non-virtual"><scope>LogData</scope><name>CMD_PARAMETERS</name></member>
+      <member refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19a646d614604aa6e59a1efcfa3b1bfbce9" prot="public" virt="non-virtual"><scope>LogData</scope><name>CMD_SLEEP</name></member>
+      <member refid="classLogData_1ae71a823ec77fb9555ad3d613198254d7" prot="public" virt="non-virtual"><scope>LogData</scope><name>current_waypoint_</name></member>
+      <member refid="classLogData_1a70d486f1e05e065decf1d99153180bbc" prot="private" virt="non-virtual"><scope>LogData</scope><name>deserialize_data</name></member>
+      <member refid="classLogData_1a58743312e43f31c6e3a69be445f27dbc" prot="private" virt="non-virtual"><scope>LogData</scope><name>deserialize_data</name></member>
+      <member refid="classLogData_1a37f8a87f32fb51a0bb34e93cdebada41" prot="private" virt="non-virtual"><scope>LogData</scope><name>deserialize_data</name></member>
+      <member refid="classLogData_1ab64a8d3f6be7c0ee46eb03c074490718" prot="private" virt="non-virtual"><scope>LogData</scope><name>deserialize_data</name></member>
+      <member refid="classLogData_1a3b7cbad4fcc481399b5b25e6b1754452" prot="public" virt="non-virtual"><scope>LogData</scope><name>deserialize_log_CMD</name></member>
+      <member refid="classLogData_1a88e78f645e3ae3c424678b81a134300c" prot="public" virt="non-virtual"><scope>LogData</scope><name>deserialize_log_CMD_mission</name></member>
+      <member refid="classLogData_1ac03c8d72a6a6cbff4802856218d31451" prot="public" virt="non-virtual"><scope>LogData</scope><name>deserialize_log_CMD_parameters</name></member>
+      <member refid="classLogData_1ac7d8e8285e050694af109058cfb5e608" prot="public" virt="non-virtual"><scope>LogData</scope><name>deserialize_log_CMD_sleep</name></member>
+      <member refid="classLogData_1afd254b3f96a1d5ac95177b84d920153c" prot="private" virt="non-virtual"><scope>LogData</scope><name>deserialize_log_CMD_waypoint</name></member>
+      <member refid="classLogData_1a9d9dae91feb3ab2498f2c84b1952c5a6" prot="public" virt="non-virtual"><scope>LogData</scope><name>enable_depth_</name></member>
+      <member refid="classLogData_1a658f0eb5c2079149412997f80bb2f5c1" prot="public" virt="non-virtual"><scope>LogData</scope><name>enable_engine_</name></member>
+      <member refid="classLogData_1a8db6160adddb878da4142ddb6bc5b1bf" prot="public" virt="non-virtual"><scope>LogData</scope><name>enable_flash_</name></member>
+      <member refid="classLogData_1ab38e39b11b4696163e097163e9287b7b" prot="public" virt="non-virtual"><scope>LogData</scope><name>enable_mission_</name></member>
+      <member refid="classLogData_1ac589dc0bfc5565eb16d75375cc6f6e7a" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_heading_</name></member>
+      <member refid="classLogData_1a006bf445b4ae61dac1d29aa29bd3dc58" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_lat_</name></member>
+      <member refid="classLogData_1ab6fec6d6f048cbd33bc879ab5790f63f" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_long_</name></member>
+      <member refid="classLogData_1abb6bec8954b83af189ca1311cf7d49c1" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_mean_east_</name></member>
+      <member refid="classLogData_1a2328f82545ee790b7064fde98cdc11bc" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_mean_heading_</name></member>
+      <member refid="classLogData_1ab0549769f8c10f67cea7cb5a3bc9a4fc" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_mean_north_</name></member>
+      <member refid="classLogData_1a7cd510440d726844d62b6fc0c1153133" prot="public" virt="non-virtual"><scope>LogData</scope><name>gnss_speed_</name></member>
+      <member refid="classLogData_1af61522bd6cc153fbbe0c6cb677c7f77f" prot="public" virt="non-virtual"><scope>LogData</scope><name>internal_humidity_</name></member>
+      <member refid="classLogData_1a2173763d4b894d7b6716a073bdcc75db" prot="public" virt="non-virtual"><scope>LogData</scope><name>internal_pressure_</name></member>
+      <member refid="classLogData_1aab7245681f39e4e75d017e98c7efd95b" prot="public" virt="non-virtual"><scope>LogData</scope><name>internal_temperature_</name></member>
+      <member refid="classLogData_1a3152955a76aaf2aeadbf97d73bd0bb18" prot="public" virt="non-virtual"><scope>LogData</scope><name>last_cmd_received_</name></member>
+      <member refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19aefda1573a760c76968816d00051a16ff" prot="public" virt="non-virtual"><scope>LogData</scope><name>LOG_STATE</name></member>
+      <member refid="classLogData_1afc434ed336a6c1273a4fe406879b4980" prot="public" virt="non-virtual"><scope>LogData</scope><name>LogData</name></member>
+      <member refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19" prot="public" virt="non-virtual"><scope>LogData</scope><name>MSG_TYPE</name></member>
+      <member refid="classLogData_1a69026134c4c4ddb74d8d46fe17884c10" prot="public" virt="non-virtual"><scope>LogData</scope><name>msg_type_</name></member>
+      <member refid="classLogData_1abebfbb4e269f1eaa3a6b21ff7a3bdacd" prot="public" virt="non-virtual"><scope>LogData</scope><name>offset_east_</name></member>
+      <member refid="classLogData_1acc6472bff8a96df148c498b6e311d1cf" prot="public" virt="non-virtual"><scope>LogData</scope><name>offset_north_</name></member>
+      <member refid="classLogData_1a52f84dba6a1758c343f558696fa5e4dd" prot="public" virt="non-virtual"><scope>LogData</scope><name>period_message_</name></member>
+      <member refid="classLogData_1adec5e67b706c873cb7a8d20876a6c081" prot="public" virt="non-virtual"><scope>LogData</scope><name>read_file</name></member>
+      <member refid="classLogData_1a70454d1aa1e62f82dcccf93dd10ddc5a" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_batteries_limit_</name></member>
+      <member refid="classLogData_1a4442f061f8ede0f7dcce3d1b887960bb" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_depressurization_</name></member>
+      <member refid="classLogData_1ab557ecc757ef00a153a18b7547ebe856" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_depth_limit_</name></member>
+      <member refid="classLogData_1a215b780805044b81368683aea57ab2b3" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_global_safety_valid_</name></member>
+      <member refid="classLogData_1a7546b2aab01e3cffc07d4e4e11966d74" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_piston_</name></member>
+      <member refid="classLogData_1ace97e70198f38ca5767ae3f8c8919f43" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_published_frequency_</name></member>
+      <member refid="classLogData_1a0e740e0944372202073863a436654ff8" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_seafloor_</name></member>
+      <member refid="classLogData_1a2bf42ce73af96525ccae6ddfc3fce25e" prot="public" virt="non-virtual"><scope>LogData</scope><name>safety_zero_depth_</name></member>
+      <member refid="classLogData_1a29d7d1e0be2af4f37dd3e14f245d380c" prot="private" virt="non-virtual"><scope>LogData</scope><name>serialize_data</name></member>
+      <member refid="classLogData_1a53477498e0d1b56c63d44f496287fbac" prot="private" virt="non-virtual"><scope>LogData</scope><name>serialize_data</name></member>
+      <member refid="classLogData_1aca2914c2e2d1bccf714e67e6456abf26" prot="public" virt="non-virtual"><scope>LogData</scope><name>serialize_log_state</name></member>
+      <member refid="classLogData_1a1c4b71dd9a1189b11f38ebc3e89c5253" prot="public" virt="non-virtual"><scope>LogData</scope><name>sleep_time_</name></member>
+      <member refid="classLogData_1a06995f751c6ffac74b800f643f1c5223" prot="public" virt="non-virtual"><scope>LogData</scope><name>time_now_</name></member>
+      <member refid="classLogData_1aa0381f9cd0b1f945714823fcdaea5e8f" prot="public" virt="non-virtual"><scope>LogData</scope><name>waypoint_list_</name></member>
+      <member refid="classLogData_1a277f0b12a7614b7b9ff4e6c752ef0b6f" prot="public" virt="non-virtual"><scope>LogData</scope><name>write_file</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

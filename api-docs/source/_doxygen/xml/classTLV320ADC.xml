@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classTLV320ADC" kind="class" language="C++" prot="public">
+    <compoundname>TLV320ADC</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>AdcGain</name>
+        <qualifiedname>TLV320ADC::AdcGain</qualifiedname>
+        <enumvalue id="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082aaf97717fc0febcaf0746256e1f765332" prot="public">
+          <name>GAIN_0dB</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082a81817f2b38f5e40e95ffba3009479c99" prot="public">
+          <name>GAIN_10dB</name>
+          <initializer>= 0x28</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082a38da90491740c134c8bb7dbc3132808e" prot="public">
+          <name>GAIN_20dB</name>
+          <initializer>= 0x50</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082acc72f1e7c0c2775cc669f3b97207cd4a" prot="public">
+          <name>GAIN_30dB</name>
+          <initializer>= 0x78</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082a66230cea1145cb4856e6194c9189e8d3" prot="public">
+          <name>GAIN_40dB</name>
+          <initializer>= 0xA0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="56" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="56" bodyend="62"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTLV320ADC_1ae38087bbdccde25cc9623febb0cba8ba" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node *</type>
+        <definition>rclcpp::Node* TLV320ADC::n_</definition>
+        <argsstring></argsstring>
+        <name>n_</name>
+        <qualifiedname>TLV320ADC::n_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="89" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTLV320ADC_1a9e0141357d1764912aac4b31c9ccc19c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TLV320ADC::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <qualifiedname>TLV320ADC::file_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Pointer to rclcpp Node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="91" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTLV320ADC_1a8f4930b078daabac368da66ac3ed3d26" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string TLV320ADC::i2c_periph_</definition>
+        <argsstring></argsstring>
+        <name>i2c_periph_</name>
+        <qualifiedname>TLV320ADC::i2c_periph_</qualifiedname>
+        <initializer>= &quot;/dev/i2c-0&quot;</initializer>
+        <briefdescription>
+<para>File to the i2c port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="92" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTLV320ADC_1ae711fd318ef6f2f21e8cea7f555356a8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TLV320ADC::i2c_addr_</definition>
+        <argsstring></argsstring>
+        <name>i2c_addr_</name>
+        <qualifiedname>TLV320ADC::i2c_addr_</qualifiedname>
+        <initializer>= 0x4E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="93" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTLV320ADC_1aed48de37974ae9e34aa4567fe491f810" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TLV320ADC::TLV320ADC</definition>
+        <argsstring>(rclcpp::Node *n)</argsstring>
+        <name>TLV320ADC</name>
+        <qualifiedname>TLV320ADC::TLV320ADC</qualifiedname>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classTLV320ADC" kindref="compound">TLV320ADC</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="23" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1ab1b95c15a7e1510846bdbf0ad39a1e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TLV320ADC::~TLV320ADC</definition>
+        <argsstring>()</argsstring>
+        <name>~TLV320ADC</name>
+        <qualifiedname>TLV320ADC::~TLV320ADC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="27" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a45ac9adf5691a95106fec9c5434953da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::i2c_open</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_open</name>
+        <qualifiedname>TLV320ADC::i2c_open</qualifiedname>
+        <briefdescription>
+<para>Open the I2C device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="33" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="8" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a92699f9e98ff45d8ad1591ae1f1cf046" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::configure</definition>
+        <argsstring>(uint8_t gain) const</argsstring>
+        <name>configure</name>
+        <qualifiedname>TLV320ADC::configure</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="35" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="27" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1ae72954d4c5398b6e4f652c3a59cda86c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_channel_parameters</definition>
+        <argsstring>() const</argsstring>
+        <name>set_channel_parameters</name>
+        <qualifiedname>TLV320ADC::set_channel_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="37" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="148" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1af44e5a32126b66e5a7c2a61b2d1d279b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_power_up</definition>
+        <argsstring>() const</argsstring>
+        <name>set_power_up</name>
+        <qualifiedname>TLV320ADC::set_power_up</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="39" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="170" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a02930258cd2ed23a5598143696e0655b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::getI2CAddr</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CAddr</name>
+        <qualifiedname>TLV320ADC::getI2CAddr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="45" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1accc96541043424941cc1c6e87fe6cf91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLV320ADC::setI2CAddr</definition>
+        <argsstring>(int i2CAddr)</argsstring>
+        <name>setI2CAddr</name>
+        <qualifiedname>TLV320ADC::setI2CAddr</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i2CAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="47" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a9f7678aca4d89e9b56ad5c251199a40f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; TLV320ADC::getI2CPeriph</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CPeriph</name>
+        <qualifiedname>TLV320ADC::getI2CPeriph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="49" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a6569e1f3405f8e1734b05f8939b2a6d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TLV320ADC::setI2CPeriph</definition>
+        <argsstring>(const std::string &amp;i2CPeriph)</argsstring>
+        <name>setI2CPeriph</name>
+        <qualifiedname>TLV320ADC::setI2CPeriph</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>i2CPeriph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="51" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1ae1600d525053647eb83ae415ffed7767" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_adc_gain</definition>
+        <argsstring>(uint8_t gain_ch1, uint8_t gain_ch2) const</argsstring>
+        <name>set_adc_gain</name>
+        <qualifiedname>TLV320ADC::set_adc_gain</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>gain_ch1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>gain_ch2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="68" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="72" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1add81819670b1101898bb12748138e2a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_wake_up</definition>
+        <argsstring>() const</argsstring>
+        <name>set_wake_up</name>
+        <qualifiedname>TLV320ADC::set_wake_up</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="70" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="86" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a3eb7e6deb39190b0ff392a397b5a7072" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_reset</definition>
+        <argsstring>() const</argsstring>
+        <name>set_reset</name>
+        <qualifiedname>TLV320ADC::set_reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="72" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="95" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a62b1c065dbf094dc4f57fc7242d203cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_page</definition>
+        <argsstring>(uint8_t page) const</argsstring>
+        <name>set_page</name>
+        <qualifiedname>TLV320ADC::set_page</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="74" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="104" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1ac4304b35fac01417aedb4efec82310cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_i2s_32bit</definition>
+        <argsstring>() const</argsstring>
+        <name>set_i2s_32bit</name>
+        <qualifiedname>TLV320ADC::set_i2s_32bit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="76" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a2a20fc203f43b9458eb36d4cff2b8da1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_channel_slot</definition>
+        <argsstring>() const</argsstring>
+        <name>set_channel_slot</name>
+        <qualifiedname>TLV320ADC::set_channel_slot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="78" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="122" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a67b656020519a9d28de04a456e8058ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_channel_enable</definition>
+        <argsstring>() const</argsstring>
+        <name>set_channel_enable</name>
+        <qualifiedname>TLV320ADC::set_channel_enable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="80" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/tlv320adc.cpp" bodystart="135" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1ae745975d31e8be7e5f1db2ba6adfb638" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_enable_channel</definition>
+        <argsstring>() const</argsstring>
+        <name>set_enable_channel</name>
+        <qualifiedname>TLV320ADC::set_enable_channel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="82" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1a364b25d07cdc3353bb1b24814807dd62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_enable_input_ch1</definition>
+        <argsstring>(uint8_t ch1, uint8_t ch2) const</argsstring>
+        <name>set_enable_input_ch1</name>
+        <qualifiedname>TLV320ADC::set_enable_input_ch1</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="84" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classTLV320ADC_1ab1d9300ac7424fce70938bbe47aecb09" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TLV320ADC::set_enable_input</definition>
+        <argsstring>(uint8_t ch1, uint8_t ch2) const</argsstring>
+        <name>set_enable_input</name>
+        <qualifiedname>TLV320ADC::set_enable_input</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>ch2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="86" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" line="17" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/tlv320adc.h" bodystart="18" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classTLV320ADC_1a82381df21b1a23e239b7f7d10c87e082" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>AdcGain</name></member>
+      <member refid="classTLV320ADC_1a92699f9e98ff45d8ad1591ae1f1cf046" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>configure</name></member>
+      <member refid="classTLV320ADC_1a9e0141357d1764912aac4b31c9ccc19c" prot="private" virt="non-virtual"><scope>TLV320ADC</scope><name>file_</name></member>
+      <member refid="classTLV320ADC_1a02930258cd2ed23a5598143696e0655b" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>getI2CAddr</name></member>
+      <member refid="classTLV320ADC_1a9f7678aca4d89e9b56ad5c251199a40f" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>getI2CPeriph</name></member>
+      <member refid="classTLV320ADC_1ae711fd318ef6f2f21e8cea7f555356a8" prot="private" virt="non-virtual"><scope>TLV320ADC</scope><name>i2c_addr_</name></member>
+      <member refid="classTLV320ADC_1a45ac9adf5691a95106fec9c5434953da" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>i2c_open</name></member>
+      <member refid="classTLV320ADC_1a8f4930b078daabac368da66ac3ed3d26" prot="private" virt="non-virtual"><scope>TLV320ADC</scope><name>i2c_periph_</name></member>
+      <member refid="classTLV320ADC_1ae38087bbdccde25cc9623febb0cba8ba" prot="private" virt="non-virtual"><scope>TLV320ADC</scope><name>n_</name></member>
+      <member refid="classTLV320ADC_1ae1600d525053647eb83ae415ffed7767" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_adc_gain</name></member>
+      <member refid="classTLV320ADC_1a67b656020519a9d28de04a456e8058ea" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_channel_enable</name></member>
+      <member refid="classTLV320ADC_1ae72954d4c5398b6e4f652c3a59cda86c" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_channel_parameters</name></member>
+      <member refid="classTLV320ADC_1a2a20fc203f43b9458eb36d4cff2b8da1" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_channel_slot</name></member>
+      <member refid="classTLV320ADC_1ae745975d31e8be7e5f1db2ba6adfb638" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_enable_channel</name></member>
+      <member refid="classTLV320ADC_1ab1d9300ac7424fce70938bbe47aecb09" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_enable_input</name></member>
+      <member refid="classTLV320ADC_1a364b25d07cdc3353bb1b24814807dd62" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_enable_input_ch1</name></member>
+      <member refid="classTLV320ADC_1ac4304b35fac01417aedb4efec82310cd" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_i2s_32bit</name></member>
+      <member refid="classTLV320ADC_1a62b1c065dbf094dc4f57fc7242d203cb" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_page</name></member>
+      <member refid="classTLV320ADC_1af44e5a32126b66e5a7c2a61b2d1d279b" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_power_up</name></member>
+      <member refid="classTLV320ADC_1a3eb7e6deb39190b0ff392a397b5a7072" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_reset</name></member>
+      <member refid="classTLV320ADC_1add81819670b1101898bb12748138e2a3" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>set_wake_up</name></member>
+      <member refid="classTLV320ADC_1accc96541043424941cc1c6e87fe6cf91" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>setI2CAddr</name></member>
+      <member refid="classTLV320ADC_1a6569e1f3405f8e1734b05f8939b2a6d8" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>setI2CPeriph</name></member>
+      <member refid="classTLV320ADC_1aed48de37974ae9e34aa4567fe491f810" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>TLV320ADC</name></member>
+      <member refid="classTLV320ADC_1ab1b95c15a7e1510846bdbf0ad39a1e3f" prot="public" virt="non-virtual"><scope>TLV320ADC</scope><name>~TLV320ADC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

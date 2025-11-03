@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classInternalSensorFilterNode" kind="class" language="C++" prot="public">
+    <compoundname>InternalSensorFilterNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1a60f9c7835a66b87916dd57f35b2170ad" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t InternalSensorFilterNode::filter_window_size_</definition>
+        <argsstring></argsstring>
+        <name>filter_window_size_</name>
+        <qualifiedname>InternalSensorFilterNode::filter_window_size_</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="16" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1a174980585b5a323c7d023014cf71d050" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t InternalSensorFilterNode::filter_median_remove_side_samples_</definition>
+        <argsstring></argsstring>
+        <name>filter_median_remove_side_samples_</name>
+        <qualifiedname>InternalSensorFilterNode::filter_median_remove_side_samples_</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="17" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1a2d57cbfc45258b37da24e4d1db83c68d" prot="private" static="no" mutable="no">
+        <type>deque&lt; double &gt;</type>
+        <definition>deque&lt;double&gt; InternalSensorFilterNode::pressure_memory_</definition>
+        <argsstring></argsstring>
+        <name>pressure_memory_</name>
+        <qualifiedname>InternalSensorFilterNode::pressure_memory_</qualifiedname>
+        <briefdescription>
+<para>Variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="20" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1a03369600555bb6715083bbed00862d42" prot="private" static="no" mutable="no">
+        <type>deque&lt; double &gt;</type>
+        <definition>deque&lt;double&gt; InternalSensorFilterNode::temperature_memory_</definition>
+        <argsstring></argsstring>
+        <name>temperature_memory_</name>
+        <qualifiedname>InternalSensorFilterNode::temperature_memory_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="21" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1a50ddb44ffe22274395857b8d0919964e" prot="private" static="no" mutable="no">
+        <type>deque&lt; double &gt;</type>
+        <definition>deque&lt;double&gt; InternalSensorFilterNode::humidity_memory_</definition>
+        <argsstring></argsstring>
+        <name>humidity_memory_</name>
+        <qualifiedname>InternalSensorFilterNode::humidity_memory_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="22" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1a3f04771dcbd2185ff58e8322ef76456c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr InternalSensorFilterNode::subscriber_pressure_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_pressure_data_</name>
+        <qualifiedname>InternalSensorFilterNode::subscriber_pressure_data_</qualifiedname>
+        <briefdescription>
+<para>Interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="25" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInternalSensorFilterNode_1adbdc7bafb967ead3953780387286189c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr InternalSensorFilterNode::publisher_pressure_data_</definition>
+        <argsstring></argsstring>
+        <name>publisher_pressure_data_</name>
+        <qualifiedname>InternalSensorFilterNode::publisher_pressure_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="26" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classInternalSensorFilterNode_1aefaef3e0e38f8778295a1bd10ea6f5bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InternalSensorFilterNode::InternalSensorFilterNode</definition>
+        <argsstring>()</argsstring>
+        <name>InternalSensorFilterNode</name>
+        <qualifiedname>InternalSensorFilterNode::InternalSensorFilterNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="13" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/src/filter_internal_sensor_node.cpp" bodystart="6" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classInternalSensorFilterNode_1af3a61f3999d74081ef3a72ebdff32b15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalSensorFilterNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>InternalSensorFilterNode::init_parameters</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="33" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/src/filter_internal_sensor_node.cpp" bodystart="15" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classInternalSensorFilterNode_1a3a83f8de54f9a7bad09ea1f01918c443" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalSensorFilterNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>InternalSensorFilterNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="38" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/src/filter_internal_sensor_node.cpp" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classInternalSensorFilterNode_1a9fc7d8f12e27de2a040f03451ca6f53f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InternalSensorFilterNode::pressure_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::Bme280Data &amp;msg)</argsstring>
+        <name>pressure_callback</name>
+        <qualifiedname>InternalSensorFilterNode::pressure_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::Bme280Data &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback of the external pressure <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Add new data to deque for pressure</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="44" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/src/filter_internal_sensor_node.cpp" bodystart="34" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classInternalSensorFilterNode_1a94f6710ecf3fb662d43c18ce2b880107" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double InternalSensorFilterNode::compute_filter</definition>
+        <argsstring>(deque&lt; double &gt; queue) const</argsstring>
+        <name>compute_filter</name>
+        <qualifiedname>InternalSensorFilterNode::compute_filter</qualifiedname>
+        <param>
+          <type>deque&lt; double &gt;</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the median and mean filter <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Sort to take median</para>
+<para>Remove side values</para>
+<para>Sum elements</para>
+<para>Compute mean value</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="51" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/src/filter_internal_sensor_node.cpp" bodystart="23" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>InternalSensorFilterNode</label>
+        <link refid="classInternalSensorFilterNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>InternalSensorFilterNode</label>
+        <link refid="classInternalSensorFilterNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" line="11" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_internal_sensor_filter/include/seabot2_internal_sensor_filter/filter_internal_sensor_node.hpp" bodystart="11" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classInternalSensorFilterNode_1a94f6710ecf3fb662d43c18ce2b880107" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>compute_filter</name></member>
+      <member refid="classInternalSensorFilterNode_1a174980585b5a323c7d023014cf71d050" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>filter_median_remove_side_samples_</name></member>
+      <member refid="classInternalSensorFilterNode_1a60f9c7835a66b87916dd57f35b2170ad" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>filter_window_size_</name></member>
+      <member refid="classInternalSensorFilterNode_1a50ddb44ffe22274395857b8d0919964e" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>humidity_memory_</name></member>
+      <member refid="classInternalSensorFilterNode_1a3a83f8de54f9a7bad09ea1f01918c443" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>init_interfaces</name></member>
+      <member refid="classInternalSensorFilterNode_1af3a61f3999d74081ef3a72ebdff32b15" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>init_parameters</name></member>
+      <member refid="classInternalSensorFilterNode_1aefaef3e0e38f8778295a1bd10ea6f5bc" prot="public" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>InternalSensorFilterNode</name></member>
+      <member refid="classInternalSensorFilterNode_1a9fc7d8f12e27de2a040f03451ca6f53f" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>pressure_callback</name></member>
+      <member refid="classInternalSensorFilterNode_1a2d57cbfc45258b37da24e4d1db83c68d" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>pressure_memory_</name></member>
+      <member refid="classInternalSensorFilterNode_1adbdc7bafb967ead3953780387286189c" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>publisher_pressure_data_</name></member>
+      <member refid="classInternalSensorFilterNode_1a3f04771dcbd2185ff58e8322ef76456c" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>subscriber_pressure_data_</name></member>
+      <member refid="classInternalSensorFilterNode_1a03369600555bb6715083bbed00862d42" prot="private" virt="non-virtual"><scope>InternalSensorFilterNode</scope><name>temperature_memory_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

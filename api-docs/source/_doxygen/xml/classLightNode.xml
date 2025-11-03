@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classLightNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>LightNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classLightNode_1a0819bc2615e5c2fe1a78ae8d6daba146" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr LightNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>LightNode::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="21" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a6f953c9f70255bcc0f8fe4e90f6a05e2" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds LightNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>LightNode::loop_dt_</qualifiedname>
+        <initializer>= 100ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="22" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a97ef96375be6542892cfa7f2417eba82" prot="private" static="no" mutable="no">
+        <type><ref refid="classLight" kindref="compound">Light</ref></type>
+        <definition>Light LightNode::light_</definition>
+        <argsstring></argsstring>
+        <name>light_</name>
+        <qualifiedname>LightNode::light_</qualifiedname>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C configuration </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="25" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a05c6f349d4853142630605de67751db8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; seabot2_srvs::srv::Light &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;seabot2_srvs::srv::Light&gt;::SharedPtr LightNode::service_light_</definition>
+        <argsstring></argsstring>
+        <name>service_light_</name>
+        <qualifiedname>LightNode::service_light_</qualifiedname>
+        <briefdescription>
+<para>Topics / Services. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="28" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a55051c88a6fe45e5a93ff3c2e7da4116" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr LightNode::service_flash_surface_</definition>
+        <argsstring></argsstring>
+        <name>service_flash_surface_</name>
+        <qualifiedname>LightNode::service_flash_surface_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="29" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a0451b60c82845f0809c76920eb396016" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time LightNode::time_turn_off_light_</definition>
+        <argsstring></argsstring>
+        <name>time_turn_off_light_</name>
+        <qualifiedname>LightNode::time_turn_off_light_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+<para>Variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="32" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a54d76485ba8bc1e54b61a54f72fbc1ed" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LightNode::special_flash_</definition>
+        <argsstring></argsstring>
+        <name>special_flash_</name>
+        <qualifiedname>LightNode::special_flash_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="33" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LightNode::light_is_on_</definition>
+        <argsstring></argsstring>
+        <name>light_is_on_</name>
+        <qualifiedname>LightNode::light_is_on_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="34" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a580f9aafe447ec6b6f3879427f10b80a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LightNode::is_surface_</definition>
+        <argsstring></argsstring>
+        <name>is_surface_</name>
+        <qualifiedname>LightNode::is_surface_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="35" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classLightNode_1a1672cb3fe011c67d5ebc16c788236ec5" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int LightNode::nb_surface_flash_</definition>
+        <argsstring></argsstring>
+        <name>nb_surface_flash_</name>
+        <qualifiedname>LightNode::nb_surface_flash_</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="36" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classLightNode_1a8d7faf5a21ba49058f0a44378823dd85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LightNode::LightNode</definition>
+        <argsstring>()</argsstring>
+        <name>LightNode</name>
+        <qualifiedname>LightNode::LightNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="15" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="5" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classLightNode_1a3b257d7990ad32be87ede663390b7f55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LightNode::~LightNode</definition>
+        <argsstring>() override</argsstring>
+        <name>~LightNode</name>
+        <qualifiedname>LightNode::~LightNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="16" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>LightNode::timer_callback</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="39" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="26" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>LightNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>I2C</para>
+<para><ref refid="classLight" kindref="compound">Light</ref></para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="44" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="45" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classLightNode_1ac89682a1eb9237c48c4d622d075938c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>LightNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classLightNode_1a78f7de2d4da0317c8d09b8c709625383" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightNode::service_flash_surface_callback</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; response)</argsstring>
+        <name>service_flash_surface_callback</name>
+        <qualifiedname>LightNode::service_flash_surface_callback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback service flash surface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="57" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LightNode::service_light_callback</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; seabot2_srvs::srv::Light::Request &gt; request, std::shared_ptr&lt; seabot2_srvs::srv::Light::Response &gt; response)</argsstring>
+        <name>service_light_callback</name>
+        <qualifiedname>LightNode::service_light_callback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; seabot2_srvs::srv::Light::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; seabot2_srvs::srv::Light::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="66" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="66" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LightNode</label>
+        <link refid="classLightNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LightNode</label>
+        <link refid="classLightNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" line="13" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light_node.h" bodystart="13" bodyend="70"/>
+    <listofallmembers>
+      <member refid="classLightNode_1ac89682a1eb9237c48c4d622d075938c8" prot="private" virt="non-virtual"><scope>LightNode</scope><name>init_interfaces</name></member>
+      <member refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" prot="private" virt="non-virtual"><scope>LightNode</scope><name>init_parameters</name></member>
+      <member refid="classLightNode_1a580f9aafe447ec6b6f3879427f10b80a" prot="private" virt="non-virtual"><scope>LightNode</scope><name>is_surface_</name></member>
+      <member refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" prot="private" virt="non-virtual"><scope>LightNode</scope><name>light_</name></member>
+      <member refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" prot="private" virt="non-virtual"><scope>LightNode</scope><name>light_is_on_</name></member>
+      <member refid="classLightNode_1a8d7faf5a21ba49058f0a44378823dd85" prot="public" virt="non-virtual"><scope>LightNode</scope><name>LightNode</name></member>
+      <member refid="classLightNode_1a6f953c9f70255bcc0f8fe4e90f6a05e2" prot="private" virt="non-virtual"><scope>LightNode</scope><name>loop_dt_</name></member>
+      <member refid="classLightNode_1a1672cb3fe011c67d5ebc16c788236ec5" prot="private" virt="non-virtual"><scope>LightNode</scope><name>nb_surface_flash_</name></member>
+      <member refid="classLightNode_1a55051c88a6fe45e5a93ff3c2e7da4116" prot="private" virt="non-virtual"><scope>LightNode</scope><name>service_flash_surface_</name></member>
+      <member refid="classLightNode_1a78f7de2d4da0317c8d09b8c709625383" prot="private" virt="non-virtual"><scope>LightNode</scope><name>service_flash_surface_callback</name></member>
+      <member refid="classLightNode_1a05c6f349d4853142630605de67751db8" prot="private" virt="non-virtual"><scope>LightNode</scope><name>service_light_</name></member>
+      <member refid="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" prot="private" virt="non-virtual"><scope>LightNode</scope><name>service_light_callback</name></member>
+      <member refid="classLightNode_1a54d76485ba8bc1e54b61a54f72fbc1ed" prot="private" virt="non-virtual"><scope>LightNode</scope><name>special_flash_</name></member>
+      <member refid="classLightNode_1a0451b60c82845f0809c76920eb396016" prot="private" virt="non-virtual"><scope>LightNode</scope><name>time_turn_off_light_</name></member>
+      <member refid="classLightNode_1a0819bc2615e5c2fe1a78ae8d6daba146" prot="private" virt="non-virtual"><scope>LightNode</scope><name>timer_</name></member>
+      <member refid="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" prot="private" virt="non-virtual"><scope>LightNode</scope><name>timer_callback</name></member>
+      <member refid="classLightNode_1a3b257d7990ad32be87ede663390b7f55" prot="public" virt="non-virtual"><scope>LightNode</scope><name>~LightNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

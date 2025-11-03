@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="log__data_8cpp" kind="file" language="C++">
+    <compoundname>log_data.cpp</compoundname>
+    <includes refid="log__data_8h" local="yes">seabot2_iridium_driver/sbd/log_data.h</includes>
+    <includes local="yes">boost/filesystem.hpp</includes>
+    <includes local="no">boost/multiprecision/cpp_int.hpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">chrono</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>seabot2_iridium_driver/sbd/log_data.h</label>
+        <link refid="log__data_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp</label>
+        <link refid="log__data_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>boost/filesystem.hpp</label>
+      </node>
+      <node id="5">
+        <label>boost/multiprecision/cpp_int.hpp</label>
+      </node>
+      <node id="10">
+        <label>chrono</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>iterator</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_iridium_driver/sbd/log_data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/filesystem.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/multiprecision/cpp_int.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">boost::multiprecision::cpp_int;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLogData_1ac7d8e8285e050694af109058cfb5e608" kindref="member">LogData::deserialize_log_CMD_sleep</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;message){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Deserialize<sp/>log<sp/>sleep&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>uint_cmd_sleep_t<sp/>data<sp/>=<sp/>(uint_cmd_sleep_t(1)<sp/>&lt;&lt;<sp/>NB_BITS_CMD_SLEEP)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>memcpy(data.backend().limbs(),<sp/>message.c_str(),<sp/>message.size());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit_position<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_sleep_t&gt;(data,<sp/>12,<sp/>bit_position,<sp/>sleep_time_);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLogData_1ac03c8d72a6a6cbff4802856218d31451" kindref="member">LogData::deserialize_log_CMD_parameters</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;message){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Deserialize<sp/>log<sp/>parameters&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>uint_cmd_parameters_t<sp/>data;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>memcpy(data.backend().limbs(),<sp/>message.c_str(),<sp/>message.size());</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit_position<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_parameters_t&gt;(data,<sp/>1,<sp/>bit_position,<sp/>enable_mission_);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_parameters_t&gt;(data,<sp/>1,<sp/>bit_position,<sp/>enable_flash_);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_parameters_t&gt;(data,<sp/>1,<sp/>bit_position,<sp/>enable_depth_);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_parameters_t&gt;(data,<sp/>1,<sp/>bit_position,<sp/>enable_engine_);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_parameters_t&gt;(data,<sp/>8,<sp/>bit_position,<sp/>period_message_);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>LogData::deserialize_log_CMD_waypoint(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;message,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;bit_position){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message_wp_type<sp/>=<sp/>message.substr(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bit_position/8),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(NB_BITS_CMD_WAYPOINT_TYPE/8));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>uint_cmd_waypoint_type_t<sp/>data_type=<sp/>(uint_cmd_waypoint_type_t(1)&lt;&lt;NB_BITS_CMD_WAYPOINT_TYPE)<sp/>-1;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>memcpy(data_type.backend().limbs(),<sp/>message_wp_type.c_str(),<sp/>message_wp_type.size());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit_position_local<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>duration;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((data_type<sp/>&amp;<sp/>0x1)<sp/>==<sp/>1){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message_wp_data<sp/>=<sp/>message.substr(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bit_position/8),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(NB_BITS_CMD_WAYPOINT_TRAJ/8));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint_cmd_waypoint_traj_t<sp/>data_traj<sp/>=<sp/>(uint_cmd_waypoint_traj_t(1)&lt;&lt;NB_BITS_CMD_WAYPOINT_TRAJ)<sp/>-1;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(data_traj.backend().limbs(),<sp/>message_wp_data.c_str(),<sp/>message_wp_data.size());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>east,<sp/>north;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>deserialize_data&lt;uint_cmd_waypoint_traj_t&gt;(data_traj,<sp/>9,<sp/>bit_position_local,<sp/>duration);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>deserialize_data&lt;uint_cmd_waypoint_traj_t&gt;(data_traj,<sp/>15,<sp/>bit_position_local,<sp/>east);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>deserialize_data&lt;uint_cmd_waypoint_traj_t&gt;(data_traj,<sp/>15,<sp/>bit_position_local,<sp/>north);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWaypoint" kindref="compound">Waypoint</ref><sp/>w(duration*60.0,<sp/>0.0,<sp/>east*4.0<sp/>+<sp/>gnss_mean_east_,<sp/>north<sp/>*<sp/>4.0<sp/>+<sp/>gnss_mean_north_,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>waypoint_list_.push_back(w);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message_wp_data<sp/>=<sp/>message.substr(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bit_position/8),<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(NB_BITS_CMD_WAYPOINT_DEPTH/8));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint_cmd_waypoint_depth_t<sp/>data_depth<sp/>=<sp/>(uint_cmd_waypoint_depth_t(1)&lt;&lt;NB_BITS_CMD_WAYPOINT_DEPTH)<sp/>-1;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(data_depth.backend().limbs(),<sp/>message_wp_data.c_str(),<sp/>message_wp_data.size());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>seafloor_landing=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>deserialize_data&lt;uint_cmd_waypoint_depth_t&gt;(data_depth,<sp/>9,<sp/>bit_position_local,<sp/>duration);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>deserialize_data&lt;uint_cmd_waypoint_depth_t&gt;(data_depth,<sp/>11,<sp/>bit_position_local,<sp/>depth);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>deserialize_data&lt;uint_cmd_waypoint_depth_t&gt;(data_depth,<sp/>1,<sp/>bit_position_local,<sp/>seafloor_landing);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bit_position_local<sp/>+=<sp/>2;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classWaypoint" kindref="compound">Waypoint</ref><sp/>w(duration*60.0,depth/4.0,<sp/>0.0,<sp/>0.0,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>seafloor_landing);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>waypoint_list_.push_back(w);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bit_position_local;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLogData_1a88e78f645e3ae3c424678b81a134300c" kindref="member">LogData::deserialize_log_CMD_mission</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;message){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Deserialize<sp/>log<sp/>mission&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>waypoint_list_.clear();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint_cmd_mission_header_t<sp/>data<sp/>=<sp/>(uint_cmd_mission_header_t(1)<sp/>&lt;&lt;<sp/>NB_BITS_CMD_MISSION_HEADER)<sp/>-<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>memcpy(data.backend().limbs(),<sp/>message.c_str(),<sp/>NB_BITS_CMD_MISSION_HEADER/8);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>unsigned<sp/>int<sp/>bit_position<sp/>=<sp/>4;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>unsigned<sp/>int<sp/>nb_waypoints,<sp/>start_time;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_mission_header_t&gt;(data,<sp/>8,<sp/>bit_position,<sp/>nb_waypoints);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_mission_header_t&gt;(data,<sp/>22,<sp/>bit_position,<sp/>start_time);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_mission_header_t&gt;(data,<sp/>15,<sp/>bit_position,<sp/>gnss_mean_east_,<sp/>L93_EAST_MIN,<sp/>L93_EAST_MAX);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bit_position<sp/>+=<sp/>deserialize_data&lt;uint_cmd_mission_header_t&gt;(data,<sp/>15,<sp/>bit_position,<sp/>gnss_mean_north_,<sp/>L93_NORTH_MIN,<sp/>L93_NORTH_MAX);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>start_time_<sp/>=<sp/>REF_POSIX_TIME<sp/>+<sp/>start_time<sp/>*<sp/>60;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;nb_waypoints<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>nb_waypoints<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;m_start_time<sp/>time<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>start_time_<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;start_time<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>start_time<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;m_mean_north<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>gnss_mean_north_<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>cout<sp/>&lt;&lt;<sp/>&quot;m_mean_east<sp/>=<sp/>&quot;<sp/>&lt;&lt;<sp/>gnss_mean_east_<sp/>&lt;&lt;<sp/>endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/>Deserialize<sp/>waypoint<sp/>list<sp/>and<sp/>add<sp/>to<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>for(size_t<sp/>i=0;<sp/>i&lt;nb_waypoints;<sp/>i++)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>bit_position<sp/>+=<sp/>deserialize_log_CMD_waypoint(message,<sp/>bit_position);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">std::string<sp/><ref refid="classLogData_1aca2914c2e2d1bccf714e67e6456abf26" kindref="member">LogData::serialize_log_state</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>&amp;time){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>all<sp/>bits<sp/>to<sp/>1<sp/>(enable<sp/>add<sp/>option)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>uint_log1_t<sp/>data<sp/>=<sp/>(uint_log1_t(1)<sp/>&lt;&lt;<sp/>NB_BITS_LOG1)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit_position<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>4,<sp/>bit_position,<sp/>LOG_STATE);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>timestamped<sp/>of<sp/>the<sp/>day</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>*<sp/>timeinfo;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>time_t<sp/>t1<sp/>=<sp/>time;<sp/></highlight><highlight class="comment">//<sp/>current<sp/>timestamp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>timeinfo<sp/>=<sp/>gmtime(&amp;t1);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>timeinfo-&gt;tm_hour<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>timeinfo-&gt;tm_min<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>timeinfo-&gt;tm_sec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>time_t<sp/>t2<sp/>=<sp/>mktime(timeinfo);<sp/></highlight><highlight class="comment">//<sp/>timestamp<sp/>at<sp/>00:00:00<sp/>of<sp/>the<sp/>day</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>time_sec_day<sp/>=<sp/>t1-t2;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>seconds<sp/>since<sp/>00:00:00<sp/>of<sp/>the<sp/>day</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>time_LQ<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(time_sec_day/3.0));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>14,<sp/>bit_position,<sp/>time_LQ,<sp/>0,<sp/>((1&lt;&lt;14)<sp/>-1));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>25,<sp/>bit_position,<sp/>gnss_lat_,<sp/>WGS84_LAT_MIN,<sp/>WGS84_LAT_MAX);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>25,<sp/>bit_position,<sp/>gnss_long_,<sp/>WGS84_LON_MIN,<sp/>WGS84_LON_MAX);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>8,<sp/>bit_position,<sp/>gnss_speed_,<sp/>0,<sp/>5.0);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>8,<sp/>bit_position,<sp/>gnss_mean_heading_,<sp/>0,<sp/>359.0);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>state<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_global_safety_valid_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_published_frequency_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_depth_limit_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>2;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_batteries_limit_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>3;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_depressurization_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>4;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_seafloor_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>5;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_piston_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>6;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>state<sp/>|=<sp/>(safety_zero_depth_<sp/>&amp;<sp/>0x1)<sp/>&lt;&lt;<sp/>7;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>8,<sp/>bit_position,<sp/>state);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>6,<sp/>bit_position,<sp/>battery_,<sp/>BATT_MIN,<sp/>BATT_MAX);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>6,<sp/>bit_position,<sp/>internal_pressure_,<sp/>680.0,<sp/>800.0);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>6,<sp/>bit_position,<sp/>internal_temperature_,<sp/>8.0,<sp/>50.0);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>6,<sp/>bit_position,<sp/>internal_humidity_,<sp/>50.0,<sp/>100.0);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>8,<sp/>bit_position,<sp/>current_waypoint_);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>bit_position<sp/>+=<sp/>serialize_data&lt;uint_log1_t&gt;(data,<sp/>4,<sp/>bit_position,<sp/>last_cmd_received_);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)data.backend().limbs(),<sp/>NB_BITS_LOG1/8};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLogData_1a277f0b12a7614b7b9ff4e6c752ef0b6f" kindref="member">LogData::write_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;file_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nb_bits){</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>ofstream<sp/>save_file;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>save_file.open(file_name);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!save_file.is_open()){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>open<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>file_name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>new<sp/>log<sp/>file<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>errno<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>save_file.write(data.c_str(),<sp/>nb_bits/8);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>save_file.close();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">std::string<sp/><ref refid="classLogData_1adec5e67b706c873cb7a8d20876a6c081" kindref="member">LogData::read_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;file_name){</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>std::ifstream<sp/>save_file;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>save_file.open(file_name);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!save_file.is_open()){</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;File<sp/>cannot<sp/>be<sp/>open&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>strerror(errno)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;file_name<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>file_name<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>std::string<sp/>data((std::istreambuf_iterator&lt;char&gt;(save_file)),</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::istreambuf_iterator&lt;char&gt;());</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>save_file.close();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLogData_1a3b7cbad4fcc481399b5b25e6b1754452" kindref="member">LogData::deserialize_log_CMD</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;raw_data){</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>message_type<sp/>=<sp/>raw_data[0]<sp/>&amp;<sp/>0xF;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(message_type){</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CMD_SLEEP:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg_type_<sp/>=<sp/>CMD_SLEEP;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;CMD<sp/>Sleep&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLogData_1ac7d8e8285e050694af109058cfb5e608" kindref="member">deserialize_log_CMD_sleep</ref>(raw_data);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CMD_PARAMETERS:</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;CMD<sp/>Parameters&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_type_<sp/>=<sp/>CMD_PARAMETERS;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLogData_1ac03c8d72a6a6cbff4802856218d31451" kindref="member">deserialize_log_CMD_parameters</ref>(raw_data);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CMD_MISSION_NEW:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;CMD<sp/>Mission<sp/>NEW&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_type_<sp/>=<sp/>CMD_MISSION_NEW;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLogData_1a88e78f645e3ae3c424678b81a134300c" kindref="member">deserialize_log_CMD_mission</ref>(raw_data);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CMD_MISSION_KEEP:</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;CMD<sp/>Mission&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_type_<sp/>=<sp/>CMD_MISSION_KEEP;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLogData_1a88e78f645e3ae3c424678b81a134300c" kindref="member">deserialize_log_CMD_mission</ref>(raw_data);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;MESSAGE<sp/>TYPE<sp/>NOT<sp/>FOUND<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(message_type)<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/log_data.cpp"/>
+  </compounddef>
+</doxygen>

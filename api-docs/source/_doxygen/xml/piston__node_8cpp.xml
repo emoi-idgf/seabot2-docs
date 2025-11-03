@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="piston__node_8cpp" kind="file" language="C++">
+    <compoundname>piston_node.cpp</compoundname>
+    <includes refid="piston__node_8h" local="yes">seabot2_piston_driver/piston_node.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>seabot2_piston_driver/piston.h</label>
+        <link refid="piston_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seabot2_piston_driver/piston_node.h</label>
+        <link refid="piston__node_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston_node.cpp</label>
+        <link refid="piston__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="8">
+        <label>i2c/smbus.h</label>
+      </node>
+      <node id="7">
+        <label>linux/i2c-dev.h</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="11">
+        <label>seabot2_msgs/msg/piston_set_point.hpp</label>
+      </node>
+      <node id="10">
+        <label>seabot2_msgs/msg/piston_state.hpp</label>
+      </node>
+      <node id="5">
+        <label>sys/types.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="piston__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston_node.cpp" line="106" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston_node.cpp" bodystart="106" bodyend="111"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_piston_driver/piston_node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">placeholders;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">PistonNode::PistonNode()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;piston_node&quot;</highlight><highlight class="normal">),<sp/>piston_(this){</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>piston_.i2c_open();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>position<sp/>of<sp/>the<sp/>piston<sp/>to<sp/>ensure<sp/>correct<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(piston_.set_piston_reset()!=EXIT_SUCCESS){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usleep(500000);<sp/></highlight><highlight class="comment">//<sp/>500ms<sp/>sleep</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;PistonNode::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Piston_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PistonNode::timer_callback()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(piston_.<ref refid="classPiston_1a13233ed58e1b2a08f3ecbf6ff99a345a" kindref="member">get_all_data</ref>()==EXIT_SUCCESS){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seabot2_msgs::msg::PistonState<sp/>state_msg;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.position<sp/>=<sp/>piston_.position_;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.position_set_point<sp/>=<sp/>piston_.position_set_point_;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.switch_top<sp/>=<sp/>piston_.switch_top_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.switch_bottom<sp/>=<sp/>piston_.switch_bottom_;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.enable<sp/>=<sp/>piston_.enable_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.motor_sens<sp/>=<sp/>piston_.motor_sens_;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.state<sp/>=<sp/>piston_.state_;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.motor_speed_set_point<sp/>=<sp/>piston_.motor_set_point_;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.motor_speed<sp/>=<sp/>piston_.motor_cmd_;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.battery_voltage<sp/>=<sp/>piston_.battery_voltage_;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.motor_current<sp/>=<sp/>piston_.motor_current_;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_piston_state_-&gt;publish(state_msg);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((this-&gt;now()-time_last_cmd_received_)&gt;delay_no_data_<sp/>&amp;&amp;<sp/>piston_.state_<sp/>!=<sp/>Piston::PISTON_EXIT){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(piston_.<ref refid="classPiston_1aaf9e03c53b0ab4b58ef2bb137aa6641f" kindref="member">set_piston_exit</ref>()<sp/>==<sp/>EXIT_FAILURE)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Piston_node]<sp/>Error<sp/>setting<sp/>piston<sp/>exit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PistonNode::init_parameters()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>piston_.getI2CPeriph());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/>piston_.<ref refid="classPiston_1abba1e466fffc67350435f85742f3ca29" kindref="member">getI2CAddr</ref>());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>piston_.setI2CPeriph(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>piston_.getI2CPeriph()));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>piston_.setI2CAddr(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/>piston_.<ref refid="classPiston_1abba1e466fffc67350435f85742f3ca29" kindref="member">getI2CAddr</ref>()));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;delay_reset_if_no_data&quot;</highlight><highlight class="normal">,<sp/>delay_no_data_.count());</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>delay_no_data_<sp/>=<sp/>std::chrono::seconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;delay_reset_if_no_data&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::duration_cast&lt;std::chrono::seconds&gt;(delay_no_data_).count()));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;bridge_R1&quot;</highlight><highlight class="normal">,<sp/>piston_.<ref refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" kindref="member">R1_</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;bridge_R2&quot;</highlight><highlight class="normal">,<sp/>piston_.R2_);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>piston_.<ref refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" kindref="member">R1_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;bridge_R1&quot;</highlight><highlight class="normal">,<sp/>piston_.<ref refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" kindref="member">R1_</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>piston_.R2_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;bridge_R2&quot;</highlight><highlight class="normal">,<sp/>piston_.R2_);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PistonNode::topic_position_set_point_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PistonSetPoint<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_cmd_received_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg.exit){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(piston_.state_<sp/>!=<sp/>Piston::PISTON_EXIT)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(piston_.<ref refid="classPiston_1aaf9e03c53b0ab4b58ef2bb137aa6641f" kindref="member">set_piston_exit</ref>()<sp/>==<sp/>EXIT_FAILURE)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Piston_node]<sp/>Error<sp/>setting<sp/>piston<sp/>exit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(piston_.state_<sp/>==<sp/>Piston::PISTON_EXIT){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>piston_.<ref refid="classPiston_1aecea52221e7cab10ea6003641cf12cd2" kindref="member">set_piston_regulation</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpt_piston_error_++;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(cpt_piston_error_<sp/>==<sp/>cpt_piston_error_max_reset_){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>piston_.<ref refid="classPiston_1a4f7f04c7f0e164fe3a80a3241a8c236c" kindref="member">set_piston_reset</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(last_cmd_<sp/>!=<sp/>msg.position<sp/>||<sp/>piston_.position_set_point_<sp/>!=<sp/>msg.position)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cpt_piston_error_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(piston_.<ref refid="classPiston_1a8954e042cb888b83df18aa9cc3b81c04" kindref="member">set_position</ref>(msg.position)<sp/>==<sp/>EXIT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_cmd_<sp/>=<sp/>msg.position;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PistonNode::init_interfaces()<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_piston_state_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::PistonState&gt;(</highlight><highlight class="stringliteral">&quot;piston&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>subscription_position_set_point_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PistonSetPoint&gt;(</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;piston_set_point&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;PistonNode::topic_position_set_point_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;PistonNode&gt;());</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston_node.cpp"/>
+  </compounddef>
+</doxygen>

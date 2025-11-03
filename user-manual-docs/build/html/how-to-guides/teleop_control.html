@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teleoperately control the thrusters with a joystick &mdash; Seabot2 User Manual 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Connect the Remote u-blox Module to Local U-Center via Network" href="remote_ublox.html" />
+    <link rel="prev" title="Calibrate the IMU" href="imu_calibration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 User Manual
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Developper's Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/set_up_git_repositories.html">Setup local git repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/build_ros2.html">Build ROS2 sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/upload_install_seabot.html">Upload a new install on a seabot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/start_mission.html">Starting a mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/debug_seabot2.html">Debug Seabot2</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How-to Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="process_rosbag.html">Convert Rosbags to Numpy Files and Visualize Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imu_calibration.html">Calibrate the IMU</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Teleoperately control the thrusters with a joystick</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#via-wi-fi">via wi-fi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#via-xbee-radio">via Xbee Radio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="remote_ublox.html">Connect the Remote u-blox Module to Local U-Center via Network</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 User Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Teleoperately control the thrusters with a joystick</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/how-to-guides/teleop_control.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="teleoperately-control-the-thrusters-with-a-joystick">
+<h1>Teleoperately control the thrusters with a joystick<a class="headerlink" href="#teleoperately-control-the-thrusters-with-a-joystick" title="Link to this heading"></a></h1>
+<section id="via-wi-fi">
+<h2>via wi-fi<a class="headerlink" href="#via-wi-fi" title="Link to this heading"></a></h2>
+<p>Both the robot and your computer must be connected to the same network</p>
+<p><strong>On the robot:</strong></p>
+<p>In seabot2-ros/install/seabot2/share/seabot2/linux/source-ros.sh, make sure <code class="docutils literal notranslate"><span class="pre">ROS_AUTOMATIC_DISCOVERY_RANGE</span></code> is set to <code class="docutils literal notranslate"><span class="pre">SUBNET</span></code> and not <code class="docutils literal notranslate"><span class="pre">LOCALHOST</span></code></p>
+<p><strong>On your computer:</strong></p>
+<p>Set <code class="docutils literal notranslate"><span class="pre">ROS_AUTOMATIC_DISCOVERY_RANGE</span></code> to <code class="docutils literal notranslate"><span class="pre">SUBNET</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_AUTOMATIC_DISCOVERY_RANGE</span><span class="o">=</span>SUBNET
+</pre></div>
+</div>
+<p>Then use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>~/seabot2/seabot2-tools/seabot2-joystick/seabot2_joystick<span class="w"> </span>&lt;seabot2_id&gt;
+</pre></div>
+</div>
+<p>Now you can teleoperate your seabot2’s thrusters.</p>
+</section>
+<section id="via-xbee-radio">
+<h2>via Xbee Radio<a class="headerlink" href="#via-xbee-radio" title="Link to this heading"></a></h2>
+<p>Before proceeding, place your working shell in a specific python environment containing the digi-xbee module.</p>
+<p>Make sure you have built the <code class="docutils literal notranslate"><span class="pre">seabot2_msgs</span></code> and <code class="docutils literal notranslate"><span class="pre">xbee_driver</span></code> packages on your computer. To do so, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>~/seabot2/seabot2-tools/seabot2-xbee/build_ros_xbee.sh
+</pre></div>
+</div>
+<p>In order to make sure there is no conflict on the <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> topic if both your laptop and the seabot2 are connected to the same network, make sure <code class="docutils literal notranslate"><span class="pre">ROS_AUTOMATIC_DISCOVERY_RANGE</span></code> is set to <code class="docutils literal notranslate"><span class="pre">LOCALHOST</span></code> both on the seabot2 and on your computer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_AUTOMATIC_DISCOVERY_RANGE</span><span class="o">=</span>LOCALHOST
+</pre></div>
+</div>
+<p>Then, launch the xbee driver on your computer:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/seabot2/seabot2-tools/seabot2-xbee/seabot2_xbee.sh<span class="w"> </span>&lt;seabot2_id&gt;
+</pre></div>
+</div>
+<p>In another terminal, launch the teleop_twist_joy program using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/seabot2/seabot2-tools/seabot2-joystick/seabot2_joystick
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No need to specify the id here, the commands will be retrieved by the xbee node, which is already targeting a seabot2, and sent.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="imu_calibration.html" class="btn btn-neutral float-left" title="Calibrate the IMU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="remote_ublox.html" class="btn btn-neutral float-right" title="Connect the Remote u-blox Module to Local U-Center via Network" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

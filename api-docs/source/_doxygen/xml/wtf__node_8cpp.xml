@@ -1,0 +1,771 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="wtf__node_8cpp" kind="file" language="C++">
+    <compoundname>wtf_node.cpp</compoundname>
+    <includes refid="wtf__node_8hpp" local="yes">seabot2_wtf/wtf_node.hpp</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">limits</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>seabot2_wtf/wtf_node.hpp</label>
+        <link refid="wtf__node_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp</label>
+        <link refid="wtf__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ctime</label>
+      </node>
+      <node id="19">
+        <label>deque</label>
+      </node>
+      <node id="21">
+        <label>iomanip</label>
+      </node>
+      <node id="23">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>ncurses.h</label>
+      </node>
+      <node id="18">
+        <label>rcl_interfaces/msg/log.hpp</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="6">
+        <label>seabot2_msgs/msg/bme280_data.hpp</label>
+      </node>
+      <node id="15">
+        <label>seabot2_msgs/msg/density.hpp</label>
+      </node>
+      <node id="12">
+        <label>seabot2_msgs/msg/depth_control_debug.hpp</label>
+      </node>
+      <node id="11">
+        <label>seabot2_msgs/msg/depth_control_set_point.hpp</label>
+      </node>
+      <node id="5">
+        <label>seabot2_msgs/msg/depth_pose.hpp</label>
+      </node>
+      <node id="13">
+        <label>seabot2_msgs/msg/gps_fix.hpp</label>
+      </node>
+      <node id="10">
+        <label>seabot2_msgs/msg/mission_state.hpp</label>
+      </node>
+      <node id="9">
+        <label>seabot2_msgs/msg/piston_state.hpp</label>
+      </node>
+      <node id="7">
+        <label>seabot2_msgs/msg/power_state.hpp</label>
+      </node>
+      <node id="14">
+        <label>seabot2_msgs/msg/profile.hpp</label>
+      </node>
+      <node id="8">
+        <label>seabot2_msgs/msg/safety_status2.hpp</label>
+      </node>
+      <node id="17">
+        <label>seabot2_msgs/msg/sync_dspic.hpp</label>
+      </node>
+      <node id="16">
+        <label>seabot2_msgs/msg/temperature_sensor_data.hpp</label>
+      </node>
+      <node id="22">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="wtf__node_8cpp_1a56e1aea61ee305e3648158362333b3a8" prot="public" static="no">
+        <name>COLOR_DEFAULT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" line="9" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="wtf__node_8cpp_1a051d21309d81ec4caac403ffcda2736e" prot="public" static="no">
+        <name>COLOR_VALID</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" line="10" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="wtf__node_8cpp_1a1c975cd775b1faedc5d288022ca574a9" prot="public" static="no">
+        <name>COLOR_NOT_VALID</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" line="11" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="wtf__node_8cpp_1a638b85ceffac097c2aa79b76ba8c055e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(const int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>const int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" line="578" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="578" bodyend="583"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_wtf/wtf_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">placeholders;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_DEFAULT<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_VALID<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLOR_NOT_VALID<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">WtfNode::WtfNode()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;wtf_node&quot;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hostname[40];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>gethostname(hostname,<sp/>40);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>hostname_<sp/>=<sp/>hostname;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;WtfNode::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>initscr();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>use_default_colors();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>start_color();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>init_pair(COLOR_DEFAULT,<sp/>-1,<sp/>-1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>init_pair(COLOR_VALID,<sp/>-1,<sp/>COLOR_GREEN);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>init_pair(COLOR_NOT_VALID,<sp/>-1,<sp/>COLOR_RED);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>create_windows();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::create_windows(){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>getmaxyx(stdscr,windows_max_y_,windows_max_x_);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_robot_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>subwin(stdscr,<sp/>4,<sp/>windows_max_x_,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>box(windows_robot_,<sp/>ACS_VLINE,<sp/>ACS_HLINE);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>mvwprintw(windows_robot_,<sp/>1,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;SEABOT&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_log_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>subwin(stdscr,<sp/>8,<sp/>windows_max_x_,<sp/>4,<sp/>0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>box(windows_log_,<sp/>ACS_VLINE,<sp/>ACS_HLINE);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>mvwprintw(windows_log_,<sp/>1,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;LOG&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_default_y_<sp/>=<sp/>12;<sp/></highlight><highlight class="comment">//<sp/>Size<sp/>of<sp/>upper<sp/>windows<sp/>(sum<sp/>of<sp/>windows_robot_<sp/>and<sp/>windows_log_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_current_y_<sp/>=<sp/>windows_default_y_;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_safety_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(16,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;SAFETY&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_internal_pressure_<sp/><sp/>=<sp/>create_new_sub_window(7,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;INTERNAL<sp/>PRESSURE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_power_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(11,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;POWER&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_depth_control_<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(10,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;DEPTH<sp/>CONTROL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_mission_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(14,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;MISSION&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_depth_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(8,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;DEPTH&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_piston_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(15,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;PISTON&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_gnss_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(8,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;GNSS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_sensors_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(8,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;SENSORS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_audio_<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>create_new_sub_window(8,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;AUDIO&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">WtfNode::~WtfNode(){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>endwin();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">WINDOW<sp/>*WtfNode::create_new_sub_window(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;name){</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_y<sp/>=<sp/>windows_current_y_<sp/>+<sp/>height;<sp/>end_y<sp/>&gt;<sp/>windows_max_y_){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>windows_current_y_<sp/>=<sp/>windows_default_y_;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>windows_current_x_<sp/>+=<sp/>windows_width_max_<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>windows_width_max_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_x<sp/>=<sp/>windows_current_x_;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>WINDOW<sp/>*local_win<sp/>=<sp/>subwin(stdscr,<sp/>height,<sp/>width,<sp/>windows_current_y_,<sp/>start_x);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_width_max_<sp/>=<sp/>max(windows_width_max_,<sp/>width);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>windows_current_y_<sp/>+=<sp/>height;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>box(local_win,<sp/>ACS_VLINE,<sp/>ACS_HLINE);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>mvwprintw(local_win,<sp/>1,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>name.c_str());</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>local_win;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::init_parameters()<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt_&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(loop_dt_.count()));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::depth_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_depth_data_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_depth_data_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_depth_data_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::internal_sensor_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Bme280Data<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_internal_sensor_filter_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_internal_sensor_filter_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_internal_sensor_filter_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::power_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_power_data_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_power_data_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_power_data_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::piston_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PistonState<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_piston_data_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_piston_data_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_piston_data_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::safety_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_safety_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_safety_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_safety_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::mission_state_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::MissionState<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_mission_state_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_mission_state_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_mission_state_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::depth_control_set_point_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthControlSetPoint<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_depth_control_set_point_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_depth_control_set_point_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_depth_control_set_point<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::depth_control_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthControlDebug<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_depth_control_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_depth_control_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_depth_control_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::gnss_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GpsFix<sp/>&amp;msg){</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_gnss_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_gnss_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_gnss_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::profile_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Profile<sp/>&amp;msg)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_profile_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_profile_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_profile_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::density_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;msg)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_density_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_density_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_density_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::temperature_sensor_data_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData<sp/>&amp;msg)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_temperature_sensor_data_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_temperature_sensor_data_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_temperature_sensor_data_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::log_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rcl_interfaces::msg::Log<sp/>&amp;msg)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_queue_log_.push_back(msg);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_queue_log_.size()<sp/>&gt;<sp/>msg_queue_log_size_){</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_queue_log_.pop_front();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::audio_dspic_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SyncDspic<sp/>&amp;msg)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_audio_dspic_<sp/>=<sp/>msg;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>time_last_audio_dspic_<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_first_received_audio_dspic_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::init_interfaces()<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_safety_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;(</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/safety/safety&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::safety_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_depth_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::DepthPose&gt;(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/depth&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::depth_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_internal_sensor_filter_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Bme280Data&gt;(</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/pressure_internal&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::internal_sensor_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_power_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PowerState&gt;(</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/power&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::power_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_piston_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PistonState&gt;(</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/piston&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::piston_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_mission_state_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::MissionState&gt;(</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/mission/mission_state&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::mission_state_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_depth_control_set_point_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;(</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/mission/depth_control_set_point&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::depth_control_set_point_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_control_debug_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::DepthControlDebug&gt;(</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/control/depth_control_debug&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::depth_control_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_gnss_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::GpsFix&gt;(</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/fix&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::gnss_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_profile_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Profile&gt;(</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/profile&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::profile_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_density_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Density&gt;(</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/density&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::density_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_temperature_sensor_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;(</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/temperature&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::temperature_sensor_data_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_log_<sp/>=<sp/>this-&gt;create_subscription&lt;rcl_interfaces::msg::Log&gt;(</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/rosout&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::log_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_audio_dspic_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::SyncDspic&gt;(</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/audio_dspic&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;WtfNode::audio_dspic_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_internal_pressure_windows(){</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_internal_sensor_filter_)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_internal_sensor_filter_).seconds());</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;pressure&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%4.0f&quot;</highlight><highlight class="normal">,<sp/>msg_internal_sensor_filter_.pressure);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;temperature&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%2.2f&quot;</highlight><highlight class="normal">,<sp/>msg_internal_sensor_filter_.temperature);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;humidity&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_internal_pressure_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%2.0f<sp/>%%&quot;</highlight><highlight class="normal">,<sp/>msg_internal_sensor_filter_.humidity);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_internal_pressure_);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_mission_windows(){</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_mission_state_<sp/>&amp;&amp;<sp/>msg_first_received_depth_control_set_point)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>min(time_last_mission_state_,<sp/>time_last_depth_control_set_point_)).seconds());</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>3,<sp/>1,<sp/>&quot;north&quot;);</highlight></codeline>
+<codeline lineno="249"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>4,<sp/>1,<sp/>&quot;east&quot;);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;depth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_control_set_point_.depth);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;limit_velocity&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.3f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_control_set_point_.limit_velocity);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;mission<sp/>mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>mission_mode_string_[msg_mission_state_.mode].c_str());</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;mission<sp/>state&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>mission_state_string_[msg_mission_state_.state].c_str());</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>7,<sp/>1,<sp/>&quot;mission<sp/>status&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>7,<sp/>25,<sp/>&quot;%5s&quot;,<sp/>get_bool_text(msg_mission_state_..mission_enable).c_str());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>8,<sp/>1,<sp/>&quot;enable_thrusters&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>8,<sp/>25,<sp/>&quot;%5s&quot;,<sp/>get_bool_text(msg_waypoint_.enable_thrusters).c_str());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>7,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;waypoint_id&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>7,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%4d&quot;</highlight><highlight class="normal">,<sp/>msg_mission_state_.waypoint_id);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>10,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;waypoint_length&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>10,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%4d&quot;</highlight><highlight class="normal">,<sp/>msg_mission_state_.waypoint_length);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>11,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;time_to_next_waypoint&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_mission_,<sp/>11,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%6d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(msg_mission_state_.time_to_next_waypoint)));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_mission_);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal">std::string<sp/>WtfNode::get_bool_text(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid){</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(valid<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;True&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;False&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal">std::string<sp/>WtfNode::set_color_valid(WINDOW<sp/>*w,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>text){</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(valid){</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(w,<sp/>COLOR_PAIR(COLOR_VALID));</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(text.empty())?</highlight><highlight class="stringliteral">&quot;True&quot;</highlight><highlight class="normal">:text;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(w,<sp/>COLOR_PAIR(COLOR_NOT_VALID));</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(text.empty())?</highlight><highlight class="stringliteral">&quot;False&quot;</highlight><highlight class="normal">:text;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_safety_windows(){</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_safety_)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_safety_).seconds());</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;global_safety_valid&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.global_safety_valid).c_str());</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;published_frequency&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.published_frequency).c_str());</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;depth_limit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.depth_limit).c_str());</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;batteries_limit&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.batteries_limit).c_str());</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>7,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;depressurization&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>7,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.depressurization).c_str());</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>8,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;seafloor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>8,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.seafloor).c_str());</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>9,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;piston&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>9,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.piston).c_str());</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>10,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;zero_depth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>10,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>msg_safety_.zero_depth).c_str());</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>11,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;gnss&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>11,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>set_color_valid(windows_safety_,<sp/>(msg_gnss_.mode<sp/>&gt;<sp/>seabot2_msgs::msg::GpsFix::MODE_NO_FIX)).c_str());</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_safety_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>12,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;cpu&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>12,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_safety_.cpu);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>13,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;ram&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>13,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%6d&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(msg_safety_.ram));</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>14,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;hdd&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>14,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%.1f&quot;</highlight><highlight class="normal">,<sp/>msg_safety_.hdd/1024);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>15,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;limit_depth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_safety_,<sp/>15,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%3.2f&quot;</highlight><highlight class="normal">,<sp/>msg_safety_.limit_depth);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_safety_);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_power(){</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_power_data_)<sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_power_data_).seconds());</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;battery_volt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.1f&quot;</highlight><highlight class="normal">,<sp/>msg_power_data_.battery_volt);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;cell_volt[0]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.1f&quot;</highlight><highlight class="normal">,<sp/>msg_power_data_.cell_volt[0]);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;cell_volt[1]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.1f&quot;</highlight><highlight class="normal">,<sp/>msg_power_data_.cell_volt[1]);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;esc_current[0]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_power_data_.esc_current[0]);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>7,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;esc_current[1]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>7,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_power_data_.esc_current[1]);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>8,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;motor_current&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>8,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_power_data_.motor_current);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>9,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;power_state&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_power_,<sp/>9,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>power_state_string_[msg_power_data_.power_state].c_str());</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_power_);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_depth(){</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_depth_data_)<sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_depth_data_).seconds());</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;depth&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.3f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_data_.depth);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;velocity&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.3f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_data_.velocity);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;zero_depth_pressure&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.3f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_data_.zero_depth_pressure);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;pressure&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.3f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_data_.pressure);</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_depth_);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_piston(){</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_piston_data_)<sp/>{</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_piston_data_).seconds());</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;position&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%7d&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.position);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;position_set_point&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%7d&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.position_set_point);</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;switch_top&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>get_bool_text(msg_piston_data_.switch_top).c_str());</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;switch_bottom&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>get_bool_text(msg_piston_data_.switch_bottom).c_str());</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>7,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;enable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>7,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>get_bool_text(msg_piston_data_.enable).c_str());</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>8,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;motor_sens&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>8,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%5s&quot;</highlight><highlight class="normal">,<sp/>get_bool_text(msg_piston_data_.motor_sens).c_str());</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>9,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;state&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>9,<sp/>18,<sp/></highlight><highlight class="stringliteral">&quot;%21s&quot;</highlight><highlight class="normal">,<sp/>piston_state_string_[msg_piston_data_.state].c_str());</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>10,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;motor_speed_set_point&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>10,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%4hu&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.motor_speed_set_point);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>11,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;motor_speed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>11,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%4hu&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.motor_speed);</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>12,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;battery_voltage&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>12,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.battery_voltage);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>13,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;motor_current&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_piston_,<sp/>13,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.motor_current);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_piston_);</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_depth_control(){</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_depth_control_)<sp/>{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_depth_control_).seconds());</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;position&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%7d&quot;</highlight><highlight class="normal">,<sp/>msg_piston_data_.position);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_control_.u);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_control_.y);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;dy&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_control_.dy);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>7,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;piston_set_point&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>7,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%7.2f&quot;</highlight><highlight class="normal">,<sp/>msg_depth_control_.piston_set_point);</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>8,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_depth_control_,<sp/>8,<sp/>21,<sp/></highlight><highlight class="stringliteral">&quot;%12s&quot;</highlight><highlight class="normal">,<sp/>depth_control_string_[msg_depth_control_.mode].c_str());</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_depth_control_);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="468"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_robot(){</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/>mvwprintw(windows_robot_,<sp/>1,<sp/>20,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal">,<sp/>this-&gt;now().seconds());</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>std::time(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tm<sp/>=<sp/>*std::gmtime(&amp;t);<sp/></highlight><highlight class="comment">//<sp/>localtime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/>stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>std::put_time(&amp;tm,<sp/></highlight><highlight class="stringliteral">&quot;%d-%m-%Y<sp/>%H-%M-%S&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/>mvwprintw(windows_robot_,<sp/>1,<sp/>40,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>ss.str().c_str());</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/>mvwprintw(windows_robot_,<sp/>2,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>hostname_.c_str());</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>wrefresh(windows_robot_);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_gnss(){</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_gnss_)<sp/>{</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_gnss_).seconds());</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;mode&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%8s&quot;</highlight><highlight class="normal">,<sp/>gpsd_mode_string_[msg_gnss_.mode].c_str());</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wattron(windows_gnss_,<sp/>COLOR_PAIR(COLOR_DEFAULT));</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"></highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;latitude&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal">,<sp/>msg_gnss_.latitude);</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"></highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;longitude&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%f&quot;</highlight><highlight class="normal">,<sp/>msg_gnss_.longitude);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"></highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;time<sp/>(GNSS)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>time_t<sp/>t<sp/>=<sp/>round(msg_gnss_.time);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tm<sp/>=<sp/>*std::gmtime(&amp;t);<sp/></highlight><highlight class="comment">//<sp/>localtime</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>std::put_time(&amp;tm,<sp/></highlight><highlight class="stringliteral">&quot;%d-%m-%Y<sp/>%H-%M-%S&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>6,<sp/>20,<sp/></highlight><highlight class="stringliteral">&quot;%17s&quot;</highlight><highlight class="normal">,<sp/>ss.str().c_str());</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wrefresh(windows_gnss_);</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="507"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_sensors(){</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_profile_){</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_gnss_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_profile_).seconds());</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;ping<sp/>distance&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%3.1f&quot;</highlight><highlight class="normal">,<sp/>msg_profile_.distance/1e3);</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_profile_.distance<sp/>=<sp/>std::numeric_limits&lt;uint32_t&gt;::quiet_NaN();</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;ping<sp/>confidence&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%3d<sp/>%%&quot;</highlight><highlight class="normal">,<sp/>msg_profile_.confidence);</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_profile_.confidence<sp/>=<sp/>std::numeric_limits&lt;uint16_t&gt;::quiet_NaN();</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_density_){</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>5,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;density&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>5,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%4.1f&quot;</highlight><highlight class="normal">,<sp/>msg_density_.density);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_density_.density<sp/>=<sp/>std::numeric_limits&lt;float&gt;::quiet_NaN();;</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_temperature_sensor_data_){</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>6,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;temperature&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_sensors_,<sp/>6,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%2.2f&quot;</highlight><highlight class="normal">,<sp/>msg_temperature_sensor_data_.temperature);</highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_temperature_sensor_data_.temperature<sp/>=<sp/>std::numeric_limits&lt;float&gt;::quiet_NaN();</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>wrefresh(windows_sensors_);</highlight></codeline>
+<codeline lineno="535"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_audio()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg_first_received_audio_dspic_)<sp/>{</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_audio_,<sp/>1,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%0.2f&quot;</highlight><highlight class="normal">,<sp/>(this-&gt;now()<sp/>-<sp/>time_last_audio_dspic_).seconds());</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_audio_,<sp/>3,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;time<sp/>dspic&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_audio_,<sp/>3,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%u&quot;</highlight><highlight class="normal">,<sp/>msg_audio_dspic_.posix_time);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_audio_,<sp/>4,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;emission<sp/>number&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_audio_,<sp/>4,<sp/>25,<sp/></highlight><highlight class="stringliteral">&quot;%u&quot;</highlight><highlight class="normal">,<sp/>msg_audio_dspic_.signal_number);</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="547"><highlight class="normal"><sp/><sp/><sp/><sp/>wrefresh(windows_audio_);</highlight></codeline>
+<codeline lineno="548"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::update_log()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;msg:msg_queue_log_){</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>msg_string<sp/>=<sp/>msg.name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>msg.msg;</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>space_numbers<sp/>=<sp/>max(0,<sp/>(windows_max_x_-2)<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(msg_string.length()));</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>spaces(space_numbers,<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_string<sp/>+=<sp/>spaces;</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvwprintw(windows_log_,<sp/>2+i,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>msg_string.c_str());</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/>wrefresh(windows_log_);</highlight></codeline>
+<codeline lineno="561"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WtfNode::timer_callback()<sp/>{</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"><sp/><sp/><sp/><sp/>update_log();</highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/>update_safety_windows();</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"><sp/><sp/><sp/><sp/>update_mission_windows();</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/>update_internal_pressure_windows();</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/>update_power();</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>update_depth();</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/>update_piston();</highlight></codeline>
+<codeline lineno="571"><highlight class="normal"><sp/><sp/><sp/><sp/>update_robot();</highlight></codeline>
+<codeline lineno="572"><highlight class="normal"><sp/><sp/><sp/><sp/>update_depth_control();</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"><sp/><sp/><sp/><sp/>update_gnss();</highlight></codeline>
+<codeline lineno="574"><highlight class="normal"><sp/><sp/><sp/><sp/>update_sensors();</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/>update_audio();</highlight></codeline>
+<codeline lineno="576"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;WtfNode&gt;());</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="583"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp"/>
+  </compounddef>
+</doxygen>

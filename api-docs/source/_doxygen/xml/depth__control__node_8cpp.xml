@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="depth__control__node_8cpp" kind="file" language="C++">
+    <compoundname>depth_control_node.cpp</compoundname>
+    <includes refid="depth__control__node_8hpp" local="yes">seabot2_depth_control/depth_control_node.hpp</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>seabot2_depth_control/alpha_solver.h</label>
+        <link refid="alpha__solver_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>seabot2_depth_control/depth_control.h</label>
+        <link refid="depth__control_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>seabot2_depth_control/depth_control_node.hpp</label>
+        <link refid="depth__control__node_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control_node.cpp</label>
+        <link refid="depth__control__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>array</label>
+      </node>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="8">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="23">
+        <label>fstream</label>
+      </node>
+      <node id="22">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="19">
+        <label>seabot2_msgs/msg/alpha_debug.hpp</label>
+      </node>
+      <node id="17">
+        <label>seabot2_msgs/msg/density.hpp</label>
+      </node>
+      <node id="14">
+        <label>seabot2_msgs/msg/depth_control_debug.hpp</label>
+      </node>
+      <node id="10">
+        <label>seabot2_msgs/msg/depth_control_set_point.hpp</label>
+      </node>
+      <node id="13">
+        <label>seabot2_msgs/msg/depth_pose.hpp</label>
+      </node>
+      <node id="11">
+        <label>seabot2_msgs/msg/kalman_state.hpp</label>
+      </node>
+      <node id="15">
+        <label>seabot2_msgs/msg/piston_set_point.hpp</label>
+      </node>
+      <node id="12">
+        <label>seabot2_msgs/msg/piston_state.hpp</label>
+      </node>
+      <node id="16">
+        <label>seabot2_msgs/msg/safety_status2.hpp</label>
+      </node>
+      <node id="18">
+        <label>seabot2_msgs/msg/temperature_sensor_data.hpp</label>
+      </node>
+      <node id="20">
+        <label>seabot2_srvs/srv/alpha_mission.hpp</label>
+      </node>
+      <node id="21">
+        <label>std_srvs/srv/trigger.hpp</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacestd_1_1placeholders">std::placeholders</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="depth__control__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control_node.cpp" line="287" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control_node.cpp" bodystart="287" bodyend="299"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_depth_control/depth_control_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">DepthControlNode::DepthControlNode()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">:<sp/>Node(</highlight><highlight class="stringliteral">&quot;depth_control_node&quot;</highlight><highlight class="normal">),<sp/>dc_(this-&gt;now())</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>callback_group_<sp/>=<sp/>this-&gt;create_callback_group(rclcpp::CallbackGroupType::Reentrant);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;DepthControlNode::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">),<sp/>callback_group_);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Depth_control_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::init_parameters()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt_&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(loop_dt_.count()));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;physics_rho&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" kindref="member">physics_rho_</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;physics_g&quot;</highlight><highlight class="normal">,<sp/>dc_.physics_g_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;robot_mass&quot;</highlight><highlight class="normal">,<sp/>dc_.robot_mass_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;robot_diameter&quot;</highlight><highlight class="normal">,<sp/>dc_.robot_diameter_);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;screw_thread&quot;</highlight><highlight class="normal">,<sp/>dc_.screw_thread_);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;tick_per_turn&quot;</highlight><highlight class="normal">,<sp/>dc_.tick_per_turn_);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;motor_max_rpm_&quot;</highlight><highlight class="normal">,<sp/>dc_.motor_max_rpm_);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_diameter&quot;</highlight><highlight class="normal">,<sp/>dc_.piston_diameter_);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_max_tick_value&quot;</highlight><highlight class="normal">,<sp/>dc_.piston_max_tick_value_);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;root_regulation&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a901eb8800886555607963d28a46cd247" kindref="member">root_regulation_</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;limit_depth_regulation&quot;</highlight><highlight class="normal">,<sp/>dc_.limit_depth_control_);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;flow_piston_sink&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a99600b6dd5902df4f38c91ecea8b6233" kindref="member">flow_piston_sink_</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_hysteresis&quot;</highlight><highlight class="normal">,<sp/>dc_.piston_hysteresis_);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_max_velocity&quot;</highlight><highlight class="normal">,<sp/>dc_.flow_max_);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;hold_depth_enable&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1ab23c5141cfa6aaae39c4e161bda2b21f" kindref="member">hold_depth_enable_</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;hold_depth_validation_duration&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dc_.hold_depth_validation_duration_.seconds()));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;hold_depth_value_enter&quot;</highlight><highlight class="normal">,<sp/>dc_.hold_depth_value_enter_);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;hold_depth_value_exit&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1aa10434c9421f25f5281f195b58675069" kindref="member">hold_depth_value_exit_</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;hold_velocity_enter&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a544e36c1e036a249574637acf6d4253d" kindref="member">hold_velocity_enter_</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;hold_velocity_exit&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a1f936e9c5dd54976e8921441e442161d" kindref="member">hold_velocity_exit_</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;delta_velocity_lb&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_velocity_lb_);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;delta_velocity_ub&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_velocity_ub_);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;delta_position_lb&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_position_lb_);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;delta_position_ub&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_position_ub_);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;control_filter&quot;</highlight><highlight class="normal">,<sp/>dc_.control_filter_);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;piston_flow_security_percentage&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.<ref refid="classDepthControl_1a9453df97db241b35dbcbf192e65405f2" kindref="member">piston_flow_security_percentage_</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this-&gt;declare_parameter&lt;double&gt;(&quot;cf_estimation&quot;,<sp/>dc_.Cf_);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;debug&quot;</highlight><highlight class="normal">,<sp/>dc_.debug_);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;solver_velocity&quot;</highlight><highlight class="normal">,<sp/>solver_velocity_);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;solver_alpha&quot;</highlight><highlight class="normal">,<sp/>solver_alpha_);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" kindref="member">physics_rho_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;physics_rho&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" kindref="member">physics_rho_</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>dc_.physics_g_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;physics_g&quot;</highlight><highlight class="normal">,<sp/>dc_.physics_g_);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>dc_.robot_mass_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;physics_mass&quot;</highlight><highlight class="normal">,<sp/>dc_.robot_mass_);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>dc_.robot_diameter_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;robot_diameter&quot;</highlight><highlight class="normal">,<sp/>dc_.robot_diameter_);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>dc_.screw_thread_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;screw_thread&quot;</highlight><highlight class="normal">,<sp/>dc_.screw_thread_);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>dc_.tick_per_turn_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;tick_per_turn&quot;</highlight><highlight class="normal">,<sp/>dc_.tick_per_turn_);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>dc_.motor_max_rpm_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;motor_max_rpm_&quot;</highlight><highlight class="normal">,<sp/>dc_.motor_max_rpm_);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>dc_.piston_diameter_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_diameter&quot;</highlight><highlight class="normal">,<sp/>dc_.piston_diameter_);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>dc_.piston_max_tick_value_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_max_tick_value&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.piston_max_tick_value_);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a901eb8800886555607963d28a46cd247" kindref="member">root_regulation_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;root_regulation&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a901eb8800886555607963d28a46cd247" kindref="member">root_regulation_</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>dc_.limit_depth_control_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;limit_depth_control&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.limit_depth_control_);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a99600b6dd5902df4f38c91ecea8b6233" kindref="member">flow_piston_sink_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flow_piston_sink&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a99600b6dd5902df4f38c91ecea8b6233" kindref="member">flow_piston_sink_</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>dc_.piston_hysteresis_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_hysteresis&quot;</highlight><highlight class="normal">,<sp/>dc_.piston_hysteresis_);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>dc_.flow_max_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_max_velocity&quot;</highlight><highlight class="normal">,<sp/>dc_.flow_max_);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1ab23c5141cfa6aaae39c4e161bda2b21f" kindref="member">hold_depth_enable_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hold_depth_enable&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1ab23c5141cfa6aaae39c4e161bda2b21f" kindref="member">hold_depth_enable_</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>dc_.hold_depth_validation_duration_<sp/>=<sp/>rclcpp::Duration(std::chrono::seconds(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hold_depth_validation_duration&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dc_.hold_depth_validation_duration_.seconds()))));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>dc_.hold_depth_value_enter_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hold_depth_value_enter&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.hold_depth_value_enter_);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1aa10434c9421f25f5281f195b58675069" kindref="member">hold_depth_value_exit_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hold_depth_value_exit&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.<ref refid="classDepthControl_1aa10434c9421f25f5281f195b58675069" kindref="member">hold_depth_value_exit_</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a544e36c1e036a249574637acf6d4253d" kindref="member">hold_velocity_enter_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hold_velocity_enter&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.<ref refid="classDepthControl_1a544e36c1e036a249574637acf6d4253d" kindref="member">hold_velocity_enter_</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a1f936e9c5dd54976e8921441e442161d" kindref="member">hold_velocity_exit_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hold_velocity_exit&quot;</highlight><highlight class="normal">,<sp/>dc_.<ref refid="classDepthControl_1a1f936e9c5dd54976e8921441e442161d" kindref="member">hold_velocity_exit_</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>dc_.delta_velocity_lb_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;delta_velocity_lb&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_velocity_lb_);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>dc_.delta_velocity_ub_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;delta_velocity_ub&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_velocity_ub_);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>dc_.delta_position_lb_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;delta_position_lb&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_position_lb_);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>dc_.delta_position_ub_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;delta_position_ub&quot;</highlight><highlight class="normal">,<sp/>dc_.delta_position_ub_);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>dc_.control_filter_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;control_filter&quot;</highlight><highlight class="normal">,<sp/>dc_.control_filter_);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a9453df97db241b35dbcbf192e65405f2" kindref="member">piston_flow_security_percentage_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;piston_flow_security_percentage&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dc_.</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>piston_flow_security_percentage_);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dc_.Cf_<sp/>=<sp/>this-&gt;get_parameter_or(&quot;cf_estimation&quot;,<sp/>dc_.Cf_);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>dc_.debug_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;debug&quot;</highlight><highlight class="normal">,<sp/>dc_.debug_);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1ae7f6a2a229fd4412209a2c99540fbea6" kindref="member">update_coeff</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>solver_velocity_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;solver_velocity&quot;</highlight><highlight class="normal">,<sp/>solver_velocity_);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>solver_alpha_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;solver_alpha&quot;</highlight><highlight class="normal">,<sp/>solver_alpha_);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(solver_velocity_.size()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>solver_velocity_.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dc_.<ref refid="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" kindref="member">alpha_solver_</ref>.<ref refid="classAlphaSolver_1a06bdb01ad753366dbf8006d97d2fb45b" kindref="member">add_to_memory</ref>(solver_alpha_[i],<sp/>solver_velocity_[i]);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::kalman_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::KalmanState<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a372e47e9230e163518a68d4ad5425fe2" kindref="member">update_state</ref>(msg.velocity,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.depth,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.chi,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.chi2,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.cz,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.offset_total,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::piston_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PistonState<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a7f6b69209cac7b85d932b7b8b7eb4934" kindref="member">update_piston</ref>(msg.position,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.switch_top,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.switch_bottom,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.state,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::depth_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a39c4c52aa8f83ed2df1c0c435194706c" kindref="member">update_depth</ref>(msg.depth,<sp/>msg.pressure);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::safety_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a59a30728a2b9c595f95c680aed1dcce7" kindref="member">update_safety</ref>(!msg.global_safety_valid,<sp/>msg.limit_depth);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::depth_set_point_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthControlSetPoint<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a5dad07bebba8979720a499cce990d86b" kindref="member">update_waypoint</ref>(msg.depth,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.limit_velocity,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.enable_control);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>enable_control_<sp/>=<sp/>msg.enable_control;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>seabot2_msgs::msg::AlphaDebug<sp/>msg_alpha_debug;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>msg_alpha_debug.approach_velocity<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dc_.approach_velocity_);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>publisher_alpha_debug_-&gt;publish(msg_alpha_debug);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::init_interfaces()</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>subscriber_kalman_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::KalmanState&gt;(</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/kalman&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;DepthControlNode::kalman_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>subscriber_state_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PistonState&gt;(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/piston&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;DepthControlNode::piston_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>subscriber_depth_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::DepthPose&gt;(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/depth&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;DepthControlNode::depth_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>subscriber_temperature_data_<sp/>=</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;(</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/temperature&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;DepthControlNode::temperature_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>subscriber_mission_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/mission/depth_control_set_point&quot;</highlight><highlight class="normal">,<sp/>10,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>std::bind(&amp;DepthControlNode::depth_set_point_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>subscriber_safety_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;(</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/safety/safety&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;DepthControlNode::safety_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>subscriber_density_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Density&gt;(</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/density&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;DepthControlNode::density_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>publisher_piston_<sp/>=</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::PistonSetPoint&gt;(</highlight><highlight class="stringliteral">&quot;/driver/piston_set_point&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>publisher_debug_<sp/>=</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::DepthControlDebug&gt;(</highlight><highlight class="stringliteral">&quot;depth_control_debug&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>publisher_alpha_debug_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::AlphaDebug&gt;(</highlight><highlight class="stringliteral">&quot;alpha_debug&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>service_alpha_computation_<sp/>=</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;create_service&lt;seabot2_srvs::srv::AlphaMission&gt;(</highlight><highlight class="stringliteral">&quot;alpha_mission&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bind(&amp;DepthControlNode::alpha_mission_pre_computation,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3));</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>service_alpha_generation_<sp/>=<sp/>this-&gt;create_service&lt;std_srvs::srv::Trigger&gt;(</highlight><highlight class="stringliteral">&quot;alpha_generation&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bind(</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;DepthControlNode::alpha_generation,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::alpha_mission_pre_computation(</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;seabot2_srvs::srv::AlphaMission::Request&gt;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>request,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;seabot2_srvs::srv::AlphaMission::Response&gt;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>response)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Depth_control_node]<sp/>Received<sp/>velocity<sp/>computation<sp/>request&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/>velocity_limits_requests_.clear();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>velocity_limits_requests_<sp/>=<sp/>std::vector&lt;float&gt;(request-&gt;velocity_limits);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>velocity_limits_computations_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::alpha_generation(</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;<sp/>response)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>generate_velocity_pairs();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::density_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a32465b4c8135b6c8098e2a177ee319af" kindref="member">update_density</ref>(msg.density);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::temperature_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1ab70c0372dcb3096f4ce7a9861cf66e29" kindref="member">update_temperature</ref>(msg.temperature);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::timer_callback()</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(velocity_limits_computations_)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>velocity_limits_computations_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_-&gt;cancel();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.regulation_state_<sp/>=<sp/>DepthControl::STATE_COMPUTE_ALPHA;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>publish_message();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>velocity:<sp/>velocity_limits_requests_)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//publish_message();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>dc_.<ref refid="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" kindref="member">alpha_solver_</ref>.compute_alpha(velocity);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;[Depth_control_node]<sp/>Velocity<sp/>was<sp/>computed<sp/>for<sp/>beta<sp/>=<sp/>%f,<sp/>alpha<sp/>=<sp/>%f&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>velocity,</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.regulation_state_<sp/>=<sp/>DepthControl::STATE_SURFACE;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_-&gt;reset();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1ac4651652dc7c2a0d9dcf7d5765bfe67e" kindref="member">state_machine_step</ref>(loop_dt_,<sp/>this-&gt;now());</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>publish_message();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::generate_velocity_pairs()</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" kindref="member">alpha_solver_</ref>.<ref refid="classAlphaSolver_1aa9420a799951c8b779ddae654f7f6577" kindref="member">set_test_in_memory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>velocity<sp/>=<sp/>0.0;<sp/>velocity<sp/>&lt;<sp/>0.3;<sp/>velocity<sp/>+=<sp/>0.001)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>dc_.<ref refid="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" kindref="member">alpha_solver_</ref>.compute_alpha(velocity);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>std::ofstream<sp/>file(</highlight><highlight class="stringliteral">&quot;alpha_values.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>value:<sp/>dc_.alpha_solver_.get_computed_memory())<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>&lt;&lt;<sp/>value[0]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>file<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>value:<sp/>dc_.alpha_solver_.get_computed_memory())<sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>file<sp/>&lt;&lt;<sp/>value[1]<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>dc_.<ref refid="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" kindref="member">alpha_solver_</ref>.<ref refid="classAlphaSolver_1aa9420a799951c8b779ddae654f7f6577" kindref="member">set_test_in_memory</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DepthControlNode::publish_message()</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>seabot2_msgs::msg::PistonSetPoint<sp/>msg_piston;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>msg_piston.position<sp/>=<sp/>round(dc_.piston_set_point_);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>msg_piston.exit<sp/>=<sp/>dc_.is_exit_;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enable_control_)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_piston_-&gt;publish(msg_piston);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/>seabot2_msgs::msg::DepthControlDebug<sp/>debug_msg_;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>debug_msg_.mode<sp/>=<sp/>dc_.regulation_state_;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/>debug_msg_.u<sp/>=<sp/>dc_.u_debug_;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/>debug_msg_.dy<sp/>=<sp/>dc_.dy_debug_;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>debug_msg_.y<sp/>=<sp/>dc_.<ref refid="classDepthControl_1ac42344eeda10d9c508e1ce7f818c872d" kindref="member">y_debug_</ref>;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/>debug_msg_.piston_set_point<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dc_.piston_set_point_);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/>publisher_debug_-&gt;publish(debug_msg_);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>node<sp/>=<sp/>std::make_shared&lt;DepthControlNode&gt;();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>rclcpp::executors::MultiThreadedExecutor<sp/>executor;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>executor.add_node(node);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/>executor.spin();</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control_node.cpp"/>
+  </compounddef>
+</doxygen>

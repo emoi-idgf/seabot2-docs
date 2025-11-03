@@ -1,0 +1,1970 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classDepthControl" kind="class" language="C++" prot="public">
+    <compoundname>DepthControl</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classDepthControl_1aa4127b865173986676f7bade1c461410" prot="public" static="no" strong="no">
+        <type></type>
+        <name>STATE_MACHINE</name>
+        <qualifiedname>DepthControl::STATE_MACHINE</qualifiedname>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410a1e7b94218ff6f0840e5f24022e818847" prot="public">
+          <name>STATE_SURFACE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410a59acb79a177140ede8280416e84c01f9" prot="public">
+          <name>STATE_SINK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410a9ab181ebf6d5d1293759ab6911cea3a5" prot="public">
+          <name>STATE_CONTROL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410a81e0ccaff81b4c47aae231cd86601ef6" prot="public">
+          <name>STATE_PISTON_ISSUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410a5dd9595d163a47c82a66f4c6847da4e8" prot="public">
+          <name>STATE_HOLD_DEPTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410afafafc96ef1fab50dafdae907c409acb" prot="public">
+          <name>STATE_COMPUTE_ALPHA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classDepthControl_1aa4127b865173986676f7bade1c461410a4adcfedab85471703dfb08eb9612c2d3" prot="public">
+          <name>STATE_STOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>State machine. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="122" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="122" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classDepthControl_1aa9835a33cd9007caabc8598e9571687f" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int DepthControl::PISTON_STATE_OK</definition>
+        <argsstring></argsstring>
+        <name>PISTON_STATE_OK</name>
+        <qualifiedname>DepthControl::PISTON_STATE_OK</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="18" column="20" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classDepthControl_1a07b15b4ea2453394f39861d4f57ed326" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::debug_</definition>
+        <argsstring></argsstring>
+        <name>debug_</name>
+        <qualifiedname>DepthControl::debug_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="20" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" prot="public" static="no" mutable="no">
+        <type><ref refid="classAlphaSolver" kindref="compound">AlphaSolver</ref></type>
+        <definition>AlphaSolver DepthControl::alpha_solver_</definition>
+        <argsstring></argsstring>
+        <name>alpha_solver_</name>
+        <qualifiedname>DepthControl::alpha_solver_</qualifiedname>
+        <briefdescription>
+<para>Variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="23" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a3011e548c11fb4e45c696c040a7492e1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::emergency_</definition>
+        <argsstring></argsstring>
+        <name>emergency_</name>
+        <qualifiedname>DepthControl::emergency_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="25" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a411f5a2fbae7d78ba0f31cb9a5ce66a1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float DepthControl::limit_depth_</definition>
+        <argsstring></argsstring>
+        <name>limit_depth_</name>
+        <qualifiedname>DepthControl::limit_depth_</qualifiedname>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="26" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::physics_rho_</definition>
+        <argsstring></argsstring>
+        <name>physics_rho_</name>
+        <qualifiedname>DepthControl::physics_rho_</qualifiedname>
+        <initializer>= 1000.0</initializer>
+        <briefdescription>
+<para>Physical characteristics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="29" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ab6743c1a698eea72aa2ce5e830ea9419" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::physics_g_</definition>
+        <argsstring></argsstring>
+        <name>physics_g_</name>
+        <qualifiedname>DepthControl::physics_g_</qualifiedname>
+        <initializer>= 9.81</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="30" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a1ad45fb4e3a6213e60be3139d899a2c0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::robot_mass_</definition>
+        <argsstring></argsstring>
+        <name>robot_mass_</name>
+        <qualifiedname>DepthControl::robot_mass_</qualifiedname>
+        <initializer>= 12.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="31" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1adbf048468788abf5ac6d9e839f9f70f9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::robot_added_mass_</definition>
+        <argsstring></argsstring>
+        <name>robot_added_mass_</name>
+        <qualifiedname>DepthControl::robot_added_mass_</qualifiedname>
+        <initializer>= 2.51</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="32" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a5ab5866c2ec4f635a9d9dc917135bc52" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::robot_diameter_</definition>
+        <argsstring></argsstring>
+        <name>robot_diameter_</name>
+        <qualifiedname>DepthControl::robot_diameter_</qualifiedname>
+        <initializer>= 0.125</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="33" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa3e413a415d43b1ed90e81035d455deb" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::screw_thread_</definition>
+        <argsstring></argsstring>
+        <name>screw_thread_</name>
+        <qualifiedname>DepthControl::screw_thread_</qualifiedname>
+        <initializer>= 1.e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="34" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a7ebda0fccee8177240aad732c770d337" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::tick_per_turn_</definition>
+        <argsstring></argsstring>
+        <name>tick_per_turn_</name>
+        <qualifiedname>DepthControl::tick_per_turn_</qualifiedname>
+        <initializer>= 2048 * 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="35" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ac7f6dba2b1f92c550a1b90d5f9880647" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_diameter_</definition>
+        <argsstring></argsstring>
+        <name>piston_diameter_</name>
+        <qualifiedname>DepthControl::piston_diameter_</qualifiedname>
+        <initializer>= 0.045</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="36" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa0f81d9d6ff5413aa0e3d949253ae03b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_max_tick_value_</definition>
+        <argsstring></argsstring>
+        <name>piston_max_tick_value_</name>
+        <qualifiedname>DepthControl::piston_max_tick_value_</qualifiedname>
+        <initializer>= 1146880</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="37" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a7fe6d0f2852df4467f7c9dbf4d348935" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::degree_to_kelvin_</definition>
+        <argsstring></argsstring>
+        <name>degree_to_kelvin_</name>
+        <qualifiedname>DepthControl::degree_to_kelvin_</qualifiedname>
+        <initializer>= 273.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="38" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a873f195fc16ee70cc0ef656be5d7881d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::tick_to_volume_</definition>
+        <argsstring></argsstring>
+        <name>tick_to_volume_</name>
+        <qualifiedname>DepthControl::tick_to_volume_</qualifiedname>
+        <initializer>= (screw_thread_ / tick_per_turn_) * pow(piston_diameter_ / 2.0, 2) * <ref refid="FusionMath_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="40" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a770f4de8b01b4ccfe9177def2407e163" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::coeff_A_</definition>
+        <argsstring></argsstring>
+        <name>coeff_A_</name>
+        <qualifiedname>DepthControl::coeff_A_</qualifiedname>
+        <initializer>= physics_g_ * <ref refid="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" kindref="member">physics_rho_</ref> / (robot_added_mass_ + robot_mass_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="41" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a690b60fe3d02fe5d7212b7dd31d7271a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::coeff_B_</definition>
+        <argsstring></argsstring>
+        <name>coeff_B_</name>
+        <qualifiedname>DepthControl::coeff_B_</qualifiedname>
+        <initializer>= 0.5 * <ref refid="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" kindref="member">physics_rho_</ref> / (robot_added_mass_ + robot_mass_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="43" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a71fe2a1ffe1929e1c7f458f7e961fd5f" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::fz_model_boundary_velocity_positive_</definition>
+        <argsstring></argsstring>
+        <name>fz_model_boundary_velocity_positive_</name>
+        <qualifiedname>DepthControl::fz_model_boundary_velocity_positive_</qualifiedname>
+        <initializer>= 0.267911611144239</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="45" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a86aaf81a8dd7b663f5d0c5439d3a6c3e" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::fz_model_boundary_velocity_negative_</definition>
+        <argsstring></argsstring>
+        <name>fz_model_boundary_velocity_negative_</name>
+        <qualifiedname>DepthControl::fz_model_boundary_velocity_negative_</qualifiedname>
+        <initializer>= -0.272937623109179</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="46" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa69a7eb881dba7434828fb4b917ac6d4" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::fz_derivative_at_model_boundary_positive_</definition>
+        <argsstring></argsstring>
+        <name>fz_derivative_at_model_boundary_positive_</name>
+        <qualifiedname>DepthControl::fz_derivative_at_model_boundary_positive_</qualifiedname>
+        <initializer>=
+    fz_derivative_computation(fz_model_boundary_velocity_positive_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="48" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1af61b7102d5232e9e0aa19e4010f5e9d2" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::fz_offset_at_model_boundary_positive_</definition>
+        <argsstring></argsstring>
+        <name>fz_offset_at_model_boundary_positive_</name>
+        <qualifiedname>DepthControl::fz_offset_at_model_boundary_positive_</qualifiedname>
+        <initializer>=
+    fz_computation(fz_model_boundary_velocity_positive_) -
+    fz_derivative_at_model_boundary_positive_ * fz_model_boundary_velocity_positive_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="50" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ad8019f3eb15afafdc9f6401f7d3cdbc0" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::fz_derivative_at_model_boundary_negative_</definition>
+        <argsstring></argsstring>
+        <name>fz_derivative_at_model_boundary_negative_</name>
+        <qualifiedname>DepthControl::fz_derivative_at_model_boundary_negative_</qualifiedname>
+        <initializer>=
+    fz_derivative_computation(fz_model_boundary_velocity_negative_)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="53" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1accef033c8fd35192ed75c9caf684006a" prot="public" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double DepthControl::fz_offset_at_model_boundary_negative_</definition>
+        <argsstring></argsstring>
+        <name>fz_offset_at_model_boundary_negative_</name>
+        <qualifiedname>DepthControl::fz_offset_at_model_boundary_negative_</qualifiedname>
+        <initializer>=
+    fz_computation(fz_model_boundary_velocity_negative_) -
+    fz_derivative_at_model_boundary_negative_ * fz_model_boundary_velocity_negative_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="55" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a901eb8800886555607963d28a46cd247" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::root_regulation_</definition>
+        <argsstring></argsstring>
+        <name>root_regulation_</name>
+        <qualifiedname>DepthControl::root_regulation_</qualifiedname>
+        <initializer>= -0.2</initializer>
+        <briefdescription>
+<para>Compute regulation constant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="60" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aeeb3dba2fb490cb18a26c712d0266b77" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::limit_depth_control_</definition>
+        <argsstring></argsstring>
+        <name>limit_depth_control_</name>
+        <qualifiedname>DepthControl::limit_depth_control_</qualifiedname>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="61" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a99600b6dd5902df4f38c91ecea8b6233" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::flow_piston_sink_</definition>
+        <argsstring></argsstring>
+        <name>flow_piston_sink_</name>
+        <qualifiedname>DepthControl::flow_piston_sink_</qualifiedname>
+        <initializer>= -5e-7</initializer>
+        <briefdescription>
+<para>m </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="62" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ac479147c93b89ebd0b98759298c674bf" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_reach_position_dead_zone_</definition>
+        <argsstring></argsstring>
+        <name>piston_reach_position_dead_zone_</name>
+        <qualifiedname>DepthControl::piston_reach_position_dead_zone_</qualifiedname>
+        <initializer>= 50.</initializer>
+        <briefdescription>
+<para>m3/s </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="64" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ae873795e04353ec099ae4c28de869eab" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_hysteresis_</definition>
+        <argsstring></argsstring>
+        <name>piston_hysteresis_</name>
+        <qualifiedname>DepthControl::piston_hysteresis_</qualifiedname>
+        <initializer>= 0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="65" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa453367ec30b6ebb48355d730e51f0f6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::motor_max_rpm_</definition>
+        <argsstring></argsstring>
+        <name>motor_max_rpm_</name>
+        <qualifiedname>DepthControl::motor_max_rpm_</qualifiedname>
+        <initializer>= 38.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="66" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a2d3a15ffc910793830f608ee5c455f35" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::flow_max_</definition>
+        <argsstring></argsstring>
+        <name>flow_max_</name>
+        <qualifiedname>DepthControl::flow_max_</qualifiedname>
+        <initializer>= (motor_max_rpm_ / 60.) * tick_per_turn_ * tick_to_volume_</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="67" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a9453df97db241b35dbcbf192e65405f2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_flow_security_percentage_</definition>
+        <argsstring></argsstring>
+        <name>piston_flow_security_percentage_</name>
+        <qualifiedname>DepthControl::piston_flow_security_percentage_</qualifiedname>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+<para>in m3/sec </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="69" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ab23c5141cfa6aaae39c4e161bda2b21f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::hold_depth_enable_</definition>
+        <argsstring></argsstring>
+        <name>hold_depth_enable_</name>
+        <qualifiedname>DepthControl::hold_depth_enable_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Hold depth parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="72" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ab4cd21949282bcd5a4e41be058374b70" prot="public" static="no" mutable="no">
+        <type>rclcpp::Duration</type>
+        <definition>rclcpp::Duration DepthControl::hold_depth_validation_duration_</definition>
+        <argsstring></argsstring>
+        <name>hold_depth_validation_duration_</name>
+        <qualifiedname>DepthControl::hold_depth_validation_duration_</qualifiedname>
+        <initializer>= 30s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="73" column="20" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a5a6b1b5ef2f8fb5a98e5851754e8a449" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time DepthControl::hold_depth_validation_time_</definition>
+        <argsstring></argsstring>
+        <name>hold_depth_validation_time_</name>
+        <qualifiedname>DepthControl::hold_depth_validation_time_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="74" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a794580981df0e68f66b776a049758d52" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::hold_depth_validation_</definition>
+        <argsstring></argsstring>
+        <name>hold_depth_validation_</name>
+        <qualifiedname>DepthControl::hold_depth_validation_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="75" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aef7351f3662d9e60cc1bed8266b1fb06" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::hold_depth_value_enter_</definition>
+        <argsstring></argsstring>
+        <name>hold_depth_value_enter_</name>
+        <qualifiedname>DepthControl::hold_depth_value_enter_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="76" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa10434c9421f25f5281f195b58675069" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::hold_depth_value_exit_</definition>
+        <argsstring></argsstring>
+        <name>hold_depth_value_exit_</name>
+        <qualifiedname>DepthControl::hold_depth_value_exit_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>m </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="77" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a544e36c1e036a249574637acf6d4253d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::hold_velocity_enter_</definition>
+        <argsstring></argsstring>
+        <name>hold_velocity_enter_</name>
+        <qualifiedname>DepthControl::hold_velocity_enter_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>m </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="78" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a1f936e9c5dd54976e8921441e442161d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::hold_velocity_exit_</definition>
+        <argsstring></argsstring>
+        <name>hold_velocity_exit_</name>
+        <qualifiedname>DepthControl::hold_velocity_exit_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>m/s </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="79" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a65b156b416bf16565ded205926903b15" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::control_filter_</definition>
+        <argsstring></argsstring>
+        <name>control_filter_</name>
+        <qualifiedname>DepthControl::control_filter_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="81" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa19682558432a49f98adc4e69f069d76" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::delta_velocity_lb_</definition>
+        <argsstring></argsstring>
+        <name>delta_velocity_lb_</name>
+        <qualifiedname>DepthControl::delta_velocity_lb_</qualifiedname>
+        <initializer>= -1e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="82" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a1117d35f953065e3a72a4837b348a27f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::delta_velocity_ub_</definition>
+        <argsstring></argsstring>
+        <name>delta_velocity_ub_</name>
+        <qualifiedname>DepthControl::delta_velocity_ub_</qualifiedname>
+        <initializer>= 1e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="83" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a6b948e5653c56e15b99916ef81f9fd6a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::delta_position_lb_</definition>
+        <argsstring></argsstring>
+        <name>delta_position_lb_</name>
+        <qualifiedname>DepthControl::delta_position_lb_</qualifiedname>
+        <initializer>= -10e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="84" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ac7470eeeca4df9fb0197554d1750c69f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::delta_position_ub_</definition>
+        <argsstring></argsstring>
+        <name>delta_position_ub_</name>
+        <qualifiedname>DepthControl::delta_position_ub_</qualifiedname>
+        <initializer>= 10e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="85" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a276df80b9ebdc77ec3f63b3b9b190089" prot="public" static="no" mutable="no">
+        <type>rclcpp::Duration</type>
+        <definition>rclcpp::Duration DepthControl::safety_time_no_data_</definition>
+        <argsstring></argsstring>
+        <name>safety_time_no_data_</name>
+        <qualifiedname>DepthControl::safety_time_no_data_</qualifiedname>
+        <initializer>= 5s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="87" column="20" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a16471dfb5798872cbba6ddd686aac8f1" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long DepthControl::piston_position_</definition>
+        <argsstring></argsstring>
+        <name>piston_position_</name>
+        <qualifiedname>DepthControl::piston_position_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="89" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a8d9d11c6820784b81e5bb939f9367065" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::piston_switch_top_</definition>
+        <argsstring></argsstring>
+        <name>piston_switch_top_</name>
+        <qualifiedname>DepthControl::piston_switch_top_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="90" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1afce8cb443c18ca3e2e73e828f9755d05" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::piston_switch_bottom_</definition>
+        <argsstring></argsstring>
+        <name>piston_switch_bottom_</name>
+        <qualifiedname>DepthControl::piston_switch_bottom_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="91" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ab796a883665d94cf4ea62c9aff0c767e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DepthControl::piston_state_</definition>
+        <argsstring></argsstring>
+        <name>piston_state_</name>
+        <qualifiedname>DepthControl::piston_state_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="92" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a801df5bac2d9b3aa0b092738dff4fa4d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_set_point_</definition>
+        <argsstring></argsstring>
+        <name>piston_set_point_</name>
+        <qualifiedname>DepthControl::piston_set_point_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="93" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ad865b28866049d5808b0da77d339e9a6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool DepthControl::is_exit_</definition>
+        <argsstring></argsstring>
+        <name>is_exit_</name>
+        <qualifiedname>DepthControl::is_exit_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="94" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a544336d8e93bf4f0595809df63796329" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time DepthControl::time_last_kalman_callback_</definition>
+        <argsstring></argsstring>
+        <name>time_last_kalman_callback_</name>
+        <qualifiedname>DepthControl::time_last_kalman_callback_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Callback data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="97" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a222f7fcde439d6d706121e5f48ebdce3" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time DepthControl::time_last_piston_callback_</definition>
+        <argsstring></argsstring>
+        <name>time_last_piston_callback_</name>
+        <qualifiedname>DepthControl::time_last_piston_callback_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="98" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a0e327ec247f4841207cbce922e074f73" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::kalman_velocity_</definition>
+        <argsstring></argsstring>
+        <name>kalman_velocity_</name>
+        <qualifiedname>DepthControl::kalman_velocity_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="101" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a339094eaaa76ccb89252027f69f8213b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::kalman_depth_</definition>
+        <argsstring></argsstring>
+        <name>kalman_depth_</name>
+        <qualifiedname>DepthControl::kalman_depth_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="102" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a8f24eef83e0bdf458ae69234c2c0de49" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::kalman_total_offset_</definition>
+        <argsstring></argsstring>
+        <name>kalman_total_offset_</name>
+        <qualifiedname>DepthControl::kalman_total_offset_</qualifiedname>
+        <initializer>= 100.e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="103" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ac9afb26121da2cb326bf8e7b1ca5e5f0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::kalman_chi_</definition>
+        <argsstring></argsstring>
+        <name>kalman_chi_</name>
+        <qualifiedname>DepthControl::kalman_chi_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="104" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa364580ac5cd3ab8c72c78832e95a720" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::kalman_chi2_</definition>
+        <argsstring></argsstring>
+        <name>kalman_chi2_</name>
+        <qualifiedname>DepthControl::kalman_chi2_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="105" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a1f5131a1c31e5d086d9155e1f89240c0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::kalman_cz_</definition>
+        <argsstring></argsstring>
+        <name>kalman_cz_</name>
+        <qualifiedname>DepthControl::kalman_cz_</qualifiedname>
+        <initializer>= 3.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="106" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ad559226bb22bb926841f2b917f41d288" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::piston_volume_</definition>
+        <argsstring></argsstring>
+        <name>piston_volume_</name>
+        <qualifiedname>DepthControl::piston_volume_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="107" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1aa61e76c569b2093004bbc981e33a5e9d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::depth_fusion_</definition>
+        <argsstring></argsstring>
+        <name>depth_fusion_</name>
+        <qualifiedname>DepthControl::depth_fusion_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="109" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a8a024f440da0eff3d5ae72ab47662623" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::depth_set_point_</definition>
+        <argsstring></argsstring>
+        <name>depth_set_point_</name>
+        <qualifiedname>DepthControl::depth_set_point_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="110" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a7e9789482747830f9ac3b541539ba667" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::limit_velocity_</definition>
+        <argsstring></argsstring>
+        <name>limit_velocity_</name>
+        <qualifiedname>DepthControl::limit_velocity_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="111" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1af5f99e6f53622a8a8912b7de33b1ac1c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::limit_velocity_last_</definition>
+        <argsstring></argsstring>
+        <name>limit_velocity_last_</name>
+        <qualifiedname>DepthControl::limit_velocity_last_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="112" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a4c0506195d6e946fdf7c907815ccad0d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::approach_velocity_</definition>
+        <argsstring></argsstring>
+        <name>approach_velocity_</name>
+        <qualifiedname>DepthControl::approach_velocity_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="113" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a2a376cf8a29cdee741d00cc45784097f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::temperature_</definition>
+        <argsstring></argsstring>
+        <name>temperature_</name>
+        <qualifiedname>DepthControl::temperature_</qualifiedname>
+        <initializer>= 288.15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="115" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a99b40b2e7248bd6def2efb6e0a3957b8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::pressure_</definition>
+        <argsstring></argsstring>
+        <name>pressure_</name>
+        <qualifiedname>DepthControl::pressure_</qualifiedname>
+        <initializer>= 101325</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="116" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a7006b0427c30dbcd88aa7e5a8703ac02" prot="public" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds DepthControl::last_waypoint_max_delay_</definition>
+        <argsstring></argsstring>
+        <name>last_waypoint_max_delay_</name>
+        <qualifiedname>DepthControl::last_waypoint_max_delay_</qualifiedname>
+        <initializer>= 5s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="118" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a05c6ef66ded390b4d9fc90c021f95430" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time DepthControl::last_waypoint_time_</definition>
+        <argsstring></argsstring>
+        <name>last_waypoint_time_</name>
+        <qualifiedname>DepthControl::last_waypoint_time_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="119" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1a264b6de435ce7b0a051802afad3903c6" prot="public" static="no" mutable="no">
+        <type><ref refid="classDepthControl_1aa4127b865173986676f7bade1c461410" kindref="member">STATE_MACHINE</ref></type>
+        <definition>STATE_MACHINE DepthControl::regulation_state_</definition>
+        <argsstring></argsstring>
+        <name>regulation_state_</name>
+        <qualifiedname>DepthControl::regulation_state_</qualifiedname>
+        <initializer>= STATE_SURFACE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="124" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1ac42344eeda10d9c508e1ce7f818c872d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::y_debug_</definition>
+        <argsstring></argsstring>
+        <name>y_debug_</name>
+        <qualifiedname>DepthControl::y_debug_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Debug. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="127" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1af522038aba0a81df9aed4fa446b3e3f6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::dy_debug_</definition>
+        <argsstring></argsstring>
+        <name>dy_debug_</name>
+        <qualifiedname>DepthControl::dy_debug_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="128" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDepthControl_1afcb3b799c7fbbc92d401e9b1836f5eff" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double DepthControl::u_debug_</definition>
+        <argsstring></argsstring>
+        <name>u_debug_</name>
+        <qualifiedname>DepthControl::u_debug_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="129" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDepthControl_1aa9e38ed429a26de27ea4d4a6fb6e60ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DepthControl::DepthControl</definition>
+        <argsstring>(const rclcpp::Time &amp;start_time)</argsstring>
+        <name>DepthControl</name>
+        <qualifiedname>DepthControl::DepthControl</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="16" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="7" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a372e47e9230e163518a68d4ad5425fe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_state</definition>
+        <argsstring>(const double &amp;velocity, const double &amp;depth, const double &amp;chi, const double &amp;chi2, const double &amp;cz, const double &amp;offset_total, const rclcpp::Time &amp;time_update)</argsstring>
+        <name>update_state</name>
+        <qualifiedname>DepthControl::update_state</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>velocity</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>chi</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>chi2</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>cz</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>offset_total</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time_update</declname>
+        </param>
+        <briefdescription>
+<para>Update the state of the depth control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chi2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cz</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volume_air</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset_total</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="145" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="21" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a7f6b69209cac7b85d932b7b8b7eb4934" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_piston</definition>
+        <argsstring>(const int &amp;position, const bool &amp;switch_top, const bool &amp;switch_bottom, const int &amp;state, const rclcpp::Time &amp;time_update)</argsstring>
+        <name>update_piston</name>
+        <qualifiedname>DepthControl::update_piston</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>switch_top</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>switch_bottom</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time_update</declname>
+        </param>
+        <briefdescription>
+<para>Update the data from the piston. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>switch_top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>switch_bottom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="162" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="39" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a39c4c52aa8f83ed2df1c0c435194706c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_depth</definition>
+        <argsstring>(const double &amp;depth, const double &amp;pressure)</argsstring>
+        <name>update_depth</name>
+        <qualifiedname>DepthControl::update_depth</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pressure</declname>
+        </param>
+        <briefdescription>
+<para>Update the data from depth. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in m] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pressure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in bar] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="174" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="54" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a59a30728a2b9c595f95c680aed1dcce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_safety</definition>
+        <argsstring>(const bool &amp;emergency, const float &amp;limit_depth)</argsstring>
+        <name>update_safety</name>
+        <qualifiedname>DepthControl::update_safety</qualifiedname>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>emergency</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>limit_depth</declname>
+        </param>
+        <briefdescription>
+<para>Update the data from safety. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emergency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit_depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="183" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a5dad07bebba8979720a499cce990d86b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_waypoint</definition>
+        <argsstring>(const float &amp;depth, const double &amp;limit_velocity, const rclcpp::Time &amp;time_update, const bool &amp;enable_control)</argsstring>
+        <name>update_waypoint</name>
+        <qualifiedname>DepthControl::update_waypoint</qualifiedname>
+        <param>
+          <type>const float &amp;</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>limit_velocity</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>time_update</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>enable_control</declname>
+        </param>
+        <briefdescription>
+<para>Update the data from the mission. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit_velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time_update</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable_control</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="194" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="70" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a32465b4c8135b6c8098e2a177ee319af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_density</definition>
+        <argsstring>(const float &amp;density)</argsstring>
+        <name>update_density</name>
+        <qualifiedname>DepthControl::update_density</qualifiedname>
+        <param>
+          <type>const float &amp;</type>
+          <declname>density</declname>
+        </param>
+        <briefdescription>
+<para>Update the data from density. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>density</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="204" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="92" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1ab70c0372dcb3096f4ce7a9861cf66e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_temperature</definition>
+        <argsstring>(const float &amp;temperature)</argsstring>
+        <name>update_temperature</name>
+        <qualifiedname>DepthControl::update_temperature</qualifiedname>
+        <param>
+          <type>const float &amp;</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+<para>Update the data from temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[in degree celsius] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="210" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a2ad0870b8b131eb27a8ed821f640bfbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DepthControl::compute_u</definition>
+        <argsstring>(double set_point, double limit_velocity)</argsstring>
+        <name>compute_u</name>
+        <qualifiedname>DepthControl::compute_u</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>set_point</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>limit_velocity</declname>
+        </param>
+        <briefdescription>
+<para>Compute the command associated to the depth control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>set_point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit_velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="218" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="157" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1ae7f6a2a229fd4412209a2c99540fbea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_coeff</definition>
+        <argsstring>()</argsstring>
+        <name>update_coeff</name>
+        <qualifiedname>DepthControl::update_coeff</qualifiedname>
+        <briefdescription>
+<para>Update coefficients computed from parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Computed parameters</para>
+<para>Ensuring a safety margin on the piston flow of piston_flow_security_percentage</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="229" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="141" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1ac4651652dc7c2a0d9dcf7d5765bfe67e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::state_machine_step</definition>
+        <argsstring>(const rclcpp::Duration &amp;dt, const rclcpp::Time &amp;current_time)</argsstring>
+        <name>state_machine_step</name>
+        <qualifiedname>DepthControl::state_machine_step</qualifiedname>
+        <param>
+          <type>const rclcpp::Duration &amp;</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>current_time</declname>
+        </param>
+        <briefdescription>
+<para>Update the state machine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the command to send to the piston </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Analyze specific cases</para>
+<para>Wait at surface until the waypoint is under the limit depth of regulation</para>
+<para>Case where set point is surface</para>
+<para>Case where float is between surface and limit_depth_control</para>
+<para>Compute the position of the piston to be at equilibrium</para>
+<para>Assuming no compressibility effect</para>
+<para>First move to position_eq and the slowly decrease piston volume by flow_piston_sink_</para>
+<para>position reached</para>
+<para>continue to sink until limit_depth_control_ is reached</para>
+<para>(m3/s * s) / (m3/tick)</para>
+<para>When limit_depth_control_ is reached</para>
+<para>Test if data is too old</para>
+<para>Compute several commands according to velocity acceptable bounds</para>
+<para>Find best command</para>
+<para>Mechanical limits (in = v_min, out = v_max)</para>
+<para>Limitation of u according to engine capabilities</para>
+<para>Check next formula in the case where piston_set_point-piston_position &gt; piston_max_velocity/frequency Previous form do not allow movement under 1 tick piston_set_point = piston_position - u/(tick_to_volume*control_loop_frequency);</para>
+<para>Did not received state =&gt; surface</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="237" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="204" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a243f24f6f62b11d575a06881d7a18c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::set_start_time</definition>
+        <argsstring>(const rclcpp::Time &amp;start_time)</argsstring>
+        <name>set_start_time</name>
+        <qualifiedname>DepthControl::set_start_time</qualifiedname>
+        <param>
+          <type>const rclcpp::Time &amp;</type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+<para>Set the start time of the depth control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="243" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a3b07f56e22380852e88ca3cf6911a4d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DepthControl::update_AB</definition>
+        <argsstring>()</argsstring>
+        <name>update_AB</name>
+        <qualifiedname>DepthControl::update_AB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update coefficients A and B </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="248" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="98" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1acb75181f01e2f3d3816d9c1ce98519d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DepthControl::fz_computation</definition>
+        <argsstring>(double velocity) const</argsstring>
+        <name>fz_computation</name>
+        <qualifiedname>DepthControl::fz_computation</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="250" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="105" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classDepthControl_1a3409274ce6627e6b6eb5fb453d4c8527" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DepthControl::fz_derivative_computation</definition>
+        <argsstring>(double velocity) const</argsstring>
+        <name>fz_derivative_computation</name>
+        <qualifiedname>DepthControl::fz_derivative_computation</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="252" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="130" bodyend="139"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classDepthControl_1a9f06b862197fc1d9edba534d9bf10ceb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double DepthControl::optimize_u</definition>
+        <argsstring>(std::array&lt; double, 4 &gt; &amp;u_tab)</argsstring>
+        <name>optimize_u</name>
+        <qualifiedname>DepthControl::optimize_u</qualifiedname>
+        <param>
+          <type>std::array&lt; double, 4 &gt; &amp;</type>
+          <declname>u_tab</declname>
+        </param>
+        <briefdescription>
+<para>Optimize the command to reduce power consumptionr. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>u_tab</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="224" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control.cpp" bodystart="193" bodyend="202"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>AlphaSolver</label>
+        <link refid="classAlphaSolver"/>
+      </node>
+      <node id="1">
+        <label>DepthControl</label>
+        <link refid="classDepthControl"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>alpha_solver_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" line="13" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control.h" bodystart="13" bodyend="253"/>
+    <listofallmembers>
+      <member refid="classDepthControl_1a9de8d9b7d17873ff3f0a97de5b409a0c" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>alpha_solver_</name></member>
+      <member refid="classDepthControl_1a4c0506195d6e946fdf7c907815ccad0d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>approach_velocity_</name></member>
+      <member refid="classDepthControl_1a770f4de8b01b4ccfe9177def2407e163" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>coeff_A_</name></member>
+      <member refid="classDepthControl_1a690b60fe3d02fe5d7212b7dd31d7271a" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>coeff_B_</name></member>
+      <member refid="classDepthControl_1a2ad0870b8b131eb27a8ed821f640bfbc" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>compute_u</name></member>
+      <member refid="classDepthControl_1a65b156b416bf16565ded205926903b15" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>control_filter_</name></member>
+      <member refid="classDepthControl_1a07b15b4ea2453394f39861d4f57ed326" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>debug_</name></member>
+      <member refid="classDepthControl_1a7fe6d0f2852df4467f7c9dbf4d348935" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>degree_to_kelvin_</name></member>
+      <member refid="classDepthControl_1a6b948e5653c56e15b99916ef81f9fd6a" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>delta_position_lb_</name></member>
+      <member refid="classDepthControl_1ac7470eeeca4df9fb0197554d1750c69f" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>delta_position_ub_</name></member>
+      <member refid="classDepthControl_1aa19682558432a49f98adc4e69f069d76" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>delta_velocity_lb_</name></member>
+      <member refid="classDepthControl_1a1117d35f953065e3a72a4837b348a27f" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>delta_velocity_ub_</name></member>
+      <member refid="classDepthControl_1aa61e76c569b2093004bbc981e33a5e9d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>depth_fusion_</name></member>
+      <member refid="classDepthControl_1a8a024f440da0eff3d5ae72ab47662623" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>depth_set_point_</name></member>
+      <member refid="classDepthControl_1aa9e38ed429a26de27ea4d4a6fb6e60ec" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>DepthControl</name></member>
+      <member refid="classDepthControl_1af522038aba0a81df9aed4fa446b3e3f6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>dy_debug_</name></member>
+      <member refid="classDepthControl_1a3011e548c11fb4e45c696c040a7492e1" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>emergency_</name></member>
+      <member refid="classDepthControl_1a2d3a15ffc910793830f608ee5c455f35" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>flow_max_</name></member>
+      <member refid="classDepthControl_1a99600b6dd5902df4f38c91ecea8b6233" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>flow_piston_sink_</name></member>
+      <member refid="classDepthControl_1acb75181f01e2f3d3816d9c1ce98519d6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_computation</name></member>
+      <member refid="classDepthControl_1ad8019f3eb15afafdc9f6401f7d3cdbc0" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_derivative_at_model_boundary_negative_</name></member>
+      <member refid="classDepthControl_1aa69a7eb881dba7434828fb4b917ac6d4" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_derivative_at_model_boundary_positive_</name></member>
+      <member refid="classDepthControl_1a3409274ce6627e6b6eb5fb453d4c8527" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_derivative_computation</name></member>
+      <member refid="classDepthControl_1a86aaf81a8dd7b663f5d0c5439d3a6c3e" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_model_boundary_velocity_negative_</name></member>
+      <member refid="classDepthControl_1a71fe2a1ffe1929e1c7f458f7e961fd5f" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_model_boundary_velocity_positive_</name></member>
+      <member refid="classDepthControl_1accef033c8fd35192ed75c9caf684006a" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_offset_at_model_boundary_negative_</name></member>
+      <member refid="classDepthControl_1af61b7102d5232e9e0aa19e4010f5e9d2" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>fz_offset_at_model_boundary_positive_</name></member>
+      <member refid="classDepthControl_1ab23c5141cfa6aaae39c4e161bda2b21f" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_depth_enable_</name></member>
+      <member refid="classDepthControl_1a794580981df0e68f66b776a049758d52" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_depth_validation_</name></member>
+      <member refid="classDepthControl_1ab4cd21949282bcd5a4e41be058374b70" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_depth_validation_duration_</name></member>
+      <member refid="classDepthControl_1a5a6b1b5ef2f8fb5a98e5851754e8a449" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_depth_validation_time_</name></member>
+      <member refid="classDepthControl_1aef7351f3662d9e60cc1bed8266b1fb06" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_depth_value_enter_</name></member>
+      <member refid="classDepthControl_1aa10434c9421f25f5281f195b58675069" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_depth_value_exit_</name></member>
+      <member refid="classDepthControl_1a544e36c1e036a249574637acf6d4253d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_velocity_enter_</name></member>
+      <member refid="classDepthControl_1a1f936e9c5dd54976e8921441e442161d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>hold_velocity_exit_</name></member>
+      <member refid="classDepthControl_1ad865b28866049d5808b0da77d339e9a6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>is_exit_</name></member>
+      <member refid="classDepthControl_1aa364580ac5cd3ab8c72c78832e95a720" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>kalman_chi2_</name></member>
+      <member refid="classDepthControl_1ac9afb26121da2cb326bf8e7b1ca5e5f0" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>kalman_chi_</name></member>
+      <member refid="classDepthControl_1a1f5131a1c31e5d086d9155e1f89240c0" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>kalman_cz_</name></member>
+      <member refid="classDepthControl_1a339094eaaa76ccb89252027f69f8213b" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>kalman_depth_</name></member>
+      <member refid="classDepthControl_1a8f24eef83e0bdf458ae69234c2c0de49" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>kalman_total_offset_</name></member>
+      <member refid="classDepthControl_1a0e327ec247f4841207cbce922e074f73" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>kalman_velocity_</name></member>
+      <member refid="classDepthControl_1a7006b0427c30dbcd88aa7e5a8703ac02" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>last_waypoint_max_delay_</name></member>
+      <member refid="classDepthControl_1a05c6ef66ded390b4d9fc90c021f95430" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>last_waypoint_time_</name></member>
+      <member refid="classDepthControl_1a411f5a2fbae7d78ba0f31cb9a5ce66a1" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>limit_depth_</name></member>
+      <member refid="classDepthControl_1aeeb3dba2fb490cb18a26c712d0266b77" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>limit_depth_control_</name></member>
+      <member refid="classDepthControl_1a7e9789482747830f9ac3b541539ba667" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>limit_velocity_</name></member>
+      <member refid="classDepthControl_1af5f99e6f53622a8a8912b7de33b1ac1c" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>limit_velocity_last_</name></member>
+      <member refid="classDepthControl_1aa453367ec30b6ebb48355d730e51f0f6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>motor_max_rpm_</name></member>
+      <member refid="classDepthControl_1a9f06b862197fc1d9edba534d9bf10ceb" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>optimize_u</name></member>
+      <member refid="classDepthControl_1ab6743c1a698eea72aa2ce5e830ea9419" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>physics_g_</name></member>
+      <member refid="classDepthControl_1a22270dcfc662ccb95bd0a3209b2d7783" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>physics_rho_</name></member>
+      <member refid="classDepthControl_1ac7f6dba2b1f92c550a1b90d5f9880647" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_diameter_</name></member>
+      <member refid="classDepthControl_1a9453df97db241b35dbcbf192e65405f2" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_flow_security_percentage_</name></member>
+      <member refid="classDepthControl_1ae873795e04353ec099ae4c28de869eab" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_hysteresis_</name></member>
+      <member refid="classDepthControl_1aa0f81d9d6ff5413aa0e3d949253ae03b" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_max_tick_value_</name></member>
+      <member refid="classDepthControl_1a16471dfb5798872cbba6ddd686aac8f1" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_position_</name></member>
+      <member refid="classDepthControl_1ac479147c93b89ebd0b98759298c674bf" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_reach_position_dead_zone_</name></member>
+      <member refid="classDepthControl_1a801df5bac2d9b3aa0b092738dff4fa4d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_set_point_</name></member>
+      <member refid="classDepthControl_1ab796a883665d94cf4ea62c9aff0c767e" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_state_</name></member>
+      <member refid="classDepthControl_1aa9835a33cd9007caabc8598e9571687f" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>PISTON_STATE_OK</name></member>
+      <member refid="classDepthControl_1afce8cb443c18ca3e2e73e828f9755d05" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_switch_bottom_</name></member>
+      <member refid="classDepthControl_1a8d9d11c6820784b81e5bb939f9367065" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_switch_top_</name></member>
+      <member refid="classDepthControl_1ad559226bb22bb926841f2b917f41d288" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>piston_volume_</name></member>
+      <member refid="classDepthControl_1a99b40b2e7248bd6def2efb6e0a3957b8" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>pressure_</name></member>
+      <member refid="classDepthControl_1a264b6de435ce7b0a051802afad3903c6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>regulation_state_</name></member>
+      <member refid="classDepthControl_1adbf048468788abf5ac6d9e839f9f70f9" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>robot_added_mass_</name></member>
+      <member refid="classDepthControl_1a5ab5866c2ec4f635a9d9dc917135bc52" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>robot_diameter_</name></member>
+      <member refid="classDepthControl_1a1ad45fb4e3a6213e60be3139d899a2c0" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>robot_mass_</name></member>
+      <member refid="classDepthControl_1a901eb8800886555607963d28a46cd247" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>root_regulation_</name></member>
+      <member refid="classDepthControl_1a276df80b9ebdc77ec3f63b3b9b190089" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>safety_time_no_data_</name></member>
+      <member refid="classDepthControl_1aa3e413a415d43b1ed90e81035d455deb" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>screw_thread_</name></member>
+      <member refid="classDepthControl_1a243f24f6f62b11d575a06881d7a18c16" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>set_start_time</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410afafafc96ef1fab50dafdae907c409acb" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_COMPUTE_ALPHA</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410a9ab181ebf6d5d1293759ab6911cea3a5" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_CONTROL</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410a5dd9595d163a47c82a66f4c6847da4e8" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_HOLD_DEPTH</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_MACHINE</name></member>
+      <member refid="classDepthControl_1ac4651652dc7c2a0d9dcf7d5765bfe67e" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>state_machine_step</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410a81e0ccaff81b4c47aae231cd86601ef6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_PISTON_ISSUE</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410a59acb79a177140ede8280416e84c01f9" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_SINK</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410a4adcfedab85471703dfb08eb9612c2d3" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_STOP</name></member>
+      <member refid="classDepthControl_1aa4127b865173986676f7bade1c461410a1e7b94218ff6f0840e5f24022e818847" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>STATE_SURFACE</name></member>
+      <member refid="classDepthControl_1a2a376cf8a29cdee741d00cc45784097f" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>temperature_</name></member>
+      <member refid="classDepthControl_1a7ebda0fccee8177240aad732c770d337" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>tick_per_turn_</name></member>
+      <member refid="classDepthControl_1a873f195fc16ee70cc0ef656be5d7881d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>tick_to_volume_</name></member>
+      <member refid="classDepthControl_1a544336d8e93bf4f0595809df63796329" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>time_last_kalman_callback_</name></member>
+      <member refid="classDepthControl_1a222f7fcde439d6d706121e5f48ebdce3" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>time_last_piston_callback_</name></member>
+      <member refid="classDepthControl_1afcb3b799c7fbbc92d401e9b1836f5eff" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>u_debug_</name></member>
+      <member refid="classDepthControl_1a3b07f56e22380852e88ca3cf6911a4d7" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_AB</name></member>
+      <member refid="classDepthControl_1ae7f6a2a229fd4412209a2c99540fbea6" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_coeff</name></member>
+      <member refid="classDepthControl_1a32465b4c8135b6c8098e2a177ee319af" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_density</name></member>
+      <member refid="classDepthControl_1a39c4c52aa8f83ed2df1c0c435194706c" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_depth</name></member>
+      <member refid="classDepthControl_1a7f6b69209cac7b85d932b7b8b7eb4934" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_piston</name></member>
+      <member refid="classDepthControl_1a59a30728a2b9c595f95c680aed1dcce7" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_safety</name></member>
+      <member refid="classDepthControl_1a372e47e9230e163518a68d4ad5425fe2" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_state</name></member>
+      <member refid="classDepthControl_1ab70c0372dcb3096f4ce7a9861cf66e29" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_temperature</name></member>
+      <member refid="classDepthControl_1a5dad07bebba8979720a499cce990d86b" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>update_waypoint</name></member>
+      <member refid="classDepthControl_1ac42344eeda10d9c508e1ce7f818c872d" prot="public" virt="non-virtual"><scope>DepthControl</scope><name>y_debug_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,825 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classAudioRecorderNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>AudioRecorderNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAudioRecorderNode_1ae7f217d0b8d69b34feb4dfa686a0cf0e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioRecorderNode::audio_frequency_</definition>
+        <argsstring></argsstring>
+        <name>audio_frequency_</name>
+        <qualifiedname>AudioRecorderNode::audio_frequency_</qualifiedname>
+        <initializer>= 192000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="33" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a1b5d534c9df8912d85d8ef8df12c78ba" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioRecorderNode::audio_max_file_time_</definition>
+        <argsstring></argsstring>
+        <name>audio_max_file_time_</name>
+        <qualifiedname>AudioRecorderNode::audio_max_file_time_</qualifiedname>
+        <initializer>= 600</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="34" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a7887ada267b73f287e72697bf4a2403f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioRecorderNode::audio_nb_channels_</definition>
+        <argsstring></argsstring>
+        <name>audio_nb_channels_</name>
+        <qualifiedname>AudioRecorderNode::audio_nb_channels_</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="35" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a91e55218eadb2b42558e54fd065ea58f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioRecorderNode::audio_nb_bits_</definition>
+        <argsstring></argsstring>
+        <name>audio_nb_bits_</name>
+        <qualifiedname>AudioRecorderNode::audio_nb_bits_</qualifiedname>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="36" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ac04eaf448fef2eacd7e98e400883a82b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AudioRecorderNode::audio_device_</definition>
+        <argsstring></argsstring>
+        <name>audio_device_</name>
+        <qualifiedname>AudioRecorderNode::audio_device_</qualifiedname>
+        <initializer>= &quot;plughw:CARD=sndrpii2scard&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="37" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1af2a8c6e5093fa321bb575f5aa582a9dc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AudioRecorderNode::audio_command_last_</definition>
+        <argsstring></argsstring>
+        <name>audio_command_last_</name>
+        <qualifiedname>AudioRecorderNode::audio_command_last_</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="38" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ae381bf0b350828697d16499460d6699c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AudioRecorderNode::audio_hdd_space_limit_stop_</definition>
+        <argsstring></argsstring>
+        <name>audio_hdd_space_limit_stop_</name>
+        <qualifiedname>AudioRecorderNode::audio_hdd_space_limit_stop_</qualifiedname>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="39" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a4f3a83eb7f1531195579ebf6d11ddcb9" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AudioRecorderNode::audio_save_directory_</definition>
+        <argsstring></argsstring>
+        <name>audio_save_directory_</name>
+        <qualifiedname>AudioRecorderNode::audio_save_directory_</qualifiedname>
+        <initializer>= &quot;/audio/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="41" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a1f303654adb0615aa20141d5f3f7156c" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr AudioRecorderNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>AudioRecorderNode::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="44" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a20645d54dfeacf9c7b1c2487d8841f7b" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds AudioRecorderNode::loop_safety_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_safety_dt_</name>
+        <qualifiedname>AudioRecorderNode::loop_safety_dt_</qualifiedname>
+        <initializer>= 5s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="45" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1abf688b448c0789ee01c463ec484053c6" prot="private" static="no" mutable="no">
+        <type>rclcpp::CallbackGroup::SharedPtr</type>
+        <definition>rclcpp::CallbackGroup::SharedPtr AudioRecorderNode::callback_group_</definition>
+        <argsstring></argsstring>
+        <name>callback_group_</name>
+        <qualifiedname>AudioRecorderNode::callback_group_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="47" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a8d20fcc7bfba9817f2e74f5b1eb0be84" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string AudioRecorderNode::workingDirectory_</definition>
+        <argsstring></argsstring>
+        <name>workingDirectory_</name>
+        <qualifiedname>AudioRecorderNode::workingDirectory_</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="48" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1af72e59eb4c468d15928d8241b7f2ad49" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AudioRecorderNode::thread_currently_running_</definition>
+        <argsstring></argsstring>
+        <name>thread_currently_running_</name>
+        <qualifiedname>AudioRecorderNode::thread_currently_running_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a59b7c0e036046a44e68aaf0960f5de5b" prot="private" static="no" mutable="no">
+        <type>std::future&lt; int &gt;</type>
+        <definition>std::future&lt;int&gt; AudioRecorderNode::subprocessFuture_</definition>
+        <argsstring></argsstring>
+        <name>subprocessFuture_</name>
+        <qualifiedname>AudioRecorderNode::subprocessFuture_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="50" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ae97a88754ba33afaa325855baa3e3733" prot="private" static="no" mutable="no">
+        <type><ref refid="classTLV320ADC" kindref="compound">TLV320ADC</ref></type>
+        <definition>TLV320ADC AudioRecorderNode::tlv_</definition>
+        <argsstring></argsstring>
+        <name>tlv_</name>
+        <qualifiedname>AudioRecorderNode::tlv_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="52" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a98a2701eba8770d7abe1e33b0fb48784" prot="private" static="no" mutable="no">
+        <type><ref refid="classDspicAcoustic" kindref="compound">DspicAcoustic</ref></type>
+        <definition>DspicAcoustic AudioRecorderNode::dspic_</definition>
+        <argsstring></argsstring>
+        <name>dspic_</name>
+        <qualifiedname>AudioRecorderNode::dspic_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="53" column="19" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ac9acd791737ac97746c55b29aa57f946" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AudioRecorderNode::gain_ch1_</definition>
+        <argsstring></argsstring>
+        <name>gain_ch1_</name>
+        <qualifiedname>AudioRecorderNode::gain_ch1_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="55" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a20f9c6cd2133d1b975438648110bc79e" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AudioRecorderNode::gain_ch2_</definition>
+        <argsstring></argsstring>
+        <name>gain_ch2_</name>
+        <qualifiedname>AudioRecorderNode::gain_ch2_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="56" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a5670a0b5369c30db39fe334212f09627" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AudioRecorderNode::robot_code_</definition>
+        <argsstring></argsstring>
+        <name>robot_code_</name>
+        <qualifiedname>AudioRecorderNode::robot_code_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="57" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1aa16fb4f4425d8529204e87528e5deb6b" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AudioRecorderNode::duration_between_shoot_</definition>
+        <argsstring></argsstring>
+        <name>duration_between_shoot_</name>
+        <qualifiedname>AudioRecorderNode::duration_between_shoot_</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="58" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a1d87fe3a51a11adedc8bee77c69d56b8" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AudioRecorderNode::time_slot_duration_</definition>
+        <argsstring></argsstring>
+        <name>time_slot_duration_</name>
+        <qualifiedname>AudioRecorderNode::time_slot_duration_</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="59" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1af37a7c5570d0593769df67167b61d071" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AudioRecorderNode::enable_sound_tx_</definition>
+        <argsstring></argsstring>
+        <name>enable_sound_tx_</name>
+        <qualifiedname>AudioRecorderNode::enable_sound_tx_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="61" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a41885d24e3c53edd31f245a0c3c124cf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AudioRecorderNode::enable_chirp_</definition>
+        <argsstring></argsstring>
+        <name>enable_chirp_</name>
+        <qualifiedname>AudioRecorderNode::enable_chirp_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="62" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a563211b65fdbb37ab8e535c9cbacd49a" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AudioRecorderNode::frequency_middle_</definition>
+        <argsstring></argsstring>
+        <name>frequency_middle_</name>
+        <qualifiedname>AudioRecorderNode::frequency_middle_</qualifiedname>
+        <initializer>= 40000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="63" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a5887259f72fa5254d6d96d57385b386c" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AudioRecorderNode::frequency_range_</definition>
+        <argsstring></argsstring>
+        <name>frequency_range_</name>
+        <qualifiedname>AudioRecorderNode::frequency_range_</qualifiedname>
+        <initializer>= 5000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="64" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ab3e5c717257daed15b37029a33f94f86" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AudioRecorderNode::signal_function_</definition>
+        <argsstring></argsstring>
+        <name>signal_function_</name>
+        <qualifiedname>AudioRecorderNode::signal_function_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="65" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a867ba0041952b650c9b2d6b4c3258f7e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AudioRecorderNode::gnss_fix_once_</definition>
+        <argsstring></argsstring>
+        <name>gnss_fix_once_</name>
+        <qualifiedname>AudioRecorderNode::gnss_fix_once_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="67" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ae8960f4853da37e4de75976049525a73" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AudioRecorderNode::dspic_posix_fix_</definition>
+        <argsstring></argsstring>
+        <name>dspic_posix_fix_</name>
+        <qualifiedname>AudioRecorderNode::dspic_posix_fix_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="68" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a0b6210f7e14d0c9a437c7afb22d71add" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr AudioRecorderNode::service_rosbag_</definition>
+        <argsstring></argsstring>
+        <name>service_rosbag_</name>
+        <qualifiedname>AudioRecorderNode::service_rosbag_</qualifiedname>
+        <briefdescription>
+<para>Interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="71" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1ab1639fe46c43b36e3779e8a7a0650e26" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr AudioRecorderNode::service_chirp_</definition>
+        <argsstring></argsstring>
+        <name>service_chirp_</name>
+        <qualifiedname>AudioRecorderNode::service_chirp_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="73" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a85a65fab6e4a15cff7ae2ee21ee23f10" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; std_msgs::msg::Bool &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;std_msgs::msg::Bool&gt;::SharedPtr AudioRecorderNode::publisher_record_</definition>
+        <argsstring></argsstring>
+        <name>publisher_record_</name>
+        <qualifiedname>AudioRecorderNode::publisher_record_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="75" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1afab3f7bd6aec648a0ad13287bc3bd807" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::SyncDspic &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::SyncDspic&gt;::SharedPtr AudioRecorderNode::publisher_dspic_debug_</definition>
+        <argsstring></argsstring>
+        <name>publisher_dspic_debug_</name>
+        <qualifiedname>AudioRecorderNode::publisher_dspic_debug_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="77" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAudioRecorderNode_1a4a8b48995a822eca78ca65b2346a7e9c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::GpsFix &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr AudioRecorderNode::subscriber_gnss_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_gnss_data_</name>
+        <qualifiedname>AudioRecorderNode::subscriber_gnss_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="79" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAudioRecorderNode_1a8283003d7d6bce484ee594604b1dd3a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AudioRecorderNode::AudioRecorderNode</definition>
+        <argsstring>()</argsstring>
+        <name>AudioRecorderNode</name>
+        <qualifiedname>AudioRecorderNode::AudioRecorderNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="25" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="11" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1a34cf86b1ca6eaa3e237d5399ee8d6a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AudioRecorderNode::~AudioRecorderNode</definition>
+        <argsstring>() override</argsstring>
+        <name>~AudioRecorderNode</name>
+        <qualifiedname>AudioRecorderNode::~AudioRecorderNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="27" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1abfa55e4a27c52e3322289b5d0990720c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string AudioRecorderNode::get_arecord_command</definition>
+        <argsstring>() const</argsstring>
+        <name>get_arecord_command</name>
+        <qualifiedname>AudioRecorderNode::get_arecord_command</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="29" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="90" bodyend="100"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAudioRecorderNode_1a4b994f95b042d7dd5537578fdab76335" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::manage_subprocess</definition>
+        <argsstring>(bool start_new_audio)</argsstring>
+        <name>manage_subprocess</name>
+        <qualifiedname>AudioRecorderNode::manage_subprocess</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>start_new_audio</declname>
+        </param>
+        <briefdescription>
+<para>Parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="85" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="102" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1ace497c55ee85aa1a86cf28eb992c990b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::wait_kill</definition>
+        <argsstring>()</argsstring>
+        <name>wait_kill</name>
+        <qualifiedname>AudioRecorderNode::wait_kill</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="87" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="158" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1a939c50013ddcbb3c18a6d70d641e2d9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>AudioRecorderNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="92" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="167" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1ac782bed9fc1ddc1024df824c301b7b97" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>AudioRecorderNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces to this node (publishers &amp; subscribers) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="97" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="216" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1ab2bf4318958c703a14096d0838d5c360" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::callback_trigger</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; response)</argsstring>
+        <name>callback_trigger</name>
+        <qualifiedname>AudioRecorderNode::callback_trigger</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for the service trigger <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="105" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="252" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1a3ab2c7bba2d347025e25cb5420d2e59c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::gpsd_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::GpsFix &amp;msg)</argsstring>
+        <name>gpsd_callback</name>
+        <qualifiedname>AudioRecorderNode::gpsd_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::GpsFix &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="113" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="233" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1ae331238f7cbde0dd3c55156cb3db0cd1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>AudioRecorderNode::timer_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="118" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="130" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classAudioRecorderNode_1a7d0f85d127b0b324332d96640dfec50b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AudioRecorderNode::chirp_callback</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; response)</argsstring>
+        <name>chirp_callback</name>
+        <qualifiedname>AudioRecorderNode::chirp_callback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for the service chirp <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="126" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp" bodystart="239" bodyend="250"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AudioRecorderNode</label>
+        <link refid="classAudioRecorderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AudioRecorderNode</label>
+        <link refid="classAudioRecorderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" line="23" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h" bodystart="23" bodyend="129"/>
+    <listofallmembers>
+      <member refid="classAudioRecorderNode_1af2a8c6e5093fa321bb575f5aa582a9dc" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_command_last_</name></member>
+      <member refid="classAudioRecorderNode_1ac04eaf448fef2eacd7e98e400883a82b" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_device_</name></member>
+      <member refid="classAudioRecorderNode_1ae7f217d0b8d69b34feb4dfa686a0cf0e" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_frequency_</name></member>
+      <member refid="classAudioRecorderNode_1ae381bf0b350828697d16499460d6699c" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_hdd_space_limit_stop_</name></member>
+      <member refid="classAudioRecorderNode_1a1b5d534c9df8912d85d8ef8df12c78ba" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_max_file_time_</name></member>
+      <member refid="classAudioRecorderNode_1a91e55218eadb2b42558e54fd065ea58f" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_nb_bits_</name></member>
+      <member refid="classAudioRecorderNode_1a7887ada267b73f287e72697bf4a2403f" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_nb_channels_</name></member>
+      <member refid="classAudioRecorderNode_1a4f3a83eb7f1531195579ebf6d11ddcb9" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>audio_save_directory_</name></member>
+      <member refid="classAudioRecorderNode_1a8283003d7d6bce484ee594604b1dd3a4" prot="public" virt="non-virtual"><scope>AudioRecorderNode</scope><name>AudioRecorderNode</name></member>
+      <member refid="classAudioRecorderNode_1abf688b448c0789ee01c463ec484053c6" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>callback_group_</name></member>
+      <member refid="classAudioRecorderNode_1ab2bf4318958c703a14096d0838d5c360" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>callback_trigger</name></member>
+      <member refid="classAudioRecorderNode_1a7d0f85d127b0b324332d96640dfec50b" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>chirp_callback</name></member>
+      <member refid="classAudioRecorderNode_1a98a2701eba8770d7abe1e33b0fb48784" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>dspic_</name></member>
+      <member refid="classAudioRecorderNode_1ae8960f4853da37e4de75976049525a73" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>dspic_posix_fix_</name></member>
+      <member refid="classAudioRecorderNode_1aa16fb4f4425d8529204e87528e5deb6b" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>duration_between_shoot_</name></member>
+      <member refid="classAudioRecorderNode_1a41885d24e3c53edd31f245a0c3c124cf" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>enable_chirp_</name></member>
+      <member refid="classAudioRecorderNode_1af37a7c5570d0593769df67167b61d071" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>enable_sound_tx_</name></member>
+      <member refid="classAudioRecorderNode_1a563211b65fdbb37ab8e535c9cbacd49a" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>frequency_middle_</name></member>
+      <member refid="classAudioRecorderNode_1a5887259f72fa5254d6d96d57385b386c" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>frequency_range_</name></member>
+      <member refid="classAudioRecorderNode_1ac9acd791737ac97746c55b29aa57f946" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>gain_ch1_</name></member>
+      <member refid="classAudioRecorderNode_1a20f9c6cd2133d1b975438648110bc79e" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>gain_ch2_</name></member>
+      <member refid="classAudioRecorderNode_1abfa55e4a27c52e3322289b5d0990720c" prot="public" virt="non-virtual"><scope>AudioRecorderNode</scope><name>get_arecord_command</name></member>
+      <member refid="classAudioRecorderNode_1a867ba0041952b650c9b2d6b4c3258f7e" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>gnss_fix_once_</name></member>
+      <member refid="classAudioRecorderNode_1a3ab2c7bba2d347025e25cb5420d2e59c" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>gpsd_callback</name></member>
+      <member refid="classAudioRecorderNode_1ac782bed9fc1ddc1024df824c301b7b97" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>init_interfaces</name></member>
+      <member refid="classAudioRecorderNode_1a939c50013ddcbb3c18a6d70d641e2d9c" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>init_parameters</name></member>
+      <member refid="classAudioRecorderNode_1a20645d54dfeacf9c7b1c2487d8841f7b" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>loop_safety_dt_</name></member>
+      <member refid="classAudioRecorderNode_1a4b994f95b042d7dd5537578fdab76335" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>manage_subprocess</name></member>
+      <member refid="classAudioRecorderNode_1afab3f7bd6aec648a0ad13287bc3bd807" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>publisher_dspic_debug_</name></member>
+      <member refid="classAudioRecorderNode_1a85a65fab6e4a15cff7ae2ee21ee23f10" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>publisher_record_</name></member>
+      <member refid="classAudioRecorderNode_1a5670a0b5369c30db39fe334212f09627" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>robot_code_</name></member>
+      <member refid="classAudioRecorderNode_1ab1639fe46c43b36e3779e8a7a0650e26" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>service_chirp_</name></member>
+      <member refid="classAudioRecorderNode_1a0b6210f7e14d0c9a437c7afb22d71add" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>service_rosbag_</name></member>
+      <member refid="classAudioRecorderNode_1ab3e5c717257daed15b37029a33f94f86" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>signal_function_</name></member>
+      <member refid="classAudioRecorderNode_1a59b7c0e036046a44e68aaf0960f5de5b" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>subprocessFuture_</name></member>
+      <member refid="classAudioRecorderNode_1a4a8b48995a822eca78ca65b2346a7e9c" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>subscriber_gnss_data_</name></member>
+      <member refid="classAudioRecorderNode_1af72e59eb4c468d15928d8241b7f2ad49" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>thread_currently_running_</name></member>
+      <member refid="classAudioRecorderNode_1a1d87fe3a51a11adedc8bee77c69d56b8" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>time_slot_duration_</name></member>
+      <member refid="classAudioRecorderNode_1a1f303654adb0615aa20141d5f3f7156c" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>timer_</name></member>
+      <member refid="classAudioRecorderNode_1ae331238f7cbde0dd3c55156cb3db0cd1" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>timer_callback</name></member>
+      <member refid="classAudioRecorderNode_1ae97a88754ba33afaa325855baa3e3733" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>tlv_</name></member>
+      <member refid="classAudioRecorderNode_1ace497c55ee85aa1a86cf28eb992c990b" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>wait_kill</name></member>
+      <member refid="classAudioRecorderNode_1a8d20fcc7bfba9817f2e74f5b1eb0be84" prot="private" virt="non-virtual"><scope>AudioRecorderNode</scope><name>workingDirectory_</name></member>
+      <member refid="classAudioRecorderNode_1a34cf86b1ca6eaa3e237d5399ee8d6a62" prot="public" virt="non-virtual"><scope>AudioRecorderNode</scope><name>~AudioRecorderNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

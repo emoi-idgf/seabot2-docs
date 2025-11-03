@@ -1,0 +1,2109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classSafetyNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>SafetyNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5b" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>POWER_STATE_STATUS</name>
+        <qualifiedname>SafetyNode::POWER_STATE_STATUS</qualifiedname>
+        <enumvalue id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5baa5daf7f2ebbba4975d61dab1c40188c7" prot="private">
+          <name>IDLE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5ba13221576b8cf4b7102062637f5051c9f" prot="private">
+          <name>MEASURE_VOLTAGE</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5bae72055d8f0680789d1bf6adca7a079ce" prot="private">
+          <name>WIRE_DETECTION</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5ba3d6fc432ff9e2d9b890c591179a4401e" prot="private">
+          <name>POWER_ON</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5bacd61b519224960b846a2d9a5a0a2e849" prot="private">
+          <name>WAIT_TO_SLEEP</name>
+          <initializer>=4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5ba956322322b482354af6bf3a59833f155" prot="private">
+          <name>POWER_SLEEP</name>
+          <initializer>=5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="66" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSafetyNode_1af93cd9a3b53d4f7ac1f556d5711a2c23" prot="private" static="no" strong="no">
+        <type></type>
+        <name>ZERO_DEPTH_STATUS</name>
+        <qualifiedname>SafetyNode::ZERO_DEPTH_STATUS</qualifiedname>
+        <enumvalue id="classSafetyNode_1af93cd9a3b53d4f7ac1f556d5711a2c23a4f1520046d0675f1658cf675e9de1150" prot="private">
+          <name>IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSafetyNode_1af93cd9a3b53d4f7ac1f556d5711a2c23a718181071dc2e5c2a05652a611c902ee" prot="private">
+          <name>WAIT_RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="92" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSafetyNode_1a52bfb22a649d402841598f57442c6c53" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr SafetyNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>SafetyNode::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="25" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a5af7c50e473d7f2776bdd3a6bfc9c4ab" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>SafetyNode::loop_dt_</qualifiedname>
+        <initializer>= 1s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="26" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a65759f4aeb711977a86e90dbb3f51e78" prot="private" static="no" mutable="no">
+        <type>std::chrono::seconds</type>
+        <definition>std::chrono::seconds SafetyNode::delay_between_warning_msg_</definition>
+        <argsstring></argsstring>
+        <name>delay_between_warning_msg_</name>
+        <qualifiedname>SafetyNode::delay_between_warning_msg_</qualifiedname>
+        <initializer>= 2s</initializer>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="28" column="26" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aae0e3746c103204d7b37798bdca4edb3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::global_safety_ok_</definition>
+        <argsstring></argsstring>
+        <name>global_safety_ok_</name>
+        <qualifiedname>SafetyNode::global_safety_ok_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="31" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ab532ffb16f0e980b0244c0070a1b02c1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_published_frequency_</definition>
+        <argsstring></argsstring>
+        <name>safety_published_frequency_</name>
+        <qualifiedname>SafetyNode::safety_published_frequency_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="32" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a1696fbd00ea7c205a6ddd32750e6330a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_depth_limit_</definition>
+        <argsstring></argsstring>
+        <name>safety_depth_limit_</name>
+        <qualifiedname>SafetyNode::safety_depth_limit_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="33" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a324cc42e14f2dc4dacd8f20484536a38" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_batteries_limit_</definition>
+        <argsstring></argsstring>
+        <name>safety_batteries_limit_</name>
+        <qualifiedname>SafetyNode::safety_batteries_limit_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="34" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aa4bc16b0fab25f2335af2bb450a997f9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_depressurization_</definition>
+        <argsstring></argsstring>
+        <name>safety_depressurization_</name>
+        <qualifiedname>SafetyNode::safety_depressurization_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="35" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6f51efcd04012402a2cebe3cdf2ed938" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_seafloor_</definition>
+        <argsstring></argsstring>
+        <name>safety_seafloor_</name>
+        <qualifiedname>SafetyNode::safety_seafloor_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="36" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6ef7e040d071996fc46c38cc0de1cc27" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_piston_</definition>
+        <argsstring></argsstring>
+        <name>safety_piston_</name>
+        <qualifiedname>SafetyNode::safety_piston_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="37" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a55ee631ce448d75abbdfb49eed346219" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::safety_zero_depth_</definition>
+        <argsstring></argsstring>
+        <name>safety_zero_depth_</name>
+        <qualifiedname>SafetyNode::safety_zero_depth_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="38" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a66158a416bd8c22ad42c2e065bc3af46" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::cpu_</definition>
+        <argsstring></argsstring>
+        <name>cpu_</name>
+        <qualifiedname>SafetyNode::cpu_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="39" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a7260f04ecbffe0665e9995eaf88c3fa7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::ram_</definition>
+        <argsstring></argsstring>
+        <name>ram_</name>
+        <qualifiedname>SafetyNode::ram_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="40" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ad76c0876a879acd730ab8b90ba23f716" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::hdd_empty_space_</definition>
+        <argsstring></argsstring>
+        <name>hdd_empty_space_</name>
+        <qualifiedname>SafetyNode::hdd_empty_space_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="41" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1abdf5023e50175e6b23582d086117ba2f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::hdd_empty_space_limit_</definition>
+        <argsstring></argsstring>
+        <name>hdd_empty_space_limit_</name>
+        <qualifiedname>SafetyNode::hdd_empty_space_limit_</qualifiedname>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="42" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6ce96973fb744d412419c0efcacfe482" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::internal_humidity_</definition>
+        <argsstring></argsstring>
+        <name>internal_humidity_</name>
+        <qualifiedname>SafetyNode::internal_humidity_</qualifiedname>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="44" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ad3487b9d50ec5b952d90b990780f0ab2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::internal_pressure_</definition>
+        <argsstring></argsstring>
+        <name>internal_pressure_</name>
+        <qualifiedname>SafetyNode::internal_pressure_</qualifiedname>
+        <initializer>= 1050.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="45" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ad739c1ba2f047a9ce701253896801a13" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::internal_temperature_</definition>
+        <argsstring></argsstring>
+        <name>internal_temperature_</name>
+        <qualifiedname>SafetyNode::internal_temperature_</qualifiedname>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="46" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a4c13a37222a4f620def78b91028e8fac" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::internal_last_received_</definition>
+        <argsstring></argsstring>
+        <name>internal_last_received_</name>
+        <qualifiedname>SafetyNode::internal_last_received_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="47" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1acce580524066b77966620bfd3bc844cf" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::internal_no_data_warning_</definition>
+        <argsstring></argsstring>
+        <name>internal_no_data_warning_</name>
+        <qualifiedname>SafetyNode::internal_no_data_warning_</qualifiedname>
+        <initializer>= 2s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="48" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ae9195643f57c12634aa6c8dc1d6e4f13" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::internal_humidity_limit_</definition>
+        <argsstring></argsstring>
+        <name>internal_humidity_limit_</name>
+        <qualifiedname>SafetyNode::internal_humidity_limit_</qualifiedname>
+        <initializer>= 70.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="49" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a649e3228c1a72a73388bb78124c851a4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::internal_pressure_limit_</definition>
+        <argsstring></argsstring>
+        <name>internal_pressure_limit_</name>
+        <qualifiedname>SafetyNode::internal_pressure_limit_</qualifiedname>
+        <initializer>= 800.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="50" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ad546d04525895634d1623542a13ae2a9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::internal_last_rclcpp_warning_</definition>
+        <argsstring></argsstring>
+        <name>internal_last_rclcpp_warning_</name>
+        <qualifiedname>SafetyNode::internal_last_rclcpp_warning_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="51" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a192be8e6dfaff3e538ceb8ae9036bc91" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_</definition>
+        <argsstring></argsstring>
+        <name>depth_</name>
+        <qualifiedname>SafetyNode::depth_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="53" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a5b97881673d0bcb6533b781920907c8a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::velocity_</definition>
+        <argsstring></argsstring>
+        <name>velocity_</name>
+        <qualifiedname>SafetyNode::velocity_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="54" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ac67e3528c15a270e4eb390c61319da35" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::depth_last_received_</definition>
+        <argsstring></argsstring>
+        <name>depth_last_received_</name>
+        <qualifiedname>SafetyNode::depth_last_received_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="55" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6ee3380eef4c0207ce76b4fee0f1e07f" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::depth_no_data_warning_</definition>
+        <argsstring></argsstring>
+        <name>depth_no_data_warning_</name>
+        <qualifiedname>SafetyNode::depth_no_data_warning_</qualifiedname>
+        <initializer>= 2s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="56" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a0c5d92d5be4839dd48f8b35510fac5e2" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::depth_limit_live_last_update_</definition>
+        <argsstring></argsstring>
+        <name>depth_limit_live_last_update_</name>
+        <qualifiedname>SafetyNode::depth_limit_live_last_update_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="57" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6b0b38af717161f84c622ce5726cb792" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::depth_limit_live_last_update_warning_</definition>
+        <argsstring></argsstring>
+        <name>depth_limit_live_last_update_warning_</name>
+        <qualifiedname>SafetyNode::depth_limit_live_last_update_warning_</qualifiedname>
+        <initializer>= 20s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="58" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a3ed8f054170a352bd884ab2bbb291b71" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_limit_max_</definition>
+        <argsstring></argsstring>
+        <name>depth_limit_max_</name>
+        <qualifiedname>SafetyNode::depth_limit_max_</qualifiedname>
+        <initializer>= 110.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="59" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a2b7e084813e268d4f1dbee48dc234b93" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::battery_volt_</definition>
+        <argsstring></argsstring>
+        <name>battery_volt_</name>
+        <qualifiedname>SafetyNode::battery_volt_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="61" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1af509fb1fce9d15fd94a33cdd69999175" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::battery_last_received_</definition>
+        <argsstring></argsstring>
+        <name>battery_last_received_</name>
+        <qualifiedname>SafetyNode::battery_last_received_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="62" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1acd949306cdf38e90e1b149edb7c07ab7" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::battery_no_data_warning_</definition>
+        <argsstring></argsstring>
+        <name>battery_no_data_warning_</name>
+        <qualifiedname>SafetyNode::battery_no_data_warning_</qualifiedname>
+        <initializer>= 10s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="63" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a3474b1b86684f7cbd1efee0c6765ecbe" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::battery_volt_limit_</definition>
+        <argsstring></argsstring>
+        <name>battery_volt_limit_</name>
+        <qualifiedname>SafetyNode::battery_volt_limit_</qualifiedname>
+        <initializer>= 12.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="64" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a3594b6dbc6c137fbb4cb7a28a4836349" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SafetyNode::power_state_</definition>
+        <argsstring></argsstring>
+        <name>power_state_</name>
+        <qualifiedname>SafetyNode::power_state_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="65" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a0b5ed42c28a47843bebdd6fb93be95fd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_flash_surface_</definition>
+        <argsstring></argsstring>
+        <name>depth_flash_surface_</name>
+        <qualifiedname>SafetyNode::depth_flash_surface_</qualifiedname>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="68" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a681e11da0870ceb5ef6184f721ad2191" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::flash_surface_enable_</definition>
+        <argsstring></argsstring>
+        <name>flash_surface_enable_</name>
+        <qualifiedname>SafetyNode::flash_surface_enable_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="69" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1af6ed8d4360092bc52c98ce8beb79995b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_chrip_enable_</definition>
+        <argsstring></argsstring>
+        <name>depth_chrip_enable_</name>
+        <qualifiedname>SafetyNode::depth_chrip_enable_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="71" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1acd0d9fb84e57c5ef3f45597be72bafba" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::chirp_is_enable_</definition>
+        <argsstring></argsstring>
+        <name>chirp_is_enable_</name>
+        <qualifiedname>SafetyNode::chirp_is_enable_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="72" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a3c17df030aea71d3d81cebedb0bc1529" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::piston_position_</definition>
+        <argsstring></argsstring>
+        <name>piston_position_</name>
+        <qualifiedname>SafetyNode::piston_position_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="74" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ae2fb0f03cd8f6014d7a4d13e3d0f10a5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::piston_set_point_</definition>
+        <argsstring></argsstring>
+        <name>piston_set_point_</name>
+        <qualifiedname>SafetyNode::piston_set_point_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="75" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a36bad938c48d765d8715557040397810" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::piston_switch_top_</definition>
+        <argsstring></argsstring>
+        <name>piston_switch_top_</name>
+        <qualifiedname>SafetyNode::piston_switch_top_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="76" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ae79f0ef269e9a0202099d56a2d695c60" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SafetyNode::piston_state_</definition>
+        <argsstring></argsstring>
+        <name>piston_state_</name>
+        <qualifiedname>SafetyNode::piston_state_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="77" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a3b13c378b19d09473f5b4aeafbe8e63e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::piston_last_received_</definition>
+        <argsstring></argsstring>
+        <name>piston_last_received_</name>
+        <qualifiedname>SafetyNode::piston_last_received_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="78" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a9fbda253af69aefcf3fef089576ad3fe" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::piston_no_data_warning_</definition>
+        <argsstring></argsstring>
+        <name>piston_no_data_warning_</name>
+        <qualifiedname>SafetyNode::piston_no_data_warning_</qualifiedname>
+        <initializer>= 1s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="79" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aaf46c915e91d8be160d98dead74ad060" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::limit_piston_position_reset_depth_</definition>
+        <argsstring></argsstring>
+        <name>limit_piston_position_reset_depth_</name>
+        <qualifiedname>SafetyNode::limit_piston_position_reset_depth_</qualifiedname>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="80" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1adcbdc8aa2649def31fcda5eca21e5b34" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SafetyNode::piston_motor_speed_</definition>
+        <argsstring></argsstring>
+        <name>piston_motor_speed_</name>
+        <qualifiedname>SafetyNode::piston_motor_speed_</qualifiedname>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="81" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a30bc258d2e9a818adb30f60f4280e59e" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SafetyNode::piston_motor_speed_stop_</definition>
+        <argsstring></argsstring>
+        <name>piston_motor_speed_stop_</name>
+        <qualifiedname>SafetyNode::piston_motor_speed_stop_</qualifiedname>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="82" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ae7d6b9f71ef9cd580c029765f13a1f9a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::piston_error_velocity_time_</definition>
+        <argsstring></argsstring>
+        <name>piston_error_velocity_time_</name>
+        <qualifiedname>SafetyNode::piston_error_velocity_time_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="83" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aff397a5a37f8fe5747d990daa6c9a75b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::piston_error_velocity_detected_</definition>
+        <argsstring></argsstring>
+        <name>piston_error_velocity_detected_</name>
+        <qualifiedname>SafetyNode::piston_error_velocity_detected_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="84" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6ef763d050909bd87255ef194514c244" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::piston_error_velocity_delay_</definition>
+        <argsstring></argsstring>
+        <name>piston_error_velocity_delay_</name>
+        <qualifiedname>SafetyNode::piston_error_velocity_delay_</qualifiedname>
+        <initializer>= 10s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="85" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aa9746d13b32a9b7e06feda25ff59ad31" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::piston_error_threshold_set_point_</definition>
+        <argsstring></argsstring>
+        <name>piston_error_threshold_set_point_</name>
+        <qualifiedname>SafetyNode::piston_error_threshold_set_point_</qualifiedname>
+        <initializer>= 1e5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="86" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a8013279d3d5c2dbf4593421b95a0714f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::piston_error_threshold_position_</definition>
+        <argsstring></argsstring>
+        <name>piston_error_threshold_position_</name>
+        <qualifiedname>SafetyNode::piston_error_threshold_position_</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="87" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a57e004124862b18fd65e761bfe7ae0ce" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::piston_last_position_</definition>
+        <argsstring></argsstring>
+        <name>piston_last_position_</name>
+        <qualifiedname>SafetyNode::piston_last_position_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="88" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a56ce17fc1ed9812545d4fcc916fb4961" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::max_depth_reset_zero_</definition>
+        <argsstring></argsstring>
+        <name>max_depth_reset_zero_</name>
+        <qualifiedname>SafetyNode::max_depth_reset_zero_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="90" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ac7f68b985ed31f37fdbc85f68c2c0954" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::max_velocity_reset_zero_</definition>
+        <argsstring></argsstring>
+        <name>max_velocity_reset_zero_</name>
+        <qualifiedname>SafetyNode::max_velocity_reset_zero_</qualifiedname>
+        <initializer>= 0.04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="91" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a23a176213f57408667c7744c298d0958" prot="private" static="no" mutable="no">
+        <type>ZERO_DEPTH_STATUS</type>
+        <definition>ZERO_DEPTH_STATUS SafetyNode::reset_depth_status_</definition>
+        <argsstring></argsstring>
+        <name>reset_depth_status_</name>
+        <qualifiedname>SafetyNode::reset_depth_status_</qualifiedname>
+        <initializer>= ZERO_DEPTH_STATUS::IDLE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="93" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a8f48fbf8a4b0de4ae3fd8dbb8a4fa68b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::depth_reset_time_wait_</definition>
+        <argsstring></argsstring>
+        <name>depth_reset_time_wait_</name>
+        <qualifiedname>SafetyNode::depth_reset_time_wait_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="94" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a08ab81e05e4b3e45dc8cb2e7ae2567b6" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::depth_reset_delay_wait_</definition>
+        <argsstring></argsstring>
+        <name>depth_reset_delay_wait_</name>
+        <qualifiedname>SafetyNode::depth_reset_delay_wait_</qualifiedname>
+        <initializer>= 10s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="95" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ac452d6a68431a1df30d49527c3776ab2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::is_zero_depth_once_</definition>
+        <argsstring></argsstring>
+        <name>is_zero_depth_once_</name>
+        <qualifiedname>SafetyNode::is_zero_depth_once_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="96" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ad654cf0a5bf68a1681f66a23d23f68d4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::ping_altitude_</definition>
+        <argsstring></argsstring>
+        <name>ping_altitude_</name>
+        <qualifiedname>SafetyNode::ping_altitude_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="98" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aaa78dd0aca5ab8f2aacc1fcedac735d6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SafetyNode::ping_confidence_</definition>
+        <argsstring></argsstring>
+        <name>ping_confidence_</name>
+        <qualifiedname>SafetyNode::ping_confidence_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="99" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a23dd310bc838386d708c544828deb426" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SafetyNode::ping_confidence_threshold_</definition>
+        <argsstring></argsstring>
+        <name>ping_confidence_threshold_</name>
+        <qualifiedname>SafetyNode::ping_confidence_threshold_</qualifiedname>
+        <initializer>= 90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="100" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ae2f80adb674ad279d91d2513cac41d06" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::ping_last_time_received_</definition>
+        <argsstring></argsstring>
+        <name>ping_last_time_received_</name>
+        <qualifiedname>SafetyNode::ping_last_time_received_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="101" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a4d71d2fd995f687ea9f71884bc54772d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::robot_height_ping_</definition>
+        <argsstring></argsstring>
+        <name>robot_height_ping_</name>
+        <qualifiedname>SafetyNode::robot_height_ping_</qualifiedname>
+        <initializer>= 1.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="102" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a0f1c57b44763e69eb30544e32a42ea5f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::safety_distance_from_seabed_</definition>
+        <argsstring></argsstring>
+        <name>safety_distance_from_seabed_</name>
+        <qualifiedname>SafetyNode::safety_distance_from_seabed_</qualifiedname>
+        <initializer>= 2.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="103" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a2c52bf79e8d0fb1f777a86fa1558efb4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::bathy_</definition>
+        <argsstring></argsstring>
+        <name>bathy_</name>
+        <qualifiedname>SafetyNode::bathy_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="104" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a7c065cbdcc534beab68e6e8456d01354" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_allowed_max_</definition>
+        <argsstring></argsstring>
+        <name>depth_allowed_max_</name>
+        <qualifiedname>SafetyNode::depth_allowed_max_</qualifiedname>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="105" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1abba37eb7b58d18ed58994fa53d4cfb0e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_allowed_min_</definition>
+        <argsstring></argsstring>
+        <name>depth_allowed_min_</name>
+        <qualifiedname>SafetyNode::depth_allowed_min_</qualifiedname>
+        <initializer>= 2.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="106" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a3ae837521c2c2b57fde1021799365702" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::depth_limit_live_</definition>
+        <argsstring></argsstring>
+        <name>depth_limit_live_</name>
+        <qualifiedname>SafetyNode::depth_limit_live_</qualifiedname>
+        <initializer>= 100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="107" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a13e5c42a061c4b172742f0eff78eca16" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SafetyNode::limit_depth_filter_coeff_</definition>
+        <argsstring></argsstring>
+        <name>limit_depth_filter_coeff_</name>
+        <qualifiedname>SafetyNode::limit_depth_filter_coeff_</qualifiedname>
+        <initializer>= 0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="108" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1abc552ed1604abd91d5a8c65f00116d9d" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::ping_no_data_warning_</definition>
+        <argsstring></argsstring>
+        <name>ping_no_data_warning_</name>
+        <qualifiedname>SafetyNode::ping_no_data_warning_</qualifiedname>
+        <initializer>= 10s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="109" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a61112d9567bf8a32b0fd00eafaac50d3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::seabed_test_detected_</definition>
+        <argsstring></argsstring>
+        <name>seabed_test_detected_</name>
+        <qualifiedname>SafetyNode::seabed_test_detected_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="111" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a1f798cc96ca3fc4bd966c81d0fbe2bb3" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time SafetyNode::seabed_test_first_detected_</definition>
+        <argsstring></argsstring>
+        <name>seabed_test_first_detected_</name>
+        <qualifiedname>SafetyNode::seabed_test_first_detected_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="112" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a10a04cd25620a06114653895b869e303" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds SafetyNode::seabed_delay_detection_</definition>
+        <argsstring></argsstring>
+        <name>seabed_delay_detection_</name>
+        <qualifiedname>SafetyNode::seabed_delay_detection_</qualifiedname>
+        <initializer>= 30s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="113" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a2c180499c016bfcc7fd9cb1b86da5dfc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::gnss_fix_once_</definition>
+        <argsstring></argsstring>
+        <name>gnss_fix_once_</name>
+        <qualifiedname>SafetyNode::gnss_fix_once_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="115" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a76bb9fc47fce78d6eb5c1516fbed4c96" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SafetyNode::gnss_mode_</definition>
+        <argsstring></argsstring>
+        <name>gnss_mode_</name>
+        <qualifiedname>SafetyNode::gnss_mode_</qualifiedname>
+        <initializer>= seabot2_msgs::msg::GpsFix::MODE_NOT_SEEN</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="116" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a6547a6e78bf941bd3fb62f1e4d41a138" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::gnss_fix_once_enable_</definition>
+        <argsstring></argsstring>
+        <name>gnss_fix_once_enable_</name>
+        <qualifiedname>SafetyNode::gnss_fix_once_enable_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="118" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aa3abbcd4fe524b80457386befacc8e40" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::enable_limit_depth_</definition>
+        <argsstring></argsstring>
+        <name>enable_limit_depth_</name>
+        <qualifiedname>SafetyNode::enable_limit_depth_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="120" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a22f50a05116f1abd9f3a89cedf80f63b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SafetyNode::enable_flash_underwater_</definition>
+        <argsstring></argsstring>
+        <name>enable_flash_underwater_</name>
+        <qualifiedname>SafetyNode::enable_flash_underwater_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="121" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a5ecabff565b5cdd45143ac427846b85e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::SafetyStatus2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::SafetyStatus2&gt;::SharedPtr SafetyNode::publisher_safety_</definition>
+        <argsstring></argsstring>
+        <name>publisher_safety_</name>
+        <qualifiedname>SafetyNode::publisher_safety_</qualifiedname>
+        <briefdescription>
+<para>Interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="124" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aaa5059b83a7d59f8c478e924e5e5e6b4" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthPose &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr SafetyNode::subscriber_depth_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_depth_data_</name>
+        <qualifiedname>SafetyNode::subscriber_depth_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="126" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a0329d85d13249e3f0b6e60f9bdcfde9e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr SafetyNode::subscriber_internal_sensor_filter_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_internal_sensor_filter_</name>
+        <qualifiedname>SafetyNode::subscriber_internal_sensor_filter_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="127" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a0583cc56a6cff4578f0922a5469844ee" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::PowerState &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr SafetyNode::subscriber_power_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_power_data_</name>
+        <qualifiedname>SafetyNode::subscriber_power_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="128" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a9813ac298d9f3ce78dddb53be28715c1" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::PistonState &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::PistonState&gt;::SharedPtr SafetyNode::subscriber_piston_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_piston_data_</name>
+        <qualifiedname>SafetyNode::subscriber_piston_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="129" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a08f7643d75a29fb116d3c2353044182b" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Profile &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::Profile&gt;::SharedPtr SafetyNode::subscriber_profile_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_profile_data_</name>
+        <qualifiedname>SafetyNode::subscriber_profile_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="130" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a23674b6ed182472334bdd2e9f954a8ba" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::GpsFix &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr SafetyNode::subscriber_gnss_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_gnss_data_</name>
+        <qualifiedname>SafetyNode::subscriber_gnss_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="131" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1aef4373b6028cd404c712a83bfc5b44e9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; std_srvs::srv::Trigger &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr SafetyNode::client_zero_pressure_</definition>
+        <argsstring></argsstring>
+        <name>client_zero_pressure_</name>
+        <qualifiedname>SafetyNode::client_zero_pressure_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="133" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1ab6838c4b84d1af90d732679541d87c32" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;std_srvs::srv::SetBool&gt;::SharedPtr SafetyNode::client_flash_surface_</definition>
+        <argsstring></argsstring>
+        <name>client_flash_surface_</name>
+        <qualifiedname>SafetyNode::client_flash_surface_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="134" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSafetyNode_1a2226fd6bf824c5dc9ed8ded4898ee12a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;std_srvs::srv::SetBool&gt;::SharedPtr SafetyNode::client_chirp_enable_</definition>
+        <argsstring></argsstring>
+        <name>client_chirp_enable_</name>
+        <qualifiedname>SafetyNode::client_chirp_enable_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="135" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSafetyNode_1a52d0fe17e62e722e053cfad5b4ea07d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SafetyNode::SafetyNode</definition>
+        <argsstring>()</argsstring>
+        <name>SafetyNode</name>
+        <qualifiedname>SafetyNode::SafetyNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="21" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="7" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSafetyNode_1afdc2701ec4419709c596922d09f4a83b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>SafetyNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="140" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="21" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a581b014b45fd33936c2855ff64061be3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>SafetyNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="145" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="127" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a6812f2226f15277d52e069d941bb2f6e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>SafetyNode::timer_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer callback </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>ToDo :<itemizedlist>
+<listitem><para>Seafloor</para>
+</listitem></itemizedlist>
+</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="150" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="481" bodyend="524"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a5ef333943ddd5453081107cf92fc26cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::depth_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::DepthPose &amp;msg)</argsstring>
+        <name>depth_callback</name>
+        <qualifiedname>SafetyNode::depth_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::DepthPose &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Depth Callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="156" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="93" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1ac915a76a2512bf149cba41e1a39c3928" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::internal_sensor_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::Bme280Data &amp;msg)</argsstring>
+        <name>internal_sensor_callback</name>
+        <qualifiedname>SafetyNode::internal_sensor_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::Bme280Data &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal sensor callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="162" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="99" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a94890af154280ce57d96c61d4aef468b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::power_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::PowerState &amp;msg)</argsstring>
+        <name>power_callback</name>
+        <qualifiedname>SafetyNode::power_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::PowerState &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classPower" kindref="compound">Power</ref> callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="168" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a77a0c29165f2b1f41d08fdcdc3b65624" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::piston_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::PistonState &amp;msg)</argsstring>
+        <name>piston_callback</name>
+        <qualifiedname>SafetyNode::piston_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::PistonState &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="174" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="112" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1acc55e483ae7b51867b331d14805ca04b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::profile_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::Profile &amp;msg)</argsstring>
+        <name>profile_callback</name>
+        <qualifiedname>SafetyNode::profile_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::Profile &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Profile callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="180" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="121" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a4ad88ebb1a3cec8813d2eb86107346e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::gpsd_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::GpsFix &amp;msg)</argsstring>
+        <name>gpsd_callback</name>
+        <qualifiedname>SafetyNode::gpsd_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::GpsFix &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gnss callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="186" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a49c27635071db54df7cd88f6c08616f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_depth</definition>
+        <argsstring>()</argsstring>
+        <name>test_depth</name>
+        <qualifiedname>SafetyNode::test_depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="192" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="155" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a826a3f10fe5a649002a3c14e9e2a2655" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_zero_pressure</definition>
+        <argsstring>()</argsstring>
+        <name>test_zero_pressure</name>
+        <qualifiedname>SafetyNode::test_zero_pressure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="198" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="194" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a59cd438dc2350d5c3fee6fd89b1153fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_battery</definition>
+        <argsstring>()</argsstring>
+        <name>test_battery</name>
+        <qualifiedname>SafetyNode::test_battery</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="204" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="229" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a88ade8ace8c6270f737347a0deb79113" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_piston</definition>
+        <argsstring>()</argsstring>
+        <name>test_piston</name>
+        <qualifiedname>SafetyNode::test_piston</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="210" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="250" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1adeba7078820ace1f2c36b37f14a76f88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_internal_data</definition>
+        <argsstring>()</argsstring>
+        <name>test_internal_data</name>
+        <qualifiedname>SafetyNode::test_internal_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="216" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="174" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1af10778aa24e503f3d3a2de02498f689d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::test_depth_max</definition>
+        <argsstring>()</argsstring>
+        <name>test_depth_max</name>
+        <qualifiedname>SafetyNode::test_depth_max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test max depth </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Todo : add a filter and ping_confidence condition !</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="221" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="420" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1adf8c8cf5480a5ea2e7b9b63d179596be" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_seabed_reached</definition>
+        <argsstring>()</argsstring>
+        <name>test_seabed_reached</name>
+        <qualifiedname>SafetyNode::test_seabed_reached</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if seabed is reached </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Remain in safety state for 2 times the seabed delay detection to allow the seabot to go up</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="226" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="456" bodyend="479"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a7022f04959bcfa9f2e4de2a0a5e66958" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_gnss_fix</definition>
+        <argsstring>()</argsstring>
+        <name>test_gnss_fix</name>
+        <qualifiedname>SafetyNode::test_gnss_fix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test if gnss fix is ok <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="232" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1ad87124cd4faf92dbda27321c2c2cd111" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SafetyNode::test_hdd_available_space</definition>
+        <argsstring>()</argsstring>
+        <name>test_hdd_available_space</name>
+        <qualifiedname>SafetyNode::test_hdd_available_space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="234" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="286" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a2c7e84d28b87cc1787752af90be6aa2c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::flash_surface</definition>
+        <argsstring>()</argsstring>
+        <name>flash_surface</name>
+        <qualifiedname>SafetyNode::flash_surface</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Detect if surface is reached </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="239" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="348" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a63263fc1e9f12424c036a403e7df8b39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::enable_chirp</definition>
+        <argsstring>()</argsstring>
+        <name>enable_chirp</name>
+        <qualifiedname>SafetyNode::enable_chirp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable chirp </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="244" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="360" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1ad2076092ad78434f19715fbb882bee65" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SafetyNode::call_service_flash_surface</definition>
+        <argsstring>(const bool &amp;is_surface) const</argsstring>
+        <name>call_service_flash_surface</name>
+        <qualifiedname>SafetyNode::call_service_flash_surface</qualifiedname>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>is_surface</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>is_surface</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="251" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="312" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1acb42adb29f94571b6b1eb5aaffe3bd68" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SafetyNode::call_service_chirp_enable</definition>
+        <argsstring>(const bool &amp;enable) const</argsstring>
+        <name>call_service_chirp_enable</name>
+        <qualifiedname>SafetyNode::call_service_chirp_enable</qualifiedname>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>call_service_chirp_enable <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="258" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="330" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1aa495ae7ef185aba599725d8b59f57481" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SafetyNode::call_service_zero_depth</definition>
+        <argsstring>() const</argsstring>
+        <name>call_service_zero_depth</name>
+        <qualifiedname>SafetyNode::call_service_zero_depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="264" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="295" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1ad826ef991798bb44aa0c131a744d2787" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::get_ram_cpu</definition>
+        <argsstring>()</argsstring>
+        <name>get_ram_cpu</name>
+        <qualifiedname>SafetyNode::get_ram_cpu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>CPU Usage (<ulink url="https://stackoverflow.com/questions/63166/how-to-determine-cpu-and-memory-consumption-from-inside-a-process">https://stackoverflow.com/questions/63166/how-to-determine-cpu-and-memory-consumption-from-inside-a-process</ulink>)</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="269" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="370" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classSafetyNode_1a945a852ea0d9a418b2b114f0d1de3a41" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SafetyNode::get_hard_drive_empty_space</definition>
+        <argsstring>()</argsstring>
+        <name>get_hard_drive_empty_space</name>
+        <qualifiedname>SafetyNode::get_hard_drive_empty_space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the hard drive empty space </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="274" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/src/safety_node.cpp" bodystart="408" bodyend="418"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SafetyNode</label>
+        <link refid="classSafetyNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SafetyNode</label>
+        <link refid="classSafetyNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" line="19" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_safety/include/seabot2_safety/safety_node.hpp" bodystart="19" bodyend="276"/>
+    <listofallmembers>
+      <member refid="classSafetyNode_1a2c52bf79e8d0fb1f777a86fa1558efb4" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>bathy_</name></member>
+      <member refid="classSafetyNode_1af509fb1fce9d15fd94a33cdd69999175" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>battery_last_received_</name></member>
+      <member refid="classSafetyNode_1acd949306cdf38e90e1b149edb7c07ab7" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>battery_no_data_warning_</name></member>
+      <member refid="classSafetyNode_1a2b7e084813e268d4f1dbee48dc234b93" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>battery_volt_</name></member>
+      <member refid="classSafetyNode_1a3474b1b86684f7cbd1efee0c6765ecbe" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>battery_volt_limit_</name></member>
+      <member refid="classSafetyNode_1acb42adb29f94571b6b1eb5aaffe3bd68" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>call_service_chirp_enable</name></member>
+      <member refid="classSafetyNode_1ad2076092ad78434f19715fbb882bee65" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>call_service_flash_surface</name></member>
+      <member refid="classSafetyNode_1aa495ae7ef185aba599725d8b59f57481" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>call_service_zero_depth</name></member>
+      <member refid="classSafetyNode_1acd0d9fb84e57c5ef3f45597be72bafba" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>chirp_is_enable_</name></member>
+      <member refid="classSafetyNode_1a2226fd6bf824c5dc9ed8ded4898ee12a" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>client_chirp_enable_</name></member>
+      <member refid="classSafetyNode_1ab6838c4b84d1af90d732679541d87c32" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>client_flash_surface_</name></member>
+      <member refid="classSafetyNode_1aef4373b6028cd404c712a83bfc5b44e9" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>client_zero_pressure_</name></member>
+      <member refid="classSafetyNode_1a66158a416bd8c22ad42c2e065bc3af46" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>cpu_</name></member>
+      <member refid="classSafetyNode_1a65759f4aeb711977a86e90dbb3f51e78" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>delay_between_warning_msg_</name></member>
+      <member refid="classSafetyNode_1a192be8e6dfaff3e538ceb8ae9036bc91" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_</name></member>
+      <member refid="classSafetyNode_1a7c065cbdcc534beab68e6e8456d01354" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_allowed_max_</name></member>
+      <member refid="classSafetyNode_1abba37eb7b58d18ed58994fa53d4cfb0e" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_allowed_min_</name></member>
+      <member refid="classSafetyNode_1a5ef333943ddd5453081107cf92fc26cf" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_callback</name></member>
+      <member refid="classSafetyNode_1af6ed8d4360092bc52c98ce8beb79995b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_chrip_enable_</name></member>
+      <member refid="classSafetyNode_1a0b5ed42c28a47843bebdd6fb93be95fd" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_flash_surface_</name></member>
+      <member refid="classSafetyNode_1ac67e3528c15a270e4eb390c61319da35" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_last_received_</name></member>
+      <member refid="classSafetyNode_1a3ae837521c2c2b57fde1021799365702" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_limit_live_</name></member>
+      <member refid="classSafetyNode_1a0c5d92d5be4839dd48f8b35510fac5e2" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_limit_live_last_update_</name></member>
+      <member refid="classSafetyNode_1a6b0b38af717161f84c622ce5726cb792" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_limit_live_last_update_warning_</name></member>
+      <member refid="classSafetyNode_1a3ed8f054170a352bd884ab2bbb291b71" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_limit_max_</name></member>
+      <member refid="classSafetyNode_1a6ee3380eef4c0207ce76b4fee0f1e07f" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_no_data_warning_</name></member>
+      <member refid="classSafetyNode_1a08ab81e05e4b3e45dc8cb2e7ae2567b6" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_reset_delay_wait_</name></member>
+      <member refid="classSafetyNode_1a8f48fbf8a4b0de4ae3fd8dbb8a4fa68b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>depth_reset_time_wait_</name></member>
+      <member refid="classSafetyNode_1a63263fc1e9f12424c036a403e7df8b39" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>enable_chirp</name></member>
+      <member refid="classSafetyNode_1a22f50a05116f1abd9f3a89cedf80f63b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>enable_flash_underwater_</name></member>
+      <member refid="classSafetyNode_1aa3abbcd4fe524b80457386befacc8e40" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>enable_limit_depth_</name></member>
+      <member refid="classSafetyNode_1a2c7e84d28b87cc1787752af90be6aa2c" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>flash_surface</name></member>
+      <member refid="classSafetyNode_1a681e11da0870ceb5ef6184f721ad2191" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>flash_surface_enable_</name></member>
+      <member refid="classSafetyNode_1a945a852ea0d9a418b2b114f0d1de3a41" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>get_hard_drive_empty_space</name></member>
+      <member refid="classSafetyNode_1ad826ef991798bb44aa0c131a744d2787" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>get_ram_cpu</name></member>
+      <member refid="classSafetyNode_1aae0e3746c103204d7b37798bdca4edb3" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>global_safety_ok_</name></member>
+      <member refid="classSafetyNode_1a2c180499c016bfcc7fd9cb1b86da5dfc" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>gnss_fix_once_</name></member>
+      <member refid="classSafetyNode_1a6547a6e78bf941bd3fb62f1e4d41a138" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>gnss_fix_once_enable_</name></member>
+      <member refid="classSafetyNode_1a76bb9fc47fce78d6eb5c1516fbed4c96" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>gnss_mode_</name></member>
+      <member refid="classSafetyNode_1a4ad88ebb1a3cec8813d2eb86107346e7" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>gpsd_callback</name></member>
+      <member refid="classSafetyNode_1ad76c0876a879acd730ab8b90ba23f716" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>hdd_empty_space_</name></member>
+      <member refid="classSafetyNode_1abdf5023e50175e6b23582d086117ba2f" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>hdd_empty_space_limit_</name></member>
+      <member refid="classSafetyNode_1af93cd9a3b53d4f7ac1f556d5711a2c23a4f1520046d0675f1658cf675e9de1150" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>IDLE</name></member>
+      <member refid="classSafetyNode_1a581b014b45fd33936c2855ff64061be3" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>init_interfaces</name></member>
+      <member refid="classSafetyNode_1afdc2701ec4419709c596922d09f4a83b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>init_parameters</name></member>
+      <member refid="classSafetyNode_1a6ce96973fb744d412419c0efcacfe482" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_humidity_</name></member>
+      <member refid="classSafetyNode_1ae9195643f57c12634aa6c8dc1d6e4f13" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_humidity_limit_</name></member>
+      <member refid="classSafetyNode_1ad546d04525895634d1623542a13ae2a9" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_last_rclcpp_warning_</name></member>
+      <member refid="classSafetyNode_1a4c13a37222a4f620def78b91028e8fac" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_last_received_</name></member>
+      <member refid="classSafetyNode_1acce580524066b77966620bfd3bc844cf" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_no_data_warning_</name></member>
+      <member refid="classSafetyNode_1ad3487b9d50ec5b952d90b990780f0ab2" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_pressure_</name></member>
+      <member refid="classSafetyNode_1a649e3228c1a72a73388bb78124c851a4" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_pressure_limit_</name></member>
+      <member refid="classSafetyNode_1ac915a76a2512bf149cba41e1a39c3928" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_sensor_callback</name></member>
+      <member refid="classSafetyNode_1ad739c1ba2f047a9ce701253896801a13" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>internal_temperature_</name></member>
+      <member refid="classSafetyNode_1ac452d6a68431a1df30d49527c3776ab2" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>is_zero_depth_once_</name></member>
+      <member refid="classSafetyNode_1a13e5c42a061c4b172742f0eff78eca16" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>limit_depth_filter_coeff_</name></member>
+      <member refid="classSafetyNode_1aaf46c915e91d8be160d98dead74ad060" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>limit_piston_position_reset_depth_</name></member>
+      <member refid="classSafetyNode_1a5af7c50e473d7f2776bdd3a6bfc9c4ab" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>loop_dt_</name></member>
+      <member refid="classSafetyNode_1a56ce17fc1ed9812545d4fcc916fb4961" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>max_depth_reset_zero_</name></member>
+      <member refid="classSafetyNode_1ac7f68b985ed31f37fdbc85f68c2c0954" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>max_velocity_reset_zero_</name></member>
+      <member refid="classSafetyNode_1ad654cf0a5bf68a1681f66a23d23f68d4" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ping_altitude_</name></member>
+      <member refid="classSafetyNode_1aaa78dd0aca5ab8f2aacc1fcedac735d6" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ping_confidence_</name></member>
+      <member refid="classSafetyNode_1a23dd310bc838386d708c544828deb426" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ping_confidence_threshold_</name></member>
+      <member refid="classSafetyNode_1ae2f80adb674ad279d91d2513cac41d06" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ping_last_time_received_</name></member>
+      <member refid="classSafetyNode_1abc552ed1604abd91d5a8c65f00116d9d" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ping_no_data_warning_</name></member>
+      <member refid="classSafetyNode_1a77a0c29165f2b1f41d08fdcdc3b65624" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_callback</name></member>
+      <member refid="classSafetyNode_1a8013279d3d5c2dbf4593421b95a0714f" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_error_threshold_position_</name></member>
+      <member refid="classSafetyNode_1aa9746d13b32a9b7e06feda25ff59ad31" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_error_threshold_set_point_</name></member>
+      <member refid="classSafetyNode_1a6ef763d050909bd87255ef194514c244" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_error_velocity_delay_</name></member>
+      <member refid="classSafetyNode_1aff397a5a37f8fe5747d990daa6c9a75b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_error_velocity_detected_</name></member>
+      <member refid="classSafetyNode_1ae7d6b9f71ef9cd580c029765f13a1f9a" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_error_velocity_time_</name></member>
+      <member refid="classSafetyNode_1a57e004124862b18fd65e761bfe7ae0ce" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_last_position_</name></member>
+      <member refid="classSafetyNode_1a3b13c378b19d09473f5b4aeafbe8e63e" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_last_received_</name></member>
+      <member refid="classSafetyNode_1adcbdc8aa2649def31fcda5eca21e5b34" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_motor_speed_</name></member>
+      <member refid="classSafetyNode_1a30bc258d2e9a818adb30f60f4280e59e" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_motor_speed_stop_</name></member>
+      <member refid="classSafetyNode_1a9fbda253af69aefcf3fef089576ad3fe" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_no_data_warning_</name></member>
+      <member refid="classSafetyNode_1a3c17df030aea71d3d81cebedb0bc1529" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_position_</name></member>
+      <member refid="classSafetyNode_1ae2fb0f03cd8f6014d7a4d13e3d0f10a5" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_set_point_</name></member>
+      <member refid="classSafetyNode_1ae79f0ef269e9a0202099d56a2d695c60" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_state_</name></member>
+      <member refid="classSafetyNode_1a36bad938c48d765d8715557040397810" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>piston_switch_top_</name></member>
+      <member refid="classSafetyNode_1a94890af154280ce57d96c61d4aef468b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>power_callback</name></member>
+      <member refid="classSafetyNode_1a3594b6dbc6c137fbb4cb7a28a4836349" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>power_state_</name></member>
+      <member refid="classSafetyNode_1a0f72e7859f02728b4656a852d259ad5b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>POWER_STATE_STATUS</name></member>
+      <member refid="classSafetyNode_1acc55e483ae7b51867b331d14805ca04b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>profile_callback</name></member>
+      <member refid="classSafetyNode_1a5ecabff565b5cdd45143ac427846b85e" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>publisher_safety_</name></member>
+      <member refid="classSafetyNode_1a7260f04ecbffe0665e9995eaf88c3fa7" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ram_</name></member>
+      <member refid="classSafetyNode_1a23a176213f57408667c7744c298d0958" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>reset_depth_status_</name></member>
+      <member refid="classSafetyNode_1a4d71d2fd995f687ea9f71884bc54772d" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>robot_height_ping_</name></member>
+      <member refid="classSafetyNode_1a324cc42e14f2dc4dacd8f20484536a38" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_batteries_limit_</name></member>
+      <member refid="classSafetyNode_1aa4bc16b0fab25f2335af2bb450a997f9" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_depressurization_</name></member>
+      <member refid="classSafetyNode_1a1696fbd00ea7c205a6ddd32750e6330a" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_depth_limit_</name></member>
+      <member refid="classSafetyNode_1a0f1c57b44763e69eb30544e32a42ea5f" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_distance_from_seabed_</name></member>
+      <member refid="classSafetyNode_1a6ef7e040d071996fc46c38cc0de1cc27" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_piston_</name></member>
+      <member refid="classSafetyNode_1ab532ffb16f0e980b0244c0070a1b02c1" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_published_frequency_</name></member>
+      <member refid="classSafetyNode_1a6f51efcd04012402a2cebe3cdf2ed938" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_seafloor_</name></member>
+      <member refid="classSafetyNode_1a55ee631ce448d75abbdfb49eed346219" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>safety_zero_depth_</name></member>
+      <member refid="classSafetyNode_1a52d0fe17e62e722e053cfad5b4ea07d9" prot="public" virt="non-virtual"><scope>SafetyNode</scope><name>SafetyNode</name></member>
+      <member refid="classSafetyNode_1a10a04cd25620a06114653895b869e303" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>seabed_delay_detection_</name></member>
+      <member refid="classSafetyNode_1a61112d9567bf8a32b0fd00eafaac50d3" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>seabed_test_detected_</name></member>
+      <member refid="classSafetyNode_1a1f798cc96ca3fc4bd966c81d0fbe2bb3" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>seabed_test_first_detected_</name></member>
+      <member refid="classSafetyNode_1aaa5059b83a7d59f8c478e924e5e5e6b4" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>subscriber_depth_data_</name></member>
+      <member refid="classSafetyNode_1a23674b6ed182472334bdd2e9f954a8ba" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>subscriber_gnss_data_</name></member>
+      <member refid="classSafetyNode_1a0329d85d13249e3f0b6e60f9bdcfde9e" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>subscriber_internal_sensor_filter_</name></member>
+      <member refid="classSafetyNode_1a9813ac298d9f3ce78dddb53be28715c1" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>subscriber_piston_data_</name></member>
+      <member refid="classSafetyNode_1a0583cc56a6cff4578f0922a5469844ee" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>subscriber_power_data_</name></member>
+      <member refid="classSafetyNode_1a08f7643d75a29fb116d3c2353044182b" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>subscriber_profile_data_</name></member>
+      <member refid="classSafetyNode_1a59cd438dc2350d5c3fee6fd89b1153fa" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_battery</name></member>
+      <member refid="classSafetyNode_1a49c27635071db54df7cd88f6c08616f0" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_depth</name></member>
+      <member refid="classSafetyNode_1af10778aa24e503f3d3a2de02498f689d" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_depth_max</name></member>
+      <member refid="classSafetyNode_1a7022f04959bcfa9f2e4de2a0a5e66958" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_gnss_fix</name></member>
+      <member refid="classSafetyNode_1ad87124cd4faf92dbda27321c2c2cd111" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_hdd_available_space</name></member>
+      <member refid="classSafetyNode_1adeba7078820ace1f2c36b37f14a76f88" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_internal_data</name></member>
+      <member refid="classSafetyNode_1a88ade8ace8c6270f737347a0deb79113" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_piston</name></member>
+      <member refid="classSafetyNode_1adf8c8cf5480a5ea2e7b9b63d179596be" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_seabed_reached</name></member>
+      <member refid="classSafetyNode_1a826a3f10fe5a649002a3c14e9e2a2655" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>test_zero_pressure</name></member>
+      <member refid="classSafetyNode_1a52bfb22a649d402841598f57442c6c53" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>timer_</name></member>
+      <member refid="classSafetyNode_1a6812f2226f15277d52e069d941bb2f6e" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>timer_callback</name></member>
+      <member refid="classSafetyNode_1a5b97881673d0bcb6533b781920907c8a" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>velocity_</name></member>
+      <member refid="classSafetyNode_1af93cd9a3b53d4f7ac1f556d5711a2c23a718181071dc2e5c2a05652a611c902ee" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>WAIT_RESET</name></member>
+      <member refid="classSafetyNode_1af93cd9a3b53d4f7ac1f556d5711a2c23" prot="private" virt="non-virtual"><scope>SafetyNode</scope><name>ZERO_DEPTH_STATUS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

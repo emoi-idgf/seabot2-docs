@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="icm20948__node_8cpp" kind="file" language="C++">
+    <compoundname>icm20948_node.cpp</compoundname>
+    <includes refid="icm20948__node_8h" local="yes">icm20948_driver/icm20948_node.h</includes>
+    <includes refid="FusionConverter_8h" local="yes">icm20948_driver/FusionConverter.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>Fusion.h</label>
+        <link refid="Fusion_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>FusionAhrs.h</label>
+        <link refid="FusionAhrs_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>FusionAxes.h</label>
+        <link refid="FusionAxes_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>FusionCalibration.h</label>
+        <link refid="FusionCalibration_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>FusionCompass.h</label>
+        <link refid="FusionCompass_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>FusionConvention.h</label>
+        <link refid="FusionConvention_8h"/>
+      </node>
+      <node id="12">
+        <label>FusionMath.h</label>
+        <link refid="FusionMath_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>FusionOffset.h</label>
+        <link refid="FusionOffset_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>icm20948_driver/FusionConverter.h</label>
+        <link refid="FusionConverter_8h_source"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>icm20948_driver/icm20948.h</label>
+        <link refid="icm20948_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>icm20948_driver/icm20948_node.h</label>
+        <link refid="icm20948__node_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>icm20948_register.h</label>
+        <link refid="icm20948__register_8h_source"/>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp</label>
+        <link refid="icm20948__node_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>array</label>
+      </node>
+      <node id="13">
+        <label>math.h</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="22">
+        <label>seabot2_msgs/msg/debug_fusion.hpp</label>
+      </node>
+      <node id="20">
+        <label>seabot2_msgs/msg/raw_data.hpp</label>
+      </node>
+      <node id="21">
+        <label>seabot2_msgs/msg/rpy.hpp</label>
+      </node>
+      <node id="14">
+        <label>stdbool.h</label>
+      </node>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="24">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="icm20948__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" line="264" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp" bodystart="264" bodyend="269"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;icm20948_driver/icm20948_node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;icm20948_driver/FusionConverter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">placeholders;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">ICM20948Node::ICM20948Node()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;icm20948_node&quot;</highlight><highlight class="normal">),<sp/>icm20948_(){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(icm20948_.init()<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_ERROR(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>Init<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;ICM20948Node::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ICM20948Node::init_parameters()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count());</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;accel_fs_sel&quot;</highlight><highlight class="normal">,<sp/>icm20948_.accel_fs_sel_);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>icm20948_.accel_fs_sel_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;accel_fs_sel&quot;</highlight><highlight class="normal">,<sp/>icm20948_.accel_fs_sel_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;gyro_fs_sel&quot;</highlight><highlight class="normal">,<sp/>icm20948_.gyro_fs_sel_);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>icm20948_.gyro_fs_sel_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gyro_fs_sel&quot;</highlight><highlight class="normal">,<sp/>icm20948_.gyro_fs_sel_);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>AHRS<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;gyroscopeMisalignment&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(gyroscopeMisalignment_));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>gyroscopeMisalignment_<sp/>=<sp/>FusionMatrixFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gyroscopeMisalignment&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(gyroscopeMisalignment_)));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;gyroscopeSensitivity&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(gyroscopeSensitivity_));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>gyroscopeSensitivity_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gyroscopeSensitivity&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(gyroscopeSensitivity_)));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;gyroscopeOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(gyroscopeOffset_));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>gyroscopeOffset_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gyroscopeOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(gyroscopeOffset_)));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;accelerometerMisalignment&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(accelerometerMisalignment_));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>accelerometerMisalignment_<sp/>=<sp/>FusionMatrixFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;accelerometerMisalignment&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(accelerometerMisalignment_)));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;accelerometerSensitivity&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(accelerometerSensitivity_));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>accelerometerSensitivity_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;accelerometerSensitivity&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(accelerometerSensitivity_)));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;accelerometerOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(accelerometerOffset_));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>accelerometerOffset_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;accelerometerOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(accelerometerOffset_)));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;softIronMatrix&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(softIronMatrix_));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>softIronMatrix_<sp/>=<sp/>FusionMatrixFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;softIronMatrix&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(softIronMatrix_)));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;hardIronOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(hardIronOffset_));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>hardIronOffset_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;hardIronOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(hardIronOffset_)));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;magnetometerMisalignment&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(magnetometerMisalignment_));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>magnetometerMisalignment_<sp/>=<sp/>FusionMatrixFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;magnetometerMisalignment&quot;</highlight><highlight class="normal">,<sp/>FusionMatrixToStdVector(magnetometerMisalignment_)));</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;magnetometerSensitivity&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(magnetometerSensitivity_));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>magnetometerSensitivity_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;magnetometerSensitivity&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(magnetometerSensitivity_)));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::vector&lt;double&gt;&gt;(</highlight><highlight class="stringliteral">&quot;magnetometerOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(magnetometerOffset_));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>magnetometerOffset_<sp/>=<sp/>FusionVectorFromStdVector(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;magnetometerOffset&quot;</highlight><highlight class="normal">,<sp/>FusionVectorToStdVector(magnetometerOffset_)));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;publish_raw_data&quot;</highlight><highlight class="normal">,<sp/>publish_raw_data_);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>publish_raw_data_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;publish_raw_data&quot;</highlight><highlight class="normal">,<sp/>publish_raw_data_);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;publish_calibrated_data&quot;</highlight><highlight class="normal">,<sp/>publish_calibrated_data_);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>publish_calibrated_data_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;publish_calibrated_data&quot;</highlight><highlight class="normal">,<sp/>publish_calibrated_data_);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;publish_rpy&quot;</highlight><highlight class="normal">,<sp/>publish_rpy_);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>publish_rpy_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;publish_rpy&quot;</highlight><highlight class="normal">,<sp/>publish_rpy_);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;publish_debug_fusion&quot;</highlight><highlight class="normal">,<sp/>publish_debug_fusion_);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>publish_debug_fusion_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;publish_debug_fusion&quot;</highlight><highlight class="normal">,<sp/>publish_debug_fusion_);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;float&gt;(</highlight><highlight class="stringliteral">&quot;fusion_gain&quot;</highlight><highlight class="normal">,<sp/>fusion_gain_);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>fusion_gain_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;fusion_gain&quot;</highlight><highlight class="normal">,<sp/>fusion_gain_);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;float&gt;(</highlight><highlight class="stringliteral">&quot;acceleration_rejection&quot;</highlight><highlight class="normal">,<sp/>acceleration_rejection_);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>acceleration_rejection_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;acceleration_rejection&quot;</highlight><highlight class="normal">,<sp/>acceleration_rejection_);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;float&gt;(</highlight><highlight class="stringliteral">&quot;magnetic_rejection&quot;</highlight><highlight class="normal">,<sp/>magnetic_rejection_);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>magnetic_rejection_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;magnetic_rejection&quot;</highlight><highlight class="normal">,<sp/>magnetic_rejection_);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;recovery_trigger_period&quot;</highlight><highlight class="normal">,<sp/>recovery_trigger_period_);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>recovery_trigger_period_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;recovery_trigger_period&quot;</highlight><highlight class="normal">,<sp/>recovery_trigger_period_);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>sample_rate_<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(1000.0/(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(loop_dt_.count()))));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionOffset_8c_1a72ddbeac61763d6b4e12f6f9c064dd5a" kindref="member">FusionOffsetInitialise</ref>(&amp;offset_,<sp/>sample_rate_);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionAhrs_8c_1ac753e0112b48de5247710bdde3a77dcd" kindref="member">FusionAhrsInitialise</ref>(&amp;ahrs_);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>AHRS<sp/>algorithm<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref><sp/>settings<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Earth<sp/>axes<sp/>convention<sp/>(NWD,<sp/>ENU,<sp/>or<sp/>NED).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.convention<sp/>=<sp/>convention_,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determines<sp/>the<sp/>influence<sp/>of<sp/>the<sp/>gyroscope<sp/>relative<sp/>to<sp/>other<sp/>sensors.<sp/>A<sp/>value<sp/>of<sp/>zero<sp/>will<sp/>disable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialization<sp/>and<sp/>the<sp/>acceleration<sp/>and<sp/>magnetic<sp/>rejection<sp/>features.<sp/>A<sp/>value<sp/>of<sp/>0.5<sp/>is<sp/>appropriate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>most<sp/>applications.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.gain<sp/>=<sp/>fusion_gain_,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Gyroscope<sp/>range<sp/>in<sp/>degrees/s.<sp/>Angular<sp/>rate<sp/>recovery<sp/>will<sp/>activate<sp/>if<sp/>the<sp/>gyroscope<sp/>measurement<sp/>exceeds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>98%<sp/>of<sp/>this<sp/>value.<sp/>A<sp/>value<sp/>of<sp/>zero<sp/>will<sp/>disable<sp/>this<sp/>feature.<sp/>The<sp/>value<sp/>should<sp/>be<sp/>set<sp/>to<sp/>the<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>specified<sp/>in<sp/>the<sp/>gyroscope<sp/>datasheet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.gyroscopeRange<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.gyro_full_scale_[icm20948_.gyro_fs_sel_]),<sp/></highlight><highlight class="comment">/*<sp/>replace<sp/>this<sp/>with<sp/>actual<sp/>gyroscope<sp/>range<sp/>in<sp/>degrees/s<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Threshold<sp/>(in<sp/>degrees)<sp/>used<sp/>by<sp/>the<sp/>acceleration<sp/>rejection<sp/>feature.<sp/>A<sp/>value<sp/>of<sp/>zero<sp/>will<sp/>disable<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>feature.<sp/>A<sp/>value<sp/>of<sp/>10<sp/>degrees<sp/>is<sp/>appropriate<sp/>for<sp/>most<sp/>applications.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.accelerationRejection<sp/>=<sp/>acceleration_rejection_,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Threshold<sp/>(in<sp/>degrees)<sp/>used<sp/>by<sp/>the<sp/>magnetic<sp/>rejection<sp/>feature.<sp/>A<sp/>value<sp/>of<sp/>zero<sp/>will<sp/>disable<sp/>the<sp/>feature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>value<sp/>of<sp/>10<sp/>degrees<sp/>is<sp/>appropriate<sp/>for<sp/>most<sp/>applications.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.magneticRejection<sp/>=<sp/>magnetic_rejection_,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Acceleration<sp/>and<sp/>magnetic<sp/>recovery<sp/>trigger<sp/>period<sp/>(in<sp/>samples).<sp/>A<sp/>value<sp/>of<sp/>zero<sp/>will<sp/>disable<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>acceleration<sp/>and<sp/>magnetic<sp/>rejection<sp/>features.<sp/>A<sp/>period<sp/>of<sp/>5<sp/>seconds<sp/>is<sp/>appropriate<sp/>for<sp/>most<sp/>applications.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.recoveryTriggerPeriod<sp/>=<sp/>recovery_trigger_period_<sp/>*<sp/>sample_rate_,<sp/></highlight><highlight class="comment">/*<sp/>x<sp/>seconds<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionAhrs_8c_1a300bd4d7b409124f9541554bd53d2d2e" kindref="member">FusionAhrsSetSettings</ref>(&amp;ahrs_,<sp/>&amp;settings);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>last_time_fusion_<sp/>=<sp/>steady_clock_.now();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Sample<sp/>rate:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>sample_rate_);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Gain:<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>settings.gain);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Gyroscope<sp/>range:<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>settings.gyroscopeRange);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Acceleration<sp/>rejection:<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>settings.accelerationRejection);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Magnetic<sp/>rejection:<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>settings.magneticRejection);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Recovery<sp/>trigger<sp/>period:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>settings.recoveryTriggerPeriod);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fusion<sp/>correction<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Magnetometer<sp/>correction<sp/>matrix:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>%f<sp/>%f<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>softIronMatrix_.element.xx,<sp/>softIronMatrix_.element.xy,<sp/>softIronMatrix_.element.xz);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>%f<sp/>%f<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>softIronMatrix_.element.yx,<sp/>softIronMatrix_.element.yy,<sp/>softIronMatrix_.element.yz);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>%f<sp/>%f<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>softIronMatrix_.element.zx,<sp/>softIronMatrix_.element.zy,<sp/>softIronMatrix_.element.zz);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>FUSION<sp/>Magnetometer<sp/>correction<sp/>offset:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[icm20948_node]<sp/>%f<sp/>%f<sp/>%f&quot;</highlight><highlight class="normal">,<sp/>hardIronOffset_.axis.x,<sp/>hardIronOffset_.axis.y,<sp/>hardIronOffset_.axis.z);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ICM20948Node::init_interfaces()<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_raw_data_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::RawData&gt;(</highlight><highlight class="stringliteral">&quot;raw_data&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_calibrated_data_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::RawData&gt;(</highlight><highlight class="stringliteral">&quot;calibrated_data&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_rpy_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::RPY&gt;(</highlight><highlight class="stringliteral">&quot;rpy&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_debug_fusion_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::DebugFusion&gt;(</highlight><highlight class="stringliteral">&quot;debug_fusion&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ICM20948Node::timer_callback()<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(icm20948_.<ref refid="classICM20948_1a0183b21fc95361ae92a008d58d2e30f2" kindref="member">get_measure</ref>()<sp/>!=<sp/>EXIT_SUCCESS)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(icm20948_.acc_x_<sp/>==<sp/>0.<sp/>&amp;&amp;<sp/>icm20948_.acc_y_<sp/>==<sp/>0.<sp/>&amp;&amp;<sp/>icm20948_.acc_z_<sp/>==<sp/>0.</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>icm20948_.gyro_x_<sp/>==<sp/>0.<sp/>&amp;&amp;<sp/>icm20948_.gyro_y_<sp/>==<sp/>0.<sp/>&amp;&amp;<sp/>icm20948_.gyro_z_<sp/>==<sp/>0.)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>raw<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(publish_raw_data_)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>seabot2_msgs::msg::RawData();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.accel.x<sp/>=<sp/>icm20948_.acc_x_;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.accel.y<sp/>=<sp/>icm20948_.acc_y_;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.accel.z<sp/>=<sp/>icm20948_.acc_z_;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.gyro.x<sp/>=<sp/>icm20948_.gyro_x_;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.gyro.y<sp/>=<sp/>icm20948_.gyro_y_;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.gyro.z<sp/>=<sp/>icm20948_.gyro_z_;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.temp<sp/>=<sp/>icm20948_.temp_;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.mag.x<sp/>=<sp/>icm20948_.mag_x_;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.mag.y<sp/>=<sp/>icm20948_.mag_y_;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.mag.z<sp/>=<sp/>icm20948_.mag_z_;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_raw_data_-&gt;publish(msg);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>compute_ahrs();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ICM20948Node::compute_ahrs()<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Acquire<sp/>latest<sp/>sensor<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope<sp/>=<sp/>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.gyro_x_),</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.gyro_y_),</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.gyro_z_)};<sp/></highlight><highlight class="comment">//<sp/>replace<sp/>this<sp/>with<sp/>actual<sp/>gyroscope<sp/>data<sp/>in<sp/>degrees/s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer<sp/>=<sp/>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.acc_x_),</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.acc_y_),</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.acc_z_)};<sp/></highlight><highlight class="comment">//<sp/>replace<sp/>this<sp/>with<sp/>actual<sp/>accelerometer<sp/>data<sp/>in<sp/>g</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>magnetometer<sp/>=<sp/>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.mag_x_),</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.mag_y_),</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(icm20948_.mag_z_)};<sp/></highlight><highlight class="comment">//<sp/>replace<sp/>this<sp/>with<sp/>actual<sp/>magnetometer<sp/>data<sp/>in<sp/>arbitrary<sp/>units</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Apply<sp/>calibration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>gyroscope<sp/>=<sp/>FusionCalibrationInertial(gyroscope,<sp/>gyroscopeMisalignment_,<sp/>gyroscopeSensitivity_,<sp/>gyroscopeOffset_);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>accelerometer<sp/>=<sp/>FusionCalibrationInertial(accelerometer,<sp/>accelerometerMisalignment_,<sp/>accelerometerSensitivity_,<sp/>accelerometerOffset_);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>magnetometer<sp/>=<sp/>FusionCalibrationMagnetic(magnetometer,<sp/>softIronMatrix_,<sp/>hardIronOffset_);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>magnetometer<sp/>=<sp/>FusionCalibrationInertial(magnetometer,<sp/>magnetometerMisalignment_,<sp/>magnetometerSensitivity_,<sp/>magnetometerOffset_);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>gyroscope<sp/>offset<sp/>correction<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>gyroscope<sp/>=<sp/><ref refid="FusionOffset_8c_1a7a767f0f96ae165e5d90881be32400ef" kindref="member">FusionOffsetUpdate</ref>(&amp;offset_,<sp/>gyroscope);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calculate<sp/>delta<sp/>time<sp/>(in<sp/>seconds)<sp/>to<sp/>account<sp/>for<sp/>gyroscope<sp/>sample<sp/>clock<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>tmp_time_<sp/>=<sp/>steady_clock_.now();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime<sp/>=<sp/>(tmp_time_<sp/>-<sp/>last_time_fusion_).seconds();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>last_time_fusion_<sp/>=<sp/>tmp_time_;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>gyroscope<sp/>AHRS<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionAhrs_8c_1af98205155fc3110da2e6bf410f33b4c0" kindref="member">FusionAhrsUpdate</ref>(&amp;ahrs_,<sp/>gyroscope,<sp/>accelerometer,<sp/>magnetometer,<sp/>deltaTime);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>algorithm<sp/>outputs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionEuler" kindref="compound">FusionEuler</ref><sp/>euler<sp/>=<sp/>FusionQuaternionToEuler(<ref refid="FusionAhrs_8c_1a2a347b0aec6ab1da57cd4036a836a37c" kindref="member">FusionAhrsGetQuaternion</ref>(&amp;ahrs_));</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>lin_acc<sp/>=<sp/><ref refid="FusionAhrs_8c_1a7d81dbd72e592de5737dba762597e639" kindref="member">FusionAhrsGetLinearAcceleration</ref>(&amp;ahrs_);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Publish<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(publish_rpy_)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg<sp/>=<sp/>seabot2_msgs::msg::RPY();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.roll<sp/>=<sp/>euler.angle.roll;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.pitch<sp/>=<sp/>euler.angle.pitch;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.yaw<sp/>=<sp/>euler.angle.yaw;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.acceleration.x<sp/>=<sp/>lin_acc.axis.x;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.acceleration.y<sp/>=<sp/>lin_acc.axis.y;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.acceleration.z<sp/>=<sp/>lin_acc.axis.z;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_rpy_-&gt;publish(msg);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structFusionAhrsInternalStates" kindref="compound">FusionAhrsInternalStates</ref><sp/>int_states<sp/>=<sp/><ref refid="FusionAhrs_8c_1a2dd9d3225d8576dd39c0530122830d22" kindref="member">FusionAhrsGetInternalStates</ref>(&amp;ahrs_);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structFusionAhrsFlags" kindref="compound">FusionAhrsFlags</ref><sp/>flags<sp/>=<sp/><ref refid="FusionAhrs_8c_1a348b373ad797b71aa7e395df500ba0a0" kindref="member">FusionAhrsGetFlags</ref>(&amp;ahrs_);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Debug<sp/>Fusion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(publish_debug_fusion_)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg_debug_fusion<sp/>=<sp/>seabot2_msgs::msg::DebugFusion();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.acceleration_error<sp/>=<sp/>int_states.accelerationError;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.accelerometer_ignored<sp/>=<sp/>int_states.accelerometerIgnored;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.acceleration_recovery_trigger<sp/>=<sp/>int_states.accelerationRecoveryTrigger;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetic_error<sp/>=<sp/>int_states.magneticError;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetometer_ignored<sp/>=<sp/>int_states.magnetometerIgnored;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetic_recovery_trigger<sp/>=<sp/>int_states.magneticRecoveryTrigger;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.initialising<sp/>=<sp/>flags.initialising;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.angular_rate_recovery<sp/>=<sp/>flags.angularRateRecovery;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.acceleration_recovery<sp/>=<sp/>flags.accelerationRecovery;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetic_recovery<sp/>=<sp/>flags.magneticRecovery;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetometer_data_skipped<sp/>=<sp/>icm20948_.mag_data_has_been_skipped_;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetometer_limit_reached<sp/>=<sp/>icm20948_.mag_sensor_magnetic_overflow_;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_debug_fusion.magnetometer_data_is_ready<sp/>=<sp/>icm20948_.mag_data_is_ready_;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_debug_fusion_-&gt;publish(msg_debug_fusion);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Debug<sp/>calibrated<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(publish_calibrated_data_)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>msg_calibrated_data<sp/>=<sp/>seabot2_msgs::msg::RawData();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.accel.x<sp/>=<sp/>accelerometer.axis.x;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.accel.y<sp/>=<sp/>accelerometer.axis.y;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.accel.z<sp/>=<sp/>accelerometer.axis.z;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.gyro.x<sp/>=<sp/>gyroscope.axis.x;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.gyro.y<sp/>=<sp/>gyroscope.axis.y;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.gyro.z<sp/>=<sp/>gyroscope.axis.z;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.temp<sp/>=<sp/>icm20948_.temp_;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.mag.x<sp/>=<sp/>magnetometer.axis.x;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.mag.y<sp/>=<sp/>magnetometer.axis.y;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_calibrated_data.mag.z<sp/>=<sp/>magnetometer.axis.z;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_calibrated_data_-&gt;publish(msg_calibrated_data);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;ICM20948Node&gt;());</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="temperature__tsys01_8hpp" kind="file" language="C++">
+    <compoundname>temperature_tsys01.hpp</compoundname>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">sys/types.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">linux/i2c-dev.h</includes>
+    <includes local="no">i2c/smbus.h</includes>
+    <includedby refid="temperature__tsys01_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/src/temperature_tsys01.cpp</includedby>
+    <includedby refid="temperature__tsys01__node_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/src/temperature_tsys01_node.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp</label>
+        <link refid="temperature__tsys01_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>i2c/smbus.h</label>
+      </node>
+      <node id="5">
+        <label>linux/i2c-dev.h</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="3">
+        <label>sys/types.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classTemperature__TSYS01" prot="public">Temperature_TSYS01</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="temperature__tsys01_8hpp_1afe1dd8546b0a8cd30b19a0229205c8df" prot="public" static="no">
+        <name>CMD_RESET</name>
+        <initializer>0x1E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" line="13" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="temperature__tsys01_8hpp_1afdd65050b415478cc4ede5a8b062969f" prot="public" static="no">
+        <name>CMD_ADC_READ</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" line="14" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="temperature__tsys01_8hpp_1a47073484adf9e7158e7af7afcbd2183b" prot="public" static="no">
+        <name>CMD_ADC_CONV</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" line="15" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="temperature__tsys01_8hpp_1adafc2a073a9f412e4bb0e3a96ee6eea6" prot="public" static="no">
+        <name>CMD_PROM</name>
+        <initializer>0xA0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" line="16" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="temperature__tsys01_8hpp_1a9e2db76bf8a9914b061bf29af9f22d53" prot="public" static="no">
+        <name>CONVERSION_TIME</name>
+        <initializer>10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" line="18" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TEMPERATURE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEMPERATURE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/types.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/i2c-dev.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;i2c/smbus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_RESET<sp/>0x1E<sp/></highlight><highlight class="comment">//<sp/>reset<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_ADC_READ<sp/>0x00<sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_ADC_CONV<sp/>0x48<sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>conversion<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_PROM<sp/>0xA0<sp/></highlight><highlight class="comment">//<sp/>Coefficient<sp/>location</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_TIME<sp/>10000<sp/></highlight><highlight class="comment">//<sp/>10ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classTemperature__TSYS01" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTemperature__TSYS01" kindref="compound">Temperature_TSYS01</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="classTemperature__TSYS01_1af68bbf5e2afda824c88a0e4796991199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01_1af68bbf5e2afda824c88a0e4796991199" kindref="member">Temperature_TSYS01</ref>(rclcpp::Node<sp/>*n):<sp/>k_{}<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01" kindref="compound">~Temperature_TSYS01</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2c_open();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>init_sensor();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reset()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>measure();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_temperature()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1aa1f8e2dc5da69c36f886cbd5daafa912" kindref="member">getI2CAddr</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a476b52a1fc4956956e46fe2fca34f8d4" kindref="member">setI2CAddr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<ref refid="classTemperature__TSYS01_1aa26e39140b58dd3ce52073b5dea5e936" kindref="member">getI2CPeriph</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a264b5dbda079efa1d67db1e8e5698f1e" kindref="member">setI2CPeriph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;i2CPeriph);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Node*<sp/>n_=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2c_addr_<sp/>=<sp/>0x77;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>i2c_periph_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int16_t<sp/>k_[5];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid_data_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature_<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Temperature_TSYS01::get_temperature()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temperature_;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TEMPERATURE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp"/>
+  </compounddef>
+</doxygen>

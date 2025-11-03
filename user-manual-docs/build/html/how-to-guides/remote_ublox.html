@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect the Remote u-blox Module to Local U-Center via Network &mdash; Seabot2 User Manual 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Teleoperately control the thrusters with a joystick" href="teleop_control.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #1D8BC2" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Seabot2 User Manual
+              <img src="../_static/seabot2_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Developper's Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/set_up_git_repositories.html">Setup local git repositories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/build_ros2.html">Build ROS2 sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/upload_install_seabot.html">Upload a new install on a seabot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/start_mission.html">Starting a mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev-guide/debug_seabot2.html">Debug Seabot2</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How-to Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="process_rosbag.html">Convert Rosbags to Numpy Files and Visualize Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imu_calibration.html">Calibrate the IMU</a></li>
+<li class="toctree-l1"><a class="reference internal" href="teleop_control.html">Teleoperately control the thrusters with a joystick</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Connect the Remote u-blox Module to Local U-Center via Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#set-up-use-u-center-on-ubuntu">1. Set Up: Use U-Center on Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#emulate-the-remote-serial-port-on-your-local-machine-using-socat">2. Emulate the Remote Serial Port on Your Local Machine Using <em>socat</em></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #1D8BC2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Seabot2 User Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Connect the Remote u-blox Module to Local U-Center via Network</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/how-to-guides/remote_ublox.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="connect-the-remote-u-blox-module-to-local-u-center-via-network">
+<h1>Connect the Remote u-blox Module to Local U-Center via Network<a class="headerlink" href="#connect-the-remote-u-blox-module-to-local-u-center-via-network" title="Link to this heading"></a></h1>
+<section id="set-up-use-u-center-on-ubuntu">
+<h2>1. Set Up: Use U-Center on Ubuntu<a class="headerlink" href="#set-up-use-u-center-on-ubuntu" title="Link to this heading"></a></h2>
+<p>Based on the following tutorial:
+<a class="reference external" href="https://fr.ardusimple.com/how-to-use-ardusimple-kit-and-u-center-in-ubuntu/">How to use Ardusimple kit and U-center in Ubuntu (French)</a></p>
+<p>Install <strong>Wine</strong> (Windows emulator):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wine64
+</pre></div>
+</div>
+<p>Download the <strong>U-Center</strong> installer from the official u-blox website, either manually or via command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Downloads
+wget<span class="w"> </span><span class="s2">&quot;https://content.u-blox.com/sites/default/files/2025-06/u-center_v25.06_installer.zip&quot;</span>
+</pre></div>
+</div>
+<p>Extract the installer:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>unzip<span class="w"> </span>u-center_v25.06_installer.zip
+</pre></div>
+</div>
+<p>Launch the installer with Wine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wine<span class="w"> </span>./u-center_v25.06_installer.exe
+</pre></div>
+</div>
+<p>Install <strong>U-Center</strong> as if you were on Windows and choose your installation path, for example <code class="docutils literal notranslate"><span class="pre">~/APPLIS/WIN</span></code>.</p>
+<p>Then, every time you want to launch U-Center, simply run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wine<span class="w"> </span>your-installation-path/u-center.exe
+</pre></div>
+</div>
+<p>—</p>
+</section>
+<section id="emulate-the-remote-serial-port-on-your-local-machine-using-socat">
+<h2>2. Emulate the Remote Serial Port on Your Local Machine Using <em>socat</em><a class="headerlink" href="#emulate-the-remote-serial-port-on-your-local-machine-using-socat" title="Link to this heading"></a></h2>
+<p>Use the dedicated script with the appropriate <code class="docutils literal notranslate"><span class="pre">seabot2_id</span></code> value:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>zsh<span class="w"> </span>~/seabot2/seabot2-tools/seabot2-sensors/remote_gnss_serial.sh<span class="w"> </span>&lt;seabot2_id&gt;
+</pre></div>
+</div>
+<p>The remote GNSS serial port will be emulated on your local machine at <code class="docutils literal notranslate"><span class="pre">/dev/ttyS10</span></code>,
+which corresponds to <strong>COM11</strong> in Windows terminology.</p>
+<p>Now, simply launch <strong>U-Center</strong> with Wine and select the port <strong>COM11</strong>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="teleop_control.html" class="btn btn-neutral float-left" title="Teleoperately control the thrusters with a joystick" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Seabot2 Team, ENSTA.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

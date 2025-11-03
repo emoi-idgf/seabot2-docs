@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classScreenNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>ScreenNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classScreenNode_1a32cf6bb7a7ed2b0cf4e32440e0a5e618" prot="private" static="no" mutable="no">
+        <type><ref refid="classScreen" kindref="compound">Screen</ref></type>
+        <definition>Screen ScreenNode::screen_</definition>
+        <argsstring></argsstring>
+        <name>screen_</name>
+        <qualifiedname>ScreenNode::screen_</qualifiedname>
+        <briefdescription>
+<para>I2C configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="24" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a63796dd0650560c5e084144cdb63dd5a" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr ScreenNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>ScreenNode::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="27" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1acede774b38c17f6f88431d42118c5dc2" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds ScreenNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>ScreenNode::loop_dt_</qualifiedname>
+        <initializer>= 2s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="28" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a0d77125a814f5c906e9d9517bc00499c" prot="private" static="no" mutable="no">
+        <type>std::array&lt; unsigned char, 4 &gt;</type>
+        <definition>std::array&lt;unsigned char, 4&gt; ScreenNode::ip_</definition>
+        <argsstring></argsstring>
+        <name>ip_</name>
+        <qualifiedname>ScreenNode::ip_</qualifiedname>
+        <initializer>= {0, 0, 0, 0}</initializer>
+        <briefdescription>
+<para>Variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="31" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1aba620c62e7f201051ec82e3d169d60f7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScreenNode::pressure_</definition>
+        <argsstring></argsstring>
+        <name>pressure_</name>
+        <qualifiedname>ScreenNode::pressure_</qualifiedname>
+        <initializer>= 9999.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="32" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a9c384557d7c43f21a867a52f5d22d852" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScreenNode::temperature_</definition>
+        <argsstring></argsstring>
+        <name>temperature_</name>
+        <qualifiedname>ScreenNode::temperature_</qualifiedname>
+        <initializer>= 99.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="33" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a5251cd3ee0ab7d1ae9db13af2e7a5e77" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScreenNode::hygro_</definition>
+        <argsstring></argsstring>
+        <name>hygro_</name>
+        <qualifiedname>ScreenNode::hygro_</qualifiedname>
+        <initializer>= 99</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="34" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a8766818866476ee725527da412db21ab" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScreenNode::voltage_</definition>
+        <argsstring></argsstring>
+        <name>voltage_</name>
+        <qualifiedname>ScreenNode::voltage_</qualifiedname>
+        <initializer>= 25.4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="35" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a60a640029bcfb38ae83945ec9077288f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ScreenNode::robot_name_</definition>
+        <argsstring></argsstring>
+        <name>robot_name_</name>
+        <qualifiedname>ScreenNode::robot_name_</qualifiedname>
+        <initializer>= &quot;NoName&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="36" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a706b0e90e86f46f74a5fbdefd070cff4" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ScreenNode::mission_name_</definition>
+        <argsstring></argsstring>
+        <name>mission_name_</name>
+        <qualifiedname>ScreenNode::mission_name_</qualifiedname>
+        <initializer>= &quot;NoMission&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="37" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a287570dc89b7e9043341d03cab6f367d" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ScreenNode::wp_id_</definition>
+        <argsstring></argsstring>
+        <name>wp_id_</name>
+        <qualifiedname>ScreenNode::wp_id_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="38" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a730127112ab7c2c9dbae08b496aaf8b1" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ScreenNode::wp_max_</definition>
+        <argsstring></argsstring>
+        <name>wp_max_</name>
+        <qualifiedname>ScreenNode::wp_max_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="39" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a79789805a7ae4ce97c39e1f628180fc0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time ScreenNode::time_next_wp_</definition>
+        <argsstring></argsstring>
+        <name>time_next_wp_</name>
+        <qualifiedname>ScreenNode::time_next_wp_</qualifiedname>
+        <initializer>= this-&gt;now() + rclcpp::Duration(5, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="40" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a241bb90cb06de8c2b901d2ab56a48ec9" prot="private" static="no" mutable="no">
+        <type><ref refid="classScreen_1af256e44f3786823bd7b98d9e24aa7286" kindref="member">Screen::Robot_Status</ref></type>
+        <definition>Screen::Robot_Status ScreenNode::status_</definition>
+        <argsstring></argsstring>
+        <name>status_</name>
+        <qualifiedname>ScreenNode::status_</qualifiedname>
+        <initializer>= Screen::Robot_Status::WARNING</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="41" column="26" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a4e89da5e896427b1a5dfe77be75c8412" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScreenNode::depth_</definition>
+        <argsstring></argsstring>
+        <name>depth_</name>
+        <qualifiedname>ScreenNode::depth_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="43" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a0d4e08a34a51062fa0dce3e3de475b5e" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ScreenNode::depth_no_update_</definition>
+        <argsstring></argsstring>
+        <name>depth_no_update_</name>
+        <qualifiedname>ScreenNode::depth_no_update_</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="44" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a0f671525fc64cdd676460d5422ecf737" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr ScreenNode::subscriber_sensor_internal_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_sensor_internal_</name>
+        <qualifiedname>ScreenNode::subscriber_sensor_internal_</qualifiedname>
+        <briefdescription>
+<para>Topics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="47" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a73a4a2115fdc89cc733cbc4aee6883ea" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::MissionState &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::MissionState&gt;::SharedPtr ScreenNode::subscriber_mission_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_mission_</name>
+        <qualifiedname>ScreenNode::subscriber_mission_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="48" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a8802c47104c967dec45914ac0db90f17" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::PowerState &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr ScreenNode::subscriber_power_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_power_</name>
+        <qualifiedname>ScreenNode::subscriber_power_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="49" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classScreenNode_1a886fc3af59b8cf3a2c93c6cbb53b4301" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::SafetyStatus2 &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;::SharedPtr ScreenNode::subscriber_safety_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_safety_</name>
+        <qualifiedname>ScreenNode::subscriber_safety_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="50" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classScreenNode_1abc0758e6774fa9c9786753f4d27aa465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScreenNode::ScreenNode</definition>
+        <argsstring>()</argsstring>
+        <name>ScreenNode</name>
+        <qualifiedname>ScreenNode::ScreenNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="17" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="11" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1aae00631f037d47e1394754f072384ad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScreenNode::~ScreenNode</definition>
+        <argsstring>() override</argsstring>
+        <name>~ScreenNode</name>
+        <qualifiedname>ScreenNode::~ScreenNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="19" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classScreenNode_1a55588399cf423eb89ba094d947ec9f0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>ScreenNode::timer_callback</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>in mbar</para>
+<para>bug in hardware : should be placed before mission name</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="31" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1a32d6555c057b0a5041a44a7ec2882d54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>ScreenNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>I2C</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="58" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="66" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1a6cfb74750bfbf3e8aa16bd8d9c126dd4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::init_topics</definition>
+        <argsstring>()</argsstring>
+        <name>init_topics</name>
+        <qualifiedname>ScreenNode::init_topics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init topics to this node (publishers &amp; subscribers) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="63" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1ac19709e9d7522421f218ad77defc5ea9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::get_hostname</definition>
+        <argsstring>()</argsstring>
+        <name>get_hostname</name>
+        <qualifiedname>ScreenNode::get_hostname</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the hostname of the robot </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="69" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1a44985a90427609bf90511a03ef3231d0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::get_ip</definition>
+        <argsstring>()</argsstring>
+        <name>get_ip</name>
+        <qualifiedname>ScreenNode::get_ip</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the ip of the robot </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Reset IP</para>
+<para><ulink url="https://stackoverflow.com/questions/2283494/get-ip-address-of-an-interface-on-linux">https://stackoverflow.com/questions/2283494/get-ip-address-of-an-interface-on-linux</ulink></para>
+<para>Parse the string to extract ip numbers</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="74" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="104" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1a8bc493a2a4e2f7a049e629b84520d70c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::topic_internal_pressure_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::Bme280Data &amp;msg)</argsstring>
+        <name>topic_internal_pressure_callback</name>
+        <qualifiedname>ScreenNode::topic_internal_pressure_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::Bme280Data &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for internal pressure messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="80" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1afb34a8f01498dede909c423d303b68a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::waypoint_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::MissionState &amp;msg)</argsstring>
+        <name>waypoint_callback</name>
+        <qualifiedname>ScreenNode::waypoint_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::MissionState &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for waypoints <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="86" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="157" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1adad18d263ab7884876fedd4e6eb2caa6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::power_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::PowerState &amp;msg)</argsstring>
+        <name>power_callback</name>
+        <qualifiedname>ScreenNode::power_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::PowerState &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for voltage <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="92" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="163" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classScreenNode_1a16a16dfa464c1a8ea1510d98deacb584" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScreenNode::safety_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::SafetyStatus2 &amp;msg)</argsstring>
+        <name>safety_callback</name>
+        <qualifiedname>ScreenNode::safety_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::SafetyStatus2 &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="98" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/src/screen_node.cpp" bodystart="167" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ScreenNode</label>
+        <link refid="classScreenNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ScreenNode</label>
+        <link refid="classScreenNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" line="15" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_screen_driver/include/seabot2_screen_driver/screen_node.h" bodystart="15" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classScreenNode_1a4e89da5e896427b1a5dfe77be75c8412" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>depth_</name></member>
+      <member refid="classScreenNode_1a0d4e08a34a51062fa0dce3e3de475b5e" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>depth_no_update_</name></member>
+      <member refid="classScreenNode_1ac19709e9d7522421f218ad77defc5ea9" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>get_hostname</name></member>
+      <member refid="classScreenNode_1a44985a90427609bf90511a03ef3231d0" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>get_ip</name></member>
+      <member refid="classScreenNode_1a5251cd3ee0ab7d1ae9db13af2e7a5e77" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>hygro_</name></member>
+      <member refid="classScreenNode_1a32d6555c057b0a5041a44a7ec2882d54" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>init_parameters</name></member>
+      <member refid="classScreenNode_1a6cfb74750bfbf3e8aa16bd8d9c126dd4" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>init_topics</name></member>
+      <member refid="classScreenNode_1a0d77125a814f5c906e9d9517bc00499c" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>ip_</name></member>
+      <member refid="classScreenNode_1acede774b38c17f6f88431d42118c5dc2" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>loop_dt_</name></member>
+      <member refid="classScreenNode_1a706b0e90e86f46f74a5fbdefd070cff4" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>mission_name_</name></member>
+      <member refid="classScreenNode_1adad18d263ab7884876fedd4e6eb2caa6" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>power_callback</name></member>
+      <member refid="classScreenNode_1aba620c62e7f201051ec82e3d169d60f7" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>pressure_</name></member>
+      <member refid="classScreenNode_1a60a640029bcfb38ae83945ec9077288f" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>robot_name_</name></member>
+      <member refid="classScreenNode_1a16a16dfa464c1a8ea1510d98deacb584" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>safety_callback</name></member>
+      <member refid="classScreenNode_1a32cf6bb7a7ed2b0cf4e32440e0a5e618" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>screen_</name></member>
+      <member refid="classScreenNode_1abc0758e6774fa9c9786753f4d27aa465" prot="public" virt="non-virtual"><scope>ScreenNode</scope><name>ScreenNode</name></member>
+      <member refid="classScreenNode_1a241bb90cb06de8c2b901d2ab56a48ec9" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>status_</name></member>
+      <member refid="classScreenNode_1a73a4a2115fdc89cc733cbc4aee6883ea" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>subscriber_mission_</name></member>
+      <member refid="classScreenNode_1a8802c47104c967dec45914ac0db90f17" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>subscriber_power_</name></member>
+      <member refid="classScreenNode_1a886fc3af59b8cf3a2c93c6cbb53b4301" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>subscriber_safety_</name></member>
+      <member refid="classScreenNode_1a0f671525fc64cdd676460d5422ecf737" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>subscriber_sensor_internal_</name></member>
+      <member refid="classScreenNode_1a9c384557d7c43f21a867a52f5d22d852" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>temperature_</name></member>
+      <member refid="classScreenNode_1a79789805a7ae4ce97c39e1f628180fc0" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>time_next_wp_</name></member>
+      <member refid="classScreenNode_1a63796dd0650560c5e084144cdb63dd5a" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>timer_</name></member>
+      <member refid="classScreenNode_1a55588399cf423eb89ba094d947ec9f0d" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>timer_callback</name></member>
+      <member refid="classScreenNode_1a8bc493a2a4e2f7a049e629b84520d70c" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>topic_internal_pressure_callback</name></member>
+      <member refid="classScreenNode_1a8766818866476ee725527da412db21ab" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>voltage_</name></member>
+      <member refid="classScreenNode_1afb34a8f01498dede909c423d303b68a1" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>waypoint_callback</name></member>
+      <member refid="classScreenNode_1a287570dc89b7e9043341d03cab6f367d" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>wp_id_</name></member>
+      <member refid="classScreenNode_1a730127112ab7c2c9dbae08b496aaf8b1" prot="private" virt="non-virtual"><scope>ScreenNode</scope><name>wp_max_</name></member>
+      <member refid="classScreenNode_1aae00631f037d47e1394754f072384ad2" prot="public" virt="non-virtual"><scope>ScreenNode</scope><name>~ScreenNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

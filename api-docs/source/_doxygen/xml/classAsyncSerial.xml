@@ -1,0 +1,645 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classAsyncSerial" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>AsyncSerial</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">boost::noncopyable</basecompoundref>
+    <derivedcompoundref refid="classBufferedAsyncSerial" prot="public" virt="non-virtual">BufferedAsyncSerial</derivedcompoundref>
+    <derivedcompoundref refid="classCallbackAsyncSerial" prot="public" virt="non-virtual">CallbackAsyncSerial</derivedcompoundref>
+    <includes refid="AsyncSerial_8h" local="no">AsyncSerial.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classAsyncSerial_1afa843216d519512f1f325a1b8849be26" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int AsyncSerial::readBufferSize</definition>
+        <argsstring></argsstring>
+        <name>readBufferSize</name>
+        <qualifiedname>AsyncSerial::readBufferSize</qualifiedname>
+        <initializer>=512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read buffer maximum size </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="121" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAsyncSerial_1afc0808a251a6cfe7d22cd73dc8c3e5bc" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classAsyncSerialImpl" kindref="compound">AsyncSerialImpl</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;AsyncSerialImpl&gt; AsyncSerial::pimpl</definition>
+        <argsstring></argsstring>
+        <name>pimpl</name>
+        <qualifiedname>AsyncSerial::pimpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="156" column="21" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAsyncSerial_1aff78d677d0b72f9929448240313ca8f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AsyncSerial::AsyncSerial</definition>
+        <argsstring>()</argsstring>
+        <name>AsyncSerial</name>
+        <qualifiedname>AsyncSerial::AsyncSerial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="29" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a7d2011315081fc53de7faf0f5ecb0124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AsyncSerial::AsyncSerial</definition>
+        <argsstring>(const std::string &amp;devname, unsigned int baud_rate, boost::asio::serial_port_base::parity opt_parity=boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none), boost::asio::serial_port_base::character_size opt_csize=boost::asio::serial_port_base::character_size(8), boost::asio::serial_port_base::flow_control opt_flow=boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none), boost::asio::serial_port_base::stop_bits opt_stop=boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one))</argsstring>
+        <name>AsyncSerial</name>
+        <qualifiedname>AsyncSerial::AsyncSerial</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>devname</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>baud_rate</declname>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::parity</type>
+          <declname>opt_parity</declname>
+          <defval>boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none)</defval>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::character_size</type>
+          <declname>opt_csize</declname>
+          <defval>boost::asio::serial_port_base::character_size(8)</defval>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::flow_control</type>
+          <declname>opt_flow</declname>
+          <defval>boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none)</defval>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::stop_bits</type>
+          <declname>opt_stop</declname>
+          <defval>boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. Creates and opens a serial device. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial device name, example &quot;/dev/ttyS0&quot; or &quot;COM1&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baud_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial baud rate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_parity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial parity, default none </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_csize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial character size, default 8bit </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_flow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial flow control, default none </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_stop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial stop bits, default 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>boost::system::system_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if cannot open the serial device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="42" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1ac703c6e3ee89e5821536ce7381a31238" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::open</definition>
+        <argsstring>(const std::string &amp;devname, unsigned int baud_rate, boost::asio::serial_port_base::parity opt_parity=boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none), boost::asio::serial_port_base::character_size opt_csize=boost::asio::serial_port_base::character_size(8), boost::asio::serial_port_base::flow_control opt_flow=boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none), boost::asio::serial_port_base::stop_bits opt_stop=boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one))</argsstring>
+        <name>open</name>
+        <qualifiedname>AsyncSerial::open</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>devname</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>baud_rate</declname>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::parity</type>
+          <declname>opt_parity</declname>
+          <defval>boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none)</defval>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::character_size</type>
+          <declname>opt_csize</declname>
+          <defval>boost::asio::serial_port_base::character_size(8)</defval>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::flow_control</type>
+          <declname>opt_flow</declname>
+          <defval>boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none)</defval>
+        </param>
+        <param>
+          <type>boost::asio::serial_port_base::stop_bits</type>
+          <declname>opt_stop</declname>
+          <defval>boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens a serial device. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>devname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial device name, example &quot;/dev/ttyS0&quot; or &quot;COM1&quot; </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baud_rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial baud rate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_parity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial parity, default none </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_csize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial character size, default 8bit </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_flow</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial flow control, default none </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opt_stop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>serial stop bits, default 1 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>boost::system::system_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if cannot open the serial device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="66" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="87" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1ac9fb38b9235d90f9c87ef2767cbde800" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AsyncSerial::isOpen</definition>
+        <argsstring>() const</argsstring>
+        <name>isOpen</name>
+        <qualifiedname>AsyncSerial::isOpen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if serial device is open </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="82" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1aa49b3afe4d51dbda4e39aaa2d1b59432" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AsyncSerial::errorStatus</definition>
+        <argsstring>() const</argsstring>
+        <name>errorStatus</name>
+        <qualifiedname>AsyncSerial::errorStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if error were found </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="87" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="117" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a5cf2bac916cb71ec14b3fa35c2de7653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>AsyncSerial::close</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close the serial device <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>boost::system::system_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if any error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="93" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="123" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a5a7e4aa37924e593ba7636be0be0bf0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::write</definition>
+        <argsstring>(const char *data, size_t size)</argsstring>
+        <name>write</name>
+        <qualifiedname>AsyncSerial::write</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data asynchronously. Returns immediately. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of char to be sent through the serial device </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array size </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="100" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="138" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a8f3665e55608b07fa9eb4e9d93b3ee95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::write</definition>
+        <argsstring>(const std::vector&lt; char &gt; &amp;data)</argsstring>
+        <name>write</name>
+        <qualifiedname>AsyncSerial::write</qualifiedname>
+        <param>
+          <type>const std::vector&lt; char &gt; &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data asynchronously. Returns immediately. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be sent through the serial device </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="106" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="147" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1aa4285acd9b327cef013b0437cf188da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::writeString</definition>
+        <argsstring>(const std::string &amp;s)</argsstring>
+        <name>writeString</name>
+        <qualifiedname>AsyncSerial::writeString</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a string asynchronously. Returns immediately. Can be used to send ASCII data to the serial device. To send binary data, use <ref refid="classAsyncSerial_1a5a7e4aa37924e593ba7636be0be0bf0a" kindref="member">write()</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="114" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="157" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1aac97fceec15171d8161bbc89b5b37474" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>AsyncSerial::~AsyncSerial</definition>
+        <argsstring>()=0</argsstring>
+        <name>~AsyncSerial</name>
+        <qualifiedname>AsyncSerial::~AsyncSerial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="116" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="166" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAsyncSerial_1a619a92467cfe9dfc749ceba29165339e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::doRead</definition>
+        <argsstring>()</argsstring>
+        <name>doRead</name>
+        <qualifiedname>AsyncSerial::doRead</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback called to start an asynchronous read operation. This callback is called by the io_service in the spawned thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="128" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="179" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1aa3049c366dc6937e8222e410958f5d32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::readEnd</definition>
+        <argsstring>(const boost::system::error_code &amp;error, size_t bytes_transferred)</argsstring>
+        <name>readEnd</name>
+        <qualifiedname>AsyncSerial::readEnd</qualifiedname>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes_transferred</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback called at the end of the asynchronous operation. This callback is called by the io_service in the spawned thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="134" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="188" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1abcbfe8d69a6c5d6da421281af608951d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::doWrite</definition>
+        <argsstring>()</argsstring>
+        <name>doWrite</name>
+        <qualifiedname>AsyncSerial::doWrite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback called to start an asynchronous write operation. If it is already in progress, does nothing. This callback is called by the io_service in the spawned thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="142" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="216" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a3d8e2919f4fdd59cb09d6c64ddab92d8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::writeEnd</definition>
+        <argsstring>(const boost::system::error_code &amp;error)</argsstring>
+        <name>writeEnd</name>
+        <qualifiedname>AsyncSerial::writeEnd</qualifiedname>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback called at the end of an asynchronuous write operation, if there is more data to write, restarts a new write operation. This callback is called by the io_service in the spawned thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="149" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="233" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a12d08755b8056665542785076733bb69" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::doClose</definition>
+        <argsstring>()</argsstring>
+        <name>doClose</name>
+        <qualifiedname>AsyncSerial::doClose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to close serial port </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="154" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="259" bodyend="266"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classAsyncSerial_1afb60a8e6ae2469094fe11d52e4336648" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::setErrorStatus</definition>
+        <argsstring>(bool e)</argsstring>
+        <name>setErrorStatus</name>
+        <qualifiedname>AsyncSerial::setErrorStatus</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To allow derived classes to report errors <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error status </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="164" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="268" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1ad6e207716e4e54b84666fe392de38115" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::setReadCallback</definition>
+        <argsstring>(const std::function&lt; void(const char *, size_t)&gt; &amp;callback)</argsstring>
+        <name>setReadCallback</name>
+        <qualifiedname>AsyncSerial::setReadCallback</qualifiedname>
+        <param>
+          <type>const std::function&lt; void(const char *, size_t)&gt; &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To allow derived classes to set a read callback </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="169" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="274" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classAsyncSerial_1a79c529d01fb7df3ed2ad5d771141f7a7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AsyncSerial::clearReadCallback</definition>
+        <argsstring>()</argsstring>
+        <name>clearReadCallback</name>
+        <qualifiedname>AsyncSerial::clearReadCallback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>To unregister the read callback in the derived class destructor so it does not get called after the derived class destructor but before the base class destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="176" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/AsyncSerial.cpp" bodystart="279" bodyend="283"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Asyncronous serial class. Intended to be a base class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AsyncSerial</label>
+        <link refid="classAsyncSerial"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>BufferedAsyncSerial</label>
+        <link refid="classBufferedAsyncSerial"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CallbackAsyncSerial</label>
+        <link refid="classCallbackAsyncSerial"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>boost::noncopyable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AsyncSerial</label>
+        <link refid="classAsyncSerial"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>boost::noncopyable</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" line="26" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/AsyncSerial.h" bodystart="27" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classAsyncSerial_1aff78d677d0b72f9929448240313ca8f7" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>AsyncSerial</name></member>
+      <member refid="classAsyncSerial_1a7d2011315081fc53de7faf0f5ecb0124" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>AsyncSerial</name></member>
+      <member refid="classAsyncSerial_1a79c529d01fb7df3ed2ad5d771141f7a7" prot="protected" virt="non-virtual"><scope>AsyncSerial</scope><name>clearReadCallback</name></member>
+      <member refid="classAsyncSerial_1a5cf2bac916cb71ec14b3fa35c2de7653" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>close</name></member>
+      <member refid="classAsyncSerial_1a12d08755b8056665542785076733bb69" prot="private" virt="non-virtual"><scope>AsyncSerial</scope><name>doClose</name></member>
+      <member refid="classAsyncSerial_1a619a92467cfe9dfc749ceba29165339e" prot="private" virt="non-virtual"><scope>AsyncSerial</scope><name>doRead</name></member>
+      <member refid="classAsyncSerial_1abcbfe8d69a6c5d6da421281af608951d" prot="private" virt="non-virtual"><scope>AsyncSerial</scope><name>doWrite</name></member>
+      <member refid="classAsyncSerial_1aa49b3afe4d51dbda4e39aaa2d1b59432" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>errorStatus</name></member>
+      <member refid="classAsyncSerial_1ac9fb38b9235d90f9c87ef2767cbde800" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>isOpen</name></member>
+      <member refid="classAsyncSerial_1ac703c6e3ee89e5821536ce7381a31238" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>open</name></member>
+      <member refid="classAsyncSerial_1afc0808a251a6cfe7d22cd73dc8c3e5bc" prot="private" virt="non-virtual"><scope>AsyncSerial</scope><name>pimpl</name></member>
+      <member refid="classAsyncSerial_1afa843216d519512f1f325a1b8849be26" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>readBufferSize</name></member>
+      <member refid="classAsyncSerial_1aa3049c366dc6937e8222e410958f5d32" prot="private" virt="non-virtual"><scope>AsyncSerial</scope><name>readEnd</name></member>
+      <member refid="classAsyncSerial_1afb60a8e6ae2469094fe11d52e4336648" prot="protected" virt="non-virtual"><scope>AsyncSerial</scope><name>setErrorStatus</name></member>
+      <member refid="classAsyncSerial_1ad6e207716e4e54b84666fe392de38115" prot="protected" virt="non-virtual"><scope>AsyncSerial</scope><name>setReadCallback</name></member>
+      <member refid="classAsyncSerial_1a5a7e4aa37924e593ba7636be0be0bf0a" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>write</name></member>
+      <member refid="classAsyncSerial_1a8f3665e55608b07fa9eb4e9d93b3ee95" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>write</name></member>
+      <member refid="classAsyncSerial_1a3d8e2919f4fdd59cb09d6c64ddab92d8" prot="private" virt="non-virtual"><scope>AsyncSerial</scope><name>writeEnd</name></member>
+      <member refid="classAsyncSerial_1aa4285acd9b327cef013b0437cf188da7" prot="public" virt="non-virtual"><scope>AsyncSerial</scope><name>writeString</name></member>
+      <member refid="classAsyncSerial_1aac97fceec15171d8161bbc89b5b37474" prot="public" virt="pure-virtual"><scope>AsyncSerial</scope><name>~AsyncSerial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

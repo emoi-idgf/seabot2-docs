@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classKalmanNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>KalmanNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classKalmanNode_1addd50577309d4222d51e840fe99fb6c4" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr KalmanNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>KalmanNode::timer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable Rclcpp </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="30" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1a0248aba6095a0539d8db503117f3be64" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds KalmanNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>KalmanNode::loop_dt_</qualifiedname>
+        <initializer>= 200ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="31" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1a6bd32d38b8b7a1f3446763ae7cd834b8" prot="private" static="no" mutable="no">
+        <type><ref refid="classKalman" kindref="compound">Kalman</ref></type>
+        <definition>Kalman KalmanNode::k_</definition>
+        <argsstring></argsstring>
+        <name>k_</name>
+        <qualifiedname>KalmanNode::k_</qualifiedname>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="33" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1a8d7fe7039164b8070ae038211f55f6f8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthPose &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr KalmanNode::subscriber_depth_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_depth_data_</name>
+        <qualifiedname>KalmanNode::subscriber_depth_data_</qualifiedname>
+        <briefdescription>
+<para>Interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="37" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1abdd060b3e29d4dc81d755c92d980c1d9" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::PistonState &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::PistonState&gt;::SharedPtr KalmanNode::subscriber_state_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_state_data_</name>
+        <qualifiedname>KalmanNode::subscriber_state_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="38" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1a4d183633bc0c0dd2d7f770d183f6e4d8" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Density &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::Density&gt;::SharedPtr KalmanNode::subscriber_density_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_density_</name>
+        <qualifiedname>KalmanNode::subscriber_density_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="39" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1a6db3d361db8387b2ce66d4c9dc52181c" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr KalmanNode::subscriber_temperature_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_temperature_</name>
+        <qualifiedname>KalmanNode::subscriber_temperature_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="40" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classKalmanNode_1a7686110381a8032d005b0c78969d0bdf" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::KalmanState &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::KalmanState&gt;::SharedPtr KalmanNode::publisher_kalman_</definition>
+        <argsstring></argsstring>
+        <name>publisher_kalman_</name>
+        <qualifiedname>KalmanNode::publisher_kalman_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="42" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classKalmanNode_1a713190c06c8b79fd84641c2b6c090b01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KalmanNode::KalmanNode</definition>
+        <argsstring>()</argsstring>
+        <name>KalmanNode</name>
+        <qualifiedname>KalmanNode::KalmanNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="24" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="5" bodyend="12"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classKalmanNode_1a49119766d1033aa7122d1bd8d9efd77b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>KalmanNode::init_parameters</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="14" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1a687b05e73ee40100b7ae74b4d6883fbb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>KalmanNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="54" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="110" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1a10182e9ae083ca65053acda572f6b5a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::state_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::PistonState &amp;msg)</argsstring>
+        <name>state_callback</name>
+        <qualifiedname>KalmanNode::state_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::PistonState &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="60" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1a33d2dd01b2354b08dbf5c8bf1f5865bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::depth_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::DepthPose &amp;msg)</argsstring>
+        <name>depth_callback</name>
+        <qualifiedname>KalmanNode::depth_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::DepthPose &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="66" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="96" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1aecaddf8dd5738eb4992ee9c4510e6272" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::density_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::Density &amp;msg)</argsstring>
+        <name>density_callback</name>
+        <qualifiedname>KalmanNode::density_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::Density &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="72" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1aa14c906cf927363dd8eb2451bc808998" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::pressure_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::PressureSensorData &amp;msg)</argsstring>
+        <name>pressure_callback</name>
+        <qualifiedname>KalmanNode::pressure_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::PressureSensorData &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="78" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1a38b8929c34fea3d63c9abd36c1f7aa3c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::temperature_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::TemperatureSensorData &amp;msg)</argsstring>
+        <name>temperature_callback</name>
+        <qualifiedname>KalmanNode::temperature_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::TemperatureSensorData &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="84" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classKalmanNode_1a885d081463a34672d17b63d73f641639" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KalmanNode::publish_data</definition>
+        <argsstring>()</argsstring>
+        <name>publish_data</name>
+        <qualifiedname>KalmanNode::publish_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="90" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman_node.cpp" bodystart="126" bodyend="151"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>KalmanNode</label>
+        <link refid="classKalmanNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>KalmanNode</label>
+        <link refid="classKalmanNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" line="22" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp" bodystart="22" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classKalmanNode_1aecaddf8dd5738eb4992ee9c4510e6272" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>density_callback</name></member>
+      <member refid="classKalmanNode_1a33d2dd01b2354b08dbf5c8bf1f5865bf" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>depth_callback</name></member>
+      <member refid="classKalmanNode_1a687b05e73ee40100b7ae74b4d6883fbb" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>init_interfaces</name></member>
+      <member refid="classKalmanNode_1a49119766d1033aa7122d1bd8d9efd77b" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>init_parameters</name></member>
+      <member refid="classKalmanNode_1a6bd32d38b8b7a1f3446763ae7cd834b8" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>k_</name></member>
+      <member refid="classKalmanNode_1a713190c06c8b79fd84641c2b6c090b01" prot="public" virt="non-virtual"><scope>KalmanNode</scope><name>KalmanNode</name></member>
+      <member refid="classKalmanNode_1a0248aba6095a0539d8db503117f3be64" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>loop_dt_</name></member>
+      <member refid="classKalmanNode_1aa14c906cf927363dd8eb2451bc808998" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>pressure_callback</name></member>
+      <member refid="classKalmanNode_1a885d081463a34672d17b63d73f641639" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>publish_data</name></member>
+      <member refid="classKalmanNode_1a7686110381a8032d005b0c78969d0bdf" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>publisher_kalman_</name></member>
+      <member refid="classKalmanNode_1a10182e9ae083ca65053acda572f6b5a1" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>state_callback</name></member>
+      <member refid="classKalmanNode_1a4d183633bc0c0dd2d7f770d183f6e4d8" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>subscriber_density_</name></member>
+      <member refid="classKalmanNode_1a8d7fe7039164b8070ae038211f55f6f8" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>subscriber_depth_data_</name></member>
+      <member refid="classKalmanNode_1abdd060b3e29d4dc81d755c92d980c1d9" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>subscriber_state_data_</name></member>
+      <member refid="classKalmanNode_1a6db3d361db8387b2ce66d4c9dc52181c" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>subscriber_temperature_</name></member>
+      <member refid="classKalmanNode_1a38b8929c34fea3d63c9abd36c1f7aa3c" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>temperature_callback</name></member>
+      <member refid="classKalmanNode_1addd50577309d4222d51e840fe99fb6c4" prot="private" virt="non-virtual"><scope>KalmanNode</scope><name>timer_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

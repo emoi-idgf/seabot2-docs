@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classTemperatureProfile" kind="class" language="C++" prot="public">
+    <compoundname>TemperatureProfile</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTemperatureProfile_1a699565c869eb7fb2eb1e80fda56cf5a3" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; std::pair&lt; double, double &gt; &gt;</type>
+        <definition>std::deque&lt;std::pair&lt;double, double&gt; &gt; TemperatureProfile::temperature_depth_data_</definition>
+        <argsstring></argsstring>
+        <name>temperature_depth_data_</name>
+        <qualifiedname>TemperatureProfile::temperature_depth_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="25" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classTemperatureProfile_1a195310579d8c270d10896f7cbb75c160" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TemperatureProfile::enable_kalman_</definition>
+        <argsstring></argsstring>
+        <name>enable_kalman_</name>
+        <qualifiedname>TemperatureProfile::enable_kalman_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="29" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTemperatureProfile_1acefb491c375b46c8516d43a960c084f5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TemperatureProfile::is_valid_</definition>
+        <argsstring></argsstring>
+        <name>is_valid_</name>
+        <qualifiedname>TemperatureProfile::is_valid_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="30" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTemperatureProfile_1a32826d2513590f4f584d0e6fdf26adcc" prot="public" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time TemperatureProfile::time_last_predict_</definition>
+        <argsstring></argsstring>
+        <name>time_last_predict_</name>
+        <qualifiedname>TemperatureProfile::time_last_predict_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="31" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTemperatureProfile_1a2303082b459b9507336e4d0dec4d7e78" prot="public" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds TemperatureProfile::forecast_dt_</definition>
+        <argsstring></argsstring>
+        <name>forecast_dt_</name>
+        <qualifiedname>TemperatureProfile::forecast_dt_</qualifiedname>
+        <initializer>= 0ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="32" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTemperatureProfile_1a06e248f69b5dadb339888a92296238c1" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t TemperatureProfile::max_number_data_</definition>
+        <argsstring></argsstring>
+        <name>max_number_data_</name>
+        <qualifiedname>TemperatureProfile::max_number_data_</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="33" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTemperatureProfile_1ae85d06a2517f9bd5cc86417c05acd943" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TemperatureProfile::profile_slope_</definition>
+        <argsstring></argsstring>
+        <name>profile_slope_</name>
+        <qualifiedname>TemperatureProfile::profile_slope_</qualifiedname>
+        <initializer>= -0.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="35" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTemperatureProfile_1ae1c4e2a4bc458976430d85f077dc6af7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double TemperatureProfile::profile_intercept_</definition>
+        <argsstring></argsstring>
+        <name>profile_intercept_</name>
+        <qualifiedname>TemperatureProfile::profile_intercept_</qualifiedname>
+        <initializer>= -5.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="36" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTemperatureProfile_1a2c480aabe949c5c74b00b86a7e3df946" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TemperatureProfile::TemperatureProfile</definition>
+        <argsstring>()</argsstring>
+        <name>TemperatureProfile</name>
+        <qualifiedname>TemperatureProfile::TemperatureProfile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="21" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/temperature_profile.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTemperatureProfile_1a18e41d78be8873e916b3ef04c8377120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TemperatureProfile::update_temperature</definition>
+        <argsstring>(double temperature, double depth)</argsstring>
+        <name>update_temperature</name>
+        <qualifiedname>TemperatureProfile::update_temperature</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>temperature</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temperature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="45" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/temperature_profile.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classTemperatureProfile_1a34a785469b46a1486d54acc9b289eee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TemperatureProfile::compute_profile</definition>
+        <argsstring>()</argsstring>
+        <name>compute_profile</name>
+        <qualifiedname>TemperatureProfile::compute_profile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the profile </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="50" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/temperature_profile.cpp" bodystart="13" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" line="16" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/temperature_profile.h" bodystart="16" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classTemperatureProfile_1a34a785469b46a1486d54acc9b289eee0" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>compute_profile</name></member>
+      <member refid="classTemperatureProfile_1a195310579d8c270d10896f7cbb75c160" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>enable_kalman_</name></member>
+      <member refid="classTemperatureProfile_1a2303082b459b9507336e4d0dec4d7e78" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>forecast_dt_</name></member>
+      <member refid="classTemperatureProfile_1acefb491c375b46c8516d43a960c084f5" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>is_valid_</name></member>
+      <member refid="classTemperatureProfile_1a06e248f69b5dadb339888a92296238c1" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>max_number_data_</name></member>
+      <member refid="classTemperatureProfile_1ae1c4e2a4bc458976430d85f077dc6af7" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>profile_intercept_</name></member>
+      <member refid="classTemperatureProfile_1ae85d06a2517f9bd5cc86417c05acd943" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>profile_slope_</name></member>
+      <member refid="classTemperatureProfile_1a699565c869eb7fb2eb1e80fda56cf5a3" prot="private" virt="non-virtual"><scope>TemperatureProfile</scope><name>temperature_depth_data_</name></member>
+      <member refid="classTemperatureProfile_1a2c480aabe949c5c74b00b86a7e3df946" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>TemperatureProfile</name></member>
+      <member refid="classTemperatureProfile_1a32826d2513590f4f584d0e6fdf26adcc" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>time_last_predict_</name></member>
+      <member refid="classTemperatureProfile_1a18e41d78be8873e916b3ef04c8377120" prot="public" virt="non-virtual"><scope>TemperatureProfile</scope><name>update_temperature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

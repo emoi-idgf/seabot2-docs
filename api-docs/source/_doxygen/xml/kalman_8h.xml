@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="kalman_8h" kind="file" language="C++">
+    <compoundname>kalman.h</compoundname>
+    <includes local="yes">rclcpp/rclcpp.hpp</includes>
+    <includes local="no">eigen3/Eigen/Dense</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="kalman__node_8hpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp</includedby>
+    <includedby refid="kalman_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/src/kalman.cpp</includedby>
+    <includedby refid="simulator_8h" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h</label>
+        <link refid="kalman_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cmath</label>
+      </node>
+      <node id="3">
+        <label>eigen3/Eigen/Dense</label>
+      </node>
+      <node id="2">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h</label>
+        <link refid="kalman_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman_node.hpp</label>
+        <link refid="kalman__node_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator.h</label>
+        <link refid="simulator_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/include/seabot2_simulator/simulator_node.hpp</label>
+        <link refid="simulator__node_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classKalman" prot="public">Kalman</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>lemezoth<sp/>on<sp/>12/11/22.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUILD_KALMAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUILD_KALMAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;eigen3/Eigen/Dense&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">Eigen;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classKalman" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classKalman" kindref="compound">Kalman</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NB_MESURES<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NB_STATES<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>NB_COMMAND<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKalman" kindref="compound">Kalman</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Time<sp/>&amp;init_time);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a73e981ef539568465af64bb5738795f0" kindref="member">update_density</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>physics_rho);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_computation(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>velocity)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_derivative_computation(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>velocity)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classKalman_1a861938a9da523402c2bb886416e94505" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref><sp/>=<sp/><sp/>1000.0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>physics_g_<sp/>=<sp/><sp/>9.81;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>robot_mass_<sp/>=<sp/><sp/>12.0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>robot_added_mass_<sp/>=<sp/><sp/>2.51;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>robot_diameter_<sp/>=<sp/><sp/>0.125;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>screw_thread_<sp/>=<sp/><sp/>1.e-3;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tick_per_turn_<sp/>=<sp/><sp/>2048*4;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>piston_diameter_<sp/>=<sp/><sp/>0.045;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>piston_max_tick_<sp/>=<sp/><sp/>1146880;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>degree_to_kelvin_<sp/>=<sp/>273.15;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>S_<sp/>=<sp/>M_PI*pow(robot_diameter_/2.0,<sp/>2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tick_to_volume_<sp/>=<sp/>(screw_thread_/tick_per_turn_)*pow(piston_diameter_/2.0,<sp/>2)*<ref refid="FusionMath_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>coeff_A_<sp/>=<sp/>physics_g_<sp/>*<sp/><ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref><sp/>/<sp/>(robot_added_mass_<sp/>+<sp/>robot_mass_);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>double<sp/>coeff_B_<sp/>=<sp/>0.5<sp/>*<sp/>physics_rho_<sp/>*<sp/>S_<sp/>/<sp/>(2.0<sp/>*<sp/>robot_mass_);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>coeff_B_<sp/>=<sp/>0.5<sp/>*<sp/><ref refid="classKalman_1a861938a9da523402c2bb886416e94505" kindref="member">physics_rho_</ref><sp/>/<sp/>(robot_added_mass_<sp/>+<sp/>robot_mass_);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_model_boundary_velocity_positive_<sp/>=<sp/>0.267911611144239;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_model_boundary_velocity_negative_<sp/>=<sp/>-0.272937623109179;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_derivative_at_model_boundary_positive_<sp/>=<sp/>fz_derivative_computation(fz_model_boundary_velocity_positive_);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_offset_at_model_boundary_positive_<sp/>=<sp/>fz_computation(fz_model_boundary_velocity_positive_)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>fz_derivative_at_model_boundary_positive_<sp/>*<sp/>fz_model_boundary_velocity_positive_;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_derivative_at_model_boundary_negative_<sp/>=<sp/>fz_derivative_computation(fz_model_boundary_velocity_negative_);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fz_offset_at_model_boundary_negative_<sp/>=<sp/>fz_computation(fz_model_boundary_velocity_negative_)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>fz_derivative_at_model_boundary_negative_<sp/>*<sp/>fz_model_boundary_velocity_negative_;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>piston_max_volume_<sp/>=<sp/>piston_max_tick_<sp/>*<sp/>tick_to_volume_;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a0fa143e1142276a678d7fec83ccf7e22" kindref="member">enable_kalman_depth_</ref><sp/>=<sp/>0.5;<sp/></highlight></codeline>
+<codeline lineno="76" refid="classKalman_1aa22eb820309998a3f6e923e296863d92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1aa22eb820309998a3f6e923e296863d92" kindref="member">piston_volume_eq_init_</ref><sp/>=<sp/><sp/>90e-6;<sp/></highlight></codeline>
+<codeline lineno="77" refid="classKalman_1a0b3a64041aef94c22ac767a662b06825" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a0b3a64041aef94c22ac767a662b06825" kindref="member">init_chi_</ref><sp/>=<sp/>0.0;<sp/></highlight></codeline>
+<codeline lineno="78" refid="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a7fa3ffda949e71216f28f699a2cb9290" kindref="member">init_chi2_</ref><sp/>=<sp/>0.0;<sp/></highlight></codeline>
+<codeline lineno="79" refid="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a4f63342eda0a83c0da9458d42f11cb29" kindref="member">init_cz_</ref><sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>init_volume_air_<sp/>=<sp/>5e-3;<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classKalman_1afc6d793f745fba02cde29a93b518f9c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1afc6d793f745fba02cde29a93b518f9c4" kindref="member">gamma_alpha_velocity_</ref><sp/>=<sp/><sp/>1e-4;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_alpha_depth_<sp/>=<sp/><sp/>1e-5;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_alpha_offset_<sp/>=<sp/><sp/>1e-9;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_alpha_chi_<sp/>=<sp/><sp/>1e-15;<sp/></highlight><highlight class="comment">//<sp/>2e-8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_alpha_chi2_<sp/>=<sp/><sp/>1e-15;<sp/></highlight><highlight class="comment">//<sp/>2e-8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_alpha_cz_<sp/>=<sp/><sp/>1e-5;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_alpha_volume_air_<sp/>=<sp/><sp/>1e-6;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_velocity_<sp/>=<sp/><sp/>1e-3;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_depth_<sp/>=<sp/><sp/>1.0e-3;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_offset_<sp/>=<sp/>1e-6;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_chi_<sp/>=<sp/>1e-10<sp/>;<sp/></highlight><highlight class="comment">//<sp/>20e-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_chi2_<sp/>=<sp/><sp/>1e-10;<sp/></highlight><highlight class="comment">//<sp/>1e-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_cz_<sp/>=<sp/><sp/>0.01;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_init_volume_air_<sp/>=<sp/><sp/>1e-6;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>gamma_beta_depth_<sp/>=<sp/><sp/>1e-2;<sp/></highlight><highlight class="comment">//<sp/>5e-4<sp/>(m)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102" refid="classKalman_1a942f9880111769cda6e8baf5939de8a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a942f9880111769cda6e8baf5939de8a4" kindref="member">fusion_depth_</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fusion_velocity_<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>fusion_stamp_;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>piston_position_<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>piston_stamp_;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature_<sp/>=<sp/>288.15;<sp/></highlight></codeline>
+<codeline lineno="110" refid="classKalman_1acd155be96ac525872469e13183ac60f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classKalman_1acd155be96ac525872469e13183ac60f8" kindref="member">pressure_</ref><sp/>=<sp/>101325.0<sp/>;<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/>*<sp/><sp/>xhat_<sp/>definition</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(0)<sp/>velocity</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(1)<sp/>depth</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(2)<sp/>Piston<sp/>volume<sp/>to<sp/>equilibrium</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(3)<sp/>chi<sp/>(chi*z)</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(4)<sp/>chi2<sp/>(chi2*z²)</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(5)<sp/>Cz</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/>*<sp/><sp/>xhat_(6)<sp/>Bubble<sp/>(Vb/z)</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classKalman_1aeb4208c32e041e59377f815334651bbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,<sp/>NB_STATES,<sp/>1&gt;<sp/><ref refid="classKalman_1aeb4208c32e041e59377f815334651bbb" kindref="member">xhat_</ref><sp/>=<sp/>Matrix&lt;double,<sp/>NB_STATES,<sp/>1&gt;::Zero();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,NB_STATES,<sp/>1&gt;<sp/>x_forcast_<sp/>=<sp/>Matrix&lt;double,<sp/>NB_STATES,<sp/>1&gt;::Zero();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,NB_STATES,NB_STATES&gt;<sp/>gamma_<sp/>=<sp/>Matrix&lt;double,NB_STATES,NB_STATES&gt;::Zero();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,NB_STATES,<sp/>NB_STATES&gt;<sp/>gamma_forcast_<sp/>=<sp/>Matrix&lt;double,NB_STATES,NB_STATES&gt;::Zero();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>offset_total_=<sp/>0.0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,<sp/>NB_STATES,<sp/>NB_STATES&gt;<sp/>gamma_alpha_<sp/>=<sp/>Matrix&lt;double,<sp/>NB_STATES,<sp/>NB_STATES&gt;::Zero();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,<sp/>NB_MESURES,<sp/>NB_MESURES&gt;<sp/>gamma_beta_<sp/>=<sp/>Matrix&lt;double,<sp/>NB_MESURES,<sp/>NB_MESURES&gt;::Zero();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>Matrix&lt;double,<sp/>NB_MESURES,<sp/>NB_STATES&gt;<sp/>Ck_<sp/>=<sp/>Matrix&lt;double,<sp/>NB_MESURES,<sp/>NB_STATES&gt;::Zero();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_kalman_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_valid_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>time_last_predict_;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/>forecast_dt_<sp/>=<sp/>0ms;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>[[nodiscard]]<sp/>Matrix&lt;double,NB_STATES,<sp/>1&gt;<sp/>f_dyn(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_STATES,1&gt;<sp/>&amp;x,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_COMMAND,<sp/>1&gt;<sp/>&amp;u)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kalman_predict(Matrix&lt;double,NB_STATES,<sp/>1&gt;<sp/>&amp;x,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix&lt;double,NB_STATES,<sp/>NB_STATES&gt;<sp/>&amp;gamma,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_COMMAND,<sp/>1&gt;<sp/>&amp;u,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_STATES,<sp/>NB_STATES&gt;<sp/>&amp;gamma_alpha,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>&amp;dt)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kalman_correc(Matrix&lt;double,NB_STATES,<sp/>1&gt;<sp/>&amp;x,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matrix&lt;double,NB_STATES,NB_STATES&gt;<sp/>&amp;gamma,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_MESURES,<sp/>1&gt;<sp/>&amp;y,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_MESURES,NB_MESURES&gt;<sp/>&amp;gamma_beta,</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,NB_MESURES,<sp/>NB_STATES&gt;<sp/>&amp;Ck);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_kalman();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_out_of_range(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Matrix&lt;double,<sp/>NB_STATES,<sp/>1&gt;<sp/>&amp;xhat)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a94583a3b9485c49461ba11c347bd5699" kindref="member">compute_kalman</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>new_depth_data=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>new_piston_data=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a7b5b5dba4996dd71f4eab859650212b8" kindref="member">set_new_piston_data</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>position,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>set_point,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Time<sp/>&amp;stamp);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a9c6833da97e03ecfffcd99b02dd174ec" kindref="member">set_new_depth_data</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>depth,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>velocity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rclcpp::Time<sp/>&amp;stamp);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a37341b6d877ba1d00d1c2474f29f947b" kindref="member">update_temperature</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1aec6153fb4063a3e19b7f3c23df921ef3" kindref="member">update_pressure</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pressure);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classKalman_1a90b50a7d29f720b3691b44cf0dfdf5bb" kindref="member">update_coeffAB</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_KALMAN_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_kalman/include/seabot2_kalman/kalman.h"/>
+  </compounddef>
+</doxygen>

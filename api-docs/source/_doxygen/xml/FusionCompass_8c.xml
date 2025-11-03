@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="FusionCompass_8c" kind="file" language="C++">
+    <compoundname>FusionCompass.c</compoundname>
+    <includes refid="FusionAxes_8h" local="yes">FusionAxes.h</includes>
+    <includes refid="FusionCompass_8h" local="yes">FusionCompass.h</includes>
+    <includes local="no">math.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>FusionAxes.h</label>
+        <link refid="FusionAxes_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c</label>
+        <link refid="FusionCompass_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>FusionCompass.h</label>
+        <link refid="FusionCompass_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>FusionConvention.h</label>
+        <link refid="FusionConvention_8h"/>
+      </node>
+      <node id="3">
+        <label>FusionMath.h</label>
+        <link refid="FusionMath_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="FusionCompass_8c_1a84edef505185c1a5fd2ad3b1d97071ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float FusionCompassCalculateHeading</definition>
+        <argsstring>(const FusionConvention convention, const FusionVector accelerometer, const FusionVector magnetometer)</argsstring>
+        <name>FusionCompassCalculateHeading</name>
+        <param>
+          <type>const <ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref></type>
+          <declname>convention</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+          <declname>accelerometer</declname>
+        </param>
+        <param>
+          <type>const <ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
+          <declname>magnetometer</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the magnetic heading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>convention</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Earth axes convention. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>accelerometer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Accelerometer measurement in any calibrated units. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>magnetometer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Magnetometer measurement in any calibrated units. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Heading angle in degrees. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c" line="25" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c" bodystart="25" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Tilt-compensated compass to calculate the magnetic heading using accelerometer and magnetometer measurements. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Seb Madgwick </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Includes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FusionAxes_8h" kindref="compound">FusionAxes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FusionCompass_8h" kindref="compound">FusionCompass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>atan2f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="FusionCompass_8c_1a84edef505185c1a5fd2ad3b1d97071ff" kindref="member">FusionCompassCalculateHeading</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref><sp/>convention,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>magnetometer)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(convention)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>FusionConventionNwu:<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>west<sp/>=<sp/>FusionVectorNormalise(FusionVectorCrossProduct(accelerometer,<sp/>magnetometer));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>north<sp/>=<sp/>FusionVectorNormalise(FusionVectorCrossProduct(west,<sp/>accelerometer));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FusionRadiansToDegrees(atan2f(west.axis.x,<sp/>north.axis.x));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>FusionConventionEnu:<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>west<sp/>=<sp/>FusionVectorNormalise(FusionVectorCrossProduct(accelerometer,<sp/>magnetometer));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>north<sp/>=<sp/>FusionVectorNormalise(FusionVectorCrossProduct(west,<sp/>accelerometer));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>east<sp/>=<sp/>FusionVectorMultiplyScalar(west,<sp/>-1.0f);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FusionRadiansToDegrees(atan2f(north.axis.x,<sp/>east.axis.x));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>FusionConventionNed:<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>up<sp/>=<sp/>FusionVectorMultiplyScalar(accelerometer,<sp/>-1.0f);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>west<sp/>=<sp/>FusionVectorNormalise(FusionVectorCrossProduct(up,<sp/>magnetometer));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>north<sp/>=<sp/>FusionVectorNormalise(FusionVectorCrossProduct(west,<sp/>up));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FusionRadiansToDegrees(atan2f(west.axis.x,<sp/>north.axis.x));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight><highlight class="comment">//<sp/>avoid<sp/>compiler<sp/>warning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCompass.c"/>
+  </compounddef>
+</doxygen>

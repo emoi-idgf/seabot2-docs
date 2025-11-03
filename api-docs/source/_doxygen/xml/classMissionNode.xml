@@ -1,0 +1,674 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classMissionNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>MissionNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMissionNode_1a54da7a76ed28d89ec0bc9fa3344d70ac" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr MissionNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>MissionNode::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="26" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1aed46034bcba118cbcf8c1fc666309f6d" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds MissionNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>MissionNode::loop_dt_</qualifiedname>
+        <initializer>= 1s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="27" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1aa38b6c59f36921d1cba99619504e1097" prot="private" static="no" mutable="no">
+        <type>rclcpp::CallbackGroup::SharedPtr</type>
+        <definition>rclcpp::CallbackGroup::SharedPtr MissionNode::callback_group_</definition>
+        <argsstring></argsstring>
+        <name>callback_group_</name>
+        <qualifiedname>MissionNode::callback_group_</qualifiedname>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="29" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a3a284568df6184b8d7e320868d4e3c11" prot="private" static="no" mutable="no">
+        <type><ref refid="classMission" kindref="compound">Mission</ref></type>
+        <definition>Mission MissionNode::mission_</definition>
+        <argsstring></argsstring>
+        <name>mission_</name>
+        <qualifiedname>MissionNode::mission_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variable <ref refid="classMission" kindref="compound">Mission</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="33" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a04bb2101676d9c9b83a5330d2ee09d37" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string MissionNode::mission_file_name_</definition>
+        <argsstring></argsstring>
+        <name>mission_file_name_</name>
+        <qualifiedname>MissionNode::mission_file_name_</qualifiedname>
+        <initializer>= &quot;mission.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="34" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a68559252a74a22431dff492a6738a20e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string MissionNode::mission_path_</definition>
+        <argsstring></argsstring>
+        <name>mission_path_</name>
+        <qualifiedname>MissionNode::mission_path_</qualifiedname>
+        <initializer>= &quot;./&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="35" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a3bfc35f66d2df6f7a41e2c0fa4da6659" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MissionNode::mission_enable_</definition>
+        <argsstring></argsstring>
+        <name>mission_enable_</name>
+        <qualifiedname>MissionNode::mission_enable_</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="36" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1ac1f1ef230273fc75f29f3bfeb6c8b60c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MissionNode::flash_next_waypoint_time_</definition>
+        <argsstring></argsstring>
+        <name>flash_next_waypoint_time_</name>
+        <qualifiedname>MissionNode::flash_next_waypoint_time_</qualifiedname>
+        <initializer>= 5.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="37" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a0915e06fb4556ff8979e2da71831fea9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MissionNode::flash_number_</definition>
+        <argsstring></argsstring>
+        <name>flash_number_</name>
+        <qualifiedname>MissionNode::flash_number_</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="38" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1aba6c0a5d6b6b4a2a5b23d0f83d0802e1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double MissionNode::limit_velocity_default_</definition>
+        <argsstring></argsstring>
+        <name>limit_velocity_default_</name>
+        <qualifiedname>MissionNode::limit_velocity_default_</qualifiedname>
+        <initializer>= 0.02</initializer>
+        <briefdescription>
+<para>Controller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="41" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a266a390fc613182c3e788e4f5561c2b6" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::MissionState &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::MissionState&gt;::SharedPtr MissionNode::publisher_mission_state_</definition>
+        <argsstring></argsstring>
+        <name>publisher_mission_state_</name>
+        <qualifiedname>MissionNode::publisher_mission_state_</qualifiedname>
+        <briefdescription>
+<para>Interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="44" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a0133b721c927e2a4f2108792cc801dfe" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::DepthControlSetPoint &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;::SharedPtr MissionNode::publisher_depth_control_set_point_</definition>
+        <argsstring></argsstring>
+        <name>publisher_depth_control_set_point_</name>
+        <qualifiedname>MissionNode::publisher_depth_control_set_point_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="45" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a7b7970c1da0ad937dbbddffb84f9263f" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::TemperatureKeepingDebug &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::TemperatureKeepingDebug&gt;::SharedPtr MissionNode::publisher_temperature_keeping_debug_</definition>
+        <argsstring></argsstring>
+        <name>publisher_temperature_keeping_debug_</name>
+        <qualifiedname>MissionNode::publisher_temperature_keeping_debug_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="46" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a22a486850fa36b9db7c3b67175107abb" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthPose &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr MissionNode::subscriber_depth_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_depth_data_</name>
+        <qualifiedname>MissionNode::subscriber_depth_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="48" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a2f724d4fd05ff66e1b0709e57c512fbd" prot="private" static="no" mutable="no">
+        <type>rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr</type>
+        <definition>rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr MissionNode::subscriber_temperature_data_</definition>
+        <argsstring></argsstring>
+        <name>subscriber_temperature_data_</name>
+        <qualifiedname>MissionNode::subscriber_temperature_data_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="49" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1a2fc2a9cb4e477f26bcf539a82a21fad2" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; seabot2_srvs::srv::Light &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;seabot2_srvs::srv::Light&gt;::SharedPtr MissionNode::client_light_</definition>
+        <argsstring></argsstring>
+        <name>client_light_</name>
+        <qualifiedname>MissionNode::client_light_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="51" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1ade3728a740cb0376be1b76714d9e2854" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; std_srvs::srv::Trigger &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr MissionNode::client_log_parameters_</definition>
+        <argsstring></argsstring>
+        <name>client_log_parameters_</name>
+        <qualifiedname>MissionNode::client_log_parameters_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="52" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1ab07da3c8f42d9f7e47aaddd990065c2e" prot="private" static="no" mutable="no">
+        <type>rclcpp::Client&lt; std_srvs::srv::Trigger &gt;::SharedPtr</type>
+        <definition>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr MissionNode::client_bag_recorder_</definition>
+        <argsstring></argsstring>
+        <name>client_bag_recorder_</name>
+        <qualifiedname>MissionNode::client_bag_recorder_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="53" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1aeeaadf52a938a4846df92365dd3b9e67" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::Trigger &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr MissionNode::service_mission_reload_</definition>
+        <argsstring></argsstring>
+        <name>service_mission_reload_</name>
+        <qualifiedname>MissionNode::service_mission_reload_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="55" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMissionNode_1aec38ef9a1fcaeb8eef1413a896ef5fdd" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr MissionNode::service_mission_enable_</definition>
+        <argsstring></argsstring>
+        <name>service_mission_enable_</name>
+        <qualifiedname>MissionNode::service_mission_enable_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="56" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMissionNode_1a210c7569d64bb3872762eda0e0880743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MissionNode::MissionNode</definition>
+        <argsstring>()</argsstring>
+        <name>MissionNode</name>
+        <qualifiedname>MissionNode::MissionNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="22" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="5" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMissionNode_1af883a167a9496d6473a8b38e7d3c4884" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>MissionNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="61" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="22" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1a630070c0bfbf02a9a851193d41351622" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>MissionNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces of this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="66" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="42" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1ac31360b92f51c1e19df0369ae01dfc5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>MissionNode::timer_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer callback </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="71" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="148" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1aae921ef8e5969a77084756f65a4e91bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::service_mission_reload_callback</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::Trigger::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::Trigger::Response &gt; response)</argsstring>
+        <name>service_mission_reload_callback</name>
+        <qualifiedname>MissionNode::service_mission_reload_callback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::Trigger::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::Trigger::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="79" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="185" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1aebf0430a944f8e477165ca695af7fbf0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::service_mission_enable_callback</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; response)</argsstring>
+        <name>service_mission_enable_callback</name>
+        <qualifiedname>MissionNode::service_mission_enable_callback</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="89" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="194" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1ac09f83e8a66b11c7db60cbe54526d29a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::call_light</definition>
+        <argsstring>()</argsstring>
+        <name>call_light</name>
+        <qualifiedname>MissionNode::call_light</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call light service </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="96" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="79" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1a90b719b138f2bb6bfa1ced9bd5630989" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::call_log_params</definition>
+        <argsstring>() const</argsstring>
+        <name>call_log_params</name>
+        <qualifiedname>MissionNode::call_log_params</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call log params </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="101" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="99" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1aef3cca810237968950882ce4ca428b39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MissionNode::load_mission</definition>
+        <argsstring>()</argsstring>
+        <name>load_mission</name>
+        <qualifiedname>MissionNode::load_mission</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load mission </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="106" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="134" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1abc0259db8b904ca59f61ce369e2f734d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::call_velocity_computation</definition>
+        <argsstring>(std::vector&lt; float &gt; &amp;velocity_list)</argsstring>
+        <name>call_velocity_computation</name>
+        <qualifiedname>MissionNode::call_velocity_computation</qualifiedname>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>velocity_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call alpha mission <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>velocity_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="112" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1aa33aab22ae169a4d830f44de315e6571" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::call_restart_bag</definition>
+        <argsstring>() const</argsstring>
+        <name>call_restart_bag</name>
+        <qualifiedname>MissionNode::call_restart_bag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call restart bag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="117" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="117" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1a29c884ae315b1e07538ef74cbc4f712e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::depth_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::DepthPose::SharedPtr msg)</argsstring>
+        <name>depth_callback</name>
+        <qualifiedname>MissionNode::depth_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::DepthPose::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classKalman" kindref="compound">Kalman</ref> callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="123" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classMissionNode_1a654cde58df15ce43f9889f811904804f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MissionNode::temperature_callback</definition>
+        <argsstring>(const seabot2_msgs::msg::TemperatureSensorData::SharedPtr msg)</argsstring>
+        <name>temperature_callback</name>
+        <qualifiedname>MissionNode::temperature_callback</qualifiedname>
+        <param>
+          <type>const seabot2_msgs::msg::TemperatureSensorData::SharedPtr</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classKalman" kindref="compound">Kalman</ref> callback <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="129" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MissionNode</label>
+        <link refid="classMissionNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MissionNode</label>
+        <link refid="classMissionNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" line="20" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp" bodystart="20" bodyend="131"/>
+    <listofallmembers>
+      <member refid="classMissionNode_1ac09f83e8a66b11c7db60cbe54526d29a" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>call_light</name></member>
+      <member refid="classMissionNode_1a90b719b138f2bb6bfa1ced9bd5630989" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>call_log_params</name></member>
+      <member refid="classMissionNode_1aa33aab22ae169a4d830f44de315e6571" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>call_restart_bag</name></member>
+      <member refid="classMissionNode_1abc0259db8b904ca59f61ce369e2f734d" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>call_velocity_computation</name></member>
+      <member refid="classMissionNode_1aa38b6c59f36921d1cba99619504e1097" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>callback_group_</name></member>
+      <member refid="classMissionNode_1ab07da3c8f42d9f7e47aaddd990065c2e" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>client_bag_recorder_</name></member>
+      <member refid="classMissionNode_1a2fc2a9cb4e477f26bcf539a82a21fad2" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>client_light_</name></member>
+      <member refid="classMissionNode_1ade3728a740cb0376be1b76714d9e2854" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>client_log_parameters_</name></member>
+      <member refid="classMissionNode_1a29c884ae315b1e07538ef74cbc4f712e" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>depth_callback</name></member>
+      <member refid="classMissionNode_1ac1f1ef230273fc75f29f3bfeb6c8b60c" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>flash_next_waypoint_time_</name></member>
+      <member refid="classMissionNode_1a0915e06fb4556ff8979e2da71831fea9" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>flash_number_</name></member>
+      <member refid="classMissionNode_1a630070c0bfbf02a9a851193d41351622" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>init_interfaces</name></member>
+      <member refid="classMissionNode_1af883a167a9496d6473a8b38e7d3c4884" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>init_parameters</name></member>
+      <member refid="classMissionNode_1aba6c0a5d6b6b4a2a5b23d0f83d0802e1" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>limit_velocity_default_</name></member>
+      <member refid="classMissionNode_1aef3cca810237968950882ce4ca428b39" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>load_mission</name></member>
+      <member refid="classMissionNode_1aed46034bcba118cbcf8c1fc666309f6d" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>loop_dt_</name></member>
+      <member refid="classMissionNode_1a3a284568df6184b8d7e320868d4e3c11" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>mission_</name></member>
+      <member refid="classMissionNode_1a3bfc35f66d2df6f7a41e2c0fa4da6659" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>mission_enable_</name></member>
+      <member refid="classMissionNode_1a04bb2101676d9c9b83a5330d2ee09d37" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>mission_file_name_</name></member>
+      <member refid="classMissionNode_1a68559252a74a22431dff492a6738a20e" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>mission_path_</name></member>
+      <member refid="classMissionNode_1a210c7569d64bb3872762eda0e0880743" prot="public" virt="non-virtual"><scope>MissionNode</scope><name>MissionNode</name></member>
+      <member refid="classMissionNode_1a0133b721c927e2a4f2108792cc801dfe" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>publisher_depth_control_set_point_</name></member>
+      <member refid="classMissionNode_1a266a390fc613182c3e788e4f5561c2b6" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>publisher_mission_state_</name></member>
+      <member refid="classMissionNode_1a7b7970c1da0ad937dbbddffb84f9263f" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>publisher_temperature_keeping_debug_</name></member>
+      <member refid="classMissionNode_1aec38ef9a1fcaeb8eef1413a896ef5fdd" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>service_mission_enable_</name></member>
+      <member refid="classMissionNode_1aebf0430a944f8e477165ca695af7fbf0" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>service_mission_enable_callback</name></member>
+      <member refid="classMissionNode_1aeeaadf52a938a4846df92365dd3b9e67" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>service_mission_reload_</name></member>
+      <member refid="classMissionNode_1aae921ef8e5969a77084756f65a4e91bc" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>service_mission_reload_callback</name></member>
+      <member refid="classMissionNode_1a22a486850fa36b9db7c3b67175107abb" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>subscriber_depth_data_</name></member>
+      <member refid="classMissionNode_1a2f724d4fd05ff66e1b0709e57c512fbd" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>subscriber_temperature_data_</name></member>
+      <member refid="classMissionNode_1a654cde58df15ce43f9889f811904804f" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>temperature_callback</name></member>
+      <member refid="classMissionNode_1a54da7a76ed28d89ec0bc9fa3344d70ac" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>timer_</name></member>
+      <member refid="classMissionNode_1ac31360b92f51c1e19df0369ae01dfc5c" prot="private" virt="non-virtual"><scope>MissionNode</scope><name>timer_callback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

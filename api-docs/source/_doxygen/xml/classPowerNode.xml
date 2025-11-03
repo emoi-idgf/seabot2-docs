@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPowerNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>PowerNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPowerNode_1aa82a788a26b69e26757439998220bea4" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr PowerNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>PowerNode::timer_</qualifiedname>
+        <briefdescription>
+<para>Rclcpp. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="19" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPowerNode_1a682e1b02c2d35c1775f2dfa645ec6e53" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds PowerNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>PowerNode::loop_dt_</qualifiedname>
+        <initializer>= 500ms</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="20" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" prot="private" static="no" mutable="no">
+        <type><ref refid="classPower" kindref="compound">Power</ref></type>
+        <definition>Power PowerNode::power_</definition>
+        <argsstring></argsstring>
+        <name>power_</name>
+        <qualifiedname>PowerNode::power_</qualifiedname>
+        <briefdescription>
+<para>loop dt </para>
+        </briefdescription>
+        <detaileddescription>
+<para>I2C configuration </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="23" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPowerNode_1a64ffbbf7a5d97cb130f384d4823aa77a" prot="private" static="no" mutable="no">
+        <type>rclcpp::Publisher&lt; seabot2_msgs::msg::PowerState &gt;::SharedPtr</type>
+        <definition>rclcpp::Publisher&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr PowerNode::publisher_power_state_</definition>
+        <argsstring></argsstring>
+        <name>publisher_power_state_</name>
+        <qualifiedname>PowerNode::publisher_power_state_</qualifiedname>
+        <briefdescription>
+<para>Topics / Services. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="26" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPowerNode_1a8507cff94a58a2093f2d398cdc6d6e6d" prot="private" static="no" mutable="no">
+        <type>rclcpp::Time</type>
+        <definition>rclcpp::Time PowerNode::time_turn_off_light_</definition>
+        <argsstring></argsstring>
+        <name>time_turn_off_light_</name>
+        <qualifiedname>PowerNode::time_turn_off_light_</qualifiedname>
+        <initializer>= this-&gt;now()</initializer>
+        <briefdescription>
+<para>Variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="29" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPowerNode_1abe449d2938fc6b989fd8d92365946642" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PowerNode::light_is_on_</definition>
+        <argsstring></argsstring>
+        <name>light_is_on_</name>
+        <qualifiedname>PowerNode::light_is_on_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="30" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPowerNode_1a09f7025def48dcc0064667e031e76c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PowerNode::PowerNode</definition>
+        <argsstring>()</argsstring>
+        <name>PowerNode</name>
+        <qualifiedname>PowerNode::PowerNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="14" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" bodystart="5" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPowerNode_1a9ea7c8e16ebc8b039b3557d4e7100511" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerNode::timer_callback</definition>
+        <argsstring>()</argsstring>
+        <name>timer_callback</name>
+        <qualifiedname>PowerNode::timer_callback</qualifiedname>
+        <briefdescription>
+<para>Functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="33" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" bodystart="19" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerNode_1a4c65b7e201167ab0855217965ebfe7a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerNode::init_parameters</definition>
+        <argsstring>()</argsstring>
+        <name>init_parameters</name>
+        <qualifiedname>PowerNode::init_parameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init and get parameters of the Node </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>I2C</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="38" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" bodystart="33" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classPowerNode_1a6f547cceb82b58cd5b78f263dc700f33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PowerNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>PowerNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interface to this node </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="43" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PowerNode</label>
+        <link refid="classPowerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PowerNode</label>
+        <link refid="classPowerNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" line="12" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power_node.h" bodystart="12" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classPowerNode_1a6f547cceb82b58cd5b78f263dc700f33" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>init_interfaces</name></member>
+      <member refid="classPowerNode_1a4c65b7e201167ab0855217965ebfe7a0" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>init_parameters</name></member>
+      <member refid="classPowerNode_1abe449d2938fc6b989fd8d92365946642" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>light_is_on_</name></member>
+      <member refid="classPowerNode_1a682e1b02c2d35c1775f2dfa645ec6e53" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>loop_dt_</name></member>
+      <member refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>power_</name></member>
+      <member refid="classPowerNode_1a09f7025def48dcc0064667e031e76c2b" prot="public" virt="non-virtual"><scope>PowerNode</scope><name>PowerNode</name></member>
+      <member refid="classPowerNode_1a64ffbbf7a5d97cb130f384d4823aa77a" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>publisher_power_state_</name></member>
+      <member refid="classPowerNode_1a8507cff94a58a2093f2d398cdc6d6e6d" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>time_turn_off_light_</name></member>
+      <member refid="classPowerNode_1aa82a788a26b69e26757439998220bea4" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>timer_</name></member>
+      <member refid="classPowerNode_1a9ea7c8e16ebc8b039b3557d4e7100511" prot="private" virt="non-virtual"><scope>PowerNode</scope><name>timer_callback</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

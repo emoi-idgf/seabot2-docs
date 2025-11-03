@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="bme280_8h" kind="file" language="C++">
+    <compoundname>bme280.h</compoundname>
+    <includes refid="bme280__defs_8h" local="yes">bme280_defs.h</includes>
+    <includedby refid="bme280__node_8hpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp</includedby>
+    <includedby refid="bme280_8c" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280.h</label>
+        <link refid="bme280_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bme280_defs.h</label>
+        <link refid="bme280__defs_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280.h</label>
+        <link refid="bme280_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp</label>
+        <link refid="bme280__node_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280.c</label>
+        <link refid="bme280_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <member refid="group__BME280_1gaf0b7d7a19bb48ec9eb3651b79f0c3e85" kind="function"><name>bme280_init</name></member>
+      <member refid="group__BME280_1ga002175df0ebe7893fcf0a54dfe806ba1" kind="function"><name>bme280_set_regs</name></member>
+      <member refid="group__BME280_1ga992c5a438b414fe4724764738b88d9d7" kind="function"><name>bme280_get_regs</name></member>
+      <member refid="group__BME280_1ga5d436d907394fde22471347599948205" kind="function"><name>bme280_set_sensor_settings</name></member>
+      <member refid="group__BME280_1gaf3bef90d33942197a98715ea8657211f" kind="function"><name>bme280_get_sensor_settings</name></member>
+      <member refid="group__BME280_1ga17a0eaeb97e43233af3e6aac8bd426d4" kind="function"><name>bme280_set_sensor_mode</name></member>
+      <member refid="group__BME280_1ga4e9e8d290d842abb3262591ff9f64bc4" kind="function"><name>bme280_get_sensor_mode</name></member>
+      <member refid="group__BME280_1ga90dd2358e7050455585842a0fd468f97" kind="function"><name>bme280_soft_reset</name></member>
+      <member refid="group__BME280_1ga6671fea2c1e01f40029a653b9ab4410d" kind="function"><name>bme280_get_sensor_data</name></member>
+      <member refid="group__BME280_1ga84be45ccf7a3a82138ff2170123462c3" kind="function"><name>bme280_parse_sensor_data</name></member>
+      <member refid="group__BME280_1ga9f2c3c8c683b434ca10447515f85c0de" kind="function"><name>bme280_compensate_data</name></member>
+    </sectiondef>
+    <briefdescription>
+<para>Sensor driver for BME280 sensor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2016 - 2017 Bosch Sensortec GmbH</para>
+<para>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</para>
+<para>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</para>
+<para>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</para>
+<para>Neither the name of the copyright holder nor the names of the contributors may be used to endorse or promote products derived from this software without specific prior written permission.</para>
+<para>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE</para>
+<para>The information provided is believed to be accurate and reliable. The copyright holder assumes no responsibility for the consequences of use of such information nor for any infringement of patents or other rights of third parties which may result from its use. No license is granted by implication or otherwise under any patent or patent rights of the copyright holder.</para>
+<para><simplesect kind="date"><para>14 Feb 2018 </para>
+</simplesect>
+<simplesect kind="version"><para>3.3.4</para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BME280_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BME280_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Header<sp/>includes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bme280__defs_8h" kindref="compound">bme280_defs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1gaf0b7d7a19bb48ec9eb3651b79f0c3e85" kindref="member">bme280_init</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga002175df0ebe7893fcf0a54dfe806ba1" kindref="member">bme280_set_regs</ref>(uint8_t<sp/>*reg_addr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*reg_data,<sp/>uint8_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga992c5a438b414fe4724764738b88d9d7" kindref="member">bme280_get_regs</ref>(uint8_t<sp/>reg_addr,<sp/>uint8_t<sp/>*reg_data,<sp/>uint16_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga5d436d907394fde22471347599948205" kindref="member">bme280_set_sensor_settings</ref>(uint8_t<sp/>desired_settings,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1gaf3bef90d33942197a98715ea8657211f" kindref="member">bme280_get_sensor_settings</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga17a0eaeb97e43233af3e6aac8bd426d4" kindref="member">bme280_set_sensor_mode</ref>(uint8_t<sp/>sensor_mode,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga4e9e8d290d842abb3262591ff9f64bc4" kindref="member">bme280_get_sensor_mode</ref>(uint8_t<sp/>*sensor_mode,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga90dd2358e7050455585842a0fd468f97" kindref="member">bme280_soft_reset</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga6671fea2c1e01f40029a653b9ab4410d" kindref="member">bme280_get_sensor_data</ref>(uint8_t<sp/>sensor_comp,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__data" kindref="compound">bme280_data</ref><sp/>*comp_data,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>*dev);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__BME280_1ga84be45ccf7a3a82138ff2170123462c3" kindref="member">bme280_parse_sensor_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*reg_data,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__uncomp__data" kindref="compound">bme280_uncomp_data</ref><sp/>*uncomp_data);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">int8_t<sp/><ref refid="group__BME280_1ga9f2c3c8c683b434ca10447515f85c0de" kindref="member">bme280_compensate_data</ref>(uint8_t<sp/>sensor_comp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__uncomp__data" kindref="compound">bme280_uncomp_data</ref><sp/>*uncomp_data,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__data" kindref="compound">bme280_data</ref><sp/>*comp_data,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structbme280__calib__data" kindref="compound">bme280_calib_data</ref><sp/>*calib_data);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>CPP<sp/>guard<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>BME280_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280.h"/>
+  </compounddef>
+</doxygen>

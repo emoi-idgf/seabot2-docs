@@ -1,0 +1,716 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPiston" kind="class" language="C++" prot="public">
+    <compoundname>Piston</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classPiston_1af285037ee141dbcbd776bd32cea0de5d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>state_piston</name>
+        <qualifiedname>Piston::state_piston</qualifiedname>
+        <enumvalue id="classPiston_1af285037ee141dbcbd776bd32cea0de5dabfecaa20e0873f77924a8d7ca6142177" prot="public">
+          <name>PISTON_SEARCH_SWITCH_BOTTOM</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classPiston_1af285037ee141dbcbd776bd32cea0de5dac2c9697558323784575f6fd3b1a92caf" prot="public">
+          <name>PISTON_RELEASE_SWITCH_BOTTOM</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classPiston_1af285037ee141dbcbd776bd32cea0de5dad1ca5f48808ab9827eb7bf69b0f981b2" prot="public">
+          <name>PISTON_BACK_SWITCH_BOTTOM</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classPiston_1af285037ee141dbcbd776bd32cea0de5da6ed8d0c99efe24edda1ca0c723dc3461" prot="public">
+          <name>PISTON_REGULATION</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classPiston_1af285037ee141dbcbd776bd32cea0de5da707d62bc9b336b462be4bdab21498592" prot="public">
+          <name>PISTON_EXIT</name>
+          <initializer>=4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classPiston_1af285037ee141dbcbd776bd32cea0de5da27092fd421042c10d2566ac30506debf" prot="public">
+          <name>PISTON_LOW_BATT</name>
+          <initializer>=5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="59" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="59" bodyend="65"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPiston_1ae8a07e7adc14391bc629f5a3daa6fce0" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node *</type>
+        <definition>rclcpp::Node* Piston::n_</definition>
+        <argsstring></argsstring>
+        <name>n_</name>
+        <qualifiedname>Piston::n_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="68" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a2fd5daad4b1e16ea31f605b2de95f4b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <qualifiedname>Piston::file_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Pointer to rclcpp Node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="70" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a061847e2ae0a03157a7b71a872e40d0d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Piston::i2c_periph_</definition>
+        <argsstring></argsstring>
+        <name>i2c_periph_</name>
+        <qualifiedname>Piston::i2c_periph_</qualifiedname>
+        <initializer>= &quot;/dev/i2c-1&quot;</initializer>
+        <briefdescription>
+<para>File to the i2c port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="71" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a5ae793893b47a83a29834669e42c1674" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::i2c_addr_</definition>
+        <argsstring></argsstring>
+        <name>i2c_addr_</name>
+        <qualifiedname>Piston::i2c_addr_</qualifiedname>
+        <initializer>= 0x1E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="72" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a657f6184acfa3585e80869405b64decd" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Piston::code_version_</definition>
+        <argsstring></argsstring>
+        <name>code_version_</name>
+        <qualifiedname>Piston::code_version_</qualifiedname>
+        <initializer>= 0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="73" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1ae8ca2004f5c325014496482c2b0aaece" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Piston::pic_code_version_</definition>
+        <argsstring></argsstring>
+        <name>pic_code_version_</name>
+        <qualifiedname>Piston::pic_code_version_</qualifiedname>
+        <initializer>=0</initializer>
+        <briefdescription>
+<para>Code version of the expected hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="74" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Piston::R1_</definition>
+        <argsstring></argsstring>
+        <name>R1_</name>
+        <qualifiedname>Piston::R1_</qualifiedname>
+        <initializer>= 3.9</initializer>
+        <briefdescription>
+<para>Code version read from the hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Bridge </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="78" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1aeaa1c94f66d719bc65f47815fd2c8080" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Piston::R2_</definition>
+        <argsstring></argsstring>
+        <name>R2_</name>
+        <qualifiedname>Piston::R2_</qualifiedname>
+        <initializer>= 18.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="79" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a5bbc8d2904c2766bb38d8b105a796e09" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::position_</definition>
+        <argsstring></argsstring>
+        <name>position_</name>
+        <qualifiedname>Piston::position_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="82" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a7a18d5d0eddc28ed73f31c880d67598c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::position_last_</definition>
+        <argsstring></argsstring>
+        <name>position_last_</name>
+        <qualifiedname>Piston::position_last_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="83" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1aaf2fdbe2d3ff530492ab7c40dc177854" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Piston::switch_top_</definition>
+        <argsstring></argsstring>
+        <name>switch_top_</name>
+        <qualifiedname>Piston::switch_top_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="84" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1aa8aa881bd96f69a2acb8ee2a2bba26ee" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Piston::switch_bottom_</definition>
+        <argsstring></argsstring>
+        <name>switch_bottom_</name>
+        <qualifiedname>Piston::switch_bottom_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="85" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1acaf4a99df30a56f3e54a3d548c4407d6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::state_</definition>
+        <argsstring></argsstring>
+        <name>state_</name>
+        <qualifiedname>Piston::state_</qualifiedname>
+        <initializer>= PISTON_SEARCH_SWITCH_BOTTOM</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="86" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a2b485d2444af107615371e204ef62e35" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Piston::enable_</definition>
+        <argsstring></argsstring>
+        <name>enable_</name>
+        <qualifiedname>Piston::enable_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="87" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1aa0b0903c346dd1ddab33086164be5f66" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::position_set_point_</definition>
+        <argsstring></argsstring>
+        <name>position_set_point_</name>
+        <qualifiedname>Piston::position_set_point_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="88" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a27b16b8d7c2342553b4b233e16e181dc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Piston::battery_voltage_</definition>
+        <argsstring></argsstring>
+        <name>battery_voltage_</name>
+        <qualifiedname>Piston::battery_voltage_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="89" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a000760a2d94589a770175bb15d0b0d55" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Piston::motor_current_</definition>
+        <argsstring></argsstring>
+        <name>motor_current_</name>
+        <qualifiedname>Piston::motor_current_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="90" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a251b566e36a2489f76071ca7d43fd88a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::motor_set_point_</definition>
+        <argsstring></argsstring>
+        <name>motor_set_point_</name>
+        <qualifiedname>Piston::motor_set_point_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="91" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1a0abe4e72a219f581734c3ac25224e5a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Piston::motor_cmd_</definition>
+        <argsstring></argsstring>
+        <name>motor_cmd_</name>
+        <qualifiedname>Piston::motor_cmd_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="92" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPiston_1ad6a77044e138cec9442f660947a7d8e2" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Piston::motor_sens_</definition>
+        <argsstring></argsstring>
+        <name>motor_sens_</name>
+        <qualifiedname>Piston::motor_sens_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="93" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPiston_1af4f501b8de8d0cfe86db1666a16a2cec" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Piston::Piston</definition>
+        <argsstring>(rclcpp::Node *n)</argsstring>
+        <name>Piston</name>
+        <qualifiedname>Piston::Piston</qualifiedname>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classPiston" kindref="compound">Piston</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="29" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1a967276e579e06d80ce13c5e4df566547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Piston::~Piston</definition>
+        <argsstring>()</argsstring>
+        <name>~Piston</name>
+        <qualifiedname>Piston::~Piston</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="33" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1a35f705c6bf7c02b1c6b5ebe66b4ae5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::i2c_open</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_open</name>
+        <qualifiedname>Piston::i2c_open</qualifiedname>
+        <briefdescription>
+<para>Open the I2C device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="39" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="11" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1ad79d0fd74ef24f22d1493eba5c867dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t &amp;</type>
+        <definition>uint8_t &amp; Piston::get_version</definition>
+        <argsstring>()</argsstring>
+        <name>get_version</name>
+        <qualifiedname>Piston::get_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the version of the pic software <simplesect kind="return"><para>version </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="45" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1abba1e466fffc67350435f85742f3ca29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::getI2CAddr</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CAddr</name>
+        <qualifiedname>Piston::getI2CAddr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="51" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1abbd9e1d4bd4c84ce6279c61808589794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Piston::setI2CAddr</definition>
+        <argsstring>(int i2CAddr)</argsstring>
+        <name>setI2CAddr</name>
+        <qualifiedname>Piston::setI2CAddr</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i2CAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1a02541e5f5882ee9e782417bb62a748a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Piston::getI2CPeriph</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CPeriph</name>
+        <qualifiedname>Piston::getI2CPeriph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="55" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1aab5bcf29fe46b3e1b784c39a567952e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Piston::setI2CPeriph</definition>
+        <argsstring>(const std::string &amp;i2CPeriph)</argsstring>
+        <name>setI2CPeriph</name>
+        <qualifiedname>Piston::setI2CPeriph</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>i2CPeriph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="57" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1a4f7f04c7f0e164fe3a80a3241a8c236c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::set_piston_reset</definition>
+        <argsstring>() const</argsstring>
+        <name>set_piston_reset</name>
+        <qualifiedname>Piston::set_piston_reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset the piston to position 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="99" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1aaf9e03c53b0ab4b58ef2bb137aa6641f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::set_piston_exit</definition>
+        <argsstring>() const</argsstring>
+        <name>set_piston_exit</name>
+        <qualifiedname>Piston::set_piston_exit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set piston exit mode <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="105" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="41" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1aecea52221e7cab10ea6003641cf12cd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::set_piston_regulation</definition>
+        <argsstring>() const</argsstring>
+        <name>set_piston_regulation</name>
+        <qualifiedname>Piston::set_piston_regulation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="111" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="51" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1ae3f17144dfc2e5666e56a0df5aa6047e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Piston::set_regulation_dead_zone</definition>
+        <argsstring>(const __u16 &amp;val) const</argsstring>
+        <name>set_regulation_dead_zone</name>
+        <qualifiedname>Piston::set_regulation_dead_zone</qualifiedname>
+        <param>
+          <type>const __u16 &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the regulation dead zone <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>interval of ticks </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="117" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1af50a4cf7e3968a46113396da0b7d0302" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Piston::set_regulation_proportional</definition>
+        <argsstring>(const __u16 &amp;val) const</argsstring>
+        <name>set_regulation_proportional</name>
+        <qualifiedname>Piston::set_regulation_proportional</qualifiedname>
+        <param>
+          <type>const __u16 &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the coefficient Kp of the regulator <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="123" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1a8954e042cb888b83df18aa9cc3b81c04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::set_position</definition>
+        <argsstring>(const int32_t &amp;val) const</argsstring>
+        <name>set_position</name>
+        <qualifiedname>Piston::set_position</qualifiedname>
+        <param>
+          <type>const int32_t &amp;</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the position of the piston <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>ToDo : check LSB/MSB ?</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="130" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="70" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classPiston_1a13233ed58e1b2a08f3ecbf6ff99a345a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Piston::get_all_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_all_data</name>
+        <qualifiedname>Piston::get_all_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get data from dspic <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="136" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp" bodystart="82" bodyend="114"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" line="23" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston.h" bodystart="24" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classPiston_1a27b16b8d7c2342553b4b233e16e181dc" prot="public" virt="non-virtual"><scope>Piston</scope><name>battery_voltage_</name></member>
+      <member refid="classPiston_1a657f6184acfa3585e80869405b64decd" prot="private" virt="non-virtual"><scope>Piston</scope><name>code_version_</name></member>
+      <member refid="classPiston_1a2b485d2444af107615371e204ef62e35" prot="public" virt="non-virtual"><scope>Piston</scope><name>enable_</name></member>
+      <member refid="classPiston_1a2fd5daad4b1e16ea31f605b2de95f4b4" prot="private" virt="non-virtual"><scope>Piston</scope><name>file_</name></member>
+      <member refid="classPiston_1a13233ed58e1b2a08f3ecbf6ff99a345a" prot="public" virt="non-virtual"><scope>Piston</scope><name>get_all_data</name></member>
+      <member refid="classPiston_1ad79d0fd74ef24f22d1493eba5c867dbf" prot="public" virt="non-virtual"><scope>Piston</scope><name>get_version</name></member>
+      <member refid="classPiston_1abba1e466fffc67350435f85742f3ca29" prot="public" virt="non-virtual"><scope>Piston</scope><name>getI2CAddr</name></member>
+      <member refid="classPiston_1a02541e5f5882ee9e782417bb62a748a7" prot="public" virt="non-virtual"><scope>Piston</scope><name>getI2CPeriph</name></member>
+      <member refid="classPiston_1a5ae793893b47a83a29834669e42c1674" prot="private" virt="non-virtual"><scope>Piston</scope><name>i2c_addr_</name></member>
+      <member refid="classPiston_1a35f705c6bf7c02b1c6b5ebe66b4ae5d5" prot="public" virt="non-virtual"><scope>Piston</scope><name>i2c_open</name></member>
+      <member refid="classPiston_1a061847e2ae0a03157a7b71a872e40d0d" prot="private" virt="non-virtual"><scope>Piston</scope><name>i2c_periph_</name></member>
+      <member refid="classPiston_1a0abe4e72a219f581734c3ac25224e5a9" prot="public" virt="non-virtual"><scope>Piston</scope><name>motor_cmd_</name></member>
+      <member refid="classPiston_1a000760a2d94589a770175bb15d0b0d55" prot="public" virt="non-virtual"><scope>Piston</scope><name>motor_current_</name></member>
+      <member refid="classPiston_1ad6a77044e138cec9442f660947a7d8e2" prot="public" virt="non-virtual"><scope>Piston</scope><name>motor_sens_</name></member>
+      <member refid="classPiston_1a251b566e36a2489f76071ca7d43fd88a" prot="public" virt="non-virtual"><scope>Piston</scope><name>motor_set_point_</name></member>
+      <member refid="classPiston_1ae8a07e7adc14391bc629f5a3daa6fce0" prot="private" virt="non-virtual"><scope>Piston</scope><name>n_</name></member>
+      <member refid="classPiston_1ae8ca2004f5c325014496482c2b0aaece" prot="private" virt="non-virtual"><scope>Piston</scope><name>pic_code_version_</name></member>
+      <member refid="classPiston_1af4f501b8de8d0cfe86db1666a16a2cec" prot="public" virt="non-virtual"><scope>Piston</scope><name>Piston</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dad1ca5f48808ab9827eb7bf69b0f981b2" prot="public" virt="non-virtual"><scope>Piston</scope><name>PISTON_BACK_SWITCH_BOTTOM</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da707d62bc9b336b462be4bdab21498592" prot="public" virt="non-virtual"><scope>Piston</scope><name>PISTON_EXIT</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da27092fd421042c10d2566ac30506debf" prot="public" virt="non-virtual"><scope>Piston</scope><name>PISTON_LOW_BATT</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da6ed8d0c99efe24edda1ca0c723dc3461" prot="public" virt="non-virtual"><scope>Piston</scope><name>PISTON_REGULATION</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dac2c9697558323784575f6fd3b1a92caf" prot="public" virt="non-virtual"><scope>Piston</scope><name>PISTON_RELEASE_SWITCH_BOTTOM</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dabfecaa20e0873f77924a8d7ca6142177" prot="public" virt="non-virtual"><scope>Piston</scope><name>PISTON_SEARCH_SWITCH_BOTTOM</name></member>
+      <member refid="classPiston_1a5bbc8d2904c2766bb38d8b105a796e09" prot="public" virt="non-virtual"><scope>Piston</scope><name>position_</name></member>
+      <member refid="classPiston_1a7a18d5d0eddc28ed73f31c880d67598c" prot="public" virt="non-virtual"><scope>Piston</scope><name>position_last_</name></member>
+      <member refid="classPiston_1aa0b0903c346dd1ddab33086164be5f66" prot="public" virt="non-virtual"><scope>Piston</scope><name>position_set_point_</name></member>
+      <member refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" prot="public" virt="non-virtual"><scope>Piston</scope><name>R1_</name></member>
+      <member refid="classPiston_1aeaa1c94f66d719bc65f47815fd2c8080" prot="public" virt="non-virtual"><scope>Piston</scope><name>R2_</name></member>
+      <member refid="classPiston_1aaf9e03c53b0ab4b58ef2bb137aa6641f" prot="public" virt="non-virtual"><scope>Piston</scope><name>set_piston_exit</name></member>
+      <member refid="classPiston_1aecea52221e7cab10ea6003641cf12cd2" prot="public" virt="non-virtual"><scope>Piston</scope><name>set_piston_regulation</name></member>
+      <member refid="classPiston_1a4f7f04c7f0e164fe3a80a3241a8c236c" prot="public" virt="non-virtual"><scope>Piston</scope><name>set_piston_reset</name></member>
+      <member refid="classPiston_1a8954e042cb888b83df18aa9cc3b81c04" prot="public" virt="non-virtual"><scope>Piston</scope><name>set_position</name></member>
+      <member refid="classPiston_1ae3f17144dfc2e5666e56a0df5aa6047e" prot="public" virt="non-virtual"><scope>Piston</scope><name>set_regulation_dead_zone</name></member>
+      <member refid="classPiston_1af50a4cf7e3968a46113396da0b7d0302" prot="public" virt="non-virtual"><scope>Piston</scope><name>set_regulation_proportional</name></member>
+      <member refid="classPiston_1abbd9e1d4bd4c84ce6279c61808589794" prot="public" virt="non-virtual"><scope>Piston</scope><name>setI2CAddr</name></member>
+      <member refid="classPiston_1aab5bcf29fe46b3e1b784c39a567952e2" prot="public" virt="non-virtual"><scope>Piston</scope><name>setI2CPeriph</name></member>
+      <member refid="classPiston_1acaf4a99df30a56f3e54a3d548c4407d6" prot="public" virt="non-virtual"><scope>Piston</scope><name>state_</name></member>
+      <member refid="classPiston_1af285037ee141dbcbd776bd32cea0de5d" prot="public" virt="non-virtual"><scope>Piston</scope><name>state_piston</name></member>
+      <member refid="classPiston_1aa8aa881bd96f69a2acb8ee2a2bba26ee" prot="public" virt="non-virtual"><scope>Piston</scope><name>switch_bottom_</name></member>
+      <member refid="classPiston_1aaf2fdbe2d3ff530492ab7c40dc177854" prot="public" virt="non-virtual"><scope>Piston</scope><name>switch_top_</name></member>
+      <member refid="classPiston_1a967276e579e06d80ce13c5e4df566547" prot="public" virt="non-virtual"><scope>Piston</scope><name>~Piston</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

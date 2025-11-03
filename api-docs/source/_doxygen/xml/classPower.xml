@@ -1,0 +1,413 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classPower" kind="class" language="C++" prot="public">
+    <compoundname>Power</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPower_1a0518d740d9bacffe1f9a4328f9912999" prot="private" static="no" mutable="no">
+        <type>rclcpp::Node *</type>
+        <definition>rclcpp::Node* Power::n_</definition>
+        <argsstring></argsstring>
+        <name>n_</name>
+        <qualifiedname>Power::n_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="60" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a78a7a490cdc8159552894e7d687cb96d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Power::file_</definition>
+        <argsstring></argsstring>
+        <name>file_</name>
+        <qualifiedname>Power::file_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Pointer to rclcpp Node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="62" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a3df2e2f2d1f58702d43598d783a86c41" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Power::i2c_periph_</definition>
+        <argsstring></argsstring>
+        <name>i2c_periph_</name>
+        <qualifiedname>Power::i2c_periph_</qualifiedname>
+        <initializer>= &quot;/dev/i2c-1&quot;</initializer>
+        <briefdescription>
+<para>File to the i2c port. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="63" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a8d33db69da3274bf9e6c17e11913066f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Power::i2c_addr_</definition>
+        <argsstring></argsstring>
+        <name>i2c_addr_</name>
+        <qualifiedname>Power::i2c_addr_</qualifiedname>
+        <initializer>= 0x39</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="64" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a3f1e919dfa880f66dc3a4f1758327330" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Power::code_version_</definition>
+        <argsstring></argsstring>
+        <name>code_version_</name>
+        <qualifiedname>Power::code_version_</qualifiedname>
+        <initializer>= 0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="65" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a1f68f15ab0479b7bb557d6a626a65e48" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Power::pic_code_version_</definition>
+        <argsstring></argsstring>
+        <name>pic_code_version_</name>
+        <qualifiedname>Power::pic_code_version_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Code version of the expected hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="66" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1ad07a51168fa50956a370519368f6756f" prot="private" static="no" mutable="no">
+        <type>std::array&lt; double, 2 &gt;</type>
+        <definition>std::array&lt;double, 2&gt; Power::R1_</definition>
+        <argsstring></argsstring>
+        <name>R1_</name>
+        <qualifiedname>Power::R1_</qualifiedname>
+        <initializer>= {180, 180}</initializer>
+        <briefdescription>
+<para>Code version read from the hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="68" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a77ca0d985c74e8ed104695a0ad6c2013" prot="private" static="no" mutable="no">
+        <type>std::array&lt; double, 2 &gt;</type>
+        <definition>std::array&lt;double, 2&gt; Power::R2_</definition>
+        <argsstring></argsstring>
+        <name>R2_</name>
+        <qualifiedname>Power::R2_</qualifiedname>
+        <initializer>= {820, 820}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="69" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPower_1a38428036d5a66b557b62874ea5320162" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, 2 &gt;</type>
+        <definition>std::array&lt;float, 2&gt; Power::cell_volt_</definition>
+        <argsstring></argsstring>
+        <name>cell_volt_</name>
+        <qualifiedname>Power::cell_volt_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Variables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="73" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a80c07525a3091b8ecde0a4e813f87235" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Power::battery_volt_</definition>
+        <argsstring></argsstring>
+        <name>battery_volt_</name>
+        <qualifiedname>Power::battery_volt_</qualifiedname>
+        <initializer>= 0.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="74" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a442886da68d930c49d8a26783bbed68d" prot="public" static="no" mutable="no">
+        <type>std::array&lt; float, 2 &gt;</type>
+        <definition>std::array&lt;float, 2&gt; Power::esc_current_</definition>
+        <argsstring></argsstring>
+        <name>esc_current_</name>
+        <qualifiedname>Power::esc_current_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="75" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1a2579a81d031018bf182244d4c1f0d22e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Power::motor_current_</definition>
+        <argsstring></argsstring>
+        <name>motor_current_</name>
+        <qualifiedname>Power::motor_current_</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="76" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPower_1afdeefcc65bbf723dda9d5b3cb29f0d1f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Power::power_state_</definition>
+        <argsstring></argsstring>
+        <name>power_state_</name>
+        <qualifiedname>Power::power_state_</qualifiedname>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="77" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPower_1a2ac81e5ed0efd2739fed01ccf1090844" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Power::Power</definition>
+        <argsstring>(rclcpp::Node *n)</argsstring>
+        <name>Power</name>
+        <qualifiedname>Power::Power</qualifiedname>
+        <param>
+          <type>rclcpp::Node *</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classPower" kindref="compound">Power</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="29" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1a02fbe8faaab8776a6a43e979ad2c9a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Power::~Power</definition>
+        <argsstring>()</argsstring>
+        <name>~Power</name>
+        <qualifiedname>Power::~Power</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="33" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1aa33ceadfd301214431cc79ff1f088829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Power::i2c_open</definition>
+        <argsstring>()</argsstring>
+        <name>i2c_open</name>
+        <qualifiedname>Power::i2c_open</qualifiedname>
+        <briefdescription>
+<para>Open the I2C device. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="39" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="8" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1a06d6793217377bc567b72a677eadfc93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t &amp;</type>
+        <definition>uint8_t &amp; Power::get_version</definition>
+        <argsstring>()</argsstring>
+        <name>get_version</name>
+        <qualifiedname>Power::get_version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the version of the pic software <simplesect kind="return"><para>version </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="45" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Power::getI2CAddr</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CAddr</name>
+        <qualifiedname>Power::getI2CAddr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="51" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1ac627a3a731db2eefa6a8508c69664253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Power::setI2CAddr</definition>
+        <argsstring>(int i2CAddr)</argsstring>
+        <name>setI2CAddr</name>
+        <qualifiedname>Power::setI2CAddr</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i2CAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1a30be9ee7f32c25e0795432053faf30e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; Power::getI2CPeriph</definition>
+        <argsstring>() const</argsstring>
+        <name>getI2CPeriph</name>
+        <qualifiedname>Power::getI2CPeriph</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="55" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1a2b637c4d8695c2d59c1252b8344c4f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Power::setI2CPeriph</definition>
+        <argsstring>(const std::string &amp;i2CPeriph)</argsstring>
+        <name>setI2CPeriph</name>
+        <qualifiedname>Power::setI2CPeriph</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>i2CPeriph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="57" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1a8c15938842b9c9b18f1326d6419f7f42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Power::get_all_data</definition>
+        <argsstring>()</argsstring>
+        <name>get_all_data</name>
+        <qualifiedname>Power::get_all_data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get all the data from the pic <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>ToDo : check if read by small block avoid errors ?</para>
+<para>Cells are a cumulative sum, restore here the value of each cell</para>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="85" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="28" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classPower_1ad9c4e80b12ebd78a3fe7412ed44ef2ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Power::set_sleep</definition>
+        <argsstring>()</argsstring>
+        <name>set_sleep</name>
+        <qualifiedname>Power::set_sleep</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the seabot2 to sleep (default delay of 60s before going to sleep) <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="92" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp" bodystart="53" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" line="23" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/include/seabot2_power_driver/power.h" bodystart="24" bodyend="94"/>
+    <listofallmembers>
+      <member refid="classPower_1a80c07525a3091b8ecde0a4e813f87235" prot="public" virt="non-virtual"><scope>Power</scope><name>battery_volt_</name></member>
+      <member refid="classPower_1a38428036d5a66b557b62874ea5320162" prot="public" virt="non-virtual"><scope>Power</scope><name>cell_volt_</name></member>
+      <member refid="classPower_1a3f1e919dfa880f66dc3a4f1758327330" prot="private" virt="non-virtual"><scope>Power</scope><name>code_version_</name></member>
+      <member refid="classPower_1a442886da68d930c49d8a26783bbed68d" prot="public" virt="non-virtual"><scope>Power</scope><name>esc_current_</name></member>
+      <member refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" prot="private" virt="non-virtual"><scope>Power</scope><name>file_</name></member>
+      <member refid="classPower_1a8c15938842b9c9b18f1326d6419f7f42" prot="public" virt="non-virtual"><scope>Power</scope><name>get_all_data</name></member>
+      <member refid="classPower_1a06d6793217377bc567b72a677eadfc93" prot="public" virt="non-virtual"><scope>Power</scope><name>get_version</name></member>
+      <member refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" prot="public" virt="non-virtual"><scope>Power</scope><name>getI2CAddr</name></member>
+      <member refid="classPower_1a30be9ee7f32c25e0795432053faf30e8" prot="public" virt="non-virtual"><scope>Power</scope><name>getI2CPeriph</name></member>
+      <member refid="classPower_1a8d33db69da3274bf9e6c17e11913066f" prot="private" virt="non-virtual"><scope>Power</scope><name>i2c_addr_</name></member>
+      <member refid="classPower_1aa33ceadfd301214431cc79ff1f088829" prot="public" virt="non-virtual"><scope>Power</scope><name>i2c_open</name></member>
+      <member refid="classPower_1a3df2e2f2d1f58702d43598d783a86c41" prot="private" virt="non-virtual"><scope>Power</scope><name>i2c_periph_</name></member>
+      <member refid="classPower_1a2579a81d031018bf182244d4c1f0d22e" prot="public" virt="non-virtual"><scope>Power</scope><name>motor_current_</name></member>
+      <member refid="classPower_1a0518d740d9bacffe1f9a4328f9912999" prot="private" virt="non-virtual"><scope>Power</scope><name>n_</name></member>
+      <member refid="classPower_1a1f68f15ab0479b7bb557d6a626a65e48" prot="private" virt="non-virtual"><scope>Power</scope><name>pic_code_version_</name></member>
+      <member refid="classPower_1a2ac81e5ed0efd2739fed01ccf1090844" prot="public" virt="non-virtual"><scope>Power</scope><name>Power</name></member>
+      <member refid="classPower_1afdeefcc65bbf723dda9d5b3cb29f0d1f" prot="public" virt="non-virtual"><scope>Power</scope><name>power_state_</name></member>
+      <member refid="classPower_1ad07a51168fa50956a370519368f6756f" prot="private" virt="non-virtual"><scope>Power</scope><name>R1_</name></member>
+      <member refid="classPower_1a77ca0d985c74e8ed104695a0ad6c2013" prot="private" virt="non-virtual"><scope>Power</scope><name>R2_</name></member>
+      <member refid="classPower_1ad9c4e80b12ebd78a3fe7412ed44ef2ad" prot="public" virt="non-virtual"><scope>Power</scope><name>set_sleep</name></member>
+      <member refid="classPower_1ac627a3a731db2eefa6a8508c69664253" prot="public" virt="non-virtual"><scope>Power</scope><name>setI2CAddr</name></member>
+      <member refid="classPower_1a2b637c4d8695c2d59c1252b8344c4f8d" prot="public" virt="non-virtual"><scope>Power</scope><name>setI2CPeriph</name></member>
+      <member refid="classPower_1a02fbe8faaab8776a6a43e979ad2c9a44" prot="public" virt="non-virtual"><scope>Power</scope><name>~Power</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

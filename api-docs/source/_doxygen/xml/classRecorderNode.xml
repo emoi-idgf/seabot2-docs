@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classRecorderNode" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>RecorderNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classRecorderNode_1a1567cab36b23ad6c2dbaa072f02fefbf" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string RecorderNode::command_</definition>
+        <argsstring></argsstring>
+        <name>command_</name>
+        <qualifiedname>RecorderNode::command_</qualifiedname>
+        <initializer>= &quot;ros2 bag record --all --storage mcap&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="17" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRecorderNode_1a8036da183ae734d405ea64cdecc5d011" prot="private" static="no" mutable="no">
+        <type>rclcpp::TimerBase::SharedPtr</type>
+        <definition>rclcpp::TimerBase::SharedPtr RecorderNode::timer_</definition>
+        <argsstring></argsstring>
+        <name>timer_</name>
+        <qualifiedname>RecorderNode::timer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="21" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRecorderNode_1afd674c61acae6d21b320964745a99ceb" prot="private" static="no" mutable="no">
+        <type>std::chrono::milliseconds</type>
+        <definition>std::chrono::milliseconds RecorderNode::loop_dt_</definition>
+        <argsstring></argsstring>
+        <name>loop_dt_</name>
+        <qualifiedname>RecorderNode::loop_dt_</qualifiedname>
+        <initializer>= 5s</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="22" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRecorderNode_1a770bbebfbef9bdf6d7c378feb6c67067" prot="private" static="no" mutable="no">
+        <type>rclcpp::CallbackGroup::SharedPtr</type>
+        <definition>rclcpp::CallbackGroup::SharedPtr RecorderNode::callback_group_</definition>
+        <argsstring></argsstring>
+        <name>callback_group_</name>
+        <qualifiedname>RecorderNode::callback_group_</qualifiedname>
+        <briefdescription>
+<para>loop 5s </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="23" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRecorderNode_1a123cdde0ce8d52ace7f6542d5d27dfb6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string RecorderNode::workingDirectory_</definition>
+        <argsstring></argsstring>
+        <name>workingDirectory_</name>
+        <qualifiedname>RecorderNode::workingDirectory_</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="24" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRecorderNode_1aba590266070ffceca97237479e79578a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RecorderNode::thread_currently_running_</definition>
+        <argsstring></argsstring>
+        <name>thread_currently_running_</name>
+        <qualifiedname>RecorderNode::thread_currently_running_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="25" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRecorderNode_1a7dcc1cfab3a0ebc121f30a26c9976413" prot="private" static="no" mutable="no">
+        <type>std::future&lt; int &gt;</type>
+        <definition>std::future&lt;int&gt; RecorderNode::subprocessFuture_</definition>
+        <argsstring></argsstring>
+        <name>subprocessFuture_</name>
+        <qualifiedname>RecorderNode::subprocessFuture_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="26" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRecorderNode_1acec886be8a09f98f10fe3ce71253a485" prot="private" static="no" mutable="no">
+        <type>rclcpp::Service&lt; std_srvs::srv::SetBool &gt;::SharedPtr</type>
+        <definition>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr RecorderNode::service_rosbag_</definition>
+        <argsstring></argsstring>
+        <name>service_rosbag_</name>
+        <qualifiedname>RecorderNode::service_rosbag_</qualifiedname>
+        <briefdescription>
+<para>Interfaces. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="29" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRecorderNode_1a1b58a5f72360dafebcdcf65e9cfd6df0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RecorderNode::RecorderNode</definition>
+        <argsstring>()</argsstring>
+        <name>RecorderNode</name>
+        <qualifiedname>RecorderNode::RecorderNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="12" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="11" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classRecorderNode_1ac850e840c77d7a7931f3d5af425ae18e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RecorderNode::~RecorderNode</definition>
+        <argsstring>() override</argsstring>
+        <name>~RecorderNode</name>
+        <qualifiedname>RecorderNode::~RecorderNode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="14" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classRecorderNode_1a18175f36b6251cdd1e34ac5d961cbcb5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecorderNode::manage_subprocess_rosbag</definition>
+        <argsstring>(bool start_new_bag)</argsstring>
+        <name>manage_subprocess_rosbag</name>
+        <qualifiedname>RecorderNode::manage_subprocess_rosbag</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>start_new_bag</declname>
+        </param>
+        <briefdescription>
+<para>Parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="35" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="50" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classRecorderNode_1ab89e4ac9959479a8a89d6e37ccc91326" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecorderNode::wait_kill</definition>
+        <argsstring>()</argsstring>
+        <name>wait_kill</name>
+        <qualifiedname>RecorderNode::wait_kill</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="37" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="70" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classRecorderNode_1aa270aa75989065ce8a524cc0ded93125" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecorderNode::init_interfaces</definition>
+        <argsstring>()</argsstring>
+        <name>init_interfaces</name>
+        <qualifiedname>RecorderNode::init_interfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Init interfaces to this node (publishers &amp; subscribers) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="42" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classRecorderNode_1ae403a39eefe9b25bf1a437b6c3c14125" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecorderNode::callback_trigger</definition>
+        <argsstring>(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt; response)</argsstring>
+        <name>callback_trigger</name>
+        <qualifiedname>RecorderNode::callback_trigger</qualifiedname>
+        <param>
+          <type>const std::shared_ptr&lt; rmw_request_id_t &gt;</type>
+          <declname>request_header</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; std_srvs::srv::SetBool::Request &gt;</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; std_srvs::srv::SetBool::Response &gt;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for the service trigger <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="106" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classRecorderNode_1a7dbd93ac6832d3283440c687f9870ea9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RecorderNode::test_state</definition>
+        <argsstring>()</argsstring>
+        <name>test_state</name>
+        <qualifiedname>RecorderNode::test_state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/src/recorder_node.cpp" bodystart="43" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RecorderNode</label>
+        <link refid="classRecorderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>RecorderNode</label>
+        <link refid="classRecorderNode"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>rclcpp::Node</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" line="10" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_recorder_cpp/include/seabot2_recorder_cpp/recorder_node.h" bodystart="10" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classRecorderNode_1a770bbebfbef9bdf6d7c378feb6c67067" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>callback_group_</name></member>
+      <member refid="classRecorderNode_1ae403a39eefe9b25bf1a437b6c3c14125" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>callback_trigger</name></member>
+      <member refid="classRecorderNode_1a1567cab36b23ad6c2dbaa072f02fefbf" prot="public" virt="non-virtual"><scope>RecorderNode</scope><name>command_</name></member>
+      <member refid="classRecorderNode_1aa270aa75989065ce8a524cc0ded93125" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>init_interfaces</name></member>
+      <member refid="classRecorderNode_1afd674c61acae6d21b320964745a99ceb" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>loop_dt_</name></member>
+      <member refid="classRecorderNode_1a18175f36b6251cdd1e34ac5d961cbcb5" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>manage_subprocess_rosbag</name></member>
+      <member refid="classRecorderNode_1a1b58a5f72360dafebcdcf65e9cfd6df0" prot="public" virt="non-virtual"><scope>RecorderNode</scope><name>RecorderNode</name></member>
+      <member refid="classRecorderNode_1acec886be8a09f98f10fe3ce71253a485" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>service_rosbag_</name></member>
+      <member refid="classRecorderNode_1a7dcc1cfab3a0ebc121f30a26c9976413" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>subprocessFuture_</name></member>
+      <member refid="classRecorderNode_1a7dbd93ac6832d3283440c687f9870ea9" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>test_state</name></member>
+      <member refid="classRecorderNode_1aba590266070ffceca97237479e79578a" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>thread_currently_running_</name></member>
+      <member refid="classRecorderNode_1a8036da183ae734d405ea64cdecc5d011" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>timer_</name></member>
+      <member refid="classRecorderNode_1ab89e4ac9959479a8a89d6e37ccc91326" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>wait_kill</name></member>
+      <member refid="classRecorderNode_1a123cdde0ce8d52ace7f6542d5d27dfb6" prot="private" virt="non-virtual"><scope>RecorderNode</scope><name>workingDirectory_</name></member>
+      <member refid="classRecorderNode_1ac850e840c77d7a7931f3d5af425ae18e" prot="public" virt="non-virtual"><scope>RecorderNode</scope><name>~RecorderNode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

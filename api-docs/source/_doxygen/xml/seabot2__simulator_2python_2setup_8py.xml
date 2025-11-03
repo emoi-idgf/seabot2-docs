@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="seabot2__simulator_2python_2setup_8py" kind="file" language="Python">
+    <compoundname>setup.py</compoundname>
+    <innerclass refid="classsetup_1_1BinaryDistribution" prot="public">setup::BinaryDistribution</innerclass>
+    <innernamespace refid="namespacesetup">setup</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sys</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Available<sp/>at<sp/>setup<sp/>time<sp/>due<sp/>to<sp/>pyproject.toml</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pybind11<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>get_cmake_dir</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pybind11.setup_helpers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Pybind11Extension,<sp/>build_ext</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>setuptools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>setup,<sp/>Distribution,<sp/>Extension</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">__version__<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0.3&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>The<sp/>main<sp/>interface<sp/>is<sp/>through<sp/>Pybind11Extension.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">#<sp/>*<sp/>You<sp/>can<sp/>add<sp/>cxx_std=11/14/17,<sp/>and<sp/>then<sp/>build_ext<sp/>can<sp/>be<sp/>removed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">#<sp/>*<sp/>You<sp/>can<sp/>set<sp/>include_pybind11=false<sp/>to<sp/>add<sp/>the<sp/>include<sp/>directory<sp/>yourself,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>say<sp/>from<sp/>a<sp/>submodule.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Note:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>Sort<sp/>input<sp/>source<sp/>files<sp/>if<sp/>you<sp/>glob<sp/>sources<sp/>to<sp/>ensure<sp/>bit-for-bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/>reproducible<sp/>builds<sp/>(https://github.com/pybind/python_example/pull/53)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">#<sp/>ext_modules<sp/>=<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>Pybind11Extension(&quot;seabot2_simulator&quot;,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[&quot;python/simulator_binding.cpp&quot;],</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>Example:<sp/>passing<sp/>in<sp/>the<sp/>version<sp/>to<sp/>the<sp/>compiled<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>define_macros<sp/>=<sp/>[(&apos;VERSION_INFO&apos;,<sp/>__version__)],</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">#<sp/>]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">#<sp/>force<sp/>External<sp/>module</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classsetup_1_1BinaryDistribution" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classsetup_1_1BinaryDistribution" kindref="compound">BinaryDistribution</ref>(Distribution):</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">has_ext_modules(self):</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">is_pure(self):</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="namespacesetup" kindref="compound">setup</ref>(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>name=</highlight><highlight class="stringliteral">&quot;seabot2py&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>version=__version__,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>author=</highlight><highlight class="stringliteral">&quot;Thomas<sp/>Le<sp/>Mézo&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>author_email=</highlight><highlight class="stringliteral">&quot;thomas.le_mezo@ensta-bretagne.org&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>url=</highlight><highlight class="stringliteral">&quot;https://github.com/ThomasLeMezo/seabot2-ros&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Binding<sp/>of<sp/>seabot2<sp/>Simulator&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>long_description=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>ext_modules=ext_modules,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>extras_require={</highlight><highlight class="stringliteral">&quot;test&quot;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&quot;pytest&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Currently,<sp/>build_ext<sp/>only<sp/>provides<sp/>an<sp/>optional<sp/>&quot;highest<sp/>supported<sp/>C++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>level&quot;<sp/>feature,<sp/>but<sp/>in<sp/>the<sp/>future<sp/>it<sp/>may<sp/>provide<sp/>more<sp/>features.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>packages=[</highlight><highlight class="stringliteral">&apos;seabot2py&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>package_data={</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;seabot2py&apos;</highlight><highlight class="normal">:<sp/>[</highlight><highlight class="stringliteral">&apos;seabot2py${PYTHON_MODULE_EXTENSION}&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>cmdclass={</highlight><highlight class="stringliteral">&quot;build_ext&quot;</highlight><highlight class="normal">:<sp/>build_ext},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>zip_safe=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>python_requires=</highlight><highlight class="stringliteral">&quot;&gt;=3.10&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>distclass=BinaryDistribution,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_simulator/python/setup.py"/>
+  </compounddef>
+</doxygen>
