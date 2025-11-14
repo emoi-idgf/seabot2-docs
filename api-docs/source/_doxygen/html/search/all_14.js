@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['q_0',['q',['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionAhrs_8c.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionAhrs.c'],['../FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionMath.h'],['../FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionMath.h'],['../FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionMath.h'],['../FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907',1,'Q:&#160;FusionMath.h']]],
-  ['quaternion_1',['quaternion',['../structFusionAhrs.html#aa783e4058c63639b8bbd30cc373e0394',1,'FusionAhrs']]]
-];
