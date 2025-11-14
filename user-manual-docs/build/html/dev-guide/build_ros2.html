@@ -51,7 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="set_up_git_repositories.html">Setup local git repositories</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Build ROS2 sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="upload_install_seabot.html">Upload a new install on a seabot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="start_mission.html">Starting a mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mission_planning.html">Mission planning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debug_seabot2.html">Debug Seabot2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api-link.html">C++ API Reference</a></li>
 </ul>
@@ -61,6 +61,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../how-to-guides/imu_calibration.html">Calibrate the IMU</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../how-to-guides/teleop_control.html">Teleoperately control the thrusters with a joystick</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../how-to-guides/remote_ublox.html">Connect the Remote u-blox Module to Local U-Center via Network</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Seabot2 ROS2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../seabot2-ros/seabot2_mission.html">seabot2_mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../seabot2-ros/seabot2_control.html">seabot2_control</a></li>
 </ul>
 
         </div>
@@ -94,11 +99,11 @@
 </pre></div>
 </div>
 <p>For <strong>arm64</strong> (seabot2 Raspberry Pi architecture)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>docker/build_arm64.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>docker/docker_build_arm64.sh
 </pre></div>
 </div>
 <p>For <strong>amd64</strong> (laptop architecture)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>docker/build_amd64.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>docker/docker_build_amd64.sh
 </pre></div>
 </div>
 </section>

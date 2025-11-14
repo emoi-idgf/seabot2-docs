@@ -11,11 +11,11 @@ For **arm64** (seabot2 Raspberry Pi architecture)
 
 .. code-block:: bash
 
-    zsh docker/build_arm64.sh
+    bash docker/docker_build_arm64.sh
 
 
 For **amd64** (laptop architecture)
 
 .. code-block:: bash
 
-    zsh docker/build_amd64.sh
+    bash docker/docker_build_amd64.sh
