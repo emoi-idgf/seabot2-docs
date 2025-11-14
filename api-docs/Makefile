@@ -14,8 +14,9 @@ help:
 
 .PHONY: help Makefile clean
 
+# add the following to also clean doxygen files: $(SOURCEDIR)/_doxygen/
 clean:
-	rm -rf $(SOURCEDIR)/_doxygen/ $(SOURCEDIR)/api/
+	rm -rf $(SOURCEDIR)/api/
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 # Catch-all target: route all unknown targets to Sphinx using the new
