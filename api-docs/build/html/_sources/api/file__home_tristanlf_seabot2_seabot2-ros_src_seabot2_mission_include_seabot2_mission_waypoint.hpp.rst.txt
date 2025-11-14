@@ -9,6 +9,11 @@ File waypoint.hpp
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
+
+Declaration of the :ref:`exhale_class_classWaypoint` class and its derived classes. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -24,6 +29,14 @@ Definition (``/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/se
 
 
 
+Detailed Description
+--------------------
+
+Copyright (c) 2025 
+
+
+
+
 
 
 Includes
@@ -33,6 +46,8 @@ Includes
 - ``rclcpp/rclcpp.hpp``
 
 - ``seabot2_mission/mission.hpp`` (:ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_mission_include_seabot2_mission_mission.hpp`)
+
+- ``seabot2_msgs/msg/depth_control_set_point.hpp``
 
 - ``seabot2_msgs/msg/mission_state.hpp``
 

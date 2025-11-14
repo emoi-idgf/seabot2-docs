@@ -9,6 +9,7 @@
   <title>Program Listing for File depth_control.cpp &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -44,11 +45,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File depth_control.cpp</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -183,7 +184,8 @@
 <span class="kt">double</span><span class="w"> </span><span class="n">DepthControl</span><span class="o">::</span><span class="n">fz_computation</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="c1">// Compute the drag coefficient</span>
-<span class="w">    </span><span class="c1">// Inside the [-0.3, 0.3] range, the drag coefficient is computed using the cd_function provided by CFD analysis</span>
+<span class="w">    </span><span class="c1">// Inside the [-0.3, 0.3] range,</span>
+<span class="w">    </span><span class="c1">// the drag coefficient is computed using the cd_function provided by CFD analysis</span>
 <span class="w">    </span><span class="c1">// Outside this range, the drag coefficient is assumed to be constant</span>
 
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">velocity</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">fz_model_boundary_velocity_positive_</span><span class="w"> </span><span class="o">&amp;&amp;</span>
@@ -218,11 +220,10 @@
 
 <span class="kt">void</span><span class="w"> </span><span class="n">DepthControl</span><span class="o">::</span><span class="n">update_coeff</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="c1">// S_ = M_PI*pow(robot_diameter_/2.0, 2);</span>
+<span class="w">  </span><span class="c1">// Computed parameters</span>
+<span class="w">  </span><span class="c1">// S_ = M_PI*pow(robot_diameter_/2.0, 2);</span>
 <span class="w">  </span><span class="n">update_AB</span><span class="p">();</span>
 <span class="w">  </span><span class="n">flow_max_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">motor_max_rpm_</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">60.</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">screw_thread_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">piston_diameter_</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">M_PI</span><span class="p">;</span>
-
-<span class="c1">//    alpha_solver_.update_coeff(Cf_, coeff_A_, coeff_B_, flow_max_*piston_flow_security_percentage_);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">DepthControl</span><span class="o">::</span><span class="n">update_temperature</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">temperature</span><span class="p">)</span>
@@ -259,7 +260,8 @@
 <span class="w">  </span><span class="n">y_debug_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
 <span class="w">  </span><span class="n">dy_debug_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dy</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">// double u = (1./A)* (-2.*s*dy+pow(s,2)*y-beta*(dde*T+de*dT)-2*B*x7*abs(x1)*dx1)+x1*(x5+2.*x6*x2);</span>
+<span class="w">  </span><span class="c1">// double u = (1. / A) * (-2. * s * dy + pow(s,</span>
+<span class="w">  </span><span class="c1">//   2) * y - beta * (dde * T + de * dT) - 2 * B * x7 * abs(x1) * dx1) + x1 * (x5 + 2. * x6 * x2);</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">1.</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="mf">-2.</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">s</span><span class="p">,</span>
 <span class="w">    </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">beta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">dde</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dT</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fz_derivative_computation</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dx1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">*</span>
 <span class="w">    </span><span class="p">(</span><span class="n">x5</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x2</span><span class="p">);</span>
@@ -268,11 +270,13 @@
 
 <span class="kt">double</span><span class="w"> </span><span class="n">DepthControl</span><span class="o">::</span><span class="n">optimize_u</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">u_tab</span><span class="p">)</span>
 <span class="p">{</span>
-<span class="w">  </span><span class="n">sort</span><span class="p">(</span><span class="n">u_tab</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">u_tab</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">u_tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u_tab</span><span class="p">[</span><span class="n">u_tab</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Case one positive, one negative =&gt; do not move</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">u_tab</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">u_tab</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">u_tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u_tab</span><span class="p">[</span><span class="n">u_tab</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Case one positive, one negative =&gt; do not move</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Else choose the control that minimizes u</span>
-<span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">u_tab</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">u_tab</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">j</span><span class="p">);});</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Else choose the control that minimizes u</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">(</span><span class="n">u_tab</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">u_tab</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="p">[](</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">j</span><span class="p">);});</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">u_tab</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
@@ -281,9 +285,9 @@
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Duration</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dt</span><span class="p">,</span>
 <span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">current_time</span><span class="p">)</span>
 <span class="p">{</span>
-
 <span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
 
+<span class="w">  </span><span class="c1">// Analyze specific cases</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">emergency_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_SURFACE</span><span class="p">;</span>
 <span class="w">  </span><span class="p">}</span>
@@ -294,6 +298,7 @@
 
 <span class="w">  </span><span class="k">switch</span><span class="p">(</span><span class="n">regulation_state_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">STATE_SURFACE</span><span class="p">:</span>
+<span class="w">      </span><span class="c1">// Wait at surface until the waypoint is under the limit depth of regulation</span>
 <span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">limit_depth_control_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="n">emergency_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_SINK</span><span class="p">;</span>
 <span class="w">      </span><span class="p">}</span>
@@ -304,18 +309,26 @@
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">STATE_SINK</span><span class="p">:</span>
 <span class="w">      </span><span class="n">is_exit_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 <span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">limit_depth_control_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Case where set point is surface</span>
 <span class="w">        </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_SURFACE</span><span class="p">;</span>
 <span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">depth_fusion_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">limit_depth_control_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Case where float is between surface and limit_depth_control</span>
 <span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">flow_piston_sink_</span><span class="p">;</span>
 
+<span class="w">        </span><span class="c1">// Compute the position of the piston to be at equilibrium</span>
+<span class="w">        </span><span class="c1">// Assuming no compressibility effect</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">position_eq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kalman_total_offset_</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">tick_to_volume_</span><span class="p">;</span>
 
+<span class="w">        </span><span class="c1">// First move to position_eq and the slowly decrease piston volume by flow_piston_sink_</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">position_eq</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">piston_position_</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">piston_reach_position_dead_zone_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="c1">// position reached</span>
 <span class="w">          </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">position_eq</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="o">*</span><span class="n">dt</span><span class="p">.</span><span class="n">seconds</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">tick_to_volume_</span><span class="p">);</span>
+<span class="w">          </span><span class="c1">// continue to sink until limit_depth_control_ is reached</span>
+<span class="w">          </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="o">*</span><span class="n">dt</span><span class="p">.</span><span class="n">seconds</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">tick_to_volume_</span><span class="p">);</span><span class="w">  </span><span class="c1">// (m3/s * s) / (m3/tick)</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// When limit_depth_control_ is reached</span>
 <span class="w">        </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_CONTROL</span><span class="p">;</span>
 <span class="w">        </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">piston_position_</span><span class="p">;</span>
 <span class="w">      </span><span class="p">}</span>
@@ -325,29 +338,37 @@
 <span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">limit_depth_control_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_SURFACE</span><span class="p">;</span>
 <span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">depth_fusion_</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">limit_depth_control_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Test if data is too old</span>
 <span class="w">        </span><span class="k">if</span><span class="p">((</span><span class="n">current_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_last_kalman_callback_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">safety_time_no_data_</span><span class="w"> </span><span class="o">&amp;&amp;</span>
 <span class="w">          </span><span class="p">(</span><span class="n">current_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_last_piston_callback_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">safety_time_no_data_</span><span class="p">)</span>
 <span class="w">        </span><span class="p">{</span>
-
 <span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">control_filter_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Compute several commands according to velocity acceptable bounds</span>
 <span class="w">            </span><span class="n">array</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;</span><span class="w"> </span><span class="n">u_tab</span><span class="p">{};</span>
 <span class="w">            </span><span class="n">u_tab</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_u</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="p">,</span><span class="w"> </span><span class="n">limit_velocity_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta_velocity_lb_</span><span class="p">);</span>
 <span class="w">            </span><span class="n">u_tab</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_u</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="p">,</span><span class="w"> </span><span class="n">limit_velocity_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta_velocity_ub_</span><span class="p">);</span>
 <span class="w">            </span><span class="n">u_tab</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_u</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta_position_lb_</span><span class="p">,</span><span class="w"> </span><span class="n">limit_velocity_</span><span class="p">);</span>
 <span class="w">            </span><span class="n">u_tab</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_u</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta_position_ub_</span><span class="p">,</span><span class="w"> </span><span class="n">limit_velocity_</span><span class="p">);</span>
 
+<span class="w">            </span><span class="c1">// Find best command</span>
 <span class="w">            </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optimize_u</span><span class="p">(</span><span class="n">u_tab</span><span class="p">);</span>
 <span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">compute_u</span><span class="p">(</span><span class="n">depth_set_point_</span><span class="p">,</span><span class="w"> </span><span class="n">limit_velocity_</span><span class="p">);</span>
 <span class="w">          </span><span class="p">}</span>
 
+<span class="w">          </span><span class="c1">// Mechanical limits (in = v_min, out = v_max)</span>
 <span class="w">          </span><span class="k">if</span><span class="p">((</span><span class="n">piston_switch_top_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">piston_switch_bottom_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">            </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">piston_position_</span><span class="p">;</span>
 <span class="w">          </span><span class="p">}</span>
 
+<span class="w">          </span><span class="c1">// Limitation of u according to engine capabilities</span>
 <span class="w">          </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">clamp</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">flow_max_</span><span class="p">,</span><span class="w"> </span><span class="n">flow_max_</span><span class="p">);</span>
 
+<span class="w">          </span><span class="c1">// Check next formula in the case where</span>
+<span class="w">          </span><span class="c1">// piston_set_point-piston_position &gt; piston_max_velocity/frequency</span>
+<span class="w">          </span><span class="c1">// Previous form do not allow movement under 1 tick</span>
+<span class="w">          </span><span class="c1">// piston_set_point = piston_position - u/(tick_to_volume*control_loop_frequency);</span>
 <span class="w">          </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dt</span><span class="p">.</span><span class="n">seconds</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">tick_to_volume_</span><span class="p">;</span>
 
 <span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">hold_depth_enable_</span><span class="w"> </span><span class="o">&amp;&amp;</span>
@@ -358,8 +379,7 @@
 <span class="w">              </span><span class="n">hold_depth_validation_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
 <span class="w">              </span><span class="n">hold_depth_validation_time_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_time</span><span class="p">;</span>
 <span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">((</span><span class="n">current_time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">hold_depth_validation_time_</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span>
-<span class="w">              </span><span class="n">hold_depth_validation_duration_</span><span class="p">)</span>
-<span class="w">            </span><span class="p">{</span>
+<span class="w">              </span><span class="n">hold_depth_validation_duration_</span><span class="p">){</span>
 <span class="w">              </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_HOLD_DEPTH</span><span class="p">;</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">          </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
@@ -389,7 +409,7 @@
 <span class="w">      </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">      </span><span class="n">piston_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">emergency_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">piston_state_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">PISTON_STATE_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">emergency_</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">piston_state_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">PISTON_STATE_OK</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">regulation_state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATE_SURFACE</span><span class="p">;</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">      </span><span class="k">break</span><span class="p">;</span>

@@ -9,6 +9,7 @@
   <title>Class LogData &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class LogParameterNode" href="classLogParameterNode.html" />
-    <link rel="prev" title="Class LightNode" href="classLightNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,59 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class LogData</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv47LogData"><code class="docutils literal notranslate"><span class="pre">LogData</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPEE"><code class="docutils literal notranslate"><span class="pre">MSG_TYPE</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPE9LOG_STATEE"><code class="docutils literal notranslate"><span class="pre">LOG_STATE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPE9CMD_SLEEPE"><code class="docutils literal notranslate"><span class="pre">CMD_SLEEP</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPE14CMD_PARAMETERSE"><code class="docutils literal notranslate"><span class="pre">CMD_PARAMETERS</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPE15CMD_MISSION_NEWE"><code class="docutils literal notranslate"><span class="pre">CMD_MISSION_NEW</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData8MSG_TYPE16CMD_MISSION_KEEPE"><code class="docutils literal notranslate"><span class="pre">CMD_MISSION_KEEP</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N7LogData7LogDataEv"><code class="docutils literal notranslate"><span class="pre">LogData()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData19deserialize_log_CMDERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">deserialize_log_CMD()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData19serialize_log_stateERKx"><code class="docutils literal notranslate"><span class="pre">serialize_log_state()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData25deserialize_log_CMD_sleepERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">deserialize_log_CMD_sleep()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData27deserialize_log_CMD_missionERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">deserialize_log_CMD_mission()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData30deserialize_log_CMD_parametersERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">deserialize_log_CMD_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData9time_now_E"><code class="docutils literal notranslate"><span class="pre">time_now_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData11gnss_speed_E"><code class="docutils literal notranslate"><span class="pre">gnss_speed_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData13gnss_heading_E"><code class="docutils literal notranslate"><span class="pre">gnss_heading_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData8battery_E"><code class="docutils literal notranslate"><span class="pre">battery_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData9gnss_lat_E"><code class="docutils literal notranslate"><span class="pre">gnss_lat_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData10gnss_long_E"><code class="docutils literal notranslate"><span class="pre">gnss_long_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData15gnss_mean_east_E"><code class="docutils literal notranslate"><span class="pre">gnss_mean_east_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData16gnss_mean_north_E"><code class="docutils literal notranslate"><span class="pre">gnss_mean_north_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData18gnss_mean_heading_E"><code class="docutils literal notranslate"><span class="pre">gnss_mean_heading_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData18internal_pressure_E"><code class="docutils literal notranslate"><span class="pre">internal_pressure_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData21internal_temperature_E"><code class="docutils literal notranslate"><span class="pre">internal_temperature_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData18internal_humidity_E"><code class="docutils literal notranslate"><span class="pre">internal_humidity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData17current_waypoint_E"><code class="docutils literal notranslate"><span class="pre">current_waypoint_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData11sleep_time_E"><code class="docutils literal notranslate"><span class="pre">sleep_time_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData14waypoint_list_E"><code class="docutils literal notranslate"><span class="pre">waypoint_list_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData12offset_east_E"><code class="docutils literal notranslate"><span class="pre">offset_east_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData13offset_north_E"><code class="docutils literal notranslate"><span class="pre">offset_north_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData15enable_mission_E"><code class="docutils literal notranslate"><span class="pre">enable_mission_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData13enable_flash_E"><code class="docutils literal notranslate"><span class="pre">enable_flash_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData13enable_depth_E"><code class="docutils literal notranslate"><span class="pre">enable_depth_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData14enable_engine_E"><code class="docutils literal notranslate"><span class="pre">enable_engine_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData18last_cmd_received_E"><code class="docutils literal notranslate"><span class="pre">last_cmd_received_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData15period_message_E"><code class="docutils literal notranslate"><span class="pre">period_message_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData27safety_global_safety_valid_E"><code class="docutils literal notranslate"><span class="pre">safety_global_safety_valid_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData27safety_published_frequency_E"><code class="docutils literal notranslate"><span class="pre">safety_published_frequency_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData19safety_depth_limit_E"><code class="docutils literal notranslate"><span class="pre">safety_depth_limit_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData23safety_batteries_limit_E"><code class="docutils literal notranslate"><span class="pre">safety_batteries_limit_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData24safety_depressurization_E"><code class="docutils literal notranslate"><span class="pre">safety_depressurization_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData16safety_seafloor_E"><code class="docutils literal notranslate"><span class="pre">safety_seafloor_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData14safety_piston_E"><code class="docutils literal notranslate"><span class="pre">safety_piston_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData18safety_zero_depth_E"><code class="docutils literal notranslate"><span class="pre">safety_zero_depth_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData9msg_type_E"><code class="docutils literal notranslate"><span class="pre">msg_type_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData10write_fileERKNSt6stringERKNSt6stringEKj"><code class="docutils literal notranslate"><span class="pre">write_file()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N7LogData9read_fileERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">read_file()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +105,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +120,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class LogData</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classLogData.rst.txt" rel="nofollow"> View page source</a>
@@ -293,7 +330,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N7LogData14waypoint_list_E">
-<span id="_CPPv3N7LogData14waypoint_list_E"></span><span id="_CPPv2N7LogData14waypoint_list_E"></span><span id="LogData::waypoint_list___std::vector:Waypoint:"></span><span class="target" id="classLogData_1aa0381f9cd0b1f945714823fcdaea5e8f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classWaypoint.html#_CPPv48Waypoint" title="Waypoint"><span class="n"><span class="pre">Waypoint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waypoint_list_</span></span></span><a class="headerlink" href="#_CPPv4N7LogData14waypoint_list_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N7LogData14waypoint_list_E"></span><span id="_CPPv2N7LogData14waypoint_list_E"></span><span id="LogData::waypoint_list___std::vector:Waypoint:"></span><span class="target" id="classLogData_1abf026bd07dd8aa1f52706f1c50c1c620"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classWaypoint.html#_CPPv48Waypoint" title="Waypoint"><span class="n"><span class="pre">Waypoint</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waypoint_list_</span></span></span><a class="headerlink" href="#_CPPv4N7LogData14waypoint_list_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -424,10 +461,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classLightNode.html" class="btn btn-neutral float-left" title="Class LightNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classLogParameterNode.html" class="btn btn-neutral float-right" title="Class LogParameterNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

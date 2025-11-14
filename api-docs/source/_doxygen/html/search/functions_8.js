@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['light_0',['Light',['../classLight.html#afbb734839a4ab686642fd0df129b176a',1,'Light']]],
-  ['load_5fmission_1',['load_mission',['../classMission.html#a7112351f066fadfd8031a21f554cde2d',1,'Mission']]],
-  ['logdata_2',['LogData',['../classLogData.html#afc434ed336a6c1273a4fe406879b4980',1,'LogData']]]
+  ['halfgravity_0',['HalfGravity',['../FusionAhrs_8c.html#a44bb9f0d6fc81a4faba2e9daff7b9c87',1,'FusionAhrs.c']]],
+  ['halfmagnetic_1',['HalfMagnetic',['../FusionAhrs_8c.html#a6d75bfdb53c78b0a62955bb026d99c35',1,'FusionAhrs.c']]],
+  ['headingcontrolnode_2',['HeadingControlNode',['../classHeadingControlNode.html#a0448a42bc211298fffe8723cecee2a53',1,'HeadingControlNode']]]
 ];

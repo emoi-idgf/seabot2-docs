@@ -9,6 +9,7 @@
   <title>Program Listing for File piston.h &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -44,11 +45,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File piston.h</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -95,79 +96,79 @@
 <span class="cp">#define REGISTER_DATA_SIZE 18</span>
 <span class="cp">#define REGISTER_SET_POINT 0x00</span>
 
-<span class="cp">#define CONVERSION_BRIDGE (3.3/4096.)</span>
+<span class="cp">#define CONVERSION_BRIDGE (3.3 / 4096.)</span>
 <span class="cp">#define CONVERSION_CURRENT CONVERSION_BRIDGE </span><span class="cm">/*(CONVERSION_BRIDGE * 1000.0/264.0)*/</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">Piston</span>
 <span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="k">explicit</span><span class="w"> </span><span class="n">Piston</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">n</span><span class="p">){</span>
-<span class="w">        </span><span class="n">n_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">Piston</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">n_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="w">    </span><span class="o">~</span><span class="n">Piston</span><span class="p">();</span>
+<span class="w">  </span><span class="o">~</span><span class="n">Piston</span><span class="p">();</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">i2c_open</span><span class="p">();</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">i2c_open</span><span class="p">();</span>
 
-<span class="w">    </span><span class="kt">uint8_t</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">get_version</span><span class="p">();</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nf">get_version</span><span class="p">();</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getI2CAddr</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">getI2CAddr</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setI2CAddr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i2CAddr</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setI2CAddr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i2CAddr</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="nf">getI2CPeriph</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="nf">getI2CPeriph</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">setI2CPeriph</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2CPeriph</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setI2CPeriph</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">i2CPeriph</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">state_piston</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">PISTON_SEARCH_SWITCH_BOTTOM</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<span class="w">                        </span><span class="n">PISTON_RELEASE_SWITCH_BOTTOM</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-<span class="w">                        </span><span class="n">PISTON_BACK_SWITCH_BOTTOM</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="w">                        </span><span class="n">PISTON_REGULATION</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-<span class="w">                        </span><span class="n">PISTON_EXIT</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-<span class="w">                        </span><span class="n">PISTON_LOW_BATT</span><span class="o">=</span><span class="mi">5</span>
-<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="k">enum</span><span class="w"> </span><span class="nc">state_piston</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">PISTON_SEARCH_SWITCH_BOTTOM</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PISTON_RELEASE_SWITCH_BOTTOM</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PISTON_BACK_SWITCH_BOTTOM</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PISTON_REGULATION</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PISTON_EXIT</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="n">PISTON_LOW_BATT</span><span class="o">=</span><span class="mi">5</span><span class="p">};</span>
 
 <span class="k">private</span><span class="o">:</span>
-<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">n_</span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">file_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">i2c_periph_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/dev/i2c-1&quot;</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i2c_addr_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1E</span><span class="p">;</span>
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">code_version_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x06</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pic_code_version_</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-
-<span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">R1_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.9</span><span class="p">;</span><span class="w"> </span><span class="c1">// kOhms</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">R2_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18.0</span><span class="p">;</span><span class="w"> </span><span class="c1">// kOhms</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">file_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">i2c_periph_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/dev/i2c-1&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i2c_addr_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1E</span><span class="p">;</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">code_version_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x06</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">pic_code_version_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">position_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">position_last_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">switch_top_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">switch_bottom_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PISTON_SEARCH_SWITCH_BOTTOM</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">position_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">battery_voltage_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">motor_current_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">motor_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">motor_cmd_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">motor_sens_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">R1_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.9</span><span class="p">;</span><span class="w">   </span><span class="c1">// kOhms</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">R2_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18.0</span><span class="p">;</span><span class="w">   </span><span class="c1">// kOhms</span>
 
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">set_piston_reset</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">position_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">position_last_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">switch_top_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">switch_bottom_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PISTON_SEARCH_SWITCH_BOTTOM</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">enable_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">position_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">battery_voltage_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">motor_current_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">motor_set_point_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">motor_cmd_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">motor_sens_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_piston_exit</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">set_piston_reset</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_piston_regulation</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_piston_exit</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_regulation_dead_zone</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__u16</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_piston_regulation</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_regulation_proportional</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__u16</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_regulation_dead_zone</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__u16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_position</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">set_regulation_proportional</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">__u16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">get_all_data</span><span class="p">();</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">set_position</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int32_t</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">get_all_data</span><span class="p">();</span>
 
 <span class="p">};</span>
 

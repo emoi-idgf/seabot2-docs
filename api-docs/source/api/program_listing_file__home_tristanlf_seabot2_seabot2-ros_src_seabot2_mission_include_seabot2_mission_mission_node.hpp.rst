@@ -10,8 +10,12 @@ Program Listing for File mission_node.hpp
 
 .. code-block:: cpp
 
-   #ifndef BUILD_MISSION_NODE_HPP
-   #define BUILD_MISSION_NODE_HPP
+   
+   #ifndef SEABOT2_MISSION__MISSION_NODE_HPP_
+   #define SEABOT2_MISSION__MISSION_NODE_HPP_
+   
+   #include <string>
+   #include <memory>
    
    #include "rclcpp/rclcpp.hpp"
    #include "seabot2_mission/mission.hpp"
@@ -26,69 +30,65 @@ Program Listing for File mission_node.hpp
    #include "std_srvs/srv/set_bool.hpp"
    #include "std_srvs/srv/trigger.hpp"
    
-   using namespace std::chrono_literals;
-   using namespace std;
    
    class MissionNode final : public rclcpp::Node {
    public:
-       MissionNode();
+     MissionNode();
    
    private:
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 1s; 
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = std::chrono::milliseconds(1000);
    
-       rclcpp::CallbackGroup::SharedPtr callback_group_;
+     rclcpp::CallbackGroup::SharedPtr callback_group_;
    
-       Mission mission_;
-       string mission_file_name_ = "mission.xml";
-       string mission_path_ = "./";
-       bool mission_enable_ = true;
-       double flash_next_waypoint_time_ = 5.0;
-       int flash_number_ = 2;
+     Mission mission_;
+     std::string mission_file_name_ = "mission.xml";
+     std::string mission_path_ = "./";
    
-       double limit_velocity_default_ = 0.02;
+     double flash_next_waypoint_time_ = 5.0;
+     int flash_number_ = 2;
    
-       rclcpp::Publisher<seabot2_msgs::msg::MissionState>::SharedPtr publisher_mission_state_;
-       rclcpp::Publisher<seabot2_msgs::msg::DepthControlSetPoint>::SharedPtr publisher_depth_control_set_point_;
-       rclcpp::Publisher<seabot2_msgs::msg::TemperatureKeepingDebug>::SharedPtr publisher_temperature_keeping_debug_;
+     // Default limit velocity m/s
+     double limit_velocity_default_ = 0.02;
    
-       rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
-       rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::MissionState>::SharedPtr publisher_mission_state_;
+     rclcpp::Publisher<seabot2_msgs::msg::DepthControlSetPoint>::SharedPtr
+       publisher_depth_control_set_point_;
+     rclcpp::Publisher<seabot2_msgs::msg::TemperatureKeepingDebug>::SharedPtr
+       publisher_temperature_keeping_debug_;
    
-       rclcpp::Client<seabot2_srvs::srv::Light>::SharedPtr client_light_;
-       rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr client_log_parameters_;
-       rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr client_bag_recorder_;
+     rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr
+       subscriber_temperature_data_;
    
-       rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_mission_reload_ ;
-       rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr service_mission_enable_ ;
+     rclcpp::Client<seabot2_srvs::srv::Light>::SharedPtr client_light_;
+     rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr client_log_parameters_;
+     rclcpp::Client<std_srvs::srv::Trigger>::SharedPtr client_bag_recorder_;
    
-       void init_parameters();
+     rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_mission_reload_;
    
-       void init_interfaces();
+     void init_parameters();
    
-       void timer_callback();
+     void init_interfaces();
    
-       void service_mission_reload_callback(const std::shared_ptr<rmw_request_id_t> request_header,
-                                                         const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
-                                                         std::shared_ptr<std_srvs::srv::Trigger::Response> response);
+     void timer_callback();
    
-       void service_mission_enable_callback(const std::shared_ptr<rmw_request_id_t> request_header,
-                                                         const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
-                                                         std::shared_ptr<std_srvs::srv::SetBool::Response> response);
+     void depth_callback(const seabot2_msgs::msg::DepthPose::SharedPtr msg);
    
-       void call_light();
+     void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData::SharedPtr msg);
    
-       void call_log_params() const;
+     void service_mission_reload_callback(
+       const std::shared_ptr<rmw_request_id_t> request_header,
+       const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+       std::shared_ptr<std_srvs::srv::Trigger::Response> response);
    
-       int load_mission();
+     void call_light();
    
-       void call_velocity_computation(std::vector<float> &velocity_list);
+     void call_log_params() const;
    
-       void call_restart_bag() const;
+     void call_restart_bag() const;
    
-       void depth_callback(const seabot2_msgs::msg::DepthPose::SharedPtr msg);
-   
-       void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData::SharedPtr msg);
-   
+     int load_mission();
    };
-   #endif //BUILD_MISSION_NODE_HPP
+   
+   #endif  // SEABOT2_MISSION__MISSION_NODE_HPP_

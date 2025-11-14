@@ -17,18 +17,21 @@ Program Listing for File TeosCppSupp.h
       proceeding down to smallest value
       [last array element]
    ****************************************/
-   bool orderByLargeToSmall(const DI &A, const DI& B)
+   bool orderByLargeToSmall(const DI & A, const DI & B)
    {
-      if (A.d < B.d)
-         return (false);
+     if (A.d < B.d) {
+       return  false;
+     }
    
-      if (A.d > B.d)
-         return (true);
+     if (A.d > B.d) {
+       return  true;
+     }
    
-      if (A.i < B.i)
-         return (true);
+     if (A.i < B.i) {
+       return  true;
+     }
    
-      return (false);
+     return  false;
    }
    /****************************************
       order the array by smallest value 1st
@@ -36,16 +39,19 @@ Program Listing for File TeosCppSupp.h
       proceeding down to largest value
       [last array element]
    ****************************************/
-   bool orderBySmallToLarge(const DI &A, const DI& B)
+   bool orderBySmallToLarge(const DI & A, const DI & B)
    {
-      if (A.d < B.d)
-         return (true);
+     if (A.d < B.d) {
+       return  true;
+     }
    
-      if (A.d > B.d)
-         return (false);
+     if (A.d > B.d) {
+       return  false;
+     }
    
-      if (A.i < B.i)
-         return (false);
+     if (A.i < B.i) {
+       return  false;
+     }
    
-      return (true);
+     return  true;
    }

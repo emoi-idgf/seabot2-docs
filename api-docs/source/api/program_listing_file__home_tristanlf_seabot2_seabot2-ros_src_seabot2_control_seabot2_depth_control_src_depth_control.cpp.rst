@@ -117,7 +117,8 @@ Program Listing for File depth_control.cpp
    double DepthControl::fz_computation(const double velocity) const
    {
        // Compute the drag coefficient
-       // Inside the [-0.3, 0.3] range, the drag coefficient is computed using the cd_function provided by CFD analysis
+       // Inside the [-0.3, 0.3] range,
+       // the drag coefficient is computed using the cd_function provided by CFD analysis
        // Outside this range, the drag coefficient is assumed to be constant
    
      if (velocity <= fz_model_boundary_velocity_positive_ &&
@@ -152,11 +153,10 @@ Program Listing for File depth_control.cpp
    
    void DepthControl::update_coeff()
    {
-       // S_ = M_PI*pow(robot_diameter_/2.0, 2);
+     // Computed parameters
+     // S_ = M_PI*pow(robot_diameter_/2.0, 2);
      update_AB();
      flow_max_ = (motor_max_rpm_ / 60.) * screw_thread_ * pow(piston_diameter_ / 2.0, 2) * M_PI;
-   
-   //    alpha_solver_.update_coeff(Cf_, coeff_A_, coeff_B_, flow_max_*piston_flow_security_percentage_);
    }
    
    void DepthControl::update_temperature(const float & temperature)
@@ -193,7 +193,8 @@ Program Listing for File depth_control.cpp
      y_debug_ = y;
      dy_debug_ = dy;
    
-       // double u = (1./A)* (-2.*s*dy+pow(s,2)*y-beta*(dde*T+de*dT)-2*B*x7*abs(x1)*dx1)+x1*(x5+2.*x6*x2);
+     // double u = (1. / A) * (-2. * s * dy + pow(s,
+     //   2) * y - beta * (dde * T + de * dT) - 2 * B * x7 * abs(x1) * dx1) + x1 * (x5 + 2. * x6 * x2);
      const double u = (1. / A) * (-2. * s * dy + pow(s,
        2) * y - beta * (dde * T + de * dT) + B * x7 * fz_derivative_computation(x1) * dx1) + x1 *
        (x5 + 2. * x6 * x2);
@@ -202,11 +203,13 @@ Program Listing for File depth_control.cpp
    
    double DepthControl::optimize_u(std::array<double, 4> & u_tab)
    {
-     sort(u_tab.begin(), u_tab.end());
-     if(u_tab[0] < 0.0 && u_tab[u_tab.size() - 1] > 0.0) { // Case one positive, one negative => do not move
+     std::sort(u_tab.begin(), u_tab.end());
+     if(u_tab[0] < 0.0 && u_tab[u_tab.size() - 1] > 0.0) {
+       // Case one positive, one negative => do not move
        return 0.0;
-     } else { // Else choose the control that minimizes u
-       sort(u_tab.begin(), u_tab.end(), [](int i, int j) {return abs(i) < abs(j);});
+     } else {
+       // Else choose the control that minimizes u
+       std::sort(u_tab.begin(), u_tab.end(), [](int i, int j) {return abs(i) < abs(j);});
        return u_tab[0];
      }
    }
@@ -215,9 +218,9 @@ Program Listing for File depth_control.cpp
      const rclcpp::Duration & dt,
      const rclcpp::Time & current_time)
    {
-   
      double u = 0.;
    
+     // Analyze specific cases
      if(emergency_) {
        regulation_state_ = STATE_SURFACE;
      }
@@ -228,6 +231,7 @@ Program Listing for File depth_control.cpp
    
      switch(regulation_state_) {
        case STATE_SURFACE:
+         // Wait at surface until the waypoint is under the limit depth of regulation
          if(depth_set_point_ >= limit_depth_control_ && !emergency_) {
            regulation_state_ = STATE_SINK;
          }
@@ -237,19 +241,27 @@ Program Listing for File depth_control.cpp
          break;
        case STATE_SINK:
          is_exit_ = false;
-         if(depth_set_point_ < limit_depth_control_) {   
+         if(depth_set_point_ < limit_depth_control_) {
+           // Case where set point is surface
            regulation_state_ = STATE_SURFACE;
-         } else if(depth_fusion_ < limit_depth_control_) {  
+         } else if(depth_fusion_ < limit_depth_control_) {
+           // Case where float is between surface and limit_depth_control
            u = flow_piston_sink_;
    
-           double position_eq = kalman_total_offset_ / tick_to_volume_;         
+           // Compute the position of the piston to be at equilibrium
+           // Assuming no compressibility effect
+           double position_eq = kalman_total_offset_ / tick_to_volume_;
    
-           if(position_eq - piston_position_ > 2. * piston_reach_position_dead_zone_) {       
+           // First move to position_eq and the slowly decrease piston volume by flow_piston_sink_
+           if(position_eq - piston_position_ > 2. * piston_reach_position_dead_zone_) {
+             // position reached
              piston_set_point_ = position_eq;
            } else {
-             piston_set_point_ += -u *dt.seconds() / (tick_to_volume_);        
+             // continue to sink until limit_depth_control_ is reached
+             piston_set_point_ += -u *dt.seconds() / (tick_to_volume_);  // (m3/s * s) / (m3/tick)
            }
-         } else {     
+         } else {
+           // When limit_depth_control_ is reached
            regulation_state_ = STATE_CONTROL;
            piston_set_point_ = piston_position_;
          }
@@ -259,29 +271,37 @@ Program Listing for File depth_control.cpp
          if(depth_set_point_ < limit_depth_control_) {
            regulation_state_ = STATE_SURFACE;
          } else if(depth_fusion_ >= limit_depth_control_) {
+           // Test if data is too old
            if((current_time - time_last_kalman_callback_) < safety_time_no_data_ &&
              (current_time - time_last_piston_callback_) < safety_time_no_data_)
            {
-   
              if(control_filter_) {
+               // Compute several commands according to velocity acceptable bounds
                array<double, 4> u_tab{};
                u_tab[0] = compute_u(depth_set_point_, limit_velocity_ + delta_velocity_lb_);
                u_tab[1] = compute_u(depth_set_point_, limit_velocity_ + delta_velocity_ub_);
                u_tab[2] = compute_u(depth_set_point_ + delta_position_lb_, limit_velocity_);
                u_tab[3] = compute_u(depth_set_point_ + delta_position_ub_, limit_velocity_);
    
+               // Find best command
                u = optimize_u(u_tab);
              } else {
                u = compute_u(depth_set_point_, limit_velocity_);
              }
    
+             // Mechanical limits (in = v_min, out = v_max)
              if((piston_switch_top_ && u < 0) || (piston_switch_bottom_ && u > 0)) {
                u = 0.0;
                piston_set_point_ = piston_position_;
              }
    
+             // Limitation of u according to engine capabilities
              u = std::clamp(u, -flow_max_, flow_max_);
    
+             // Check next formula in the case where
+             // piston_set_point-piston_position > piston_max_velocity/frequency
+             // Previous form do not allow movement under 1 tick
+             // piston_set_point = piston_position - u/(tick_to_volume*control_loop_frequency);
              piston_set_point_ -= u * dt.seconds() / tick_to_volume_;
    
              if(hold_depth_enable_ &&
@@ -292,8 +312,7 @@ Program Listing for File depth_control.cpp
                  hold_depth_validation_ = true;
                  hold_depth_validation_time_ = current_time;
                } else if((current_time - hold_depth_validation_time_) >=
-                 hold_depth_validation_duration_)
-               {
+                 hold_depth_validation_duration_){
                  regulation_state_ = STATE_HOLD_DEPTH;
                }
              } else {
@@ -323,7 +342,7 @@ Program Listing for File depth_control.cpp
          u = 0.0;
          piston_set_point_ = 0;
    
-         if(!emergency_ && piston_state_ == (int)PISTON_STATE_OK) {
+         if(!emergency_ && piston_state_ == static_cast<int>(PISTON_STATE_OK)) {
            regulation_state_ = STATE_SURFACE;
          }
          break;

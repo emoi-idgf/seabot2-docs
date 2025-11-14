@@ -82,7 +82,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">lambert_node.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_LAMBERT_NODE_HPP</span></div>
+<a href="lambert__node_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_LAMBERT_NODE_HPP</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BUILD_LAMBERT_NODE_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
@@ -98,43 +98,60 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classLambertNode.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classLambertNode.html">LambertNode</a> final : <span class="keyword">public</span> rclcpp::Node {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="classLambertNode.html">LambertNode</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_function" href="classLambertNode.html#a954b9c6e831aec41373f9f2755eabcb9">LambertNode</a>();</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    PJ_CONTEXT *C_;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    PJ *P_;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    PJ* P_for_GIS_;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">string</span> epsg_source_ = <span class="stringliteral">&quot;EPSG:4326&quot;</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">string</span> epsg_target_ = <span class="stringliteral">&quot;EPSG:2154&quot;</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    deque&lt;double&gt; east_memory_;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    deque&lt;double&gt; north_memory_;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    deque&lt;rclcpp::Time&gt; time_memory_;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::chrono::seconds filter_position_mean_ = 5s;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::chrono::seconds filter_dt_heading_computation_ = 15s;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    rclcpp::Subscription&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr subscriber_gnss_data_;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    rclcpp::Publisher&lt;seabot2_msgs::msg::GnssPose&gt;::SharedPtr publisher_lambert_data_;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    rclcpp::Publisher&lt;seabot2_msgs::msg::GnssPose&gt;::SharedPtr publisher_lambert_mean_data_;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> init_parameters();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> init_interfaces();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> gnss_callback(<span class="keyword">const</span> seabot2_msgs::msg::GpsFix &amp;msg);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> compute_mean();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classLambertNode.html#a0cadfa5940c709a7204e23a820a4e761">   20</a></span>  PJ_CONTEXT *<a class="code hl_variable" href="classLambertNode.html#a0cadfa5940c709a7204e23a820a4e761">C_</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classLambertNode.html#aab183b5c0ee02d4bf0c4e5153ba65282">   21</a></span>  PJ *<a class="code hl_variable" href="classLambertNode.html#aab183b5c0ee02d4bf0c4e5153ba65282">P_</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classLambertNode.html#a5c611044284e40bc9fc8e41e50f4d4c4">   22</a></span>  PJ * <a class="code hl_variable" href="classLambertNode.html#a5c611044284e40bc9fc8e41e50f4d4c4">P_for_GIS_</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classLambertNode.html#afb9e80c7c240b79f49efae711887bf52">   24</a></span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="classLambertNode.html#afb9e80c7c240b79f49efae711887bf52">epsg_source_</a> = <span class="stringliteral">&quot;EPSG:4326&quot;</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classLambertNode.html#a293dbb86565544a673f6ca88fb5dc786">   25</a></span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="classLambertNode.html#a293dbb86565544a673f6ca88fb5dc786">epsg_target_</a> = <span class="stringliteral">&quot;EPSG:2154&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classLambertNode.html#a0a4866a91659fe61ccb46fbb51647f8f">   27</a></span>  deque&lt;double&gt; <a class="code hl_variable" href="classLambertNode.html#a0a4866a91659fe61ccb46fbb51647f8f">east_memory_</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classLambertNode.html#a9c30361bb60d017e5a3679597f585df1">   28</a></span>  deque&lt;double&gt; <a class="code hl_variable" href="classLambertNode.html#a9c30361bb60d017e5a3679597f585df1">north_memory_</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classLambertNode.html#a7ebbfe1f926c07c578233d60a2ed315b">   29</a></span>  deque&lt;rclcpp::Time&gt; <a class="code hl_variable" href="classLambertNode.html#a7ebbfe1f926c07c578233d60a2ed315b">time_memory_</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classLambertNode.html#a85c2fe9f3bbeccaedd5a2800a7422c92">   31</a></span>  std::chrono::seconds <a class="code hl_variable" href="classLambertNode.html#a85c2fe9f3bbeccaedd5a2800a7422c92">filter_position_mean_</a> = 5s;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classLambertNode.html#a3e36f1d8395581ba9360326f86d5021e">   32</a></span>  std::chrono::seconds <a class="code hl_variable" href="classLambertNode.html#a3e36f1d8395581ba9360326f86d5021e">filter_dt_heading_computation_</a> = 15s;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classLambertNode.html#aa685c250e676cd33f43b7a9458d21721">   35</a></span>  rclcpp::Subscription&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr <a class="code hl_variable" href="classLambertNode.html#aa685c250e676cd33f43b7a9458d21721">subscriber_gnss_data_</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classLambertNode.html#a99841bb3ad24dc4efd836889b3601414">   36</a></span>  rclcpp::Publisher&lt;seabot2_msgs::msg::GnssPose&gt;::SharedPtr <a class="code hl_variable" href="classLambertNode.html#a99841bb3ad24dc4efd836889b3601414">publisher_lambert_data_</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classLambertNode.html#a3ec0e2d24b6559bc565af41fd8ceea27">   37</a></span>  rclcpp::Publisher&lt;seabot2_msgs::msg::GnssPose&gt;::SharedPtr <a class="code hl_variable" href="classLambertNode.html#a3ec0e2d24b6559bc565af41fd8ceea27">publisher_lambert_mean_data_</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLambertNode.html#aad88e7e9187cff2bc528b0510e94801b">init_parameters</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLambertNode.html#a571e2452a61b970e077b7ff57adbc4f8">init_interfaces</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLambertNode.html#ad38fb1871bf15730cbf2413902ecb337">gnss_callback</a>(<span class="keyword">const</span> seabot2_msgs::msg::GpsFix &amp; msg);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLambertNode.html#a00002c64bb65657e3a9ca949c3b68344">compute_mean</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_LAMBERT_NODE_HPP</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_LAMBERT_NODE_HPP</span></div>
 <div class="ttc" id="aclassLambertNode_html"><div class="ttname"><a href="classLambertNode.html">LambertNode</a></div><div class="ttdef"><b>Definition</b> lambert_node.hpp:14</div></div>
+<div class="ttc" id="aclassLambertNode_html_a00002c64bb65657e3a9ca949c3b68344"><div class="ttname"><a href="classLambertNode.html#a00002c64bb65657e3a9ca949c3b68344">LambertNode::compute_mean</a></div><div class="ttdeci">void compute_mean()</div><div class="ttdef"><b>Definition</b> lambert_node.cpp:53</div></div>
+<div class="ttc" id="aclassLambertNode_html_a0a4866a91659fe61ccb46fbb51647f8f"><div class="ttname"><a href="classLambertNode.html#a0a4866a91659fe61ccb46fbb51647f8f">LambertNode::east_memory_</a></div><div class="ttdeci">deque&lt; double &gt; east_memory_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:27</div></div>
+<div class="ttc" id="aclassLambertNode_html_a0cadfa5940c709a7204e23a820a4e761"><div class="ttname"><a href="classLambertNode.html#a0cadfa5940c709a7204e23a820a4e761">LambertNode::C_</a></div><div class="ttdeci">PJ_CONTEXT * C_</div><div class="ttdoc">Variable.</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:20</div></div>
+<div class="ttc" id="aclassLambertNode_html_a293dbb86565544a673f6ca88fb5dc786"><div class="ttname"><a href="classLambertNode.html#a293dbb86565544a673f6ca88fb5dc786">LambertNode::epsg_target_</a></div><div class="ttdeci">string epsg_target_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:25</div></div>
+<div class="ttc" id="aclassLambertNode_html_a3e36f1d8395581ba9360326f86d5021e"><div class="ttname"><a href="classLambertNode.html#a3e36f1d8395581ba9360326f86d5021e">LambertNode::filter_dt_heading_computation_</a></div><div class="ttdeci">std::chrono::seconds filter_dt_heading_computation_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:32</div></div>
+<div class="ttc" id="aclassLambertNode_html_a3ec0e2d24b6559bc565af41fd8ceea27"><div class="ttname"><a href="classLambertNode.html#a3ec0e2d24b6559bc565af41fd8ceea27">LambertNode::publisher_lambert_mean_data_</a></div><div class="ttdeci">rclcpp::Publisher&lt; seabot2_msgs::msg::GnssPose &gt;::SharedPtr publisher_lambert_mean_data_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:37</div></div>
+<div class="ttc" id="aclassLambertNode_html_a571e2452a61b970e077b7ff57adbc4f8"><div class="ttname"><a href="classLambertNode.html#a571e2452a61b970e077b7ff57adbc4f8">LambertNode::init_interfaces</a></div><div class="ttdeci">void init_interfaces()</div><div class="ttdef"><b>Definition</b> lambert_node.cpp:135</div></div>
+<div class="ttc" id="aclassLambertNode_html_a5c611044284e40bc9fc8e41e50f4d4c4"><div class="ttname"><a href="classLambertNode.html#a5c611044284e40bc9fc8e41e50f4d4c4">LambertNode::P_for_GIS_</a></div><div class="ttdeci">PJ * P_for_GIS_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:22</div></div>
+<div class="ttc" id="aclassLambertNode_html_a7ebbfe1f926c07c578233d60a2ed315b"><div class="ttname"><a href="classLambertNode.html#a7ebbfe1f926c07c578233d60a2ed315b">LambertNode::time_memory_</a></div><div class="ttdeci">deque&lt; rclcpp::Time &gt; time_memory_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:29</div></div>
+<div class="ttc" id="aclassLambertNode_html_a85c2fe9f3bbeccaedd5a2800a7422c92"><div class="ttname"><a href="classLambertNode.html#a85c2fe9f3bbeccaedd5a2800a7422c92">LambertNode::filter_position_mean_</a></div><div class="ttdeci">std::chrono::seconds filter_position_mean_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:31</div></div>
+<div class="ttc" id="aclassLambertNode_html_a954b9c6e831aec41373f9f2755eabcb9"><div class="ttname"><a href="classLambertNode.html#a954b9c6e831aec41373f9f2755eabcb9">LambertNode::LambertNode</a></div><div class="ttdeci">LambertNode()</div><div class="ttdef"><b>Definition</b> lambert_node.cpp:6</div></div>
+<div class="ttc" id="aclassLambertNode_html_a99841bb3ad24dc4efd836889b3601414"><div class="ttname"><a href="classLambertNode.html#a99841bb3ad24dc4efd836889b3601414">LambertNode::publisher_lambert_data_</a></div><div class="ttdeci">rclcpp::Publisher&lt; seabot2_msgs::msg::GnssPose &gt;::SharedPtr publisher_lambert_data_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:36</div></div>
+<div class="ttc" id="aclassLambertNode_html_a9c30361bb60d017e5a3679597f585df1"><div class="ttname"><a href="classLambertNode.html#a9c30361bb60d017e5a3679597f585df1">LambertNode::north_memory_</a></div><div class="ttdeci">deque&lt; double &gt; north_memory_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:28</div></div>
+<div class="ttc" id="aclassLambertNode_html_aa685c250e676cd33f43b7a9458d21721"><div class="ttname"><a href="classLambertNode.html#aa685c250e676cd33f43b7a9458d21721">LambertNode::subscriber_gnss_data_</a></div><div class="ttdeci">rclcpp::Subscription&lt; seabot2_msgs::msg::GpsFix &gt;::SharedPtr subscriber_gnss_data_</div><div class="ttdoc">Interfaces.</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:35</div></div>
+<div class="ttc" id="aclassLambertNode_html_aab183b5c0ee02d4bf0c4e5153ba65282"><div class="ttname"><a href="classLambertNode.html#aab183b5c0ee02d4bf0c4e5153ba65282">LambertNode::P_</a></div><div class="ttdeci">PJ * P_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:21</div></div>
+<div class="ttc" id="aclassLambertNode_html_aad88e7e9187cff2bc528b0510e94801b"><div class="ttname"><a href="classLambertNode.html#aad88e7e9187cff2bc528b0510e94801b">LambertNode::init_parameters</a></div><div class="ttdeci">void init_parameters()</div><div class="ttdoc">Functions.</div><div class="ttdef"><b>Definition</b> lambert_node.cpp:36</div></div>
+<div class="ttc" id="aclassLambertNode_html_ad38fb1871bf15730cbf2413902ecb337"><div class="ttname"><a href="classLambertNode.html#ad38fb1871bf15730cbf2413902ecb337">LambertNode::gnss_callback</a></div><div class="ttdeci">void gnss_callback(const seabot2_msgs::msg::GpsFix &amp;msg)</div><div class="ttdef"><b>Definition</b> lambert_node.cpp:95</div></div>
+<div class="ttc" id="aclassLambertNode_html_afb9e80c7c240b79f49efae711887bf52"><div class="ttname"><a href="classLambertNode.html#afb9e80c7c240b79f49efae711887bf52">LambertNode::epsg_source_</a></div><div class="ttdeci">string epsg_source_</div><div class="ttdef"><b>Definition</b> lambert_node.hpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

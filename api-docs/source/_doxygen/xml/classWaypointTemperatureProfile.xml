@@ -3,6 +3,7 @@
   <compounddef id="classWaypointTemperatureProfile" kind="class" language="C++" prot="public" final="yes">
     <compoundname>WaypointTemperatureProfile</compoundname>
     <basecompoundref refid="classWaypoint" prot="public" virt="non-virtual">Waypoint</basecompoundref>
+    <includes refid="waypoint_8hpp" local="no">waypoint.hpp</includes>
     <sectiondef kind="private-type">
       <memberdef kind="enum" id="classWaypointTemperatureProfile_1a94d5f7ddbc9206b135a4666a1e9524ca" prot="private" static="no" strong="no">
         <type></type>
@@ -23,12 +24,13 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>Temperature profile states. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="87" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="87" bodyend="87"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="163" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="163" bodyend="163"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -40,12 +42,14 @@
         <qualifiedname>WaypointTemperatureProfile::temperature_high_</qualifiedname>
         <initializer>= 20.0</initializer>
         <briefdescription>
+<para>Temperature high threshold in degree Celsius. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="79" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="79" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="149" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="149" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWaypointTemperatureProfile_1acc59538f56ad0db85ba14869ae9127f5" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -55,12 +59,14 @@
         <qualifiedname>WaypointTemperatureProfile::temperature_low_</qualifiedname>
         <initializer>= 20.0</initializer>
         <briefdescription>
+<para>Temperature low threshold in degree Celsius. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="80" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="80" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="151" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="151" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWaypointTemperatureProfile_1a0321a086b3d26eb54b0ad38f5766109e" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -70,12 +76,14 @@
         <qualifiedname>WaypointTemperatureProfile::depth_min_</qualifiedname>
         <initializer>= 0.0</initializer>
         <briefdescription>
+<para>Minimum depth in meter. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="81" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="81" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="153" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="153" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWaypointTemperatureProfile_1a33a95d362927437d239dc1f4aaeb07f2" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -85,12 +93,14 @@
         <qualifiedname>WaypointTemperatureProfile::depth_max_</qualifiedname>
         <initializer>= 0.0</initializer>
         <briefdescription>
+<para>Maximum depth in meter. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="82" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="82" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="155" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="155" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWaypointTemperatureProfile_1a2610380e36833aa6468b553829a8d6bd" prot="public" static="no" mutable="no">
         <type>rclcpp::Duration</type>
@@ -98,14 +108,16 @@
         <argsstring></argsstring>
         <name>max_delay_</name>
         <qualifiedname>WaypointTemperatureProfile::max_delay_</qualifiedname>
-        <initializer>= 100s</initializer>
+        <initializer>= rclcpp::Duration::from_seconds(100.0)</initializer>
         <briefdescription>
+<para>Maximum duration in each state (going up or down) </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="83" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="83" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="157" column="20" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="157" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -116,27 +128,31 @@
         <name>time_last_transition_</name>
         <qualifiedname>WaypointTemperatureProfile::time_last_transition_</qualifiedname>
         <briefdescription>
+<para>Time of the last state transition. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="86" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="86" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="161" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="161" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWaypointTemperatureProfile_1afe8fd0d39bb0b49f8e909771683dea69" prot="private" static="no" mutable="no">
-        <type>PROFILE_STATE</type>
+        <type><ref refid="classWaypointTemperatureProfile_1a94d5f7ddbc9206b135a4666a1e9524ca" kindref="member">PROFILE_STATE</ref></type>
         <definition>PROFILE_STATE WaypointTemperatureProfile::state_</definition>
         <argsstring></argsstring>
         <name>state_</name>
         <qualifiedname>WaypointTemperatureProfile::state_</qualifiedname>
-        <initializer>= PROFILE_GO_DOWN</initializer>
+        <initializer>= <ref refid="classWaypointTemperatureProfile_1a94d5f7ddbc9206b135a4666a1e9524caa27d70f5997d857faf6bddbce1ea49065" kindref="member">PROFILE_GO_DOWN</ref></initializer>
         <briefdescription>
+<para>Current state of the temperature profile. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="88" column="19" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="88" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="165" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="165" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWaypointTemperatureProfile_1a673e7638c127a81ca0173e56130a875b" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -146,12 +162,14 @@
         <qualifiedname>WaypointTemperatureProfile::first_init_</qualifiedname>
         <initializer>= true</initializer>
         <briefdescription>
+<para>First initialization flag. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="89" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="89" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="167" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="167" bodyend="-1"/>
+        <referencedby refid="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" compoundref="waypoint_8cpp" startline="52" endline="89">process</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -171,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="71" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="71" bodyend="71"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="137" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="137" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="classWaypointTemperatureProfile_1a78cf15e6806937b8c53b946ad1355252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -185,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="72" column="5"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="139" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classWaypointTemperatureProfile_1acbf771a6723a6238fa308c93d946005b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -199,18 +217,45 @@
           <declname>time</declname>
         </param>
         <briefdescription>
-<para>process </para>
+<para>Process waypoint temperature profile and set depth control setpoint. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="77" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp" bodystart="50" bodyend="86"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="146" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp" bodystart="52" bodyend="89"/>
+        <references refid="classMission_1a22e811abed47c4b8430f2ac044cb63bf" compoundref="mission_8hpp" startline="119" endline="122">Mission::depth_control_set_point</references>
+        <references refid="classWaypointTemperatureProfile_1a33a95d362927437d239dc1f4aaeb07f2" compoundref="waypoint_8hpp" startline="155">depth_max_</references>
+        <references refid="classWaypointTemperatureProfile_1a0321a086b3d26eb54b0ad38f5766109e" compoundref="waypoint_8hpp" startline="153">depth_min_</references>
+        <references refid="classWaypointTemperatureProfile_1a673e7638c127a81ca0173e56130a875b" compoundref="waypoint_8hpp" startline="167">first_init_</references>
+        <references refid="classMission_1a98e34358a59d9f985a4c5ae3c29a40e1" compoundref="mission_8hpp" startline="219" endline="222">Mission::get_depth</references>
+        <references refid="classMission_1a305a436cefb3a14976ee0405f9b542ab" compoundref="mission_8hpp" startline="209" endline="212">Mission::get_temperature</references>
+        <references refid="classWaypointTemperatureProfile_1a2610380e36833aa6468b553829a8d6bd" compoundref="waypoint_8hpp" startline="157">max_delay_</references>
+        <references refid="classWaypoint_1af5d91ed57ac82236555ad0abacee187e" compoundref="waypoint_8hpp" startline="50">Waypoint::mission_</references>
+        <references refid="classWaypointTemperatureProfile_1a94d5f7ddbc9206b135a4666a1e9524caa27d70f5997d857faf6bddbce1ea49065" compoundref="waypoint_8hpp" startline="163">PROFILE_GO_DOWN</references>
+        <references refid="classWaypointTemperatureProfile_1a94d5f7ddbc9206b135a4666a1e9524caa1eaeb91d8ea0b2d8fc0f59873d0f1f7b" compoundref="waypoint_8hpp" startline="163">PROFILE_GO_UP</references>
+        <references refid="classWaypointTemperatureProfile_1afe8fd0d39bb0b49f8e909771683dea69" compoundref="waypoint_8hpp" startline="165">state_</references>
+        <references refid="classWaypointTemperatureProfile_1a579d8809c03480beba4114a0840c390b" compoundref="waypoint_8hpp" startline="149">temperature_high_</references>
+        <references refid="classWaypointTemperatureProfile_1acc59538f56ad0db85ba14869ae9127f5" compoundref="waypoint_8hpp" startline="151">temperature_low_</references>
+        <references refid="classWaypointTemperatureProfile_1a85bd79dd41b6f0496b05e75ea42377c3" compoundref="waypoint_8hpp" startline="161">time_last_transition_</references>
+        <references refid="classWaypoint_1a5b806ea31179bb7287694907120d58f7" compoundref="waypoint_8hpp" startline="44">Waypoint::velocity</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para><ref refid="classWaypoint" kindref="compound">Waypoint</ref> for temperature profile. </para>
     </briefdescription>
     <detaileddescription>
+<para>Make a profile between two depth and two temperature Go down until temperature_low_ is reached or depth_max_ is reached Then go up until temperature_high_ is reached or depth_min_ is reached </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -228,6 +273,9 @@
       <node id="3">
         <label>Mission</label>
         <link refid="classMission"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>file_name_</edgelabel>
+        </childnode>
       </node>
       <node id="2">
         <label>Waypoint</label>
@@ -242,8 +290,11 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="4">
+        <label>string</label>
+      </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="69" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="69" bodyend="90"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="135" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="135" bodyend="168"/>
     <listofallmembers>
       <member refid="classWaypoint_1a7d5cd3970869c646b4e86e986996b8a3" prot="public" virt="non-virtual"><scope>WaypointTemperatureProfile</scope><name>depth</name></member>
       <member refid="classWaypointTemperatureProfile_1a33a95d362927437d239dc1f4aaeb07f2" prot="public" virt="non-virtual"><scope>WaypointTemperatureProfile</scope><name>depth_max_</name></member>

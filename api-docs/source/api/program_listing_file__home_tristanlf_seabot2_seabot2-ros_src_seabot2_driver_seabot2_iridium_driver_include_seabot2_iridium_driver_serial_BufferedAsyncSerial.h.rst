@@ -10,7 +10,7 @@ Program Listing for File BufferedAsyncSerial.h
 
 .. code-block:: cpp
 
-   /* 
+   /*
     * File:   BufferedAsyncSerial.h
     * Author: Terraneo Federico
     * Distributed under the Boost Software License, Version 1.0.
@@ -26,40 +26,41 @@ Program Listing for File BufferedAsyncSerial.h
    class BufferedAsyncSerial: public AsyncSerial
    {
    public:
-       BufferedAsyncSerial();
+     BufferedAsyncSerial();
    
-       BufferedAsyncSerial(const std::string& devname, unsigned int baud_rate,
-           boost::asio::serial_port_base::parity opt_parity=
-               boost::asio::serial_port_base::parity(
+     BufferedAsyncSerial(const std::string & devname, unsigned int baud_rate,
+           boost::asio::serial_port_base::parity opt_parity =
+       boost::asio::serial_port_base::parity(
                    boost::asio::serial_port_base::parity::none),
-           boost::asio::serial_port_base::character_size opt_csize=
-               boost::asio::serial_port_base::character_size(8),
-           boost::asio::serial_port_base::flow_control opt_flow=
-               boost::asio::serial_port_base::flow_control(
+           boost::asio::serial_port_base::character_size opt_csize =
+       boost::asio::serial_port_base::character_size(8),
+           boost::asio::serial_port_base::flow_control opt_flow =
+       boost::asio::serial_port_base::flow_control(
                    boost::asio::serial_port_base::flow_control::none),
-           boost::asio::serial_port_base::stop_bits opt_stop=
-               boost::asio::serial_port_base::stop_bits(
+           boost::asio::serial_port_base::stop_bits opt_stop =
+       boost::asio::serial_port_base::stop_bits(
                    boost::asio::serial_port_base::stop_bits::one));
    
-       size_t read(char *data, size_t size);
+     size_t read(char *data, size_t size);
    
-       std::vector<char> read();
+     std::vector < char > read();
    
-       std::string readString();
+     std::string readString();
    
-       std::string readStringUntil(const std::string delim="\n");
+     std::string readStringUntil(const std::string delim = "\n");
    
-       virtual ~BufferedAsyncSerial();
+     virtual ~BufferedAsyncSerial();
    
    private:
    
-       void readCallback(const char *data, size_t len);
+     void readCallback(const char *data, size_t len);
    
-       static std::vector<char>::iterator findStringInVector(std::vector<char>& v,
-               const std::string& s);
+     static std::vector < char > ::iterator findStringInVector(
+       std::vector < char > &v,
+       const std::string & s);
    
-       std::vector<char> readQueue;
-       std::mutex readQueueMutex;
+     std::vector < char > readQueue;
+     std::mutex readQueueMutex;
    };
    
    #endif //BUFFEREDASYNCSERIAL_H

@@ -29,65 +29,66 @@ Program Listing for File tlv320adc.h
    class TLV320ADC
    {
    public:
-       TLV320ADC(rclcpp::Node *n){
+     TLV320ADC(rclcpp::Node * n) {
            n_ = n;
-       }
+     }
    
-       ~TLV320ADC();
+     ~TLV320ADC();
    
-       int i2c_open();
+     int i2c_open();
    
-       int configure(uint8_t gain) const;
+     int configure(uint8_t gain) const;
    
-       int set_channel_parameters() const;
+     int set_channel_parameters() const;
    
-       int set_power_up() const;
+     int set_power_up() const;
    
-       int getI2CAddr() const;
+     int getI2CAddr() const;
    
-       void setI2CAddr(int i2CAddr);
+     void setI2CAddr(int i2CAddr);
    
-       const std::string &getI2CPeriph() const;
+     const std::string & getI2CPeriph() const;
    
-       void setI2CPeriph(const std::string &i2CPeriph);
+     void setI2CPeriph(const std::string & i2CPeriph);
    
        /*
         * gain values: 0dB=0x00, 10dB=0x28, 20dB=0x50, 30dB=78, 40dB=A0
         */
-       enum class AdcGain {
-           GAIN_0dB = 0,
-           GAIN_10dB = 0x28,
-           GAIN_20dB = 0x50,
-           GAIN_30dB = 0x78,
-           GAIN_40dB = 0xA0,
-       };
+     enum class AdcGain
+     {
+       GAIN_0dB = 0,
+       GAIN_10dB = 0x28,
+       GAIN_20dB = 0x50,
+       GAIN_30dB = 0x78,
+       GAIN_40dB = 0xA0,
+     };
    
-       int set_adc_gain(uint8_t gain_ch1, uint8_t gain_ch2) const;
+     int set_adc_gain(uint8_t gain_ch1, uint8_t gain_ch2) const;
    
-       int set_wake_up() const;
+     int set_wake_up() const;
    
-       int set_reset() const;
+     int set_reset() const;
    
-       int set_page(uint8_t page) const;
+     int set_page(uint8_t page) const;
    
-       int set_i2s_32bit() const;
+     int set_i2s_32bit() const;
    
-       int set_channel_slot() const;
+     int set_channel_slot() const;
    
-       int set_channel_enable() const;
+     int set_channel_enable() const;
    
-       int set_enable_channel() const;
+     int set_enable_channel() const;
    
-       int set_enable_input_ch1(uint8_t ch1, uint8_t ch2) const;
+     int set_enable_input_ch1(uint8_t ch1, uint8_t ch2) const;
    
-       int set_enable_input(uint8_t ch1, uint8_t ch2) const;
+     int set_enable_input(uint8_t ch1, uint8_t ch2) const;
    
    private:
-       rclcpp::Node* n_= nullptr; 
+     rclcpp::Node * n_ = nullptr; 
    
-       int file_ = 0; 
-       std::string i2c_periph_ = "/dev/i2c-0";
-       int i2c_addr_ = 0x4E;
+     int file_ = 0;   
+     std::string i2c_periph_ = "/dev/i2c-0";
+     int i2c_addr_ = 0x4E;
    
    public:
    

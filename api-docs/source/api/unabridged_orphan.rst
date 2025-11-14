@@ -686,41 +686,6 @@ Directories
 .. toctree::
    :maxdepth: 5
 
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include_seabot2_simulator.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_launch.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_python.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_python_seabot2py.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_src.rst
-
-.. toctree::
-   :maxdepth: 5
-
    dir__home_tristanlf_seabot2_seabot2-ros_src_seabot2_wtf.rst
 
 .. toctree::
@@ -746,11 +711,6 @@ Files
    :maxdepth: 5
 
    file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_xbee_driver_xbee_driver___init__.py.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_python_seabot2py___init__.py.rst
 
 .. toctree::
    :maxdepth: 5
@@ -1346,41 +1306,6 @@ Files
    :maxdepth: 5
 
    file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_driver_xbee_driver_setup.py.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_python_setup.py.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_launch_simulation_launch.py.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_src_simulator.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include_seabot2_simulator_simulator.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_python_simulator_binding.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_src_simulator_node.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include_seabot2_simulator_simulator_node.hpp.rst
 
 .. toctree::
    :maxdepth: 5

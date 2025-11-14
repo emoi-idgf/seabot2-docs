@@ -9,6 +9,7 @@
   <title>Struct GSW_FREEZING_POLY_COEFFICIENTS &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct GSW_GIBBS_ICE_COEFFICIENTS" href="structGSW__GIBBS__ICE__COEFFICIENTS.html" />
-    <link rel="prev" title="Struct GSW_BALTIC_DATA" href="structGSW__BALTIC__DATA.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,60 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Struct GSW_FREEZING_POLY_COEFFICIENTS</a><ul>
+<li><a class="reference internal" href="#struct-documentation">Struct Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv430GSW_FREEZING_POLY_COEFFICIENTS"><code class="docutils literal notranslate"><span class="pre">GSW_FREEZING_POLY_COEFFICIENTS</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS35init_GSW_FREEZING_POLY_COEFFICIENTSEv"><code class="docutils literal notranslate"><span class="pre">init_GSW_FREEZING_POLY_COEFFICIENTS()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS1aE"><code class="docutils literal notranslate"><span class="pre">a</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS1bE"><code class="docutils literal notranslate"><span class="pre">b</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c0E"><code class="docutils literal notranslate"><span class="pre">c0</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c1E"><code class="docutils literal notranslate"><span class="pre">c1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c2E"><code class="docutils literal notranslate"><span class="pre">c2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c3E"><code class="docutils literal notranslate"><span class="pre">c3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c4E"><code class="docutils literal notranslate"><span class="pre">c4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c5E"><code class="docutils literal notranslate"><span class="pre">c5</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c6E"><code class="docutils literal notranslate"><span class="pre">c6</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c7E"><code class="docutils literal notranslate"><span class="pre">c7</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c8E"><code class="docutils literal notranslate"><span class="pre">c8</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2c9E"><code class="docutils literal notranslate"><span class="pre">c9</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c10E"><code class="docutils literal notranslate"><span class="pre">c10</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c11E"><code class="docutils literal notranslate"><span class="pre">c11</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c12E"><code class="docutils literal notranslate"><span class="pre">c12</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c13E"><code class="docutils literal notranslate"><span class="pre">c13</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c14E"><code class="docutils literal notranslate"><span class="pre">c14</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c15E"><code class="docutils literal notranslate"><span class="pre">c15</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c16E"><code class="docutils literal notranslate"><span class="pre">c16</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c17E"><code class="docutils literal notranslate"><span class="pre">c17</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c18E"><code class="docutils literal notranslate"><span class="pre">c18</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c19E"><code class="docutils literal notranslate"><span class="pre">c19</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c20E"><code class="docutils literal notranslate"><span class="pre">c20</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c21E"><code class="docutils literal notranslate"><span class="pre">c21</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3c22E"><code class="docutils literal notranslate"><span class="pre">c22</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t0E"><code class="docutils literal notranslate"><span class="pre">t0</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t1E"><code class="docutils literal notranslate"><span class="pre">t1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t2E"><code class="docutils literal notranslate"><span class="pre">t2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t3E"><code class="docutils literal notranslate"><span class="pre">t3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t4E"><code class="docutils literal notranslate"><span class="pre">t4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t5E"><code class="docutils literal notranslate"><span class="pre">t5</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t6E"><code class="docutils literal notranslate"><span class="pre">t6</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t7E"><code class="docutils literal notranslate"><span class="pre">t7</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t8E"><code class="docutils literal notranslate"><span class="pre">t8</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS2t9E"><code class="docutils literal notranslate"><span class="pre">t9</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t10E"><code class="docutils literal notranslate"><span class="pre">t10</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t11E"><code class="docutils literal notranslate"><span class="pre">t11</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t12E"><code class="docutils literal notranslate"><span class="pre">t12</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t13E"><code class="docutils literal notranslate"><span class="pre">t13</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t14E"><code class="docutils literal notranslate"><span class="pre">t14</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t15E"><code class="docutils literal notranslate"><span class="pre">t15</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t16E"><code class="docutils literal notranslate"><span class="pre">t16</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t17E"><code class="docutils literal notranslate"><span class="pre">t17</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t18E"><code class="docutils literal notranslate"><span class="pre">t18</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t19E"><code class="docutils literal notranslate"><span class="pre">t19</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t20E"><code class="docutils literal notranslate"><span class="pre">t20</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t21E"><code class="docutils literal notranslate"><span class="pre">t21</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N30GSW_FREEZING_POLY_COEFFICIENTS3t22E"><code class="docutils literal notranslate"><span class="pre">t22</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +106,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +121,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Struct GSW_FREEZING_POLY_COEFFICIENTS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/structGSW__FREEZING__POLY__COEFFICIENTS.rst.txt" rel="nofollow"> View page source</a>
@@ -364,10 +402,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="structGSW__BALTIC__DATA.html" class="btn btn-neutral float-left" title="Struct GSW_BALTIC_DATA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="structGSW__GIBBS__ICE__COEFFICIENTS.html" class="btn btn-neutral float-right" title="Struct GSW_GIBBS_ICE_COEFFICIENTS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

@@ -72,10 +72,15 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classBufferedAsyncSerial-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BufferedAsyncSerial Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="BufferedAsyncSerial_8h_source.html">BufferedAsyncSerial.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BufferedAsyncSerial:</div>
 <div class="dyncontent">
@@ -103,6 +108,8 @@ Collaboration diagram for BufferedAsyncSerial:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6f8045e40a5b9e96f3474b29c00cf6ec" id="r_a6f8045e40a5b9e96f3474b29c00cf6ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a6f8045e40a5b9e96f3474b29c00cf6ec">BufferedAsyncSerial</a> ()</td></tr>
+<tr class="separator:a6f8045e40a5b9e96f3474b29c00cf6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41db81338678ab592aaa6189103b414c" id="r_a41db81338678ab592aaa6189103b414c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a41db81338678ab592aaa6189103b414c">BufferedAsyncSerial</a> (const std::string &amp;devname, unsigned int baud_rate, boost::asio::serial_port_base::parity opt_parity=boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none), boost::asio::serial_port_base::character_size opt_csize=boost::asio::serial_port_base::character_size(8), boost::asio::serial_port_base::flow_control opt_flow=boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none), boost::asio::serial_port_base::stop_bits opt_stop=boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one))</td></tr>
 <tr class="separator:a41db81338678ab592aaa6189103b414c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5ee3fa826eb9a5d8e48f0c27149bfda" id="r_ad5ee3fa826eb9a5d8e48f0c27149bfda"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#ad5ee3fa826eb9a5d8e48f0c27149bfda">read</a> (char *data, size_t size)</td></tr>
@@ -113,7 +120,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4ac460f8b50222394dc0cf0fec47f159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1977bd9ded2ae1ab084f2ccb27e6511e" id="r_a1977bd9ded2ae1ab084f2ccb27e6511e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a1977bd9ded2ae1ab084f2ccb27e6511e">readStringUntil</a> (const std::string delim=&quot;\n&quot;)</td></tr>
 <tr class="separator:a1977bd9ded2ae1ab084f2ccb27e6511e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385796d6f383544cf253c15b66e4eb13" id="r_a385796d6f383544cf253c15b66e4eb13"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a385796d6f383544cf253c15b66e4eb13">~BufferedAsyncSerial</a> ()</td></tr>
+<tr class="separator:a385796d6f383544cf253c15b66e4eb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classAsyncSerial"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classAsyncSerial')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classAsyncSerial.html">AsyncSerial</a></td></tr>
+<tr class="memitem:aff78d677d0b72f9929448240313ca8f7 inherit pub_methods_classAsyncSerial" id="r_aff78d677d0b72f9929448240313ca8f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#aff78d677d0b72f9929448240313ca8f7">AsyncSerial</a> ()</td></tr>
+<tr class="separator:aff78d677d0b72f9929448240313ca8f7 inherit pub_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d2011315081fc53de7faf0f5ecb0124 inherit pub_methods_classAsyncSerial" id="r_a7d2011315081fc53de7faf0f5ecb0124"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#a7d2011315081fc53de7faf0f5ecb0124">AsyncSerial</a> (const std::string &amp;devname, unsigned int baud_rate, boost::asio::serial_port_base::parity opt_parity=boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none), boost::asio::serial_port_base::character_size opt_csize=boost::asio::serial_port_base::character_size(8), boost::asio::serial_port_base::flow_control opt_flow=boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none), boost::asio::serial_port_base::stop_bits opt_stop=boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one))</td></tr>
 <tr class="separator:a7d2011315081fc53de7faf0f5ecb0124 inherit pub_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac703c6e3ee89e5821536ce7381a31238 inherit pub_methods_classAsyncSerial" id="r_ac703c6e3ee89e5821536ce7381a31238"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#ac703c6e3ee89e5821536ce7381a31238">open</a> (const std::string &amp;devname, unsigned int baud_rate, boost::asio::serial_port_base::parity opt_parity=boost::asio::serial_port_base::parity(boost::asio::serial_port_base::parity::none), boost::asio::serial_port_base::character_size opt_csize=boost::asio::serial_port_base::character_size(8), boost::asio::serial_port_base::flow_control opt_flow=boost::asio::serial_port_base::flow_control(boost::asio::serial_port_base::flow_control::none), boost::asio::serial_port_base::stop_bits opt_stop=boost::asio::serial_port_base::stop_bits(boost::asio::serial_port_base::stop_bits::one))</td></tr>
@@ -130,23 +141,71 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8f3665e55608b07fa9eb4e9d93b3ee95 inherit pub_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4285acd9b327cef013b0437cf188da7 inherit pub_methods_classAsyncSerial" id="r_aa4285acd9b327cef013b0437cf188da7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#aa4285acd9b327cef013b0437cf188da7">writeString</a> (const std::string &amp;s)</td></tr>
 <tr class="separator:aa4285acd9b327cef013b0437cf188da7 inherit pub_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac97fceec15171d8161bbc89b5b37474 inherit pub_methods_classAsyncSerial" id="r_aac97fceec15171d8161bbc89b5b37474"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#aac97fceec15171d8161bbc89b5b37474">~AsyncSerial</a> ()=0</td></tr>
+<tr class="separator:aac97fceec15171d8161bbc89b5b37474 inherit pub_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a33fdd36dc921aa8c506c90b52441c172" id="r_a33fdd36dc921aa8c506c90b52441c172"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a33fdd36dc921aa8c506c90b52441c172">readCallback</a> (const char *data, size_t len)</td></tr>
+<tr class="separator:a33fdd36dc921aa8c506c90b52441c172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ab5dc4c00dd3c8feeaef2c57f0520de68" id="r_ab5dc4c00dd3c8feeaef2c57f0520de68"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; char &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#ab5dc4c00dd3c8feeaef2c57f0520de68">findStringInVector</a> (std::vector&lt; char &gt; &amp;v, const std::string &amp;s)</td></tr>
+<tr class="separator:ab5dc4c00dd3c8feeaef2c57f0520de68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a67428b86bb52bc3f265bde03e36410e3" id="r_a67428b86bb52bc3f265bde03e36410e3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a67428b86bb52bc3f265bde03e36410e3">readQueue</a></td></tr>
+<tr class="separator:a67428b86bb52bc3f265bde03e36410e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f249f8998832a4f11acd06d299e4991" id="r_a5f249f8998832a4f11acd06d299e4991"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBufferedAsyncSerial.html#a5f249f8998832a4f11acd06d299e4991">readQueueMutex</a></td></tr>
+<tr class="separator:a5f249f8998832a4f11acd06d299e4991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_attribs_classAsyncSerial"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classAsyncSerial')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classAsyncSerial.html">AsyncSerial</a></td></tr>
-<tr class="memitem:afa843216d519512f1f325a1b8849be26 inherit pub_static_attribs_classAsyncSerial" id="r_afa843216d519512f1f325a1b8849be26"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#afa843216d519512f1f325a1b8849be26">readBufferSize</a> =512</td></tr>
+<tr class="memitem:afa843216d519512f1f325a1b8849be26 inherit pub_static_attribs_classAsyncSerial" id="r_afa843216d519512f1f325a1b8849be26"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#afa843216d519512f1f325a1b8849be26">readBufferSize</a> = 512</td></tr>
 <tr class="separator:afa843216d519512f1f325a1b8849be26 inherit pub_static_attribs_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAsyncSerial"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAsyncSerial')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAsyncSerial.html">AsyncSerial</a></td></tr>
 <tr class="memitem:afb60a8e6ae2469094fe11d52e4336648 inherit pro_methods_classAsyncSerial" id="r_afb60a8e6ae2469094fe11d52e4336648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#afb60a8e6ae2469094fe11d52e4336648">setErrorStatus</a> (bool e)</td></tr>
 <tr class="separator:afb60a8e6ae2469094fe11d52e4336648 inherit pro_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6e207716e4e54b84666fe392de38115 inherit pro_methods_classAsyncSerial" id="r_ad6e207716e4e54b84666fe392de38115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#ad6e207716e4e54b84666fe392de38115">setReadCallback</a> (const std::function&lt; void(const char *, size_t)&gt; &amp;callback)</td></tr>
-<tr class="separator:ad6e207716e4e54b84666fe392de38115 inherit pro_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2020c5f77a8006ed5746449da1814891 inherit pro_methods_classAsyncSerial" id="r_a2020c5f77a8006ed5746449da1814891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#a2020c5f77a8006ed5746449da1814891">setReadCallback</a> (const std::function&lt; void(const char *, size_t) &gt; &amp;callback)</td></tr>
+<tr class="separator:a2020c5f77a8006ed5746449da1814891 inherit pro_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c529d01fb7df3ed2ad5d771141f7a7 inherit pro_methods_classAsyncSerial" id="r_a79c529d01fb7df3ed2ad5d771141f7a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAsyncSerial.html#a79c529d01fb7df3ed2ad5d771141f7a7">clearReadCallback</a> ()</td></tr>
 <tr class="separator:a79c529d01fb7df3ed2ad5d771141f7a7 inherit pro_methods_classAsyncSerial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6f8045e40a5b9e96f3474b29c00cf6ec" name="a6f8045e40a5b9e96f3474b29c00cf6ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8045e40a5b9e96f3474b29c00cf6ec">&#9670;&#160;</a></span>BufferedAsyncSerial() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BufferedAsyncSerial::BufferedAsyncSerial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBufferedAsyncSerial_a6f8045e40a5b9e96f3474b29c00cf6ec_cgraph.png" border="0" usemap="#aclassBufferedAsyncSerial_a6f8045e40a5b9e96f3474b29c00cf6ec_cgraph" alt=""/></div>
+<map name="aclassBufferedAsyncSerial_a6f8045e40a5b9e96f3474b29c00cf6ec_cgraph" id="aclassBufferedAsyncSerial_a6f8045e40a5b9e96f3474b29c00cf6ec_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,167,75"/>
+<area shape="rect" href="classBufferedAsyncSerial.html#a33fdd36dc921aa8c506c90b52441c172" title=" " alt="" coords="245,5,399,45"/>
+<area shape="poly" title=" " alt="" coords="167,42,231,34,232,39,167,47"/>
+<area shape="rect" href="classAsyncSerial.html#a2020c5f77a8006ed5746449da1814891" title=" " alt="" coords="215,70,429,95"/>
+<area shape="poly" title=" " alt="" coords="167,62,202,66,201,71,167,67"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a41db81338678ab592aaa6189103b414c" name="a41db81338678ab592aaa6189103b414c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41db81338678ab592aaa6189103b414c">&#9670;&#160;</a></span>BufferedAsyncSerial()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41db81338678ab592aaa6189103b414c">&#9670;&#160;</a></span>BufferedAsyncSerial() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +273,102 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a385796d6f383544cf253c15b66e4eb13" name="a385796d6f383544cf253c15b66e4eb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385796d6f383544cf253c15b66e4eb13">&#9670;&#160;</a></span>~BufferedAsyncSerial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BufferedAsyncSerial::~BufferedAsyncSerial </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBufferedAsyncSerial_a385796d6f383544cf253c15b66e4eb13_cgraph.png" border="0" usemap="#aclassBufferedAsyncSerial_a385796d6f383544cf253c15b66e4eb13_cgraph" alt=""/></div>
+<map name="aclassBufferedAsyncSerial_a385796d6f383544cf253c15b66e4eb13_cgraph" id="aclassBufferedAsyncSerial_a385796d6f383544cf253c15b66e4eb13_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,45"/>
+<area shape="rect" href="classAsyncSerial.html#a79c529d01fb7df3ed2ad5d771141f7a7" title=" " alt="" coords="225,13,452,38"/>
+<area shape="poly" title=" " alt="" coords="178,23,212,23,212,28,178,28"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab5dc4c00dd3c8feeaef2c57f0520de68" name="ab5dc4c00dd3c8feeaef2c57f0520de68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5dc4c00dd3c8feeaef2c57f0520de68">&#9670;&#160;</a></span>findStringInVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; char &gt;::iterator BufferedAsyncSerial::findStringInVector </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Finds a substring in a vector of char. Used to look for the delimiter. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>vector where to find the string </td></tr>
+    <tr><td class="paramname">s</td><td>string to find </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the beginning of the place in the vector where the first occurrence of the string is, or v.end() if the string was not found </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBufferedAsyncSerial_ab5dc4c00dd3c8feeaef2c57f0520de68_icgraph.png" border="0" usemap="#aclassBufferedAsyncSerial_ab5dc4c00dd3c8feeaef2c57f0520de68_icgraph" alt=""/></div>
+<map name="aclassBufferedAsyncSerial_ab5dc4c00dd3c8feeaef2c57f0520de68_icgraph" id="aclassBufferedAsyncSerial_ab5dc4c00dd3c8feeaef2c57f0520de68_icgraph">
+<area shape="rect" title=" " alt="" coords="773,5,927,45"/>
+<area shape="rect" href="classBufferedAsyncSerial.html#a1977bd9ded2ae1ab084f2ccb27e6511e" title=" " alt="" coords="572,5,725,45"/>
+<area shape="poly" title=" " alt="" coords="759,28,725,28,725,23,759,23"/>
+<area shape="rect" href="classSBD.html#a1e3dd8657cb587b2b238edfda4420186" title="decode_sentence" alt="" coords="437,13,524,38"/>
+<area shape="poly" title=" " alt="" coords="558,28,524,28,524,23,558,23"/>
+<area shape="rect" href="classIridiumNode.html#a4917dff47ccdd28b840846632d1a319a" title="Functions." alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="423,28,389,28,389,23,423,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ace6bba84ff120bcf28ebd0dec49db9a3" name="ace6bba84ff120bcf28ebd0dec49db9a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace6bba84ff120bcf28ebd0dec49db9a3">&#9670;&#160;</a></span>read() <span class="overload">[1/2]</span></h2>
 
@@ -269,6 +423,53 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a33fdd36dc921aa8c506c90b52441c172" name="a33fdd36dc921aa8c506c90b52441c172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33fdd36dc921aa8c506c90b52441c172">&#9670;&#160;</a></span>readCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BufferedAsyncSerial::readCallback </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read callback, stores data in the buffer </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBufferedAsyncSerial_a33fdd36dc921aa8c506c90b52441c172_icgraph.png" border="0" usemap="#aclassBufferedAsyncSerial_a33fdd36dc921aa8c506c90b52441c172_icgraph" alt=""/></div>
+<map name="aclassBufferedAsyncSerial_a33fdd36dc921aa8c506c90b52441c172_icgraph" id="aclassBufferedAsyncSerial_a33fdd36dc921aa8c506c90b52441c172_icgraph">
+<area shape="rect" title=" " alt="" coords="215,5,368,45"/>
+<area shape="rect" href="classBufferedAsyncSerial.html#a6f8045e40a5b9e96f3474b29c00cf6ec" title=" " alt="" coords="5,5,167,45"/>
+<area shape="poly" title=" " alt="" coords="201,28,167,28,167,23,201,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a4ac460f8b50222394dc0cf0fec47f159" name="a4ac460f8b50222394dc0cf0fec47f159"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ac460f8b50222394dc0cf0fec47f159">&#9670;&#160;</a></span>readString()</h2>
 
@@ -310,12 +511,81 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a string with the received data. The delimiter is removed from the string. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_cgraph.png" border="0" usemap="#aclassBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_cgraph" alt=""/></div>
+<map name="aclassBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_cgraph" id="aclassBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,159,45"/>
+<area shape="rect" href="classBufferedAsyncSerial.html#ab5dc4c00dd3c8feeaef2c57f0520de68" title=" " alt="" coords="207,5,360,45"/>
+<area shape="poly" title=" " alt="" coords="159,23,193,23,193,28,159,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_icgraph.png" border="0" usemap="#aclassBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_icgraph" alt=""/></div>
+<map name="aclassBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_icgraph" id="aclassBufferedAsyncSerial_a1977bd9ded2ae1ab084f2ccb27e6511e_icgraph">
+<area shape="rect" title=" " alt="" coords="572,5,725,45"/>
+<area shape="rect" href="classSBD.html#a1e3dd8657cb587b2b238edfda4420186" title="decode_sentence" alt="" coords="437,13,524,38"/>
+<area shape="poly" title=" " alt="" coords="558,28,524,28,524,23,558,23"/>
+<area shape="rect" href="classIridiumNode.html#a4917dff47ccdd28b840846632d1a319a" title="Functions." alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="423,28,389,28,389,23,423,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a67428b86bb52bc3f265bde03e36410e3" name="a67428b86bb52bc3f265bde03e36410e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67428b86bb52bc3f265bde03e36410e3">&#9670;&#160;</a></span>readQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; char &gt; BufferedAsyncSerial::readQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f249f8998832a4f11acd06d299e4991" name="a5f249f8998832a4f11acd06d299e4991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f249f8998832a4f11acd06d299e4991">&#9670;&#160;</a></span>readQueueMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex BufferedAsyncSerial::readQueueMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/<a class="el" href="BufferedAsyncSerial_8h_source.html">BufferedAsyncSerial.h</a></li>
-<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/<b>BufferedAsyncSerial.cpp</b></li>
+<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/<a class="el" href="BufferedAsyncSerial_8cpp.html">BufferedAsyncSerial.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -14,16 +14,19 @@ Program Listing for File alpha_solver.h
    // Created by lemezoth on 11/04/23.
    //
    
-   #ifndef BUILD_ALPHA_SOLVER_H
-   #define BUILD_ALPHA_SOLVER_H
+   #ifndef SEABOT2_DEPTH_CONTROL__ALPHA_SOLVER_H_
+   #define SEABOT2_DEPTH_CONTROL__ALPHA_SOLVER_H_
    
-   //#include "ibex.h"
+   // #include "ibex.h"
    #include <array>
    #include <vector>
-   using namespace std;
+   #include <utility>
+   
+   using std::array;
+   using std::vector;
+   using std::pair;
    
    class AlphaSolver {
-   
    public:
      AlphaSolver() = default;  // Default constructor
    
@@ -63,8 +66,7 @@ Program Listing for File alpha_solver.h
      vector < array < double, 2 >> computed_memory_;
    
      bool enable_test_in_memory_ = true;
-   
    };
    
    
-   #endif //BUILD_ALPHA_SOLVER_H
+   #endif  // SEABOT2_DEPTH_CONTROL__ALPHA_SOLVER_H_

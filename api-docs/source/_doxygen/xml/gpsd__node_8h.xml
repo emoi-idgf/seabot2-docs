@@ -39,6 +39,18 @@
         <label>seabot2_msgs/msg/gps_pps.hpp</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/gpsd_client/include/gpsd_client/gpsd_node.h</label>
+        <link refid="gpsd__node_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/gpsd_client/src/gpsd_node.cpp</label>
+        <link refid="gpsd__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classGpsdNode" prot="public">GpsdNode</innerclass>
     <briefdescription>
     </briefdescription>
@@ -57,31 +69,31 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="classGpsdNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGpsdNode" kindref="compound">GpsdNode</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="13" refid="classGpsdNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGpsdNode" kindref="compound">GpsdNode</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGpsdNode" kindref="compound">GpsdNode</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><ref refid="classGpsdNode_1a1628acdd662a974c29bf1f80ec7678c9" kindref="member">GpsdNode</ref>();</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGpsdNode" kindref="compound">~GpsdNode</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classGpsdNode_1a829a459bf04514f243204e2eb20dc5da" kindref="member">~GpsdNode</ref>();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>gpsmm<sp/>*gps_<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>frame_id_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;gps&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>last_msg_no_fix_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>publish_when_no_fix_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21" refid="classGpsdNode_1aa269b9e5f404d48ca043be4158954361" refkind="member"><highlight class="normal"><sp/><sp/>gpsmm<sp/>*<sp/><ref refid="classGpsdNode_1aa269b9e5f404d48ca043be4158954361" kindref="member">gps_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22" refid="classGpsdNode_1a92a801a3c599b45b84a5b540723d6198" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1a92a801a3c599b45b84a5b540723d6198" kindref="member">frame_id_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;gps&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23" refid="classGpsdNode_1a38ba12d5a8c94de5d64114d4efc187d3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1a38ba12d5a8c94de5d64114d4efc187d3" kindref="member">last_msg_no_fix_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24" refid="classGpsdNode_1a2c6d788b38ac6caec37f666636ab8ede" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1a2c6d788b38ac6caec37f666636ab8ede" kindref="member">publish_when_no_fix_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/>timer_;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/>loop_dt_<sp/>=<sp/>100ms;<sp/></highlight><highlight class="comment">//<sp/>loop<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classGpsdNode_1ac205e87bcf12bd9cdcdfc117903094ff" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classGpsdNode_1ac205e87bcf12bd9cdcdfc117903094ff" kindref="member">timer_</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classGpsdNode_1a3c39ee0f934d6025345e1e6ab25f09f1" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><ref refid="classGpsdNode_1a3c39ee0f934d6025345e1e6ab25f09f1" kindref="member">loop_dt_</ref><sp/>=<sp/>100ms;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr<sp/>publisher_fix_;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::GpsPps&gt;::SharedPtr<sp/>publisher_pps_;</highlight></codeline>
+<codeline lineno="31" refid="classGpsdNode_1a51a36bf4f781c1f0a8cd056f3e5aacff" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>seabot2_msgs::msg::GpsFix<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classGpsdNode_1a51a36bf4f781c1f0a8cd056f3e5aacff" kindref="member">publisher_fix_</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classGpsdNode_1a076e8fc013ffdfae194426b1cf68ea73" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>seabot2_msgs::msg::GpsPps<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classGpsdNode_1a076e8fc013ffdfae194426b1cf68ea73" kindref="member">publisher_pps_</ref>;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1a47c27c863b5765db7be434c09cbe0d27" kindref="member">init_parameters</ref>();</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1af4287aa062275933982a25ebee54a5b8" kindref="member">init_interfaces</ref>();</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>process_data(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>gps_data_t*<sp/>p);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1aef6d4beaf2bed30463ff61204ccb76d7" kindref="member">process_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>gps_data_t<sp/>*<sp/>p);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_callback();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGpsdNode_1ab4ce1a3461f92698a0f2d1f686f610fa" kindref="member">timer_callback</ref>();</highlight></codeline>
 <codeline lineno="54"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_GPSD_NODE_H</highlight><highlight class="normal"></highlight></codeline>

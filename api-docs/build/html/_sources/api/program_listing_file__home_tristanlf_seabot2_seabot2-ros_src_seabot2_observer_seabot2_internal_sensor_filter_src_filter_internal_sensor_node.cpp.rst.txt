@@ -16,60 +16,71 @@ Program Listing for File filter_internal_sensor_node.cpp
    using namespace placeholders;
    
    InternalSensorFilterNode::InternalSensorFilterNode()
-           : Node("filter_internal_sensor_node"){
+   : Node("filter_internal_sensor_node")
+   {
    
-       init_parameters();
-       init_interfaces();
+     init_parameters();
+     init_interfaces();
    
-       RCLCPP_INFO(this->get_logger(), "[Filter_internal_sensor_node] Start Ok");
+     RCLCPP_INFO(this->get_logger(), "[Filter_internal_sensor_node] Start Ok");
    }
    
-   void InternalSensorFilterNode::init_parameters() {
-       this->declare_parameter<long>("filter_window_size", filter_window_size_);
-       this->declare_parameter<long>("filter_median_remove_side_samples", filter_median_remove_side_samples_);
+   void InternalSensorFilterNode::init_parameters()
+   {
+     this->declare_parameter<long>("filter_window_size", filter_window_size_);
+     this->declare_parameter<long>("filter_median_remove_side_samples",
+       filter_median_remove_side_samples_);
    
-       filter_window_size_ = this->get_parameter_or("filter_window_size", filter_window_size_);
-       filter_median_remove_side_samples_ = this->get_parameter_or("filter_median_remove_side_samples", filter_median_remove_side_samples_);
+     filter_window_size_ = this->get_parameter_or("filter_window_size", filter_window_size_);
+     filter_median_remove_side_samples_ = this->get_parameter_or("filter_median_remove_side_samples",
+       filter_median_remove_side_samples_);
    }
    
-   double InternalSensorFilterNode::compute_filter(deque<double> queue) const {
-       sort(queue.begin(), queue.end());
-       deque<double> queue_median(queue.begin()+filter_median_remove_side_samples_, queue.end()-filter_median_remove_side_samples_);
-       const double data_sum = std::accumulate(queue_median.begin(), queue_median.end(), 0.0);
-       return data_sum / static_cast<double>(queue_median.size());
+   double InternalSensorFilterNode::compute_filter(deque<double> queue) const
+   {
+     sort(queue.begin(), queue.end());
+     deque<double> queue_median(queue.begin() + filter_median_remove_side_samples_,
+       queue.end() - filter_median_remove_side_samples_);
+     const double data_sum = std::accumulate(queue_median.begin(), queue_median.end(), 0.0);
+     return data_sum / static_cast<double>(queue_median.size());
    }
    
-   void InternalSensorFilterNode::pressure_callback(const seabot2_msgs::msg::Bme280Data &msg) {
-       pressure_memory_.push_front(msg.pressure);
-       temperature_memory_.push_front(msg.temperature);
-       humidity_memory_.push_front(msg.humidity);
+   void InternalSensorFilterNode::pressure_callback(const seabot2_msgs::msg::Bme280Data & msg)
+   {
+     pressure_memory_.push_front(msg.pressure);
+     temperature_memory_.push_front(msg.temperature);
+     humidity_memory_.push_front(msg.humidity);
    
-       if(pressure_memory_.size()>filter_window_size_) {
-           pressure_memory_.pop_back();
-           temperature_memory_.pop_back();
-           humidity_memory_.pop_back();
-       }
+     if(pressure_memory_.size() > filter_window_size_) {
+       pressure_memory_.pop_back();
+       temperature_memory_.pop_back();
+       humidity_memory_.pop_back();
+     }
    
-       if(pressure_memory_.size()==filter_window_size_){
-           seabot2_msgs::msg::Bme280Data msg_filter;
-           msg_filter.pressure = compute_filter(pressure_memory_);
-           msg_filter.temperature = compute_filter(temperature_memory_);
-           msg_filter.humidity = compute_filter(humidity_memory_);
-           publisher_pressure_data_->publish(msg_filter);
-       }
+     if(pressure_memory_.size() == filter_window_size_) {
+       seabot2_msgs::msg::Bme280Data msg_filter;
+       msg_filter.pressure = compute_filter(pressure_memory_);
+       msg_filter.temperature = compute_filter(temperature_memory_);
+       msg_filter.humidity = compute_filter(humidity_memory_);
+       publisher_pressure_data_->publish(msg_filter);
+     }
    }
    
-   void InternalSensorFilterNode::init_interfaces() {
-       publisher_pressure_data_ = this->create_publisher<seabot2_msgs::msg::Bme280Data>("pressure_internal", 1);
+   void InternalSensorFilterNode::init_interfaces()
+   {
+     publisher_pressure_data_ =
+       this->create_publisher<seabot2_msgs::msg::Bme280Data>("pressure_internal", 1);
    
-       subscriber_pressure_data_ = this->create_subscription<seabot2_msgs::msg::Bme280Data>(
-               "/driver/pressure_internal", 10, std::bind(&InternalSensorFilterNode::pressure_callback, this, _1));
+     subscriber_pressure_data_ = this->create_subscription<seabot2_msgs::msg::Bme280Data>(
+               "/driver/pressure_internal", 10,
+       std::bind(&InternalSensorFilterNode::pressure_callback, this, _1));
    
    }
    
-   int main(const int argc, char *argv[]) {
-       rclcpp::init(argc, argv);
-       rclcpp::spin(std::make_shared<InternalSensorFilterNode>());
-       rclcpp::shutdown();
-       return 0;
+   int main(const int argc, char *argv[])
+   {
+     rclcpp::init(argc, argv);
+     rclcpp::spin(std::make_shared<InternalSensorFilterNode>());
+     rclcpp::shutdown();
+     return 0;
    }

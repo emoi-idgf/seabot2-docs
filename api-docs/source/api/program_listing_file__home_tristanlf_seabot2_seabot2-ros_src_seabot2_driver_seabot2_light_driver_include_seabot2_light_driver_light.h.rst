@@ -35,49 +35,49 @@ Program Listing for File light.h
    class Light
    {
    public:
-       Light(rclcpp::Node *n){
+     Light(rclcpp::Node * n) {
            n_ = n;
-       }
+     }
    
-       ~Light();
+     ~Light();
    
-       int i2c_open();
+     int i2c_open();
    
-       uint8_t& get_version();
+     uint8_t & get_version();
    
-       int getI2CAddr() const;
+     int getI2CAddr() const;
    
-       void setI2CAddr(int i2CAddr);
+     void setI2CAddr(int i2CAddr);
    
-       const std::string &getI2CPeriph() const;
+     const std::string & getI2CPeriph() const;
    
-       void setI2CPeriph(const std::string &i2CPeriph);
+     void setI2CPeriph(const std::string & i2CPeriph);
    
    private:
-       rclcpp::Node* n_= nullptr; 
+     rclcpp::Node * n_ = nullptr; 
    
-       int file_ = 0; 
-       std::string i2c_periph_ = "/dev/i2c-0";
-       int i2c_addr_ = 0x28;
-       const int code_version_ = 0x02; 
-       uint8_t pic_code_version_=0; 
-   
-   public:
-       int flash_duration_ = 1;
-       int flash_pause_end_ = 40;
-       int flash_pause_between_flash_ = 5;
+     int file_ = 0;   
+     std::string i2c_periph_ = "/dev/i2c-0";
+     int i2c_addr_ = 0x28;
+     const int code_version_ = 0x02;   
+     uint8_t pic_code_version_ = 0; 
    
    public:
+     int flash_duration_ = 1;
+     int flash_pause_end_ = 40;
+     int flash_pause_between_flash_ = 5;
    
-       int set_light_enable(const bool &enable) const;
+   public:
    
-       bool get_light_enable() const;
+     int set_light_enable(const bool & enable) const;
    
-       void set_power(const __u8 &val) const;
+     bool get_light_enable() const;
    
-       void set_pattern(const std::array<__u8, NB_PATTERN> &pattern) const;
+     void set_power(const __u8 & val) const;
    
-       void set_flash_number(const unsigned int &nb_flash) const;
+     void set_pattern(const std::array < __u8, NB_PATTERN > &pattern) const;
+   
+     void set_flash_number(const unsigned int & nb_flash) const;
    };
    
    #endif // LIGHT_H

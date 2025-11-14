@@ -27,6 +27,18 @@
         <label>seabot2_msgs/msg/power_state.hpp</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/include/seabot2_power_filter/filter_power_node.hpp</label>
+        <link refid="filter__power__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/src/filter_power_node.cpp</label>
+        <link refid="filter__power__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classFilterPowerNode" prot="public">FilterPowerNode</innerclass>
     <briefdescription>
     </briefdescription>
@@ -45,34 +57,33 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11" refid="classFilterPowerNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classFilterPowerNode" kindref="compound">FilterPowerNode</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode" kindref="compound">FilterPowerNode</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1af89caeb3e90efdecd968bb4ced9b0bb8" kindref="member">FilterPowerNode</ref>();</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>filter_window_size_<sp/>=<sp/>5;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>filter_median_remove_side_samples_<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>deque&lt;double&gt;<sp/>battery_volt_memory_;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>deque&lt;double&gt;<sp/>motor_current_memory_;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;deque&lt;double&gt;,2&gt;<sp/>esc_current_memory_;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>array&lt;deque&lt;double&gt;,<sp/>4&gt;<sp/>cell_volt_memory_;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr<sp/>subscriber_power_data_;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr<sp/>publisher_power_data_;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>power_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>compute_filter(deque&lt;double&gt;<sp/>queue)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_FILTER_POWER_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" kindref="member">filter_window_size_</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="18" refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" kindref="member">filter_median_remove_side_samples_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" refkind="member"><highlight class="normal"><sp/><sp/>deque&lt;double&gt;<sp/><ref refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" kindref="member">battery_volt_memory_</ref>;</highlight></codeline>
+<codeline lineno="22" refid="classFilterPowerNode_1aba0bdae59a626ad5abd559c0dac2e0c8" refkind="member"><highlight class="normal"><sp/><sp/>deque&lt;double&gt;<sp/><ref refid="classFilterPowerNode_1aba0bdae59a626ad5abd559c0dac2e0c8" kindref="member">motor_current_memory_</ref>;</highlight></codeline>
+<codeline lineno="23" refid="classFilterPowerNode_1af23cc8926ff9a19b73222502cc64152e" refkind="member"><highlight class="normal"><sp/><sp/>array&lt;deque&lt;double&gt;,<sp/>2&gt;<sp/><ref refid="classFilterPowerNode_1af23cc8926ff9a19b73222502cc64152e" kindref="member">esc_current_memory_</ref>;</highlight></codeline>
+<codeline lineno="24" refid="classFilterPowerNode_1aa6a3a607b9bcd313d154dcfa4067cd29" refkind="member"><highlight class="normal"><sp/><sp/>array&lt;deque&lt;double&gt;,<sp/>4&gt;<sp/><ref refid="classFilterPowerNode_1aa6a3a607b9bcd313d154dcfa4067cd29" kindref="member">cell_volt_memory_</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classFilterPowerNode_1af3c2a1a987a3a29875f492f736b43eb9" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr<sp/><ref refid="classFilterPowerNode_1af3c2a1a987a3a29875f492f736b43eb9" kindref="member">subscriber_power_data_</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classFilterPowerNode_1a93a9b9f944d8e124b65ad966c24d725a" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr<sp/><ref refid="classFilterPowerNode_1a93a9b9f944d8e124b65ad966c24d725a" kindref="member">publisher_power_data_</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1affeeaeeeafd0fd9a133bbb28ab4ece91" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1a581794518c75121dd9f9b755733f6504" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1a70a915f76cd00bec6685b7388efc348d" kindref="member">power_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" kindref="member">compute_filter</ref>(deque&lt;double&gt;<sp/>queue)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_FILTER_POWER_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/include/seabot2_power_filter/filter_power_node.hpp"/>
   </compounddef>

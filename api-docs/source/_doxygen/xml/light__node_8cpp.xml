@@ -6,7 +6,7 @@
     <incdepgraph>
       <node id="5">
         <label>seabot2_light_driver/light.h</label>
-        <link refid="light_8h_source"/>
+        <link refid="light_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
@@ -26,7 +26,7 @@
       </node>
       <node id="2">
         <label>seabot2_light_driver/light_node.h</label>
-        <link refid="light__node_8h_source"/>
+        <link refid="light__node_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" line="99" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="99" bodyend="104"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" line="114" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp" bodystart="114" bodyend="120"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -107,108 +107,124 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_light_driver/light_node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="light__node_8h" kindref="compound">seabot2_light_driver/light_node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">placeholders;</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal">LightNode::LightNode()</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;light_node&quot;</highlight><highlight class="normal">),<sp/>light_(this){</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>light_.i2c_open();</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>light_is_on_<sp/>=<sp/>light_.get_light_enable();</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;LightNode::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal">LightNode::~LightNode(){</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(light_.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_FAILURE)</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_node]<sp/>Error<sp/>turning<sp/>off<sp/>the<sp/>light&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LightNode::timer_callback()<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(light_is_on_){</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(special_flash_<sp/>&amp;&amp;<sp/>(this-&gt;now()&gt;time_turn_off_light_)){</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>special_flash_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light_.<ref refid="classLight_1ade5099705c5c6e033074eee0b54d1670" kindref="member">set_flash_number</ref>(nb_surface_flash_);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!is_surface_)<sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(light_.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light_is_on_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(is_surface_){</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(light_.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light_is_on_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LightNode::init_parameters()<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt_&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count());</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>light_.getI2CPeriph());</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/>light_.<ref refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" kindref="member">getI2CAddr</ref>());</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>light_.setI2CPeriph(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>light_.getI2CPeriph()));</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>light_.setI2CAddr(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/>light_.<ref refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" kindref="member">getI2CAddr</ref>()));</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;flash_duration&quot;</highlight><highlight class="normal">,<sp/>light_.<ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref>);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;flash_pause_between_flash&quot;</highlight><highlight class="normal">,<sp/>light_.flash_pause_between_flash_);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;flash_pause_end&quot;</highlight><highlight class="normal">,<sp/>light_.flash_pause_end_);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>light_.<ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flash_duration&quot;</highlight><highlight class="normal">,<sp/>light_.<ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref>);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>light_.flash_pause_between_flash_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flash_pause_between_flash&quot;</highlight><highlight class="normal">,<sp/>light_.flash_pause_between_flash_);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>light_.flash_pause_end_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flash_pause_end&quot;</highlight><highlight class="normal">,<sp/>light_.flash_pause_end_);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LightNode::service_light_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;seabot2_srvs::srv::Light::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;seabot2_srvs::srv::Light::Response&gt;<sp/>response){</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(request-&gt;flash_enable)<sp/>{</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Node_light]<sp/>Received<sp/>flash<sp/>order&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time_turn_off_light_<sp/>=<sp/>this-&gt;now()<sp/>+<sp/>rclcpp::Duration::from_seconds(request-&gt;duration);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>special_flash_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light_.<ref refid="classLight_1ade5099705c5c6e033074eee0b54d1670" kindref="member">set_flash_number</ref>(request-&gt;number_of_flash);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(light_.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light_is_on_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(light_.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light_is_on_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LightNode::service_flash_surface_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response){</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>is_surface_<sp/>=<sp/>request-&gt;data;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LightNode::init_interfaces(){</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>service_light_<sp/>=<sp/>this-&gt;create_service&lt;seabot2_srvs::srv::Light&gt;(</highlight><highlight class="stringliteral">&quot;light&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(&amp;LightNode::service_light_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3));</highlight></codeline>
+<codeline lineno="5" refid="classLightNode_1a8d7faf5a21ba49058f0a44378823dd85" refkind="member"><highlight class="normal"><ref refid="classLightNode_1a8d7faf5a21ba49058f0a44378823dd85" kindref="member">LightNode::LightNode</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">:<sp/>Node(</highlight><highlight class="stringliteral">&quot;light_node&quot;</highlight><highlight class="normal">),<sp/>light_(this)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1ac89682a1eb9237c48c4d622d075938c8" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a62ef68324e00b79aa289f7953ff58110" kindref="member">i2c_open</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" kindref="member">light_is_on_</ref><sp/>=<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" kindref="member">get_light_enable</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a0819bc2615e5c2fe1a78ae8d6daba146" kindref="member">timer_</ref><sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a6f953c9f70255bcc0f8fe4e90f6a05e2" kindref="member">loop_dt_</ref>,<sp/>std::bind(&amp;<ref refid="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" kindref="member">LightNode::timer_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classLightNode_1a3b257d7990ad32be87ede663390b7f55" refkind="member"><highlight class="normal"><ref refid="classLightNode_1a3b257d7990ad32be87ede663390b7f55" kindref="member">LightNode::~LightNode</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_FAILURE)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_node]<sp/>Error<sp/>turning<sp/>off<sp/>the<sp/>light&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" kindref="member">LightNode::timer_callback</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" kindref="member">light_is_on_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLightNode_1a54d76485ba8bc1e54b61a54f72fbc1ed" kindref="member">special_flash_</ref><sp/>&amp;&amp;<sp/>(this-&gt;now()<sp/>&gt;<sp/><ref refid="classLightNode_1a0451b60c82845f0809c76920eb396016" kindref="member">time_turn_off_light_</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a54d76485ba8bc1e54b61a54f72fbc1ed" kindref="member">special_flash_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1ade5099705c5c6e033074eee0b54d1670" kindref="member">set_flash_number</ref>(<ref refid="classLightNode_1a1672cb3fe011c67d5ebc16c788236ec5" kindref="member">nb_surface_flash_</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="classLightNode_1a580f9aafe447ec6b6f3879427f10b80a" kindref="member">is_surface_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" kindref="member">light_is_on_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLightNode_1a580f9aafe447ec6b6f3879427f10b80a" kindref="member">is_surface_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" kindref="member">light_is_on_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" kindref="member">LightNode::init_parameters</ref>()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt_&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a6f953c9f70255bcc0f8fe4e90f6a05e2" kindref="member">loop_dt_</ref>.count());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a6f953c9f70255bcc0f8fe4e90f6a05e2" kindref="member">loop_dt_</ref><sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;dt&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a6f953c9f70255bcc0f8fe4e90f6a05e2" kindref="member">loop_dt_</ref>.count()));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a09eef091f32c184451f3e7c33fcf2c02" kindref="member">getI2CPeriph</ref>());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" kindref="member">getI2CAddr</ref>());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a591875c4db2f45c82ff9d5d11140f10b" kindref="member">setI2CPeriph</ref>(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a09eef091f32c184451f3e7c33fcf2c02" kindref="member">getI2CPeriph</ref>()));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a0c6f1ece6632eae09466063077f7f113" kindref="member">setI2CAddr</ref>(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" kindref="member">getI2CAddr</ref>()));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;flash_duration&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;flash_pause_between_flash&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a2587ef2a62748113486a8b0e0b1d0c9b" kindref="member">flash_pause_between_flash_</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;flash_pause_end&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a007ed0cb64ebac749e19355783ca11f4" kindref="member">flash_pause_end_</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flash_duration&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a2587ef2a62748113486a8b0e0b1d0c9b" kindref="member">flash_pause_between_flash_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flash_pause_between_flash&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a2587ef2a62748113486a8b0e0b1d0c9b" kindref="member">flash_pause_between_flash_</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a007ed0cb64ebac749e19355783ca11f4" kindref="member">flash_pause_end_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;flash_pause_end&quot;</highlight><highlight class="normal">,<sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a007ed0cb64ebac749e19355783ca11f4" kindref="member">flash_pause_end_</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" kindref="member">LightNode::service_light_callback</ref>(</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;seabot2_srvs::srv::Light::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;seabot2_srvs::srv::Light::Response&gt;<sp/>response)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(request-&gt;flash_enable)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Node_light]<sp/>Received<sp/>flash<sp/>order&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a0451b60c82845f0809c76920eb396016" kindref="member">time_turn_off_light_</ref><sp/>=<sp/>this-&gt;now()<sp/>+<sp/>rclcpp::Duration::from_seconds(request-&gt;duration);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a54d76485ba8bc1e54b61a54f72fbc1ed" kindref="member">special_flash_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1ade5099705c5c6e033074eee0b54d1670" kindref="member">set_flash_number</ref>(request-&gt;number_of_flash);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" kindref="member">light_is_on_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classLightNode_1a97ef96375be6542892cfa7f2417eba82" kindref="member">light_</ref>.<ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">set_light_enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>==<sp/>EXIT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLightNode_1a18681f19071d3637a9d27b76a5c30c7b" kindref="member">light_is_on_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>service_flash_surface_<sp/>=<sp/>this-&gt;create_service&lt;std_srvs::srv::SetBool&gt;(</highlight><highlight class="stringliteral">&quot;surface&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(&amp;LightNode::service_flash_surface_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3));</highlight></codeline>
-<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;LightNode&gt;());</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95" refid="classLightNode_1a78f7de2d4da0317c8d09b8c709625383" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLightNode_1a78f7de2d4da0317c8d09b8c709625383" kindref="member">LightNode::service_flash_surface_callback</ref>(</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a580f9aafe447ec6b6f3879427f10b80a" kindref="member">is_surface_</ref><sp/>=<sp/>request-&gt;data;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classLightNode_1ac89682a1eb9237c48c4d622d075938c8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLightNode_1ac89682a1eb9237c48c4d622d075938c8" kindref="member">LightNode::init_interfaces</ref>()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a05c6f349d4853142630605de67751db8" kindref="member">service_light_</ref><sp/>=<sp/>this-&gt;create_service&lt;seabot2_srvs::srv::Light&gt;(</highlight><highlight class="stringliteral">&quot;light&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" kindref="member">LightNode::service_light_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="classLightNode_1a55051c88a6fe45e5a93ff3c2e7da4116" kindref="member">service_flash_surface_</ref><sp/>=<sp/>this-&gt;create_service&lt;std_srvs::srv::SetBool&gt;(</highlight><highlight class="stringliteral">&quot;surface&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classLightNode_1a78f7de2d4da0317c8d09b8c709625383" kindref="member">LightNode::service_flash_surface_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1,<sp/>_2,<sp/>_3));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="light__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="light__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>rclcpp::spin(std::make_shared&lt;LightNode&gt;());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light_node.cpp"/>
   </compounddef>

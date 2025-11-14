@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['robot_5fstatus_0',['Robot_Status',['../classScreen.html#af256e44f3786823bd7b98d9e24aa7286',1,'Screen']]]
+  ['fusionaxesalignment_0',['FusionAxesAlignment',['../FusionAxes_8h.html#ae56211413c112b376a828c6352437c14',1,'FusionAxes.h']]],
+  ['fusionconvention_1',['FusionConvention',['../FusionConvention_8h.html#a1e84474f3ec646056c61b557c08e9605',1,'FusionConvention.h']]]
 ];

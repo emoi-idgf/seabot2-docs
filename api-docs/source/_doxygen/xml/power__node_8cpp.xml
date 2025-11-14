@@ -6,7 +6,7 @@
     <incdepgraph>
       <node id="5">
         <label>seabot2_power_driver/power.h</label>
-        <link refid="power_8h_source"/>
+        <link refid="power_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
@@ -26,7 +26,7 @@
       </node>
       <node id="2">
         <label>seabot2_power_driver/power_node.h</label>
-        <link refid="power__node_8h_source"/>
+        <link refid="power__node_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" line="49" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" bodystart="49" bodyend="54"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" line="53" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp" bodystart="53" bodyend="59"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -102,59 +102,64 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_power_driver/power_node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="power__node_8h" kindref="compound">seabot2_power_driver/power_node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">placeholders;</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal">PowerNode::PowerNode()</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;power_node&quot;</highlight><highlight class="normal">),<sp/>power_(this){</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>power_.i2c_open();</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;PowerNode::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PowerNode::timer_callback()<sp/>{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(power_.<ref refid="classPower_1a8c15938842b9c9b18f1326d6419f7f42" kindref="member">get_all_data</ref>()==EXIT_SUCCESS){</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seabot2_msgs::msg::PowerState<sp/>state_msg;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.battery_volt<sp/>=<sp/>power_.battery_volt_;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.cell_volt<sp/>=<sp/>power_.<ref refid="classPower_1a38428036d5a66b557b62874ea5320162" kindref="member">cell_volt_</ref>;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.esc_current<sp/>=<sp/>power_.esc_current_;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.motor_current<sp/>=<sp/>power_.motor_current_;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state_msg.power_state<sp/>=<sp/>power_.power_state_;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_power_state_-&gt;publish(state_msg);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PowerNode::init_parameters()<sp/>{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count());</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>loop_dt_<sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/>loop_dt_.count()));</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>power_.getI2CPeriph());</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/>power_.<ref refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" kindref="member">getI2CAddr</ref>());</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>power_.setI2CPeriph(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/>power_.getI2CPeriph()));</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>power_.setI2CAddr(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/>power_.<ref refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" kindref="member">getI2CAddr</ref>()));</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PowerNode::init_interfaces()<sp/>{</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_power_state_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::PowerState&gt;(</highlight><highlight class="stringliteral">&quot;power&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;PowerNode&gt;());</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5" refid="classPowerNode_1a09f7025def48dcc0064667e031e76c2b" refkind="member"><highlight class="normal"><ref refid="classPowerNode_1a09f7025def48dcc0064667e031e76c2b" kindref="member">PowerNode::PowerNode</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">:<sp/>Node(</highlight><highlight class="stringliteral">&quot;power_node&quot;</highlight><highlight class="normal">),<sp/>power_(this)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1a4c65b7e201167ab0855217965ebfe7a0" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1a6f547cceb82b58cd5b78f263dc700f33" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1aa33ceadfd301214431cc79ff1f088829" kindref="member">i2c_open</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1aa82a788a26b69e26757439998220bea4" kindref="member">timer_</ref><sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPowerNode_1a682e1b02c2d35c1775f2dfa645ec6e53" kindref="member">loop_dt_</ref>,<sp/>std::bind(&amp;<ref refid="classPowerNode_1a9ea7c8e16ebc8b039b3557d4e7100511" kindref="member">PowerNode::timer_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classPowerNode_1a9ea7c8e16ebc8b039b3557d4e7100511" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPowerNode_1a9ea7c8e16ebc8b039b3557d4e7100511" kindref="member">PowerNode::timer_callback</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a8c15938842b9c9b18f1326d6419f7f42" kindref="member">get_all_data</ref>()<sp/>==<sp/>EXIT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>seabot2_msgs::msg::PowerState<sp/>state_msg;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>state_msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>state_msg.battery_volt<sp/>=<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a80c07525a3091b8ecde0a4e813f87235" kindref="member">battery_volt_</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>state_msg.cell_volt<sp/>=<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a02db3b346cb6144052a24b3b4a11dee7" kindref="member">cell_volt_</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>state_msg.esc_current<sp/>=<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1aeae868ba8d2ae1aa3c8e8323f2026130" kindref="member">esc_current_</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>state_msg.motor_current<sp/>=<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a2579a81d031018bf182244d4c1f0d22e" kindref="member">motor_current_</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>state_msg.power_state<sp/>=<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1afdeefcc65bbf723dda9d5b3cb29f0d1f" kindref="member">power_state_</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPowerNode_1a64ffbbf7a5d97cb130f384d4823aa77a" kindref="member">publisher_power_state_</ref>-&gt;publish(state_msg);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classPowerNode_1a4c65b7e201167ab0855217965ebfe7a0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPowerNode_1a4c65b7e201167ab0855217965ebfe7a0" kindref="member">PowerNode::init_parameters</ref>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPowerNode_1a682e1b02c2d35c1775f2dfa645ec6e53" kindref="member">loop_dt_</ref>.count());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1a682e1b02c2d35c1775f2dfa645ec6e53" kindref="member">loop_dt_</ref><sp/>=<sp/>std::chrono::milliseconds(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;loop_dt&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPowerNode_1a682e1b02c2d35c1775f2dfa645ec6e53" kindref="member">loop_dt_</ref>.count()));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a30be9ee7f32c25e0795432053faf30e8" kindref="member">getI2CPeriph</ref>());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" kindref="member">getI2CAddr</ref>());</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a2b637c4d8695c2d59c1252b8344c4f8d" kindref="member">setI2CPeriph</ref>(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_periph&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1a30be9ee7f32c25e0795432053faf30e8" kindref="member">getI2CPeriph</ref>()));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1ac627a3a731db2eefa6a8508c69664253" kindref="member">setI2CAddr</ref>(this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;i2c_address&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPowerNode_1aab73aeaac66d24a929f9dc094f10f9d5" kindref="member">power_</ref>.<ref refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" kindref="member">getI2CAddr</ref>()));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classPowerNode_1a6f547cceb82b58cd5b78f263dc700f33" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPowerNode_1a6f547cceb82b58cd5b78f263dc700f33" kindref="member">PowerNode::init_interfaces</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="classPowerNode_1a64ffbbf7a5d97cb130f384d4823aa77a" kindref="member">publisher_power_state_</ref><sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::PowerState&gt;(</highlight><highlight class="stringliteral">&quot;power&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="power__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="power__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>rclcpp::spin(std::make_shared&lt;PowerNode&gt;());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power_node.cpp"/>
   </compounddef>

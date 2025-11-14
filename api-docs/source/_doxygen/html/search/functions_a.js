@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['open_0',['open',['../classAsyncSerial.html#ac703c6e3ee89e5821536ce7381a31238',1,'AsyncSerial']]],
-  ['optimize_5fu_1',['optimize_u',['../classDepthControl.html#a9f06b862197fc1d9edba534d9bf10ceb',1,'DepthControl']]]
+  ['joingyrosmplrtdiv_0',['joinGyroSmplrtDiv',['../classICM20948.html#aa3df1e636592f3b490b3782e09e174d4',1,'ICM20948']]]
 ];

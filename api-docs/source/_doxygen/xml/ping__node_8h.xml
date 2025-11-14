@@ -51,6 +51,18 @@
         <label>std_srvs/srv/set_bool.hpp</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h</label>
+        <link refid="ping__node_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp</label>
+        <link refid="ping__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classPingNode" prot="public">PingNode</innerclass>
     <briefdescription>
     </briefdescription>
@@ -70,45 +82,46 @@
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="classPingNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPingNode" kindref="compound">PingNode</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="14" refid="classPingNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPingNode" kindref="compound">PingNode</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode" kindref="compound">PingNode</ref>();</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" kindref="member">~PingNode</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1aa805236489cd2fc359d2a6fcf5cbbce6" kindref="member">PingNode</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" kindref="member">~PingNode</ref>();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" kindref="member">wait_message</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" kindref="member">wait_message</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::Profile&gt;::SharedPtr<sp/>publisher_profile_;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr<sp/>service_ping_enable_;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::Density&gt;::SharedPtr<sp/>subscriber_density_;</highlight></codeline>
+<codeline lineno="29" refid="classPingNode_1af3224f003cbb4d3503d97961309fb4b4" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>seabot2_msgs::msg::Profile<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classPingNode_1af3224f003cbb4d3503d97961309fb4b4" kindref="member">publisher_profile_</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classPingNode_1a4b8fc305e8beff775a2403434189ee4e" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service<sp/>&lt;<sp/>std_srvs::srv::SetBool<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classPingNode_1a4b8fc305e8beff775a2403434189ee4e" kindref="member">service_ping_enable_</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classPingNode_1a42698c52cca315db1634448a54649b50" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::Density<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classPingNode_1a42698c52cca315db1634448a54649b50" kindref="member">subscriber_density_</ref>;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>uart_port_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/ping1D&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uart_baudrate_<sp/>=<sp/>115200;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;Ping1d&gt;<sp/>device_;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;AbstractLink&gt;<sp/>port_;</highlight></codeline>
+<codeline lineno="34" refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" kindref="member">uart_port_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/ping1D&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35" refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" kindref="member">uart_baudrate_</ref><sp/>=<sp/>115200;</highlight></codeline>
+<codeline lineno="36" refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" refkind="member"><highlight class="normal"><sp/><sp/>std::unique_ptr<sp/>&lt;<sp/>Ping1d<sp/>&gt;<sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classPingNode_1aaabd7915f23d90b71e8166b47a869864" refkind="member"><highlight class="normal"><sp/><sp/>std::shared_ptr<sp/>&lt;<sp/>AbstractLink<sp/>&gt;<sp/><ref refid="classPingNode_1aaabd7915f23d90b71e8166b47a869864" kindref="member">port_</ref>;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_ping_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mode_auto_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>speed_of_sound_<sp/>=<sp/>1550.0;<sp/></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ping_interval_<sp/>=<sp/>200;<sp/></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gain_setting_<sp/>=<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="39" refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40" refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" kindref="member">mode_auto_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref><sp/>=<sp/>1550.0;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" kindref="member">ping_interval_</ref><sp/>=<sp/>200;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" kindref="member">gain_setting_</ref><sp/>=<sp/>1;<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ae0d087431f254d15d4012908ff05c59d" kindref="member">init_parameters</ref>();</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a2f15fbe9b868b6413073f2d2b1bdab86" kindref="member">init_interfaces</ref>();</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_driver();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1adb6df8a47d84af4e45111dba7db3dc7a" kindref="member">init_driver</ref>();</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ping_enable_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sound_speed_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_PING_NODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a5b1593576a680a0f014122244208f7c5" kindref="member">ping_enable_callback</ref>(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr<sp/>&lt;<sp/>rmw_request_id_t<sp/>&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr<sp/>&lt;<sp/>std_srvs::srv::SetBool::Request<sp/>&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr<sp/>&lt;<sp/>std_srvs::srv::SetBool::Response<sp/>&gt;<sp/>response);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1aa6e57617278ef6a7b91b7941e472468d" kindref="member">sound_speed_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_PING_NODE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/include/bluerobotics_ping_driver/ping_node.h"/>
   </compounddef>

@@ -9,6 +9,11 @@ File mission.hpp
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
+
+Declaration of the :ref:`exhale_class_classMission` class. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -24,6 +29,14 @@ Definition (``/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/se
 
 
 
+Detailed Description
+--------------------
+
+Copyright (c) 2025 
+
+
+
+
 
 
 Includes
@@ -34,6 +47,8 @@ Includes
 
 - ``filesystem``
 
+- ``memory``
+
 - ``rclcpp/rclcpp.hpp``
 
 - ``seabot2_mission/waypoint.hpp`` (:ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_mission_include_seabot2_mission_waypoint.hpp`)
@@ -43,6 +58,8 @@ Includes
 - ``seabot2_msgs/msg/mission_state.hpp``
 
 - ``string``
+
+- ``utility``
 
 - ``vector``
 
@@ -57,8 +74,6 @@ Included By
 - :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_mission_include_seabot2_mission_waypoint.hpp`
 
 - :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_mission_src_mission.cpp`
-
-- :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include_seabot2_simulator_simulator.h`
 
 
 

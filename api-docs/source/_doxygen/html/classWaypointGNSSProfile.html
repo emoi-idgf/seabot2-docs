@@ -77,13 +77,15 @@ $(function() {
   <div class="headertitle"><div class="title">WaypointGNSSProfile Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="waypoint_8hpp_source.html">waypoint.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for WaypointGNSSProfile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWaypointGNSSProfile__inherit__graph.png" border="0" usemap="#aWaypointGNSSProfile_inherit__map" alt="Inheritance graph"/></div>
 <map name="aWaypointGNSSProfile_inherit__map" id="aWaypointGNSSProfile_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,79,165,104"/>
-<area shape="rect" href="classWaypoint.html" title=" " alt="" coords="44,5,127,31"/>
+<area shape="rect" href="classWaypoint.html" title="Base class for a waypoint." alt="" coords="44,5,127,31"/>
 <area shape="poly" title=" " alt="" coords="88,44,88,79,83,79,83,44"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -92,70 +94,119 @@ Collaboration diagram for WaypointGNSSProfile:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWaypointGNSSProfile__coll__graph.png" border="0" usemap="#aWaypointGNSSProfile_coll__map" alt="Collaboration graph"/></div>
 <map name="aWaypointGNSSProfile_coll__map" id="aWaypointGNSSProfile_coll__map">
-<area shape="rect" title=" " alt="" coords="5,168,165,193"/>
-<area shape="rect" href="classWaypoint.html" title=" " alt="" coords="44,93,127,119"/>
-<area shape="poly" title=" " alt="" coords="88,133,88,168,83,168,83,133"/>
-<area shape="rect" href="classMission.html" title=" " alt="" coords="49,5,121,31"/>
+<area shape="rect" title=" " alt="" coords="5,256,165,281"/>
+<area shape="rect" href="classWaypoint.html" title="Base class for a waypoint." alt="" coords="44,181,127,207"/>
+<area shape="poly" title=" " alt="" coords="88,221,88,256,83,256,83,221"/>
+<area shape="rect" href="classMission.html" title="Handles the mission management." alt="" coords="49,93,121,119"/>
+<area shape="poly" title=" " alt="" coords="88,133,88,181,83,181,83,133"/>
+<area shape="rect" title=" " alt="" coords="56,5,115,31"/>
 <area shape="poly" title=" " alt="" coords="88,45,88,93,83,93,83,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30d524dbc151e6a0481f1b9b8cfc9ccc" id="r_a30d524dbc151e6a0481f1b9b8cfc9ccc"><td class="memItemLeft" align="right" valign="top"><a id="a30d524dbc151e6a0481f1b9b8cfc9ccc" name="a30d524dbc151e6a0481f1b9b8cfc9ccc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WaypointGNSSProfile</b> (<a class="el" href="classMission.html">Mission</a> *mission)</td></tr>
+<tr class="memitem:a30d524dbc151e6a0481f1b9b8cfc9ccc" id="r_a30d524dbc151e6a0481f1b9b8cfc9ccc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypointGNSSProfile.html#a30d524dbc151e6a0481f1b9b8cfc9ccc">WaypointGNSSProfile</a> (<a class="el" href="classMission.html">Mission</a> *mission)</td></tr>
 <tr class="separator:a30d524dbc151e6a0481f1b9b8cfc9ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c6d09fb7be636eaf061bbc398284d5" id="r_ad9c6d09fb7be636eaf061bbc398284d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypointGNSSProfile.html#ad9c6d09fb7be636eaf061bbc398284d5">~WaypointGNSSProfile</a> () override=default</td></tr>
+<tr class="separator:ad9c6d09fb7be636eaf061bbc398284d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff9b3624fe1a1d7130bd456a170d4e53" id="r_aff9b3624fe1a1d7130bd456a170d4e53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypointGNSSProfile.html#aff9b3624fe1a1d7130bd456a170d4e53">process</a> (const rclcpp::Time &amp;time) override</td></tr>
-<tr class="memdesc:aff9b3624fe1a1d7130bd456a170d4e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">process  <br /></td></tr>
+<tr class="memdesc:aff9b3624fe1a1d7130bd456a170d4e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process waypoint GNSS profile and set depth control setpoint.  <br /></td></tr>
 <tr class="separator:aff9b3624fe1a1d7130bd456a170d4e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classWaypoint"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classWaypoint')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classWaypoint.html">Waypoint</a></td></tr>
-<tr class="memitem:a9b96693d5d4493fa9bc32d8a38b9ef33 inherit pub_methods_classWaypoint" id="r_a9b96693d5d4493fa9bc32d8a38b9ef33"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Waypoint</b> (const double &amp;duration_param, const double &amp;depth_param, const double &amp;east_param, const double &amp;north_param, const bool &amp;enable_thrusters_param=false, const bool &amp;seafloor_landing_param=false)</td></tr>
+<tr class="memitem:a5ecb81fe7f365f3249a1a6e2ec25984c inherit pub_methods_classWaypoint" id="r_a5ecb81fe7f365f3249a1a6e2ec25984c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a5ecb81fe7f365f3249a1a6e2ec25984c">Waypoint</a> ()=default</td></tr>
+<tr class="separator:a5ecb81fe7f365f3249a1a6e2ec25984c inherit pub_methods_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b96693d5d4493fa9bc32d8a38b9ef33 inherit pub_methods_classWaypoint" id="r_a9b96693d5d4493fa9bc32d8a38b9ef33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a9b96693d5d4493fa9bc32d8a38b9ef33">Waypoint</a> (const double &amp;duration_param, const double &amp;depth_param, const double &amp;east_param, const double &amp;north_param, const bool &amp;enable_thrusters_param=false, const bool &amp;seafloor_landing_param=false)</td></tr>
 <tr class="separator:a9b96693d5d4493fa9bc32d8a38b9ef33 inherit pub_methods_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b95eeea311645199d18144d101b2d2 inherit pub_methods_classWaypoint" id="r_a44b95eeea311645199d18144d101b2d2"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Waypoint</b> (<a class="el" href="classMission.html">Mission</a> *mission)</td></tr>
+<tr class="memitem:a44b95eeea311645199d18144d101b2d2 inherit pub_methods_classWaypoint" id="r_a44b95eeea311645199d18144d101b2d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a44b95eeea311645199d18144d101b2d2">Waypoint</a> (<a class="el" href="classMission.html">Mission</a> *mission)</td></tr>
 <tr class="separator:a44b95eeea311645199d18144d101b2d2 inherit pub_methods_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8108d386384cd92289885f224289386d inherit pub_methods_classWaypoint" id="r_a8108d386384cd92289885f224289386d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a8108d386384cd92289885f224289386d">~Waypoint</a> ()=default</td></tr>
+<tr class="separator:a8108d386384cd92289885f224289386d inherit pub_methods_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a42541755a1a497ec62e1a497a09d8a75" id="r_a42541755a1a497ec62e1a497a09d8a75"><td class="memItemLeft" align="right" valign="top"><a id="a42541755a1a497ec62e1a497a09d8a75" name="a42541755a1a497ec62e1a497a09d8a75"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>north</b> = 0.0</td></tr>
+<tr class="memitem:a42541755a1a497ec62e1a497a09d8a75" id="r_a42541755a1a497ec62e1a497a09d8a75"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypointGNSSProfile.html#a42541755a1a497ec62e1a497a09d8a75">north</a> = 0.0</td></tr>
 <tr class="separator:a42541755a1a497ec62e1a497a09d8a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6260ba36867de002272bc6df662b116" id="r_af6260ba36867de002272bc6df662b116"><td class="memItemLeft" align="right" valign="top"><a id="af6260ba36867de002272bc6df662b116" name="af6260ba36867de002272bc6df662b116"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>east</b> = 0.0</td></tr>
+<tr class="memitem:af6260ba36867de002272bc6df662b116" id="r_af6260ba36867de002272bc6df662b116"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypointGNSSProfile.html#af6260ba36867de002272bc6df662b116">east</a> = 0.0</td></tr>
 <tr class="separator:af6260ba36867de002272bc6df662b116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classWaypoint"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classWaypoint')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classWaypoint.html">Waypoint</a></td></tr>
-<tr class="memitem:a50285f06fcf53385e2092f66db354a8c inherit pub_attribs_classWaypoint" id="r_a50285f06fcf53385e2092f66db354a8c"><td class="memItemLeft" align="right" valign="top">
-double&#160;</td><td class="memItemRight" valign="bottom"><b>north</b> = 0.0</td></tr>
+<tr class="memitem:a50285f06fcf53385e2092f66db354a8c inherit pub_attribs_classWaypoint" id="r_a50285f06fcf53385e2092f66db354a8c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a50285f06fcf53385e2092f66db354a8c">north</a> = 0.0</td></tr>
 <tr class="separator:a50285f06fcf53385e2092f66db354a8c inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a425cd7f3bcd3e57818e7d6447a313e50 inherit pub_attribs_classWaypoint" id="r_a425cd7f3bcd3e57818e7d6447a313e50"><td class="memItemLeft" align="right" valign="top">
-double&#160;</td><td class="memItemRight" valign="bottom"><b>east</b> = 0.0</td></tr>
+<tr class="memitem:a425cd7f3bcd3e57818e7d6447a313e50 inherit pub_attribs_classWaypoint" id="r_a425cd7f3bcd3e57818e7d6447a313e50"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a425cd7f3bcd3e57818e7d6447a313e50">east</a> = 0.0</td></tr>
 <tr class="separator:a425cd7f3bcd3e57818e7d6447a313e50 inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d5cd3970869c646b4e86e986996b8a3 inherit pub_attribs_classWaypoint" id="r_a7d5cd3970869c646b4e86e986996b8a3"><td class="memItemLeft" align="right" valign="top">
-double&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b> = 0.0</td></tr>
+<tr class="memitem:a7d5cd3970869c646b4e86e986996b8a3 inherit pub_attribs_classWaypoint" id="r_a7d5cd3970869c646b4e86e986996b8a3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a7d5cd3970869c646b4e86e986996b8a3">depth</a> = 0.0</td></tr>
 <tr class="separator:a7d5cd3970869c646b4e86e986996b8a3 inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c73435c531a01c6dd830f0b226e19f inherit pub_attribs_classWaypoint" id="r_ac2c73435c531a01c6dd830f0b226e19f"><td class="memItemLeft" align="right" valign="top">
-double&#160;</td><td class="memItemRight" valign="bottom"><b>duration</b> = 0</td></tr>
+<tr class="memitem:ac2c73435c531a01c6dd830f0b226e19f inherit pub_attribs_classWaypoint" id="r_ac2c73435c531a01c6dd830f0b226e19f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#ac2c73435c531a01c6dd830f0b226e19f">duration</a> = 0</td></tr>
 <tr class="separator:ac2c73435c531a01c6dd830f0b226e19f inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a175f6c7ecf0cd7014f6a48d5cc3638f7 inherit pub_attribs_classWaypoint" id="r_a175f6c7ecf0cd7014f6a48d5cc3638f7"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_thrusters</b> = false</td></tr>
+<tr class="memitem:a175f6c7ecf0cd7014f6a48d5cc3638f7 inherit pub_attribs_classWaypoint" id="r_a175f6c7ecf0cd7014f6a48d5cc3638f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a175f6c7ecf0cd7014f6a48d5cc3638f7">enable_thrusters</a> = false</td></tr>
 <tr class="separator:a175f6c7ecf0cd7014f6a48d5cc3638f7 inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331d69d04562574f810e752d16f83c21 inherit pub_attribs_classWaypoint" id="r_a331d69d04562574f810e752d16f83c21"><td class="memItemLeft" align="right" valign="top">
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>seafloor_landing</b> = false</td></tr>
+<tr class="memitem:a331d69d04562574f810e752d16f83c21 inherit pub_attribs_classWaypoint" id="r_a331d69d04562574f810e752d16f83c21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a331d69d04562574f810e752d16f83c21">seafloor_landing</a> = false</td></tr>
 <tr class="separator:a331d69d04562574f810e752d16f83c21 inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b806ea31179bb7287694907120d58f7 inherit pub_attribs_classWaypoint" id="r_a5b806ea31179bb7287694907120d58f7"><td class="memItemLeft" align="right" valign="top">
-double&#160;</td><td class="memItemRight" valign="bottom"><b>velocity</b> = 0.0</td></tr>
+<tr class="memitem:a5b806ea31179bb7287694907120d58f7 inherit pub_attribs_classWaypoint" id="r_a5b806ea31179bb7287694907120d58f7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a5b806ea31179bb7287694907120d58f7">velocity</a> = 0.0</td></tr>
+<tr class="memdesc:a5b806ea31179bb7287694907120d58f7 inherit pub_attribs_classWaypoint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth control setpoint limt_velocity.  <br /></td></tr>
 <tr class="separator:a5b806ea31179bb7287694907120d58f7 inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07352276950a2e7f20618cd033fcc043 inherit pub_attribs_classWaypoint" id="r_a07352276950a2e7f20618cd033fcc043"><td class="memItemLeft" align="right" valign="top">
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b> = seabot2_msgs::msg::MissionState::MODE_IDLE</td></tr>
+<tr class="memitem:a07352276950a2e7f20618cd033fcc043 inherit pub_attribs_classWaypoint" id="r_a07352276950a2e7f20618cd033fcc043"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a07352276950a2e7f20618cd033fcc043">mode</a> = seabot2_msgs::msg::MissionState::MODE_IDLE</td></tr>
+<tr class="memdesc:a07352276950a2e7f20618cd033fcc043 inherit pub_attribs_classWaypoint"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO mission mode.  <br /></td></tr>
 <tr class="separator:a07352276950a2e7f20618cd033fcc043 inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eb82758cba0567b34176fc325bbd8fa inherit pub_attribs_classWaypoint" id="r_a2eb82758cba0567b34176fc325bbd8fa"><td class="memItemLeft" align="right" valign="top">
-rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><b>time_end</b></td></tr>
+<tr class="memitem:a2eb82758cba0567b34176fc325bbd8fa inherit pub_attribs_classWaypoint" id="r_a2eb82758cba0567b34176fc325bbd8fa"><td class="memItemLeft" align="right" valign="top">rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a2eb82758cba0567b34176fc325bbd8fa">time_end</a></td></tr>
+<tr class="memdesc:a2eb82758cba0567b34176fc325bbd8fa inherit pub_attribs_classWaypoint"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWaypoint.html" title="Base class for a waypoint.">Waypoint</a> end time.  <br /></td></tr>
 <tr class="separator:a2eb82758cba0567b34176fc325bbd8fa inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d91ed57ac82236555ad0abacee187e inherit pub_attribs_classWaypoint" id="r_af5d91ed57ac82236555ad0abacee187e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="classMission.html">Mission</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mission_</b> = nullptr</td></tr>
+<tr class="memitem:af5d91ed57ac82236555ad0abacee187e inherit pub_attribs_classWaypoint" id="r_af5d91ed57ac82236555ad0abacee187e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMission.html">Mission</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#af5d91ed57ac82236555ad0abacee187e">mission_</a> = nullptr</td></tr>
+<tr class="memdesc:af5d91ed57ac82236555ad0abacee187e inherit pub_attribs_classWaypoint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the mission owning the waypoint.  <br /></td></tr>
 <tr class="separator:af5d91ed57ac82236555ad0abacee187e inherit pub_attribs_classWaypoint"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a30d524dbc151e6a0481f1b9b8cfc9ccc" name="a30d524dbc151e6a0481f1b9b8cfc9ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d524dbc151e6a0481f1b9b8cfc9ccc">&#9670;&#160;</a></span>WaypointGNSSProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WaypointGNSSProfile::WaypointGNSSProfile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMission.html">Mission</a> *&#160;</td>
+          <td class="paramname"><em>mission</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9c6d09fb7be636eaf061bbc398284d5" name="ad9c6d09fb7be636eaf061bbc398284d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c6d09fb7be636eaf061bbc398284d5">&#9670;&#160;</a></span>~WaypointGNSSProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WaypointGNSSProfile::~WaypointGNSSProfile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aff9b3624fe1a1d7130bd456a170d4e53" name="aff9b3624fe1a1d7130bd456a170d4e53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff9b3624fe1a1d7130bd456a170d4e53">&#9670;&#160;</a></span>process()</h2>
@@ -181,15 +232,60 @@ rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><b>time_end</b><
 </table>
 </div><div class="memdoc">
 
-<p>process </p>
+<p>Process waypoint GNSS profile and set depth control setpoint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>current time </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Implements <a class="el" href="classWaypoint.html">Waypoint</a>.</p>
+<p>Implements <a class="el" href="classWaypoint.html#aae9e95a58a5309b3849bd97b0c9cd2e8">Waypoint</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classWaypointGNSSProfile_aff9b3624fe1a1d7130bd456a170d4e53_cgraph.png" border="0" usemap="#aclassWaypointGNSSProfile_aff9b3624fe1a1d7130bd456a170d4e53_cgraph" alt=""/></div>
+<map name="aclassWaypointGNSSProfile_aff9b3624fe1a1d7130bd456a170d4e53_cgraph" id="aclassWaypointGNSSProfile_aff9b3624fe1a1d7130bd456a170d4e53_cgraph">
+<area shape="rect" title="Process waypoint GNSS profile and set depth control setpoint." alt="" coords="5,5,165,45"/>
+<area shape="rect" href="classMission.html#a22e811abed47c4b8430f2ac044cb63bf" title="Access by reference the Mission obect&#39;s depth control set point message." alt="" coords="213,5,383,45"/>
+<area shape="poly" title=" " alt="" coords="165,23,200,23,200,28,165,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af6260ba36867de002272bc6df662b116" name="af6260ba36867de002272bc6df662b116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6260ba36867de002272bc6df662b116">&#9670;&#160;</a></span>east</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double WaypointGNSSProfile::east = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42541755a1a497ec62e1a497a09d8a75" name="a42541755a1a497ec62e1a497a09d8a75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42541755a1a497ec62e1a497a09d8a75">&#9670;&#160;</a></span>north</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double WaypointGNSSProfile::north = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/<a class="el" href="waypoint_8hpp_source.html">waypoint.hpp</a></li>
-<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/<b>waypoint.cpp</b></li>
+<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/<a class="el" href="waypoint_8cpp.html">waypoint.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

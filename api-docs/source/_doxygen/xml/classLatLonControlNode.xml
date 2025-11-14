@@ -3,6 +3,7 @@
   <compounddef id="classLatLonControlNode" kind="class" language="C++" prot="public">
     <compoundname>LatLonControlNode</compoundname>
     <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <includes refid="latlon__control__node_8hpp" local="no">latlon_control_node.hpp</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classLatLonControlNode_1af157f9812755feacf6981daff093244d" prot="private" static="no" mutable="no">
         <type>rclcpp::TimerBase::SharedPtr</type>
@@ -18,6 +19,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="24" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1a03c09bef01da89e2978d1445acc6b3d6" compoundref="latlon__control__node_8cpp" startline="5" endline="16">LatLonControlNode</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLatLonControlNode_1a637059246937d9562f8a094c4c58da61" prot="private" static="no" mutable="no">
         <type>std::chrono::milliseconds</type>
@@ -33,6 +35,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="25" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1af534d0bd302d09b14cea1537e1a2ac1e" compoundref="latlon__control__node_8cpp" startline="23" endline="43">init_parameters</referencedby>
+        <referencedby refid="classLatLonControlNode_1a03c09bef01da89e2978d1445acc6b3d6" compoundref="latlon__control__node_8cpp" startline="5" endline="16">LatLonControlNode</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLatLonControlNode_1a5fb0e83596be8966bbc2c1c9d8c26106" prot="private" static="no" mutable="no">
         <type><ref refid="classLatLonControl" kindref="compound">LatLonControl</ref></type>
@@ -48,6 +52,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="27" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1a91a44b19df79b3e72bd705f8fe9cfd29" compoundref="latlon__control__node_8cpp" startline="76" endline="80">gps_fix_callback</referencedby>
+        <referencedby refid="classLatLonControlNode_1a217765cf4fd3f3b0ad79e4474be241c5" compoundref="latlon__control__node_8cpp" startline="70" endline="74">imu_data_callback</referencedby>
+        <referencedby refid="classLatLonControlNode_1af534d0bd302d09b14cea1537e1a2ac1e" compoundref="latlon__control__node_8cpp" startline="23" endline="43">init_parameters</referencedby>
+        <referencedby refid="classLatLonControlNode_1a3cea981fa203b5c8138877b3d0100684" compoundref="latlon__control__node_8cpp" startline="82" endline="85">safety_callback</referencedby>
+        <referencedby refid="classLatLonControlNode_1ad04d167b4cd2ece55db43581e94a4209" compoundref="latlon__control__node_8cpp" startline="57" endline="68">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLatLonControlNode_1ac5d3418dd0d996fdaad72b38e191bef5" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::GpsFix &gt;::SharedPtr</type>
@@ -63,6 +72,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="30" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLatLonControlNode_1afab96708fa3ce523ebcce0532103d67d" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::RawData &gt;::SharedPtr</type>
@@ -77,6 +87,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="31" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLatLonControlNode_1a797c39af8f52f9cb5ef4227339e0d16b" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::SafetyStatus2 &gt;::SharedPtr</type>
@@ -91,6 +102,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="32" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLatLonControlNode_1a854e28db252b59e30a4c673e2fe26937" prot="private" static="no" mutable="no">
         <type>rclcpp::Publisher&lt; geometry_msgs::msg::Twist &gt;::SharedPtr</type>
@@ -105,6 +117,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="34" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
+        <referencedby refid="classLatLonControlNode_1ad04d167b4cd2ece55db43581e94a4209" compoundref="latlon__control__node_8cpp" startline="57" endline="68">timer_callback</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -121,6 +135,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="19" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="5" bodyend="16"/>
+        <references refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</references>
+        <references refid="classLatLonControlNode_1af534d0bd302d09b14cea1537e1a2ac1e" compoundref="latlon__control__node_8cpp" startline="23" endline="43">init_parameters</references>
+        <references refid="classLatLonControlNode_1a637059246937d9562f8a094c4c58da61" compoundref="latlon__control__node_8hpp" startline="25">loop_dt_</references>
+        <references refid="classLatLonControlNode_1af157f9812755feacf6981daff093244d" compoundref="latlon__control__node_8hpp" startline="24">timer_</references>
+        <references refid="classLatLonControlNode_1ad04d167b4cd2ece55db43581e94a4209" compoundref="latlon__control__node_8cpp" startline="57" endline="68">timer_callback</references>
       </memberdef>
       <memberdef kind="function" id="classLatLonControlNode_1ab5445ca90df79f6791c370078a5c0347" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -152,6 +171,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="38" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="23" bodyend="43"/>
+        <references refid="classLatLonControl_1a1f5be49c947fc762311b322a54a1a0c2" compoundref="latlon__control_8h" startline="24">LatLonControl::angular_velocity_max_</references>
+        <references refid="classLatLonControl_1aef252d9d80b699710e9a5a38d834033c" compoundref="latlon__control_8h" startline="25">LatLonControl::distance_threshold_slowing_down_</references>
+        <references refid="classLatLonControl_1aa98241d7d4a8f832c7f86bba2524b56e" compoundref="latlon__control_8h" startline="10">LatLonControl::lat_set_point_</references>
+        <references refid="classLatLonControl_1a38b669c0a496a044a7d3fa3853590f64" compoundref="latlon__control_8h" startline="23">LatLonControl::linear_velocity_max_</references>
+        <references refid="classLatLonControlNode_1a5fb0e83596be8966bbc2c1c9d8c26106" compoundref="latlon__control__node_8hpp" startline="27">llc_</references>
+        <references refid="classLatLonControl_1adeb311f676e64ccf6172bd69127a199e" compoundref="latlon__control_8h" startline="11">LatLonControl::lon_set_point_</references>
+        <references refid="classLatLonControlNode_1a637059246937d9562f8a094c4c58da61" compoundref="latlon__control__node_8hpp" startline="25">loop_dt_</references>
+        <referencedby refid="classLatLonControlNode_1a03c09bef01da89e2978d1445acc6b3d6" compoundref="latlon__control__node_8cpp" startline="5" endline="16">LatLonControlNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -167,6 +194,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="43" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="45" bodyend="55"/>
+        <references refid="classLatLonControlNode_1a91a44b19df79b3e72bd705f8fe9cfd29" compoundref="latlon__control__node_8cpp" startline="76" endline="80">gps_fix_callback</references>
+        <references refid="classLatLonControlNode_1a217765cf4fd3f3b0ad79e4474be241c5" compoundref="latlon__control__node_8cpp" startline="70" endline="74">imu_data_callback</references>
+        <references refid="classLatLonControlNode_1a854e28db252b59e30a4c673e2fe26937" compoundref="latlon__control__node_8hpp" startline="34">publisher_thrusters_cmd_</references>
+        <references refid="classLatLonControlNode_1a3cea981fa203b5c8138877b3d0100684" compoundref="latlon__control__node_8cpp" startline="82" endline="85">safety_callback</references>
+        <references refid="classLatLonControlNode_1ac5d3418dd0d996fdaad72b38e191bef5" compoundref="latlon__control__node_8hpp" startline="30">subscriber_gps_fix_data_</references>
+        <references refid="classLatLonControlNode_1afab96708fa3ce523ebcce0532103d67d" compoundref="latlon__control__node_8hpp" startline="31">subscriber_imu_data_</references>
+        <references refid="classLatLonControlNode_1a797c39af8f52f9cb5ef4227339e0d16b" compoundref="latlon__control__node_8hpp" startline="32">subscriber_safety_data_</references>
+        <referencedby refid="classLatLonControlNode_1a03c09bef01da89e2978d1445acc6b3d6" compoundref="latlon__control__node_8cpp" startline="5" endline="16">LatLonControlNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLatLonControlNode_1ad04d167b4cd2ece55db43581e94a4209" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,6 +217,12 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="48" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="57" bodyend="68"/>
+        <references refid="classLatLonControl_1ac5deb94bdff177eee941570375d4a27a" compoundref="latlon__control_8cpp" startline="39" endline="56">LatLonControl::compute_control_commands</references>
+        <references refid="classLatLonControl_1af12fb16a6f41ab30b848f2a880220dd2" compoundref="latlon__control_8cpp" startline="63" endline="66">LatLonControl::get_angular_velocity</references>
+        <references refid="classLatLonControl_1a92eeefd5f9f1bfbbafaf6a7b4f48302e" compoundref="latlon__control_8cpp" startline="58" endline="61">LatLonControl::get_linear_velocity</references>
+        <references refid="classLatLonControlNode_1a5fb0e83596be8966bbc2c1c9d8c26106" compoundref="latlon__control__node_8hpp" startline="27">llc_</references>
+        <references refid="classLatLonControlNode_1a854e28db252b59e30a4c673e2fe26937" compoundref="latlon__control__node_8hpp" startline="34">publisher_thrusters_cmd_</references>
+        <referencedby refid="classLatLonControlNode_1a03c09bef01da89e2978d1445acc6b3d6" compoundref="latlon__control__node_8cpp" startline="5" endline="16">LatLonControlNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLatLonControlNode_1a217765cf4fd3f3b0ad79e4474be241c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -210,6 +251,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="54" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="70" bodyend="74"/>
+        <references refid="classLatLonControlNode_1a5fb0e83596be8966bbc2c1c9d8c26106" compoundref="latlon__control__node_8hpp" startline="27">llc_</references>
+        <references refid="classLatLonControl_1a33e973f27ab016c435f92d6d4b056b1c" compoundref="latlon__control_8cpp" startline="29" endline="32">LatLonControl::update_heading</references>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLatLonControlNode_1a91a44b19df79b3e72bd705f8fe9cfd29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -238,6 +282,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="60" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="76" bodyend="80"/>
+        <references refid="classLatLonControlNode_1a5fb0e83596be8966bbc2c1c9d8c26106" compoundref="latlon__control__node_8hpp" startline="27">llc_</references>
+        <references refid="classLatLonControl_1a4cf0b3b25526947bf71f326d2fde07f9" compoundref="latlon__control_8cpp" startline="23" endline="27">LatLonControl::update_lat_lon</references>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLatLonControlNode_1a3cea981fa203b5c8138877b3d0100684" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -266,6 +313,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/include/seabot2_latlon_control/latlon_control_node.hpp" line="66" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_latlon_control/src/latlon_control_node.cpp" bodystart="82" bodyend="85"/>
+        <references refid="classLatLonControlNode_1a5fb0e83596be8966bbc2c1c9d8c26106" compoundref="latlon__control__node_8hpp" startline="27">llc_</references>
+        <references refid="classLatLonControl_1aa89e7395e1827472269609140563430c" compoundref="latlon__control_8cpp" startline="34" endline="37">LatLonControl::update_safety</references>
+        <referencedby refid="classLatLonControlNode_1ac9ef2d7943baa20eec67910e71aade89" compoundref="latlon__control__node_8cpp" startline="45" endline="55">init_interfaces</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -284,10 +334,17 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="3">
+        <label>LatLonControl</label>
+        <link refid="classLatLonControl"/>
+      </node>
       <node id="1">
         <label>LatLonControlNode</label>
         <link refid="classLatLonControlNode"/>
         <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>llc_</edgelabel>
         </childnode>
       </node>
       <node id="2">

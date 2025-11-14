@@ -1,16 +1,13 @@
 var searchData=
 [
-  ['physics_5frho_5f_0',['physics_rho_',['../classDepthControl.html#a22270dcfc662ccb95bd0a3209b2d7783',1,'DepthControl::physics_rho_'],['../classKalman.html#a861938a9da523402c2bb886416e94505',1,'Kalman::physics_rho_']]],
-  ['piston_5fflow_5fsecurity_5fpercentage_5f_1',['piston_flow_security_percentage_',['../classDepthControl.html#a9453df97db241b35dbcbf192e65405f2',1,'DepthControl']]],
-  ['piston_5flast_5ftime_5f_2',['piston_last_time_',['../classSimulator.html#ad1b7d3fd7fe05173402477463dc293e3',1,'Simulator']]],
-  ['piston_5fposition_5f_3',['piston_position_',['../classSimulator.html#aa7cd07927500a7e13ffd7af5cbdeb56c',1,'Simulator']]],
-  ['piston_5freach_5fposition_5fdead_5fzone_5f_4',['piston_reach_position_dead_zone_',['../classDepthControl.html#ac479147c93b89ebd0b98759298c674bf',1,'DepthControl']]],
-  ['piston_5fvolume_5feq_5finit_5f_5',['piston_volume_eq_init_',['../classKalman.html#aa22eb820309998a3f6e923e296863d92',1,'Kalman']]],
-  ['port_6',['port',['../classAsyncSerialImpl.html#aafb3eff806ecf80dc1b592e63621a5b7',1,'AsyncSerialImpl']]],
-  ['pressure_7',['pressure',['../structbme280__data.html#a45f80ad1a10a6704bb6f8dec70976c72',1,'bme280_data::pressure'],['../structbme280__uncomp__data.html#afa4d1b43f8412d393dcc5fd41f4203ce',1,'bme280_uncomp_data::pressure']]],
-  ['pressure_5f_8',['pressure_',['../classKalman.html#acd155be96ac525872469e13183ac60f8',1,'Kalman']]],
-  ['pressure_5fsensor_5f_9',['pressure_sensor_',['../classSimulator.html#a56d2834bc2da57100e2a0cc0633af9e7',1,'Simulator']]],
-  ['pressure_5fsensor_5flast_5ftime_10',['pressure_sensor_last_time',['../classSimulator.html#af7aea476d9b43ace861c2a790dec4673',1,'Simulator']]],
-  ['pressure_5fsensor_5fmean_5f_11',['pressure_sensor_mean_',['../classSimulator.html#ab405d36ac99525ac189db03ee3d46ca1',1,'Simulator']]],
-  ['psaardata_12',['pSaarData',['../classTeosBase.html#a1e8c6b1747c7699c3b89aa5a39055bdf',1,'TeosBase']]]
+  ['offset_0',['offset',['../structGSW__TEOS10__CONSTANTS.html#afca089af7969eafe754e8b88cb95ded4',1,'GSW_TEOS10_CONSTANTS']]],
+  ['offset_5f_1',['offset_',['../classICM20948Node.html#aa60feedd51b390d0034b2faaf44b7483',1,'ICM20948Node']]],
+  ['offset_5feast_5f_2',['offset_east_',['../classLogData.html#abebfbb4e269f1eaa3a6b21ff7a3bdacd',1,'LogData::offset_east_'],['../classMission.html#a920da1f08de7304cd397eb8d775564e0',1,'Mission::offset_east_']]],
+  ['offset_5fnorth_5f_3',['offset_north_',['../classLogData.html#acc6472bff8a96df148c498b6e311d1cf',1,'LogData::offset_north_'],['../classMission.html#a7e87ef745ca676a43782187289b8d65f',1,'Mission::offset_north_']]],
+  ['offset_5ftotal_5f_4',['offset_total_',['../classKalman.html#a9e371268ffbb5f9e0e0e38f1d3d4f98d',1,'Kalman']]],
+  ['ok_5f_5',['OK_',['../classSBD.html#a97e9f3beb473fae420bf618860ba2d99',1,'SBD']]],
+  ['open_6',['open',['../classAsyncSerialImpl.html#aa5275eba924eaf58a61910419c6f5f08',1,'AsyncSerialImpl']]],
+  ['osr_5fh_7',['osr_h',['../structbme280__settings.html#ab09e8c0b2ff1ee7e7eb35540ad95acf5',1,'bme280_settings']]],
+  ['osr_5fp_8',['osr_p',['../structbme280__settings.html#a6359b35d9547f53dea01d893313c7dc3',1,'bme280_settings']]],
+  ['osr_5ft_9',['osr_t',['../structbme280__settings.html#a49bf8f73813386b4dc37a9676230c263',1,'bme280_settings']]]
 ];

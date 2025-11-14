@@ -9,6 +9,7 @@
   <title>Class Waypoint &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class WaypointDepth" href="classWaypointDepth.html" />
-    <link rel="prev" title="Class WaveGenerator" href="classWaveGenerator.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,30 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class Waypoint</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv48Waypoint"><code class="docutils literal notranslate"><span class="pre">Waypoint</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8WaypointEv"><code class="docutils literal notranslate"><span class="pre">Waypoint()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8WaypointERKdRKdRKdRKdRKbRKb"><code class="docutils literal notranslate"><span class="pre">Waypoint()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8WaypointEP7Mission"><code class="docutils literal notranslate"><span class="pre">Waypoint()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8WaypointD0Ev"><code class="docutils literal notranslate"><span class="pre">~Waypoint()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint7processERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">process()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint5northE"><code class="docutils literal notranslate"><span class="pre">north</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint4eastE"><code class="docutils literal notranslate"><span class="pre">east</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint5depthE"><code class="docutils literal notranslate"><span class="pre">depth</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8durationE"><code class="docutils literal notranslate"><span class="pre">duration</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint16enable_thrustersE"><code class="docutils literal notranslate"><span class="pre">enable_thrusters</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint16seafloor_landingE"><code class="docutils literal notranslate"><span class="pre">seafloor_landing</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8velocityE"><code class="docutils literal notranslate"><span class="pre">velocity</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint4modeE"><code class="docutils literal notranslate"><span class="pre">mode</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8time_endE"><code class="docutils literal notranslate"><span class="pre">time_end</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8Waypoint8mission_E"><code class="docutils literal notranslate"><span class="pre">mission_</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +76,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +91,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class Waypoint</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classWaypoint.rst.txt" rel="nofollow"> View page source</a>
@@ -116,7 +124,8 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv48Waypoint">
 <span id="_CPPv38Waypoint"></span><span id="_CPPv28Waypoint"></span><span id="Waypoint"></span><span class="target" id="classWaypoint"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Waypoint</span></span></span><a class="headerlink" href="#_CPPv48Waypoint" title="Link to this definition"></a><br /></dt>
-<dd><p>Subclassed by <a class="reference internal" href="classWaypointDepth.html#classWaypointDepth"><span class="std std-ref">WaypointDepth</span></a>, <a class="reference internal" href="classWaypointGNSSProfile.html#classWaypointGNSSProfile"><span class="std std-ref">WaypointGNSSProfile</span></a>, <a class="reference internal" href="classWaypointSeafloorLanding.html#classWaypointSeafloorLanding"><span class="std std-ref">WaypointSeafloorLanding</span></a>, <a class="reference internal" href="classWaypointTemperatureKeeping.html#classWaypointTemperatureKeeping"><span class="std std-ref">WaypointTemperatureKeeping</span></a>, <a class="reference internal" href="classWaypointTemperatureProfile.html#classWaypointTemperatureProfile"><span class="std std-ref">WaypointTemperatureProfile</span></a></p>
+<dd><p>Base class for a waypoint. </p>
+<p>Subclassed by <a class="reference internal" href="classWaypointDepth.html#classWaypointDepth"><span class="std std-ref">WaypointDepth</span></a>, <a class="reference internal" href="classWaypointGNSSProfile.html#classWaypointGNSSProfile"><span class="std std-ref">WaypointGNSSProfile</span></a>, <a class="reference internal" href="classWaypointSeafloorLanding.html#classWaypointSeafloorLanding"><span class="std std-ref">WaypointSeafloorLanding</span></a>, <a class="reference internal" href="classWaypointTemperatureKeeping.html#classWaypointTemperatureKeeping"><span class="std std-ref">WaypointTemperatureKeeping</span></a>, <a class="reference internal" href="classWaypointTemperatureProfile.html#classWaypointTemperatureProfile"><span class="std std-ref">WaypointTemperatureProfile</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -142,7 +151,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N8Waypoint7processERKN6rclcpp4TimeE">
 <span id="_CPPv3N8Waypoint7processERKN6rclcpp4TimeE"></span><span id="_CPPv2N8Waypoint7processERKN6rclcpp4TimeE"></span><span id="Waypoint::process__rclcpp::TimeCR"></span><span class="target" id="classWaypoint_1aae9e95a58a5309b3849bd97b0c9cd2e8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N8Waypoint7processERKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Process waypoint and set depth control setpoint. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time</strong> – current time </p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="breathe-sectiondef docutils container">
@@ -180,22 +195,26 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Waypoint8velocityE">
 <span id="_CPPv3N8Waypoint8velocityE"></span><span id="_CPPv2N8Waypoint8velocityE"></span><span id="Waypoint::velocity__double"></span><span class="target" id="classWaypoint_1a5b806ea31179bb7287694907120d58f7"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">velocity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N8Waypoint8velocityE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Depth control setpoint limt_velocity. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Waypoint4modeE">
 <span id="_CPPv3N8Waypoint4modeE"></span><span id="_CPPv2N8Waypoint4modeE"></span><span id="Waypoint::mode__unsigned-i"></span><span class="target" id="classWaypoint_1a07352276950a2e7f20618cd033fcc043"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mode</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">seabot2_msgs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MissionState</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MODE_IDLE</span></span><a class="headerlink" href="#_CPPv4N8Waypoint4modeE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>TODO mission mode. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Waypoint8time_endE">
 <span id="_CPPv3N8Waypoint8time_endE"></span><span id="_CPPv2N8Waypoint8time_endE"></span><span id="Waypoint::time_end__rclcpp::Time"></span><span class="target" id="classWaypoint_1a2eb82758cba0567b34176fc325bbd8fa"></span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_end</span></span></span><a class="headerlink" href="#_CPPv4N8Waypoint8time_endE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p><a class="reference internal" href="#classWaypoint"><span class="std std-ref">Waypoint</span></a> end time. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8Waypoint8mission_E">
 <span id="_CPPv3N8Waypoint8mission_E"></span><span id="_CPPv2N8Waypoint8mission_E"></span><span id="Waypoint::mission___MissionP"></span><span class="target" id="classWaypoint_1af5d91ed57ac82236555ad0abacee187e"></span><a class="reference internal" href="classMission.html#_CPPv47Mission" title="Mission"><span class="n"><span class="pre">Mission</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">mission_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N8Waypoint8mission_E" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Pointer to the mission owning the waypoint. </p>
+</dd></dl>
 
 </div>
 </dd></dl>
@@ -206,10 +225,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classWaveGenerator.html" class="btn btn-neutral float-left" title="Class WaveGenerator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classWaypointDepth.html" class="btn btn-neutral float-right" title="Class WaypointDepth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

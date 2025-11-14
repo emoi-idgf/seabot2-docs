@@ -21,163 +21,177 @@ Program Listing for File screen_node.cpp
    using namespace placeholders;
    
    ScreenNode::ScreenNode()
-           : Node("screen_node"), screen_(this){
-       get_ip();
-       get_hostname();
-       init_parameters();
-       init_topics();
+   : Node("screen_node"), screen_(this)
+   {
+     get_ip();
+     get_hostname();
+     init_parameters();
+     init_topics();
    
-       screen_.i2c_open();
+     screen_.i2c_open();
    
-       timer_ = this->create_wall_timer(
+     timer_ = this->create_wall_timer(
                loop_dt_, std::bind(&ScreenNode::timer_callback, this));
    
-       RCLCPP_INFO(this->get_logger(), "[Screen_node] Start Ok");
+     RCLCPP_INFO(this->get_logger(), "[Screen_node] Start Ok");
    }
    
-   ScreenNode::~ScreenNode() {
-       screen_.write_robot_status(Screen::Robot_Status::ERROR);
-       screen_.write_screen();
+   ScreenNode::~ScreenNode()
+   {
+     screen_.write_robot_status(Screen::Robot_Status::ERROR);
+     screen_.write_screen();
    }
    
-   void ScreenNode::timer_callback() {
+   void ScreenNode::timer_callback()
+   {
    
-       if(depth_<depth_no_update_) {
-           get_ip();
+     if(depth_ < depth_no_update_) {
+       get_ip();
    
-           screen_.write_ip(ip_);
-           screen_.write_pressure(round(pressure_)); 
-           screen_.write_temperature(round(temperature_*10.));
+       screen_.write_ip(ip_);
+       screen_.write_pressure(round(pressure_));     
+       screen_.write_temperature(round(temperature_ * 10.));
    
-           screen_.write_voltage(round(voltage_*10.));
+       screen_.write_voltage(round(voltage_ * 10.));
    
-           screen_.write_current_waypoint(wp_id_);
-           screen_.write_number_waypoints(wp_max_);
+       screen_.write_current_waypoint(wp_id_);
+       screen_.write_number_waypoints(wp_max_);
    
-           if(const int t_remain = (time_next_wp_ - this->now()).seconds(); t_remain > 99*60)
-               screen_.write_remaining_time(99,59);
-           else if(t_remain <0)
-               screen_.write_remaining_time(0, 0);
-           else
-               screen_.write_remaining_time(floor(t_remain / 60.0), t_remain % 60);
-   
-           screen_.write_robot_status(status_);
-   
-           const std::time_t t = std::time(0);   // get time now
-           const std::tm *now = std::localtime(&t);
-           screen_.write_time(now->tm_hour, now->tm_min);
-   
-           screen_.write_hygro(round(hygro_)); 
-           screen_.write_mission_name(mission_name_);
-           screen_.write_robot_name(robot_name_);
-   
-           screen_.write_screen();
+       if(const int t_remain = (time_next_wp_ - this->now()).seconds(); t_remain > 99 * 60) {
+         screen_.write_remaining_time(99, 59);
+       } else if(t_remain < 0) {
+         screen_.write_remaining_time(0, 0);
+       } else {
+         screen_.write_remaining_time(floor(t_remain / 60.0), t_remain % 60);
        }
+   
+       screen_.write_robot_status(status_);
+   
+       const std::time_t t = std::time(0);       // get time now
+       const std::tm *now = std::localtime(&t);
+       screen_.write_time(now->tm_hour, now->tm_min);
+   
+       screen_.write_hygro(round(hygro_));     
+       screen_.write_mission_name(mission_name_);
+       screen_.write_robot_name(robot_name_);
+   
+       screen_.write_screen();
+     }
    }
    
-   void ScreenNode::init_parameters() {
-       this->declare_parameter<std::string>("i2c_periph", screen_.getI2CPeriph());
-       this->declare_parameter<int>("i2c_address", screen_.getI2CAddr());
-       screen_.setI2CPeriph(this->get_parameter_or("i2c_periph", screen_.getI2CPeriph()));
-       screen_.setI2CAddr(this->get_parameter_or("i2c_address", screen_.getI2CAddr()));
+   void ScreenNode::init_parameters()
+   {
+     this->declare_parameter<std::string>("i2c_periph", screen_.getI2CPeriph());
+     this->declare_parameter<int>("i2c_address", screen_.getI2CAddr());
+     screen_.setI2CPeriph(this->get_parameter_or("i2c_periph", screen_.getI2CPeriph()));
+     screen_.setI2CAddr(this->get_parameter_or("i2c_address", screen_.getI2CAddr()));
    
-       this->declare_parameter<long>("loop_dt", loop_dt_.count());
-       loop_dt_ = std::chrono::milliseconds(this->get_parameter_or("loop_dt", loop_dt_.count()));
+     this->declare_parameter<long>("loop_dt", loop_dt_.count());
+     loop_dt_ = std::chrono::milliseconds(this->get_parameter_or("loop_dt", loop_dt_.count()));
    
-       this->declare_parameter<double>("depth_no_update", depth_no_update_);
-       depth_no_update_ = this->get_parameter_or("depth_no_update", depth_no_update_);
+     this->declare_parameter<double>("depth_no_update", depth_no_update_);
+     depth_no_update_ = this->get_parameter_or("depth_no_update", depth_no_update_);
    }
    
-   void ScreenNode::init_topics() {
+   void ScreenNode::init_topics()
+   {
    
-       subscriber_sensor_internal_ = this->create_subscription<seabot2_msgs::msg::Bme280Data>(
-               "/driver/pressure_internal", 10, std::bind(&ScreenNode::topic_internal_pressure_callback, this, _1));
+     subscriber_sensor_internal_ = this->create_subscription<seabot2_msgs::msg::Bme280Data>(
+               "/driver/pressure_internal", 10,
+       std::bind(&ScreenNode::topic_internal_pressure_callback, this, _1));
    
-       subscriber_mission_ = this->create_subscription<seabot2_msgs::msg::MissionState >(
+     subscriber_mission_ = this->create_subscription<seabot2_msgs::msg::MissionState>(
                "/mission/mission_state", 10, std::bind(&ScreenNode::waypoint_callback, this, _1));
    
-       subscriber_power_ = this->create_subscription<seabot2_msgs::msg::PowerState>(
+     subscriber_power_ = this->create_subscription<seabot2_msgs::msg::PowerState>(
                "/driver/power", 10, std::bind(&ScreenNode::power_callback, this, _1));
    
-       subscriber_safety_ = this->create_subscription<seabot2_msgs::msg::SafetyStatus2>(
+     subscriber_safety_ = this->create_subscription<seabot2_msgs::msg::SafetyStatus2>(
                "/safety/safety", 10, std::bind(&ScreenNode::safety_callback, this, _1));
    }
    
-   void ScreenNode::get_hostname() {
-       char hostname[16];
-       gethostname(hostname, 16);
-       robot_name_ = hostname;
-       RCLCPP_INFO(this->get_logger(), "[Screen_node] Hostname = %s", robot_name_.c_str());
+   void ScreenNode::get_hostname()
+   {
+     char hostname[16];
+     gethostname(hostname, 16);
+     robot_name_ = hostname;
+     RCLCPP_INFO(this->get_logger(), "[Screen_node] Hostname = %s", robot_name_.c_str());
    }
    
    #include <cstring>
    
-   void ScreenNode::get_ip() {
-       for (auto &n:ip_){
-           n = 0;
+   void ScreenNode::get_ip()
+   {
+     for (auto & n:ip_) {
+       n = 0;
+     }
+   
+     ifaddrs *ifaddr;
+   
+     if (getifaddrs(&ifaddr) == -1) {
+       return;
+     }
+   
+     for (const ifaddrs *ifa = ifaddr; ifa != nullptr; ifa = ifa->ifa_next) {
+       char host[NI_MAXHOST];
+       if (ifa->ifa_addr == nullptr) {
+         continue;
        }
-   
-       ifaddrs *ifaddr;
-   
-       if (getifaddrs(&ifaddr) == -1)
-           return;
-   
-       for (const ifaddrs *ifa = ifaddr; ifa != nullptr; ifa = ifa->ifa_next){
-           char host[NI_MAXHOST];
-           if (ifa->ifa_addr == nullptr)
-               continue;
-           const int s = getnameinfo(ifa->ifa_addr,
+       const int s = getnameinfo(ifa->ifa_addr,
                sizeof(struct sockaddr_in),
                host,
                NI_MAXHOST,
                nullptr,
                0,
                NI_NUMERICHOST);
-           if((strcmp(ifa->ifa_name,"wlan0")==0)&&(ifa->ifa_addr->sa_family==AF_INET)){
-               if (s != 0) {
-                   return;
-               }
+       if((strcmp(ifa->ifa_name, "wlan0") == 0) && (ifa->ifa_addr->sa_family == AF_INET)) {
+         if (s != 0) {
+           return;
+         }
    
-               std::istringstream ss(string(host)+".");
-               std::string val;
-               for(int i=0; i<4; i++) {
-                   std::getline(ss, val, '.');
-                   ip_[i] = stoi(val);
-               }
-           }
+         std::istringstream ss(string(host) + ".");
+         std::string val;
+         for(int i = 0; i < 4; i++) {
+           std::getline(ss, val, '.');
+           ip_[i] = stoi(val);
+         }
        }
-       freeifaddrs(ifaddr);
+     }
+     freeifaddrs(ifaddr);
    }
    
-   void ScreenNode::topic_internal_pressure_callback(const seabot2_msgs::msg::Bme280Data &msg) {
-       pressure_ = msg.pressure;
-       temperature_ = msg.temperature;
-       hygro_ = msg.humidity;
+   void ScreenNode::topic_internal_pressure_callback(const seabot2_msgs::msg::Bme280Data & msg)
+   {
+     pressure_ = msg.pressure;
+     temperature_ = msg.temperature;
+     hygro_ = msg.humidity;
    }
    
-   int main(const int argc, char *argv[]) {
-       rclcpp::init(argc, argv);
-       spin(std::make_shared<ScreenNode>());
-       rclcpp::shutdown();
-       return 0;
+   int main(const int argc, char *argv[])
+   {
+     rclcpp::init(argc, argv);
+     spin(std::make_shared<ScreenNode>());
+     rclcpp::shutdown();
+     return 0;
    }
    
-   void ScreenNode::waypoint_callback(const seabot2_msgs::msg::MissionState &msg){
-       wp_id_ = msg.waypoint_id;
-       wp_max_ = msg.waypoint_length;
-       time_next_wp_ = this->now() + rclcpp::Duration::from_seconds(msg.time_to_next_waypoint);
+   void ScreenNode::waypoint_callback(const seabot2_msgs::msg::MissionState & msg)
+   {
+     wp_id_ = msg.waypoint_id;
+     wp_max_ = msg.waypoint_length;
+     time_next_wp_ = this->now() + rclcpp::Duration::from_seconds(msg.time_to_next_waypoint);
    }
    
-   void ScreenNode::power_callback(const seabot2_msgs::msg::PowerState &msg){
-       voltage_ = msg.battery_volt;
+   void ScreenNode::power_callback(const seabot2_msgs::msg::PowerState & msg)
+   {
+     voltage_ = msg.battery_volt;
    }
    
-   void ScreenNode::safety_callback(const seabot2_msgs::msg::SafetyStatus2 &msg){
-       if(msg.global_safety_valid) {
-           status_ = Screen::OK;
-       }
-       else{
-           status_ = Screen::ERROR;
-       }
+   void ScreenNode::safety_callback(const seabot2_msgs::msg::SafetyStatus2 & msg)
+   {
+     if(msg.global_safety_valid) {
+       status_ = Screen::OK;
+     } else {
+       status_ = Screen::ERROR;
+     }
    }
-   

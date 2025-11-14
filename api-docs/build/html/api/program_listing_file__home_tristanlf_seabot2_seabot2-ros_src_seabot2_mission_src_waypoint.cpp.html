@@ -9,6 +9,7 @@
   <title>Program Listing for File waypoint.cpp &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -44,11 +45,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File waypoint.cpp</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -76,91 +77,96 @@
   <section id="program-listing-for-file-waypoint-cpp">
 <span id="program-listing-file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-mission-src-waypoint-cpp"></span><h1>Program Listing for File waypoint.cpp<a class="headerlink" href="#program-listing-for-file-waypoint-cpp" title="Link to this heading"></a></h1>
 <p>↰ <a class="reference internal" href="file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_mission_src_waypoint.cpp.html#file-home-tristanlf-seabot2-seabot2-ros-src-seabot2-mission-src-waypoint-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
-<span class="c1">// Created by lemezoth on 08/10/23.</span>
-<span class="c1">//</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;seabot2_mission/waypoint.hpp&quot;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;seabot2_mission/waypoint.hpp&quot;</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointDepth::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dc_msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">depth_control_set_point</span><span class="p">();</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointDepth::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+
 <span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointGNSSProfile::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
-<span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointSeafloorLanding::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dc_msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">depth_control_set_point</span><span class="p">();</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointSeafloorLanding::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Wait until the seabot2 reached 0.5m above the seafloor (for instance) and save piston volume value</span>
 <span class="w">    </span><span class="c1">// Then shutdown kalman and depth control, and set the piston to minimum volume</span>
 <span class="w">    </span><span class="c1">// When the waypoint is near ending, set back the piston to the previous volume</span>
 <span class="w">    </span><span class="c1">// and then restart kalman and depth control</span>
 <span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointTemperatureKeeping::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Control the depth according to a temperature set point</span>
-<span class="w">    </span><span class="c1">// Filter the temperature value and estimate the temperature gradient</span>
-<span class="w">    </span><span class="c1">// Use the gradient to control the depth</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointTemperatureKeeping::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dc_msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">depth_control_set_point</span><span class="p">();</span>
 
-<span class="c1">//    double depth_set_point = mission_-&gt;get_temp_slope()*this-&gt;temperature + mission_-&gt;get_temp_intercept();</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">depth_set_point</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">temperature_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">depth_set_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">depth_set_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">depth_set_point</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">temperature_</span><span class="p">)</span>
-<span class="w">        </span><span class="n">depth_set_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100.0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">        </span><span class="n">depth_set_point</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">error_temperature_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">temperature_</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">());</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fmin</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">temperature_keeping_k_</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">error_temperature_</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">velocity</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">error_temperature_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">temperature_</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">());</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fmin</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">temperature_keeping_k_</span><span class="o">*</span><span class="n">error_temperature_</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">velocity</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_set_point</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_set_point</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointTemperatureProfile::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="n">time</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Make a profile between two depth and two temperature</span>
-<span class="w">    </span><span class="c1">// Max and min depth are limit boundaries</span>
-<span class="w">    </span><span class="c1">// max and min temperature give the threshold to change the velocity</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointTemperatureProfile::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dc_msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">depth_control_set_point</span><span class="p">();</span>
 
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">first_init_</span><span class="p">){</span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">first_init_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">time_last_transition_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">    </span><span class="n">first_init_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">velocity</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">    </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_max_</span><span class="p">;</span>
+<span class="w">    </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PROFILE_GO_DOWN</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">state_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">PROFILE_GO_DOWN</span><span class="p">:</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">temperature_low_</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">depth_max_</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="p">(</span><span class="n">time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_last_transition_</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_delay_</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PROFILE_GO_UP</span><span class="p">;</span>
+<span class="w">        </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_min_</span><span class="p">;</span>
 <span class="w">        </span><span class="n">time_last_transition_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
-<span class="w">        </span><span class="n">first_init_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-
-<span class="w">        </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">velocity</span><span class="p">;</span>
-<span class="w">        </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">        </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_max_</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">PROFILE_GO_UP</span><span class="p">:</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">temperature_high_</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">depth_min_</span><span class="w"> </span><span class="o">||</span>
+<span class="w">        </span><span class="p">(</span><span class="n">time</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time_last_transition_</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_delay_</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PROFILE_GO_DOWN</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">        </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_max_</span><span class="p">;</span>
+<span class="w">        </span><span class="n">time_last_transition_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">break</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">state_</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">PROFILE_GO_DOWN</span><span class="p">:</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="o">&lt;</span><span class="n">temperature_low_</span>
-<span class="w">                </span><span class="o">||</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth</span><span class="p">()</span><span class="o">&gt;</span><span class="n">depth_max_</span>
-<span class="w">                </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">time_last_transition_</span><span class="p">)</span><span class="o">&gt;</span><span class="n">max_delay_</span><span class="p">){</span>
-<span class="w">                </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PROFILE_GO_UP</span><span class="p">;</span>
-<span class="w">                </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_min_</span><span class="p">;</span>
-<span class="w">                </span><span class="n">time_last_transition_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="no">PROFILE_GO_UP</span><span class="p">:</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_temperature</span><span class="p">()</span><span class="o">&gt;</span><span class="n">temperature_high_</span>
-<span class="w">               </span><span class="o">||</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth</span><span class="p">()</span><span class="o">&lt;</span><span class="n">depth_min_</span>
-<span class="w">               </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">time</span><span class="o">-</span><span class="n">time_last_transition_</span><span class="p">)</span><span class="o">&gt;</span><span class="n">max_delay_</span><span class="p">){</span>
-<span class="w">                </span><span class="n">state_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PROFILE_GO_DOWN</span><span class="p">;</span>
-<span class="w">                </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">get_depth_control_set_point</span><span class="p">().</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">depth_max_</span><span class="p">;</span>
-<span class="w">                </span><span class="n">time_last_transition_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">WaypointGNSSProfile::process</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Time</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">seabot2_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">DepthControlSetPoint</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">dc_msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mission_</span><span class="o">-&gt;</span><span class="n">depth_control_set_point</span><span class="p">();</span>
+
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">limit_velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">enable_control</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">  </span><span class="n">dc_msg</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">stamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>

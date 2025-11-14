@@ -77,21 +77,26 @@ $(function() {
   <div class="headertitle"><div class="title">Waypoint Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base class for a waypoint.  
+ <a href="classWaypoint.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="log__data_8h_source.html">log_data.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Waypoint:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWaypoint__inherit__graph.png" border="0" usemap="#aWaypoint_inherit__map" alt="Inheritance graph"/></div>
 <map name="aWaypoint_inherit__map" id="aWaypoint_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,104,88,129"/>
-<area shape="rect" href="classWaypointDepth.html" title=" " alt="" coords="183,5,306,31"/>
+<area shape="rect" title="Base class for a waypoint." alt="" coords="5,104,88,129"/>
+<area shape="rect" href="classWaypointDepth.html" title="Waypoint for depth keeping." alt="" coords="183,5,306,31"/>
 <area shape="poly" title=" " alt="" coords="67,92,97,65,135,40,182,24,184,29,137,44,100,69,70,96"/>
 <area shape="rect" href="classWaypointGNSSProfile.html" title=" " alt="" coords="165,55,325,80"/>
 <area shape="poly" title=" " alt="" coords="101,98,135,89,183,77,184,83,137,94,102,103"/>
-<area shape="rect" href="classWaypointSeafloorLanding.html" title=" " alt="" coords="151,104,338,129"/>
+<area shape="rect" href="classWaypointSeafloorLanding.html" title="Waypoint for seafloor landing." alt="" coords="151,104,338,129"/>
 <area shape="poly" title=" " alt="" coords="102,114,151,114,151,119,102,119"/>
-<area shape="rect" href="classWaypointTemperatureKeeping.html" title=" " alt="" coords="136,153,353,179"/>
+<area shape="rect" href="classWaypointTemperatureKeeping.html" title="Waypoint for temperature keeping." alt="" coords="136,153,353,179"/>
 <area shape="poly" title=" " alt="" coords="102,129,137,138,188,151,187,156,135,143,101,134"/>
-<area shape="rect" href="classWaypointTemperatureProfile.html" title=" " alt="" coords="141,203,348,228"/>
+<area shape="rect" href="classWaypointTemperatureProfile.html" title="Waypoint for temperature profile." alt="" coords="141,203,348,228"/>
 <area shape="poly" title=" " alt="" coords="71,138,101,164,137,188,170,200,168,205,135,192,98,168,68,142"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -100,56 +105,194 @@ Collaboration diagram for Waypoint:</div>
 <div class="dyncontent">
 <div class="center"><img src="classWaypoint__coll__graph.png" border="0" usemap="#aWaypoint_coll__map" alt="Collaboration graph"/></div>
 <map name="aWaypoint_coll__map" id="aWaypoint_coll__map">
-<area shape="rect" title=" " alt="" coords="5,93,88,119"/>
-<area shape="rect" href="classMission.html" title=" " alt="" coords="11,5,83,31"/>
+<area shape="rect" title="Base class for a waypoint." alt="" coords="5,181,88,207"/>
+<area shape="rect" href="classMission.html" title="Handles the mission management." alt="" coords="11,93,83,119"/>
+<area shape="poly" title=" " alt="" coords="49,133,49,181,44,181,44,133"/>
+<area shape="rect" title=" " alt="" coords="17,5,76,31"/>
 <area shape="poly" title=" " alt="" coords="49,45,49,93,44,93,44,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b96693d5d4493fa9bc32d8a38b9ef33" id="r_a9b96693d5d4493fa9bc32d8a38b9ef33"><td class="memItemLeft" align="right" valign="top"><a id="a9b96693d5d4493fa9bc32d8a38b9ef33" name="a9b96693d5d4493fa9bc32d8a38b9ef33"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Waypoint</b> (const double &amp;duration_param, const double &amp;depth_param, const double &amp;east_param, const double &amp;north_param, const bool &amp;enable_thrusters_param=false, const bool &amp;seafloor_landing_param=false)</td></tr>
+<tr class="memitem:a5ecb81fe7f365f3249a1a6e2ec25984c" id="r_a5ecb81fe7f365f3249a1a6e2ec25984c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a5ecb81fe7f365f3249a1a6e2ec25984c">Waypoint</a> ()=default</td></tr>
+<tr class="separator:a5ecb81fe7f365f3249a1a6e2ec25984c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b96693d5d4493fa9bc32d8a38b9ef33" id="r_a9b96693d5d4493fa9bc32d8a38b9ef33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a9b96693d5d4493fa9bc32d8a38b9ef33">Waypoint</a> (const double &amp;duration_param, const double &amp;depth_param, const double &amp;east_param, const double &amp;north_param, const bool &amp;enable_thrusters_param=false, const bool &amp;seafloor_landing_param=false)</td></tr>
 <tr class="separator:a9b96693d5d4493fa9bc32d8a38b9ef33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b95eeea311645199d18144d101b2d2" id="r_a44b95eeea311645199d18144d101b2d2"><td class="memItemLeft" align="right" valign="top"><a id="a44b95eeea311645199d18144d101b2d2" name="a44b95eeea311645199d18144d101b2d2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Waypoint</b> (<a class="el" href="classMission.html">Mission</a> *mission)</td></tr>
+<tr class="memitem:a44b95eeea311645199d18144d101b2d2" id="r_a44b95eeea311645199d18144d101b2d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a44b95eeea311645199d18144d101b2d2">Waypoint</a> (<a class="el" href="classMission.html">Mission</a> *mission)</td></tr>
 <tr class="separator:a44b95eeea311645199d18144d101b2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8108d386384cd92289885f224289386d" id="r_a8108d386384cd92289885f224289386d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a8108d386384cd92289885f224289386d">~Waypoint</a> ()=default</td></tr>
+<tr class="separator:a8108d386384cd92289885f224289386d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9e95a58a5309b3849bd97b0c9cd2e8" id="r_aae9e95a58a5309b3849bd97b0c9cd2e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#aae9e95a58a5309b3849bd97b0c9cd2e8">process</a> (const rclcpp::Time &amp;time)=0</td></tr>
+<tr class="memdesc:aae9e95a58a5309b3849bd97b0c9cd2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process waypoint and set depth control setpoint.  <br /></td></tr>
 <tr class="separator:aae9e95a58a5309b3849bd97b0c9cd2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a50285f06fcf53385e2092f66db354a8c" id="r_a50285f06fcf53385e2092f66db354a8c"><td class="memItemLeft" align="right" valign="top"><a id="a50285f06fcf53385e2092f66db354a8c" name="a50285f06fcf53385e2092f66db354a8c"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>north</b> = 0.0</td></tr>
+<tr class="memitem:a50285f06fcf53385e2092f66db354a8c" id="r_a50285f06fcf53385e2092f66db354a8c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a50285f06fcf53385e2092f66db354a8c">north</a> = 0.0</td></tr>
 <tr class="separator:a50285f06fcf53385e2092f66db354a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a425cd7f3bcd3e57818e7d6447a313e50" id="r_a425cd7f3bcd3e57818e7d6447a313e50"><td class="memItemLeft" align="right" valign="top"><a id="a425cd7f3bcd3e57818e7d6447a313e50" name="a425cd7f3bcd3e57818e7d6447a313e50"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>east</b> = 0.0</td></tr>
+<tr class="memitem:a425cd7f3bcd3e57818e7d6447a313e50" id="r_a425cd7f3bcd3e57818e7d6447a313e50"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a425cd7f3bcd3e57818e7d6447a313e50">east</a> = 0.0</td></tr>
 <tr class="separator:a425cd7f3bcd3e57818e7d6447a313e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d5cd3970869c646b4e86e986996b8a3" id="r_a7d5cd3970869c646b4e86e986996b8a3"><td class="memItemLeft" align="right" valign="top"><a id="a7d5cd3970869c646b4e86e986996b8a3" name="a7d5cd3970869c646b4e86e986996b8a3"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b> = 0.0</td></tr>
+<tr class="memitem:a7d5cd3970869c646b4e86e986996b8a3" id="r_a7d5cd3970869c646b4e86e986996b8a3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a7d5cd3970869c646b4e86e986996b8a3">depth</a> = 0.0</td></tr>
 <tr class="separator:a7d5cd3970869c646b4e86e986996b8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2c73435c531a01c6dd830f0b226e19f" id="r_ac2c73435c531a01c6dd830f0b226e19f"><td class="memItemLeft" align="right" valign="top"><a id="ac2c73435c531a01c6dd830f0b226e19f" name="ac2c73435c531a01c6dd830f0b226e19f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>duration</b> = 0</td></tr>
+<tr class="memitem:ac2c73435c531a01c6dd830f0b226e19f" id="r_ac2c73435c531a01c6dd830f0b226e19f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#ac2c73435c531a01c6dd830f0b226e19f">duration</a> = 0</td></tr>
 <tr class="separator:ac2c73435c531a01c6dd830f0b226e19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a175f6c7ecf0cd7014f6a48d5cc3638f7" id="r_a175f6c7ecf0cd7014f6a48d5cc3638f7"><td class="memItemLeft" align="right" valign="top"><a id="a175f6c7ecf0cd7014f6a48d5cc3638f7" name="a175f6c7ecf0cd7014f6a48d5cc3638f7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_thrusters</b> = false</td></tr>
+<tr class="memitem:a175f6c7ecf0cd7014f6a48d5cc3638f7" id="r_a175f6c7ecf0cd7014f6a48d5cc3638f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a175f6c7ecf0cd7014f6a48d5cc3638f7">enable_thrusters</a> = false</td></tr>
 <tr class="separator:a175f6c7ecf0cd7014f6a48d5cc3638f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a331d69d04562574f810e752d16f83c21" id="r_a331d69d04562574f810e752d16f83c21"><td class="memItemLeft" align="right" valign="top"><a id="a331d69d04562574f810e752d16f83c21" name="a331d69d04562574f810e752d16f83c21"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>seafloor_landing</b> = false</td></tr>
+<tr class="memitem:a331d69d04562574f810e752d16f83c21" id="r_a331d69d04562574f810e752d16f83c21"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a331d69d04562574f810e752d16f83c21">seafloor_landing</a> = false</td></tr>
 <tr class="separator:a331d69d04562574f810e752d16f83c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b806ea31179bb7287694907120d58f7" id="r_a5b806ea31179bb7287694907120d58f7"><td class="memItemLeft" align="right" valign="top"><a id="a5b806ea31179bb7287694907120d58f7" name="a5b806ea31179bb7287694907120d58f7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>velocity</b> = 0.0</td></tr>
+<tr class="memitem:a5b806ea31179bb7287694907120d58f7" id="r_a5b806ea31179bb7287694907120d58f7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a5b806ea31179bb7287694907120d58f7">velocity</a> = 0.0</td></tr>
+<tr class="memdesc:a5b806ea31179bb7287694907120d58f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth control setpoint limt_velocity.  <br /></td></tr>
 <tr class="separator:a5b806ea31179bb7287694907120d58f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07352276950a2e7f20618cd033fcc043" id="r_a07352276950a2e7f20618cd033fcc043"><td class="memItemLeft" align="right" valign="top"><a id="a07352276950a2e7f20618cd033fcc043" name="a07352276950a2e7f20618cd033fcc043"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b> = seabot2_msgs::msg::MissionState::MODE_IDLE</td></tr>
+<tr class="memitem:a07352276950a2e7f20618cd033fcc043" id="r_a07352276950a2e7f20618cd033fcc043"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a07352276950a2e7f20618cd033fcc043">mode</a> = seabot2_msgs::msg::MissionState::MODE_IDLE</td></tr>
+<tr class="memdesc:a07352276950a2e7f20618cd033fcc043"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO mission mode.  <br /></td></tr>
 <tr class="separator:a07352276950a2e7f20618cd033fcc043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eb82758cba0567b34176fc325bbd8fa" id="r_a2eb82758cba0567b34176fc325bbd8fa"><td class="memItemLeft" align="right" valign="top"><a id="a2eb82758cba0567b34176fc325bbd8fa" name="a2eb82758cba0567b34176fc325bbd8fa"></a>
-rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><b>time_end</b></td></tr>
+<tr class="memitem:a2eb82758cba0567b34176fc325bbd8fa" id="r_a2eb82758cba0567b34176fc325bbd8fa"><td class="memItemLeft" align="right" valign="top">rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#a2eb82758cba0567b34176fc325bbd8fa">time_end</a></td></tr>
+<tr class="memdesc:a2eb82758cba0567b34176fc325bbd8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classWaypoint.html" title="Base class for a waypoint.">Waypoint</a> end time.  <br /></td></tr>
 <tr class="separator:a2eb82758cba0567b34176fc325bbd8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d91ed57ac82236555ad0abacee187e" id="r_af5d91ed57ac82236555ad0abacee187e"><td class="memItemLeft" align="right" valign="top"><a id="af5d91ed57ac82236555ad0abacee187e" name="af5d91ed57ac82236555ad0abacee187e"></a>
-<a class="el" href="classMission.html">Mission</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>mission_</b> = nullptr</td></tr>
+<tr class="memitem:af5d91ed57ac82236555ad0abacee187e" id="r_af5d91ed57ac82236555ad0abacee187e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMission.html">Mission</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classWaypoint.html#af5d91ed57ac82236555ad0abacee187e">mission_</a> = nullptr</td></tr>
+<tr class="memdesc:af5d91ed57ac82236555ad0abacee187e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the mission owning the waypoint.  <br /></td></tr>
 <tr class="separator:af5d91ed57ac82236555ad0abacee187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base class for a waypoint. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5ecb81fe7f365f3249a1a6e2ec25984c" name="a5ecb81fe7f365f3249a1a6e2ec25984c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ecb81fe7f365f3249a1a6e2ec25984c">&#9670;&#160;</a></span>Waypoint() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Waypoint::Waypoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b96693d5d4493fa9bc32d8a38b9ef33" name="a9b96693d5d4493fa9bc32d8a38b9ef33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b96693d5d4493fa9bc32d8a38b9ef33">&#9670;&#160;</a></span>Waypoint() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Waypoint::Waypoint </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>duration_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>depth_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>east_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>north_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>enable_thrusters_param</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;&#160;</td>
+          <td class="paramname"><em>seafloor_landing_param</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44b95eeea311645199d18144d101b2d2" name="a44b95eeea311645199d18144d101b2d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b95eeea311645199d18144d101b2d2">&#9670;&#160;</a></span>Waypoint() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Waypoint::Waypoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMission.html">Mission</a> *&#160;</td>
+          <td class="paramname"><em>mission</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8108d386384cd92289885f224289386d" name="a8108d386384cd92289885f224289386d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8108d386384cd92289885f224289386d">&#9670;&#160;</a></span>~Waypoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Waypoint::~Waypoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aae9e95a58a5309b3849bd97b0c9cd2e8" name="aae9e95a58a5309b3849bd97b0c9cd2e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae9e95a58a5309b3849bd97b0c9cd2e8">&#9670;&#160;</a></span>process()</h2>
@@ -175,7 +318,164 @@ rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><b>time_end</b><
 </table>
 </div><div class="memdoc">
 
+<p>Process waypoint and set depth control setpoint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>current time </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="classWaypointDepth.html#abccb938b1a7839c783a2ec1f102a5c42">WaypointDepth</a>, <a class="el" href="classWaypointSeafloorLanding.html#a7c0508c8708ebbdf22657f953bf625de">WaypointSeafloorLanding</a>, <a class="el" href="classWaypointTemperatureKeeping.html#a7c578d5be2090fd7a68f4ccbc83da54f">WaypointTemperatureKeeping</a>, <a class="el" href="classWaypointTemperatureProfile.html#acbf771a6723a6238fa308c93d946005b">WaypointTemperatureProfile</a>, and <a class="el" href="classWaypointGNSSProfile.html#aff9b3624fe1a1d7130bd456a170d4e53">WaypointGNSSProfile</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7d5cd3970869c646b4e86e986996b8a3" name="a7d5cd3970869c646b4e86e986996b8a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5cd3970869c646b4e86e986996b8a3">&#9670;&#160;</a></span>depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Waypoint::depth = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2c73435c531a01c6dd830f0b226e19f" name="ac2c73435c531a01c6dd830f0b226e19f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2c73435c531a01c6dd830f0b226e19f">&#9670;&#160;</a></span>duration</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Waypoint::duration = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a425cd7f3bcd3e57818e7d6447a313e50" name="a425cd7f3bcd3e57818e7d6447a313e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425cd7f3bcd3e57818e7d6447a313e50">&#9670;&#160;</a></span>east</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Waypoint::east = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a175f6c7ecf0cd7014f6a48d5cc3638f7" name="a175f6c7ecf0cd7014f6a48d5cc3638f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175f6c7ecf0cd7014f6a48d5cc3638f7">&#9670;&#160;</a></span>enable_thrusters</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Waypoint::enable_thrusters = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af5d91ed57ac82236555ad0abacee187e" name="af5d91ed57ac82236555ad0abacee187e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d91ed57ac82236555ad0abacee187e">&#9670;&#160;</a></span>mission_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMission.html">Mission</a>* Waypoint::mission_ = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the mission owning the waypoint. </p>
+
+</div>
+</div>
+<a id="a07352276950a2e7f20618cd033fcc043" name="a07352276950a2e7f20618cd033fcc043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07352276950a2e7f20618cd033fcc043">&#9670;&#160;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Waypoint::mode = seabot2_msgs::msg::MissionState::MODE_IDLE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TODO mission mode. </p>
+
+</div>
+</div>
+<a id="a50285f06fcf53385e2092f66db354a8c" name="a50285f06fcf53385e2092f66db354a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50285f06fcf53385e2092f66db354a8c">&#9670;&#160;</a></span>north</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Waypoint::north = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a331d69d04562574f810e752d16f83c21" name="a331d69d04562574f810e752d16f83c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331d69d04562574f810e752d16f83c21">&#9670;&#160;</a></span>seafloor_landing</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Waypoint::seafloor_landing = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2eb82758cba0567b34176fc325bbd8fa" name="a2eb82758cba0567b34176fc325bbd8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2eb82758cba0567b34176fc325bbd8fa">&#9670;&#160;</a></span>time_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Time Waypoint::time_end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classWaypoint.html" title="Base class for a waypoint.">Waypoint</a> end time. </p>
+
+</div>
+</div>
+<a id="a5b806ea31179bb7287694907120d58f7" name="a5b806ea31179bb7287694907120d58f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b806ea31179bb7287694907120d58f7">&#9670;&#160;</a></span>velocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Waypoint::velocity = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Depth control setpoint limt_velocity. </p>
 
 </div>
 </div>

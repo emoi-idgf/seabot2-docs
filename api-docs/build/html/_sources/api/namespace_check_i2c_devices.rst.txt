@@ -24,4 +24,4 @@ Variables
 ---------
 
 
-- :ref:`exhale_variable_check__i2c__devices_8py_1a4d47b00e6d9ca3da5da8d449d72dda35`
+- :ref:`exhale_variable_namespacecheck__i2c__devices_1a4d47b00e6d9ca3da5da8d449d72dda35`

@@ -9,6 +9,7 @@
   <title>Program Listing for File icm20948_register.h &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -44,11 +45,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File icm20948_register.h</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -257,13 +258,13 @@
 
 <span class="k">typedef</span><span class="w"> </span><span class="k">enum</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">AK09916_mode_power_down</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b0</span><span class="p">,</span>
-<span class="w">    </span><span class="n">AK09916_mode_single</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b1</span><span class="p">,</span>
-<span class="w">    </span><span class="n">AK09916_mode_cont_10hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10</span><span class="p">,</span><span class="w">  </span><span class="c1">// MODE 1</span>
-<span class="w">    </span><span class="n">AK09916_mode_cont_20hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b100</span><span class="p">,</span><span class="w"> </span><span class="c1">// MODE 2</span>
-<span class="w">    </span><span class="n">AK09916_mode_cont_50hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">,</span><span class="w"> </span><span class="c1">// MODE 3 Warning : not logical (see datasheet)</span>
-<span class="w">    </span><span class="n">AK09916_mode_cont_100hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b1000</span><span class="p">,</span><span class="w"> </span><span class="c1">// MODE 4</span>
-<span class="w">    </span><span class="n">AK09916_mode_self_test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10000</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AK09916_mode_power_down</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b0</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AK09916_mode_single</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b1</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AK09916_mode_cont_10hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10</span><span class="p">,</span><span class="w">    </span><span class="c1">// MODE 1</span>
+<span class="w">  </span><span class="n">AK09916_mode_cont_20hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b100</span><span class="p">,</span><span class="w">   </span><span class="c1">// MODE 2</span>
+<span class="w">  </span><span class="n">AK09916_mode_cont_50hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">,</span><span class="w">   </span><span class="c1">// MODE 3 Warning : not logical (see datasheet)</span>
+<span class="w">  </span><span class="n">AK09916_mode_cont_100hz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b1000</span><span class="p">,</span><span class="w">   </span><span class="c1">// MODE 4</span>
+<span class="w">  </span><span class="n">AK09916_mode_self_test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10000</span><span class="p">,</span>
 <span class="p">}</span><span class="w"> </span><span class="n">AK09916_mode_e</span><span class="p">;</span>
 
 <span class="cp">#endif </span><span class="c1">//ICM20948_REGISTER_H</span>

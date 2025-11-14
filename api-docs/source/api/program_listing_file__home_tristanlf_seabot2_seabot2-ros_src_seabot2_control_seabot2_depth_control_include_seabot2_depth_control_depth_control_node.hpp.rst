@@ -14,8 +14,8 @@ Program Listing for File depth_control_node.hpp
    // Created by lemezoth on 05/09/22.
    //
    
-   #ifndef BUILD_DEPTH_CONTROL_NODE_HPP
-   #define BUILD_DEPTH_CONTROL_NODE_HPP
+   #ifndef SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_NODE_HPP_
+   #define SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_NODE_HPP_
    
    #include "rclcpp/rclcpp.hpp"
    
@@ -60,13 +60,16 @@ Program Listing for File depth_control_node.hpp
      bool velocity_limits_computations_ = false;
    
      bool enable_control_ = true;   // Allow publish set point to piston
-     enum WAYPOINT_TYPE:unsigned int {WP_IDLE=0,
-       WP_DEPTH=1,
-       WP_SEAFLOOR_LANDING=2,
-       WP_TEMPERATURE_KEEPING=3,
-       WP_TEMPERATURE_PROFILE=4,
-       WP_GNSS_PROFILE=5,
-       WP_STOP=6};
+     enum WAYPOINT_TYPE:unsigned int
+     {
+       WP_IDLE = 0,
+       WP_DEPTH = 1,
+       WP_SEAFLOOR_LANDING = 2,
+       WP_TEMPERATURE_KEEPING = 3,
+       WP_TEMPERATURE_PROFILE = 4,
+       WP_GNSS_PROFILE = 5,
+       WP_STOP = 6
+     };
      WAYPOINT_TYPE wp_type_ = WP_IDLE;
    
      std::vector<double> solver_velocity_, solver_alpha_;
@@ -120,4 +123,4 @@ Program Listing for File depth_control_node.hpp
    
      void generate_velocity_pairs();
    };
-   #endif //BUILD_DEPTH_CONTROL_NODE_HPP
+   #endif  // SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_NODE_HPP_

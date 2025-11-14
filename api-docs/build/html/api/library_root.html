@@ -9,6 +9,7 @@
   <title>Seabot2 C++ API &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Namespace boost" href="namespace_boost.html" />
-    <link rel="prev" title="Seabot2 ROS2 API documentation" href="../index.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,34 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Seabot2 C++ API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#seabot2">Seabot2</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#full-api">Full API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#namespaces">Namespaces</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Seabot2 C++ API</a><ul>
+<li><a class="reference internal" href="#seabot2">Seabot2</a><ul>
+<li><a class="reference internal" href="#page-hierarchy">Page Hierarchy</a></li>
+<li><a class="reference internal" href="#full-api">Full API</a><ul>
+<li><a class="reference internal" href="#namespaces">Namespaces</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#classes-and-structs">Classes and Structs</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#enums">Enums</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#unions">Unions</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#variables">Variables</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#defines">Defines</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#typedefs">Typedefs</a><ul>
 </ul>
 </li>
 </ul>
@@ -67,7 +80,9 @@
 </ul>
 </li>
 </ul>
-
+</li>
+</ul>
+</div>
         </div>
       </div>
     </nav>
@@ -205,11 +220,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="namespace_seabot2py.html">Namespace seabot2py</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="namespace_seabot_launch.html">Namespace seabot_launch</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="namespace_seabot_launch.html#functions">Functions</a></li>
 </ul>
@@ -219,16 +229,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="namespace_setup.html">Namespace setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="namespace_setup.html#classes">Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="namespace_setup.html#variables">Variables</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="namespace_simulation_launch.html">Namespace simulation_launch</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="namespace_simulation_launch.html#functions">Functions</a></li>
 </ul>
 </li>
 </ul>
@@ -239,11 +240,6 @@
 <li class="toctree-l2"><a class="reference internal" href="namespace_std.html#namespaces">Namespaces</a></li>
 </ul>
 </li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="namespace_std__chrono.html">Namespace std::chrono</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -1910,31 +1906,34 @@
 <li class="toctree-l5"><a class="reference internal" href="classMission.html#_CPPv4N7Mission13WAYPOINT_TYPE15WP_GNSS_PROFILEE"><code class="docutils literal notranslate"><span class="pre">WP_GNSS_PROFILE</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission13MISSION_STATEE"><code class="docutils literal notranslate"><span class="pre">MISSION_STATE</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="classMission.html#_CPPv4N7Mission13MISSION_STATE11NOT_STARTEDE"><code class="docutils literal notranslate"><span class="pre">NOT_STARTED</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classMission.html#_CPPv4N7Mission13MISSION_STATE7RUNNINGE"><code class="docutils literal notranslate"><span class="pre">RUNNING</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classMission.html#_CPPv4N7Mission13MISSION_STATE6ENDINGE"><code class="docutils literal notranslate"><span class="pre">ENDING</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="classMission.html#_CPPv4N7Mission13MISSION_STATE5NO_WPE"><code class="docutils literal notranslate"><span class="pre">NO_WP</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission7MissionEv"><code class="docutils literal notranslate"><span class="pre">Mission()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission27is_current_waypoint_of_typeERK13WAYPOINT_TYPE"><code class="docutils literal notranslate"><span class="pre">is_current_waypoint_of_type()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission12update_stateERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">update_state()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission19is_new_mission_fileERKNSt6stringERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">is_new_mission_file()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission12load_missionERKNSt6stringERKNSt6stringERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">load_mission()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission17is_mission_enableEv"><code class="docutils literal notranslate"><span class="pre">is_mission_enable()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission17get_velocity_listEv"><code class="docutils literal notranslate"><span class="pre">get_velocity_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission23depth_control_set_pointEv"><code class="docutils literal notranslate"><span class="pre">depth_control_set_point()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission27get_depth_control_set_pointEv"><code class="docutils literal notranslate"><span class="pre">get_depth_control_set_point()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission14get_start_timeEv"><code class="docutils literal notranslate"><span class="pre">get_start_time()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission12get_end_timeEv"><code class="docutils literal notranslate"><span class="pre">get_end_time()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission20get_number_waypointsEv"><code class="docutils literal notranslate"><span class="pre">get_number_waypoints()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission23get_current_waypoint_idEv"><code class="docutils literal notranslate"><span class="pre">get_current_waypoint_id()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission25get_time_to_next_waypointEv"><code class="docutils literal notranslate"><span class="pre">get_time_to_next_waypoint()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission26set_limit_velocity_defaultERKd"><code class="docutils literal notranslate"><span class="pre">set_limit_velocity_default()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission16get_mission_modeEv"><code class="docutils literal notranslate"><span class="pre">get_mission_mode()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission17get_mission_stateEv"><code class="docutils literal notranslate"><span class="pre">get_mission_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission15get_temperatureEv"><code class="docutils literal notranslate"><span class="pre">get_temperature()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission9get_depthEv"><code class="docutils literal notranslate"><span class="pre">get_depth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission40get_current_waypoint_temperature_keepingEv"><code class="docutils literal notranslate"><span class="pre">get_current_waypoint_temperature_keeping()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission26set_limit_velocity_defaultERKd"><code class="docutils literal notranslate"><span class="pre">set_limit_velocity_default()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission12update_depthERKd"><code class="docutils literal notranslate"><span class="pre">update_depth()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission18update_temperatureERKd"><code class="docutils literal notranslate"><span class="pre">update_temperature()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission26update_temperature_profileERKdRKd"><code class="docutils literal notranslate"><span class="pre">update_temperature_profile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission27get_depth_control_set_pointEv"><code class="docutils literal notranslate"><span class="pre">get_depth_control_set_point()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission24idle_state_configurationERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">idle_state_configuration()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission15get_temperatureEv"><code class="docutils literal notranslate"><span class="pre">get_temperature()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission14get_temp_slopeEv"><code class="docutils literal notranslate"><span class="pre">get_temp_slope()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission18get_temp_interceptEv"><code class="docutils literal notranslate"><span class="pre">get_temp_intercept()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission27is_current_waypoint_of_typeERK13WAYPOINT_TYPE"><code class="docutils literal notranslate"><span class="pre">is_current_waypoint_of_type()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission40get_current_waypoint_temperature_keepingEv"><code class="docutils literal notranslate"><span class="pre">get_current_waypoint_temperature_keeping()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4NK7Mission9get_depthEv"><code class="docutils literal notranslate"><span class="pre">get_depth()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classMission.html#_CPPv4N7Mission22temperature_keeping_k_E"><code class="docutils literal notranslate"><span class="pre">temperature_keeping_k_</span></code></a></li>
 </ul>
 </li>
@@ -2403,199 +2402,6 @@
 <li class="toctree-l3"><a class="reference internal" href="classScreenNode.html#_CPPv410ScreenNode"><code class="docutils literal notranslate"><span class="pre">ScreenNode</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="classScreenNode.html#_CPPv4N10ScreenNode10ScreenNodeEv"><code class="docutils literal notranslate"><span class="pre">ScreenNode()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classScreenNode.html#_CPPv4N10ScreenNodeD0Ev"><code class="docutils literal notranslate"><span class="pre">~ScreenNode()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html">Class BinaryDistribution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#inheritance-relationships">Inheritance Relationships</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#base-type">Base Type</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#class-documentation">Class Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#has_ext_modules"><code class="docutils literal notranslate"><span class="pre">has_ext_modules()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#is_pure"><code class="docutils literal notranslate"><span class="pre">is_pure()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#author"><code class="docutils literal notranslate"><span class="pre">author</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#author_email"><code class="docutils literal notranslate"><span class="pre">author_email</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#url"><code class="docutils literal notranslate"><span class="pre">url</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#description"><code class="docutils literal notranslate"><span class="pre">description</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#long_description"><code class="docutils literal notranslate"><span class="pre">long_description</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#extras_require"><code class="docutils literal notranslate"><span class="pre">extras_require</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#packages"><code class="docutils literal notranslate"><span class="pre">packages</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#package_data"><code class="docutils literal notranslate"><span class="pre">package_data</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#cmdclass"><code class="docutils literal notranslate"><span class="pre">cmdclass</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#zip_safe"><code class="docutils literal notranslate"><span class="pre">zip_safe</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#python_requires"><code class="docutils literal notranslate"><span class="pre">python_requires</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="classsetup_1_1BinaryDistribution.html#distclass"><code class="docutils literal notranslate"><span class="pre">distclass</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="classSimulator.html">Class Simulator</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classSimulator.html#class-documentation">Class Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classSimulator.html#_CPPv49Simulator"><code class="docutils literal notranslate"><span class="pre">Simulator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9SimulatorEv"><code class="docutils literal notranslate"><span class="pre">Simulator()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator1fERK6MatrixId14SIMU_NB_STATESXL1EEEi"><code class="docutils literal notranslate"><span class="pre">f()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14run_simulationEv"><code class="docutils literal notranslate"><span class="pre">run_simulation()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator19salinity_from_depthEd"><code class="docutils literal notranslate"><span class="pre">salinity_from_depth()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4NK9Simulator14fz_computationEd"><code class="docutils literal notranslate"><span class="pre">fz_computation()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4NK9Simulator25fz_derivative_computationEd"><code class="docutils literal notranslate"><span class="pre">fz_derivative_computation()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22temperature_from_depthEd"><code class="docutils literal notranslate"><span class="pre">temperature_from_depth()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22get_density_from_depthEdd"><code class="docutils literal notranslate"><span class="pre">get_density_from_depth()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator11control_pwmEi"><code class="docutils literal notranslate"><span class="pre">control_pwm()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16simulate_sensorsEv"><code class="docutils literal notranslate"><span class="pre">simulate_sensors()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator24simulate_piston_positionEv"><code class="docutils literal notranslate"><span class="pre">simulate_piston_position()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9save_dataERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">save_data()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4NK9Simulator16write_to_file_fzEv"><code class="docutils literal notranslate"><span class="pre">write_to_file_fz()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator15init_bag_writerEv"><code class="docutils literal notranslate"><span class="pre">init_bag_writer()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator29find_index_center_thermoclineEv"><code class="docutils literal notranslate"><span class="pre">find_index_center_thermocline()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14init_wave_fileEv"><code class="docutils literal notranslate"><span class="pre">init_wave_file()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator12compute_waveEdb"><code class="docutils literal notranslate"><span class="pre">compute_wave()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22compute_std_generatorsEv"><code class="docutils literal notranslate"><span class="pre">compute_std_generators()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22depth_from_temperatureEd"><code class="docutils literal notranslate"><span class="pre">depth_from_temperature()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator11start_time_E"><code class="docutils literal notranslate"><span class="pre">start_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9end_time_E"><code class="docutils literal notranslate"><span class="pre">end_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator3dt_E"><code class="docutils literal notranslate"><span class="pre">dt_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2t_E"><code class="docutils literal notranslate"><span class="pre">t_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator8nb_stepsE"><code class="docutils literal notranslate"><span class="pre">nb_steps</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2x_E"><code class="docutils literal notranslate"><span class="pre">x_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator10motor_cmd_E"><code class="docutils literal notranslate"><span class="pre">motor_cmd_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9salinity_E"><code class="docutils literal notranslate"><span class="pre">salinity_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator4rho_E"><code class="docutils literal notranslate"><span class="pre">rho_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2g_E"><code class="docutils literal notranslate"><span class="pre">g_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13sea_pressure_E"><code class="docutils literal notranslate"><span class="pre">sea_pressure_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13abs_pressure_E"><code class="docutils literal notranslate"><span class="pre">abs_pressure_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14piston_volume_E"><code class="docutils literal notranslate"><span class="pre">piston_volume_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13volume_total_E"><code class="docutils literal notranslate"><span class="pre">volume_total_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator11volume_air_E"><code class="docutils literal notranslate"><span class="pre">volume_air_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator15volume_antenna_E"><code class="docutils literal notranslate"><span class="pre">volume_antenna_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator19temperature_degree_E"><code class="docutils literal notranslate"><span class="pre">temperature_degree_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9latitude_E"><code class="docutils literal notranslate"><span class="pre">latitude_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator15seafloor_depth_E"><code class="docutils literal notranslate"><span class="pre">seafloor_depth_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator18seafloor_hardness_E"><code class="docutils literal notranslate"><span class="pre">seafloor_hardness_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13salinity_cst_E"><code class="docutils literal notranslate"><span class="pre">salinity_cst_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator11robot_mass_E"><code class="docutils literal notranslate"><span class="pre">robot_mass_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator17robot_added_mass_E"><code class="docutils literal notranslate"><span class="pre">robot_added_mass_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator15robot_diameter_E"><code class="docutils literal notranslate"><span class="pre">robot_diameter_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13screw_thread_E"><code class="docutils literal notranslate"><span class="pre">screw_thread_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14tick_per_turn_E"><code class="docutils literal notranslate"><span class="pre">tick_per_turn_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16piston_diameter_E"><code class="docutils literal notranslate"><span class="pre">piston_diameter_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16piston_max_tick_E"><code class="docutils literal notranslate"><span class="pre">piston_max_tick_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13screw_Radius_E"><code class="docutils literal notranslate"><span class="pre">screw_Radius_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator26screw_FrictionCoefficient_E"><code class="docutils literal notranslate"><span class="pre">screw_FrictionCoefficient_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16battery_tension_E"><code class="docutils literal notranslate"><span class="pre">battery_tension_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator19volume_equilibrium_E"><code class="docutils literal notranslate"><span class="pre">volume_equilibrium_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator4chi_E"><code class="docutils literal notranslate"><span class="pre">chi_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator5chi2_E"><code class="docutils literal notranslate"><span class="pre">chi2_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14volume_air_V0_E"><code class="docutils literal notranslate"><span class="pre">volume_air_V0_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14volume_air_P0_E"><code class="docutils literal notranslate"><span class="pre">volume_air_P0_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14volume_air_T0_E"><code class="docutils literal notranslate"><span class="pre">volume_air_T0_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14volume_air_nR_E"><code class="docutils literal notranslate"><span class="pre">volume_air_nR_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator36fz_model_boundary_velocity_positive_E"><code class="docutils literal notranslate"><span class="pre">fz_model_boundary_velocity_positive_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator36fz_model_boundary_velocity_negative_E"><code class="docutils literal notranslate"><span class="pre">fz_model_boundary_velocity_negative_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator41fz_derivative_at_model_boundary_positive_E"><code class="docutils literal notranslate"><span class="pre">fz_derivative_at_model_boundary_positive_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator37fz_offset_at_model_boundary_positive_E"><code class="docutils literal notranslate"><span class="pre">fz_offset_at_model_boundary_positive_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator41fz_derivative_at_model_boundary_negative_E"><code class="docutils literal notranslate"><span class="pre">fz_derivative_at_model_boundary_negative_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator37fz_offset_at_model_boundary_negative_E"><code class="docutils literal notranslate"><span class="pre">fz_offset_at_model_boundary_negative_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator19maxon_RotorInertia_E"><code class="docutils literal notranslate"><span class="pre">maxon_RotorInertia_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator20maxon_SpeedConstant_E"><code class="docutils literal notranslate"><span class="pre">maxon_SpeedConstant_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator21maxon_TorqueConstant_E"><code class="docutils literal notranslate"><span class="pre">maxon_TorqueConstant_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator25maxon_TerminalResistance_E"><code class="docutils literal notranslate"><span class="pre">maxon_TerminalResistance_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator25maxon_TerminalInductance_E"><code class="docutils literal notranslate"><span class="pre">maxon_TerminalInductance_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16maxon_Reduction_E"><code class="docutils literal notranslate"><span class="pre">maxon_Reduction_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator23seabot_AddedInductance_E"><code class="docutils literal notranslate"><span class="pre">seabot_AddedInductance_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator33seabot_AddedInductanceResistance_E"><code class="docutils literal notranslate"><span class="pre">seabot_AddedInductanceResistance_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13rpm_to_rad_s_E"><code class="docutils literal notranslate"><span class="pre">rpm_to_rad_s_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2J_E"><code class="docutils literal notranslate"><span class="pre">J_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator3Ke_E"><code class="docutils literal notranslate"><span class="pre">Ke_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator3Kt_E"><code class="docutils literal notranslate"><span class="pre">Kt_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2R_E"><code class="docutils literal notranslate"><span class="pre">R_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2L_E"><code class="docutils literal notranslate"><span class="pre">L_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator12rad_to_tick_E"><code class="docutils literal notranslate"><span class="pre">rad_to_tick_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14pistonSurface_E"><code class="docutils literal notranslate"><span class="pre">pistonSurface_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator8i_screw_E"><code class="docutils literal notranslate"><span class="pre">i_screw_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22force_to_torque_coeff_E"><code class="docutils literal notranslate"><span class="pre">force_to_torque_coeff_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator17motor_delta_speedE"><code class="docutils literal notranslate"><span class="pre">motor_delta_speed</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator21control_pwm_last_timeE"><code class="docutils literal notranslate"><span class="pre">control_pwm_last_time</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14control_pwm_dtE"><code class="docutils literal notranslate"><span class="pre">control_pwm_dt</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator11switch_top_E"><code class="docutils literal notranslate"><span class="pre">switch_top_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator14switch_bottom_E"><code class="docutils literal notranslate"><span class="pre">switch_bottom_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16motor_set_point_E"><code class="docutils literal notranslate"><span class="pre">motor_set_point_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator27motor_regulation_dead_zone_E"><code class="docutils literal notranslate"><span class="pre">motor_regulation_dead_zone_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator19motor_regulation_K_E"><code class="docutils literal notranslate"><span class="pre">motor_regulation_K_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2tsE"><code class="docutils literal notranslate"><span class="pre">ts</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9memory_dtE"><code class="docutils literal notranslate"><span class="pre">memory_dt</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16memory_last_timeE"><code class="docutils literal notranslate"><span class="pre">memory_last_time</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator2k_E"><code class="docutils literal notranslate"><span class="pre">k_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator3tp_E"><code class="docutils literal notranslate"><span class="pre">tp_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator25pressure_sensor_last_timeE"><code class="docutils literal notranslate"><span class="pre">pressure_sensor_last_time</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator18pressure_sensor_dtE"><code class="docutils literal notranslate"><span class="pre">pressure_sensor_dt</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16pressure_sensor_E"><code class="docutils literal notranslate"><span class="pre">pressure_sensor_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator21pressure_sensor_mean_E"><code class="docutils literal notranslate"><span class="pre">pressure_sensor_mean_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator23pressure_sensor_stddev_E"><code class="docutils literal notranslate"><span class="pre">pressure_sensor_stddev_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator10generator_E"><code class="docutils literal notranslate"><span class="pre">generator_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator21pressure_sensor_dist_E"><code class="docutils literal notranslate"><span class="pre">pressure_sensor_dist_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator19temperature_sensor_E"><code class="docutils literal notranslate"><span class="pre">temperature_sensor_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator26temperature_sensor_stddev_E"><code class="docutils literal notranslate"><span class="pre">temperature_sensor_stddev_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22generator_temperature_E"><code class="docutils literal notranslate"><span class="pre">generator_temperature_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator24temperature_sensor_dist_E"><code class="docutils literal notranslate"><span class="pre">temperature_sensor_dist_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator25temperature_sensor_coeff_E"><code class="docutils literal notranslate"><span class="pre">temperature_sensor_coeff_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator17piston_last_time_E"><code class="docutils literal notranslate"><span class="pre">piston_last_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator10piston_dt_E"><code class="docutils literal notranslate"><span class="pre">piston_dt_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16piston_position_E"><code class="docutils literal notranslate"><span class="pre">piston_position_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator22temperature_last_time_E"><code class="docutils literal notranslate"><span class="pre">temperature_last_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator15temperature_dt_E"><code class="docutils literal notranslate"><span class="pre">temperature_dt_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13fusion_depth_E"><code class="docutils literal notranslate"><span class="pre">fusion_depth_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16fusion_velocity_E"><code class="docutils literal notranslate"><span class="pre">fusion_velocity_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator3dc_E"><code class="docutils literal notranslate"><span class="pre">dc_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13dc_last_time_E"><code class="docutils literal notranslate"><span class="pre">dc_last_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator6dc_dt_E"><code class="docutils literal notranslate"><span class="pre">dc_dt_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16solver_velocity_E"><code class="docutils literal notranslate"><span class="pre">solver_velocity_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13solver_alpha_E"><code class="docutils literal notranslate"><span class="pre">solver_alpha_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator8mission_E"><code class="docutils literal notranslate"><span class="pre">mission_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator18mission_last_time_E"><code class="docutils literal notranslate"><span class="pre">mission_last_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator11mission_dt_E"><code class="docutils literal notranslate"><span class="pre">mission_dt_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator18mission_file_name_E"><code class="docutils literal notranslate"><span class="pre">mission_file_name_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator13mission_path_E"><code class="docutils literal notranslate"><span class="pre">mission_path_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator27mission_delay_before_start_E"><code class="docutils literal notranslate"><span class="pre">mission_delay_before_start_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator24mission_delay_after_end_E"><code class="docutils literal notranslate"><span class="pre">mission_delay_after_end_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator9bag_path_E"><code class="docutils literal notranslate"><span class="pre">bag_path_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator26temperature_profile_depth_E"><code class="docutils literal notranslate"><span class="pre">temperature_profile_depth_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator32temperature_profile_temperature_E"><code class="docutils literal notranslate"><span class="pre">temperature_profile_temperature_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator25index_center_thermocline_E"><code class="docutils literal notranslate"><span class="pre">index_center_thermocline_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator18thermocline_depth_E"><code class="docutils literal notranslate"><span class="pre">thermocline_depth_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator16wave_generators_E"><code class="docutils literal notranslate"><span class="pre">wave_generators_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classSimulator.html#_CPPv4N9Simulator15wave_file_name_E"><code class="docutils literal notranslate"><span class="pre">wave_file_name_</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="classSimulatorNode.html">Class SimulatorNode</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classSimulatorNode.html#inheritance-relationships">Inheritance Relationships</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classSimulatorNode.html#base-type">Base Type</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="classSimulatorNode.html#class-documentation">Class Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classSimulatorNode.html#_CPPv413SimulatorNode"><code class="docutils literal notranslate"><span class="pre">SimulatorNode</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="classSimulatorNode.html#_CPPv4N13SimulatorNode13SimulatorNodeEv"><code class="docutils literal notranslate"><span class="pre">SimulatorNode()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -3174,28 +2980,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="classWaveGenerator.html">Class WaveGenerator</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classWaveGenerator.html#class-documentation">Class Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classWaveGenerator.html#_CPPv413WaveGenerator"><code class="docutils literal notranslate"><span class="pre">WaveGenerator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator13WaveGeneratorEKdKdKdKdKbKbKdKd"><code class="docutils literal notranslate"><span class="pre">WaveGenerator()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator10amplitude_E"><code class="docutils literal notranslate"><span class="pre">amplitude_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator7period_E"><code class="docutils literal notranslate"><span class="pre">period_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator6phase_E"><code class="docutils literal notranslate"><span class="pre">phase_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator7offset_E"><code class="docutils literal notranslate"><span class="pre">offset_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator14starting_time_E"><code class="docutils literal notranslate"><span class="pre">starting_time_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator9duration_E"><code class="docutils literal notranslate"><span class="pre">duration_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator15is_contraction_E"><code class="docutils literal notranslate"><span class="pre">is_contraction_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaveGenerator.html#_CPPv4N13WaveGenerator15water_velocity_E"><code class="docutils literal notranslate"><span class="pre">water_velocity_</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="classWaypoint.html">Class Waypoint</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="classWaypoint.html#inheritance-relationships">Inheritance Relationships</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="classWaypoint.html#derived-types">Derived Types</a></li>
@@ -3302,8 +3086,6 @@
 <li class="toctree-l4"><a class="reference internal" href="classWaypointTemperatureKeeping.html#_CPPv4N26WaypointTemperatureKeepingD0Ev"><code class="docutils literal notranslate"><span class="pre">~WaypointTemperatureKeeping()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classWaypointTemperatureKeeping.html#_CPPv4N26WaypointTemperatureKeeping7processERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">process()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classWaypointTemperatureKeeping.html#_CPPv4N26WaypointTemperatureKeeping12temperature_E"><code class="docutils literal notranslate"><span class="pre">temperature_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaypointTemperatureKeeping.html#_CPPv4N26WaypointTemperatureKeeping28depth_set_point_accumulator_E"><code class="docutils literal notranslate"><span class="pre">depth_set_point_accumulator_</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="classWaypointTemperatureKeeping.html#_CPPv4N26WaypointTemperatureKeeping8coeff_K_E"><code class="docutils literal notranslate"><span class="pre">coeff_K_</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="classWaypointTemperatureKeeping.html#_CPPv4N26WaypointTemperatureKeeping18error_temperature_E"><code class="docutils literal notranslate"><span class="pre">error_temperature_</span></code></a></li>
 </ul>
 </li>
@@ -3842,9 +3624,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_control__launch_8py_1a07b202ba946340edeff1b25e5c0ccc92.html">Function control_launch::generate_launch_description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_control__launch_8py_1a07b202ba946340edeff1b25e5c0ccc92.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_control__launch_8py_1a07b202ba946340edeff1b25e5c0ccc92.html#control_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacecontrol__launch_1a07b202ba946340edeff1b25e5c0ccc92.html">Function control_launch::generate_launch_description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacecontrol__launch_1a07b202ba946340edeff1b25e5c0ccc92.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacecontrol__launch_1a07b202ba946340edeff1b25e5c0ccc92.html#control_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -3853,9 +3635,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_driver__launch_8py_1a34f3da86fa8ed16f76ade7a980a9987b.html">Function driver_launch::generate_launch_description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_driver__launch_8py_1a34f3da86fa8ed16f76ade7a980a9987b.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_driver__launch_8py_1a34f3da86fa8ed16f76ade7a980a9987b.html#driver_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacedriver__launch_1a34f3da86fa8ed16f76ade7a980a9987b.html">Function driver_launch::generate_launch_description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacedriver__launch_1a34f3da86fa8ed16f76ade7a980a9987b.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacedriver__launch_1a34f3da86fa8ed16f76ade7a980a9987b.html#driver_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -3864,9 +3646,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_driver__launch_8py_1aa32e6cb8aa1f11cf47bc5fc9a1bfc495.html">Function driver_launch::test_enable_pressure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_driver__launch_8py_1aa32e6cb8aa1f11cf47bc5fc9a1bfc495.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_driver__launch_8py_1aa32e6cb8aa1f11cf47bc5fc9a1bfc495.html#driver_launch.test_enable_pressure"><code class="docutils literal notranslate"><span class="pre">test_enable_pressure()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacedriver__launch_1aa32e6cb8aa1f11cf47bc5fc9a1bfc495.html">Function driver_launch::test_enable_pressure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacedriver__launch_1aa32e6cb8aa1f11cf47bc5fc9a1bfc495.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacedriver__launch_1aa32e6cb8aa1f11cf47bc5fc9a1bfc495.html#driver_launch.test_enable_pressure"><code class="docutils literal notranslate"><span class="pre">test_enable_pressure()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -4894,14 +4676,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_simulator__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97.html">Function main(int, char *)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_simulator__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_wtf__node_8cpp_1a638b85ceffac097c2aa79b76ba8c055e.html">Function main(const int, char *)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_wtf__node_8cpp_1a638b85ceffac097c2aa79b76ba8c055e.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -4910,9 +4684,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_mission__launch_8py_1adee9c51ab798fce2b6e6aceaa3c3cd32.html">Function mission_launch::generate_launch_description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_mission__launch_8py_1adee9c51ab798fce2b6e6aceaa3c3cd32.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_mission__launch_8py_1adee9c51ab798fce2b6e6aceaa3c3cd32.html#mission_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacemission__launch_1adee9c51ab798fce2b6e6aceaa3c3cd32.html">Function mission_launch::generate_launch_description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacemission__launch_1adee9c51ab798fce2b6e6aceaa3c3cd32.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacemission__launch_1adee9c51ab798fce2b6e6aceaa3c3cd32.html#mission_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -4921,9 +4695,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_motor__up__down_8py_1a20a22f532ef02697773a7ecd94f08275.html">Function motor_up_down::main</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_motor__up__down_8py_1a20a22f532ef02697773a7ecd94f08275.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_motor__up__down_8py_1a20a22f532ef02697773a7ecd94f08275.html#motor_up_down.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacemotor__up__down_1a20a22f532ef02697773a7ecd94f08275.html">Function motor_up_down::main</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacemotor__up__down_1a20a22f532ef02697773a7ecd94f08275.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacemotor__up__down_1a20a22f532ef02697773a7ecd94f08275.html#motor_up_down.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -4940,9 +4714,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_observer__launch_8py_1a12cc2fd9cdcab9d458c5c3c8dd25cb08.html">Function observer_launch::generate_launch_description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_observer__launch_8py_1a12cc2fd9cdcab9d458c5c3c8dd25cb08.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_observer__launch_8py_1a12cc2fd9cdcab9d458c5c3c8dd25cb08.html#observer_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceobserver__launch_1a12cc2fd9cdcab9d458c5c3c8dd25cb08.html">Function observer_launch::generate_launch_description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceobserver__launch_1a12cc2fd9cdcab9d458c5c3c8dd25cb08.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespaceobserver__launch_1a12cc2fd9cdcab9d458c5c3c8dd25cb08.html#observer_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5005,14 +4779,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_simulator__binding_8cpp_1a6381596800dffb6286367e57d8809725.html">Function PYBIND11_MODULE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_simulator__binding_8cpp_1a6381596800dffb6286367e57d8809725.html#function-documentation">Function Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_bme280_8c_1a9a75d46d1a4b72dc5b60a34f700cd89a.html">Function reload_device_settings</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_bme280_8c_1a9a75d46d1a4b72dc5b60a34f700cd89a.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -5037,9 +4803,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_seabot__launch_8py_1a1379b2e18d8ed75fda36163683a9bb65.html">Function seabot_launch::generate_launch_description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_seabot__launch_8py_1a1379b2e18d8ed75fda36163683a9bb65.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_seabot__launch_8py_1a1379b2e18d8ed75fda36163683a9bb65.html#seabot_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespaceseabot__launch_1a1379b2e18d8ed75fda36163683a9bb65.html">Function seabot_launch::generate_launch_description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceseabot__launch_1a1379b2e18d8ed75fda36163683a9bb65.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespaceseabot__launch_1a1379b2e18d8ed75fda36163683a9bb65.html#seabot_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5080,17 +4846,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_simulation__launch_8py_1a3c6dc8e409b24817033438a02899d3be.html">Function simulation_launch::generate_launch_description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_simulation__launch_8py_1a3c6dc8e409b24817033438a02899d3be.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_simulation__launch_8py_1a3c6dc8e409b24817033438a02899d3be.html#simulation_launch.generate_launch_description"><code class="docutils literal notranslate"><span class="pre">generate_launch_description()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="function_bme280__node_8cpp_1adc86d5995b888a6f4ef7dd5647b94f8f.html">Function user_delay_ms</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="function_bme280__node_8cpp_1adc86d5995b888a6f4ef7dd5647b94f8f.html#function-documentation">Function Documentation</a></li>
 </ul>
@@ -5123,9 +4878,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_xbee_8py_1a52b9aa7d74e3efcd420a123131623856.html">Function xbee_driver::xbee::deserialize_data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_xbee_8py_1a52b9aa7d74e3efcd420a123131623856.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_xbee_8py_1a52b9aa7d74e3efcd420a123131623856.html#xbee_driver.xbee.deserialize_data"><code class="docutils literal notranslate"><span class="pre">deserialize_data()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1a52b9aa7d74e3efcd420a123131623856.html">Function xbee_driver::xbee::deserialize_data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1a52b9aa7d74e3efcd420a123131623856.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1a52b9aa7d74e3efcd420a123131623856.html#xbee_driver.xbee.deserialize_data"><code class="docutils literal notranslate"><span class="pre">deserialize_data()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5134,9 +4889,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_xbee_8py_1ad7e050bd39c1f14be481637ee6ec0ae5.html">Function xbee_driver::xbee::main</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_xbee_8py_1ad7e050bd39c1f14be481637ee6ec0ae5.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_xbee_8py_1ad7e050bd39c1f14be481637ee6ec0ae5.html#xbee_driver.xbee.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1ad7e050bd39c1f14be481637ee6ec0ae5.html">Function xbee_driver::xbee::main</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1ad7e050bd39c1f14be481637ee6ec0ae5.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1ad7e050bd39c1f14be481637ee6ec0ae5.html#xbee_driver.xbee.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5145,9 +4900,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_xbee_8py_1ad1552bd10a88d1f1e5d4dbda95409cc1.html">Function xbee_driver::xbee::serialize_data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_xbee_8py_1ad1552bd10a88d1f1e5d4dbda95409cc1.html#function-documentation">Function Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function_xbee_8py_1ad1552bd10a88d1f1e5d4dbda95409cc1.html#xbee_driver.xbee.serialize_data"><code class="docutils literal notranslate"><span class="pre">serialize_data()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1ad1552bd10a88d1f1e5d4dbda95409cc1.html">Function xbee_driver::xbee::serialize_data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1ad1552bd10a88d1f1e5d4dbda95409cc1.html#function-documentation">Function Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="function_namespacexbee__driver_1_1xbee_1ad1552bd10a88d1f1e5d4dbda95409cc1.html#xbee_driver.xbee.serialize_data"><code class="docutils literal notranslate"><span class="pre">serialize_data()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5159,9 +4914,9 @@
 <h4>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h4>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_check__i2c__devices_8py_1a4d47b00e6d9ca3da5da8d449d72dda35.html">Variable check_i2c_devices::i2c</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_check__i2c__devices_8py_1a4d47b00e6d9ca3da5da8d449d72dda35.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_check__i2c__devices_8py_1a4d47b00e6d9ca3da5da8d449d72dda35.html#check_i2c_devices.i2c"><code class="docutils literal notranslate"><span class="pre">i2c</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacecheck__i2c__devices_1a4d47b00e6d9ca3da5da8d449d72dda35.html">Variable check_i2c_devices::i2c</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacecheck__i2c__devices_1a4d47b00e6d9ca3da5da8d449d72dda35.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacecheck__i2c__devices_1a4d47b00e6d9ca3da5da8d449d72dda35.html#check_i2c_devices.i2c"><code class="docutils literal notranslate"><span class="pre">i2c</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5417,9 +5172,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__simulator_2python_2setup_8py_1aa1ad2d55aca5a8d3b508cdb0cc510167.html">Variable setup::__version__</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__simulator_2python_2setup_8py_1aa1ad2d55aca5a8d3b508cdb0cc510167.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__simulator_2python_2setup_8py_1aa1ad2d55aca5a8d3b508cdb0cc510167.html#setup.__version__"><code class="docutils literal notranslate"><span class="pre">__version__</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1ad027a8e9452da003dca32bf7467bd16e.html">Variable setup::data_files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1ad027a8e9452da003dca32bf7467bd16e.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1ad027a8e9452da003dca32bf7467bd16e.html#setup.data_files"><code class="docutils literal notranslate"><span class="pre">data_files</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5428,9 +5183,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ad027a8e9452da003dca32bf7467bd16e.html">Variable setup::data_files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ad027a8e9452da003dca32bf7467bd16e.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ad027a8e9452da003dca32bf7467bd16e.html#setup.data_files"><code class="docutils literal notranslate"><span class="pre">data_files</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1aedf461ec52a946bda975938ba0b93ec0.html">Variable setup::description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1aedf461ec52a946bda975938ba0b93ec0.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1aedf461ec52a946bda975938ba0b93ec0.html#setup.description"><code class="docutils literal notranslate"><span class="pre">description</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5439,9 +5194,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aedf461ec52a946bda975938ba0b93ec0.html">Variable setup::description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aedf461ec52a946bda975938ba0b93ec0.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aedf461ec52a946bda975938ba0b93ec0.html#setup.description"><code class="docutils literal notranslate"><span class="pre">description</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1ada7058afc98897f073d3f3b8b9157059.html">Variable setup::entry_points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1ada7058afc98897f073d3f3b8b9157059.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1ada7058afc98897f073d3f3b8b9157059.html#setup.entry_points"><code class="docutils literal notranslate"><span class="pre">entry_points</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5450,9 +5205,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ada7058afc98897f073d3f3b8b9157059.html">Variable setup::entry_points</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ada7058afc98897f073d3f3b8b9157059.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ada7058afc98897f073d3f3b8b9157059.html#setup.entry_points"><code class="docutils literal notranslate"><span class="pre">entry_points</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1abead4f26b530856f858f0d44c7cf2588.html">Variable setup::install_requires</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1abead4f26b530856f858f0d44c7cf2588.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1abead4f26b530856f858f0d44c7cf2588.html#setup.install_requires"><code class="docutils literal notranslate"><span class="pre">install_requires</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5461,9 +5216,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1abead4f26b530856f858f0d44c7cf2588.html">Variable setup::install_requires</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1abead4f26b530856f858f0d44c7cf2588.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1abead4f26b530856f858f0d44c7cf2588.html#setup.install_requires"><code class="docutils literal notranslate"><span class="pre">install_requires</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1a8ed6f50a28bd6a8794f8e1153baa6de9.html">Variable setup::license</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1a8ed6f50a28bd6a8794f8e1153baa6de9.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1a8ed6f50a28bd6a8794f8e1153baa6de9.html#setup.license"><code class="docutils literal notranslate"><span class="pre">license</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5472,9 +5227,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a8ed6f50a28bd6a8794f8e1153baa6de9.html">Variable setup::license</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a8ed6f50a28bd6a8794f8e1153baa6de9.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a8ed6f50a28bd6a8794f8e1153baa6de9.html#setup.license"><code class="docutils literal notranslate"><span class="pre">license</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1aa1a7cf9bbf76004bb72697dc00bbee9d.html">Variable setup::maintainer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1aa1a7cf9bbf76004bb72697dc00bbee9d.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1aa1a7cf9bbf76004bb72697dc00bbee9d.html#setup.maintainer"><code class="docutils literal notranslate"><span class="pre">maintainer</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5483,9 +5238,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aa1a7cf9bbf76004bb72697dc00bbee9d.html">Variable setup::maintainer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aa1a7cf9bbf76004bb72697dc00bbee9d.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aa1a7cf9bbf76004bb72697dc00bbee9d.html#setup.maintainer"><code class="docutils literal notranslate"><span class="pre">maintainer</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1a92a81adbfdd219564d5246ce8d77f869.html">Variable setup::maintainer_email</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1a92a81adbfdd219564d5246ce8d77f869.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1a92a81adbfdd219564d5246ce8d77f869.html#setup.maintainer_email"><code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5494,9 +5249,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a92a81adbfdd219564d5246ce8d77f869.html">Variable setup::maintainer_email</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a92a81adbfdd219564d5246ce8d77f869.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a92a81adbfdd219564d5246ce8d77f869.html#setup.maintainer_email"><code class="docutils literal notranslate"><span class="pre">maintainer_email</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f.html">Variable setup::name</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f.html#setup.name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5505,9 +5260,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ab3a7a0638d76a01367c5bc3cc699447f.html">Variable setup::name</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ab3a7a0638d76a01367c5bc3cc699447f.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1ab3a7a0638d76a01367c5bc3cc699447f.html#setup.name"><code class="docutils literal notranslate"><span class="pre">name</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1a69903e4f05cebc9e005b22b36f5724eb.html">Variable setup::package_name</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1a69903e4f05cebc9e005b22b36f5724eb.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1a69903e4f05cebc9e005b22b36f5724eb.html#setup.package_name"><code class="docutils literal notranslate"><span class="pre">package_name</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5516,9 +5271,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a69903e4f05cebc9e005b22b36f5724eb.html">Variable setup::package_name</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a69903e4f05cebc9e005b22b36f5724eb.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a69903e4f05cebc9e005b22b36f5724eb.html#setup.package_name"><code class="docutils literal notranslate"><span class="pre">package_name</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1aff2375a361fd5865c77bd9aa093be747.html">Variable setup::packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1aff2375a361fd5865c77bd9aa093be747.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1aff2375a361fd5865c77bd9aa093be747.html#setup.packages"><code class="docutils literal notranslate"><span class="pre">packages</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5527,9 +5282,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aff2375a361fd5865c77bd9aa093be747.html">Variable setup::packages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aff2375a361fd5865c77bd9aa093be747.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1aff2375a361fd5865c77bd9aa093be747.html#setup.packages"><code class="docutils literal notranslate"><span class="pre">packages</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1a6369bb060267ccf90b93519796e7cc2c.html">Variable setup::tests_require</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1a6369bb060267ccf90b93519796e7cc2c.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1a6369bb060267ccf90b93519796e7cc2c.html#setup.tests_require"><code class="docutils literal notranslate"><span class="pre">tests_require</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5538,9 +5293,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a6369bb060267ccf90b93519796e7cc2c.html">Variable setup::tests_require</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a6369bb060267ccf90b93519796e7cc2c.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a6369bb060267ccf90b93519796e7cc2c.html#setup.tests_require"><code class="docutils literal notranslate"><span class="pre">tests_require</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1a2aa722b36a933088812b50ea79b97a5c.html">Variable setup::version</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1a2aa722b36a933088812b50ea79b97a5c.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1a2aa722b36a933088812b50ea79b97a5c.html#setup.version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -5549,20 +5304,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a2aa722b36a933088812b50ea79b97a5c.html">Variable setup::version</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a2aa722b36a933088812b50ea79b97a5c.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a2aa722b36a933088812b50ea79b97a5c.html#setup.version"><code class="docutils literal notranslate"><span class="pre">version</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a13510753661cb74083a0c664db11dde9.html">Variable setup::zip_safe</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a13510753661cb74083a0c664db11dde9.html#variable-documentation">Variable Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="variable_seabot2__driver_2xbee__driver_2setup_8py_1a13510753661cb74083a0c664db11dde9.html#setup.zip_safe"><code class="docutils literal notranslate"><span class="pre">zip_safe</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="variable_namespacesetup_1a13510753661cb74083a0c664db11dde9.html">Variable setup::zip_safe</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespacesetup_1a13510753661cb74083a0c664db11dde9.html#variable-documentation">Variable Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="variable_namespacesetup_1a13510753661cb74083a0c664db11dde9.html#setup.zip_safe"><code class="docutils literal notranslate"><span class="pre">zip_safe</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -8556,80 +8300,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator__binding_8cpp_1a04bd637263ccb57f7e038856e2a51531.html">Define MACRO_STRINGIFY</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator__binding_8cpp_1a04bd637263ccb57f7e038856e2a51531.html#define-documentation">Define Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1a1fbe6f90148adcd62ff228574c0cf7bb.html">Define MOTOR_DEAD_ZONE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1a1fbe6f90148adcd62ff228574c0cf7bb.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1a1fbe6f90148adcd62ff228574c0cf7bb.html#c.MOTOR_DEAD_ZONE"><code class="docutils literal notranslate"><span class="pre">MOTOR_DEAD_ZONE</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1a4a5fc1a943b790ef8545dc8d84ccdf53.html">Define MOTOR_DOWN</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1a4a5fc1a943b790ef8545dc8d84ccdf53.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1a4a5fc1a943b790ef8545dc8d84ccdf53.html#c.MOTOR_DOWN"><code class="docutils literal notranslate"><span class="pre">MOTOR_DOWN</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1a37cfd6cc849304e24c56938d1a50ba29.html">Define MOTOR_PWM_MAX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1a37cfd6cc849304e24c56938d1a50ba29.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1a37cfd6cc849304e24c56938d1a50ba29.html#c.MOTOR_PWM_MAX"><code class="docutils literal notranslate"><span class="pre">MOTOR_PWM_MAX</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7.html">Define MOTOR_STOP</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1aa61a6c32d7187d20f8ea4171b8bf8dd7.html#c.MOTOR_STOP"><code class="docutils literal notranslate"><span class="pre">MOTOR_STOP</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1a08941448ea359782adb756fd4cdbe03a.html">Define MOTOR_UP</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1a08941448ea359782adb756fd4cdbe03a.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1a08941448ea359782adb756fd4cdbe03a.html#c.MOTOR_UP"><code class="docutils literal notranslate"><span class="pre">MOTOR_UP</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1abf5e25413cb2bd973303d61c1dca79f5.html">Define MOTOR_V_TO_CMD</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1abf5e25413cb2bd973303d61c1dca79f5.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1abf5e25413cb2bd973303d61c1dca79f5.html#c.MOTOR_V_TO_CMD"><code class="docutils literal notranslate"><span class="pre">MOTOR_V_TO_CMD</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="define_log__data_8h_1a0e73b02b6d4117ec91046b6ea4aff234.html">Define NB_BITS_CMD_MISSION_HEADER</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_log__data_8h_1a0e73b02b6d4117ec91046b6ea4aff234.html#define-documentation">Define Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="define_log__data_8h_1a0e73b02b6d4117ec91046b6ea4aff234.html#c.NB_BITS_CMD_MISSION_HEADER"><code class="docutils literal notranslate"><span class="pre">NB_BITS_CMD_MISSION_HEADER</span></code></a></li>
@@ -9198,17 +8868,6 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1a9d6643344b252c03c0bd98b55f445256.html">Define REGULATION_LOOP_FREQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1a9d6643344b252c03c0bd98b55f445256.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1a9d6643344b252c03c0bd98b55f445256.html#c.REGULATION_LOOP_FREQ"><code class="docutils literal notranslate"><span class="pre">REGULATION_LOOP_FREQ</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="define_screen_8h_1a595a6dc78a21eaeee301550f4800aeaf.html">Define SCREEN_MISSION_NAME_SIZE</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="define_screen_8h_1a595a6dc78a21eaeee301550f4800aeaf.html#define-documentation">Define Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="define_screen_8h_1a595a6dc78a21eaeee301550f4800aeaf.html#c.SCREEN_MISSION_NAME_SIZE"><code class="docutils literal notranslate"><span class="pre">SCREEN_MISSION_NAME_SIZE</span></code></a></li>
@@ -9225,25 +8884,6 @@
 <li class="toctree-l3"><a class="reference internal" href="define_screen_8h_1a3ffbfa7c816366c874cb15861d7c35d8.html#c.SCREEN_ROBOT_NAME_SIZE"><code class="docutils literal notranslate"><span class="pre">SCREEN_ROBOT_NAME_SIZE</span></code></a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator_8h_1a3c9a05feff11d3b079a7fa1c841b6990.html">Define SIMU_NB_STATES</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator_8h_1a3c9a05feff11d3b079a7fa1c841b6990.html#define-documentation">Define Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="define_simulator_8h_1a3c9a05feff11d3b079a7fa1c841b6990.html#c.SIMU_NB_STATES"><code class="docutils literal notranslate"><span class="pre">SIMU_NB_STATES</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="define_simulator__binding_8cpp_1a6df1d22fb5f09eccc23b9f399670cfd7.html">Define STRINGIFY</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="define_simulator__binding_8cpp_1a6df1d22fb5f09eccc23b9f399670cfd7.html#define-documentation">Define Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -9449,9 +9089,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a655767dbb219001c773cfa8950604984.html">Typedef uint_cmd_mission_header_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a655767dbb219001c773cfa8950604984.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a655767dbb219001c773cfa8950604984.html#_CPPv425uint_cmd_mission_header_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_mission_header_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a6163c397288951131bfb6a72548ca4b7.html">Typedef uint_cmd_mission_header_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a6163c397288951131bfb6a72548ca4b7.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a6163c397288951131bfb6a72548ca4b7.html#_CPPv425uint_cmd_mission_header_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_mission_header_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9460,9 +9100,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a70af18e6c46d1b4211ed98f9beb432aa.html">Typedef uint_cmd_parameters_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a70af18e6c46d1b4211ed98f9beb432aa.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a70af18e6c46d1b4211ed98f9beb432aa.html#_CPPv421uint_cmd_parameters_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_parameters_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1ada34a9d27295d3ea3eaf4d2446864853.html">Typedef uint_cmd_parameters_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1ada34a9d27295d3ea3eaf4d2446864853.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1ada34a9d27295d3ea3eaf4d2446864853.html#_CPPv421uint_cmd_parameters_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_parameters_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9471,9 +9111,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1ac72f6df5a3bb3ba7612f5ce210d11e1b.html">Typedef uint_cmd_sleep_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1ac72f6df5a3bb3ba7612f5ce210d11e1b.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1ac72f6df5a3bb3ba7612f5ce210d11e1b.html#_CPPv416uint_cmd_sleep_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_sleep_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a80a9575483aadebf61d7f74ea0741932.html">Typedef uint_cmd_sleep_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a80a9575483aadebf61d7f74ea0741932.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a80a9575483aadebf61d7f74ea0741932.html#_CPPv416uint_cmd_sleep_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_sleep_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9482,9 +9122,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1af961a570961e4d22c8e0b5c7e0bb2618.html">Typedef uint_cmd_waypoint_depth_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1af961a570961e4d22c8e0b5c7e0bb2618.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1af961a570961e4d22c8e0b5c7e0bb2618.html#_CPPv425uint_cmd_waypoint_depth_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_waypoint_depth_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a9d920b9bf7762c9ce730cd27abf528be.html">Typedef uint_cmd_waypoint_depth_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a9d920b9bf7762c9ce730cd27abf528be.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a9d920b9bf7762c9ce730cd27abf528be.html#_CPPv425uint_cmd_waypoint_depth_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_waypoint_depth_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9493,9 +9133,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a86edea005b18a67738d888b787bf8e50.html">Typedef uint_cmd_waypoint_traj_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a86edea005b18a67738d888b787bf8e50.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a86edea005b18a67738d888b787bf8e50.html#_CPPv424uint_cmd_waypoint_traj_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_waypoint_traj_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1ae68a9b90b33bab8fd4fefbf4f81435c3.html">Typedef uint_cmd_waypoint_traj_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1ae68a9b90b33bab8fd4fefbf4f81435c3.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1ae68a9b90b33bab8fd4fefbf4f81435c3.html#_CPPv424uint_cmd_waypoint_traj_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_waypoint_traj_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9504,9 +9144,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a5db5b1b31d7a35337f972aa022445952.html">Typedef uint_cmd_waypoint_type_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a5db5b1b31d7a35337f972aa022445952.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a5db5b1b31d7a35337f972aa022445952.html#_CPPv424uint_cmd_waypoint_type_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_waypoint_type_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1a4427632a6b395bb0fce92616f14c50b0.html">Typedef uint_cmd_waypoint_type_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1a4427632a6b395bb0fce92616f14c50b0.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1a4427632a6b395bb0fce92616f14c50b0.html#_CPPv424uint_cmd_waypoint_type_t"><code class="docutils literal notranslate"><span class="pre">uint_cmd_waypoint_type_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9515,9 +9155,9 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1aa2dd619a9b24df2132e00d0de45a17f0.html">Typedef uint_log1_t</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1aa2dd619a9b24df2132e00d0de45a17f0.html#typedef-documentation">Typedef Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1aa2dd619a9b24df2132e00d0de45a17f0.html#_CPPv411uint_log1_t"><code class="docutils literal notranslate"><span class="pre">uint_log1_t</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typedef_log__data_8h_1adf9ad98a713d5987b08ccfb0d0db49d0.html">Typedef uint_log1_t</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typedef_log__data_8h_1adf9ad98a713d5987b08ccfb0d0db49d0.html#typedef-documentation">Typedef Documentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="typedef_log__data_8h_1adf9ad98a713d5987b08ccfb0d0db49d0.html#_CPPv411uint_log1_t"><code class="docutils literal notranslate"><span class="pre">uint_log1_t</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -9532,10 +9172,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Seabot2 ROS2 API documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="namespace_boost.html" class="btn btn-neutral float-right" title="Namespace boost" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

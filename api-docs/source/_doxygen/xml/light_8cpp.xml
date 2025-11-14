@@ -7,7 +7,7 @@
     <incdepgraph>
       <node id="2">
         <label>seabot2_light_driver/light.h</label>
-        <link refid="light_8h_source"/>
+        <link refid="light_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -66,98 +66,121 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_light_driver/light.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="light_8h" kindref="compound">seabot2_light_driver/light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sys/ioctl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">Light::~Light(){</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>close(file_);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLight_1a62ef68324e00b79aa289f7953ff58110" kindref="member">Light::i2c_open</ref>(){</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>file_<sp/>=<sp/>open(i2c_periph_.c_str(),<sp/>O_RDWR);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>Failed<sp/>to<sp/>open<sp/>the<sp/>I2C<sp/>bus<sp/>(%s)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>i2c_periph_.c_str(),<sp/>strerror(file_));</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>ioctl(file_,<sp/>I2C_SLAVE,<sp/>i2c_addr_);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>Failed<sp/>to<sp/>acquire<sp/>bus<sp/>access<sp/>and/or<sp/>talk<sp/>to<sp/>slave<sp/>(0x%X)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>I2C_SLAVE,<sp/>strerror(result));</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" kindref="member">get_version</ref>()!=code_version_)</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>Wrong<sp/>PIC<sp/>code<sp/>version&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(100000);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">Light::set_light_enable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;enable)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_LIGHT_ENABLE,<sp/>enable)&lt;0)<sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Set<sp/>light<sp/>enable&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{<sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>light<sp/>is<sp/>enable</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" kindref="member">get_light_enable</ref>()<sp/>==<sp/>enable)</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" kindref="member">Light::get_light_enable</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_enable<sp/>=<sp/>i2c_smbus_read_byte_data(file_,<sp/>REGISTER_LIGHT_ENABLE);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(is_enable&lt;0){</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Get<sp/>light<sp/>enable&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>is_enable&gt;0;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1a6db16bef32be3c82e236495250143d22" kindref="member">Light::set_power</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__u8<sp/>&amp;val)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(val&lt;199)<sp/>{</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_write_byte_data(file_,<sp/>REGISTER_LIGHT_POWER,<sp/>val)<sp/>&lt;<sp/>0)</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Set<sp/>light<sp/>power&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1a1c59510fece4651906b11c6def6d2a59" kindref="member">Light::set_pattern</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;__u8,<sp/>NB_PATTERN&gt;<sp/>&amp;pattern)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_write_i2c_block_data(file_,<sp/>REGISTER_LIGHT_PATTERN,<sp/>pattern.size(),<sp/>pattern.data())<sp/>&lt;<sp/>0)</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Set<sp/>light<sp/>pattern&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1ade5099705c5c6e033074eee0b54d1670" kindref="member">Light::set_flash_number</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;nb_flash)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::array&lt;__u8,<sp/>NB_PATTERN&gt;<sp/>pattern{};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;std::min(nb_flash*2,<sp/>static_cast&lt;unsigned<sp/>int&gt;(NB_PATTERN));<sp/>i+=2){</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pattern[i]<sp/>=<sp/><ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref>;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i/2==(nb_flash-1))</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pattern[i+1]<sp/>=<sp/>flash_pause_end_;<sp/></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pattern[i+1]<sp/>=<sp/>flash_pause_between_flash_;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLight_1a1c59510fece4651906b11c6def6d2a59" kindref="member">set_pattern</ref>(pattern);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal">uint8_t&amp;<sp/><ref refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" kindref="member">Light::get_version</ref>(){</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>pic_code_version_<sp/>=<sp/>i2c_smbus_read_byte_data(file_,<sp/>CODE_VERSION);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pic_code_version_;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" kindref="member">Light::getI2CAddr</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_addr_;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Light::setI2CAddr(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr)<sp/>{</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_addr_<sp/>=<sp/>i2CAddr;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Light::getI2CPeriph()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_periph_;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Light::setI2CPeriph(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;i2CPeriph)<sp/>{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_periph_<sp/>=<sp/>i2CPeriph;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="4" refid="classLight_1ad0e59fad13bb6cfadc25b2c477e9ddc7" refkind="member"><highlight class="normal"><ref refid="classLight_1ad0e59fad13bb6cfadc25b2c477e9ddc7" kindref="member">Light::~Light</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>close(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classLight_1a62ef68324e00b79aa289f7953ff58110" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLight_1a62ef68324e00b79aa289f7953ff58110" kindref="member">Light::i2c_open</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref><sp/>=<sp/>open(<ref refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" kindref="member">i2c_periph_</ref>.c_str(),<sp/>O_RDWR);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>Failed<sp/>to<sp/>open<sp/>the<sp/>I2C<sp/>bus<sp/>(%s)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" kindref="member">i2c_periph_</ref>.c_str(),<sp/>strerror(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>ioctl(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>,<sp/>I2C_SLAVE,<sp/><ref refid="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" kindref="member">i2c_addr_</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>Failed<sp/>to<sp/>acquire<sp/>bus<sp/>access<sp/>and/or<sp/>talk<sp/>to<sp/>slave<sp/>(0x%X)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>I2C_SLAVE,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>strerror(result));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" kindref="member">get_version</ref>()<sp/>!=<sp/><ref refid="classLight_1abe73ea1e65e4735650192fdfad7ca6bb" kindref="member">code_version_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>Wrong<sp/>PIC<sp/>code<sp/>version&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>usleep(100000);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" kindref="member">Light::set_light_enable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>enable)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="35"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i2c_smbus_write_byte_data(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>,<sp/><ref refid="light_8h_1ac45415a251dc7fb58d4b35b85646263d" kindref="member">REGISTER_LIGHT_ENABLE</ref>,<sp/>enable)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Set<sp/>light<sp/>enable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>light<sp/>is<sp/>enable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" kindref="member">get_light_enable</ref>()<sp/>==<sp/>enable)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" kindref="member">Light::get_light_enable</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="49"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>is_enable<sp/>=<sp/>i2c_smbus_read_byte_data(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>,<sp/><ref refid="light_8h_1ac45415a251dc7fb58d4b35b85646263d" kindref="member">REGISTER_LIGHT_ENABLE</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(is_enable<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Get<sp/>light<sp/>enable&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>is_enable<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classLight_1a6db16bef32be3c82e236495250143d22" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1a6db16bef32be3c82e236495250143d22" kindref="member">Light::set_power</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__u8<sp/>&amp;<sp/>val)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="58"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(val<sp/>&lt;<sp/>199)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_write_byte_data(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>,<sp/><ref refid="light_8h_1a7af72017db9863b364c203aafd133e6b" kindref="member">REGISTER_LIGHT_POWER</ref>,<sp/>val)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Set<sp/>light<sp/>power&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classLight_1a1c59510fece4651906b11c6def6d2a59" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1a1c59510fece4651906b11c6def6d2a59" kindref="member">Light::set_pattern</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;__u8,<sp/>NB_PATTERN&gt;<sp/>&amp;<sp/>pattern)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="67"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_write_i2c_block_data(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>,<sp/><ref refid="light_8h_1a65daea6b1b03871f1f721705ee6ca4fd" kindref="member">REGISTER_LIGHT_PATTERN</ref>,<sp/>pattern.size(),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>pattern.data())<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Light_driver]<sp/>I2C<sp/>bus<sp/>Failure<sp/>-<sp/>Set<sp/>light<sp/>pattern&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classLight_1ade5099705c5c6e033074eee0b54d1670" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1ade5099705c5c6e033074eee0b54d1670" kindref="member">Light::set_flash_number</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>nb_flash)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="76"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>std::array&lt;__u8,<sp/>NB_PATTERN&gt;<sp/>pattern{};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>std::min(nb_flash<sp/>*<sp/>2,<sp/>static_cast<sp/>&lt;<sp/>unsigned<sp/>int<sp/>&gt;<sp/>(<ref refid="light_8h_1a4b89ee24c712fcd59eb930e513545a0d" kindref="member">NB_PATTERN</ref>));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>+=<sp/>2)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>pattern[i]<sp/>=<sp/><ref refid="classLight_1ac474431242ef71a219e0da98e381259a" kindref="member">flash_duration_</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i<sp/>/<sp/>2<sp/>==<sp/>(nb_flash<sp/>-<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pattern[i<sp/>+<sp/>1]<sp/>=<sp/><ref refid="classLight_1a007ed0cb64ebac749e19355783ca11f4" kindref="member">flash_pause_end_</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pattern[i<sp/>+<sp/>1]<sp/>=<sp/><ref refid="classLight_1a2587ef2a62748113486a8b0e0b1d0c9b" kindref="member">flash_pause_between_flash_</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="classLight_1a1c59510fece4651906b11c6def6d2a59" kindref="member">set_pattern</ref>(pattern);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" refkind="member"><highlight class="normal">uint8_t<sp/>&amp;<sp/><ref refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" kindref="member">Light::get_version</ref>()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="classLight_1af58beed7c80699ff4230ddd84aaa4cc3" kindref="member">pic_code_version_</ref><sp/>=<sp/>i2c_smbus_read_byte_data(<ref refid="classLight_1a466b977fef3bd4a683f678671eaa710f" kindref="member">file_</ref>,<sp/><ref refid="light_8h_1ad5003733db85e9d2720dd83336f77e23" kindref="member">CODE_VERSION</ref>);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classLight_1af58beed7c80699ff4230ddd84aaa4cc3" kindref="member">pic_code_version_</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" kindref="member">Light::getI2CAddr</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="98"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" kindref="member">i2c_addr_</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classLight_1a0c6f1ece6632eae09466063077f7f113" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1a0c6f1ece6632eae09466063077f7f113" kindref="member">Light::setI2CAddr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" kindref="member">i2c_addr_</ref><sp/>=<sp/>i2CAddr;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classLight_1a09eef091f32c184451f3e7c33fcf2c02" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/><ref refid="classLight_1a09eef091f32c184451f3e7c33fcf2c02" kindref="member">Light::getI2CPeriph</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="108"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" kindref="member">i2c_periph_</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="classLight_1a591875c4db2f45c82ff9d5d11140f10b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classLight_1a591875c4db2f45c82ff9d5d11140f10b" kindref="member">Light::setI2CPeriph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>i2CPeriph)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" kindref="member">i2c_periph_</ref><sp/>=<sp/>i2CPeriph;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp"/>
   </compounddef>

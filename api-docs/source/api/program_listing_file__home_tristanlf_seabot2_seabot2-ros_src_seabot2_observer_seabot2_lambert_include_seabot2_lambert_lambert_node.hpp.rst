@@ -25,36 +25,35 @@ Program Listing for File lambert_node.hpp
    
    class LambertNode final : public rclcpp::Node {
    public:
-       LambertNode();
+     LambertNode();
    
    private:
+     PJ_CONTEXT *C_;
+     PJ *P_;
+     PJ * P_for_GIS_;
    
-       PJ_CONTEXT *C_;
-       PJ *P_;
-       PJ* P_for_GIS_;
+     string epsg_source_ = "EPSG:4326";
+     string epsg_target_ = "EPSG:2154";
    
-       string epsg_source_ = "EPSG:4326";
-       string epsg_target_ = "EPSG:2154";
+     deque<double> east_memory_;
+     deque<double> north_memory_;
+     deque<rclcpp::Time> time_memory_;
    
-       deque<double> east_memory_;
-       deque<double> north_memory_;
-       deque<rclcpp::Time> time_memory_;
+     std::chrono::seconds filter_position_mean_ = 5s;
+     std::chrono::seconds filter_dt_heading_computation_ = 15s;
    
-       std::chrono::seconds filter_position_mean_ = 5s;
-       std::chrono::seconds filter_dt_heading_computation_ = 15s;
-   
-       rclcpp::Subscription<seabot2_msgs::msg::GpsFix>::SharedPtr subscriber_gnss_data_;
-       rclcpp::Publisher<seabot2_msgs::msg::GnssPose>::SharedPtr publisher_lambert_data_;
-       rclcpp::Publisher<seabot2_msgs::msg::GnssPose>::SharedPtr publisher_lambert_mean_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::GpsFix>::SharedPtr subscriber_gnss_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::GnssPose>::SharedPtr publisher_lambert_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::GnssPose>::SharedPtr publisher_lambert_mean_data_;
    
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void gnss_callback(const seabot2_msgs::msg::GpsFix &msg);
+     void gnss_callback(const seabot2_msgs::msg::GpsFix & msg);
    
-       void compute_mean();
+     void compute_mean();
    
    private:
    

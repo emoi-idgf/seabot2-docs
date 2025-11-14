@@ -11,7 +11,7 @@
     <incdepgraph>
       <node id="2">
         <label>bluerobotics_ping_driver/ping_node.h</label>
-        <link refid="ping__node_8h_source"/>
+        <link refid="ping__node_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" line="147" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="147" bodyend="157"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" line="167" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp" bodystart="167" bodyend="178"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -103,7 +103,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;bluerobotics_ping_driver/ping_node.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ping__node_8h" kindref="compound">bluerobotics_ping_driver/ping_node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ping-device-ping1d.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ping-message-all.h&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -113,152 +113,173 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::placeholders;</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">PingNode::PingNode()</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;ping_node&quot;</highlight><highlight class="normal">){</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>init_driver();</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><ref refid="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" kindref="member">PingNode::~PingNode</ref>(){</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(enable_ping_){</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;set_ping_enable(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_stop();</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;writeMessage(ping_msg);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;set_mode_auto(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;link/desktop/serial-link.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classPingNode_1aa805236489cd2fc359d2a6fcf5cbbce6" refkind="member"><highlight class="normal"><ref refid="classPingNode_1aa805236489cd2fc359d2a6fcf5cbbce6" kindref="member">PingNode::PingNode</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">:<sp/>Node(</highlight><highlight class="stringliteral">&quot;ping_node&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ae0d087431f254d15d4012908ff05c59d" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a2f15fbe9b868b6413073f2d2b1bdab86" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1adb6df8a47d84af4e45111dba7db3dc7a" kindref="member">init_driver</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" refkind="member"><highlight class="normal"><ref refid="classPingNode_1a4b516d1135dd4f1fdafee85c4d6fbdee" kindref="member">PingNode::~PingNode</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_ping_enable(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_stop();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;writeMessage(ping_msg);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_mode_auto(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingNode::init_driver(){</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Init<sp/>driver&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>port_<sp/>=<sp/>std::make_shared&lt;SerialLink&gt;(uart_port_,<sp/>uart_baudrate_);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>device_<sp/>=<sp/>std::make_unique&lt;Ping1d&gt;(*port_);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Device<sp/>Id<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/>device_-&gt;device_id);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>device_type<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/>device_-&gt;device_information.device_type);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>device_revision<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/>device_-&gt;device_information.device_revision);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>firmware_version_major<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/>device_-&gt;device_information.firmware_version_major);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>firmware_version_minor<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/>device_-&gt;device_information.firmware_version_minor);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>firmware_version_patch<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/>device_-&gt;device_information.firmware_version_patch);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_mode_auto(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_speed_of_sound(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(speed_of_sound_*1e3)));<sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_ping_interval(ping_interval_);<sp/></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_gain_setting(gain_setting_);<sp/></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_mode_auto(mode_auto_);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_ping_enable(enable_ping_);<sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;link/desktop/serial-link.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classPingNode_1adb6df8a47d84af4e45111dba7db3dc7a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1adb6df8a47d84af4e45111dba7db3dc7a" kindref="member">PingNode::init_driver</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Init<sp/>driver&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1aaabd7915f23d90b71e8166b47a869864" kindref="member">port_</ref><sp/>=<sp/>std::make_shared&lt;SerialLink&gt;(<ref refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" kindref="member">uart_port_</ref>,<sp/><ref refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" kindref="member">uart_baudrate_</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref><sp/>=<sp/>std::make_unique&lt;Ping1d&gt;(*<ref refid="classPingNode_1aaabd7915f23d90b71e8166b47a869864" kindref="member">port_</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Device<sp/>Id<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;device_id);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>device_type<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;device_information.device_type);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>device_revision<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;device_information.device_revision);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>firmware_version_major<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;device_information.firmware_version_major);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>firmware_version_minor<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;device_information.firmware_version_minor);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node<sp/>firmware_version_patch<sp/>=<sp/>%ui&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;device_information.firmware_version_patch);</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(enable_ping_)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_start();</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;writeMessage(ping_msg);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Device<sp/>configured&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" kindref="member">PingNode::wait_message</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(enable_ping_)<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ping_message<sp/>*ping_msg<sp/>=<sp/>device_-&gt;waitMessage(Ping1dId::PROFILE);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ping_msg<sp/>!=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ping_msg-&gt;msgData<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//RCLCPP_INFO(this-&gt;get_logger(),&quot;[Ping_mode]<sp/>Msg<sp/>received&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ping1d_profile<sp/>profile_msg(*ping_msg);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seabot2_msgs::msg::Profile<sp/>msg;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.confidence<sp/>=<sp/>profile_msg.confidence();</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.distance<sp/>=<sp/>profile_msg.distance();</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.confidence<sp/>=<sp/>profile_msg.confidence();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.transmit_duration<sp/>=<sp/>profile_msg.transmit_duration();</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.ping_number<sp/>=<sp/>profile_msg.ping_number();</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.scan_start<sp/>=<sp/>profile_msg.scan_start();</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.scan_length<sp/>=<sp/>profile_msg.scan_length();</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.gain_setting<sp/>=<sp/>profile_msg.gain_setting();</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.profile_data_length<sp/>=<sp/>profile_msg.profile_data_length();</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg.profile_data<sp/>=<sp/>std::vector&lt;uint8_t&gt;(profile_msg.profile_data(),<sp/>profile_msg.profile_data()+profile_msg.profile_data_length());</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_mode_auto(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_speed_of_sound(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(<ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref><sp/>*<sp/>1e3)));<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_ping_interval(<ref refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" kindref="member">ping_interval_</ref>);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_gain_setting(<ref refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" kindref="member">gain_setting_</ref>);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_mode_auto(<ref refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" kindref="member">mode_auto_</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_ping_enable(<ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_start();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;writeMessage(ping_msg);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Ping_node]<sp/>Device<sp/>configured&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ab82ffc2899bcb595d71cc89bef0aeac5" kindref="member">PingNode::wait_message</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="74"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ping_message<sp/>*ping_msg<sp/>=<sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;waitMessage(Ping1dId::PROFILE);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ping_msg<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ping_msg-&gt;msgData<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//RCLCPP_INFO(this-&gt;get_logger(),&quot;[Ping_mode]<sp/>Msg<sp/>received&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ping1d_profile<sp/>profile_msg(*ping_msg);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>seabot2_msgs::msg::Profile<sp/>msg;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.header.stamp<sp/>=<sp/>this-&gt;now();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.confidence<sp/>=<sp/>profile_msg.confidence();</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_profile_-&gt;publish(msg);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingNode::init_parameters()<sp/>{</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;serial_port&quot;</highlight><highlight class="normal">,<sp/>uart_port_);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;serial_baudrate&quot;</highlight><highlight class="normal">,<sp/>uart_baudrate_);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;mode_auto&quot;</highlight><highlight class="normal">,<sp/>mode_auto_);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;speed_of_sound&quot;</highlight><highlight class="normal">,<sp/>speed_of_sound_);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;ping_interval&quot;</highlight><highlight class="normal">,<sp/>ping_interval_);</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;gain_setting&quot;</highlight><highlight class="normal">,<sp/>gain_setting_);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;enable_ping&quot;</highlight><highlight class="normal">,<sp/>enable_ping_);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>uart_port_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;serial_port&quot;</highlight><highlight class="normal">,<sp/>uart_port_);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>uart_baudrate_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;serial_baudrate&quot;</highlight><highlight class="normal">,<sp/>uart_baudrate_);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>mode_auto_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;mode_auto&quot;</highlight><highlight class="normal">,<sp/>mode_auto_);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>speed_of_sound_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;default_speed_of_sound&quot;</highlight><highlight class="normal">,<sp/>speed_of_sound_);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>ping_interval_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;ping_interval&quot;</highlight><highlight class="normal">,<sp/>ping_interval_);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>gain_setting_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gain_setting&quot;</highlight><highlight class="normal">,<sp/>gain_setting_);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>enable_ping_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;enable_ping&quot;</highlight><highlight class="normal">,<sp/>enable_ping_);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingNode::sound_speed_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;msg){</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg.sound_speed<sp/>!=<sp/>speed_of_sound_){</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>speed_of_sound_<sp/>=<sp/>msg.sound_speed;</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;set_speed_of_sound(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(speed_of_sound_*1e3)));<sp/></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingNode::ping_enable_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response){</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>enable_ping_<sp/>=<sp/>request-&gt;data;</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>device_-&gt;set_ping_enable(enable_ping_);<sp/></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(enable_ping_)<sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_start();</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;writeMessage(ping_msg);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_stop();</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_-&gt;writeMessage(ping_msg);</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PingNode::init_interfaces()<sp/>{</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_profile_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::Profile&gt;(</highlight><highlight class="stringliteral">&quot;profile&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>service_ping_enable_<sp/>=<sp/>this-&gt;create_service&lt;std_srvs::srv::SetBool&gt;(</highlight><highlight class="stringliteral">&quot;ping_enable&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(&amp;PingNode::ping_enable_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::_1,</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::_2,</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::_3));</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_density_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Density&gt;(</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/density&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;PingNode::sound_speed_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1));</highlight></codeline>
-<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>node<sp/>=<sp/>std::make_shared&lt;PingNode&gt;();</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(rclcpp::ok()){</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>node-&gt;wait_message();</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rclcpp::spin_some(node);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.distance<sp/>=<sp/>profile_msg.distance();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.confidence<sp/>=<sp/>profile_msg.confidence();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.transmit_duration<sp/>=<sp/>profile_msg.transmit_duration();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.ping_number<sp/>=<sp/>profile_msg.ping_number();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.scan_start<sp/>=<sp/>profile_msg.scan_start();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.scan_length<sp/>=<sp/>profile_msg.scan_length();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.gain_setting<sp/>=<sp/>profile_msg.gain_setting();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.profile_data_length<sp/>=<sp/>profile_msg.profile_data_length();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg.profile_data<sp/>=<sp/>std::vector&lt;uint8_t&gt;(profile_msg.profile_data(),</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>profile_msg.profile_data()<sp/>+<sp/>profile_msg.profile_data_length());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPingNode_1af3224f003cbb4d3503d97961309fb4b4" kindref="member">publisher_profile_</ref>-&gt;publish(msg);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classPingNode_1ae0d087431f254d15d4012908ff05c59d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1ae0d087431f254d15d4012908ff05c59d" kindref="member">PingNode::init_parameters</ref>()</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;std::string&gt;(</highlight><highlight class="stringliteral">&quot;serial_port&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" kindref="member">uart_port_</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;serial_baudrate&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" kindref="member">uart_baudrate_</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;mode_auto&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" kindref="member">mode_auto_</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;double&gt;(</highlight><highlight class="stringliteral">&quot;speed_of_sound&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;ping_interval&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" kindref="member">ping_interval_</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;int&gt;(</highlight><highlight class="stringliteral">&quot;gain_setting&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" kindref="member">gain_setting_</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;bool&gt;(</highlight><highlight class="stringliteral">&quot;enable_ping&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" kindref="member">uart_port_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;serial_port&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a0151c0a3e096780418dc5724c08452bb" kindref="member">uart_port_</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" kindref="member">uart_baudrate_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;serial_baudrate&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a435a5400a300676864a4d43a9034bc40" kindref="member">uart_baudrate_</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" kindref="member">mode_auto_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;mode_auto&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1ac382216926514bdb9c8c90099277bf28" kindref="member">mode_auto_</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;default_speed_of_sound&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" kindref="member">ping_interval_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;ping_interval&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a0a7f66a21b5b2a69406536d15fa58c79" kindref="member">ping_interval_</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" kindref="member">gain_setting_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;gain_setting&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a6c78f8b4021fe3f617fc40ccc21e1270" kindref="member">gain_setting_</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;enable_ping&quot;</highlight><highlight class="normal">,<sp/><ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classPingNode_1aa6e57617278ef6a7b91b7941e472468d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1aa6e57617278ef6a7b91b7941e472468d" kindref="member">PingNode::sound_speed_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(msg.sound_speed<sp/>!=<sp/><ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref><sp/>=<sp/>msg.sound_speed;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_speed_of_sound(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(round(<ref refid="classPingNode_1af9f229edf64b2a78215db7fb4918f1e7" kindref="member">speed_of_sound_</ref><sp/>*<sp/>1e3)));<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classPingNode_1a5b1593576a680a0f014122244208f7c5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a5b1593576a680a0f014122244208f7c5" kindref="member">PingNode::ping_enable_callback</ref>(</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref><sp/>=<sp/>request-&gt;data;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;set_ping_enable(<ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPingNode_1a52b27966e78dfa2436304107d3f07e77" kindref="member">enable_ping_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_start();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;writeMessage(ping_msg);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ping_msg<sp/>=<sp/>ping1d_continuous_stop();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>ping_msg.set_id(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(PingMessageId::PING1D_PROFILE));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPingNode_1ad3f8b8ffaf3728e2d016c068954a22ee" kindref="member">device_</ref>-&gt;writeMessage(ping_msg);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="classPingNode_1a2f15fbe9b868b6413073f2d2b1bdab86" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPingNode_1a2f15fbe9b868b6413073f2d2b1bdab86" kindref="member">PingNode::init_interfaces</ref>()</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1af3224f003cbb4d3503d97961309fb4b4" kindref="member">publisher_profile_</ref><sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::Profile&gt;(</highlight><highlight class="stringliteral">&quot;profile&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a4b8fc305e8beff775a2403434189ee4e" kindref="member">service_ping_enable_</ref><sp/>=<sp/>this-&gt;create_service&lt;std_srvs::srv::SetBool&gt;(</highlight><highlight class="stringliteral">&quot;ping_enable&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::bind(</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;<ref refid="classPingNode_1a5b1593576a680a0f014122244208f7c5" kindref="member">PingNode::ping_enable_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_1,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_2,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::placeholders::</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_3));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><ref refid="classPingNode_1a42698c52cca315db1634448a54649b50" kindref="member">subscriber_density_</ref><sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::Density&gt;(</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/observer/density&quot;</highlight><highlight class="normal">,<sp/>10,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>std::bind(&amp;<ref refid="classPingNode_1aa6e57617278ef6a7b91b7941e472468d" kindref="member">PingNode::sound_speed_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>std::placeholders::_1));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="ping__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ping__node_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>node<sp/>=<sp/>std::make_shared&lt;PingNode&gt;();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(rclcpp::ok())<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>node-&gt;wait_message();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin_some(node);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/bluerobotics_ping_driver/src/ping_node.cpp"/>
   </compounddef>

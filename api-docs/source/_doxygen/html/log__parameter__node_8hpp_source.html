@@ -82,7 +82,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">log_parameter_node.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_LOG_PARAMETER_NODE_HPP</span></div>
+<a href="log__parameter__node_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_LOG_PARAMETER_NODE_HPP</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BUILD_LOG_PARAMETER_NODE_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
@@ -95,35 +95,45 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classLogParameterNode.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classLogParameterNode.html">LogParameterNode</a> final : <span class="keyword">public</span> rclcpp::Node {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classLogParameterNode.html">LogParameterNode</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <a class="code hl_function" href="classLogParameterNode.html#a2fc5d385c8d8720b74d462e4748301ff">LogParameterNode</a>();</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    rclcpp::Publisher&lt;seabot2_msgs::msg::LogParameter&gt;::SharedPtr publisher_parameters_;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr service_log_parameters_;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    rclcpp::CallbackGroup::SharedPtr callback_group_;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> init_interfaces();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> record_parameters();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::vector&lt;std::string&gt; get_param_list(<span class="keyword">const</span> std::string &amp;node_name);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> get_param_values(<span class="keyword">const</span> std::string &amp;node_name,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                            <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;param_name);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classLogParameterNode.html#aecb17324c4d9c1a9e5e7a1d1930b2085">   17</a></span>  rclcpp::Publisher&lt;seabot2_msgs::msg::LogParameter&gt;::SharedPtr <a class="code hl_variable" href="classLogParameterNode.html#aecb17324c4d9c1a9e5e7a1d1930b2085">publisher_parameters_</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classLogParameterNode.html#a969a3f14fda12465fa2a1846236ddc5c">   18</a></span>  rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr <a class="code hl_variable" href="classLogParameterNode.html#a969a3f14fda12465fa2a1846236ddc5c">service_log_parameters_</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classLogParameterNode.html#a2b1c14fc52e995f8bdcc89a4cd399cd8">   20</a></span>  rclcpp::CallbackGroup::SharedPtr <a class="code hl_variable" href="classLogParameterNode.html#a2b1c14fc52e995f8bdcc89a4cd399cd8">callback_group_</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLogParameterNode.html#a1169db621bc3acce7724a5244d674633">init_interfaces</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLogParameterNode.html#aa99c68894a3f2065c3ab98db1328f992">record_parameters</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  std::vector&lt;std::string&gt; <a class="code hl_function" href="classLogParameterNode.html#a354be1d88d7e2d0161cec89a298b1fcc">get_param_list</a>(<span class="keyword">const</span> std::string &amp; node_name);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLogParameterNode.html#ab91099e15c963cd6d0ff31f7dea3fdad">get_param_values</a>(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> std::string &amp; node_name,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp; param_name);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> service_record(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                          <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt; request,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                          std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt; response);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classLogParameterNode.html#afd233c2d39be33239f34033b9a6ac737">service_record</a>(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt; request,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt; response);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_LOG_PARAMETER_NODE_HPP</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_LOG_PARAMETER_NODE_HPP</span></div>
 <div class="ttc" id="aclassLogParameterNode_html"><div class="ttname"><a href="classLogParameterNode.html">LogParameterNode</a></div><div class="ttdef"><b>Definition</b> log_parameter_node.hpp:11</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_a1169db621bc3acce7724a5244d674633"><div class="ttname"><a href="classLogParameterNode.html#a1169db621bc3acce7724a5244d674633">LogParameterNode::init_interfaces</a></div><div class="ttdeci">void init_interfaces()</div><div class="ttdoc">Functions.</div><div class="ttdef"><b>Definition</b> log_parameter_node.cpp:29</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_a2b1c14fc52e995f8bdcc89a4cd399cd8"><div class="ttname"><a href="classLogParameterNode.html#a2b1c14fc52e995f8bdcc89a4cd399cd8">LogParameterNode::callback_group_</a></div><div class="ttdeci">rclcpp::CallbackGroup::SharedPtr callback_group_</div><div class="ttdef"><b>Definition</b> log_parameter_node.hpp:20</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_a2fc5d385c8d8720b74d462e4748301ff"><div class="ttname"><a href="classLogParameterNode.html#a2fc5d385c8d8720b74d462e4748301ff">LogParameterNode::LogParameterNode</a></div><div class="ttdeci">LogParameterNode()</div><div class="ttdef"><b>Definition</b> log_parameter_node.cpp:9</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_a354be1d88d7e2d0161cec89a298b1fcc"><div class="ttname"><a href="classLogParameterNode.html#a354be1d88d7e2d0161cec89a298b1fcc">LogParameterNode::get_param_list</a></div><div class="ttdeci">std::vector&lt; std::string &gt; get_param_list(const std::string &amp;node_name)</div><div class="ttdef"><b>Definition</b> log_parameter_node.cpp:40</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_a969a3f14fda12465fa2a1846236ddc5c"><div class="ttname"><a href="classLogParameterNode.html#a969a3f14fda12465fa2a1846236ddc5c">LogParameterNode::service_log_parameters_</a></div><div class="ttdeci">rclcpp::Service&lt; std_srvs::srv::Trigger &gt;::SharedPtr service_log_parameters_</div><div class="ttdef"><b>Definition</b> log_parameter_node.hpp:18</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_aa99c68894a3f2065c3ab98db1328f992"><div class="ttname"><a href="classLogParameterNode.html#aa99c68894a3f2065c3ab98db1328f992">LogParameterNode::record_parameters</a></div><div class="ttdeci">void record_parameters()</div><div class="ttdef"><b>Definition</b> log_parameter_node.cpp:110</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_ab91099e15c963cd6d0ff31f7dea3fdad"><div class="ttname"><a href="classLogParameterNode.html#ab91099e15c963cd6d0ff31f7dea3fdad">LogParameterNode::get_param_values</a></div><div class="ttdeci">void get_param_values(const std::string &amp;node_name, const std::vector&lt; std::string &gt; &amp;param_name)</div><div class="ttdef"><b>Definition</b> log_parameter_node.cpp:69</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_aecb17324c4d9c1a9e5e7a1d1930b2085"><div class="ttname"><a href="classLogParameterNode.html#aecb17324c4d9c1a9e5e7a1d1930b2085">LogParameterNode::publisher_parameters_</a></div><div class="ttdeci">rclcpp::Publisher&lt; seabot2_msgs::msg::LogParameter &gt;::SharedPtr publisher_parameters_</div><div class="ttdoc">Interfaces.</div><div class="ttdef"><b>Definition</b> log_parameter_node.hpp:17</div></div>
+<div class="ttc" id="aclassLogParameterNode_html_afd233c2d39be33239f34033b9a6ac737"><div class="ttname"><a href="classLogParameterNode.html#afd233c2d39be33239f34033b9a6ac737">LogParameterNode::service_record</a></div><div class="ttdeci">void service_record(const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::Trigger::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::Trigger::Response &gt; response)</div><div class="ttdef"><b>Definition</b> log_parameter_node.cpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -9,6 +9,7 @@
   <title>Struct GSW_SPECVOL_COEFFICIENTS &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct GSW_TEOS10_CONSTANTS" href="structGSW__TEOS10__CONSTANTS.html" />
-    <link rel="prev" title="Struct GSW_SP_COEFFICIENTS" href="structGSW__SP__COEFFICIENTS.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,309 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Struct GSW_SPECVOL_COEFFICIENTS</a><ul>
+<li><a class="reference internal" href="#struct-documentation">Struct Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv424GSW_SPECVOL_COEFFICIENTS"><code class="docutils literal notranslate"><span class="pre">GSW_SPECVOL_COEFFICIENTS</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS29init_GSW_SPECVOL_COEFFICIENTSEv"><code class="docutils literal notranslate"><span class="pre">init_GSW_SPECVOL_COEFFICIENTS()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a000E"><code class="docutils literal notranslate"><span class="pre">a000</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a001E"><code class="docutils literal notranslate"><span class="pre">a001</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a002E"><code class="docutils literal notranslate"><span class="pre">a002</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a003E"><code class="docutils literal notranslate"><span class="pre">a003</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a004E"><code class="docutils literal notranslate"><span class="pre">a004</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a010E"><code class="docutils literal notranslate"><span class="pre">a010</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a011E"><code class="docutils literal notranslate"><span class="pre">a011</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a012E"><code class="docutils literal notranslate"><span class="pre">a012</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a013E"><code class="docutils literal notranslate"><span class="pre">a013</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a020E"><code class="docutils literal notranslate"><span class="pre">a020</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a021E"><code class="docutils literal notranslate"><span class="pre">a021</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a022E"><code class="docutils literal notranslate"><span class="pre">a022</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a030E"><code class="docutils literal notranslate"><span class="pre">a030</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a031E"><code class="docutils literal notranslate"><span class="pre">a031</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a032E"><code class="docutils literal notranslate"><span class="pre">a032</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a040E"><code class="docutils literal notranslate"><span class="pre">a040</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a041E"><code class="docutils literal notranslate"><span class="pre">a041</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a050E"><code class="docutils literal notranslate"><span class="pre">a050</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a100E"><code class="docutils literal notranslate"><span class="pre">a100</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a101E"><code class="docutils literal notranslate"><span class="pre">a101</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a102E"><code class="docutils literal notranslate"><span class="pre">a102</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a103E"><code class="docutils literal notranslate"><span class="pre">a103</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a110E"><code class="docutils literal notranslate"><span class="pre">a110</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a111E"><code class="docutils literal notranslate"><span class="pre">a111</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a112E"><code class="docutils literal notranslate"><span class="pre">a112</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a120E"><code class="docutils literal notranslate"><span class="pre">a120</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a121E"><code class="docutils literal notranslate"><span class="pre">a121</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a122E"><code class="docutils literal notranslate"><span class="pre">a122</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a130E"><code class="docutils literal notranslate"><span class="pre">a130</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a131E"><code class="docutils literal notranslate"><span class="pre">a131</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a140E"><code class="docutils literal notranslate"><span class="pre">a140</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a200E"><code class="docutils literal notranslate"><span class="pre">a200</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a201E"><code class="docutils literal notranslate"><span class="pre">a201</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a202E"><code class="docutils literal notranslate"><span class="pre">a202</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a210E"><code class="docutils literal notranslate"><span class="pre">a210</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a211E"><code class="docutils literal notranslate"><span class="pre">a211</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a212E"><code class="docutils literal notranslate"><span class="pre">a212</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a220E"><code class="docutils literal notranslate"><span class="pre">a220</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a221E"><code class="docutils literal notranslate"><span class="pre">a221</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a230E"><code class="docutils literal notranslate"><span class="pre">a230</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a300E"><code class="docutils literal notranslate"><span class="pre">a300</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a301E"><code class="docutils literal notranslate"><span class="pre">a301</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a302E"><code class="docutils literal notranslate"><span class="pre">a302</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a310E"><code class="docutils literal notranslate"><span class="pre">a310</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a311E"><code class="docutils literal notranslate"><span class="pre">a311</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a320E"><code class="docutils literal notranslate"><span class="pre">a320</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a400E"><code class="docutils literal notranslate"><span class="pre">a400</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a401E"><code class="docutils literal notranslate"><span class="pre">a401</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a410E"><code class="docutils literal notranslate"><span class="pre">a410</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4a500E"><code class="docutils literal notranslate"><span class="pre">a500</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b000E"><code class="docutils literal notranslate"><span class="pre">b000</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b003E"><code class="docutils literal notranslate"><span class="pre">b003</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b004E"><code class="docutils literal notranslate"><span class="pre">b004</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b010E"><code class="docutils literal notranslate"><span class="pre">b010</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b013E"><code class="docutils literal notranslate"><span class="pre">b013</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b020E"><code class="docutils literal notranslate"><span class="pre">b020</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b030E"><code class="docutils literal notranslate"><span class="pre">b030</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b040E"><code class="docutils literal notranslate"><span class="pre">b040</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b050E"><code class="docutils literal notranslate"><span class="pre">b050</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b100E"><code class="docutils literal notranslate"><span class="pre">b100</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b103E"><code class="docutils literal notranslate"><span class="pre">b103</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b110E"><code class="docutils literal notranslate"><span class="pre">b110</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b120E"><code class="docutils literal notranslate"><span class="pre">b120</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b130E"><code class="docutils literal notranslate"><span class="pre">b130</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b140E"><code class="docutils literal notranslate"><span class="pre">b140</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b200E"><code class="docutils literal notranslate"><span class="pre">b200</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b210E"><code class="docutils literal notranslate"><span class="pre">b210</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b220E"><code class="docutils literal notranslate"><span class="pre">b220</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b230E"><code class="docutils literal notranslate"><span class="pre">b230</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b300E"><code class="docutils literal notranslate"><span class="pre">b300</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b310E"><code class="docutils literal notranslate"><span class="pre">b310</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b320E"><code class="docutils literal notranslate"><span class="pre">b320</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b400E"><code class="docutils literal notranslate"><span class="pre">b400</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b410E"><code class="docutils literal notranslate"><span class="pre">b410</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b500E"><code class="docutils literal notranslate"><span class="pre">b500</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b001E"><code class="docutils literal notranslate"><span class="pre">b001</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b011E"><code class="docutils literal notranslate"><span class="pre">b011</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b021E"><code class="docutils literal notranslate"><span class="pre">b021</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b031E"><code class="docutils literal notranslate"><span class="pre">b031</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b041E"><code class="docutils literal notranslate"><span class="pre">b041</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b101E"><code class="docutils literal notranslate"><span class="pre">b101</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b111E"><code class="docutils literal notranslate"><span class="pre">b111</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b121E"><code class="docutils literal notranslate"><span class="pre">b121</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b131E"><code class="docutils literal notranslate"><span class="pre">b131</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b201E"><code class="docutils literal notranslate"><span class="pre">b201</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b211E"><code class="docutils literal notranslate"><span class="pre">b211</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b221E"><code class="docutils literal notranslate"><span class="pre">b221</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b301E"><code class="docutils literal notranslate"><span class="pre">b301</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b311E"><code class="docutils literal notranslate"><span class="pre">b311</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b401E"><code class="docutils literal notranslate"><span class="pre">b401</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b002E"><code class="docutils literal notranslate"><span class="pre">b002</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b012E"><code class="docutils literal notranslate"><span class="pre">b012</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b022E"><code class="docutils literal notranslate"><span class="pre">b022</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b032E"><code class="docutils literal notranslate"><span class="pre">b032</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b102E"><code class="docutils literal notranslate"><span class="pre">b102</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b112E"><code class="docutils literal notranslate"><span class="pre">b112</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b122E"><code class="docutils literal notranslate"><span class="pre">b122</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b202E"><code class="docutils literal notranslate"><span class="pre">b202</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b212E"><code class="docutils literal notranslate"><span class="pre">b212</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4b302E"><code class="docutils literal notranslate"><span class="pre">b302</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c000E"><code class="docutils literal notranslate"><span class="pre">c000</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c001E"><code class="docutils literal notranslate"><span class="pre">c001</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c002E"><code class="docutils literal notranslate"><span class="pre">c002</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c003E"><code class="docutils literal notranslate"><span class="pre">c003</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c004E"><code class="docutils literal notranslate"><span class="pre">c004</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c005E"><code class="docutils literal notranslate"><span class="pre">c005</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c010E"><code class="docutils literal notranslate"><span class="pre">c010</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c011E"><code class="docutils literal notranslate"><span class="pre">c011</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c012E"><code class="docutils literal notranslate"><span class="pre">c012</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c013E"><code class="docutils literal notranslate"><span class="pre">c013</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c020E"><code class="docutils literal notranslate"><span class="pre">c020</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c021E"><code class="docutils literal notranslate"><span class="pre">c021</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c022E"><code class="docutils literal notranslate"><span class="pre">c022</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c030E"><code class="docutils literal notranslate"><span class="pre">c030</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c031E"><code class="docutils literal notranslate"><span class="pre">c031</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c040E"><code class="docutils literal notranslate"><span class="pre">c040</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c041E"><code class="docutils literal notranslate"><span class="pre">c041</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c050E"><code class="docutils literal notranslate"><span class="pre">c050</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c100E"><code class="docutils literal notranslate"><span class="pre">c100</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c101E"><code class="docutils literal notranslate"><span class="pre">c101</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c102E"><code class="docutils literal notranslate"><span class="pre">c102</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c103E"><code class="docutils literal notranslate"><span class="pre">c103</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c110E"><code class="docutils literal notranslate"><span class="pre">c110</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c111E"><code class="docutils literal notranslate"><span class="pre">c111</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c112E"><code class="docutils literal notranslate"><span class="pre">c112</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c120E"><code class="docutils literal notranslate"><span class="pre">c120</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c121E"><code class="docutils literal notranslate"><span class="pre">c121</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c130E"><code class="docutils literal notranslate"><span class="pre">c130</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c131E"><code class="docutils literal notranslate"><span class="pre">c131</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c140E"><code class="docutils literal notranslate"><span class="pre">c140</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c200E"><code class="docutils literal notranslate"><span class="pre">c200</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c201E"><code class="docutils literal notranslate"><span class="pre">c201</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c202E"><code class="docutils literal notranslate"><span class="pre">c202</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c210E"><code class="docutils literal notranslate"><span class="pre">c210</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c211E"><code class="docutils literal notranslate"><span class="pre">c211</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c220E"><code class="docutils literal notranslate"><span class="pre">c220</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c221E"><code class="docutils literal notranslate"><span class="pre">c221</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c230E"><code class="docutils literal notranslate"><span class="pre">c230</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c300E"><code class="docutils literal notranslate"><span class="pre">c300</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c301E"><code class="docutils literal notranslate"><span class="pre">c301</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c310E"><code class="docutils literal notranslate"><span class="pre">c310</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c311E"><code class="docutils literal notranslate"><span class="pre">c311</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c320E"><code class="docutils literal notranslate"><span class="pre">c320</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c400E"><code class="docutils literal notranslate"><span class="pre">c400</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c401E"><code class="docutils literal notranslate"><span class="pre">c401</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c410E"><code class="docutils literal notranslate"><span class="pre">c410</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4c500E"><code class="docutils literal notranslate"><span class="pre">c500</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h001E"><code class="docutils literal notranslate"><span class="pre">h001</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h002E"><code class="docutils literal notranslate"><span class="pre">h002</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h003E"><code class="docutils literal notranslate"><span class="pre">h003</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h004E"><code class="docutils literal notranslate"><span class="pre">h004</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h005E"><code class="docutils literal notranslate"><span class="pre">h005</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h006E"><code class="docutils literal notranslate"><span class="pre">h006</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h007E"><code class="docutils literal notranslate"><span class="pre">h007</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h011E"><code class="docutils literal notranslate"><span class="pre">h011</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h012E"><code class="docutils literal notranslate"><span class="pre">h012</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h013E"><code class="docutils literal notranslate"><span class="pre">h013</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h014E"><code class="docutils literal notranslate"><span class="pre">h014</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h015E"><code class="docutils literal notranslate"><span class="pre">h015</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h021E"><code class="docutils literal notranslate"><span class="pre">h021</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h022E"><code class="docutils literal notranslate"><span class="pre">h022</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h023E"><code class="docutils literal notranslate"><span class="pre">h023</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h024E"><code class="docutils literal notranslate"><span class="pre">h024</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h031E"><code class="docutils literal notranslate"><span class="pre">h031</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h032E"><code class="docutils literal notranslate"><span class="pre">h032</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h033E"><code class="docutils literal notranslate"><span class="pre">h033</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h042E"><code class="docutils literal notranslate"><span class="pre">h042</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h043E"><code class="docutils literal notranslate"><span class="pre">h043</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h041E"><code class="docutils literal notranslate"><span class="pre">h041</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h051E"><code class="docutils literal notranslate"><span class="pre">h051</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h052E"><code class="docutils literal notranslate"><span class="pre">h052</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h061E"><code class="docutils literal notranslate"><span class="pre">h061</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h101E"><code class="docutils literal notranslate"><span class="pre">h101</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h102E"><code class="docutils literal notranslate"><span class="pre">h102</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h103E"><code class="docutils literal notranslate"><span class="pre">h103</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h104E"><code class="docutils literal notranslate"><span class="pre">h104</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h105E"><code class="docutils literal notranslate"><span class="pre">h105</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h111E"><code class="docutils literal notranslate"><span class="pre">h111</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h112E"><code class="docutils literal notranslate"><span class="pre">h112</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h113E"><code class="docutils literal notranslate"><span class="pre">h113</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h114E"><code class="docutils literal notranslate"><span class="pre">h114</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h121E"><code class="docutils literal notranslate"><span class="pre">h121</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h122E"><code class="docutils literal notranslate"><span class="pre">h122</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h123E"><code class="docutils literal notranslate"><span class="pre">h123</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h131E"><code class="docutils literal notranslate"><span class="pre">h131</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h132E"><code class="docutils literal notranslate"><span class="pre">h132</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h133E"><code class="docutils literal notranslate"><span class="pre">h133</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h141E"><code class="docutils literal notranslate"><span class="pre">h141</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h142E"><code class="docutils literal notranslate"><span class="pre">h142</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h151E"><code class="docutils literal notranslate"><span class="pre">h151</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h201E"><code class="docutils literal notranslate"><span class="pre">h201</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h202E"><code class="docutils literal notranslate"><span class="pre">h202</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h203E"><code class="docutils literal notranslate"><span class="pre">h203</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h204E"><code class="docutils literal notranslate"><span class="pre">h204</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h211E"><code class="docutils literal notranslate"><span class="pre">h211</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h212E"><code class="docutils literal notranslate"><span class="pre">h212</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h213E"><code class="docutils literal notranslate"><span class="pre">h213</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h221E"><code class="docutils literal notranslate"><span class="pre">h221</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h222E"><code class="docutils literal notranslate"><span class="pre">h222</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h223E"><code class="docutils literal notranslate"><span class="pre">h223</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h231E"><code class="docutils literal notranslate"><span class="pre">h231</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h232E"><code class="docutils literal notranslate"><span class="pre">h232</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h241E"><code class="docutils literal notranslate"><span class="pre">h241</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h301E"><code class="docutils literal notranslate"><span class="pre">h301</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h302E"><code class="docutils literal notranslate"><span class="pre">h302</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h303E"><code class="docutils literal notranslate"><span class="pre">h303</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h311E"><code class="docutils literal notranslate"><span class="pre">h311</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h312E"><code class="docutils literal notranslate"><span class="pre">h312</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h313E"><code class="docutils literal notranslate"><span class="pre">h313</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h321E"><code class="docutils literal notranslate"><span class="pre">h321</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h322E"><code class="docutils literal notranslate"><span class="pre">h322</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h331E"><code class="docutils literal notranslate"><span class="pre">h331</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h401E"><code class="docutils literal notranslate"><span class="pre">h401</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h402E"><code class="docutils literal notranslate"><span class="pre">h402</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h403E"><code class="docutils literal notranslate"><span class="pre">h403</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h411E"><code class="docutils literal notranslate"><span class="pre">h411</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h421E"><code class="docutils literal notranslate"><span class="pre">h421</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h412E"><code class="docutils literal notranslate"><span class="pre">h412</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h501E"><code class="docutils literal notranslate"><span class="pre">h501</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h502E"><code class="docutils literal notranslate"><span class="pre">h502</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h511E"><code class="docutils literal notranslate"><span class="pre">h511</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4h601E"><code class="docutils literal notranslate"><span class="pre">h601</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v000E"><code class="docutils literal notranslate"><span class="pre">v000</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v001E"><code class="docutils literal notranslate"><span class="pre">v001</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v002E"><code class="docutils literal notranslate"><span class="pre">v002</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v003E"><code class="docutils literal notranslate"><span class="pre">v003</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v004E"><code class="docutils literal notranslate"><span class="pre">v004</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v005E"><code class="docutils literal notranslate"><span class="pre">v005</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v006E"><code class="docutils literal notranslate"><span class="pre">v006</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v010E"><code class="docutils literal notranslate"><span class="pre">v010</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v011E"><code class="docutils literal notranslate"><span class="pre">v011</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v012E"><code class="docutils literal notranslate"><span class="pre">v012</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v013E"><code class="docutils literal notranslate"><span class="pre">v013</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v014E"><code class="docutils literal notranslate"><span class="pre">v014</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v020E"><code class="docutils literal notranslate"><span class="pre">v020</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v021E"><code class="docutils literal notranslate"><span class="pre">v021</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v022E"><code class="docutils literal notranslate"><span class="pre">v022</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v023E"><code class="docutils literal notranslate"><span class="pre">v023</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v030E"><code class="docutils literal notranslate"><span class="pre">v030</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v031E"><code class="docutils literal notranslate"><span class="pre">v031</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v032E"><code class="docutils literal notranslate"><span class="pre">v032</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v040E"><code class="docutils literal notranslate"><span class="pre">v040</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v041E"><code class="docutils literal notranslate"><span class="pre">v041</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v042E"><code class="docutils literal notranslate"><span class="pre">v042</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v050E"><code class="docutils literal notranslate"><span class="pre">v050</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v051E"><code class="docutils literal notranslate"><span class="pre">v051</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v060E"><code class="docutils literal notranslate"><span class="pre">v060</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v100E"><code class="docutils literal notranslate"><span class="pre">v100</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v101E"><code class="docutils literal notranslate"><span class="pre">v101</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v102E"><code class="docutils literal notranslate"><span class="pre">v102</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v103E"><code class="docutils literal notranslate"><span class="pre">v103</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v104E"><code class="docutils literal notranslate"><span class="pre">v104</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v110E"><code class="docutils literal notranslate"><span class="pre">v110</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v111E"><code class="docutils literal notranslate"><span class="pre">v111</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v112E"><code class="docutils literal notranslate"><span class="pre">v112</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v113E"><code class="docutils literal notranslate"><span class="pre">v113</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v120E"><code class="docutils literal notranslate"><span class="pre">v120</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v121E"><code class="docutils literal notranslate"><span class="pre">v121</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v122E"><code class="docutils literal notranslate"><span class="pre">v122</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v130E"><code class="docutils literal notranslate"><span class="pre">v130</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v131E"><code class="docutils literal notranslate"><span class="pre">v131</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v132E"><code class="docutils literal notranslate"><span class="pre">v132</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v140E"><code class="docutils literal notranslate"><span class="pre">v140</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v141E"><code class="docutils literal notranslate"><span class="pre">v141</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v150E"><code class="docutils literal notranslate"><span class="pre">v150</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v200E"><code class="docutils literal notranslate"><span class="pre">v200</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v201E"><code class="docutils literal notranslate"><span class="pre">v201</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v202E"><code class="docutils literal notranslate"><span class="pre">v202</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v203E"><code class="docutils literal notranslate"><span class="pre">v203</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v210E"><code class="docutils literal notranslate"><span class="pre">v210</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v211E"><code class="docutils literal notranslate"><span class="pre">v211</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v212E"><code class="docutils literal notranslate"><span class="pre">v212</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v220E"><code class="docutils literal notranslate"><span class="pre">v220</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v221E"><code class="docutils literal notranslate"><span class="pre">v221</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v222E"><code class="docutils literal notranslate"><span class="pre">v222</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v230E"><code class="docutils literal notranslate"><span class="pre">v230</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v231E"><code class="docutils literal notranslate"><span class="pre">v231</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v240E"><code class="docutils literal notranslate"><span class="pre">v240</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v300E"><code class="docutils literal notranslate"><span class="pre">v300</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v301E"><code class="docutils literal notranslate"><span class="pre">v301</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v302E"><code class="docutils literal notranslate"><span class="pre">v302</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v310E"><code class="docutils literal notranslate"><span class="pre">v310</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v311E"><code class="docutils literal notranslate"><span class="pre">v311</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v312E"><code class="docutils literal notranslate"><span class="pre">v312</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v320E"><code class="docutils literal notranslate"><span class="pre">v320</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v321E"><code class="docutils literal notranslate"><span class="pre">v321</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v330E"><code class="docutils literal notranslate"><span class="pre">v330</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v400E"><code class="docutils literal notranslate"><span class="pre">v400</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v401E"><code class="docutils literal notranslate"><span class="pre">v401</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v402E"><code class="docutils literal notranslate"><span class="pre">v402</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v410E"><code class="docutils literal notranslate"><span class="pre">v410</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v411E"><code class="docutils literal notranslate"><span class="pre">v411</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v420E"><code class="docutils literal notranslate"><span class="pre">v420</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v500E"><code class="docutils literal notranslate"><span class="pre">v500</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v501E"><code class="docutils literal notranslate"><span class="pre">v501</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v510E"><code class="docutils literal notranslate"><span class="pre">v510</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N24GSW_SPECVOL_COEFFICIENTS4v600E"><code class="docutils literal notranslate"><span class="pre">v600</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +355,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +370,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Struct GSW_SPECVOL_COEFFICIENTS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/structGSW__SPECVOL__COEFFICIENTS.rst.txt" rel="nofollow"> View page source</a>
@@ -1614,10 +1901,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="structGSW__SP__COEFFICIENTS.html" class="btn btn-neutral float-left" title="Struct GSW_SP_COEFFICIENTS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="structGSW__TEOS10__CONSTANTS.html" class="btn btn-neutral float-right" title="Struct GSW_TEOS10_CONSTANTS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

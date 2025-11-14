@@ -23,25 +23,26 @@ Program Listing for File filter_temperature_node.hpp
    
    class TemperatureFilterNode final : public rclcpp::Node {
    public:
-       TemperatureFilterNode();
+     TemperatureFilterNode();
    
    private:
-       size_t filter_window_size_ = 5;
-       size_t filter_median_remove_side_samples_ = 1;
+     size_t filter_window_size_ = 5;
+     size_t filter_median_remove_side_samples_ = 1;
    
-       deque<double> temperature_memory_;
+     deque<double> temperature_memory_;
    
-       rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_data_;
-       rclcpp::Publisher<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr publisher_temperature_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr
+       subscriber_temperature_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr publisher_temperature_data_;
    
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData &msg);
+     void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData & msg);
    
-       double compute_filter(deque<double> queue) const; 
+     double compute_filter(deque<double> queue) const;   
    
    private:
    

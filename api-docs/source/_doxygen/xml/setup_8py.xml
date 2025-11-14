@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="setup_8py" kind="file" language="Python">
+    <compoundname>setup.py</compoundname>
+    <innernamespace refid="namespacesetup">setup</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacesetup" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>setuptools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>find_packages,<sp/>setup</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacesetup_1a69903e4f05cebc9e005b22b36f5724eb" refkind="member"><highlight class="normal">package_name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;xbee_driver&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><ref refid="namespacesetup" kindref="compound">setup</ref>(</highlight></codeline>
+<codeline lineno="6" refid="namespacesetup_1ab3a7a0638d76a01367c5bc3cc699447f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>name=package_name,</highlight></codeline>
+<codeline lineno="7" refid="namespacesetup_1a2aa722b36a933088812b50ea79b97a5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>version=</highlight><highlight class="stringliteral">&apos;0.0.1&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="8" refid="namespacesetup_1aff2375a361fd5865c77bd9aa093be747" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>packages=find_packages(exclude=[</highlight><highlight class="stringliteral">&apos;test&apos;</highlight><highlight class="normal">]),</highlight></codeline>
+<codeline lineno="9" refid="namespacesetup_1ad027a8e9452da003dca32bf7467bd16e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>data_files=[</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&apos;share/ament_index/resource_index/packages&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="stringliteral">&apos;resource/&apos;</highlight><highlight class="normal"><sp/>+<sp/>package_name]),</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="stringliteral">&apos;share/&apos;</highlight><highlight class="normal"><sp/>+<sp/>package_name,<sp/>[</highlight><highlight class="stringliteral">&apos;package.xml&apos;</highlight><highlight class="normal">]),</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>],</highlight></codeline>
+<codeline lineno="14" refid="namespacesetup_1abead4f26b530856f858f0d44c7cf2588" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>install_requires=[</highlight><highlight class="stringliteral">&apos;setuptools&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;digi-xbee&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="15" refid="namespacesetup_1a13510753661cb74083a0c664db11dde9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>zip_safe=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="16" refid="namespacesetup_1aa1a7cf9bbf76004bb72697dc00bbee9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>maintainer=</highlight><highlight class="stringliteral">&apos;lemezoth&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="17" refid="namespacesetup_1a92a81adbfdd219564d5246ce8d77f869" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>maintainer_email=</highlight><highlight class="stringliteral">&apos;thomas.le_mezo@ensta-bretagne.org&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18" refid="namespacesetup_1aedf461ec52a946bda975938ba0b93ec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&apos;Xbee<sp/>driver<sp/>for<sp/>seabot2<sp/>robot&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19" refid="namespacesetup_1a8ed6f50a28bd6a8794f8e1153baa6de9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>license=</highlight><highlight class="stringliteral">&apos;TODO:<sp/>License<sp/>declaration&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20" refid="namespacesetup_1a6369bb060267ccf90b93519796e7cc2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>tests_require=[</highlight><highlight class="stringliteral">&apos;pytest&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="21" refid="namespacesetup_1ada7058afc98897f073d3f3b8b9157059" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>entry_points={</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;console_scripts&apos;</highlight><highlight class="normal">:<sp/>[</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;xbee<sp/>=<sp/>xbee_driver.xbee:main&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>],</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/xbee_driver/setup.py"/>
+  </compounddef>
+</doxygen>

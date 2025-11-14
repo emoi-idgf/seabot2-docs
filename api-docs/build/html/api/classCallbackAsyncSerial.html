@@ -9,6 +9,7 @@
   <title>Class CallbackAsyncSerial &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class SeabotDevice" href="classcheck__i2c__devices_1_1SeabotDevice.html" />
-    <link rel="prev" title="Class BufferedAsyncSerial" href="classBufferedAsyncSerial.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,20 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class CallbackAsyncSerial</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv419CallbackAsyncSerial"><code class="docutils literal notranslate"><span class="pre">CallbackAsyncSerial</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N19CallbackAsyncSerial19CallbackAsyncSerialEv"><code class="docutils literal notranslate"><span class="pre">CallbackAsyncSerial()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19CallbackAsyncSerial19CallbackAsyncSerialERKNSt6stringEjN5boost4asio16serial_port_base6parityEN5boost4asio16serial_port_base14character_sizeEN5boost4asio16serial_port_base12flow_controlEN5boost4asio16serial_port_base9stop_bitsE"><code class="docutils literal notranslate"><span class="pre">CallbackAsyncSerial()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE"><code class="docutils literal notranslate"><span class="pre">setCallback()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19CallbackAsyncSerial13clearCallbackEv"><code class="docutils literal notranslate"><span class="pre">clearCallback()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19CallbackAsyncSerialD0Ev"><code class="docutils literal notranslate"><span class="pre">~CallbackAsyncSerial()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +66,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +81,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class CallbackAsyncSerial</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classCallbackAsyncSerial.rst.txt" rel="nofollow"> View page source</a>
@@ -143,7 +141,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE">
-<span id="_CPPv3N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE"></span><span id="_CPPv2N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE"></span><span class="target" id="classCallbackAsyncSerial_1a8b374436b8eeaab4376901961eb9df1f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCallback</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">callback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE"></span><span id="_CPPv2N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE"></span><span class="target" id="classCallbackAsyncSerial_1ab44316e0a9f9cfb73f27e61f61e002bb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCallback</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">callback</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N19CallbackAsyncSerial11setCallbackERKNSt8functionIFvPKc6size_tEEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Set the read callback, the callback will be called from a thread owned by the <a class="reference internal" href="#classCallbackAsyncSerial"><span class="std std-ref">CallbackAsyncSerial</span></a> class when data arrives from the serial port. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -172,10 +170,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classBufferedAsyncSerial.html" class="btn btn-neutral float-left" title="Class BufferedAsyncSerial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classcheck__i2c__devices_1_1SeabotDevice.html" class="btn btn-neutral float-right" title="Class SeabotDevice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

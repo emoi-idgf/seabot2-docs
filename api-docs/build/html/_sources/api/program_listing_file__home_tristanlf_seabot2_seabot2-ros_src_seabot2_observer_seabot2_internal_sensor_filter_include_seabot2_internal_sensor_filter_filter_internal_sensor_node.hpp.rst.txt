@@ -22,27 +22,27 @@ Program Listing for File filter_internal_sensor_node.hpp
    
    class InternalSensorFilterNode : public rclcpp::Node {
    public:
-       InternalSensorFilterNode();
+     InternalSensorFilterNode();
    
    private:
-       size_t filter_window_size_ = 5;
-       size_t filter_median_remove_side_samples_ = 1;
+     size_t filter_window_size_ = 5;
+     size_t filter_median_remove_side_samples_ = 1;
    
-       deque<double> pressure_memory_;
-       deque<double> temperature_memory_;
-       deque<double> humidity_memory_;
+     deque<double> pressure_memory_;
+     deque<double> temperature_memory_;
+     deque<double> humidity_memory_;
    
-       rclcpp::Subscription<seabot2_msgs::msg::Bme280Data>::SharedPtr subscriber_pressure_data_;
-       rclcpp::Publisher<seabot2_msgs::msg::Bme280Data>::SharedPtr publisher_pressure_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::Bme280Data>::SharedPtr subscriber_pressure_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::Bme280Data>::SharedPtr publisher_pressure_data_;
    
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void pressure_callback(const seabot2_msgs::msg::Bme280Data &msg);
+     void pressure_callback(const seabot2_msgs::msg::Bme280Data & msg);
    
-       double compute_filter(deque<double> queue) const; 
+     double compute_filter(deque<double> queue) const;   
    
    private:
    

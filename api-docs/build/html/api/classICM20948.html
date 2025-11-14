@@ -9,6 +9,7 @@
   <title>Class ICM20948 &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class ICM20948Node" href="classICM20948Node.html" />
-    <link rel="prev" title="Class HeadingControlNode" href="classHeadingControlNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,63 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class ICM20948</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv48ICM20948"><code class="docutils literal notranslate"><span class="pre">ICM20948</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N8ICM209488ICM20948Ev"><code class="docutils literal notranslate"><span class="pre">ICM20948()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM20948D0Ev"><code class="docutils literal notranslate"><span class="pre">~ICM20948()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209484initEv"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094811get_measureEv"><code class="docutils literal notranslate"><span class="pre">get_measure()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209486acc_x_E"><code class="docutils literal notranslate"><span class="pre">acc_x_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209486acc_y_E"><code class="docutils literal notranslate"><span class="pre">acc_y_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209486acc_z_E"><code class="docutils literal notranslate"><span class="pre">acc_z_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209487gyro_x_E"><code class="docutils literal notranslate"><span class="pre">gyro_x_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209487gyro_y_E"><code class="docutils literal notranslate"><span class="pre">gyro_y_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209487gyro_z_E"><code class="docutils literal notranslate"><span class="pre">gyro_z_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209486mag_x_E"><code class="docutils literal notranslate"><span class="pre">mag_x_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209486mag_y_E"><code class="docutils literal notranslate"><span class="pre">mag_y_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209486mag_z_E"><code class="docutils literal notranslate"><span class="pre">mag_z_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209485temp_E"><code class="docutils literal notranslate"><span class="pre">temp_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813accel_x_bias_E"><code class="docutils literal notranslate"><span class="pre">accel_x_bias_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813accel_y_bias_E"><code class="docutils literal notranslate"><span class="pre">accel_y_bias_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813accel_z_bias_E"><code class="docutils literal notranslate"><span class="pre">accel_z_bias_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094810mag_x_old_E"><code class="docutils literal notranslate"><span class="pre">mag_x_old_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094810mag_y_old_E"><code class="docutils literal notranslate"><span class="pre">mag_y_old_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094810mag_z_old_E"><code class="docutils literal notranslate"><span class="pre">mag_z_old_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813nb_not_updateE"><code class="docutils literal notranslate"><span class="pre">nb_not_update</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094826mag_data_has_been_skipped_E"><code class="docutils literal notranslate"><span class="pre">mag_data_has_been_skipped_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094818mag_data_is_ready_E"><code class="docutils literal notranslate"><span class="pre">mag_data_is_ready_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094829mag_sensor_magnetic_overflow_E"><code class="docutils literal notranslate"><span class="pre">mag_sensor_magnetic_overflow_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209488spi_bus_E"><code class="docutils literal notranslate"><span class="pre">spi_bus_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094811spi_device_E"><code class="docutils literal notranslate"><span class="pre">spi_device_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813gyro_dlpfcfg_E"><code class="docutils literal notranslate"><span class="pre">gyro_dlpfcfg_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094812gyro_fs_sel_E"><code class="docutils literal notranslate"><span class="pre">gyro_fs_sel_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813gyro_fchoice_E"><code class="docutils literal notranslate"><span class="pre">gyro_fchoice_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094812gyro_avgcfg_E"><code class="docutils literal notranslate"><span class="pre">gyro_avgcfg_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094816gyro_smplrt_div_E"><code class="docutils literal notranslate"><span class="pre">gyro_smplrt_div_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094817accel_smplrt_div_E"><code class="docutils literal notranslate"><span class="pre">accel_smplrt_div_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094814accel_dlpfcfg_E"><code class="docutils literal notranslate"><span class="pre">accel_dlpfcfg_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094813accel_fs_sel_E"><code class="docutils literal notranslate"><span class="pre">accel_fs_sel_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094814accel_fchoice_E"><code class="docutils literal notranslate"><span class="pre">accel_fchoice_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094812acc_dec3Cfg_E"><code class="docutils literal notranslate"><span class="pre">acc_dec3Cfg_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094815accel_intel_en_E"><code class="docutils literal notranslate"><span class="pre">accel_intel_en_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094821accel_intel_mode_int_E"><code class="docutils literal notranslate"><span class="pre">accel_intel_mode_int_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094816accel_intel_thr_E"><code class="docutils literal notranslate"><span class="pre">accel_intel_thr_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094818accel_sensitivity_E"><code class="docutils literal notranslate"><span class="pre">accel_sensitivity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094817gyro_sensitivity_E"><code class="docutils literal notranslate"><span class="pre">gyro_sensitivity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094816gyro_full_scale_E"><code class="docutils literal notranslate"><span class="pre">gyro_full_scale_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094817accel_full_scale_E"><code class="docutils literal notranslate"><span class="pre">accel_full_scale_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094816mag_sensitivity_E"><code class="docutils literal notranslate"><span class="pre">mag_sensitivity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094818mag_normalization_E"><code class="docutils literal notranslate"><span class="pre">mag_normalization_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209489mag_mode_E"><code class="docutils literal notranslate"><span class="pre">mag_mode_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094815i2c_smplrt_div_E"><code class="docutils literal notranslate"><span class="pre">i2c_smplrt_div_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM209489slv4_dly_E"><code class="docutils literal notranslate"><span class="pre">slv4_dly_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094818i2c_slv0_delay_en_E"><code class="docutils literal notranslate"><span class="pre">i2c_slv0_delay_en_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094818i2c_frequency_clk_E"><code class="docutils literal notranslate"><span class="pre">i2c_frequency_clk_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094812i2c_lp_mode_E"><code class="docutils literal notranslate"><span class="pre">i2c_lp_mode_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8ICM2094811i2c_if_dis_E"><code class="docutils literal notranslate"><span class="pre">i2c_if_dis_</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +109,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +124,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class ICM20948</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classICM20948.rst.txt" rel="nofollow"> View page source</a>
@@ -309,22 +350,22 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8ICM2094818accel_sensitivity_E">
-<span id="_CPPv3N8ICM2094818accel_sensitivity_E"></span><span id="_CPPv2N8ICM2094818accel_sensitivity_E"></span><span id="ICM20948::accel_sensitivity___std::array:double.4:C"></span><span class="target" id="classICM20948_1ae63be6e6cb4a7a5544d57447c211e3b2"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accel_sensitivity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">2.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">8.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">16.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094818accel_sensitivity_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8ICM2094818accel_sensitivity_E"></span><span id="_CPPv2N8ICM2094818accel_sensitivity_E"></span><span id="ICM20948::accel_sensitivity___std::array:double.4:C"></span><span class="target" id="classICM20948_1a49ac21ade264c6899ba1b79a8959902f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accel_sensitivity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">2.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">8.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">16.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094818accel_sensitivity_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8ICM2094817gyro_sensitivity_E">
-<span id="_CPPv3N8ICM2094817gyro_sensitivity_E"></span><span id="_CPPv2N8ICM2094817gyro_sensitivity_E"></span><span id="ICM20948::gyro_sensitivity___std::array:double.4:C"></span><span class="target" id="classICM20948_1abefb7c4524aa6110ef05f53a459da35a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyro_sensitivity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">250.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">500.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1000.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2000.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094817gyro_sensitivity_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8ICM2094817gyro_sensitivity_E"></span><span id="_CPPv2N8ICM2094817gyro_sensitivity_E"></span><span id="ICM20948::gyro_sensitivity___std::array:double.4:C"></span><span class="target" id="classICM20948_1add8b12d156254532f000d201d350c554"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyro_sensitivity_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">250.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">500.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1000.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2000.</span></span><span class="w"> </span><span class="o"><span class="pre">/</span></span><span class="w"> </span><span class="m"><span class="pre">32767.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094817gyro_sensitivity_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8ICM2094816gyro_full_scale_E">
-<span id="_CPPv3N8ICM2094816gyro_full_scale_E"></span><span id="_CPPv2N8ICM2094816gyro_full_scale_E"></span><span id="ICM20948::gyro_full_scale___std::array:double.4:C"></span><span class="target" id="classICM20948_1a4dc3e99ab6d0c5559adcd3b9c36db212"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyro_full_scale_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">250.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">500.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1000.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2000.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094816gyro_full_scale_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8ICM2094816gyro_full_scale_E"></span><span id="_CPPv2N8ICM2094816gyro_full_scale_E"></span><span id="ICM20948::gyro_full_scale___std::array:double.4:C"></span><span class="target" id="classICM20948_1abd2b59b08fa5f42206ed4f2f4329fdd0"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyro_full_scale_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">250.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">500.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1000.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2000.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094816gyro_full_scale_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8ICM2094817accel_full_scale_E">
-<span id="_CPPv3N8ICM2094817accel_full_scale_E"></span><span id="_CPPv2N8ICM2094817accel_full_scale_E"></span><span id="ICM20948::accel_full_scale___std::array:double.4:C"></span><span class="target" id="classICM20948_1aadff15f28f50d77d7be71fd52d868b0b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accel_full_scale_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">2.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">8.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">16.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094817accel_full_scale_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8ICM2094817accel_full_scale_E"></span><span id="_CPPv2N8ICM2094817accel_full_scale_E"></span><span id="ICM20948::accel_full_scale___std::array:double.4:C"></span><span class="target" id="classICM20948_1adcb026e9f727e7bd6ad746eeb8341d56"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accel_full_scale_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">2.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">8.</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">16.</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8ICM2094817accel_full_scale_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -381,10 +422,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classHeadingControlNode.html" class="btn btn-neutral float-left" title="Class HeadingControlNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classICM20948Node.html" class="btn btn-neutral float-right" title="Class ICM20948Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

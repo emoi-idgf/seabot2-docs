@@ -27,29 +27,29 @@ Program Listing for File temperature_profile.h
    
    class TemperatureProfile {
    public:
-       TemperatureProfile();
+     TemperatureProfile();
    
    private:
    
-       std::deque<std::pair<double, double>> temperature_depth_data_;
+     std::deque < std::pair < double, double >> temperature_depth_data_;
    
    public:
    
-       bool enable_kalman_ = true;
-       bool is_valid_ = true;
-       rclcpp::Time time_last_predict_;
-       std::chrono::milliseconds forecast_dt_ = 0ms;
-       size_t max_number_data_ = 100;
+     bool enable_kalman_ = true;
+     bool is_valid_ = true;
+     rclcpp::Time time_last_predict_;
+     std::chrono::milliseconds forecast_dt_ = 0ms;
+     size_t max_number_data_ = 100;
    
-       double profile_slope_ = -0.3; // m/°C
-       double profile_intercept_ = -5.0; // m
+     double profile_slope_ = -0.3;   // m/°C
+     double profile_intercept_ = -5.0;   // m
    
    private:
    
    public:
-       void update_temperature(double temperature, double depth);
+     void update_temperature(double temperature, double depth);
    
-       void compute_profile();
+     void compute_profile();
    };
    
    

@@ -17,8 +17,6 @@ Namespaces
 ----------
 
 
-- :ref:`namespace_std__chrono`
-
 - :ref:`namespace_std__chrono_literals`
 
 - :ref:`namespace_std__placeholders`

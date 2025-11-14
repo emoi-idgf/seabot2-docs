@@ -42,5 +42,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_seabot__launch_8py_1a1379b2e18d8ed75fda36163683a9bb65`
+- :ref:`exhale_function_namespaceseabot__launch_1a1379b2e18d8ed75fda36163683a9bb65`
 

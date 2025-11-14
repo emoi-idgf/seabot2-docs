@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['bme280_2ec_0',['bme280.c',['../bme280_8c.html',1,'']]],
-  ['bme280_2eh_1',['bme280.h',['../bme280_8h.html',1,'']]],
-  ['bme280_5fdefs_2eh_2',['bme280_defs.h',['../bme280__defs_8h.html',1,'']]]
+  ['_5f_5finit_5f_5f_2epy_0',['__init__.py',['../____init_____8py.html',1,'']]]
 ];

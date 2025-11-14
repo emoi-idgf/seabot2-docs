@@ -2,6 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="mission__node_8hpp" kind="file" language="C++">
     <compoundname>mission_node.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">memory</includes>
     <includes local="yes">rclcpp/rclcpp.hpp</includes>
     <includes refid="mission_8hpp" local="yes">seabot2_mission/mission.hpp</includes>
     <includes local="yes">seabot2_msgs/msg/depth_control_set_point.hpp</includes>
@@ -13,24 +15,28 @@
     <includes local="yes">std_srvs/srv/trigger.hpp</includes>
     <includedby refid="mission__node_8cpp" local="yes">/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp</includedby>
     <incdepgraph>
-      <node id="3">
+      <node id="5">
         <label>seabot2_mission/mission.hpp</label>
-        <link refid="mission_8hpp_source"/>
+        <link refid="mission_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -40,11 +46,11 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -54,145 +60,173 @@
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>seabot2_mission/waypoint.hpp</label>
-        <link refid="waypoint_8hpp_source"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>seabot2_mission/waypoint.hpp</label>
+        <link refid="waypoint_8hpp"/>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="7">
-        <label>boost/property_tree/ptree.hpp</label>
-      </node>
-      <node id="10">
-        <label>filesystem</label>
-      </node>
-      <node id="2">
-        <label>rclcpp/rclcpp.hpp</label>
-      </node>
-      <node id="6">
-        <label>seabot2_msgs/msg/depth_control_set_point.hpp</label>
-      </node>
-      <node id="11">
-        <label>seabot2_msgs/msg/depth_pose.hpp</label>
-      </node>
-      <node id="5">
-        <label>seabot2_msgs/msg/mission_state.hpp</label>
-      </node>
-      <node id="13">
-        <label>seabot2_msgs/msg/temperature_keeping_debug.hpp</label>
-      </node>
-      <node id="12">
-        <label>seabot2_msgs/msg/temperature_sensor_data.hpp</label>
-      </node>
-      <node id="14">
-        <label>seabot2_srvs/srv/light.hpp</label>
-      </node>
-      <node id="15">
-        <label>std_srvs/srv/set_bool.hpp</label>
-      </node>
-      <node id="16">
-        <label>std_srvs/srv/trigger.hpp</label>
-      </node>
-      <node id="8">
-        <label>string</label>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
       <node id="9">
+        <label>boost/property_tree/ptree.hpp</label>
+      </node>
+      <node id="7">
+        <label>filesystem</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>rclcpp/rclcpp.hpp</label>
+      </node>
+      <node id="11">
+        <label>seabot2_msgs/msg/depth_control_set_point.hpp</label>
+      </node>
+      <node id="13">
+        <label>seabot2_msgs/msg/depth_pose.hpp</label>
+      </node>
+      <node id="12">
+        <label>seabot2_msgs/msg/mission_state.hpp</label>
+      </node>
+      <node id="15">
+        <label>seabot2_msgs/msg/temperature_keeping_debug.hpp</label>
+      </node>
+      <node id="14">
+        <label>seabot2_msgs/msg/temperature_sensor_data.hpp</label>
+      </node>
+      <node id="16">
+        <label>seabot2_srvs/srv/light.hpp</label>
+      </node>
+      <node id="17">
+        <label>std_srvs/srv/set_bool.hpp</label>
+      </node>
+      <node id="18">
+        <label>std_srvs/srv/trigger.hpp</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>utility</label>
+      </node>
+      <node id="6">
         <label>vector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp</label>
+        <link refid="mission__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/mission_node.cpp</label>
+        <link refid="mission__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classMissionNode" prot="public">MissionNode</innerclass>
     <briefdescription>
+<para>Declaration of the <ref refid="classMissionNode" kindref="compound">MissionNode</ref> class. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="copyright"><para>Copyright (c) 2025 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>BUILD_MISSION_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUILD_MISSION_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_mission/mission.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/depth_control_set_point.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/depth_pose.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/temperature_sensor_data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/temperature_keeping_debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SEABOT2_MISSION__MISSION_NODE_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEABOT2_MISSION__MISSION_NODE_HPP_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_srvs/srv/light.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;std_srvs/srv/set_bool.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;std_srvs/srv/trigger.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20" refid="classMissionNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMissionNode" kindref="compound">MissionNode</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMissionNode" kindref="compound">MissionNode</ref>();</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/>timer_;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/>loop_dt_<sp/>=<sp/>1s;<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mission_8hpp" kindref="compound">seabot2_mission/mission.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/depth_control_set_point.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/depth_pose.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/temperature_sensor_data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/temperature_keeping_debug.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_srvs/srv/light.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;std_srvs/srv/set_bool.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;std_srvs/srv/trigger.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/>callback_group_;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMission" kindref="compound">Mission</ref><sp/>mission_;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mission_file_name_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mission.xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mission_path_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mission_enable_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>flash_next_waypoint_time_<sp/>=<sp/>5.0;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flash_number_<sp/>=<sp/>2;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>limit_velocity_default_<sp/>=<sp/>0.02;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::MissionState&gt;::SharedPtr<sp/>publisher_mission_state_;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;::SharedPtr<sp/>publisher_depth_control_set_point_;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::TemperatureKeepingDebug&gt;::SharedPtr<sp/>publisher_temperature_keeping_debug_;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr<sp/>subscriber_depth_data_;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr<sp/>subscriber_temperature_data_;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Client&lt;seabot2_srvs::srv::Light&gt;::SharedPtr<sp/>client_light_;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/>client_log_parameters_;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/>client_bag_recorder_;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/>service_mission_reload_<sp/>;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr<sp/>service_mission_enable_<sp/>;</highlight></codeline>
+<codeline lineno="36" refid="classMissionNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMissionNode" kindref="compound">MissionNode</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="classMissionNode_1a210c7569d64bb3872762eda0e0880743" kindref="member">MissionNode</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classMissionNode_1a54da7a76ed28d89ec0bc9fa3344d70ac" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classMissionNode_1a54da7a76ed28d89ec0bc9fa3344d70ac" kindref="member">timer_</ref>;</highlight></codeline>
+<codeline lineno="48" refid="classMissionNode_1aed46034bcba118cbcf8c1fc666309f6d" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><ref refid="classMissionNode_1aed46034bcba118cbcf8c1fc666309f6d" kindref="member">loop_dt_</ref><sp/>=<sp/>std::chrono::milliseconds(1000);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classMissionNode_1aa38b6c59f36921d1cba99619504e1097" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/><ref refid="classMissionNode_1aa38b6c59f36921d1cba99619504e1097" kindref="member">callback_group_</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classMissionNode_1a3a284568df6184b8d7e320868d4e3c11" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classMission" kindref="compound">Mission</ref><sp/><ref refid="classMissionNode_1a3a284568df6184b8d7e320868d4e3c11" kindref="member">mission_</ref>;</highlight></codeline>
+<codeline lineno="55" refid="classMissionNode_1a533c67e7a7f96ff590e0d689bfb69d5a" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classMissionNode_1a533c67e7a7f96ff590e0d689bfb69d5a" kindref="member">mission_file_name_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mission.xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56" refid="classMissionNode_1abbcd65c857726e5697430ef6eba74252" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classMissionNode_1abbcd65c857726e5697430ef6eba74252" kindref="member">mission_path_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="59" refid="classMissionNode_1ac1f1ef230273fc75f29f3bfeb6c8b60c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1ac1f1ef230273fc75f29f3bfeb6c8b60c" kindref="member">flash_next_waypoint_time_</ref><sp/>=<sp/>5.0;</highlight></codeline>
+<codeline lineno="61" refid="classMissionNode_1a0915e06fb4556ff8979e2da71831fea9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1a0915e06fb4556ff8979e2da71831fea9" kindref="member">flash_number_</ref><sp/>=<sp/>2;</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_callback();</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>service_mission_reload_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>service_mission_enable_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_light();</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_log_params()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>limit<sp/>velocity<sp/>m/s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classMissionNode_1aba6c0a5d6b6b4a2a5b23d0f83d0802e1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1aba6c0a5d6b6b4a2a5b23d0f83d0802e1" kindref="member">limit_velocity_default_</ref><sp/>=<sp/>0.02;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classMissionNode_1a266a390fc613182c3e788e4f5561c2b6" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::MissionState&gt;::SharedPtr<sp/><ref refid="classMissionNode_1a266a390fc613182c3e788e4f5561c2b6" kindref="member">publisher_mission_state_</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;::SharedPtr</highlight></codeline>
+<codeline lineno="70" refid="classMissionNode_1a0133b721c927e2a4f2108792cc801dfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMissionNode_1a0133b721c927e2a4f2108792cc801dfe" kindref="member">publisher_depth_control_set_point_</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::TemperatureKeepingDebug&gt;::SharedPtr</highlight></codeline>
+<codeline lineno="73" refid="classMissionNode_1a7b7970c1da0ad937dbbddffb84f9263f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMissionNode_1a7b7970c1da0ad937dbbddffb84f9263f" kindref="member">publisher_temperature_keeping_debug_</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classMissionNode_1a22a486850fa36b9db7c3b67175107abb" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr<sp/><ref refid="classMissionNode_1a22a486850fa36b9db7c3b67175107abb" kindref="member">subscriber_depth_data_</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr</highlight></codeline>
+<codeline lineno="79" refid="classMissionNode_1a2f724d4fd05ff66e1b0709e57c512fbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMissionNode_1a2f724d4fd05ff66e1b0709e57c512fbd" kindref="member">subscriber_temperature_data_</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classMissionNode_1a2fc2a9cb4e477f26bcf539a82a21fad2" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Client&lt;seabot2_srvs::srv::Light&gt;::SharedPtr<sp/><ref refid="classMissionNode_1a2fc2a9cb4e477f26bcf539a82a21fad2" kindref="member">client_light_</ref>;</highlight></codeline>
+<codeline lineno="84" refid="classMissionNode_1ade3728a740cb0376be1b76714d9e2854" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/><ref refid="classMissionNode_1ade3728a740cb0376be1b76714d9e2854" kindref="member">client_log_parameters_</ref>;</highlight></codeline>
+<codeline lineno="86" refid="classMissionNode_1ab07da3c8f42d9f7e47aaddd990065c2e" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/><ref refid="classMissionNode_1ab07da3c8f42d9f7e47aaddd990065c2e" kindref="member">client_bag_recorder_</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classMissionNode_1aeeaadf52a938a4846df92365dd3b9e67" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/><ref refid="classMissionNode_1aeeaadf52a938a4846df92365dd3b9e67" kindref="member">service_mission_reload_</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1af883a167a9496d6473a8b38e7d3c4884" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1a630070c0bfbf02a9a851193d41351622" kindref="member">init_interfaces</ref>();</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>load_mission();</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_velocity_computation(std::vector&lt;float&gt;<sp/>&amp;velocity_list);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_restart_bag()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>depth_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose::SharedPtr<sp/>msg);</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>temperature_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData::SharedPtr<sp/>msg);</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_MISSION_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1ac31360b92f51c1e19df0369ae01dfc5c" kindref="member">timer_callback</ref>();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1a29c884ae315b1e07538ef74cbc4f712e" kindref="member">depth_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose::SharedPtr<sp/>msg);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1a654cde58df15ce43f9889f811904804f" kindref="member">temperature_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData::SharedPtr<sp/>msg);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1aae921ef8e5969a77084756f65a4e91bc" kindref="member">service_mission_reload_callback</ref>(</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;<sp/>response);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1ac09f83e8a66b11c7db60cbe54526d29a" kindref="member">call_light</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1a90b719b138f2bb6bfa1ced9bd5630989" kindref="member">call_log_params</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1aa33aab22ae169a4d830f44de315e6571" kindref="member">call_restart_bag</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMissionNode_1aef3cca810237968950882ce4ca428b39" kindref="member">load_mission</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SEABOT2_MISSION__MISSION_NODE_HPP_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/mission_node.hpp"/>
   </compounddef>

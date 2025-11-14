@@ -40,6 +40,24 @@
         <label>sys/types.h</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/include/temperature_tsys01_driver/temperature_tsys01.hpp</label>
+        <link refid="temperature__tsys01_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/src/temperature_tsys01.cpp</label>
+        <link refid="temperature__tsys01_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/temperature_tsys01_driver/src/temperature_tsys01_node.cpp</label>
+        <link refid="temperature__tsys01__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classTemperature__TSYS01" prot="public">Temperature_TSYS01</innerclass>
     <sectiondef kind="define">
       <memberdef kind="define" id="temperature__tsys01_8hpp_1afe1dd8546b0a8cd30b19a0229205c8df" prot="public" static="no">
@@ -115,29 +133,29 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;i2c/smbus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_RESET<sp/>0x1E<sp/></highlight><highlight class="comment">//<sp/>reset<sp/>command</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_ADC_READ<sp/>0x00<sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_ADC_CONV<sp/>0x48<sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>conversion<sp/>command</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_PROM<sp/>0xA0<sp/></highlight><highlight class="comment">//<sp/>Coefficient<sp/>location</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="temperature__tsys01_8hpp_1afe1dd8546b0a8cd30b19a0229205c8df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_RESET<sp/>0x1E<sp/></highlight><highlight class="comment">//<sp/>reset<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="temperature__tsys01_8hpp_1afdd65050b415478cc4ede5a8b062969f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_ADC_READ<sp/>0x00<sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>read<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="temperature__tsys01_8hpp_1a47073484adf9e7158e7af7afcbd2183b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_ADC_CONV<sp/>0x48<sp/></highlight><highlight class="comment">//<sp/>ADC<sp/>conversion<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="temperature__tsys01_8hpp_1adafc2a073a9f412e4bb0e3a96ee6eea6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CMD_PROM<sp/>0xA0<sp/></highlight><highlight class="comment">//<sp/>Coefficient<sp/>location</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_TIME<sp/>10000<sp/></highlight><highlight class="comment">//<sp/>10ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="temperature__tsys01_8hpp_1a9e2db76bf8a9914b061bf29af9f22d53" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_TIME<sp/>10000<sp/></highlight><highlight class="comment">//<sp/>10ms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
 <codeline lineno="20" refid="classTemperature__TSYS01" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTemperature__TSYS01" kindref="compound">Temperature_TSYS01</ref></highlight></codeline>
 <codeline lineno="21"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="27" refid="classTemperature__TSYS01_1af68bbf5e2afda824c88a0e4796991199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01_1af68bbf5e2afda824c88a0e4796991199" kindref="member">Temperature_TSYS01</ref>(rclcpp::Node<sp/>*n):<sp/>k_{}<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="27" refid="classTemperature__TSYS01_1af68bbf5e2afda824c88a0e4796991199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01_1af68bbf5e2afda824c88a0e4796991199" kindref="member">Temperature_TSYS01</ref>(rclcpp::Node<sp/>*n):<sp/><ref refid="classTemperature__TSYS01_1acea505fbc97aafc43e82c08c4d8aded3" kindref="member">k_</ref>{}<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01_1a3499bf2aa4cd79745a01dcc310a40ea9" kindref="member">n_</ref><sp/>=<sp/>n;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01" kindref="compound">~Temperature_TSYS01</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperature__TSYS01_1a870d9785f79402038e370cc70c08d93b" kindref="member">~Temperature_TSYS01</ref>();</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2c_open();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>init_sensor();</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>reset()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a746da340391356e26238695fee2be777" kindref="member">i2c_open</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a07f0960d19e10aa53671223eb38e4df2" kindref="member">init_sensor</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a3dffead2189c3db7fe1f9287c48241e6" kindref="member">reset</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>measure();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a0b5b5218b5a92c3ea302c6231cad63e8" kindref="member">measure</ref>();</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>get_temperature()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a9f279c4ed650a5762b053382df7e4f81" kindref="member">get_temperature</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1aa1f8e2dc5da69c36f886cbd5daafa912" kindref="member">getI2CAddr</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
@@ -149,21 +167,21 @@
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Node*<sp/>n_=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="67" refid="classTemperature__TSYS01_1a3499bf2aa4cd79745a01dcc310a40ea9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Node*<sp/><ref refid="classTemperature__TSYS01_1a3499bf2aa4cd79745a01dcc310a40ea9" kindref="member">n_</ref>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2c_addr_<sp/>=<sp/>0x77;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>i2c_periph_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69" refid="classTemperature__TSYS01_1a300b37906543c5fcf9b1696869574ebe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a300b37906543c5fcf9b1696869574ebe" kindref="member">file_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70" refid="classTemperature__TSYS01_1a0d0fd8eb3a5ef1f8c859682130bc67ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a0d0fd8eb3a5ef1f8c859682130bc67ff" kindref="member">i2c_addr_</ref><sp/>=<sp/>0x77;</highlight></codeline>
+<codeline lineno="71" refid="classTemperature__TSYS01_1aba0c203f240eaf8d4563040c47f26f5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classTemperature__TSYS01_1aba0c203f240eaf8d4563040c47f26f5e" kindref="member">i2c_periph_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int16_t<sp/>k_[5];</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid_data_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73" refid="classTemperature__TSYS01_1acea505fbc97aafc43e82c08c4d8aded3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>u_int16_t<sp/><ref refid="classTemperature__TSYS01_1acea505fbc97aafc43e82c08c4d8aded3" kindref="member">k_</ref>[5];</highlight></codeline>
+<codeline lineno="74" refid="classTemperature__TSYS01_1ae5141dcfc403c6fa2fdda1df139c2e6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1ae5141dcfc403c6fa2fdda1df139c2e6c" kindref="member">valid_data_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature_<sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="76" refid="classTemperature__TSYS01_1a4cef6bec6f82295a9c7e9c07e8c38a5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a4cef6bec6f82295a9c7e9c07e8c38a5c" kindref="member">temperature_</ref><sp/>=<sp/>0.;</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Temperature_TSYS01::get_temperature()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temperature_;</highlight></codeline>
+<codeline lineno="80" refid="classTemperature__TSYS01_1a9f279c4ed650a5762b053382df7e4f81" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a9f279c4ed650a5762b053382df7e4f81" kindref="member">Temperature_TSYS01::get_temperature</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTemperature__TSYS01_1a4cef6bec6f82295a9c7e9c07e8c38a5c" kindref="member">temperature_</ref>;</highlight></codeline>
 <codeline lineno="82"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TEMPERATURE_H</highlight><highlight class="normal"></highlight></codeline>

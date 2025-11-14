@@ -191,13 +191,13 @@ Program Listing for File icm20948_register.h
    
    typedef enum
    {
-       AK09916_mode_power_down = 0b0,
-       AK09916_mode_single = 0b1,
-       AK09916_mode_cont_10hz = 0b10,  // MODE 1
-       AK09916_mode_cont_20hz = 0b100, // MODE 2
-       AK09916_mode_cont_50hz = 0b110, // MODE 3 Warning : not logical (see datasheet)
-       AK09916_mode_cont_100hz = 0b1000, // MODE 4
-       AK09916_mode_self_test = 0b10000,
+     AK09916_mode_power_down = 0b0,
+     AK09916_mode_single = 0b1,
+     AK09916_mode_cont_10hz = 0b10,    // MODE 1
+     AK09916_mode_cont_20hz = 0b100,   // MODE 2
+     AK09916_mode_cont_50hz = 0b110,   // MODE 3 Warning : not logical (see datasheet)
+     AK09916_mode_cont_100hz = 0b1000,   // MODE 4
+     AK09916_mode_self_test = 0b10000,
    } AK09916_mode_e;
    
    #endif //ICM20948_REGISTER_H

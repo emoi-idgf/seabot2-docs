@@ -9,6 +9,11 @@ File mission_node.hpp
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
+
+Declaration of the :ref:`exhale_class_classMissionNode` class. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -24,11 +29,21 @@ Definition (``/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/se
 
 
 
+Detailed Description
+--------------------
+
+Copyright (c) 2025 
+
+
+
+
 
 
 Includes
 --------
 
+
+- ``memory``
 
 - ``rclcpp/rclcpp.hpp``
 
@@ -47,6 +62,8 @@ Includes
 - ``std_srvs/srv/set_bool.hpp``
 
 - ``std_srvs/srv/trigger.hpp``
+
+- ``string``
 
 
 

@@ -14,16 +14,19 @@ Program Listing for File depth_control.h
    // Created by lemezoth on 18/05/23.
    //
    
-   #ifndef BUILD_DEPTH_CONTROL_H
-   #define BUILD_DEPTH_CONTROL_H
+   #ifndef SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_H_
+   #define SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_H_
    
-   #include "rclcpp/rclcpp.hpp"
    #include <eigen3/Eigen/Dense>
    #include <cmath>
+   #include <cstdint>
+   
+   #include "rclcpp/rclcpp.hpp"
    #include "seabot2_depth_control/alpha_solver.h"
    
-   class DepthControl {
+   using namespace std::chrono_literals;
    
+   class DepthControl {
    public:
      DepthControl(const rclcpp::Time & start_time);
    
@@ -94,10 +97,10 @@ Program Listing for File depth_control.h
    
      rclcpp::Duration safety_time_no_data_ = 5s;
    
-     long piston_position_ = 0;
+     int64_t piston_position_ = 0;
      bool piston_switch_top_ = false;
      bool piston_switch_bottom_ = false;
-     int piston_state_ = 0;
+     int32_t piston_state_ = 0;
      double piston_set_point_ = 0.;
      bool is_exit_ = true;
    
@@ -134,7 +137,6 @@ Program Listing for File depth_control.h
      double u_debug_ = 0.0;
    
    public:
-   
      void update_state(
        const double & velocity,
        const double & depth,
@@ -187,4 +189,4 @@ Program Listing for File depth_control.h
    };
    
    
-   #endif //BUILD_DEPTH_CONTROL_H
+   #endif  // SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_H_

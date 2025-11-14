@@ -46,10 +46,22 @@
         <link refid="piston_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/include/seabot2_piston_driver/piston_node.h</label>
-        <link refid="piston__node_8h_source"/>
+        <link refid="piston__node_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston.cpp</label>
+        <link refid="piston_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_piston_driver/src/piston_node.cpp</label>
+        <link refid="piston__node_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classPiston" prot="public">Piston</innerclass>
@@ -122,7 +134,7 @@
       </memberdef>
       <memberdef kind="define" id="piston_8h_1a6d8cc050ea7d1409729c53737da98d6f" prot="public" static="no">
         <name>CONVERSION_BRIDGE</name>
-        <initializer>(3.3/4096.)</initializer>
+        <initializer>(3.3 / 4096.)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -133,7 +145,7 @@
       </memberdef>
       <memberdef kind="define" id="piston_8h_1aa2cb161bbd854a27d819c061b9ce0755" prot="public" static="no">
         <name>CONVERSION_CURRENT</name>
-        <initializer>CONVERSION_BRIDGE /*(CONVERSION_BRIDGE * 1000.0/264.0)*/</initializer>
+        <initializer><ref refid="piston_8h_1a6d8cc050ea7d1409729c53737da98d6f" kindref="member">CONVERSION_BRIDGE</ref> /*(<ref refid="piston_8h_1a6d8cc050ea7d1409729c53737da98d6f" kindref="member">CONVERSION_BRIDGE</ref> * 1000.0/264.0)*/</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -160,86 +172,86 @@
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;i2c/smbus.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_STATE<sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_REGULATION_DEAD_ZONE<sp/>0x30</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_REGULATION_PROPORTIONAL<sp/>0x32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_DATA_READ<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_DATA_SIZE<sp/>18</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_SET_POINT<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="piston_8h_1a49919d31e3945e850e1bb457173c6914" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_STATE<sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="piston_8h_1a467b2cc5896850a3869a21eb35a97e38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_REGULATION_DEAD_ZONE<sp/>0x30</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="piston_8h_1a7dec70a1a269708d57863449fc601da3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_REGULATION_PROPORTIONAL<sp/>0x32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="piston_8h_1abfa5b3f75a469a1cdaac60abc209b53d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_DATA_READ<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="piston_8h_1a4317edb9e80ba6e3424a2c39db36932b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_DATA_SIZE<sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="piston_8h_1abc19955f5ba7601957685b32849d53c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>REGISTER_SET_POINT<sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_BRIDGE<sp/>(3.3/4096.)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_CURRENT<sp/>CONVERSION_BRIDGE<sp/></highlight><highlight class="comment">/*(CONVERSION_BRIDGE<sp/>*<sp/>1000.0/264.0)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="piston_8h_1a6d8cc050ea7d1409729c53737da98d6f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_BRIDGE<sp/>(3.3<sp/>/<sp/>4096.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="piston_8h_1aa2cb161bbd854a27d819c061b9ce0755" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONVERSION_CURRENT<sp/>CONVERSION_BRIDGE<sp/></highlight><highlight class="comment">/*(CONVERSION_BRIDGE<sp/>*<sp/>1000.0/264.0)*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23" refid="classPiston" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPiston" kindref="compound">Piston</ref></highlight></codeline>
 <codeline lineno="24"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29" refid="classPiston_1af4f501b8de8d0cfe86db1666a16a2cec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classPiston_1af4f501b8de8d0cfe86db1666a16a2cec" kindref="member">Piston</ref>(rclcpp::Node<sp/>*n){</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_<sp/>=<sp/>n;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston" kindref="compound">~Piston</ref>();</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a35f705c6bf7c02b1c6b5ebe66b4ae5d5" kindref="member">i2c_open</ref>();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t&amp;<sp/><ref refid="classPiston_1ad79d0fd74ef24f22d1493eba5c867dbf" kindref="member">get_version</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1abba1e466fffc67350435f85742f3ca29" kindref="member">getI2CAddr</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setI2CAddr(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;getI2CPeriph()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setI2CPeriph(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;i2CPeriph);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>state_piston<sp/>{<sp/>PISTON_SEARCH_SWITCH_BOTTOM=0,</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PISTON_RELEASE_SWITCH_BOTTOM=1,</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PISTON_BACK_SWITCH_BOTTOM=2,</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PISTON_REGULATION=3,</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PISTON_EXIT=4,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PISTON_LOW_BATT=5</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="29" refid="classPiston_1af4f501b8de8d0cfe86db1666a16a2cec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classPiston_1af4f501b8de8d0cfe86db1666a16a2cec" kindref="member">Piston</ref>(rclcpp::Node<sp/>*n)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston_1ae8a07e7adc14391bc629f5a3daa6fce0" kindref="member">n_</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classPiston_1a967276e579e06d80ce13c5e4df566547" kindref="member">~Piston</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a35f705c6bf7c02b1c6b5ebe66b4ae5d5" kindref="member">i2c_open</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>uint8_t<sp/>&amp;<sp/><ref refid="classPiston_1ad79d0fd74ef24f22d1493eba5c867dbf" kindref="member">get_version</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1abba1e466fffc67350435f85742f3ca29" kindref="member">getI2CAddr</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPiston_1abbd9e1d4bd4c84ce6279c61808589794" kindref="member">setI2CAddr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/><ref refid="classPiston_1a02541e5f5882ee9e782417bb62a748a7" kindref="member">getI2CPeriph</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aab5bcf29fe46b3e1b784c39a567952e2" kindref="member">setI2CPeriph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>i2CPeriph);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dabfecaa20e0873f77924a8d7ca6142177" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5d" kindref="member">state_piston</ref><sp/>{<sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dabfecaa20e0873f77924a8d7ca6142177" kindref="member">PISTON_SEARCH_SWITCH_BOTTOM</ref>=0,</highlight></codeline>
+<codeline lineno="61" refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dac2c9697558323784575f6fd3b1a92caf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dac2c9697558323784575f6fd3b1a92caf" kindref="member">PISTON_RELEASE_SWITCH_BOTTOM</ref>=1,</highlight></codeline>
+<codeline lineno="62" refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dad1ca5f48808ab9827eb7bf69b0f981b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dad1ca5f48808ab9827eb7bf69b0f981b2" kindref="member">PISTON_BACK_SWITCH_BOTTOM</ref>=2,</highlight></codeline>
+<codeline lineno="63" refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da6ed8d0c99efe24edda1ca0c723dc3461" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da6ed8d0c99efe24edda1ca0c723dc3461" kindref="member">PISTON_REGULATION</ref>=3,</highlight></codeline>
+<codeline lineno="64" refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da707d62bc9b336b462be4bdab21498592" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da707d62bc9b336b462be4bdab21498592" kindref="member">PISTON_EXIT</ref>=4,</highlight></codeline>
+<codeline lineno="65" refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da27092fd421042c10d2566ac30506debf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5da27092fd421042c10d2566ac30506debf" kindref="member">PISTON_LOW_BATT</ref>=5};</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Node*<sp/>n_=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="68" refid="classPiston_1ae8a07e7adc14391bc629f5a3daa6fce0" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Node<sp/>*<sp/><ref refid="classPiston_1ae8a07e7adc14391bc629f5a3daa6fce0" kindref="member">n_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file_<sp/>=<sp/>0;<sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>i2c_periph_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2c_addr_<sp/>=<sp/>0x1E;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code_version_<sp/>=<sp/>0x06;<sp/></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pic_code_version_=0;<sp/></highlight></codeline>
+<codeline lineno="70" refid="classPiston_1a2fd5daad4b1e16ea31f605b2de95f4b4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a2fd5daad4b1e16ea31f605b2de95f4b4" kindref="member">file_</ref><sp/>=<sp/>0;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="classPiston_1a061847e2ae0a03157a7b71a872e40d0d" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classPiston_1a061847e2ae0a03157a7b71a872e40d0d" kindref="member">i2c_periph_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72" refid="classPiston_1a5ae793893b47a83a29834669e42c1674" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a5ae793893b47a83a29834669e42c1674" kindref="member">i2c_addr_</ref><sp/>=<sp/>0x1E;</highlight></codeline>
+<codeline lineno="73" refid="classPiston_1a657f6184acfa3585e80869405b64decd" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a657f6184acfa3585e80869405b64decd" kindref="member">code_version_</ref><sp/>=<sp/>0x06;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="classPiston_1ae8ca2004f5c325014496482c2b0aaece" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classPiston_1ae8ca2004f5c325014496482c2b0aaece" kindref="member">pic_code_version_</ref><sp/>=<sp/>0;<sp/></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="78" refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" kindref="member">R1_</ref><sp/>=<sp/>3.9;<sp/></highlight><highlight class="comment">//<sp/>kOhms</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R2_<sp/>=<sp/>18.0;<sp/></highlight><highlight class="comment">//<sp/>kOhms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPiston_1ab9b5baf0ce5e83a08fe618d9f3ebd43b" kindref="member">R1_</ref><sp/>=<sp/>3.9;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>kOhms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classPiston_1aeaa1c94f66d719bc65f47815fd2c8080" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aeaa1c94f66d719bc65f47815fd2c8080" kindref="member">R2_</ref><sp/>=<sp/>18.0;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>kOhms</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position_last_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>switch_top_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>switch_bottom_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state_<sp/>=<sp/>PISTON_SEARCH_SWITCH_BOTTOM;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position_set_point_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>battery_voltage_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>motor_current_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>motor_set_point_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>motor_cmd_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>motor_sens_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82" refid="classPiston_1a5bbc8d2904c2766bb38d8b105a796e09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a5bbc8d2904c2766bb38d8b105a796e09" kindref="member">position_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="83" refid="classPiston_1a7a18d5d0eddc28ed73f31c880d67598c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a7a18d5d0eddc28ed73f31c880d67598c" kindref="member">position_last_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84" refid="classPiston_1aaf2fdbe2d3ff530492ab7c40dc177854" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aaf2fdbe2d3ff530492ab7c40dc177854" kindref="member">switch_top_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85" refid="classPiston_1aa8aa881bd96f69a2acb8ee2a2bba26ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aa8aa881bd96f69a2acb8ee2a2bba26ee" kindref="member">switch_bottom_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86" refid="classPiston_1acaf4a99df30a56f3e54a3d548c4407d6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1acaf4a99df30a56f3e54a3d548c4407d6" kindref="member">state_</ref><sp/>=<sp/><ref refid="classPiston_1af285037ee141dbcbd776bd32cea0de5dabfecaa20e0873f77924a8d7ca6142177" kindref="member">PISTON_SEARCH_SWITCH_BOTTOM</ref>;</highlight></codeline>
+<codeline lineno="87" refid="classPiston_1a2b485d2444af107615371e204ef62e35" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a2b485d2444af107615371e204ef62e35" kindref="member">enable_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88" refid="classPiston_1aa0b0903c346dd1ddab33086164be5f66" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aa0b0903c346dd1ddab33086164be5f66" kindref="member">position_set_point_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89" refid="classPiston_1a27b16b8d7c2342553b4b233e16e181dc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a27b16b8d7c2342553b4b233e16e181dc" kindref="member">battery_voltage_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90" refid="classPiston_1a000760a2d94589a770175bb15d0b0d55" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a000760a2d94589a770175bb15d0b0d55" kindref="member">motor_current_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91" refid="classPiston_1a251b566e36a2489f76071ca7d43fd88a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a251b566e36a2489f76071ca7d43fd88a" kindref="member">motor_set_point_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92" refid="classPiston_1a0abe4e72a219f581734c3ac25224e5a9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a0abe4e72a219f581734c3ac25224e5a9" kindref="member">motor_cmd_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93" refid="classPiston_1ad6a77044e138cec9442f660947a7d8e2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPiston_1ad6a77044e138cec9442f660947a7d8e2" kindref="member">motor_sens_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a4f7f04c7f0e164fe3a80a3241a8c236c" kindref="member">set_piston_reset</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a4f7f04c7f0e164fe3a80a3241a8c236c" kindref="member">set_piston_reset</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aaf9e03c53b0ab4b58ef2bb137aa6641f" kindref="member">set_piston_exit</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aaf9e03c53b0ab4b58ef2bb137aa6641f" kindref="member">set_piston_exit</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aecea52221e7cab10ea6003641cf12cd2" kindref="member">set_piston_regulation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1aecea52221e7cab10ea6003641cf12cd2" kindref="member">set_piston_regulation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPiston_1ae3f17144dfc2e5666e56a0df5aa6047e" kindref="member">set_regulation_dead_zone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__u16<sp/>&amp;val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPiston_1ae3f17144dfc2e5666e56a0df5aa6047e" kindref="member">set_regulation_dead_zone</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__u16<sp/>&amp;<sp/>val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPiston_1af50a4cf7e3968a46113396da0b7d0302" kindref="member">set_regulation_proportional</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__u16<sp/>&amp;val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPiston_1af50a4cf7e3968a46113396da0b7d0302" kindref="member">set_regulation_proportional</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__u16<sp/>&amp;<sp/>val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a8954e042cb888b83df18aa9cc3b81c04" kindref="member">set_position</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>&amp;val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a8954e042cb888b83df18aa9cc3b81c04" kindref="member">set_position</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int32_t<sp/>&amp;<sp/>val)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a13233ed58e1b2a08f3ecbf6ff99a345a" kindref="member">get_all_data</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPiston_1a13233ed58e1b2a08f3ecbf6ff99a345a" kindref="member">get_all_data</ref>();</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>

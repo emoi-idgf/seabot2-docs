@@ -3,6 +3,7 @@
   <compounddef id="classTemperatureFilterNode" kind="class" language="C++" prot="public" final="yes">
     <compoundname>TemperatureFilterNode</compoundname>
     <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <includes refid="filter__temperature__node_8hpp" local="no">filter_temperature_node.hpp</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classTemperatureFilterNode_1ac74476db51f13b343156ad225c0ce8c5" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -17,7 +18,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="17" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="17" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="17" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classTemperatureFilterNode_1aa7e0412702204e984c5359ffe973c3c3" compoundref="filter__temperature__node_8cpp" startline="16" endline="25">init_parameters</referencedby>
+        <referencedby refid="classTemperatureFilterNode_1a88f9b0bddcd05670395bbd3b6decf844" compoundref="filter__temperature__node_8cpp" startline="40" endline="55">temperature_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classTemperatureFilterNode_1a66620420fd56aaa5cc31e15d94eba9e9" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -32,7 +35,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="18" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="18" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="18" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classTemperatureFilterNode_1a779484260aa5e9fda981d6c5ad0b9476" compoundref="filter__temperature__node_8cpp" startline="27" endline="38">compute_filter</referencedby>
+        <referencedby refid="classTemperatureFilterNode_1aa7e0412702204e984c5359ffe973c3c3" compoundref="filter__temperature__node_8cpp" startline="16" endline="25">init_parameters</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classTemperatureFilterNode_1a9fe8c603fc7c6cc5af1b6ffa18fb9094" prot="private" static="no" mutable="no">
         <type>deque&lt; double &gt;</type>
@@ -47,7 +52,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="21" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="21" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="21" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classTemperatureFilterNode_1a88f9b0bddcd05670395bbd3b6decf844" compoundref="filter__temperature__node_8cpp" startline="40" endline="55">temperature_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classTemperatureFilterNode_1a00ebdac3b707d1dbfcf190efc92fba64" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr</type>
@@ -62,7 +68,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="24" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="24" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="25" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classTemperatureFilterNode_1ab5f3ba9276d9fc1d32d1d5e5d30da795" compoundref="filter__temperature__node_8cpp" startline="57" endline="66">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classTemperatureFilterNode_1afe3f46d094fcf0c8335a02a95cc3d126" prot="private" static="no" mutable="no">
         <type>rclcpp::Publisher&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr</type>
@@ -76,7 +83,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="25" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="25" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="26" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classTemperatureFilterNode_1ab5f3ba9276d9fc1d32d1d5e5d30da795" compoundref="filter__temperature__node_8cpp" startline="57" endline="66">init_interfaces</referencedby>
+        <referencedby refid="classTemperatureFilterNode_1a88f9b0bddcd05670395bbd3b6decf844" compoundref="filter__temperature__node_8cpp" startline="40" endline="55">temperature_callback</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -92,7 +101,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="14" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="6" bodyend="13"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="14" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="6" bodyend="14"/>
+        <references refid="classTemperatureFilterNode_1ab5f3ba9276d9fc1d32d1d5e5d30da795" compoundref="filter__temperature__node_8cpp" startline="57" endline="66">init_interfaces</references>
+        <references refid="classTemperatureFilterNode_1aa7e0412702204e984c5359ffe973c3c3" compoundref="filter__temperature__node_8cpp" startline="16" endline="25">init_parameters</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -110,7 +121,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="32" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="15" bodyend="21"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="33" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="16" bodyend="25"/>
+        <references refid="classTemperatureFilterNode_1a66620420fd56aaa5cc31e15d94eba9e9" compoundref="filter__temperature__node_8hpp" startline="18">filter_median_remove_side_samples_</references>
+        <references refid="classTemperatureFilterNode_1ac74476db51f13b343156ad225c0ce8c5" compoundref="filter__temperature__node_8hpp" startline="17">filter_window_size_</references>
+        <referencedby refid="classTemperatureFilterNode_1a5d6e041a4974f06557f6e22d1c09ff48" compoundref="filter__temperature__node_8cpp" startline="6" endline="14">TemperatureFilterNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTemperatureFilterNode_1ab5f3ba9276d9fc1d32d1d5e5d30da795" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -125,7 +139,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="37" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="49" bodyend="54"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="38" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="57" bodyend="66"/>
+        <references refid="classTemperatureFilterNode_1afe3f46d094fcf0c8335a02a95cc3d126" compoundref="filter__temperature__node_8hpp" startline="26">publisher_temperature_data_</references>
+        <references refid="classTemperatureFilterNode_1a00ebdac3b707d1dbfcf190efc92fba64" compoundref="filter__temperature__node_8hpp" startline="25">subscriber_temperature_data_</references>
+        <references refid="classTemperatureFilterNode_1a88f9b0bddcd05670395bbd3b6decf844" compoundref="filter__temperature__node_8cpp" startline="40" endline="55">temperature_callback</references>
+        <referencedby refid="classTemperatureFilterNode_1a5d6e041a4974f06557f6e22d1c09ff48" compoundref="filter__temperature__node_8cpp" startline="6" endline="14">TemperatureFilterNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTemperatureFilterNode_1a88f9b0bddcd05670395bbd3b6decf844" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,7 +172,12 @@
         <inbodydescription>
 <para>Add new data to deque for pressure</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="43" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="34" bodyend="47"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="44" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="40" bodyend="55"/>
+        <references refid="classTemperatureFilterNode_1a779484260aa5e9fda981d6c5ad0b9476" compoundref="filter__temperature__node_8cpp" startline="27" endline="38">compute_filter</references>
+        <references refid="classTemperatureFilterNode_1ac74476db51f13b343156ad225c0ce8c5" compoundref="filter__temperature__node_8hpp" startline="17">filter_window_size_</references>
+        <references refid="classTemperatureFilterNode_1afe3f46d094fcf0c8335a02a95cc3d126" compoundref="filter__temperature__node_8hpp" startline="26">publisher_temperature_data_</references>
+        <references refid="classTemperatureFilterNode_1a9fe8c603fc7c6cc5af1b6ffa18fb9094" compoundref="filter__temperature__node_8hpp" startline="21">temperature_memory_</references>
+        <referencedby refid="classTemperatureFilterNode_1ab5f3ba9276d9fc1d32d1d5e5d30da795" compoundref="filter__temperature__node_8cpp" startline="57" endline="66">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTemperatureFilterNode_1a779484260aa5e9fda981d6c5ad0b9476" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -188,7 +211,9 @@
 <para>Sum elements</para>
 <para>Compute mean value</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="50" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="23" bodyend="32"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="51" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/src/filter_temperature_node.cpp" bodystart="27" bodyend="38"/>
+        <references refid="classTemperatureFilterNode_1a66620420fd56aaa5cc31e15d94eba9e9" compoundref="filter__temperature__node_8hpp" startline="18">filter_median_remove_side_samples_</references>
+        <referencedby refid="classTemperatureFilterNode_1a88f9b0bddcd05670395bbd3b6decf844" compoundref="filter__temperature__node_8cpp" startline="40" endline="55">temperature_callback</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -217,7 +242,7 @@
         <label>rclcpp::Node</label>
       </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="12" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="12" bodyend="54"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" line="12" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_filter/include/seabot2_temperature_filter/filter_temperature_node.hpp" bodystart="12" bodyend="55"/>
     <listofallmembers>
       <member refid="classTemperatureFilterNode_1a779484260aa5e9fda981d6c5ad0b9476" prot="private" virt="non-virtual"><scope>TemperatureFilterNode</scope><name>compute_filter</name></member>
       <member refid="classTemperatureFilterNode_1a66620420fd56aaa5cc31e15d94eba9e9" prot="private" virt="non-virtual"><scope>TemperatureFilterNode</scope><name>filter_median_remove_side_samples_</name></member>

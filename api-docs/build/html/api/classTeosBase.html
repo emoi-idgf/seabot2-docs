@@ -9,6 +9,7 @@
   <title>Class TeosBase &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class TeosIce" href="classTeosIce.html" />
-    <link rel="prev" title="Class TemperatureTSYS01Node" href="classTemperatureTSYS01Node.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,195 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class TeosBase</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#derived-types">Derived Types</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv48TeosBase"><code class="docutils literal notranslate"><span class="pre">TeosBase</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase8TeosBaseEv"><code class="docutils literal notranslate"><span class="pre">TeosBase()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBaseD0Ev"><code class="docutils literal notranslate"><span class="pre">~TeosBase()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_Abs_Pressure_from_pEd"><code class="docutils literal notranslate"><span class="pre">gsw_Abs_Pressure_from_p()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_add_barrierEPdddddddPd"><code class="docutils literal notranslate"><span class="pre">gsw_add_barrier()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase12gsw_add_meanEPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_add_mean()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase31gsw_adiabatic_lapse_rate_from_tEddd"><code class="docutils literal notranslate"><span class="pre">gsw_adiabatic_lapse_rate_from_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase32gsw_adiabatic_lapse_rate_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_adiabatic_lapse_rate_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_alphaEddd"><code class="docutils literal notranslate"><span class="pre">gsw_alpha()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase18gsw_alpha_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_alpha_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase26gsw_alpha_on_beta_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_alpha_on_beta_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase24gsw_alpha_wrt_CT_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_alpha_wrt_CT_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase24gsw_alpha_wrt_pt_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_alpha_wrt_pt_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_ArsolEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_Arsol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_Arsol_SP_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_Arsol_SP_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_atomic_weightEv"><code class="docutils literal notranslate"><span class="pre">gsw_atomic_weight()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase8gsw_betaEddd"><code class="docutils literal notranslate"><span class="pre">gsw_beta()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase25gsw_beta_const_ct_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_beta_const_ct_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase25gsw_beta_const_pt_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_beta_const_pt_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase35gsw_chem_potential_relative_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_chem_potential_relative_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase31gsw_chem_potential_salt_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_chem_potential_salt_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase32gsw_chem_potential_water_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_chem_potential_water_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase36gsw_ct_first_derivatives_wrt_t_exactEdddPdPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_first_derivatives_wrt_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_ct_freezingEddd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_freezing()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_CT_freezingEdd"><code class="docutils literal notranslate"><span class="pre">gsw_CT_freezing()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase20gsw_ct_from_enthalpyEddd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_from_enthalpy()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase26gsw_ct_from_enthalpy_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_from_enthalpy_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_ct_from_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_from_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_ct_from_tEddd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_from_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_ct_maxdensityEdd"><code class="docutils literal notranslate"><span class="pre">gsw_ct_maxdensity()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_CT_maxdensity_exactEdd"><code class="docutils literal notranslate"><span class="pre">gsw_CT_maxdensity_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_deltasa_atlasEddd"><code class="docutils literal notranslate"><span class="pre">gsw_deltasa_atlas()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_depth_from_zEd"><code class="docutils literal notranslate"><span class="pre">gsw_depth_from_z()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase32gsw_dilution_coefficient_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_dilution_coefficient_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase20gsw_dynamic_enthalpyEddd"><code class="docutils literal notranslate"><span class="pre">gsw_dynamic_enthalpy()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase29gsw_dynamic_enthalpy_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_dynamic_enthalpy_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase28gsw_dynamic_enthalpy_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_dynamic_enthalpy_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase12gsw_enthalpyEddd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase21gsw_enthalpy_ct_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_ct_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase26gsw_enthalpy_diff_CT_exactEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_diff_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase30gsw_enthalpy_first_derivativesEdddPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_first_derivatives()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase39gsw_enthalpy_first_derivatives_ct_exactEdddPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_first_derivatives_ct_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase40gsw_enthalpy_second_derivatives_ct_exactEdddRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_second_derivatives_ct_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase18gsw_enthalpy_sso_0Ed"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_sso_0()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase20gsw_enthalpy_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_enthalpy_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase29gsw_entropy_first_derivativesEddPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_entropy_first_derivatives()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase19gsw_entropy_from_ctEdd"><code class="docutils literal notranslate"><span class="pre">gsw_entropy_from_ct()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_entropy_partEddd"><code class="docutils literal notranslate"><span class="pre">gsw_entropy_part()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase22gsw_entropy_part_zeropEdd"><code class="docutils literal notranslate"><span class="pre">gsw_entropy_part_zerop()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase30gsw_entropy_second_derivativesEddPdPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_entropy_second_derivatives()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase5gsw_fEd"><code class="docutils literal notranslate"><span class="pre">gsw_f()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase10gsw_fdeltaEddd"><code class="docutils literal notranslate"><span class="pre">gsw_fdelta()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_gibbsEiiiddd"><code class="docutils literal notranslate"><span class="pre">gsw_gibbs()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase24gsw_Gibbs_energy_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_Gibbs_energy_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_gibbs_iceEiidd"><code class="docutils literal notranslate"><span class="pre">gsw_gibbs_ice()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_gibbs_pt0_pt0Edd"><code class="docutils literal notranslate"><span class="pre">gsw_gibbs_pt0_pt0()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase8gsw_gravEdd"><code class="docutils literal notranslate"><span class="pre">gsw_grav()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase28gsw_Helmholtz_energy_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_Helmholtz_energy_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_HesolEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_Hesol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_Hesol_SP_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_Hesol_SP_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase21gsw_hill_ratio_at_sp2Ed"><code class="docutils literal notranslate"><span class="pre">gsw_hill_ratio_at_sp2()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase21gsw_Hill_ratio_at_SP2EA_KdAL2E_KiA_dAL2E_i"><code class="docutils literal notranslate"><span class="pre">gsw_Hill_ratio_at_SP2()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase19gsw_internal_energyEddd"><code class="docutils literal notranslate"><span class="pre">gsw_internal_energy()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase28gsw_internal_energy_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_internal_energy_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase38gsw_internal_energy_second_derivativesEdddRdRdRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_internal_energy_second_derivatives()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase27gsw_internal_energy_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_internal_energy_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase30gsw_isochoric_heat_cap_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_isochoric_heat_cap_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_kappaEddd"><code class="docutils literal notranslate"><span class="pre">gsw_kappa()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_kappa_const_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_kappa_const_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase18gsw_kappa_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_kappa_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_kappa_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_kappa_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_KrsolEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_Krsol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_Krsol_SP_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_Krsol_SP_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_linear_interp_sa_ctEPdPdPdiPdiPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_linear_interp_sa_ct()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase30gsw_linear_interp_sa_ct_for_dhEPdPdPdiPdiPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_linear_interp_sa_ct_for_dh()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase20gsw_molality_from_SAEd"><code class="docutils literal notranslate"><span class="pre">gsw_molality_from_SA()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_N2solEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_N2sol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_N2sol_SP_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_N2sol_SP_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase10gsw_N2OsolEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_N2Osol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_N2Osol_SP_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_N2Osol_SP_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_Nsquared_lowerlimitEddd"><code class="docutils literal notranslate"><span class="pre">gsw_Nsquared_lowerlimit()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase31gsw_osmotic_coefficient_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_osmotic_coefficient_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase28gsw_osmotic_pressure_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_osmotic_pressure_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_o2solEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_o2sol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_o2sol_sp_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_o2sol_sp_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_p_from_Abs_PressureEd"><code class="docutils literal notranslate"><span class="pre">gsw_p_from_Abs_Pressure()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase12gsw_p_from_zEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_p_from_z()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_pchip_derivsEPdPdiPd"><code class="docutils literal notranslate"><span class="pre">gsw_pchip_derivs()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase19gsw_pchip_edge_caseEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_pchip_edge_case()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase24gsw_pot_enthalpy_from_ptEdd"><code class="docutils literal notranslate"><span class="pre">gsw_pot_enthalpy_from_pt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase28gsw_pot_enthalpy_from_pt_iceEd"><code class="docutils literal notranslate"><span class="pre">gsw_pot_enthalpy_from_pt_ice()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase38gsw_pot_enthalpy_from_specvol_ice_polyEdd"><code class="docutils literal notranslate"><span class="pre">gsw_pot_enthalpy_from_specvol_ice_poly()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase52gsw_pot_enthalpy_ice_freezing_first_derivatives_polyEddPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_pot_enthalpy_ice_freezing_first_derivatives_poly()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase34gsw_pot_enthalpy_ice_freezing_polyEdd"><code class="docutils literal notranslate"><span class="pre">gsw_pot_enthalpy_ice_freezing_poly()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_pt_from_ctEdd"><code class="docutils literal notranslate"><span class="pre">gsw_pt_from_ct()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_pt_from_tEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_pt_from_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_pt0_from_tEddd"><code class="docutils literal notranslate"><span class="pre">gsw_pt0_from_t()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_R_from_SPEddd"><code class="docutils literal notranslate"><span class="pre">gsw_R_from_SP()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase7gsw_rhoEddd"><code class="docutils literal notranslate"><span class="pre">gsw_rho()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase18gsw_rho_alpha_betaEdddPdPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_rho_alpha_beta()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase26gsw_rho_alpha_beta_indexedEdddRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_rho_alpha_beta_indexed()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase34gsw_rho_first_derivatives_CT_exactEdddRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_rho_first_derivatives_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase47gsw_rho_first_derivatives_wrt_enthalpy_CT_exactEdddRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_rho_first_derivatives_wrt_enthalpy_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase35gsw_rho_second_derivatives_CT_exactEdddPdPdPdPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_rho_second_derivatives_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase48gsw_rho_second_derivatives_wrt_enthalpy_CT_exactEdddRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_rho_second_derivatives_wrt_enthalpy_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase23gsw_rr68_interp_sectionEiPdPdPdiiPdPiPdPdPd"><code class="docutils literal notranslate"><span class="pre">gsw_rr68_interp_section()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase11gsw_rtIsNaNEd"><code class="docutils literal notranslate"><span class="pre">gsw_rtIsNaN()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase12gsw_rtIsNaNFEd"><code class="docutils literal notranslate"><span class="pre">gsw_rtIsNaNF()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase8gsw_saarEddd"><code class="docutils literal notranslate"><span class="pre">gsw_saar()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase28gsw_SA_freezing_from_CT_polyEddd"><code class="docutils literal notranslate"><span class="pre">gsw_SA_freezing_from_CT_poly()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_sa_from_spEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_sa_from_sp()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase21gsw_sa_from_sp_balticEddd"><code class="docutils literal notranslate"><span class="pre">gsw_sa_from_sp_baltic()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_sa_from_sstarEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_sa_from_sstar()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase7gsw_sgnEd"><code class="docutils literal notranslate"><span class="pre">gsw_sgn()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_sp_from_cEddd"><code class="docutils literal notranslate"><span class="pre">gsw_sp_from_c()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_SP_from_REddd"><code class="docutils literal notranslate"><span class="pre">gsw_SP_from_R()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_sp_from_saEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_sp_from_sa()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase21gsw_sp_from_sa_balticEddd"><code class="docutils literal notranslate"><span class="pre">gsw_sp_from_sa_baltic()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase11gsw_specvolEddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase31gsw_specvol_alpha_beta_CT_exactEdddRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_alpha_beta_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_specvol_anomEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_anom()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase25gsw_specvol_anom_CT_exactEddddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_anom_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase34gsw_specvol_anom_standard_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_anom_standard_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase33gsw_specvol_anom_standard_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_anom_standard_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase24gsw_specvol_anom_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_anom_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase20gsw_specvol_CT_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_specvol_diffEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_diff()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase38gsw_specvol_first_derivatives_CT_exactEdddRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_first_derivatives_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase51gsw_specvol_first_derivatives_wrt_enthalpy_CT_exactEdddRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_first_derivatives_wrt_enthalpy_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase56gsw_specvol_from_pot_enthalpy_ice_first_derivatives_polyEdd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_from_pot_enthalpy_ice_first_derivatives_poly()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase38gsw_specvol_from_pot_enthalpy_ice_polyEdd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_from_pot_enthalpy_ice_poly()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase19gsw_specvol_p_partsEddRdRdRdRdRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_p_parts()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase39gsw_specvol_second_derivatives_CT_exactEdddRdRdRdRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_second_derivatives_CT_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase19gsw_specvol_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_specvol_sso_0Ed"><code class="docutils literal notranslate"><span class="pre">gsw_specvol_sso_0()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_sr_from_spEd"><code class="docutils literal notranslate"><span class="pre">gsw_sr_from_sp()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase7gsw_SSOEv"><code class="docutils literal notranslate"><span class="pre">gsw_SSO()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_sstar_from_saEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_sstar_from_sa()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_sstar_from_spEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_sstar_from_sp()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase7gsw_sumEPdi"><code class="docutils literal notranslate"><span class="pre">gsw_sum()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase40gsw_t_deriv_chem_potential_water_t_exactEddd"><code class="docutils literal notranslate"><span class="pre">gsw_t_deriv_chem_potential_water_t_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_t_freezingEddd"><code class="docutils literal notranslate"><span class="pre">gsw_t_freezing()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_t_from_ctEddd"><code class="docutils literal notranslate"><span class="pre">gsw_t_from_ct()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase14gsw_t_from_pt0Eddd"><code class="docutils literal notranslate"><span class="pre">gsw_t_from_pt0()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase22gsw_t_maxdensity_exactEdd"><code class="docutils literal notranslate"><span class="pre">gsw_t_maxdensity_exact()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_t90_from_t48Ed"><code class="docutils literal notranslate"><span class="pre">gsw_t90_from_t48()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_t90_from_t68Ed"><code class="docutils literal notranslate"><span class="pre">gsw_t90_from_t68()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase13gsw_util_indxEPdid"><code class="docutils literal notranslate"><span class="pre">gsw_util_indx()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_util_sort_dblEPdiPib"><code class="docutils literal notranslate"><span class="pre">gsw_util_sort_dbl()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_util_xinterp1EPdPdid"><code class="docutils literal notranslate"><span class="pre">gsw_util_xinterp1()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase20gsw_weighted_nanmeanEddRdRd"><code class="docutils literal notranslate"><span class="pre">gsw_weighted_nanmean()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase16gsw_z_from_depthEd"><code class="docutils literal notranslate"><span class="pre">gsw_z_from_depth()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase12gsw_z_from_pEdddd"><code class="docutils literal notranslate"><span class="pre">gsw_z_from_p()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase2t1E"><code class="docutils literal notranslate"><span class="pre">t1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase2t2E"><code class="docutils literal notranslate"><span class="pre">t2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase2r1E"><code class="docutils literal notranslate"><span class="pre">r1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase3r20E"><code class="docutils literal notranslate"><span class="pre">r20</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase3r21E"><code class="docutils literal notranslate"><span class="pre">r21</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase3r22E"><code class="docutils literal notranslate"><span class="pre">r22</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9pSaarDataE"><code class="docutils literal notranslate"><span class="pre">pSaarData</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase3gtcE"><code class="docutils literal notranslate"><span class="pre">gtc</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase5gsvcoE"><code class="docutils literal notranslate"><span class="pre">gsvco</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase4gspcE"><code class="docutils literal notranslate"><span class="pre">gspc</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase5gbaltE"><code class="docutils literal notranslate"><span class="pre">gbalt</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase5gsaarE"><code class="docutils literal notranslate"><span class="pre">gsaar</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase4gfpcE"><code class="docutils literal notranslate"><span class="pre">gfpc</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase3gicE"><code class="docutils literal notranslate"><span class="pre">gic</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase8statusOkE"><code class="docutils literal notranslate"><span class="pre">statusOk</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase11gsw_gsvco_aEddd"><code class="docutils literal notranslate"><span class="pre">gsw_gsvco_a()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase11gsw_gsvco_bEddd"><code class="docutils literal notranslate"><span class="pre">gsw_gsvco_b()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase11gsw_gsvco_cEddd"><code class="docutils literal notranslate"><span class="pre">gsw_gsvco_c()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase11gsw_gsvco_vEddd"><code class="docutils literal notranslate"><span class="pre">gsw_gsvco_v()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_max_dEdd"><code class="docutils literal notranslate"><span class="pre">gsw_max_d()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_min_dEdd"><code class="docutils literal notranslate"><span class="pre">gsw_min_d()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase15gsw_get_pot_entEddd"><code class="docutils literal notranslate"><span class="pre">gsw_get_pot_ent()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_max_uEjj"><code class="docutils literal notranslate"><span class="pre">gsw_max_u()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_min_uEjj"><code class="docutils literal notranslate"><span class="pre">gsw_min_u()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_max_iEii"><code class="docutils literal notranslate"><span class="pre">gsw_max_i()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase9gsw_min_iEii"><code class="docutils literal notranslate"><span class="pre">gsw_min_i()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase17gsw_util_indxPrefEid"><code class="docutils literal notranslate"><span class="pre">gsw_util_indxPref()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N8TeosBase12badBaseAllocE"><code class="docutils literal notranslate"><span class="pre">badBaseAlloc</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +241,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +256,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class TeosBase</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classTeosBase.rst.txt" rel="nofollow"> View page source</a>
@@ -903,33 +1076,33 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8TeosBase2t1E">
-<span id="_CPPv3N8TeosBase2t1E"></span><span id="_CPPv2N8TeosBase2t1E"></span><span id="TeosBase::t1__complex:double:"></span><span class="target" id="classTeosBase_1a7de6686c40529e5c3c6e81d9768ab968"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t1</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase2t1E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8TeosBase2t1E"></span><span id="_CPPv2N8TeosBase2t1E"></span><span id="TeosBase::t1__complex:double:"></span><span class="target" id="classTeosBase_1a7a7edd761de992f47be91136fb0a6c03"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t1</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase2t1E" title="Link to this definition"></a><br /></dt>
 <dd><p>these complex numbers are initialized in the constructor </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8TeosBase2t2E">
-<span id="_CPPv3N8TeosBase2t2E"></span><span id="_CPPv2N8TeosBase2t2E"></span><span id="TeosBase::t2__complex:double:"></span><span class="target" id="classTeosBase_1a3dfb3ca677f6cb0eb87de9e5588a85cf"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t2</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase2t2E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8TeosBase2t2E"></span><span id="_CPPv2N8TeosBase2t2E"></span><span id="TeosBase::t2__complex:double:"></span><span class="target" id="classTeosBase_1a45bd839c2d9950b50fc5a734684af0f9"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t2</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase2t2E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8TeosBase2r1E">
-<span id="_CPPv3N8TeosBase2r1E"></span><span id="_CPPv2N8TeosBase2r1E"></span><span id="TeosBase::r1__complex:double:"></span><span class="target" id="classTeosBase_1a238403a1ca7828743faae3d37d88af6f"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r1</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase2r1E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8TeosBase2r1E"></span><span id="_CPPv2N8TeosBase2r1E"></span><span id="TeosBase::r1__complex:double:"></span><span class="target" id="classTeosBase_1a109fe9c1066da71e29ca3f16b1d6c547"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r1</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase2r1E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8TeosBase3r20E">
-<span id="_CPPv3N8TeosBase3r20E"></span><span id="_CPPv2N8TeosBase3r20E"></span><span id="TeosBase::r20__complex:double:"></span><span class="target" id="classTeosBase_1a7d92dfc9498964d9113c6c3dd7731254"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r20</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase3r20E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8TeosBase3r20E"></span><span id="_CPPv2N8TeosBase3r20E"></span><span id="TeosBase::r20__complex:double:"></span><span class="target" id="classTeosBase_1a0f82bb9a5fff2550bdcad409cde78a64"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r20</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase3r20E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8TeosBase3r21E">
-<span id="_CPPv3N8TeosBase3r21E"></span><span id="_CPPv2N8TeosBase3r21E"></span><span id="TeosBase::r21__complex:double:"></span><span class="target" id="classTeosBase_1a6cffd8e4e01dffcab04928763347f160"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r21</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase3r21E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8TeosBase3r21E"></span><span id="_CPPv2N8TeosBase3r21E"></span><span id="TeosBase::r21__complex:double:"></span><span class="target" id="classTeosBase_1a36ecab17a2f687e8e601aa74ec8115e8"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r21</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase3r21E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N8TeosBase3r22E">
-<span id="_CPPv3N8TeosBase3r22E"></span><span id="_CPPv2N8TeosBase3r22E"></span><span id="TeosBase::r22__complex:double:"></span><span class="target" id="classTeosBase_1a6267b42b990836070b4962d2a6bb85b3"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r22</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase3r22E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N8TeosBase3r22E"></span><span id="_CPPv2N8TeosBase3r22E"></span><span id="TeosBase::r22__complex:double:"></span><span class="target" id="classTeosBase_1afb310e54ca46b82b0ec3433ee6566605"></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r22</span></span></span><a class="headerlink" href="#_CPPv4N8TeosBase3r22E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -1058,10 +1231,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classTemperatureTSYS01Node.html" class="btn btn-neutral float-left" title="Class TemperatureTSYS01Node" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classTeosIce.html" class="btn btn-neutral float-right" title="Class TeosIce" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

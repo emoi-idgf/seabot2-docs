@@ -19,39 +19,40 @@ Program Listing for File recorder_node.h
    
    using namespace std::chrono_literals;
    
-   class RecorderNode final : public rclcpp::Node {
+   class RecorderNode final: public rclcpp::Node {
    public:
-       RecorderNode();
+     RecorderNode();
    
-       ~RecorderNode() override;
+     ~RecorderNode() override;
    
    public:
-       const std::string command_ = "ros2 bag record --all --storage mcap";
+     const std::string command_ = "ros2 bag record --all --storage mcap";
    
    private:
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 5s; 
-       rclcpp::CallbackGroup::SharedPtr callback_group_;
-       std::string workingDirectory_ = "";
-       bool thread_currently_running_ = false;
-       std::future<int> subprocessFuture_;
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 5s;   
+     rclcpp::CallbackGroup::SharedPtr callback_group_;
+     std::string workingDirectory_ = "";
+     bool thread_currently_running_ = false;
+     std::future < int > subprocessFuture_;
    
-       rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr service_rosbag_;
+     rclcpp::Service < std_srvs::srv::SetBool > ::SharedPtr service_rosbag_;
    
    
    
-       void manage_subprocess_rosbag(bool start_new_bag);
+     void manage_subprocess_rosbag(bool start_new_bag);
    
-       void wait_kill();
+     void wait_kill();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void callback_trigger(const std::shared_ptr<rmw_request_id_t> request_header,
-                             const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
-                             std::shared_ptr<std_srvs::srv::SetBool::Response> response);
+     void callback_trigger(
+       const std::shared_ptr < rmw_request_id_t > request_header,
+       const std::shared_ptr < std_srvs::srv::SetBool::Request > request,
+       std::shared_ptr < std_srvs::srv::SetBool::Response > response);
    
-       void test_state();
+     void test_state();
    };
    
    #endif //BUILD_RECORDER_NODE_H

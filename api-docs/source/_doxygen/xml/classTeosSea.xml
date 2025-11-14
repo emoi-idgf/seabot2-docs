@@ -3,6 +3,7 @@
   <compounddef id="classTeosSea" kind="class" language="C++" prot="public">
     <compoundname>TeosSea</compoundname>
     <basecompoundref refid="classTeosBase" prot="public" virt="non-virtual">TeosBase</basecompoundref>
+    <includes refid="TeosSea_8h" local="no">TeosSea.h</includes>
     <sectiondef kind="public-func">
       <memberdef kind="function" id="classTeosSea_1a56727e27bcac90d3935344e556b8e42a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -17,7 +18,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="38" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="26" bodyend="40"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="38" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="26" bodyend="36"/>
+        <references refid="classTeosBase_1a002c99b7111770806a228ea0e6e9156b" compoundref="TeosBase_8h" startline="434">TeosBase::badBaseAlloc</references>
+        <references refid="classTeosBase_1a5c57dfbe153f33a08ee6e0861bde7206" compoundref="TeosBase_8h" startline="106">TeosBase::statusOk</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ade87321698135fd8a927933a631bf787" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -32,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="39" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="43" bodyend="45"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="39" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="39" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ad9790d59d35076fec3134362fd7a1aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -59,7 +62,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="42" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="85" bodyend="94"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="42" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="81" bodyend="90"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <references refid="classTeosBase_1ad661e3cefc1296c1f25594526ce26e1e" compoundref="TeosBase_8cpp" startline="3332" endline="3370">TeosBase::gsw_pt_from_ct</references>
+        <references refid="classTeosBase_1a628255be10b0353a041876a7e8906862" compoundref="TeosBase_8cpp" startline="3423" endline="3453">TeosBase::gsw_pt_from_t</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aae5a63c35a8ec0a7820a5013e06bb5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -87,7 +93,13 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="43" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="153" bodyend="166"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="43" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="149" bodyend="162"/>
+        <references refid="classTeosBase_1a5f5add6ba00339452e0443710cb5f163" compoundref="TeosBase_8cpp" startline="10449" endline="10467">TeosBase::gsw_gsvco_a</references>
+        <references refid="classTeosBase_1aa54a35cebd0f12ccea54d580270709c3" compoundref="TeosBase_8cpp" startline="10478" endline="10501">TeosBase::gsw_gsvco_b</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <referencedby refid="classTeosSea_1acb2e5891de38c55a2a44ee34316bd8e5" compoundref="TeosSea_8cpp" startline="4968" endline="4986">gsw_cabbeling</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a6e61ca2e9e71badcfdfe2a6628fe989c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -113,7 +125,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="44" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="206" bodyend="209"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="44" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="202" bodyend="205"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a2fa855971a2bf39b0ae620c5bf647cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -140,7 +153,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="47" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="249" bodyend="252"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="47" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="245" bodyend="248"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1acb2e5891de38c55a2a44ee34316bd8e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -167,7 +181,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="50" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5064" bodyend="5081"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="50" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4968" bodyend="4986"/>
+        <references refid="classTeosSea_1aae5a63c35a8ec0a7820a5013e06bb5a1" compoundref="TeosSea_8cpp" startline="149" endline="162">gsw_alpha_on_beta</references>
+        <references refid="classTeosBase_1a49ee42de42887c18c1e36298ae9bef58" compoundref="TeosBase_8cpp" startline="3592" endline="3595">TeosBase::gsw_rho</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="classTeosSea_1ab662c2ee4b6e2085f2e184545cd24857" compoundref="TeosSea_8cpp" startline="2054" endline="2141">gsw_specvol_second_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a142252a6d9dd3df60bea2b10f0de6ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -193,7 +212,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="51" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3036" bodyend="3057"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="51" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3035" bodyend="3056"/>
+        <references refid="classTeosBase_1a29b1f8c13526fabca11fe6b9b3af41d1" compoundref="TeosBase_8cpp" startline="6625" endline="6637">TeosBase::gsw_alpha_on_beta_CT_exact</references>
+        <references refid="classTeosSea_1ab94eac9c8fc4795d99d419360e126c47" compoundref="TeosSea_8cpp" startline="3160" endline="3165">gsw_rho_ct_exact</references>
+        <references refid="classTeosBase_1a62a149dee8f3f2f4dc6084406a87f068" compoundref="TeosBase_8cpp" startline="7436" endline="7465">TeosBase::gsw_specvol_first_derivatives_CT_exact</references>
+        <references refid="classTeosBase_1a161a091c5456b138c707db8caa3fef4e" compoundref="TeosBase_8cpp" startline="5925" endline="5989">TeosBase::gsw_specvol_second_derivatives_CT_exact</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a4885f1a72e017b027ae94b5feafd166f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -254,7 +277,36 @@
 <para>The dimensionless conductivity ratio, R, is the conductivity input, C, divided by the present estimate of C(SP=35, t_68=15, p=0) which is 42.9140 mS/cm (=4.29140 S/m^).</para>
 </sect2>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="52" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="319" bodyend="544"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="52" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="315" bodyend="529"/>
+        <references refid="structGSW__SP__COEFFICIENTS_1aac34aad29c5eda04cf559cd03d6e9134" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a0</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1abdea7074e6f9bcedb09220998521e3a0" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a6cba4134d5f6cc8913d35fcbc22a290f" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1ad93325f652a12faebab5b11456b5befb" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a3</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1aff6c773d82980c8e20ab69cd6d610090" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a4</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a9961d6eba9096dd3ac88a32003be54ef" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a5</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a95a9c5a8b89eb4b21eef2357c57b7182" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b0</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a4dee6c324eba66049233245a1e15cbd7" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a7aea80ad670c50bfbe4760c092101654" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a1e45e80c10af14bce7533290999331e7" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b3</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a523122f981262210245794b730326fc0" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b4</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a41797af9d3d55340eb30d6cfb4dbf597" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b5</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a2a327b881d3b7e4e2f8bd437bfccce0d" compoundref="gsw__structs_8h" startline="437">GSW_SP_COEFFICIENTS::c0</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a7376dca3798585b65f8cb7cc223c41b9" compoundref="gsw__structs_8h" startline="437">GSW_SP_COEFFICIENTS::c1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1ad13981bdddeff6f2c6a2d68d36b36d1d" compoundref="gsw__structs_8h" startline="437">GSW_SP_COEFFICIENTS::c2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1aca70c6d336a506d254dfd508036b5f13" compoundref="gsw__structs_8h" startline="437">GSW_SP_COEFFICIENTS::c3</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a36c7bf05163a751d497ebb2f2261500e" compoundref="gsw__structs_8h" startline="437">GSW_SP_COEFFICIENTS::c4</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1ad3010ccfbe4ffd26e622a22ecf6f7dd8" compoundref="gsw__structs_8h" startline="438">GSW_SP_COEFFICIENTS::d1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a3d6b964e300a8c8f17d5e6030a1b46b0" compoundref="gsw__structs_8h" startline="438">GSW_SP_COEFFICIENTS::d2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a3186ba49146631d2e3dcf59e5c7c727b" compoundref="gsw__structs_8h" startline="438">GSW_SP_COEFFICIENTS::d3</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a1ac491bfa80075391866efe6899b5f2e" compoundref="gsw__structs_8h" startline="438">GSW_SP_COEFFICIENTS::d4</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a93b31308194a2caf93823aabd1a97356" compoundref="gsw__structs_8h" startline="439">GSW_SP_COEFFICIENTS::e1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a432094811cbad12fe78f37e754f8368b" compoundref="gsw__structs_8h" startline="439">GSW_SP_COEFFICIENTS::e2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1adccd07def9ab869fdb4157c838dac32c" compoundref="gsw__structs_8h" startline="439">GSW_SP_COEFFICIENTS::e3</references>
+        <references refid="classTeosBase_1ade3f799a0cf0e701251627954d1d21d0" compoundref="TeosBase_8h" startline="100">TeosBase::gspc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ad69e71f08c15017b19e55f8cbc9e2c3b" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_c3515</references>
+        <references refid="classTeosBase_1a28acd1903d528c51aaa6ba0f5d9fefd0" compoundref="TeosBase_8cpp" startline="2432" endline="2494">TeosBase::gsw_hill_ratio_at_sp2</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a12b4ab30fb3d14891ba73e6a338a6086" compoundref="gsw__structs_8h" startline="440">GSW_SP_COEFFICIENTS::k</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aac761e5252aa3901510ee8e0ca976c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -280,7 +332,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="53" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="580" bodyend="583"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="565" bodyend="568"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <referencedby refid="classTeosSea_1aa1f850827f9d9621d9d0f09738159b53" compoundref="TeosSea_8cpp" startline="5580" endline="5661">gsw_enthalpy_first_derivatives_wrt_t_exact</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab8503e191dde3cd3b1da43a099045718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -302,7 +356,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="54" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="619" bodyend="624"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="54" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="604" bodyend="609"/>
+        <references refid="classTeosBase_1a186d4b00aacf58bde3e5493786b2964d" compoundref="TeosBase_8cpp" startline="747" endline="759">TeosBase::gsw_ct_from_pt</references>
+        <references refid="classTeosSea_1a9a178afbb9a135526f10b8f07d25cc96" compoundref="TeosSea_8cpp" startline="1124" endline="1153">gsw_pt_from_entropy</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a29ed611af1c6672205ec894e45821622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +392,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="55" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2977" bodyend="2987"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="55" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2975" bodyend="2986"/>
+        <references refid="classTeosBase_1ae63ef57b5226a56ba08d6c8bef4e2d9b" compoundref="TeosBase_8cpp" startline="706" endline="711">TeosBase::gsw_ct_from_t</references>
+        <references refid="classTeosSea_1a5467dac9a36438a553c9ef92ddc93cca" compoundref="TeosSea_8cpp" startline="5429" endline="5519">gsw_t_from_rho_exact</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a457740c5f6344202483e959d2ceeb80d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -367,7 +425,14 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="58" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="672" bodyend="717"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="59" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="657" bodyend="705"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ae7c9443ee7d4efed62183bda892ce848" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_cp0</references>
+        <references refid="classTeosBase_1adf0029a64647d96849af238f17c666fe" compoundref="TeosBase_8cpp" startline="2300" endline="2324">TeosBase::gsw_gibbs_pt0_pt0</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a2425d81cc6babcfc81de6915572de0c3" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_t0</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1a7da04e8eb9d15c7192ecc615d86b8988" compoundref="TeosSea_8cpp" startline="3622" endline="3658">gsw_ct_second_derivatives</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a7da04e8eb9d15c7192ecc615d86b8988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -401,7 +466,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="61" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3623" bodyend="3666"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="63" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3622" bodyend="3658"/>
+        <references refid="classTeosSea_1a457740c5f6344202483e959d2ceeb80d" compoundref="TeosSea_8cpp" startline="657" endline="705">gsw_ct_first_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aa1f850827f9d9621d9d0f09738159b53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -440,7 +507,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="65" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5679" bodyend="5737"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="68" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5580" bodyend="5661"/>
+        <references refid="classTeosSea_1aac761e5252aa3901510ee8e0ca976c80" compoundref="TeosSea_8cpp" startline="565" endline="568">gsw_cp_t_exact</references>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a554c4824e3460f51b54568a69717009e" compoundref="TeosBase_8cpp" startline="4417" endline="4420">TeosBase::gsw_specvol_t_exact</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a2425d81cc6babcfc81de6915572de0c3" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_t0</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a28c883afe1adc2b73a44ce2b0942b089" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::rec_db2pa</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a917468189be33cb53b4f59e3e344f045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -480,7 +554,73 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="70" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="826" bodyend="890"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="74" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="814" bodyend="882"/>
+        <references refid="classTeosBase_1a6f693b438ca524bc4ab77eabd7746a25" compoundref="TeosBase_8h" startline="99">TeosBase::gsvco</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac9ae3cef6eb8631327f57df79ab26eb9" compoundref="gsw__structs_8h" startline="103">GSW_SPECVOL_COEFFICIENTS::h021</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1acd4231c95f3d637ab0b8d353aa7beb3f" compoundref="gsw__structs_8h" startline="103">GSW_SPECVOL_COEFFICIENTS::h022</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a7bf8e15e4f98216e028ed841ecb64322" compoundref="gsw__structs_8h" startline="103">GSW_SPECVOL_COEFFICIENTS::h023</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a5eb765f03a100f678f629b721ad1109d" compoundref="gsw__structs_8h" startline="103">GSW_SPECVOL_COEFFICIENTS::h024</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af94c578a4d601688d92b81304fcf1d53" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h031</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af7e54c3b60280285af5d40fae51a5590" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h032</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aff72acaf3c1449d335c072affa4ea8f2" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h033</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a935d208e7fe6a9bb554b993e512c9189" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h041</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a0c38c03b531ce9e0b31e055a6388735b" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h042</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a96fd2f6466a5443c536f3181156a90e4" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h043</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ae42cf525a90f938c3bc74fa6f968f3f7" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h051</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a93969aaa08233e594505125d3759617d" compoundref="gsw__structs_8h" startline="104">GSW_SPECVOL_COEFFICIENTS::h052</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac2189ad9861f2ba26f9be5f4b2e7d23f" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h061</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a27985e1c7f1819dfc5eacb5fe289af9d" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h101</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3225cac5f1230ae205ca5effbca285aa" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h102</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad6e0af24cfb75521a63582c74b8d5d57" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h103</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab65e7827fff5e21f545064f52742faf8" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h104</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a1645671c88b84ea422faeea514049c9a" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h105</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad623252bceed0d73a5fa02ae8fcad720" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h111</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aba2c7751d666ef28fa329a2fcd4cbd54" compoundref="gsw__structs_8h" startline="105">GSW_SPECVOL_COEFFICIENTS::h112</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ada98e88235bcf64d2d4ebfb4bd59c6d3" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h113</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab6e8c804eb10de01c1e237197b326b4d" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h114</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1adbb8fc863d68c6c9ae5856bb066a175a" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h121</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a9bece8be9fd92412322c00364addf355" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h122</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a1ba1a0768db42915ee70087c6e4cd40c" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h123</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3c3b5b153191ac9793874e18bc64f59f" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h131</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a94e251a7d7fabe95709d436fff656da8" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h132</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac5f4e546bf6a8009ef58da49c8dbe008" compoundref="gsw__structs_8h" startline="106">GSW_SPECVOL_COEFFICIENTS::h133</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a58c366ad396b5469eb5244d0505d9e78" compoundref="gsw__structs_8h" startline="107">GSW_SPECVOL_COEFFICIENTS::h141</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a53df1b5d78954adf11bcbe74cc399586" compoundref="gsw__structs_8h" startline="107">GSW_SPECVOL_COEFFICIENTS::h142</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3bb95e76f5e8f855a73b3dbefecb7968" compoundref="gsw__structs_8h" startline="107">GSW_SPECVOL_COEFFICIENTS::h151</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a5baddd09d6aecf2d43bad6e3730e573b" compoundref="gsw__structs_8h" startline="107">GSW_SPECVOL_COEFFICIENTS::h211</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8cfa0beeea499c5455a3d7348afa140e" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h212</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad4bdf13ca63bf33e8ccb97abad9125e9" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h213</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aaa2c61ece9912dcee8b8173745bfd32f" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h221</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1abcde0a1c3c0b63b82663dbc7e56b9b6b" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h222</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a4d07f5cb051cba2230e2975f84704bfe" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h223</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a9d77cc075c94d12b333e8ec8c3aa7775" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h231</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad35e6e072a75dcd33605e9c55629b767" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h232</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a5e1b37da481daa015405cb76fc023475" compoundref="gsw__structs_8h" startline="108">GSW_SPECVOL_COEFFICIENTS::h241</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1adfa9b4511c17e398ed5cd0f74f755c4f" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h301</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8eec63912ddceed32b7fe49b54374b36" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h302</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a27116b4c216acdea93f691d72793b474" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h303</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3a94e0976cfc279ed4533d7bdff61389" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h311</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3c92422dd4b8b468e00beb51f62e08b6" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h312</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac80b4292db2bfe5100d74fb1244f9b81" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h313</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a9f85b92f371eb6920e8a4c8d83cb6121" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h321</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a2c2bd87641ef6a25075b06445680ab39" compoundref="gsw__structs_8h" startline="109">GSW_SPECVOL_COEFFICIENTS::h322</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aa6f5b969695f20f0775c9555a2d7aeae" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h331</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aec0f4c8e34a5888210cfe57a20756a0e" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h401</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a577a33f09ce7cf007c6311d8f88b1a4f" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h402</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a4e19bed87f0f19a3a521443f873d0b6d" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h403</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a72d40b9db7b33383909f589f055dace6" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h411</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a32debf00a6f466ef3097860fe41aaa0d" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h412</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a7bb5226a41b8204648ce15ef9f2e0abd" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h421</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a7f4a6601ec76186ab1599e53bc03e1df" compoundref="gsw__structs_8h" startline="110">GSW_SPECVOL_COEFFICIENTS::h501</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a262a25b93750f34ddfdc7299afa70edc" compoundref="gsw__structs_8h" startline="111">GSW_SPECVOL_COEFFICIENTS::h502</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a5742947f356f1367c1c7fb946bac8193" compoundref="gsw__structs_8h" startline="111">GSW_SPECVOL_COEFFICIENTS::h511</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab8f3b030884785152e9230c6cac30015" compoundref="gsw__structs_8h" startline="111">GSW_SPECVOL_COEFFICIENTS::h601</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <referencedby refid="classTeosSea_1a4a037137b85784ab3abe98ddba0df71a" compoundref="TeosSea_8cpp" startline="2656" endline="2696">gsw_internal_energy_second_derivatives</referencedby>
+        <referencedby refid="classTeosSea_1ab06bc834b50efd5989697ed1b534d532" compoundref="TeosSea_8cpp" startline="2213" endline="2272">gsw_specvol_second_derivatives_wrt_enthalpy</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1accb38d8c37117207fc4bcaa52ccb735c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -502,7 +642,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="73" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="753" bodyend="756"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="78" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="741" bodyend="744"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <referencedby refid="classTeosSea_1a9a178afbb9a135526f10b8f07d25cc96" compoundref="TeosSea_8cpp" startline="1124" endline="1153">gsw_pt_from_entropy</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aecaca3573a2e38a26e7e678e5b071342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -528,7 +670,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="74" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="926" bodyend="929"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="79" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="918" bodyend="921"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a15b60028a9de466e88dc899e2499c1d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double *</type>
@@ -593,7 +736,15 @@
 <para>cumulative sum</para>
 </sect2>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="76" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3750" bodyend="4068"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="81" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3742" bodyend="4021"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ad39b9df65957540635e39ebcdf2e4d06" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::db2pa</references>
+        <references refid="classTeosBase_1a33ba73fae5951cef46101ebc38acdea2" compoundref="TeosBase_8cpp" startline="2681" endline="2769">TeosBase::gsw_linear_interp_sa_ct</references>
+        <references refid="classTeosSea_1af32e7e1b8f2343cd705d413fbc64dde6" compoundref="TeosSea_8cpp" startline="4028" endline="4051">gsw_p_sequence</references>
+        <references refid="classTeosSea_1a137f1975a84ae58bcdc857faa37d4078" compoundref="TeosSea_8cpp" startline="6027" endline="6170">gsw_rr68_interp_sa_ct</references>
+        <references refid="classTeosSea_1a1d9b35a593eb3fdd9581230d904f7f76" compoundref="TeosSea_8cpp" startline="1790" endline="1793">gsw_specvol_anom_standard</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="SaarDataHandler_8cpp_1a9e456b62243f51499f1fd299c9cf4192" compoundref="SaarDataHandler_8cpp" startline="31" endline="38">p_ref</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a97005e7d841965f8c33b29b4195be0b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -639,7 +790,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="79" column="8"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="85" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a51ec8664556ca4e547f6e406b1645d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -678,7 +829,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="84" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5797" bodyend="5817"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="91" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5721" bodyend="5742"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ad39b9df65957540635e39ebcdf2e4d06" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::db2pa</references>
+        <references refid="classTeosBase_1af3bfac75e05fbdc6a8d82867adcdaf1a" compoundref="TeosBase_8cpp" startline="1334" endline="1407">TeosBase::gsw_enthalpy_first_derivatives</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1aaa3170f3f7040da56d1a12c092e6cf59" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_p0</references>
+        <references refid="classTeosBase_1aa74833f24a2af9810258307ba394043a" compoundref="TeosBase_8cpp" startline="4369" endline="4379">TeosBase::gsw_specvol</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a511b24f7594125a94438794bf907c798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -716,7 +873,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="88" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2806" bodyend="2828"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="96" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2803" bodyend="2826"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ad39b9df65957540635e39ebcdf2e4d06" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::db2pa</references>
+        <references refid="classTeosBase_1aa16ebdc2ffc996d99ecbf0d9ea13b260" compoundref="TeosBase_8cpp" startline="1468" endline="1531">TeosBase::gsw_enthalpy_first_derivatives_ct_exact</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1aaa3170f3f7040da56d1a12c092e6cf59" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_p0</references>
+        <references refid="classTeosBase_1ad118b491a0212552791f067d5d15e438" compoundref="TeosBase_8cpp" startline="5331" endline="5336">TeosBase::gsw_specvol_CT_exact</references>
+        <references refid="classTeosBase_1a62a149dee8f3f2f4dc6084406a87f068" compoundref="TeosBase_8cpp" startline="7436" endline="7465">TeosBase::gsw_specvol_first_derivatives_CT_exact</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a4a037137b85784ab3abe98ddba0df71a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -763,7 +926,12 @@
         <inbodydescription>
 <para>clean up</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="92" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2660" bodyend="2699"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="101" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2656" bodyend="2696"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ad39b9df65957540635e39ebcdf2e4d06" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::db2pa</references>
+        <references refid="classTeosSea_1a917468189be33cb53b4f59e3e344f045" compoundref="TeosSea_8cpp" startline="814" endline="882">gsw_enthalpy_second_derivatives</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1aaa3170f3f7040da56d1a12c092e6cf59" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_p0</references>
+        <references refid="classTeosSea_1ab662c2ee4b6e2085f2e184545cd24857" compoundref="TeosSea_8cpp" startline="2054" endline="2141">gsw_specvol_second_derivatives</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a739977713e3ac699496fb949a983250c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -793,10 +961,12 @@
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
-<para>%-----------------------------------------------------------------------<mdash/> % This function calculates isopycnal_slope_ratio using the computationally % efficient 75-term expression for specific volume as a function of SA, CT % and p. If one wanted to compute this with the full TEOS-10 Gibbs % function expression for specific volume, the following lines of code will % enable this. % % t = gsw_pt_from_CT(SA,CT,p); % alpha = gsw_alpha_wrt_CT_t_exact(SA,t,p); % beta = gsw_beta_const_CT_t_exact(SA,t,p); % tr = gsw_pt_from_t(SA,pt,p_ref0,p_ref); % alpha_pref = gsw_alpha_wrt_CT_t_exact(SA,tr,p_ref); % beta_pref = gsw_beta_const_CT_t_exact(SA,tr,p_ref); % %-----------<mdash/>This is the end of the alternative code------------------<mdash/></para>
+<para>%-----------------------------------------------------------------------<mdash/> % This function calculates isopycnal_slope_ratio using the computationally % efficient 75-term expression for specific volume as a function of SA, CT % and p. If one wanted to compute this with the full TEOS-10 Gibbs % function expression for specific volume, the following lines of code will % enable this. % % t = gsw_pt_from_CT(SA,CT,p); % alpha = <ref refid="classTeosBase_1ab8466f2ac415c5d891d03cea41f0b7db" kindref="member">gsw_alpha_wrt_CT_t_exact(SA,t,p)</ref>; % beta = gsw_beta_const_CT_t_exact(SA,t,p); % tr = gsw_pt_from_t(SA,pt,p_ref0,p_ref); % alpha_pref = gsw_alpha_wrt_CT_t_exact(SA,tr,p_ref); % beta_pref = gsw_beta_const_CT_t_exact(SA,tr,p_ref); % %-----------<mdash/>This is the end of the alternative code------------------<mdash/></para>
 <para>clean up</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="97" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3226" bodyend="3263"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="107" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3225" bodyend="3262"/>
+        <references refid="classTeosSea_1ae310346e98768c1d7e16d8c9d5ac0a16" compoundref="TeosSea_8cpp" startline="4816" endline="4843">gsw_specvol_alpha_beta</references>
+        <references refid="SaarDataHandler_8cpp_1a9e456b62243f51499f1fd299c9cf4192" compoundref="SaarDataHandler_8cpp" startline="31" endline="38">p_ref</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a7c722ee15fbf4c8584f7132e7bb78785" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -820,7 +990,10 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="101" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="968" bodyend="996"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="112" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="960" bodyend="988"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <referencedby refid="classTeosSea_1acf145968219361b6862b06ba883b71b8" compoundref="TeosSea_8cpp" startline="1026" endline="1031">gsw_latentheat_evap_t</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1acf145968219361b6862b06ba883b71b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -842,7 +1015,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="102" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1034" bodyend="1039"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="113" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1026" bodyend="1031"/>
+        <references refid="classTeosBase_1a186d4b00aacf58bde3e5493786b2964d" compoundref="TeosBase_8cpp" startline="747" endline="759">TeosBase::gsw_ct_from_pt</references>
+        <references refid="classTeosSea_1a7c722ee15fbf4c8584f7132e7bb78785" compoundref="TeosSea_8cpp" startline="960" endline="988">gsw_latentheat_evap_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ad9d2f43c3f0e7f17046bfde409c9c4bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -888,7 +1063,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="103" column="8"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="114" column="10"/>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a10eaa1544e7e3b7d0355d4cccf0d323f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -915,7 +1090,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="108" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2439" bodyend="2448"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="120" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2434" bodyend="2443"/>
+        <references refid="classTeosSea_1a23aefaf9ec43acc72f9c41a92f868c9f" compoundref="TeosSea_8cpp" startline="5198" endline="5219">gsw_pt_first_derivatives</references>
+        <references refid="classTeosSea_1ae310346e98768c1d7e16d8c9d5ac0a16" compoundref="TeosSea_8cpp" startline="4816" endline="4843">gsw_specvol_alpha_beta</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1af32e7e1b8f2343cd705d413fbc64dde6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -951,7 +1128,9 @@
         <inbodydescription>
 <para>Generate the sequence ensuring that the value of p2 is exact to avoid round-off issues, ie. dont do &quot;pseq = p1+pstep*(i+1)&quot;.</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="111" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4075" bodyend="4099"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="123" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4028" bodyend="4051"/>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1a15b60028a9de466e88dc899e2499c1d4" compoundref="TeosSea_8cpp" startline="3742" endline="4021">gsw_geo_strf_dyn_height</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a5337991bd3f2f894e29223af25451d71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -981,7 +1160,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="114" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1081" bodyend="1086"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="127" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1073" bodyend="1078"/>
+        <references refid="classTeosBase_1a628255be10b0353a041876a7e8906862" compoundref="TeosBase_8cpp" startline="3423" endline="3453">TeosBase::gsw_pt_from_t</references>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="SaarDataHandler_8cpp_1a9e456b62243f51499f1fd299c9cf4192" compoundref="SaarDataHandler_8cpp" startline="31" endline="38">p_ref</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a23aefaf9ec43acc72f9c41a92f868c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1012,7 +1194,15 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="115" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5291" bodyend="5313"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="128" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5198" bodyend="5219"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ae7c9443ee7d4efed62183bda892ce848" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_cp0</references>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <references refid="classTeosBase_1ad661e3cefc1296c1f25594526ce26e1e" compoundref="TeosBase_8cpp" startline="3332" endline="3370">TeosBase::gsw_pt_from_ct</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a2425d81cc6babcfc81de6915572de0c3" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_t0</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1a10eaa1544e7e3b7d0355d4cccf0d323f" compoundref="TeosSea_8cpp" startline="2434" endline="2443">gsw_ntp_pt_vs_CT_ratio</referencedby>
+        <referencedby refid="classTeosSea_1a6a14e9031632a28d15673fda5ae40aef" compoundref="TeosSea_8cpp" startline="4107" endline="4143">gsw_pt_second_derivatives</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a9a178afbb9a135526f10b8f07d25cc96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1037,7 +1227,15 @@
 <para>Find the initial value of pt</para>
 <para>Maximum error of 2.2x10^-6 degrees C for one iteration. Maximum error is 1.4x10^-14 degrees C for two iterations (two iterations is the default, &quot;for Number_of_iterations = 1:2&quot;).</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="116" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1132" bodyend="1161"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="129" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1124" bodyend="1153"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ae7c9443ee7d4efed62183bda892ce848" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_cp0</references>
+        <references refid="classTeosSea_1accb38d8c37117207fc4bcaa52ccb735c" compoundref="TeosSea_8cpp" startline="741" endline="744">gsw_entropy_from_pt</references>
+        <references refid="classTeosBase_1adf0029a64647d96849af238f17c666fe" compoundref="TeosBase_8cpp" startline="2300" endline="2324">TeosBase::gsw_gibbs_pt0_pt0</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1ae418553fc39271f4d964785afa617fd8" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_sso</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a2425d81cc6babcfc81de6915572de0c3" compoundref="gsw__structs_8h" startline="41">GSW_TEOS10_CONSTANTS::gsw_t0</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <referencedby refid="classTeosSea_1ab8503e191dde3cd3b1da43a099045718" compoundref="TeosSea_8cpp" startline="604" endline="609">gsw_ct_from_entropy</referencedby>
+        <referencedby refid="classTeosSea_1ab55971d6e391271f76ee923bd4f84684" compoundref="TeosSea_8cpp" startline="2864" endline="2874">gsw_t_from_entropy</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a6a14e9031632a28d15673fda5ae40aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1071,7 +1269,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="117" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4155" bodyend="4196"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="130" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4107" bodyend="4143"/>
+        <references refid="classTeosSea_1a23aefaf9ec43acc72f9c41a92f868c9f" compoundref="TeosSea_8cpp" startline="5198" endline="5219">gsw_pt_first_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a4132881e355632c51928f2fe8560f722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1127,7 +1327,8 @@
 </para>
 <para>number of elements in p_i</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="121" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4204" bodyend="4269"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="135" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4151" bodyend="4207"/>
+        <references refid="SaarDataHandler_8cpp_1a9e456b62243f51499f1fd299c9cf4192" compoundref="SaarDataHandler_8cpp" startline="31" endline="38">p_ref</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a9de9cf81db6620aff49536675b5353a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1165,7 +1366,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="124" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2504" bodyend="2514"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="139" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2499" bodyend="2510"/>
+        <references refid="classTeosBase_1ab8466f2ac415c5d891d03cea41f0b7db" compoundref="TeosBase_8cpp" startline="7920" endline="7926">TeosBase::gsw_alpha_wrt_CT_t_exact</references>
+        <references refid="classTeosBase_1a482f7819f598310ebcefd23827e1678e" compoundref="TeosBase_8cpp" startline="6449" endline="6509">TeosBase::gsw_beta_const_ct_t_exact</references>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab94eac9c8fc4795d99d419360e126c47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1191,7 +1396,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="128" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3161" bodyend="3166"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="144" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3160" bodyend="3165"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
+        <referencedby refid="classTeosSea_1a142252a6d9dd3df60bea2b10f0de6ef7" compoundref="TeosSea_8cpp" startline="3035" endline="3056">gsw_cabbeling_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1ac3269569f32e0123f499ce7d4512594c" compoundref="TeosSea_8cpp" startline="2562" endline="2578">gsw_thermobaric_ct_exact</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a8812b60b6fb3120c0b36c3153194b019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1237,7 +1446,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="130" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5224" bodyend="5245"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="146" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5129" bodyend="5152"/>
+        <references refid="classTeosBase_1aa74833f24a2af9810258307ba394043a" compoundref="TeosBase_8cpp" startline="4369" endline="4379">TeosBase::gsw_specvol</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="classTeosSea_1ab662c2ee4b6e2085f2e184545cd24857" compoundref="TeosSea_8cpp" startline="2054" endline="2141">gsw_specvol_second_derivatives</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a68860c091a367f209aa765f31c2a5793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1277,7 +1489,16 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="134" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4327" bodyend="4360"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="151" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4265" bodyend="4296"/>
+        <references refid="classTeosBase_1a5f5add6ba00339452e0443710cb5f163" compoundref="TeosBase_8cpp" startline="10449" endline="10467">TeosBase::gsw_gsvco_a</references>
+        <references refid="classTeosBase_1aa54a35cebd0f12ccea54d580270709c3" compoundref="TeosBase_8cpp" startline="10478" endline="10501">TeosBase::gsw_gsvco_b</references>
+        <references refid="classTeosBase_1a48a8d78c4340d16de6b2ea9f244203c8" compoundref="TeosBase_8cpp" startline="10512" endline="10534">TeosBase::gsw_gsvco_c</references>
+        <references refid="classTeosBase_1a015aa74e7187bd453ff2970908eba1e3" compoundref="TeosBase_8cpp" startline="10545" endline="10576">TeosBase::gsw_gsvco_v</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a178d82cd5ef8b28ceed71784f57ab76e" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::pa2db</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ae7c76105feca291cd0507f5635e9250d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1311,7 +1532,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="137" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1228" bodyend="1252"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="155" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1220" bodyend="1240"/>
+        <references refid="classTeosBase_1aa74833f24a2af9810258307ba394043a" compoundref="TeosBase_8cpp" startline="4369" endline="4379">TeosBase::gsw_specvol</references>
+        <references refid="classTeosSea_1a662b468a2d0452b39b7cc9b1aa7cb2d0" compoundref="TeosSea_8cpp" startline="1956" endline="1981">gsw_specvol_first_derivatives_wrt_enthalpy</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a6f0e6e301532c4df7d311848a5cb63db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1349,7 +1573,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="140" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4483" bodyend="4516"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="159" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4419" bodyend="4456"/>
+        <references refid="classTeosBase_1aa74833f24a2af9810258307ba394043a" compoundref="TeosBase_8cpp" startline="4369" endline="4379">TeosBase::gsw_specvol</references>
+        <references refid="classTeosSea_1a662b468a2d0452b39b7cc9b1aa7cb2d0" compoundref="TeosSea_8cpp" startline="1956" endline="1981">gsw_specvol_first_derivatives_wrt_enthalpy</references>
+        <references refid="classTeosSea_1ab06bc834b50efd5989697ed1b534d532" compoundref="TeosSea_8cpp" startline="2213" endline="2272">gsw_specvol_second_derivatives_wrt_enthalpy</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1375,7 +1603,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="143" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1291" bodyend="1294"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="163" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1279" bodyend="1282"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <referencedby refid="classTeosSea_1a5337991bd3f2f894e29223af25451d71" compoundref="TeosSea_8cpp" startline="1073" endline="1078">gsw_pot_rho_t_exact</referencedby>
+        <referencedby refid="classTeosSea_1a9de9cf81db6620aff49536675b5353a2" compoundref="TeosSea_8cpp" startline="2499" endline="2510">gsw_rho_alpha_beta_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1ab94eac9c8fc4795d99d419360e126c47" compoundref="TeosSea_8cpp" startline="3160" endline="3165">gsw_rho_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1a8913553934101a10776d682ba93907b2" compoundref="TeosSea_8cpp" startline="2914" endline="2921">gsw_sigma0_pt0_exact</referencedby>
+        <referencedby refid="classTeosSea_1a9652c665ffc7d548cb1fe1c3c8dbd1b0" compoundref="TeosSea_8cpp" startline="5375" endline="5380">gsw_sigma1_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1a8aa38f3b53adca7dfc694b0b7e426395" compoundref="TeosSea_8cpp" startline="5267" endline="5272">gsw_sigma2_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1a98bc9f85cb8068354dd9c443e16fa71b" compoundref="TeosSea_8cpp" startline="3105" endline="3110">gsw_sigma3_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1a8178b721f763ae8803c58739d5f48a02" compoundref="TeosSea_8cpp" startline="5321" endline="5326">gsw_sigma4_ct_exact</referencedby>
+        <referencedby refid="classTeosSea_1a5467dac9a36438a553c9ef92ddc93cca" compoundref="TeosSea_8cpp" startline="5429" endline="5519">gsw_t_from_rho_exact</referencedby>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">DensityNode::timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a137f1975a84ae58bcdc857faa37d4078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1425,7 +1664,12 @@
 <para>Insert any observed bottles that are at the required interpolated pressures</para>
 <para>clean up</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="144" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="6102" bodyend="6266"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="164" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="6027" bodyend="6170"/>
+        <references refid="TeosBase_8h_1a33a0d6d14297a0fef1e46118b94b5099" compoundref="TeosBase_8h" startline="52">cppGSW_INVALID_VALUE</references>
+        <references refid="classTeosBase_1aa9372f63a7b9e706825f2242c599e815" compoundref="TeosBase_8cpp" startline="10003" endline="10262">TeosBase::gsw_rr68_interp_section</references>
+        <references refid="classTeosSea_1a9ec75e88d7b77573bf99c4a3c108283f" compoundref="TeosSea_8cpp" startline="4468" endline="4568">gsw_util_interp1q_int</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1a15b60028a9de466e88dc899e2499c1d4" compoundref="TeosSea_8cpp" startline="3742" endline="4021">gsw_geo_strf_dyn_height</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a12c82d063fd87a864cf045169f2ff452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1452,7 +1696,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="148" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1358" bodyend="1383"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="169" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1346" bodyend="1372"/>
+        <references refid="TeosBase_8h_1a33a0d6d14297a0fef1e46118b94b5099" compoundref="TeosBase_8h" startline="52">cppGSW_INVALID_VALUE</references>
+        <references refid="classTeosBase_1aa74833f24a2af9810258307ba394043a" compoundref="TeosBase_8cpp" startline="4369" endline="4379">TeosBase::gsw_specvol</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a19623d68f8f2f09267a8a40988c037e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1476,7 +1724,39 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="149" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1440" bodyend="1460"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="170" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1429" bodyend="1449"/>
+        <references refid="classTeosBase_1a6f693b438ca524bc4ab77eabd7746a25" compoundref="TeosBase_8h" startline="99">TeosBase::gsvco</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a81aa74a9074bd2f3170f6ec8ab11125e" compoundref="gsw__structs_8h" startline="114">GSW_SPECVOL_COEFFICIENTS::v000</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a41c6f5c3694035de8c3ee0d6c7116173" compoundref="gsw__structs_8h" startline="114">GSW_SPECVOL_COEFFICIENTS::v010</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8b34623bd2eee03c1100c2ef83851b28" compoundref="gsw__structs_8h" startline="115">GSW_SPECVOL_COEFFICIENTS::v020</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a0c71614bb8359b9213fa2d0a82448029" compoundref="gsw__structs_8h" startline="116">GSW_SPECVOL_COEFFICIENTS::v030</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ae449b543755cfbe30ca5688192dba3c2" compoundref="gsw__structs_8h" startline="116">GSW_SPECVOL_COEFFICIENTS::v040</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab731dba85a127f5b50145da029165ba9" compoundref="gsw__structs_8h" startline="116">GSW_SPECVOL_COEFFICIENTS::v050</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a52b0f817becc6489e94769a40a7882f5" compoundref="gsw__structs_8h" startline="117">GSW_SPECVOL_COEFFICIENTS::v060</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad9a23df542dc715632db9be2f83ca89b" compoundref="gsw__structs_8h" startline="117">GSW_SPECVOL_COEFFICIENTS::v100</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a67b27dfa52efc0f4212b71dd96a6b087" compoundref="gsw__structs_8h" startline="117">GSW_SPECVOL_COEFFICIENTS::v110</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a198e8d3a1bb20471929a619be9156247" compoundref="gsw__structs_8h" startline="118">GSW_SPECVOL_COEFFICIENTS::v120</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a6c33d6d71bc761ce7cc6a68e943acaf2" compoundref="gsw__structs_8h" startline="118">GSW_SPECVOL_COEFFICIENTS::v130</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aea3033ec86e2b51c09c5317b2b4ecd70" compoundref="gsw__structs_8h" startline="119">GSW_SPECVOL_COEFFICIENTS::v140</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab7f8d59624dd1c4e9d1c88d647ff943d" compoundref="gsw__structs_8h" startline="119">GSW_SPECVOL_COEFFICIENTS::v150</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a24e6f4f1f07de0e7a262778895bfdd57" compoundref="gsw__structs_8h" startline="119">GSW_SPECVOL_COEFFICIENTS::v200</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a543731aefe4809877930b83bff11e4c4" compoundref="gsw__structs_8h" startline="119">GSW_SPECVOL_COEFFICIENTS::v210</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac8b0a7d0c1037ede30475a150ccdcee5" compoundref="gsw__structs_8h" startline="120">GSW_SPECVOL_COEFFICIENTS::v220</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a44538adb860c1419c360d26db6abb2a0" compoundref="gsw__structs_8h" startline="120">GSW_SPECVOL_COEFFICIENTS::v230</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a391f66b88619033540b478f6f09d36a6" compoundref="gsw__structs_8h" startline="120">GSW_SPECVOL_COEFFICIENTS::v240</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a14bb041bdf44c66b266956404babdb14" compoundref="gsw__structs_8h" startline="121">GSW_SPECVOL_COEFFICIENTS::v300</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac0b20c9cf99628a548b157b42a6ff193" compoundref="gsw__structs_8h" startline="121">GSW_SPECVOL_COEFFICIENTS::v310</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a883d655b7c3abefcc7bd4e493a83d996" compoundref="gsw__structs_8h" startline="121">GSW_SPECVOL_COEFFICIENTS::v320</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ae732372b52adb85813e979b08fe41115" compoundref="gsw__structs_8h" startline="122">GSW_SPECVOL_COEFFICIENTS::v330</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a668c009584fbd38d329b78122b5cd2eb" compoundref="gsw__structs_8h" startline="122">GSW_SPECVOL_COEFFICIENTS::v400</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a72b7b58132f3a0d031f42d285d5dde54" compoundref="gsw__structs_8h" startline="122">GSW_SPECVOL_COEFFICIENTS::v410</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a9cb54b100a6c3805ceabeaab751a0021" compoundref="gsw__structs_8h" startline="122">GSW_SPECVOL_COEFFICIENTS::v420</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac2f8caefd15d3f25183625248b4379f0" compoundref="gsw__structs_8h" startline="122">GSW_SPECVOL_COEFFICIENTS::v500</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a18652984157c70550b44f4858ed12ff8" compoundref="gsw__structs_8h" startline="123">GSW_SPECVOL_COEFFICIENTS::v510</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ade8d157b93cdf2eeee1a3195ce5873cd" compoundref="gsw__structs_8h" startline="123">GSW_SPECVOL_COEFFICIENTS::v600</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aa9cf06db7a5277f9baa3db50e9aaa8b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1498,7 +1778,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="150" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4408" bodyend="4413"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="171" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4344" bodyend="4349"/>
+        <references refid="classTeosBase_1ad661e3cefc1296c1f25594526ce26e1e" compoundref="TeosBase_8cpp" startline="3332" endline="3370">TeosBase::gsw_pt_from_ct</references>
+        <references refid="classTeosSea_1a8913553934101a10776d682ba93907b2" compoundref="TeosSea_8cpp" startline="2914" endline="2921">gsw_sigma0_pt0_exact</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a8913553934101a10776d682ba93907b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1520,7 +1802,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="151" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2916" bodyend="2923"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="172" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2914" bodyend="2921"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <referencedby refid="classTeosSea_1aa9cf06db7a5277f9baa3db50e9aaa8b4" compoundref="TeosSea_8cpp" startline="4344" endline="4349">gsw_sigma0_ct_exact</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a5f01db0ac3e79540c479bd1a7d3b0a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1542,7 +1826,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="152" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5875" bodyend="5878"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="173" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5800" bodyend="5803"/>
+        <references refid="classTeosBase_1a49ee42de42887c18c1e36298ae9bef58" compoundref="TeosBase_8cpp" startline="3592" endline="3595">TeosBase::gsw_rho</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a9652c665ffc7d548cb1fe1c3c8dbd1b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1564,7 +1849,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="153" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5469" bodyend="5474"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="174" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5375" bodyend="5380"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a3d16639ba74754298bae2a408808a0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1586,7 +1873,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="154" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5935" bodyend="5938"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="175" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5860" bodyend="5863"/>
+        <references refid="classTeosBase_1a49ee42de42887c18c1e36298ae9bef58" compoundref="TeosBase_8cpp" startline="3592" endline="3595">TeosBase::gsw_rho</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a8aa38f3b53adca7dfc694b0b7e426395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1608,7 +1896,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="155" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5361" bodyend="5366"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="176" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5267" bodyend="5272"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a0bcd5ea03d2ac06e5eec24cbcb262d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1630,7 +1920,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="156" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5995" bodyend="5998"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="177" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5920" bodyend="5923"/>
+        <references refid="classTeosBase_1a49ee42de42887c18c1e36298ae9bef58" compoundref="TeosBase_8cpp" startline="3592" endline="3595">TeosBase::gsw_rho</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a98bc9f85cb8068354dd9c443e16fa71b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1652,7 +1943,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="157" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3106" bodyend="3111"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="178" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3105" bodyend="3110"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ace4a83b10c69c6bc475b0faaa7801f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1674,7 +1967,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="158" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="6055" bodyend="6058"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="179" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5980" bodyend="5983"/>
+        <references refid="classTeosBase_1a49ee42de42887c18c1e36298ae9bef58" compoundref="TeosBase_8cpp" startline="3592" endline="3595">TeosBase::gsw_rho</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a8178b721f763ae8803c58739d5f48a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1696,7 +1990,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="159" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5415" bodyend="5420"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="180" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5321" bodyend="5326"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ac60c017545b43f942035064481a232da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1724,7 +2020,12 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="160" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1515" bodyend="1528"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="181" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1504" bodyend="1517"/>
+        <references refid="classTeosBase_1a48a8d78c4340d16de6b2ea9f244203c8" compoundref="TeosBase_8cpp" startline="10512" endline="10534">TeosBase::gsw_gsvco_c</references>
+        <references refid="classTeosBase_1a015aa74e7187bd453ff2970908eba1e3" compoundref="TeosBase_8cpp" startline="10545" endline="10576">TeosBase::gsw_gsvco_v</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ad51b01a6aee0a8326b28a637421159bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1750,7 +2051,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="161" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2745" bodyend="2750"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="182" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2742" bodyend="2747"/>
+        <references refid="classTeosSea_1aeb6bc77318e1f2f3aaaa16ed0d360c99" compoundref="TeosSea_8cpp" startline="1554" endline="1563">gsw_sound_speed_t_exact</references>
+        <references refid="classTeosBase_1a7c7f84e9b6961f1e032794d4a848a475" compoundref="TeosBase_8cpp" startline="4807" endline="4814">TeosBase::gsw_t_from_ct</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aeb6bc77318e1f2f3aaaa16ed0d360c99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1776,7 +2079,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="162" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1565" bodyend="1574"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="183" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1554" bodyend="1563"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <referencedby refid="classTeosSea_1ad51b01a6aee0a8326b28a637421159bf" compoundref="TeosSea_8cpp" startline="2742" endline="2747">gsw_sound_speed_ct_exact</referencedby>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">DensityNode::timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab026c7cce04d306d53311c97520bc4f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1795,7 +2101,10 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="163" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1608" bodyend="1617"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="184" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1597" bodyend="1607"/>
+        <references refid="TeosBase_8h_1a33a0d6d14297a0fef1e46118b94b5099" compoundref="TeosBase_8h" startline="52">cppGSW_INVALID_VALUE</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1af1da102a93814626c07851116e7b6c42" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_soncl</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1aed53a12dead2408923b9c0de8a9c675e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1814,7 +2123,9 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="164" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1650" bodyend="1654"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="185" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1640" bodyend="1644"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a6439ff570bb0b68c792c90ae6b403829" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_ups</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ae963c03a25dbad007319d1981c1d078d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1846,7 +2157,14 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>In the Baltic Sea, SA = Sstar.</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="165" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4985" bodyend="5007"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="186" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4891" bodyend="4911"/>
+        <references refid="TeosBase_8h_1adf956899882ed50fd52ab17e577b98ab" compoundref="TeosBase_8h" startline="53">cppGSW_ERROR_LIMIT</references>
+        <references refid="TeosBase_8h_1a33a0d6d14297a0fef1e46118b94b5099" compoundref="TeosBase_8h" startline="52">cppGSW_INVALID_VALUE</references>
+        <references refid="classTeosBase_1a1b5c6b6d1d37ec49550dffa9a796debb" compoundref="TeosBase_8cpp" startline="3944" endline="4075">TeosBase::gsw_saar</references>
+        <references refid="classTeosBase_1a6434019dcc704f9ec294509b110a3fdb" compoundref="TeosBase_8cpp" startline="4187" endline="4209">TeosBase::gsw_sp_from_sa_baltic</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a6439ff570bb0b68c792c90ae6b403829" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_ups</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="saar__ref_8h_1aeb69d9feefc20864d51417336ee1ed30" compoundref="saar__ref_8h" startline="26" endline="38353">saar</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a7d0305c01a9caa0075f5b0f6b908f18a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1870,7 +2188,22 @@
 <para>for <ref refid="structGSW__SP__COEFFICIENTS" kindref="compound">GSW_SP_COEFFICIENTS</ref> use gspc</para>
 <para>The following section of the code is designed for SP &lt; 2 based on the Hill et al. (1986) algorithm. This algorithm is adjusted so that it is exactly equal to the PSS-78 algorithm at SP = 2.</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="166" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1709" bodyend="1744"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="187" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1699" bodyend="1732"/>
+        <references refid="structGSW__SP__COEFFICIENTS_1aac34aad29c5eda04cf559cd03d6e9134" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a0</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1abdea7074e6f9bcedb09220998521e3a0" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a6cba4134d5f6cc8913d35fcbc22a290f" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1ad93325f652a12faebab5b11456b5befb" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a3</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1aff6c773d82980c8e20ab69cd6d610090" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a4</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a9961d6eba9096dd3ac88a32003be54ef" compoundref="gsw__structs_8h" startline="435">GSW_SP_COEFFICIENTS::a5</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a95a9c5a8b89eb4b21eef2357c57b7182" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b0</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a4dee6c324eba66049233245a1e15cbd7" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b1</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a7aea80ad670c50bfbe4760c092101654" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a1e45e80c10af14bce7533290999331e7" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b3</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a523122f981262210245794b730326fc0" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b4</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a41797af9d3d55340eb30d6cfb4dbf597" compoundref="gsw__structs_8h" startline="436">GSW_SP_COEFFICIENTS::b5</references>
+        <references refid="classTeosBase_1ade3f799a0cf0e701251627954d1d21d0" compoundref="TeosBase_8h" startline="100">TeosBase::gspc</references>
+        <references refid="classTeosBase_1a28acd1903d528c51aaa6ba0f5d9fefd0" compoundref="TeosBase_8cpp" startline="2432" endline="2494">TeosBase::gsw_hill_ratio_at_sp2</references>
+        <references refid="structGSW__SP__COEFFICIENTS_1a12b4ab30fb3d14891ba73e6a338a6086" compoundref="gsw__structs_8h" startline="440">GSW_SP_COEFFICIENTS::k</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ae310346e98768c1d7e16d8c9d5ac0a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1910,7 +2243,18 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="167" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4910" bodyend="4937"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="188" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4816" bodyend="4843"/>
+        <references refid="classTeosBase_1a5f5add6ba00339452e0443710cb5f163" compoundref="TeosBase_8cpp" startline="10449" endline="10467">TeosBase::gsw_gsvco_a</references>
+        <references refid="classTeosBase_1aa54a35cebd0f12ccea54d580270709c3" compoundref="TeosBase_8cpp" startline="10478" endline="10501">TeosBase::gsw_gsvco_b</references>
+        <references refid="classTeosBase_1a015aa74e7187bd453ff2970908eba1e3" compoundref="TeosBase_8cpp" startline="10545" endline="10576">TeosBase::gsw_gsvco_v</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a28c883afe1adc2b73a44ce2b0942b089" compoundref="gsw__structs_8h" startline="38">GSW_TEOS10_CONSTANTS::rec_db2pa</references>
+        <referencedby refid="classTeosSea_1a739977713e3ac699496fb949a983250c" compoundref="TeosSea_8cpp" startline="3225" endline="3262">gsw_isopycnal_slope_ratio</referencedby>
+        <referencedby refid="classTeosSea_1a10eaa1544e7e3b7d0355d4cccf0d323f" compoundref="TeosSea_8cpp" startline="2434" endline="2443">gsw_ntp_pt_vs_CT_ratio</referencedby>
+        <referencedby refid="classTeosSea_1a63298dc457cb185af76b48abbd51b31a" compoundref="TeosSea_8cpp" startline="2341" endline="2372">gsw_turner_rsubrho</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a1d9b35a593eb3fdd9581230d904f7f76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1936,7 +2280,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="170" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1802" bodyend="1805"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="192" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1790" bodyend="1793"/>
+        <references refid="classTeosBase_1aa74833f24a2af9810258307ba394043a" compoundref="TeosBase_8cpp" startline="4369" endline="4379">TeosBase::gsw_specvol</references>
+        <references refid="classTeosBase_1a97fd8f8936a9059a142f2f6ea6a9746f" compoundref="TeosBase_8cpp" startline="4441" endline="4452">TeosBase::gsw_specvol_sso_0</references>
+        <referencedby refid="classTeosSea_1a15b60028a9de466e88dc899e2499c1d4" compoundref="TeosSea_8cpp" startline="3742" endline="4021">gsw_geo_strf_dyn_height</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1976,7 +2323,21 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="171" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1875" bodyend="1903"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="193" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1863" bodyend="1889"/>
+        <references refid="classTeosBase_1a5f5add6ba00339452e0443710cb5f163" compoundref="TeosBase_8cpp" startline="10449" endline="10467">TeosBase::gsw_gsvco_a</references>
+        <references refid="classTeosBase_1aa54a35cebd0f12ccea54d580270709c3" compoundref="TeosBase_8cpp" startline="10478" endline="10501">TeosBase::gsw_gsvco_b</references>
+        <references refid="classTeosBase_1a48a8d78c4340d16de6b2ea9f244203c8" compoundref="TeosBase_8cpp" startline="10512" endline="10534">TeosBase::gsw_gsvco_c</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <referencedby refid="classTeosSea_1acb2e5891de38c55a2a44ee34316bd8e5" compoundref="TeosSea_8cpp" startline="4968" endline="4986">gsw_cabbeling</referencedby>
+        <referencedby refid="classTeosSea_1a51ec8664556ca4e547f6e406b1645d18" compoundref="TeosSea_8cpp" startline="5721" endline="5742">gsw_internal_energy_first_derivatives</referencedby>
+        <referencedby refid="classTeosSea_1a8812b60b6fb3120c0b36c3153194b019" compoundref="TeosSea_8cpp" startline="5129" endline="5152">gsw_rho_second_derivatives</referencedby>
+        <referencedby refid="classTeosSea_1a12c82d063fd87a864cf045169f2ff452" compoundref="TeosSea_8cpp" startline="1346" endline="1372">gsw_sa_from_rho</referencedby>
+        <referencedby refid="classTeosSea_1a662b468a2d0452b39b7cc9b1aa7cb2d0" compoundref="TeosSea_8cpp" startline="1956" endline="1981">gsw_specvol_first_derivatives_wrt_enthalpy</referencedby>
+        <referencedby refid="classTeosSea_1ab06bc834b50efd5989697ed1b534d532" compoundref="TeosSea_8cpp" startline="2213" endline="2272">gsw_specvol_second_derivatives_wrt_enthalpy</referencedby>
+        <referencedby refid="classTeosSea_1af7a0b1d9d3f99f8f4bddb19d434364a2" compoundref="TeosSea_8cpp" startline="5044" endline="5052">gsw_thermobaric</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a662b468a2d0452b39b7cc9b1aa7cb2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2010,7 +2371,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="174" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1970" bodyend="1995"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="197" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="1956" bodyend="1981"/>
+        <references refid="classTeosBase_1af3bfac75e05fbdc6a8d82867adcdaf1a" compoundref="TeosBase_8cpp" startline="1334" endline="1407">TeosBase::gsw_enthalpy_first_derivatives</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1ae7c76105feca291cd0507f5635e9250d" compoundref="TeosSea_8cpp" startline="1220" endline="1240">gsw_rho_first_derivatives_wrt_enthalpy</referencedby>
+        <referencedby refid="classTeosSea_1a6f0e6e301532c4df7d311848a5cb63db" compoundref="TeosSea_8cpp" startline="4419" endline="4456">gsw_rho_second_derivatives_wrt_enthalpy</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab662c2ee4b6e2085f2e184545cd24857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2058,7 +2424,110 @@
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
 <para>for <ref refid="structGSW__SPECVOL__COEFFICIENTS" kindref="compound">GSW_SPECVOL_COEFFICIENTS</ref> use gsvco</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="177" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2068" bodyend="2153"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="201" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2054" bodyend="2141"/>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3c9b7ce208fef9131c29a16fc195ebb6" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a001</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a1079a202f6b84703d85b048660940e24" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a002</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a9926e878e525b38cb4a1d02b1e62bce0" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a003</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a79e3465e9f61d0f9b6d150e419f1e128" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a004</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aa8c5120a9a0072f686617bebb4d2ce7a" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a010</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1afdfc813a2d2cc3137fa20ae086402da4" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a011</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab062035acce4c174bf2635fe079f4ed1" compoundref="gsw__structs_8h" startline="76">GSW_SPECVOL_COEFFICIENTS::a012</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a124371cabf331e680665bf73c1fc3edc" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a013</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a9d8b8e833aa468bba18454f2b5731da7" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a020</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ace4862f5d4badf862ef9fd5d3d084d28" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a021</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a0effcccbda4cb08a99bf0144eac36d9b" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a022</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a02b0e084f9af7ed9bea8e9584d5dcbe7" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a030</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aeaeadd7131d225ce12da5d13dff17ab1" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a031</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8866c67d2c29ca6a1d2eb0af27bb8730" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a032</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a06e9c7615059da53a444d4091a3ce9c7" compoundref="gsw__structs_8h" startline="77">GSW_SPECVOL_COEFFICIENTS::a040</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a6bbaeb48d74c5033c19d10a638f7855a" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a041</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a2a88056103ddf202288866a1ecd79bb3" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a050</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab68676f109ce3081d6e448769ff3c2f3" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a101</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a047ad4e74160a17876bb4253961a2178" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a102</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a6d0c6733b5725c1444cbb80ead3e3517" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a103</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a0e2fc60e21f7875b578633a2d2ba52c8" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a110</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ae4ff276c328dd6f99d605108982beb6a" compoundref="gsw__structs_8h" startline="78">GSW_SPECVOL_COEFFICIENTS::a111</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a423c940d9ed8dfb247ce537d5892abc2" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a112</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a413b4e76b92e5a19bbbd29177e4e8837" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a120</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aa4ffc1befcb01d2cdc669da3097d9688" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a121</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a664aadaabc8e9dda8a62da6048890371" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a122</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aab299a8d44326c3859963b7a8ca8d921" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a130</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a4d6db50d1fc31f6aeea66b5663fca483" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a131</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a7da829188fa500f2a9444bf635dbd314" compoundref="gsw__structs_8h" startline="79">GSW_SPECVOL_COEFFICIENTS::a140</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a2dacd5892a91427cfd48d22407f3da1e" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a201</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac59fd20b542f4d4c0657bad53ba22e7c" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a202</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af0a6bf9ab967a3d66ea417a35bc4dc8f" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a210</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a03f9c00cc119e955bb9e10045e76ad6c" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a211</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ae6c8595bd2722837baac5487dc5abf70" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a212</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a152f912324a8f1d3f4e543b45ef4a1ac" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a220</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a95f6791eee129c524e27d3ccbedf647b" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a221</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1afa41fd6d2956f4e32f47ef2c9ddd2b0e" compoundref="gsw__structs_8h" startline="80">GSW_SPECVOL_COEFFICIENTS::a230</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a2624737e32c85853cade6ec08c3ae93f" compoundref="gsw__structs_8h" startline="81">GSW_SPECVOL_COEFFICIENTS::a301</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8802fe2786e847d4e9499502237d905b" compoundref="gsw__structs_8h" startline="81">GSW_SPECVOL_COEFFICIENTS::a302</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a1426eefe50df912b5cc831018caad853" compoundref="gsw__structs_8h" startline="81">GSW_SPECVOL_COEFFICIENTS::a310</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a578fd92c2098f4992aedd4db5cc9bdd0" compoundref="gsw__structs_8h" startline="81">GSW_SPECVOL_COEFFICIENTS::a311</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1acecccd57c8f93cc96a9322594c64b573" compoundref="gsw__structs_8h" startline="81">GSW_SPECVOL_COEFFICIENTS::a320</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aead0e454df3a583890289dfc7a8a5972" compoundref="gsw__structs_8h" startline="81">GSW_SPECVOL_COEFFICIENTS::a401</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a42cbd786c6be761ca4bdd934845a0a70" compoundref="gsw__structs_8h" startline="82">GSW_SPECVOL_COEFFICIENTS::a410</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a6aeb40724fdd18a1489432ee038ead0e" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b000</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab1830302d7482dd0b9ba8a5df696afd3" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b001</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a42f560edfaca52fb8b4c1c0af0c85b00" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b002</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a6a22d4d870ae44ed76cabf49ddcb5b81" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b003</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aa0c3e8249a8dee4a2b05928441f7b32f" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b004</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac8b1f328d7aedbf519ea2b541b78c304" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b010</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af52a99a69420c91ec1286c3f97ee355b" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b011</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a28b18819d9748f027771f8ef0d72c1ef" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b012</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a66a9d58fa1db02fe3f4ba511d235460c" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b013</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aff62ad532dfdf4519b30906c67ecf532" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b020</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a69153f16387f929f41cae0e808be640d" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b021</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a725bbdcedde7e436cff7816fca6acd33" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b022</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ab1109beb0c001c100e32b6d136cf9ba8" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b030</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a35804d085069db814903cb0009872055" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b031</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a0f6d17b3db0c0e8c8f33efef2c9bff7b" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b032</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a76a6b4b55326c59956fb7fa39541ee0b" compoundref="gsw__structs_8h" startline="85">GSW_SPECVOL_COEFFICIENTS::b040</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1afeaa7d136fccbc515c40f71eda41b866" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b041</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8b2ea18b9a856ef6d2215f419207c806" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b050</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad3f7ca56f3d571b880787644158d58c8" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b101</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a5c92971f15843606dd98a36e90d4fcb1" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b102</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a2caf1c5dbfaa503197ad990c1a9f6027" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b103</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a3779bd722a36a3dcff3389437b50e04a" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b110</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac1e67377513bb672d6b6f0c56b5ff81a" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b111</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1aff92f408b4e830ee121e63ad5ff4986c" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b112</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af8e770d89512df7565af1c7ab0658fe9" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b120</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a4b84f580fb6433a5146bcc84751aa009" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b121</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a7968769bb4d000b438bee9f6f0811b4e" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b122</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a564b79390c5eb3e2b576a74a8178ea68" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b130</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a300774498246839e99ebcfd5132edf14" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b131</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad0239e649be7a9feb3177b87a74c88f3" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b140</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a678c063a1e4d0ed6a38a42108b49a97c" compoundref="gsw__structs_8h" startline="86">GSW_SPECVOL_COEFFICIENTS::b200</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a36a7676fa960dbacd8b19aec2d49f861" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b201</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a278b58da40503a602fb35d73e324eca5" compoundref="gsw__structs_8h" startline="90">GSW_SPECVOL_COEFFICIENTS::b202</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af92b380e900c45339be39af43f49324e" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b210</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a8bf941e8f3c923340360643d9b5fedfd" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b211</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad4e907668f34e804ede164c8340836fa" compoundref="gsw__structs_8h" startline="91">GSW_SPECVOL_COEFFICIENTS::b212</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ad95182ad35316d1d69fb06521b315861" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b220</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac924d714b8d0b00a370f228c757ad508" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b221</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a20e0121c20a347b9689469b0c71b9ef7" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b230</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a5dca2f501d6ceea0eeae66cd6d6b03a2" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b300</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a03ccb054376e557b30735c646b6597da" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b301</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ae02e33bc4f43b6250d594b2e88b573f1" compoundref="gsw__structs_8h" startline="91">GSW_SPECVOL_COEFFICIENTS::b302</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac811e2dfa87d676f54422ef7618787f1" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b310</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1ac9a712bde53821105ac33292db8a0256" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b311</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1af08a10b9c0657ecec6bd06141bd3083e" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b320</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a97723f300f5d6fe67912b3b3ba8ed64d" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b400</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a96737acce0289dadc758c8d1fedbf3fc" compoundref="gsw__structs_8h" startline="89">GSW_SPECVOL_COEFFICIENTS::b401</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1a31497537df7dc99c1409c8bf9854a390" compoundref="gsw__structs_8h" startline="87">GSW_SPECVOL_COEFFICIENTS::b410</references>
+        <references refid="structGSW__SPECVOL__COEFFICIENTS_1adae4833555b3cde6783244d9f263f3b0" compoundref="gsw__structs_8h" startline="88">GSW_SPECVOL_COEFFICIENTS::b500</references>
+        <references refid="classTeosBase_1a6f693b438ca524bc4ab77eabd7746a25" compoundref="TeosBase_8h" startline="99">TeosBase::gsvco</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
+        <referencedby refid="classTeosSea_1acb2e5891de38c55a2a44ee34316bd8e5" compoundref="TeosSea_8cpp" startline="4968" endline="4986">gsw_cabbeling</referencedby>
+        <referencedby refid="classTeosSea_1a4a037137b85784ab3abe98ddba0df71a" compoundref="TeosSea_8cpp" startline="2656" endline="2696">gsw_internal_energy_second_derivatives</referencedby>
+        <referencedby refid="classTeosSea_1a8812b60b6fb3120c0b36c3153194b019" compoundref="TeosSea_8cpp" startline="5129" endline="5152">gsw_rho_second_derivatives</referencedby>
+        <referencedby refid="classTeosSea_1ab06bc834b50efd5989697ed1b534d532" compoundref="TeosSea_8cpp" startline="2213" endline="2272">gsw_specvol_second_derivatives_wrt_enthalpy</referencedby>
+        <referencedby refid="classTeosSea_1af7a0b1d9d3f99f8f4bddb19d434364a2" compoundref="TeosSea_8cpp" startline="5044" endline="5052">gsw_thermobaric</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab06bc834b50efd5989697ed1b534d532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2096,7 +2565,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="181" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2225" bodyend="2277"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="206" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2213" bodyend="2272"/>
+        <references refid="classTeosBase_1af3bfac75e05fbdc6a8d82867adcdaf1a" compoundref="TeosBase_8cpp" startline="1334" endline="1407">TeosBase::gsw_enthalpy_first_derivatives</references>
+        <references refid="classTeosSea_1a917468189be33cb53b4f59e3e344f045" compoundref="TeosSea_8cpp" startline="814" endline="882">gsw_enthalpy_second_derivatives</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="classTeosSea_1ab662c2ee4b6e2085f2e184545cd24857" compoundref="TeosSea_8cpp" startline="2054" endline="2141">gsw_specvol_second_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1a6f0e6e301532c4df7d311848a5cb63db" compoundref="TeosSea_8cpp" startline="4419" endline="4456">gsw_rho_second_derivatives_wrt_enthalpy</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a76612492d3000b5bab8fbea2f6ace84b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2119,7 +2594,10 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="184" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3321" bodyend="3363"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="210" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3320" bodyend="3362"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a02e4b45e0a0519cd4bdab95f757223ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2142,7 +2620,10 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="185" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3421" bodyend="3464"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="211" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3420" bodyend="3463"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a0e6437b930beac4e206f2832df021dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2165,7 +2646,10 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="186" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3522" bodyend="3565"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="212" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="3521" bodyend="3564"/>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a618335e44ad02cd8cc8e7eefbeb8d9ce" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::gsw_sfac</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1afca089af7969eafe754e8b88cb95ded4" compoundref="gsw__structs_8h" startline="42">GSW_TEOS10_CONSTANTS::offset</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab55971d6e391271f76ee923bd4f84684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2193,7 +2677,9 @@
         <inbodydescription>
 <para>Note that pt is potential temperature with a reference pressure of zero.</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="189" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2866" bodyend="2876"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="215" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2864" bodyend="2874"/>
+        <references refid="classTeosSea_1a9a178afbb9a135526f10b8f07d25cc96" compoundref="TeosSea_8cpp" startline="1124" endline="1153">gsw_pt_from_entropy</references>
+        <references refid="classTeosBase_1a628255be10b0353a041876a7e8906862" compoundref="TeosBase_8cpp" startline="3423" endline="3453">TeosBase::gsw_pt_from_t</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a5467dac9a36438a553c9ef92ddc93cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2234,7 +2720,12 @@
 <para>This assumes that the seawater is unsaturated with air</para>
 <para>Set values outside the relevant bounds to NaNs</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="190" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5523" bodyend="5618"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="216" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5429" bodyend="5519"/>
+        <references refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" compoundref="TeosBase_8cpp" startline="2251" endline="2284">TeosBase::gsw_gibbs</references>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">gsw_rho_t_exact</references>
+        <references refid="classTeosBase_1a1794eb3a2b9b37fbaaafa5c1039748d9" compoundref="TeosBase_8cpp" startline="4726" endline="4768">TeosBase::gsw_t_freezing</references>
+        <references refid="classTeosBase_1ad6ba94c97fb6d2e17110bf88434edfe6" compoundref="TeosBase_8cpp" startline="5605" endline="5626">TeosBase::gsw_t_maxdensity_exact</references>
+        <referencedby refid="classTeosSea_1a29ed611af1c6672205ec894e45821622" compoundref="TeosSea_8cpp" startline="2975" endline="2986">gsw_ct_from_rho_exact</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1af7a0b1d9d3f99f8f4bddb19d434364a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2260,7 +2751,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="193" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5139" bodyend="5147"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="220" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="5044" bodyend="5052"/>
+        <references refid="classTeosBase_1a49ee42de42887c18c1e36298ae9bef58" compoundref="TeosBase_8cpp" startline="3592" endline="3595">TeosBase::gsw_rho</references>
+        <references refid="classTeosSea_1a09494059983e5ae66e0e2eebf4ec8e57" compoundref="TeosSea_8cpp" startline="1863" endline="1889">gsw_specvol_first_derivatives</references>
+        <references refid="classTeosSea_1ab662c2ee4b6e2085f2e184545cd24857" compoundref="TeosSea_8cpp" startline="2054" endline="2141">gsw_specvol_second_derivatives</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ac3269569f32e0123f499ce7d4512594c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -2286,7 +2781,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="194" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2566" bodyend="2582"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="221" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2562" bodyend="2578"/>
+        <references refid="classTeosSea_1ab94eac9c8fc4795d99d419360e126c47" compoundref="TeosSea_8cpp" startline="3160" endline="3165">gsw_rho_ct_exact</references>
+        <references refid="classTeosBase_1a62a149dee8f3f2f4dc6084406a87f068" compoundref="TeosBase_8cpp" startline="7436" endline="7465">TeosBase::gsw_specvol_first_derivatives_CT_exact</references>
+        <references refid="classTeosBase_1a161a091c5456b138c707db8caa3fef4e" compoundref="TeosBase_8cpp" startline="5925" endline="5989">TeosBase::gsw_specvol_second_derivatives_CT_exact</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a63298dc457cb185af76b48abbd51b31a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2329,7 +2827,12 @@
         <inbodydescription>
 <para>for <ref refid="structGSW__TEOS10__CONSTANTS" kindref="compound">GSW_TEOS10_CONSTANTS</ref> use gtc</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="195" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2346" bodyend="2377"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="222" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="2341" bodyend="2372"/>
+        <references refid="TeosBase_8h_1a33a0d6d14297a0fef1e46118b94b5099" compoundref="TeosBase_8h" startline="52">cppGSW_INVALID_VALUE</references>
+        <references refid="classTeosSea_1ae310346e98768c1d7e16d8c9d5ac0a16" compoundref="TeosSea_8cpp" startline="4816" endline="4843">gsw_specvol_alpha_beta</references>
+        <references refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" compoundref="TeosBase_8h" startline="98">TeosBase::gtc</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <references refid="structGSW__TEOS10__CONSTANTS_1a281890da48207a4c905d59f4ab090685" compoundref="gsw__structs_8h" startline="39">GSW_TEOS10_CONSTANTS::rad2deg</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1a9ec75e88d7b77573bf99c4a3c108283f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double *</type>
@@ -2369,7 +2872,10 @@
         <inbodydescription>
 <para>Note that the following operations on the index vectors jrev and r depend on the sort utility <ref refid="classTeosBase_1ac884ed303287f5f0190c1a01ba1cd8f0" kindref="member">gsw_util_sort_dbl()</ref> consistently ordering the sorting indexes either in ascending or descending sequence for replicate values in the real vector.</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="199" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4528" bodyend="4646"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="227" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4468" bodyend="4568"/>
+        <references refid="classTeosBase_1ac884ed303287f5f0190c1a01ba1cd8f0" compoundref="TeosBase_8cpp" startline="10334" endline="10378">TeosBase::gsw_util_sort_dbl</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
+        <referencedby refid="classTeosSea_1a137f1975a84ae58bcdc857faa37d4078" compoundref="TeosSea_8cpp" startline="6027" endline="6170">gsw_rr68_interp_sa_ct</referencedby>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1af7101b35d5a6714ce48f79469844afa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double *</type>
@@ -2413,7 +2919,9 @@
 <para>This algorithm mimics the Matlab interp1q method. An explaination of this algorithm: We have points we are interpolating from (x) and points that we are interpolating to (xi). We sort the interpolating from points, concatenate them with the interpolating to points and sort the result. We then construct index r, the interpolation index in x for each point in xi. Note that the following operations on the index vectors jrev and r depend on the sort utility <ref refid="classTeosBase_1ac884ed303287f5f0190c1a01ba1cd8f0" kindref="member">gsw_util_sort_dbl()</ref> consistently ordering the sorting indexes either in ascending or descending sequence for replicate values in the real vector.</para>
 <para>this is now the interpolation index in x for a point in xi</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="202" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4661" bodyend="4768"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="231" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4583" bodyend="4682"/>
+        <references refid="classTeosBase_1ac884ed303287f5f0190c1a01ba1cd8f0" compoundref="TeosBase_8cpp" startline="10334" endline="10378">TeosBase::gsw_util_sort_dbl</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
       <memberdef kind="function" id="classTeosSea_1ab7f51a74b66988430a7caea7856b9dae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2454,7 +2962,9 @@
 <para>Using intermediate variables for readability.</para>
 <para>extrapolate with constant end values</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="205" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4786" bodyend="4849"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="235" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/src/TeosSea.cpp" bodystart="4700" bodyend="4755"/>
+        <references refid="classTeosBase_1af45289897bff2499790db4276723dcea" compoundref="TeosBase_8cpp" startline="9832" endline="9876">TeosBase::gsw_pchip_derivs</references>
+        <references refid="group__BME280_1ga070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="bme280__defs_8h" startline="99">NULL</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -2541,7 +3051,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="35" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" bodystart="36" bodyend="208"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" line="35" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/TeosCpp/include/TeosCpp/TeosSea.h" bodystart="36" bodyend="239"/>
     <listofallmembers>
       <member refid="classTeosBase_1a002c99b7111770806a228ea0e6e9156b" prot="protected" virt="non-virtual"><scope>TeosSea</scope><name>badBaseAlloc</name></member>
       <member refid="classTeosBase_1a35f44f9dea5da1a262c27b3292d7bdd8" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gbalt</name></member>
@@ -2615,11 +3125,26 @@
       <member refid="classTeosBase_1a249c2b2cef76f69fa7636ebb9824d0d6" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_entropy_second_derivatives</name></member>
       <member refid="classTeosBase_1a25f19fc2e89b86ecdcf2e5e872b80c91" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_f</name></member>
       <member refid="classTeosBase_1a7a4af461a2ee6721027c9c81fb5f0c4a" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_fdelta</name></member>
+      <member refid="classTeosBase_1aab9a4f5b210b97de2f43d121e47e1916" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_g08_d</name></member>
       <member refid="classTeosSea_1a15b60028a9de466e88dc899e2499c1d4" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_geo_strf_dyn_height</name></member>
       <member refid="classTeosSea_1a97005e7d841965f8c33b29b4195be0b1" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_geo_strf_dyn_height_1</name></member>
+      <member refid="classTeosBase_1a894fe5cb62680348190a0e9942340739" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_get_dyn_enth_prt</name></member>
+      <member refid="classTeosBase_1a9a931a09edf688a82d4b8cded617b214" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_get_g03plusg08</name></member>
+      <member refid="classTeosBase_1a69d4d3dbd9f820e3f85588e63809392c" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_get_g03plusg08_h</name></member>
       <member refid="classTeosBase_1af3191ddd6333c2b8a34222d56e2f13dc" prot="protected" virt="non-virtual"><scope>TeosSea</scope><name>gsw_get_pot_ent</name></member>
+      <member refid="classTeosBase_1aa3be7014f3a00cd29da93dfff5d58f6c" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_get_v_ct_part</name></member>
       <member refid="classTeosBase_1ae80f176a7804644896b5c338149923fa" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs</name></member>
       <member refid="classTeosBase_1a1b2738a15bbed86745f1d0aa0eb6579d" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_Gibbs_energy_t_exact</name></member>
+      <member refid="classTeosBase_1aa40c7af42333df0f8b846835f0c93af4" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_a</name></member>
+      <member refid="classTeosBase_1afc2e0c49fb876d0465623cfa2f591597" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_b</name></member>
+      <member refid="classTeosBase_1a23cce21e5219b18ff15ac2c6d80f0df6" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_c</name></member>
+      <member refid="classTeosBase_1ad9f5ac8631cb74f7643d1c4e0a5a3cc0" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_d</name></member>
+      <member refid="classTeosBase_1a0f9335eb1eeb641f15a229e03f0ba38d" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_e</name></member>
+      <member refid="classTeosBase_1a1c5fb115fe8400d5f2e9a36ac8696083" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_f</name></member>
+      <member refid="classTeosBase_1a2d48b0350b8d25d6dc9dfd5d62a9a33f" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g03plusg08_g</name></member>
+      <member refid="classTeosBase_1a2b24f570513cb04c860015edcfdeb639" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g08_a</name></member>
+      <member refid="classTeosBase_1a3697e8f5bd9e0865b99bcd3d50a0e19f" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g08_b</name></member>
+      <member refid="classTeosBase_1aa57905889f695f4a54b39937823e61c6" prot="private" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_g08_c</name></member>
       <member refid="classTeosBase_1a10752a75886a05c269a36255aeb16366" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_ice</name></member>
       <member refid="classTeosBase_1adf0029a64647d96849af238f17c666fe" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_gibbs_pt0_pt0</name></member>
       <member refid="classTeosBase_1af8620898e59ce33a375b4c7e1474cd3a" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_grav</name></member>
@@ -2789,13 +3314,13 @@
       <member refid="classTeosBase_1a57e6df09c3db4c0748f60a55a36594ef" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gsw_z_from_p</name></member>
       <member refid="classTeosBase_1a81d77bad4f4be7c09364ac7971d8f238" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>gtc</name></member>
       <member refid="classTeosBase_1a1e8c6b1747c7699c3b89aa5a39055bdf" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>pSaarData</name></member>
-      <member refid="classTeosBase_1a238403a1ca7828743faae3d37d88af6f" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r1</name></member>
-      <member refid="classTeosBase_1a7d92dfc9498964d9113c6c3dd7731254" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r20</name></member>
-      <member refid="classTeosBase_1a6cffd8e4e01dffcab04928763347f160" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r21</name></member>
-      <member refid="classTeosBase_1a6267b42b990836070b4962d2a6bb85b3" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r22</name></member>
+      <member refid="classTeosBase_1a109fe9c1066da71e29ca3f16b1d6c547" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r1</name></member>
+      <member refid="classTeosBase_1a0f82bb9a5fff2550bdcad409cde78a64" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r20</name></member>
+      <member refid="classTeosBase_1a36ecab17a2f687e8e601aa74ec8115e8" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r21</name></member>
+      <member refid="classTeosBase_1afb310e54ca46b82b0ec3433ee6566605" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>r22</name></member>
       <member refid="classTeosBase_1a5c57dfbe153f33a08ee6e0861bde7206" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>statusOk</name></member>
-      <member refid="classTeosBase_1a7de6686c40529e5c3c6e81d9768ab968" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>t1</name></member>
-      <member refid="classTeosBase_1a3dfb3ca677f6cb0eb87de9e5588a85cf" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>t2</name></member>
+      <member refid="classTeosBase_1a7a7edd761de992f47be91136fb0a6c03" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>t1</name></member>
+      <member refid="classTeosBase_1a45bd839c2d9950b50fc5a734684af0f9" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>t2</name></member>
       <member refid="classTeosBase_1a300f6d6537af8b476591d8231c206503" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>TeosBase</name></member>
       <member refid="classTeosSea_1a56727e27bcac90d3935344e556b8e42a" prot="public" virt="non-virtual"><scope>TeosSea</scope><name>TeosSea</name></member>
       <member refid="classTeosBase_1ab048527c46443232564510b942eb640a" prot="public" virt="virtual"><scope>TeosSea</scope><name>~TeosBase</name></member>

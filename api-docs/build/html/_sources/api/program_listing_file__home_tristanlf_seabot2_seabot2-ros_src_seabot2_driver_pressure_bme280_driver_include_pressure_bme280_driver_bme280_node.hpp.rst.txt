@@ -33,47 +33,47 @@ Program Listing for File bme280_node.hpp
    
    class Bme280Node final : public rclcpp::Node {
    public:
-       Bme280Node()
-               : Node("bme280_node") {
+     Bme280Node()
+     : Node("bme280_node")
+     {
    
-           init_parameters();
-           init_interfaces();
+       init_parameters();
+       init_interfaces();
    
-           sensor_init();
+       sensor_init();
    
-           timer_ = this->create_wall_timer(
+       timer_ = this->create_wall_timer(
                    loop_dt_, std::bind(&Bme280Node::timer_callback, this));
-       }
+     }
    
    private:
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds  loop_dt_ = 200ms;   // loop dt
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds  loop_dt_ = 200ms; // loop dt
+     rclcpp::Publisher<seabot2_msgs::msg::Bme280Data>::SharedPtr publisher_sensor_;
    
-       rclcpp::Publisher<seabot2_msgs::msg::Bme280Data>::SharedPtr publisher_sensor_;
+     double pressure_ = 0.0;
+     double temperature_ = 0.0;
+     double humidity_ = 0.0;
    
-       double pressure_ = 0.0;
-       double temperature_ = 0.0;
-       double humidity_ = 0.0;
-   
-       string i2c_periph_ = "/dev/i2c-0";
-       bool primary_i2c_address_ = false;
-       struct bme280_dev dev_;
+     string i2c_periph_ = "/dev/i2c-0";
+     bool primary_i2c_address_ = false;
+     struct bme280_dev dev_;
    
    
-       void timer_callback();
+     void timer_callback();
    
-       void print_sensor_mode() const;
+     void print_sensor_mode() const;
    
-       void sensor_init();
+     void sensor_init();
    
-       void print_calib_settings() const;
+     void print_calib_settings() const;
    
-       void print_settings() const;
+     void print_settings() const;
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
    };
    

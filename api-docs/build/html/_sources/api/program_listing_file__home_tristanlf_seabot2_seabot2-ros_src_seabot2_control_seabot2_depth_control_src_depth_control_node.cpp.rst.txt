@@ -238,8 +238,8 @@ Program Listing for File depth_control_node.cpp
        timer_->cancel();
        dc_.regulation_state_ = DepthControl::STATE_COMPUTE_ALPHA;
        publish_message();
-       for (const auto velocity: velocity_limits_requests_) {
-               //publish_message();
+       for (const auto velocity : velocity_limits_requests_) {
+         // publish_message();
          const auto result = dc_.alpha_solver_.compute_alpha(velocity);
          RCLCPP_INFO(this->get_logger(),
            "[Depth_control_node] Velocity was computed for beta = %f, alpha = %f",
@@ -264,11 +264,11 @@ Program Listing for File depth_control_node.cpp
      std::ofstream file("alpha_values.txt");
    
    
-     for (const auto & value: dc_.alpha_solver_.get_computed_memory()) {
+     for (const auto & value : dc_.alpha_solver_.get_computed_memory()) {
        file << value[0] << " ";
      }
      file << '\n';
-     for (const auto & value: dc_.alpha_solver_.get_computed_memory()) {
+     for (const auto & value : dc_.alpha_solver_.get_computed_memory()) {
        file << value[1] << " ";
      }
      dc_.alpha_solver_.set_test_in_memory(true);

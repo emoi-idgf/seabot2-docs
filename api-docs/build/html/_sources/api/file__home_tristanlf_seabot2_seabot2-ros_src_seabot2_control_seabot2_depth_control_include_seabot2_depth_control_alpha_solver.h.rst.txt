@@ -32,6 +32,8 @@ Includes
 
 - ``array``
 
+- ``utility``
+
 - ``vector``
 
 
@@ -47,13 +49,6 @@ Included By
 - :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_control_seabot2_depth_control_src_alpha_solver.cpp`
 
 
-
-
-Namespaces
-----------
-
-
-- :ref:`namespace_std`
 
 
 Classes

@@ -9,6 +9,7 @@
   <title>Program Listing for File FusionAhrs.h &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -44,11 +45,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File FusionAhrs.h</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -89,47 +90,51 @@
 <span class="c1">//------------------------------------------------------------------------------</span>
 <span class="c1">// Definitions</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">FusionConvention</span><span class="w"> </span><span class="n">convention</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">gain</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">gyroscopeRange</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">accelerationRejection</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">magneticRejection</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">recoveryTriggerPeriod</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">FusionConvention</span><span class="w"> </span><span class="n">convention</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">gain</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">gyroscopeRange</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">accelerationRejection</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">magneticRejection</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">recoveryTriggerPeriod</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">FusionAhrsSettings</span><span class="p">;</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">FusionAhrsSettings</span><span class="w"> </span><span class="n">settings</span><span class="p">;</span>
-<span class="w">    </span><span class="n">FusionQuaternion</span><span class="w"> </span><span class="n">quaternion</span><span class="p">;</span>
-<span class="w">    </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">initialising</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">rampedGain</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">rampedGainStep</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">angularRateRecovery</span><span class="p">;</span>
-<span class="w">    </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">halfAccelerometerFeedback</span><span class="p">;</span>
-<span class="w">    </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">halfMagnetometerFeedback</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">accelerometerIgnored</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">accelerationRecoveryTrigger</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">accelerationRecoveryTimeout</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">magnetometerIgnored</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">magneticRecoveryTrigger</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">magneticRecoveryTimeout</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="n">FusionAhrsSettings</span><span class="w"> </span><span class="n">settings</span><span class="p">;</span>
+<span class="w">  </span><span class="n">FusionQuaternion</span><span class="w"> </span><span class="n">quaternion</span><span class="p">;</span>
+<span class="w">  </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">initialising</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">rampedGain</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">rampedGainStep</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">angularRateRecovery</span><span class="p">;</span>
+<span class="w">  </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">halfAccelerometerFeedback</span><span class="p">;</span>
+<span class="w">  </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">halfMagnetometerFeedback</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">accelerometerIgnored</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">accelerationRecoveryTrigger</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">accelerationRecoveryTimeout</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">magnetometerIgnored</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">magneticRecoveryTrigger</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">magneticRecoveryTimeout</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">FusionAhrs</span><span class="p">;</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">accelerationError</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">accelerometerIgnored</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">accelerationRecoveryTrigger</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">magneticError</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">magnetometerIgnored</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">magneticRecoveryTrigger</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">accelerationError</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">accelerometerIgnored</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">accelerationRecoveryTrigger</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">magneticError</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">magnetometerIgnored</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">magneticRecoveryTrigger</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">FusionAhrsInternalStates</span><span class="p">;</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">initialising</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">angularRateRecovery</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">accelerationRecovery</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">magneticRecovery</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">initialising</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">angularRateRecovery</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">accelerationRecovery</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">magneticRecovery</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="n">FusionAhrsFlags</span><span class="p">;</span>
 
 <span class="c1">//------------------------------------------------------------------------------</span>
@@ -141,11 +146,17 @@
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsSetSettings</span><span class="p">(</span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionAhrsSettings</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">settings</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsUpdate</span><span class="p">(</span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">gyroscope</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">magnetometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsUpdate</span><span class="p">(</span>
+<span class="w">  </span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">gyroscope</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">magnetometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsUpdateNoMagnetometer</span><span class="p">(</span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">gyroscope</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsUpdateNoMagnetometer</span><span class="p">(</span>
+<span class="w">  </span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">gyroscope</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsUpdateExternalHeading</span><span class="p">(</span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">gyroscope</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">heading</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">FusionAhrsUpdateExternalHeading</span><span class="p">(</span>
+<span class="w">  </span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">gyroscope</span><span class="p">,</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">FusionVector</span><span class="w"> </span><span class="n">accelerometer</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">heading</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">deltaTime</span><span class="p">);</span>
 
 <span class="n">FusionQuaternion</span><span class="w"> </span><span class="nf">FusionAhrsGetQuaternion</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">FusionAhrs</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">ahrs</span><span class="p">);</span>
 

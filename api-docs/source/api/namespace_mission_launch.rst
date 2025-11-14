@@ -17,4 +17,4 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_mission__launch_8py_1adee9c51ab798fce2b6e6aceaa3c3cd32`
+- :ref:`exhale_function_namespacemission__launch_1adee9c51ab798fce2b6e6aceaa3c3cd32`

@@ -21,20 +21,24 @@
     <incdepgraph>
       <node id="3">
         <label>seabot2_depth_control/alpha_solver.h</label>
-        <link refid="alpha__solver_8h_source"/>
+        <link refid="alpha__solver_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>seabot2_depth_control/depth_control.h</label>
-        <link refid="depth__control_8h_source"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
+        <link refid="depth__control_8h"/>
         <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
@@ -46,11 +50,7 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -72,61 +72,83 @@
         </childnode>
         <childnode refid="20" relation="include">
         </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
       </node>
       <node id="4">
         <label>array</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>cmath</label>
       </node>
-      <node id="7">
+      <node id="10">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
         <label>eigen3/Eigen/Dense</label>
       </node>
       <node id="2">
         <label>rclcpp/rclcpp.hpp</label>
       </node>
-      <node id="18">
+      <node id="20">
         <label>seabot2_msgs/msg/alpha_debug.hpp</label>
       </node>
-      <node id="16">
+      <node id="18">
         <label>seabot2_msgs/msg/density.hpp</label>
       </node>
-      <node id="13">
+      <node id="15">
         <label>seabot2_msgs/msg/depth_control_debug.hpp</label>
       </node>
-      <node id="9">
+      <node id="11">
         <label>seabot2_msgs/msg/depth_control_set_point.hpp</label>
       </node>
-      <node id="12">
+      <node id="14">
         <label>seabot2_msgs/msg/depth_pose.hpp</label>
       </node>
-      <node id="10">
+      <node id="12">
         <label>seabot2_msgs/msg/kalman_state.hpp</label>
       </node>
-      <node id="14">
+      <node id="16">
         <label>seabot2_msgs/msg/piston_set_point.hpp</label>
       </node>
-      <node id="11">
+      <node id="13">
         <label>seabot2_msgs/msg/piston_state.hpp</label>
       </node>
-      <node id="15">
+      <node id="17">
         <label>seabot2_msgs/msg/safety_status2.hpp</label>
       </node>
-      <node id="17">
+      <node id="19">
         <label>seabot2_msgs/msg/temperature_sensor_data.hpp</label>
       </node>
-      <node id="19">
+      <node id="21">
         <label>seabot2_srvs/srv/alpha_mission.hpp</label>
       </node>
-      <node id="20">
+      <node id="22">
         <label>std_srvs/srv/trigger.hpp</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
       </node>
       <node id="5">
         <label>vector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control_node.hpp</label>
+        <link refid="depth__control__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/src/depth_control_node.cpp</label>
+        <link refid="depth__control__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classDepthControlNode" prot="public">DepthControlNode</innerclass>
-    <innernamespace refid="namespacestd_1_1chrono__literals">std::chrono_literals</innernamespace>
+    <innernamespace refid="namespacestd">std</innernamespace>
     <innernamespace refid="namespaceEigen">Eigen</innernamespace>
     <sectiondef kind="define">
       <memberdef kind="define" id="depth__control__node_8hpp_1ab56afe629e379c58173f6a0e7d4cb956" prot="public" static="no">
@@ -161,13 +183,13 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>lemezoth<sp/>on<sp/>05/09/22.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUILD_DEPTH_CONTROL_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUILD_DEPTH_CONTROL_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_NODE_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_NODE_HPP_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_depth_control/alpha_solver.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_depth_control/depth_control.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alpha__solver_8h" kindref="compound">seabot2_depth_control/alpha_solver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="depth__control_8h" kindref="compound">seabot2_depth_control/depth_control.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/depth_control_set_point.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/kalman_state.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -184,8 +206,8 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;std_srvs/srv/trigger.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NB_STATES<sp/>8</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PISTON_STATE_OK<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="depth__control__node_8hpp_1ab56afe629e379c58173f6a0e7d4cb956" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NB_STATES<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="depth__control__node_8hpp_1ac705f9ce2a8750f213cb0122bfcea9c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PISTON_STATE_OK<sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
@@ -193,81 +215,84 @@
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="classDepthControlNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDepthControlNode" kindref="compound">DepthControlNode</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="classDepthControlNode" kindref="compound">DepthControlNode</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="classDepthControlNode_1a564cdbc487708485d988ad7391ccf68a" kindref="member">DepthControlNode</ref>();</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/>timer_;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/>loop_dt_<sp/>=<sp/>200ms;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="classDepthControlNode_1ad5a24e69eb9c0d9be39de2dcc3b5aa06" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classDepthControlNode_1ad5a24e69eb9c0d9be39de2dcc3b5aa06" kindref="member">timer_</ref>;</highlight></codeline>
+<codeline lineno="46" refid="classDepthControlNode_1a8337ec124dd69fa456e4d6af63d48779" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><ref refid="classDepthControlNode_1a8337ec124dd69fa456e4d6af63d48779" kindref="member">loop_dt_</ref><sp/>=<sp/>200ms;<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/>callback_group_;</highlight></codeline>
+<codeline lineno="48" refid="classDepthControlNode_1a1b6658bc5a6a83e3e5939be8b875eb2e" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/><ref refid="classDepthControlNode_1a1b6658bc5a6a83e3e5939be8b875eb2e" kindref="member">callback_group_</ref>;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="classDepthControl" kindref="compound">DepthControl</ref><sp/>dc_;</highlight></codeline>
+<codeline lineno="50" refid="classDepthControlNode_1a48953c16bdc1363a40d6a56c0ac17cd0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classDepthControl" kindref="compound">DepthControl</ref><sp/><ref refid="classDepthControlNode_1a48953c16bdc1363a40d6a56c0ac17cd0" kindref="member">dc_</ref>;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/>std::vector&lt;float&gt;<sp/>velocity_limits_requests_;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>velocity_limits_computations_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52" refid="classDepthControlNode_1a28e117dbf768fe3d81acb59aed709adb" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;float&gt;<sp/><ref refid="classDepthControlNode_1a28e117dbf768fe3d81acb59aed709adb" kindref="member">velocity_limits_requests_</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classDepthControlNode_1acedf892ee3f38e63d62e58ec8fd73fb5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1acedf892ee3f38e63d62e58ec8fd73fb5" kindref="member">velocity_limits_computations_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_control_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allow<sp/>publish<sp/>set<sp/>point<sp/>to<sp/>piston</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>WAYPOINT_TYPE:</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>{WP_IDLE=0,</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>WP_DEPTH=1,</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>WP_SEAFLOOR_LANDING=2,</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>WP_TEMPERATURE_KEEPING=3,</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>WP_TEMPERATURE_PROFILE=4,</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>WP_GNSS_PROFILE=5,</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>WP_STOP=6};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/>WAYPOINT_TYPE<sp/>wp_type_<sp/>=<sp/>WP_IDLE;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/>solver_velocity_,<sp/>solver_alpha_;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::KalmanState&gt;::SharedPtr<sp/>subscriber_kalman_data_;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::PistonState&gt;::SharedPtr<sp/>subscriber_state_data_;</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr<sp/>subscriber_depth_data_;</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;::SharedPtr<sp/>subscriber_mission_data_;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;::SharedPtr<sp/>subscriber_safety_data_;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::Density&gt;::SharedPtr<sp/>subscriber_density_;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_temperature_data_;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::PistonSetPoint&gt;::SharedPtr<sp/>publisher_piston_;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::DepthControlDebug&gt;::SharedPtr<sp/>publisher_debug_;</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::AlphaDebug&gt;::SharedPtr<sp/>publisher_alpha_debug_;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;seabot2_srvs::srv::AlphaMission&gt;::SharedPtr<sp/>service_alpha_computation_;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/>service_alpha_generation_;</highlight></codeline>
+<codeline lineno="55" refid="classDepthControlNode_1ac890cf16deda8c836d8b3c04bbf19a35" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1ac890cf16deda8c836d8b3c04bbf19a35" kindref="member">enable_control_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allow<sp/>publish<sp/>set<sp/>point<sp/>to<sp/>piston</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aa" kindref="member">WAYPOINT_TYPE</ref>:</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7deb7af7275f737a53026f94504f45bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7deb7af7275f737a53026f94504f45bb" kindref="member">WP_IDLE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="59" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa394b19f3432801cb125136f21cc4ec11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa394b19f3432801cb125136f21cc4ec11" kindref="member">WP_DEPTH</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="60" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7a4c4ed0b8c9a2920df1ce919f393eef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7a4c4ed0b8c9a2920df1ce919f393eef" kindref="member">WP_SEAFLOOR_LANDING</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="61" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa14ace796974086042ae89c656678217d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa14ace796974086042ae89c656678217d" kindref="member">WP_TEMPERATURE_KEEPING</ref><sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="62" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7713ea39d57d1ba3e4adcf67114f9996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7713ea39d57d1ba3e4adcf67114f9996" kindref="member">WP_TEMPERATURE_PROFILE</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="63" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa848f9740029e83328813b30c0da015f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa848f9740029e83328813b30c0da015f8" kindref="member">WP_GNSS_PROFILE</ref><sp/>=<sp/>5,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa72ff7eeffbe8267fe0571693389f4583" kindref="member">WP_STOP</ref><sp/>=<sp/>6</highlight></codeline>
+<codeline lineno="65" refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa72ff7eeffbe8267fe0571693389f4583" refkind="member"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="66" refid="classDepthControlNode_1a98c143f5f6a447dbb7b82923b1b61c64" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aa" kindref="member">WAYPOINT_TYPE</ref><sp/><ref refid="classDepthControlNode_1a98c143f5f6a447dbb7b82923b1b61c64" kindref="member">wp_type_</ref><sp/>=<sp/><ref refid="classDepthControlNode_1afd43d3cd20d76517be5dd42693c950aaa7deb7af7275f737a53026f94504f45bb" kindref="member">WP_IDLE</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classDepthControlNode_1af4fd94ec2f50a0093e5c8fbeea26121d" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="classDepthControlNode_1a21e950cee0c0cc0d26c6fdcb25ea0dc5" kindref="member">solver_velocity_</ref>,<sp/><ref refid="classDepthControlNode_1af4fd94ec2f50a0093e5c8fbeea26121d" kindref="member">solver_alpha_</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classDepthControlNode_1ad80f93985979bb3168b164173b0f5842" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::KalmanState&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1ad80f93985979bb3168b164173b0f5842" kindref="member">subscriber_kalman_data_</ref>;</highlight></codeline>
+<codeline lineno="72" refid="classDepthControlNode_1a6bc4254a32b553e3dfc660359d7b5f17" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::PistonState&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a6bc4254a32b553e3dfc660359d7b5f17" kindref="member">subscriber_state_data_</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classDepthControlNode_1a4d94787f1d4ea3dc66c42c94847fa18b" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a4d94787f1d4ea3dc66c42c94847fa18b" kindref="member">subscriber_depth_data_</ref>;</highlight></codeline>
+<codeline lineno="74" refid="classDepthControlNode_1abba4ac819852cbf12b82fad19ff54f1d" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1abba4ac819852cbf12b82fad19ff54f1d" kindref="member">subscriber_mission_data_</ref>;</highlight></codeline>
+<codeline lineno="75" refid="classDepthControlNode_1adbc1dd9993d920804a4eaa45e22de43d" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1adbc1dd9993d920804a4eaa45e22de43d" kindref="member">subscriber_safety_data_</ref>;</highlight></codeline>
+<codeline lineno="76" refid="classDepthControlNode_1adc16c7f0de4425bd71730a6127eecd74" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::Density&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1adc16c7f0de4425bd71730a6127eecd74" kindref="member">subscriber_density_</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr</highlight></codeline>
+<codeline lineno="78" refid="classDepthControlNode_1a2b90cf6928aa8025f5a75440cb196e20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDepthControlNode_1a2b90cf6928aa8025f5a75440cb196e20" kindref="member">subscriber_temperature_data_</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classDepthControlNode_1a8998e0302befaf1938e5c9ed465c472e" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::PistonSetPoint&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a8998e0302befaf1938e5c9ed465c472e" kindref="member">publisher_piston_</ref>;</highlight></codeline>
+<codeline lineno="81" refid="classDepthControlNode_1a090796c2e5e76c0885c654c14b06d6a2" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::DepthControlDebug&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a090796c2e5e76c0885c654c14b06d6a2" kindref="member">publisher_debug_</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classDepthControlNode_1a4a735e29801bbf232ae6ba53b1c6d1c0" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::AlphaDebug&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a4a735e29801bbf232ae6ba53b1c6d1c0" kindref="member">publisher_alpha_debug_</ref>;</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_callback();</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>kalman_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::KalmanState<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>density_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>piston_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PistonState<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>depth_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>safety_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>depth_set_point_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthControlSetPoint<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>temperature_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData<sp/>&amp;<sp/>msg);</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>alpha_mission_pre_computation(</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;seabot2_srvs::srv::AlphaMission::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;seabot2_srvs::srv::AlphaMission::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>alpha_generation(</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>publish_message();</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>generate_velocity_pairs();</highlight></codeline>
-<codeline lineno="171"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_DEPTH_CONTROL_NODE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classDepthControlNode_1a9693db5e4b1c1e8ff49dd44099bd3a2f" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;seabot2_srvs::srv::AlphaMission&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a9693db5e4b1c1e8ff49dd44099bd3a2f" kindref="member">service_alpha_computation_</ref>;</highlight></codeline>
+<codeline lineno="85" refid="classDepthControlNode_1a76b8728e5ee3c43624337f7f8fd7d898" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr<sp/><ref refid="classDepthControlNode_1a76b8728e5ee3c43624337f7f8fd7d898" kindref="member">service_alpha_generation_</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a27bfef116cbb2977d1bab4f102b17287" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a6729830998ef63379ef6856b29660a7d" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a61005907e8a09cc0a07b0c9127c4554e" kindref="member">timer_callback</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a77e7a5cd9790711472903cb744a19f46" kindref="member">kalman_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::KalmanState<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a8d70d3a25d20bb705f7ba687e4368caf" kindref="member">density_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Density<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a189e4cddc64c944359f1060001115cd0" kindref="member">piston_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PistonState<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a21b7f70ce3fd5bfaf93ef85c38c72d19" kindref="member">depth_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1adfa69d248d63c1d2f560f2a85b9d0fc4" kindref="member">safety_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a82f53cf4ee3861c0dfb3a42c9bc83819" kindref="member">depth_set_point_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthControlSetPoint<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a10a9c8c4bfcde61f717755fa91e1d0b1" kindref="member">temperature_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::TemperatureSensorData<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a2fd866d2257e9cd3a504577b23a5fe37" kindref="member">alpha_mission_pre_computation</ref>(</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;seabot2_srvs::srv::AlphaMission::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;seabot2_srvs::srv::AlphaMission::Response&gt;<sp/>response);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1a046996561b51412a8eb387c51f787edb" kindref="member">alpha_generation</ref>(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;<sp/>response);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1abc6f70aa807b37da62ea159fddc45ed5" kindref="member">publish_message</ref>();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDepthControlNode_1ab64f6dc3c337fe2a2b8f823997fe9f1a" kindref="member">generate_velocity_pairs</ref>();</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SEABOT2_DEPTH_CONTROL__DEPTH_CONTROL_NODE_HPP_</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_control/seabot2_depth_control/include/seabot2_depth_control/depth_control_node.hpp"/>
   </compounddef>

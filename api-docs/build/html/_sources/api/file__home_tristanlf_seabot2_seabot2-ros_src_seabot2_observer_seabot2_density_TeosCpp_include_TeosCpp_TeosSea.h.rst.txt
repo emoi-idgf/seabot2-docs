@@ -42,8 +42,6 @@ Included By
 
 - :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_observer_seabot2_density_include_seabot2_density_density_node.hpp`
 
-- :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include_seabot2_simulator_simulator.h`
-
 
 
 

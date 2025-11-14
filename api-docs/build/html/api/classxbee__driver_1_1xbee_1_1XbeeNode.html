@@ -9,6 +9,7 @@
   <title>Class XbeeNode &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Enum AK09916_mode_e" href="enum_icm20948__register_8h_1a0a0acd7d4569a3719bf0dc97548e8447.html" />
-    <link rel="prev" title="Class WtfNode" href="classWtfNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,28 +45,97 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class XbeeNode</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#init__"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a></li>
+<li><a class="reference internal" href="#del__"><code class="docutils literal notranslate"><span class="pre">__del__()</span></code></a></li>
+<li><a class="reference internal" href="#configure_xbee"><code class="docutils literal notranslate"><span class="pre">configure_xbee()</span></code></a></li>
+<li><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">xnet_discovery_callback()</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">data_received_callback()</span></code></a></li>
+<li><a class="reference internal" href="#init_parameters"><code class="docutils literal notranslate"><span class="pre">init_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#init_interfaces"><code class="docutils literal notranslate"><span class="pre">init_interfaces()</span></code></a></li>
+<li><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">safety_callback()</span></code></a></li>
+<li><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">internal_sensor_callback()</span></code></a></li>
+<li><a class="reference internal" href="#gpsd_callback"><code class="docutils literal notranslate"><span class="pre">gpsd_callback()</span></code></a></li>
+<li><a class="reference internal" href="#power_callback"><code class="docutils literal notranslate"><span class="pre">power_callback()</span></code></a></li>
+<li><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">gnss_pose_callback()</span></code></a></li>
+<li><a class="reference internal" href="#depth_callback"><code class="docutils literal notranslate"><span class="pre">depth_callback()</span></code></a></li>
+<li><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">mission_callback()</span></code></a></li>
+<li><a class="reference internal" href="#manual_velocity_callback"><code class="docutils literal notranslate"><span class="pre">manual_velocity_callback()</span></code></a></li>
+<li><a class="reference internal" href="#timer_callback"><code class="docutils literal notranslate"><span class="pre">timer_callback()</span></code></a></li>
+<li><a class="reference internal" href="#discover_remote"><code class="docutils literal notranslate"><span class="pre">discover_remote()</span></code></a></li>
+<li><a class="reference internal" href="#serialize_log_state"><code class="docutils literal notranslate"><span class="pre">serialize_log_state()</span></code></a></li>
+<li><a class="reference internal" href="#deserialize_log_type"><code class="docutils literal notranslate"><span class="pre">deserialize_log_type()</span></code></a></li>
+<li><a class="reference internal" href="#deserialize_log_state"><code class="docutils literal notranslate"><span class="pre">deserialize_log_state()</span></code></a></li>
+<li><a class="reference internal" href="#subscription_mission"><code class="docutils literal notranslate"><span class="pre">subscription_mission</span></code></a></li>
+<li><a class="reference internal" href="#subscription_depth"><code class="docutils literal notranslate"><span class="pre">subscription_depth</span></code></a></li>
+<li><a class="reference internal" href="#subscription_mission_state"><code class="docutils literal notranslate"><span class="pre">subscription_mission_state</span></code></a></li>
+<li><a class="reference internal" href="#subscription_gnss_pose"><code class="docutils literal notranslate"><span class="pre">subscription_gnss_pose</span></code></a></li>
+<li><a class="reference internal" href="#subscription_gnss_data"><code class="docutils literal notranslate"><span class="pre">subscription_gnss_data</span></code></a></li>
+<li><a class="reference internal" href="#subscription_power_data"><code class="docutils literal notranslate"><span class="pre">subscription_power_data</span></code></a></li>
+<li><a class="reference internal" href="#subscription_internal_sensor_filter"><code class="docutils literal notranslate"><span class="pre">subscription_internal_sensor_filter</span></code></a></li>
+<li><a class="reference internal" href="#subscription_safety_data"><code class="docutils literal notranslate"><span class="pre">subscription_safety_data</span></code></a></li>
+<li><a class="reference internal" href="#publisher_log_state"><code class="docutils literal notranslate"><span class="pre">publisher_log_state</span></code></a></li>
+<li><a class="reference internal" href="#safety_global_safety_valid"><code class="docutils literal notranslate"><span class="pre">safety_global_safety_valid</span></code></a></li>
+<li><a class="reference internal" href="#safety_published_frequency"><code class="docutils literal notranslate"><span class="pre">safety_published_frequency</span></code></a></li>
+<li><a class="reference internal" href="#safety_depth_limit"><code class="docutils literal notranslate"><span class="pre">safety_depth_limit</span></code></a></li>
+<li><a class="reference internal" href="#safety_batteries_limit"><code class="docutils literal notranslate"><span class="pre">safety_batteries_limit</span></code></a></li>
+<li><a class="reference internal" href="#safety_depressurization"><code class="docutils literal notranslate"><span class="pre">safety_depressurization</span></code></a></li>
+<li><a class="reference internal" href="#safety_seafloor"><code class="docutils literal notranslate"><span class="pre">safety_seafloor</span></code></a></li>
+<li><a class="reference internal" href="#safety_piston"><code class="docutils literal notranslate"><span class="pre">safety_piston</span></code></a></li>
+<li><a class="reference internal" href="#safety_zero_depth"><code class="docutils literal notranslate"><span class="pre">safety_zero_depth</span></code></a></li>
+<li><a class="reference internal" href="#internal_pressure"><code class="docutils literal notranslate"><span class="pre">internal_pressure</span></code></a></li>
+<li><a class="reference internal" href="#internal_temperature"><code class="docutils literal notranslate"><span class="pre">internal_temperature</span></code></a></li>
+<li><a class="reference internal" href="#internal_humidity"><code class="docutils literal notranslate"><span class="pre">internal_humidity</span></code></a></li>
+<li><a class="reference internal" href="#battery"><code class="docutils literal notranslate"><span class="pre">battery</span></code></a></li>
+<li><a class="reference internal" href="#valid_fix"><code class="docutils literal notranslate"><span class="pre">valid_fix</span></code></a></li>
+<li><a class="reference internal" href="#fix_latitude"><code class="docutils literal notranslate"><span class="pre">fix_latitude</span></code></a></li>
+<li><a class="reference internal" href="#fix_longitude"><code class="docutils literal notranslate"><span class="pre">fix_longitude</span></code></a></li>
+<li><a class="reference internal" href="#gnss_heading"><code class="docutils literal notranslate"><span class="pre">gnss_heading</span></code></a></li>
+<li><a class="reference internal" href="#gnss_speed"><code class="docutils literal notranslate"><span class="pre">gnss_speed</span></code></a></li>
+<li><a class="reference internal" href="#gnss_mean_east"><code class="docutils literal notranslate"><span class="pre">gnss_mean_east</span></code></a></li>
+<li><a class="reference internal" href="#gnss_mean_north"><code class="docutils literal notranslate"><span class="pre">gnss_mean_north</span></code></a></li>
+<li><a class="reference internal" href="#depth"><code class="docutils literal notranslate"><span class="pre">depth</span></code></a></li>
+<li><a class="reference internal" href="#current_waypoint"><code class="docutils literal notranslate"><span class="pre">current_waypoint</span></code></a></li>
+<li><a class="reference internal" href="#mission_mode"><code class="docutils literal notranslate"><span class="pre">mission_mode</span></code></a></li>
+<li><a class="reference internal" href="#manual_remote"><code class="docutils literal notranslate"><span class="pre">manual_remote</span></code></a></li>
+<li><a class="reference internal" href="#CMD_MSG_TYPE"><code class="docutils literal notranslate"><span class="pre">CMD_MSG_TYPE</span></code></a></li>
+<li><a class="reference internal" href="#last_cmd_received"><code class="docutils literal notranslate"><span class="pre">last_cmd_received</span></code></a></li>
+<li><a class="reference internal" href="#hostname"><code class="docutils literal notranslate"><span class="pre">hostname</span></code></a></li>
+<li><a class="reference internal" href="#hostname_is_seabot"><code class="docutils literal notranslate"><span class="pre">hostname_is_seabot</span></code></a></li>
+<li><a class="reference internal" href="#xbee_network_id"><code class="docutils literal notranslate"><span class="pre">xbee_network_id</span></code></a></li>
+<li><a class="reference internal" href="#xbee_encryption_key"><code class="docutils literal notranslate"><span class="pre">xbee_encryption_key</span></code></a></li>
+<li><a class="reference internal" href="#xbee_node_id"><code class="docutils literal notranslate"><span class="pre">xbee_node_id</span></code></a></li>
+<li><a class="reference internal" href="#time_between_communication"><code class="docutils literal notranslate"><span class="pre">time_between_communication</span></code></a></li>
+<li><a class="reference internal" href="#serial_baudrate"><code class="docutils literal notranslate"><span class="pre">serial_baudrate</span></code></a></li>
+<li><a class="reference internal" href="#tx_power"><code class="docutils literal notranslate"><span class="pre">tx_power</span></code></a></li>
+<li><a class="reference internal" href="#routing_mode"><code class="docutils literal notranslate"><span class="pre">routing_mode</span></code></a></li>
+<li><a class="reference internal" href="#manual_remote_id"><code class="docutils literal notranslate"><span class="pre">manual_remote_id</span></code></a></li>
+<li><a class="reference internal" href="#manual_heading_control"><code class="docutils literal notranslate"><span class="pre">manual_heading_control</span></code></a></li>
+<li><a class="reference internal" href="#serial_port"><code class="docutils literal notranslate"><span class="pre">serial_port</span></code></a></li>
+<li><a class="reference internal" href="#timer"><code class="docutils literal notranslate"><span class="pre">timer</span></code></a></li>
+<li><a class="reference internal" href="#xbee"><code class="docutils literal notranslate"><span class="pre">xbee</span></code></a></li>
+<li><a class="reference internal" href="#xnet"><code class="docutils literal notranslate"><span class="pre">xnet</span></code></a></li>
+<li><a class="reference internal" href="#xnet_discovery_callback"><code class="docutils literal notranslate"><span class="pre">xnet_discovery_callback</span></code></a></li>
+<li><a class="reference internal" href="#data_received_callback"><code class="docutils literal notranslate"><span class="pre">data_received_callback</span></code></a></li>
+<li><a class="reference internal" href="#safety_callback"><code class="docutils literal notranslate"><span class="pre">safety_callback</span></code></a></li>
+<li><a class="reference internal" href="#internal_sensor_callback"><code class="docutils literal notranslate"><span class="pre">internal_sensor_callback</span></code></a></li>
+<li><a class="reference internal" href="#gnss_pose_callback"><code class="docutils literal notranslate"><span class="pre">gnss_pose_callback</span></code></a></li>
+<li><a class="reference internal" href="#mission_callback"><code class="docutils literal notranslate"><span class="pre">mission_callback</span></code></a></li>
+<li><a class="reference internal" href="#publisher_manual_velocity"><code class="docutils literal notranslate"><span class="pre">publisher_manual_velocity</span></code></a></li>
+<li><a class="reference internal" href="#subscription_manual_velocity"><code class="docutils literal notranslate"><span class="pre">subscription_manual_velocity</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +150,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class XbeeNode</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classxbee__driver_1_1xbee_1_1XbeeNode.rst.txt" rel="nofollow"> View page source</a>
@@ -514,10 +581,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classWtfNode.html" class="btn btn-neutral float-left" title="Class WtfNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_icm20948__register_8h_1a0a0acd7d4569a3719bf0dc97548e8447.html" class="btn btn-neutral float-right" title="Enum AK09916_mode_e" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

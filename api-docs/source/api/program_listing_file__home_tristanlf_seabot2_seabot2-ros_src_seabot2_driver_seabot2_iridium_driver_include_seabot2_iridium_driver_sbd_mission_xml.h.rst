@@ -20,9 +20,9 @@ Program Listing for File mission_xml.h
    {
    public:
    
-     MissionXML(LogData &log);
+     MissionXML(LogData & log);
    
-     void write(const std::string &filename) const;
+     void write(const std::string & filename) const;
    
    private:
      LogData m_log;

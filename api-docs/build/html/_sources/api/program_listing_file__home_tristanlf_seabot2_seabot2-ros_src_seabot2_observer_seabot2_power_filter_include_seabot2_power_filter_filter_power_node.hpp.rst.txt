@@ -22,29 +22,28 @@ Program Listing for File filter_power_node.hpp
    
    class FilterPowerNode final : public rclcpp::Node {
    public:
-       FilterPowerNode();
+     FilterPowerNode();
    
    private:
+     size_t filter_window_size_ = 5;
+     size_t filter_median_remove_side_samples_ = 1;
    
-       size_t filter_window_size_ = 5;
-       size_t filter_median_remove_side_samples_ = 1;
+     deque<double> battery_volt_memory_;
+     deque<double> motor_current_memory_;
+     array<deque<double>, 2> esc_current_memory_;
+     array<deque<double>, 4> cell_volt_memory_;
    
-       deque<double> battery_volt_memory_;
-       deque<double> motor_current_memory_;
-       array<deque<double>,2> esc_current_memory_;
-       array<deque<double>, 4> cell_volt_memory_;
-   
-       rclcpp::Subscription<seabot2_msgs::msg::PowerState>::SharedPtr subscriber_power_data_;
-       rclcpp::Publisher<seabot2_msgs::msg::PowerState>::SharedPtr publisher_power_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::PowerState>::SharedPtr subscriber_power_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::PowerState>::SharedPtr publisher_power_data_;
    
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void power_callback(const seabot2_msgs::msg::PowerState &msg);
+     void power_callback(const seabot2_msgs::msg::PowerState & msg);
    
-       double compute_filter(deque<double> queue) const; 
+     double compute_filter(deque<double> queue) const;   
    
    private:
    

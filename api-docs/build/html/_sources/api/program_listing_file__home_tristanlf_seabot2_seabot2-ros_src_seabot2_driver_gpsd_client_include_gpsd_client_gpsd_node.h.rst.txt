@@ -22,31 +22,31 @@ Program Listing for File gpsd_node.h
    using namespace std::chrono_literals;
    using namespace std;
    
-   class GpsdNode : public rclcpp::Node {
+   class GpsdNode: public rclcpp::Node {
    public:
-       GpsdNode();
+     GpsdNode();
    
-       ~GpsdNode();
+     ~GpsdNode();
    
    private:
-       gpsmm *gps_ = nullptr;
-       string frame_id_ = "gps";
-       bool last_msg_no_fix_ = false;
-       bool publish_when_no_fix_ = true;
+     gpsmm * gps_ = nullptr;
+     string frame_id_ = "gps";
+     bool last_msg_no_fix_ = false;
+     bool publish_when_no_fix_ = true;
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 100ms; // loop dt
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 100ms;   // loop dt
    
-       rclcpp::Publisher<seabot2_msgs::msg::GpsFix>::SharedPtr publisher_fix_;
-       rclcpp::Publisher<seabot2_msgs::msg::GpsPps>::SharedPtr publisher_pps_;
+     rclcpp::Publisher < seabot2_msgs::msg::GpsFix > ::SharedPtr publisher_fix_;
+     rclcpp::Publisher < seabot2_msgs::msg::GpsPps > ::SharedPtr publisher_pps_;
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void process_data(const struct gps_data_t* p);
+     void process_data(const struct gps_data_t * p);
    
-       void timer_callback();
+     void timer_callback();
    };
    
    #endif //BUILD_GPSD_NODE_H

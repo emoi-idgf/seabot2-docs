@@ -32,83 +32,85 @@ Program Listing for File audio_recorder_node.h
    
    using namespace std::chrono_literals;
    
-   class AudioRecorderNode final : public rclcpp::Node {
+   class AudioRecorderNode final: public rclcpp::Node {
    public:
-       AudioRecorderNode();
+     AudioRecorderNode();
    
-       ~AudioRecorderNode() override;
+     ~AudioRecorderNode() override;
    
-       std::string get_arecord_command() const;
+     std::string get_arecord_command() const;
    
    private:
    
-       int audio_frequency_ = 192000;
-       int audio_max_file_time_ = 600; // s
-       int audio_nb_channels_ = 1;
-       int audio_nb_bits_ = 32;
-       std::string audio_device_ = "plughw:CARD=sndrpii2scard";
-       std::string audio_command_last_ = "";
-       int audio_hdd_space_limit_stop_ = 500; // MB
+     int audio_frequency_ = 192000;
+     int audio_max_file_time_ = 600;   // s
+     int audio_nb_channels_ = 1;
+     int audio_nb_bits_ = 32;
+     std::string audio_device_ = "plughw:CARD=sndrpii2scard";
+     std::string audio_command_last_ = "";
+     int audio_hdd_space_limit_stop_ = 500;   // MB
    
-       std::string audio_save_directory_ = "/audio/";
+     std::string audio_save_directory_ = "/audio/";
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds  loop_safety_dt_ = 5s; // loop dt
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds  loop_safety_dt_ = 5s;   // loop dt
    
-       rclcpp::CallbackGroup::SharedPtr callback_group_;
-       std::string workingDirectory_ = "";
-       bool thread_currently_running_ = false;
-       std::future<int> subprocessFuture_;
+     rclcpp::CallbackGroup::SharedPtr callback_group_;
+     std::string workingDirectory_ = "";
+     bool thread_currently_running_ = false;
+     std::future < int > subprocessFuture_;
    
-       TLV320ADC tlv_;
-       DspicAcoustic dspic_;
+     TLV320ADC tlv_;
+     DspicAcoustic dspic_;
    
-       uint8_t gain_ch1_ = 0;
-       uint8_t gain_ch2_ = 0;
-       uint16_t robot_code_ = 0;
-       uint16_t duration_between_shoot_ = 30; //s
-       uint16_t time_slot_duration_ = 5; // s
+     uint8_t gain_ch1_ = 0;
+     uint8_t gain_ch2_ = 0;
+     uint16_t robot_code_ = 0;
+     uint16_t duration_between_shoot_ = 30;   //s
+     uint16_t time_slot_duration_ = 5;   // s
    
-       bool enable_sound_tx_ = true;
-       bool enable_chirp_ = false;
-       uint16_t frequency_middle_ = 40000;
-       uint16_t frequency_range_ = 5000;
-       uint8_t signal_function_ = 0;
+     bool enable_sound_tx_ = true;
+     bool enable_chirp_ = false;
+     uint16_t frequency_middle_ = 40000;
+     uint16_t frequency_range_ = 5000;
+     uint8_t signal_function_ = 0;
    
-       bool gnss_fix_once_ = false;
-       bool dspic_posix_fix_ = false;
+     bool gnss_fix_once_ = false;
+     bool dspic_posix_fix_ = false;
    
-       rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr service_rosbag_;
+     rclcpp::Service < std_srvs::srv::SetBool > ::SharedPtr service_rosbag_;
    
-       rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr service_chirp_;
+     rclcpp::Service < std_srvs::srv::SetBool > ::SharedPtr service_chirp_;
    
-       rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr publisher_record_;
+     rclcpp::Publisher < std_msgs::msg::Bool > ::SharedPtr publisher_record_;
    
-       rclcpp::Publisher<seabot2_msgs::msg::SyncDspic>::SharedPtr publisher_dspic_debug_;
+     rclcpp::Publisher < seabot2_msgs::msg::SyncDspic > ::SharedPtr publisher_dspic_debug_;
    
-       rclcpp::Subscription<seabot2_msgs::msg::GpsFix>::SharedPtr subscriber_gnss_data_;
+     rclcpp::Subscription < seabot2_msgs::msg::GpsFix > ::SharedPtr subscriber_gnss_data_;
    
    
    
-       void manage_subprocess(bool start_new_audio);
+     void manage_subprocess(bool start_new_audio);
    
-       void wait_kill();
+     void wait_kill();
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void callback_trigger(const std::shared_ptr<rmw_request_id_t> request_header,
-                             const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
-                             std::shared_ptr<std_srvs::srv::SetBool::Response> response);
+     void callback_trigger(
+       const std::shared_ptr < rmw_request_id_t > request_header,
+       const std::shared_ptr < std_srvs::srv::SetBool::Request > request,
+       std::shared_ptr < std_srvs::srv::SetBool::Response > response);
    
-       void gpsd_callback(const seabot2_msgs::msg::GpsFix &msg);
+     void gpsd_callback(const seabot2_msgs::msg::GpsFix & msg);
    
-       void timer_callback();
+     void timer_callback();
    
-       void chirp_callback(const std::shared_ptr<rmw_request_id_t> request_header,
-                         const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
-                         std::shared_ptr<std_srvs::srv::SetBool::Response> response);
+     void chirp_callback(
+       const std::shared_ptr < rmw_request_id_t > request_header,
+       const std::shared_ptr < std_srvs::srv::SetBool::Request > request,
+       std::shared_ptr < std_srvs::srv::SetBool::Response > response);
    };
    
    #endif //BUILD_RECORDER_NODE_H

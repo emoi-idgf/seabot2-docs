@@ -27,30 +27,29 @@ Program Listing for File temperature_profile_node.hpp
    
    class TemperatureProfileNode final : public rclcpp::Node {
    public:
-       TemperatureProfileNode();
+     TemperatureProfileNode();
    
    private:
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 200ms;   
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 200ms; 
+     TemperatureProfile t_;
    
-       TemperatureProfile t_;
+     double depth_ = 0.0;
    
-       double depth_ = 0.0;
+     rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_;
    
-       rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
-       rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_;
-   
-       rclcpp::Publisher<seabot2_msgs::msg::TemperatureProfile>::SharedPtr publisher_temperature_profile_;
+     rclcpp::Publisher<seabot2_msgs::msg::TemperatureProfile>::SharedPtr publisher_temperature_profile_;
    
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void depth_callback(const seabot2_msgs::msg::DepthPose &msg);
+     void depth_callback(const seabot2_msgs::msg::DepthPose & msg);
    
-       void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData &msg);
+     void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData & msg);
    
    };
    #endif //BUILD_TEMPERATURE_PROFILE_NODE_HPP

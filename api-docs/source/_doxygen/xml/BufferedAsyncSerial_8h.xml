@@ -9,7 +9,7 @@
     <incdepgraph>
       <node id="2">
         <label>seabot2_iridium_driver/serial/AsyncSerial.h</label>
-        <link refid="AsyncSerial_8h_source"/>
+        <link refid="AsyncSerial_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -51,12 +51,16 @@
     <invincdepgraph>
       <node id="3">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/iridium_node.h</label>
-        <link refid="iridium__node_8h_source"/>
+        <link refid="iridium__node_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/sbd.h</label>
-        <link refid="sbd_8h_source"/>
+        <link refid="sbd_8h"/>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -64,6 +68,20 @@
         <link refid="BufferedAsyncSerial_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/iridium_node.cpp</label>
+        <link refid="iridium__node_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/sbd.cpp</label>
+        <link refid="sbd_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp</label>
+        <link refid="BufferedAsyncSerial_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classBufferedAsyncSerial" prot="public">BufferedAsyncSerial</innerclass>
@@ -72,14 +90,14 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
 <codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/>BufferedAsyncSerial.h</highlight></codeline>
 <codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Author:<sp/>Terraneo<sp/>Federico</highlight></codeline>
 <codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Distributed<sp/>under<sp/>the<sp/>Boost<sp/>Software<sp/>License,<sp/>Version<sp/>1.0.</highlight></codeline>
 <codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created<sp/>on<sp/>January<sp/>6,<sp/>2011,<sp/>3:31<sp/>PM</highlight></codeline>
 <codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_iridium_driver/serial/AsyncSerial.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AsyncSerial_8h" kindref="compound">seabot2_iridium_driver/serial/AsyncSerial.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BUFFEREDASYNCSERIAL_H</highlight><highlight class="normal"></highlight></codeline>
@@ -88,43 +106,44 @@
 <codeline lineno="14" refid="classBufferedAsyncSerial" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBufferedAsyncSerial" kindref="compound">BufferedAsyncSerial</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classAsyncSerial" kindref="compound">AsyncSerial</ref></highlight></codeline>
 <codeline lineno="15"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBufferedAsyncSerial" kindref="compound">BufferedAsyncSerial</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="classBufferedAsyncSerial_1a6f8045e40a5b9e96f3474b29c00cf6ec" kindref="member">BufferedAsyncSerial</ref>();</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30" refid="classBufferedAsyncSerial_1a41db81338678ab592aaa6189103b414c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBufferedAsyncSerial_1a41db81338678ab592aaa6189103b414c" kindref="member">BufferedAsyncSerial</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>devname,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baud_rate,</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::parity<sp/>opt_parity=</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::parity(</highlight></codeline>
+<codeline lineno="30" refid="classBufferedAsyncSerial_1a41db81338678ab592aaa6189103b414c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classBufferedAsyncSerial_1a41db81338678ab592aaa6189103b414c" kindref="member">BufferedAsyncSerial</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>devname,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>baud_rate,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::parity<sp/>opt_parity<sp/>=</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::parity(</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::parity::none),</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::character_size<sp/>opt_csize=</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::character_size(8),</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::flow_control<sp/>opt_flow=</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::flow_control(</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::character_size<sp/>opt_csize<sp/>=</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::character_size(8),</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::flow_control<sp/>opt_flow<sp/>=</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::flow_control(</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::flow_control::none),</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::stop_bits<sp/>opt_stop=</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::stop_bits(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::stop_bits<sp/>opt_stop<sp/>=</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::stop_bits(</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::asio::serial_port_base::stop_bits::one));</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" kindref="member">read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" kindref="member">read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;char&gt;<sp/><ref refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>std::vector<sp/>&lt;<sp/>char<sp/>&gt;<sp/><ref refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" kindref="member">read</ref>();</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classBufferedAsyncSerial_1a4ac460f8b50222394dc0cf0fec47f159" kindref="member">readString</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classBufferedAsyncSerial_1a4ac460f8b50222394dc0cf0fec47f159" kindref="member">readString</ref>();</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" kindref="member">readStringUntil</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>delim=</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" kindref="member">readStringUntil</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>delim<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classBufferedAsyncSerial" kindref="compound">~BufferedAsyncSerial</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classBufferedAsyncSerial_1a385796d6f383544cf253c15b66e4eb13" kindref="member">~BufferedAsyncSerial</ref>();</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readCallback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBufferedAsyncSerial_1a33fdd36dc921aa8c506c90b52441c172" kindref="member">readCallback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;char&gt;::iterator<sp/>findStringInVector(std::vector&lt;char&gt;&amp;<sp/>v,</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>s);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;char&gt;<sp/>readQueue;</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::mutex<sp/>readQueueMutex;</highlight></codeline>
-<codeline lineno="98"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUFFEREDASYNCSERIAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector<sp/>&lt;<sp/>char<sp/>&gt;<sp/>::iterator<sp/><ref refid="classBufferedAsyncSerial_1ab5dc4c00dd3c8feeaef2c57f0520de68" kindref="member">findStringInVector</ref>(</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector<sp/>&lt;<sp/>char<sp/>&gt;<sp/>&amp;v,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" refkind="member"><highlight class="normal"><sp/><sp/>std::vector<sp/>&lt;<sp/>char<sp/>&gt;<sp/><ref refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" kindref="member">readQueue</ref>;</highlight></codeline>
+<codeline lineno="98" refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" refkind="member"><highlight class="normal"><sp/><sp/>std::mutex<sp/><ref refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" kindref="member">readQueueMutex</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUFFEREDASYNCSERIAL_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h"/>
   </compounddef>

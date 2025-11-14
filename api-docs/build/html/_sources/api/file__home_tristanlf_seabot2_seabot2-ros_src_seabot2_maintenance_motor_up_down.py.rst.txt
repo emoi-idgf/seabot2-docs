@@ -49,5 +49,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_motor__up__down_8py_1a20a22f532ef02697773a7ecd94f08275`
+- :ref:`exhale_function_namespacemotor__up__down_1a20a22f532ef02697773a7ecd94f08275`
 

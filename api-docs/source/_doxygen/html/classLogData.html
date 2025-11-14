@@ -75,29 +75,31 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="classLogData-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LogData Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="log__data_8h_source.html">log_data.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1936dccf5a381a560f22bd6276abaa19" id="r_a1936dccf5a381a560f22bd6276abaa19"><td class="memItemLeft" align="right" valign="top"><a id="a1936dccf5a381a560f22bd6276abaa19" name="a1936dccf5a381a560f22bd6276abaa19"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MSG_TYPE</b> : unsigned int { <br />
-&#160;&#160;<b>LOG_STATE</b> =0
-, <b>CMD_SLEEP</b> =1
-, <b>CMD_PARAMETERS</b> =2
-, <b>CMD_MISSION_NEW</b> =3
+<tr class="memitem:a1936dccf5a381a560f22bd6276abaa19" id="r_a1936dccf5a381a560f22bd6276abaa19"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19">MSG_TYPE</a> : unsigned int { <br />
+&#160;&#160;<a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19aefda1573a760c76968816d00051a16ff">LOG_STATE</a> =0
+, <a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19a646d614604aa6e59a1efcfa3b1bfbce9">CMD_SLEEP</a> =1
+, <a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19a4fba8815876ffe1ad8136d3a458e7367">CMD_PARAMETERS</a> =2
+, <a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d">CMD_MISSION_NEW</a> =3
 , <br />
-&#160;&#160;<b>CMD_MISSION_KEEP</b> =4
+&#160;&#160;<a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19a6259f3cfad37ad044a4dc84a563f147d">CMD_MISSION_KEEP</a> =4
 <br />
  }</td></tr>
 <tr class="separator:a1936dccf5a381a560f22bd6276abaa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afc434ed336a6c1273a4fe406879b4980" id="r_afc434ed336a6c1273a4fe406879b4980"><td class="memItemLeft" align="right" valign="top"><a id="afc434ed336a6c1273a4fe406879b4980" name="afc434ed336a6c1273a4fe406879b4980"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LogData</b> ()=default</td></tr>
-<tr class="memdesc:afc434ed336a6c1273a4fe406879b4980"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLogData.html">LogData</a>. <br /></td></tr>
+<tr class="memitem:afc434ed336a6c1273a4fe406879b4980" id="r_afc434ed336a6c1273a4fe406879b4980"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#afc434ed336a6c1273a4fe406879b4980">LogData</a> ()=default</td></tr>
+<tr class="memdesc:afc434ed336a6c1273a4fe406879b4980"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLogData.html">LogData</a>.  <br /></td></tr>
 <tr class="separator:afc434ed336a6c1273a4fe406879b4980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b7cbad4fcc481399b5b25e6b1754452" id="r_a3b7cbad4fcc481399b5b25e6b1754452"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a3b7cbad4fcc481399b5b25e6b1754452">deserialize_log_CMD</a> (const std::string &amp;raw_data)</td></tr>
 <tr class="memdesc:a3b7cbad4fcc481399b5b25e6b1754452"><td class="mdescLeft">&#160;</td><td class="mdescRight">deserialize_log_CMD  <br /></td></tr>
@@ -117,7 +119,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a277f0b12a7614b7b9ff4e6c752ef0b6f" id="r_a277f0b12a7614b7b9ff4e6c752ef0b6f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a277f0b12a7614b7b9ff4e6c752ef0b6f">write_file</a> (const std::string &amp;file_name, const std::string &amp;data, const unsigned int nb_bits=NB_BITS_LOG1)</td></tr>
+<tr class="memitem:a277f0b12a7614b7b9ff4e6c752ef0b6f" id="r_a277f0b12a7614b7b9ff4e6c752ef0b6f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a277f0b12a7614b7b9ff4e6c752ef0b6f">write_file</a> (const std::string &amp;file_name, const std::string &amp;data, const unsigned int nb_bits=<a class="el" href="log__data_8h.html#a658b9ff17ca0bc5c6ee1ac56323e0adc">NB_BITS_LOG1</a>)</td></tr>
 <tr class="memdesc:a277f0b12a7614b7b9ff4e6c752ef0b6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">write_file  <br /></td></tr>
 <tr class="separator:a277f0b12a7614b7b9ff4e6c752ef0b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adec5e67b706c873cb7a8d20876a6c081" id="r_adec5e67b706c873cb7a8d20876a6c081"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#adec5e67b706c873cb7a8d20876a6c081">read_file</a> (const std::string &amp;file_name)</td></tr>
@@ -126,104 +128,414 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a06995f751c6ffac74b800f643f1c5223" id="r_a06995f751c6ffac74b800f643f1c5223"><td class="memItemLeft" align="right" valign="top"><a id="a06995f751c6ffac74b800f643f1c5223" name="a06995f751c6ffac74b800f643f1c5223"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>time_now_</b> = 0.0</td></tr>
+<tr class="memitem:a06995f751c6ffac74b800f643f1c5223" id="r_a06995f751c6ffac74b800f643f1c5223"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a06995f751c6ffac74b800f643f1c5223">time_now_</a> = 0.0</td></tr>
 <tr class="separator:a06995f751c6ffac74b800f643f1c5223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd510440d726844d62b6fc0c1153133" id="r_a7cd510440d726844d62b6fc0c1153133"><td class="memItemLeft" align="right" valign="top"><a id="a7cd510440d726844d62b6fc0c1153133" name="a7cd510440d726844d62b6fc0c1153133"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_speed_</b> = 4.2</td></tr>
+<tr class="memitem:a7cd510440d726844d62b6fc0c1153133" id="r_a7cd510440d726844d62b6fc0c1153133"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a7cd510440d726844d62b6fc0c1153133">gnss_speed_</a> = 4.2</td></tr>
 <tr class="separator:a7cd510440d726844d62b6fc0c1153133"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac589dc0bfc5565eb16d75375cc6f6e7a" id="r_ac589dc0bfc5565eb16d75375cc6f6e7a"><td class="memItemLeft" align="right" valign="top"><a id="ac589dc0bfc5565eb16d75375cc6f6e7a" name="ac589dc0bfc5565eb16d75375cc6f6e7a"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_heading_</b> = 242.0</td></tr>
+<tr class="memitem:ac589dc0bfc5565eb16d75375cc6f6e7a" id="r_ac589dc0bfc5565eb16d75375cc6f6e7a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ac589dc0bfc5565eb16d75375cc6f6e7a">gnss_heading_</a> = 242.0</td></tr>
 <tr class="separator:ac589dc0bfc5565eb16d75375cc6f6e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7ce5e324a2c78219422628e3c427a87" id="r_ac7ce5e324a2c78219422628e3c427a87"><td class="memItemLeft" align="right" valign="top"><a id="ac7ce5e324a2c78219422628e3c427a87" name="ac7ce5e324a2c78219422628e3c427a87"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>battery_</b> = 10.0</td></tr>
+<tr class="memitem:ac7ce5e324a2c78219422628e3c427a87" id="r_ac7ce5e324a2c78219422628e3c427a87"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ac7ce5e324a2c78219422628e3c427a87">battery_</a> = 10.0</td></tr>
 <tr class="separator:ac7ce5e324a2c78219422628e3c427a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a006bf445b4ae61dac1d29aa29bd3dc58" id="r_a006bf445b4ae61dac1d29aa29bd3dc58"><td class="memItemLeft" align="right" valign="top"><a id="a006bf445b4ae61dac1d29aa29bd3dc58" name="a006bf445b4ae61dac1d29aa29bd3dc58"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_lat_</b> = 0.0</td></tr>
+<tr class="memitem:a006bf445b4ae61dac1d29aa29bd3dc58" id="r_a006bf445b4ae61dac1d29aa29bd3dc58"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a006bf445b4ae61dac1d29aa29bd3dc58">gnss_lat_</a> = 0.0</td></tr>
 <tr class="separator:a006bf445b4ae61dac1d29aa29bd3dc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6fec6d6f048cbd33bc879ab5790f63f" id="r_ab6fec6d6f048cbd33bc879ab5790f63f"><td class="memItemLeft" align="right" valign="top"><a id="ab6fec6d6f048cbd33bc879ab5790f63f" name="ab6fec6d6f048cbd33bc879ab5790f63f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_long_</b> = 0.0</td></tr>
+<tr class="memitem:ab6fec6d6f048cbd33bc879ab5790f63f" id="r_ab6fec6d6f048cbd33bc879ab5790f63f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ab6fec6d6f048cbd33bc879ab5790f63f">gnss_long_</a> = 0.0</td></tr>
 <tr class="separator:ab6fec6d6f048cbd33bc879ab5790f63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb6bec8954b83af189ca1311cf7d49c1" id="r_abb6bec8954b83af189ca1311cf7d49c1"><td class="memItemLeft" align="right" valign="top"><a id="abb6bec8954b83af189ca1311cf7d49c1" name="abb6bec8954b83af189ca1311cf7d49c1"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_mean_east_</b> = 42.0</td></tr>
+<tr class="memitem:abb6bec8954b83af189ca1311cf7d49c1" id="r_abb6bec8954b83af189ca1311cf7d49c1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#abb6bec8954b83af189ca1311cf7d49c1">gnss_mean_east_</a> = 42.0</td></tr>
 <tr class="separator:abb6bec8954b83af189ca1311cf7d49c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0549769f8c10f67cea7cb5a3bc9a4fc" id="r_ab0549769f8c10f67cea7cb5a3bc9a4fc"><td class="memItemLeft" align="right" valign="top"><a id="ab0549769f8c10f67cea7cb5a3bc9a4fc" name="ab0549769f8c10f67cea7cb5a3bc9a4fc"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_mean_north_</b> = 6000042.0</td></tr>
+<tr class="memitem:ab0549769f8c10f67cea7cb5a3bc9a4fc" id="r_ab0549769f8c10f67cea7cb5a3bc9a4fc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ab0549769f8c10f67cea7cb5a3bc9a4fc">gnss_mean_north_</a> = 6000042.0</td></tr>
 <tr class="separator:ab0549769f8c10f67cea7cb5a3bc9a4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2328f82545ee790b7064fde98cdc11bc" id="r_a2328f82545ee790b7064fde98cdc11bc"><td class="memItemLeft" align="right" valign="top"><a id="a2328f82545ee790b7064fde98cdc11bc" name="a2328f82545ee790b7064fde98cdc11bc"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>gnss_mean_heading_</b> = 242.0</td></tr>
+<tr class="memitem:a2328f82545ee790b7064fde98cdc11bc" id="r_a2328f82545ee790b7064fde98cdc11bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a2328f82545ee790b7064fde98cdc11bc">gnss_mean_heading_</a> = 242.0</td></tr>
 <tr class="separator:a2328f82545ee790b7064fde98cdc11bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2173763d4b894d7b6716a073bdcc75db" id="r_a2173763d4b894d7b6716a073bdcc75db"><td class="memItemLeft" align="right" valign="top"><a id="a2173763d4b894d7b6716a073bdcc75db" name="a2173763d4b894d7b6716a073bdcc75db"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>internal_pressure_</b> = 742.0</td></tr>
+<tr class="memitem:a2173763d4b894d7b6716a073bdcc75db" id="r_a2173763d4b894d7b6716a073bdcc75db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a2173763d4b894d7b6716a073bdcc75db">internal_pressure_</a> = 742.0</td></tr>
 <tr class="separator:a2173763d4b894d7b6716a073bdcc75db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab7245681f39e4e75d017e98c7efd95b" id="r_aab7245681f39e4e75d017e98c7efd95b"><td class="memItemLeft" align="right" valign="top"><a id="aab7245681f39e4e75d017e98c7efd95b" name="aab7245681f39e4e75d017e98c7efd95b"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>internal_temperature_</b> = 42.0</td></tr>
+<tr class="memitem:aab7245681f39e4e75d017e98c7efd95b" id="r_aab7245681f39e4e75d017e98c7efd95b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#aab7245681f39e4e75d017e98c7efd95b">internal_temperature_</a> = 42.0</td></tr>
 <tr class="separator:aab7245681f39e4e75d017e98c7efd95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61522bd6cc153fbbe0c6cb677c7f77f" id="r_af61522bd6cc153fbbe0c6cb677c7f77f"><td class="memItemLeft" align="right" valign="top"><a id="af61522bd6cc153fbbe0c6cb677c7f77f" name="af61522bd6cc153fbbe0c6cb677c7f77f"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>internal_humidity_</b> = 0.0</td></tr>
+<tr class="memitem:af61522bd6cc153fbbe0c6cb677c7f77f" id="r_af61522bd6cc153fbbe0c6cb677c7f77f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#af61522bd6cc153fbbe0c6cb677c7f77f">internal_humidity_</a> = 0.0</td></tr>
 <tr class="separator:af61522bd6cc153fbbe0c6cb677c7f77f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae71a823ec77fb9555ad3d613198254d7" id="r_ae71a823ec77fb9555ad3d613198254d7"><td class="memItemLeft" align="right" valign="top"><a id="ae71a823ec77fb9555ad3d613198254d7" name="ae71a823ec77fb9555ad3d613198254d7"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>current_waypoint_</b> = 42</td></tr>
+<tr class="memitem:ae71a823ec77fb9555ad3d613198254d7" id="r_ae71a823ec77fb9555ad3d613198254d7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ae71a823ec77fb9555ad3d613198254d7">current_waypoint_</a> = 42</td></tr>
 <tr class="separator:ae71a823ec77fb9555ad3d613198254d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c4b71dd9a1189b11f38ebc3e89c5253" id="r_a1c4b71dd9a1189b11f38ebc3e89c5253"><td class="memItemLeft" align="right" valign="top"><a id="a1c4b71dd9a1189b11f38ebc3e89c5253" name="a1c4b71dd9a1189b11f38ebc3e89c5253"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>sleep_time_</b> = 0</td></tr>
+<tr class="memitem:a1c4b71dd9a1189b11f38ebc3e89c5253" id="r_a1c4b71dd9a1189b11f38ebc3e89c5253"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a1c4b71dd9a1189b11f38ebc3e89c5253">sleep_time_</a> = 0</td></tr>
 <tr class="separator:a1c4b71dd9a1189b11f38ebc3e89c5253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0381f9cd0b1f945714823fcdaea5e8f" id="r_aa0381f9cd0b1f945714823fcdaea5e8f"><td class="memItemLeft" align="right" valign="top"><a id="aa0381f9cd0b1f945714823fcdaea5e8f" name="aa0381f9cd0b1f945714823fcdaea5e8f"></a>
-std::vector&lt; <a class="el" href="classWaypoint.html">Waypoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>waypoint_list_</b></td></tr>
-<tr class="separator:aa0381f9cd0b1f945714823fcdaea5e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abebfbb4e269f1eaa3a6b21ff7a3bdacd" id="r_abebfbb4e269f1eaa3a6b21ff7a3bdacd"><td class="memItemLeft" align="right" valign="top"><a id="abebfbb4e269f1eaa3a6b21ff7a3bdacd" name="abebfbb4e269f1eaa3a6b21ff7a3bdacd"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>offset_east_</b> = 0.</td></tr>
+<tr class="memitem:abf026bd07dd8aa1f52706f1c50c1c620" id="r_abf026bd07dd8aa1f52706f1c50c1c620"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classWaypoint.html">Waypoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#abf026bd07dd8aa1f52706f1c50c1c620">waypoint_list_</a></td></tr>
+<tr class="separator:abf026bd07dd8aa1f52706f1c50c1c620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebfbb4e269f1eaa3a6b21ff7a3bdacd" id="r_abebfbb4e269f1eaa3a6b21ff7a3bdacd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#abebfbb4e269f1eaa3a6b21ff7a3bdacd">offset_east_</a> = 0.</td></tr>
 <tr class="separator:abebfbb4e269f1eaa3a6b21ff7a3bdacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc6472bff8a96df148c498b6e311d1cf" id="r_acc6472bff8a96df148c498b6e311d1cf"><td class="memItemLeft" align="right" valign="top"><a id="acc6472bff8a96df148c498b6e311d1cf" name="acc6472bff8a96df148c498b6e311d1cf"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>offset_north_</b> = 0.</td></tr>
+<tr class="memitem:acc6472bff8a96df148c498b6e311d1cf" id="r_acc6472bff8a96df148c498b6e311d1cf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#acc6472bff8a96df148c498b6e311d1cf">offset_north_</a> = 0.</td></tr>
 <tr class="separator:acc6472bff8a96df148c498b6e311d1cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab38e39b11b4696163e097163e9287b7b" id="r_ab38e39b11b4696163e097163e9287b7b"><td class="memItemLeft" align="right" valign="top"><a id="ab38e39b11b4696163e097163e9287b7b" name="ab38e39b11b4696163e097163e9287b7b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_mission_</b> = true</td></tr>
+<tr class="memitem:ab38e39b11b4696163e097163e9287b7b" id="r_ab38e39b11b4696163e097163e9287b7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ab38e39b11b4696163e097163e9287b7b">enable_mission_</a> = true</td></tr>
 <tr class="separator:ab38e39b11b4696163e097163e9287b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db6160adddb878da4142ddb6bc5b1bf" id="r_a8db6160adddb878da4142ddb6bc5b1bf"><td class="memItemLeft" align="right" valign="top"><a id="a8db6160adddb878da4142ddb6bc5b1bf" name="a8db6160adddb878da4142ddb6bc5b1bf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_flash_</b> = true</td></tr>
+<tr class="memitem:a8db6160adddb878da4142ddb6bc5b1bf" id="r_a8db6160adddb878da4142ddb6bc5b1bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a8db6160adddb878da4142ddb6bc5b1bf">enable_flash_</a> = true</td></tr>
 <tr class="separator:a8db6160adddb878da4142ddb6bc5b1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d9dae91feb3ab2498f2c84b1952c5a6" id="r_a9d9dae91feb3ab2498f2c84b1952c5a6"><td class="memItemLeft" align="right" valign="top"><a id="a9d9dae91feb3ab2498f2c84b1952c5a6" name="a9d9dae91feb3ab2498f2c84b1952c5a6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_depth_</b> = true</td></tr>
+<tr class="memitem:a9d9dae91feb3ab2498f2c84b1952c5a6" id="r_a9d9dae91feb3ab2498f2c84b1952c5a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a9d9dae91feb3ab2498f2c84b1952c5a6">enable_depth_</a> = true</td></tr>
 <tr class="separator:a9d9dae91feb3ab2498f2c84b1952c5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a658f0eb5c2079149412997f80bb2f5c1" id="r_a658f0eb5c2079149412997f80bb2f5c1"><td class="memItemLeft" align="right" valign="top"><a id="a658f0eb5c2079149412997f80bb2f5c1" name="a658f0eb5c2079149412997f80bb2f5c1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_engine_</b> = true</td></tr>
+<tr class="memitem:a658f0eb5c2079149412997f80bb2f5c1" id="r_a658f0eb5c2079149412997f80bb2f5c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a658f0eb5c2079149412997f80bb2f5c1">enable_engine_</a> = true</td></tr>
 <tr class="separator:a658f0eb5c2079149412997f80bb2f5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3152955a76aaf2aeadbf97d73bd0bb18" id="r_a3152955a76aaf2aeadbf97d73bd0bb18"><td class="memItemLeft" align="right" valign="top"><a id="a3152955a76aaf2aeadbf97d73bd0bb18" name="a3152955a76aaf2aeadbf97d73bd0bb18"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>last_cmd_received_</b> = 0</td></tr>
+<tr class="memitem:a3152955a76aaf2aeadbf97d73bd0bb18" id="r_a3152955a76aaf2aeadbf97d73bd0bb18"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a3152955a76aaf2aeadbf97d73bd0bb18">last_cmd_received_</a> = 0</td></tr>
 <tr class="separator:a3152955a76aaf2aeadbf97d73bd0bb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52f84dba6a1758c343f558696fa5e4dd" id="r_a52f84dba6a1758c343f558696fa5e4dd"><td class="memItemLeft" align="right" valign="top"><a id="a52f84dba6a1758c343f558696fa5e4dd" name="a52f84dba6a1758c343f558696fa5e4dd"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>period_message_</b> = 15</td></tr>
+<tr class="memitem:a52f84dba6a1758c343f558696fa5e4dd" id="r_a52f84dba6a1758c343f558696fa5e4dd"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a52f84dba6a1758c343f558696fa5e4dd">period_message_</a> = 15</td></tr>
 <tr class="separator:a52f84dba6a1758c343f558696fa5e4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a215b780805044b81368683aea57ab2b3" id="r_a215b780805044b81368683aea57ab2b3"><td class="memItemLeft" align="right" valign="top"><a id="a215b780805044b81368683aea57ab2b3" name="a215b780805044b81368683aea57ab2b3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_global_safety_valid_</b> = false</td></tr>
+<tr class="memitem:a215b780805044b81368683aea57ab2b3" id="r_a215b780805044b81368683aea57ab2b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a215b780805044b81368683aea57ab2b3">safety_global_safety_valid_</a> = false</td></tr>
 <tr class="separator:a215b780805044b81368683aea57ab2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace97e70198f38ca5767ae3f8c8919f43" id="r_ace97e70198f38ca5767ae3f8c8919f43"><td class="memItemLeft" align="right" valign="top"><a id="ace97e70198f38ca5767ae3f8c8919f43" name="ace97e70198f38ca5767ae3f8c8919f43"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_published_frequency_</b> = false</td></tr>
+<tr class="memitem:ace97e70198f38ca5767ae3f8c8919f43" id="r_ace97e70198f38ca5767ae3f8c8919f43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ace97e70198f38ca5767ae3f8c8919f43">safety_published_frequency_</a> = false</td></tr>
 <tr class="separator:ace97e70198f38ca5767ae3f8c8919f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab557ecc757ef00a153a18b7547ebe856" id="r_ab557ecc757ef00a153a18b7547ebe856"><td class="memItemLeft" align="right" valign="top"><a id="ab557ecc757ef00a153a18b7547ebe856" name="ab557ecc757ef00a153a18b7547ebe856"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_depth_limit_</b> = false</td></tr>
+<tr class="memitem:ab557ecc757ef00a153a18b7547ebe856" id="r_ab557ecc757ef00a153a18b7547ebe856"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#ab557ecc757ef00a153a18b7547ebe856">safety_depth_limit_</a> = false</td></tr>
 <tr class="separator:ab557ecc757ef00a153a18b7547ebe856"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70454d1aa1e62f82dcccf93dd10ddc5a" id="r_a70454d1aa1e62f82dcccf93dd10ddc5a"><td class="memItemLeft" align="right" valign="top"><a id="a70454d1aa1e62f82dcccf93dd10ddc5a" name="a70454d1aa1e62f82dcccf93dd10ddc5a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_batteries_limit_</b> = false</td></tr>
+<tr class="memitem:a70454d1aa1e62f82dcccf93dd10ddc5a" id="r_a70454d1aa1e62f82dcccf93dd10ddc5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a70454d1aa1e62f82dcccf93dd10ddc5a">safety_batteries_limit_</a> = false</td></tr>
 <tr class="separator:a70454d1aa1e62f82dcccf93dd10ddc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4442f061f8ede0f7dcce3d1b887960bb" id="r_a4442f061f8ede0f7dcce3d1b887960bb"><td class="memItemLeft" align="right" valign="top"><a id="a4442f061f8ede0f7dcce3d1b887960bb" name="a4442f061f8ede0f7dcce3d1b887960bb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_depressurization_</b> = false</td></tr>
+<tr class="memitem:a4442f061f8ede0f7dcce3d1b887960bb" id="r_a4442f061f8ede0f7dcce3d1b887960bb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a4442f061f8ede0f7dcce3d1b887960bb">safety_depressurization_</a> = false</td></tr>
 <tr class="separator:a4442f061f8ede0f7dcce3d1b887960bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e740e0944372202073863a436654ff8" id="r_a0e740e0944372202073863a436654ff8"><td class="memItemLeft" align="right" valign="top"><a id="a0e740e0944372202073863a436654ff8" name="a0e740e0944372202073863a436654ff8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_seafloor_</b> = false</td></tr>
+<tr class="memitem:a0e740e0944372202073863a436654ff8" id="r_a0e740e0944372202073863a436654ff8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a0e740e0944372202073863a436654ff8">safety_seafloor_</a> = false</td></tr>
 <tr class="separator:a0e740e0944372202073863a436654ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7546b2aab01e3cffc07d4e4e11966d74" id="r_a7546b2aab01e3cffc07d4e4e11966d74"><td class="memItemLeft" align="right" valign="top"><a id="a7546b2aab01e3cffc07d4e4e11966d74" name="a7546b2aab01e3cffc07d4e4e11966d74"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_piston_</b> = false</td></tr>
+<tr class="memitem:a7546b2aab01e3cffc07d4e4e11966d74" id="r_a7546b2aab01e3cffc07d4e4e11966d74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a7546b2aab01e3cffc07d4e4e11966d74">safety_piston_</a> = false</td></tr>
 <tr class="separator:a7546b2aab01e3cffc07d4e4e11966d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bf42ce73af96525ccae6ddfc3fce25e" id="r_a2bf42ce73af96525ccae6ddfc3fce25e"><td class="memItemLeft" align="right" valign="top"><a id="a2bf42ce73af96525ccae6ddfc3fce25e" name="a2bf42ce73af96525ccae6ddfc3fce25e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>safety_zero_depth_</b> = false</td></tr>
+<tr class="memitem:a2bf42ce73af96525ccae6ddfc3fce25e" id="r_a2bf42ce73af96525ccae6ddfc3fce25e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a2bf42ce73af96525ccae6ddfc3fce25e">safety_zero_depth_</a> = false</td></tr>
 <tr class="separator:a2bf42ce73af96525ccae6ddfc3fce25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69026134c4c4ddb74d8d46fe17884c10" id="r_a69026134c4c4ddb74d8d46fe17884c10"><td class="memItemLeft" align="right" valign="top"><a id="a69026134c4c4ddb74d8d46fe17884c10" name="a69026134c4c4ddb74d8d46fe17884c10"></a>
-MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td></tr>
+<tr class="memitem:a69026134c4c4ddb74d8d46fe17884c10" id="r_a69026134c4c4ddb74d8d46fe17884c10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19">MSG_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#a69026134c4c4ddb74d8d46fe17884c10">msg_type_</a></td></tr>
 <tr class="separator:a69026134c4c4ddb74d8d46fe17884c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a29d7d1e0be2af4f37dd3e14f245d380c" id="r_a29d7d1e0be2af4f37dd3e14f245d380c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a29d7d1e0be2af4f37dd3e14f245d380c"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogData.html#a29d7d1e0be2af4f37dd3e14f245d380c">serialize_data</a> (T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, const double &amp;value, const double &amp;value_min, const double &amp;value_max)</td></tr>
+<tr class="memdesc:a29d7d1e0be2af4f37dd3e14f245d380c"><td class="mdescLeft">&#160;</td><td class="mdescRight">serialize_data  <br /></td></tr>
+<tr class="separator:a29d7d1e0be2af4f37dd3e14f245d380c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d486f1e05e065decf1d99153180bbc" id="r_a70d486f1e05e065decf1d99153180bbc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a70d486f1e05e065decf1d99153180bbc"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogData.html#a70d486f1e05e065decf1d99153180bbc">deserialize_data</a> (T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, double &amp;value, const double &amp;value_min, const double &amp;value_max)</td></tr>
+<tr class="memdesc:a70d486f1e05e065decf1d99153180bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">deserialize_data  <br /></td></tr>
+<tr class="separator:a70d486f1e05e065decf1d99153180bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53477498e0d1b56c63d44f496287fbac" id="r_a53477498e0d1b56c63d44f496287fbac"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a53477498e0d1b56c63d44f496287fbac"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogData.html#a53477498e0d1b56c63d44f496287fbac">serialize_data</a> (T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, const unsigned int &amp;value)</td></tr>
+<tr class="memdesc:a53477498e0d1b56c63d44f496287fbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">serialize_data  <br /></td></tr>
+<tr class="separator:a53477498e0d1b56c63d44f496287fbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58743312e43f31c6e3a69be445f27dbc" id="r_a58743312e43f31c6e3a69be445f27dbc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a58743312e43f31c6e3a69be445f27dbc"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogData.html#a58743312e43f31c6e3a69be445f27dbc">deserialize_data</a> (const T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, unsigned int &amp;value)</td></tr>
+<tr class="memdesc:a58743312e43f31c6e3a69be445f27dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">deserialize_data  <br /></td></tr>
+<tr class="separator:a58743312e43f31c6e3a69be445f27dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f8a87f32fb51a0bb34e93cdebada41" id="r_a37f8a87f32fb51a0bb34e93cdebada41"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a37f8a87f32fb51a0bb34e93cdebada41"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogData.html#a37f8a87f32fb51a0bb34e93cdebada41">deserialize_data</a> (const T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, int &amp;value)</td></tr>
+<tr class="memdesc:a37f8a87f32fb51a0bb34e93cdebada41"><td class="mdescLeft">&#160;</td><td class="mdescRight">deserialize_data  <br /></td></tr>
+<tr class="separator:a37f8a87f32fb51a0bb34e93cdebada41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64a8d3f6be7c0ee46eb03c074490718" id="r_ab64a8d3f6be7c0ee46eb03c074490718"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab64a8d3f6be7c0ee46eb03c074490718"><td class="memTemplItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogData.html#ab64a8d3f6be7c0ee46eb03c074490718">deserialize_data</a> (const T &amp;bits, const unsigned int &amp;nb_bit, const unsigned int &amp;start_bit, bool &amp;value)</td></tr>
+<tr class="memdesc:ab64a8d3f6be7c0ee46eb03c074490718"><td class="mdescLeft">&#160;</td><td class="mdescRight">deserialize_data  <br /></td></tr>
+<tr class="separator:ab64a8d3f6be7c0ee46eb03c074490718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd254b3f96a1d5ac95177b84d920153c" id="r_afd254b3f96a1d5ac95177b84d920153c"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogData.html#afd254b3f96a1d5ac95177b84d920153c">deserialize_log_CMD_waypoint</a> (const std::string &amp;message, const unsigned int &amp;bit_position)</td></tr>
+<tr class="memdesc:afd254b3f96a1d5ac95177b84d920153c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classLogData.html#afd254b3f96a1d5ac95177b84d920153c" title="LogData::deserialize_log_CMD_waypoint.">LogData::deserialize_log_CMD_waypoint</a>.  <br /></td></tr>
+<tr class="separator:afd254b3f96a1d5ac95177b84d920153c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a1936dccf5a381a560f22bd6276abaa19" name="a1936dccf5a381a560f22bd6276abaa19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1936dccf5a381a560f22bd6276abaa19">&#9670;&#160;</a></span>MSG_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19">LogData::MSG_TYPE</a> : unsigned int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1936dccf5a381a560f22bd6276abaa19aefda1573a760c76968816d00051a16ff" name="a1936dccf5a381a560f22bd6276abaa19aefda1573a760c76968816d00051a16ff"></a>LOG_STATE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1936dccf5a381a560f22bd6276abaa19a646d614604aa6e59a1efcfa3b1bfbce9" name="a1936dccf5a381a560f22bd6276abaa19a646d614604aa6e59a1efcfa3b1bfbce9"></a>CMD_SLEEP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1936dccf5a381a560f22bd6276abaa19a4fba8815876ffe1ad8136d3a458e7367" name="a1936dccf5a381a560f22bd6276abaa19a4fba8815876ffe1ad8136d3a458e7367"></a>CMD_PARAMETERS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d" name="a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d"></a>CMD_MISSION_NEW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1936dccf5a381a560f22bd6276abaa19a6259f3cfad37ad044a4dc84a563f147d" name="a1936dccf5a381a560f22bd6276abaa19a6259f3cfad37ad044a4dc84a563f147d"></a>CMD_MISSION_KEEP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afc434ed336a6c1273a4fe406879b4980" name="afc434ed336a6c1273a4fe406879b4980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc434ed336a6c1273a4fe406879b4980">&#9670;&#160;</a></span>LogData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LogData::LogData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classLogData.html">LogData</a>. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab64a8d3f6be7c0ee46eb03c074490718" name="ab64a8d3f6be7c0ee46eb03c074490718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64a8d3f6be7c0ee46eb03c074490718">&#9670;&#160;</a></span>deserialize_data() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::deserialize_data </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>nb_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>start_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deserialize_data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bits</td><td></td></tr>
+    <tr><td class="paramname">nb_bit</td><td></td></tr>
+    <tr><td class="paramname">start_bit</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a37f8a87f32fb51a0bb34e93cdebada41" name="a37f8a87f32fb51a0bb34e93cdebada41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f8a87f32fb51a0bb34e93cdebada41">&#9670;&#160;</a></span>deserialize_data() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::deserialize_data </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>nb_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>start_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deserialize_data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bits</td><td></td></tr>
+    <tr><td class="paramname">nb_bit</td><td></td></tr>
+    <tr><td class="paramname">start_bit</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a58743312e43f31c6e3a69be445f27dbc" name="a58743312e43f31c6e3a69be445f27dbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58743312e43f31c6e3a69be445f27dbc">&#9670;&#160;</a></span>deserialize_data() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::deserialize_data </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>nb_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>start_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deserialize_data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bits</td><td></td></tr>
+    <tr><td class="paramname">nb_bit</td><td></td></tr>
+    <tr><td class="paramname">start_bit</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a70d486f1e05e065decf1d99153180bbc" name="a70d486f1e05e065decf1d99153180bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d486f1e05e065decf1d99153180bbc">&#9670;&#160;</a></span>deserialize_data() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::deserialize_data </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>nb_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>start_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value_max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>deserialize_data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bits</td><td></td></tr>
+    <tr><td class="paramname">nb_bit</td><td></td></tr>
+    <tr><td class="paramname">start_bit</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+    <tr><td class="paramname">value_min</td><td></td></tr>
+    <tr><td class="paramname">value_max</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="a3b7cbad4fcc481399b5b25e6b1754452" name="a3b7cbad4fcc481399b5b25e6b1754452"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b7cbad4fcc481399b5b25e6b1754452">&#9670;&#160;</a></span>deserialize_log_CMD()</h2>
 
@@ -249,6 +561,36 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogData_a3b7cbad4fcc481399b5b25e6b1754452_cgraph.png" border="0" usemap="#aclassLogData_a3b7cbad4fcc481399b5b25e6b1754452_cgraph" alt=""/></div>
+<map name="aclassLogData_a3b7cbad4fcc481399b5b25e6b1754452_cgraph" id="aclassLogData_a3b7cbad4fcc481399b5b25e6b1754452_cgraph">
+<area shape="rect" title="deserialize_log_CMD" alt="" coords="5,69,160,109"/>
+<area shape="rect" href="classLogData.html#a88e78f645e3ae3c424678b81a134300c" title="deserialize_log_CMD_mission" alt="" coords="215,5,370,45"/>
+<area shape="poly" title=" " alt="" coords="148,67,213,47,214,52,150,72"/>
+<area shape="rect" href="classLogData.html#ac03c8d72a6a6cbff4802856218d31451" title="deserialize_log_CMD_parameters" alt="" coords="208,69,377,109"/>
+<area shape="poly" title=" " alt="" coords="160,87,194,87,194,92,160,92"/>
+<area shape="rect" href="classLogData.html#ac7d8e8285e050694af109058cfb5e608" title="deserialize_log_CMD_sleep" alt="" coords="215,133,370,173"/>
+<area shape="poly" title=" " alt="" coords="150,107,214,127,213,132,148,112"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogData_a3b7cbad4fcc481399b5b25e6b1754452_icgraph.png" border="0" usemap="#aclassLogData_a3b7cbad4fcc481399b5b25e6b1754452_icgraph" alt=""/></div>
+<map name="aclassLogData_a3b7cbad4fcc481399b5b25e6b1754452_icgraph" id="aclassLogData_a3b7cbad4fcc481399b5b25e6b1754452_icgraph">
+<area shape="rect" title="deserialize_log_CMD" alt="" coords="880,5,1035,45"/>
+<area shape="rect" href="classIridiumNode.html#a3014d809ff5c01fe7632132083db03ee" title=" " alt="" coords="645,13,832,38"/>
+<area shape="poly" title=" " alt="" coords="866,28,832,28,832,23,866,23"/>
+<area shape="rect" href="classIridiumNode.html#a0e604ea2045e90e66ef97a53f09050c2" title=" " alt="" coords="437,13,597,38"/>
+<area shape="poly" title=" " alt="" coords="632,28,598,28,598,23,632,23"/>
+<area shape="rect" href="classIridiumNode.html#ac59e68e0bae7e761c0046c148c4a4ed1" title=" " alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -276,6 +618,24 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogData_a88e78f645e3ae3c424678b81a134300c_icgraph.png" border="0" usemap="#aclassLogData_a88e78f645e3ae3c424678b81a134300c_icgraph" alt=""/></div>
+<map name="aclassLogData_a88e78f645e3ae3c424678b81a134300c_icgraph" id="aclassLogData_a88e78f645e3ae3c424678b81a134300c_icgraph">
+<area shape="rect" title="deserialize_log_CMD_mission" alt="" coords="1083,5,1237,45"/>
+<area shape="rect" href="classLogData.html#a3b7cbad4fcc481399b5b25e6b1754452" title="deserialize_log_CMD" alt="" coords="880,5,1035,45"/>
+<area shape="poly" title=" " alt="" coords="1069,28,1035,28,1035,23,1069,23"/>
+<area shape="rect" href="classIridiumNode.html#a3014d809ff5c01fe7632132083db03ee" title=" " alt="" coords="645,13,832,38"/>
+<area shape="poly" title=" " alt="" coords="866,28,832,28,832,23,866,23"/>
+<area shape="rect" href="classIridiumNode.html#a0e604ea2045e90e66ef97a53f09050c2" title=" " alt="" coords="437,13,597,38"/>
+<area shape="poly" title=" " alt="" coords="632,28,598,28,598,23,632,23"/>
+<area shape="rect" href="classIridiumNode.html#ac59e68e0bae7e761c0046c148c4a4ed1" title=" " alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -303,6 +663,24 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogData_ac03c8d72a6a6cbff4802856218d31451_icgraph.png" border="0" usemap="#aclassLogData_ac03c8d72a6a6cbff4802856218d31451_icgraph" alt=""/></div>
+<map name="aclassLogData_ac03c8d72a6a6cbff4802856218d31451_icgraph" id="aclassLogData_ac03c8d72a6a6cbff4802856218d31451_icgraph">
+<area shape="rect" title="deserialize_log_CMD_parameters" alt="" coords="1083,5,1252,45"/>
+<area shape="rect" href="classLogData.html#a3b7cbad4fcc481399b5b25e6b1754452" title="deserialize_log_CMD" alt="" coords="880,5,1035,45"/>
+<area shape="poly" title=" " alt="" coords="1069,28,1035,28,1035,23,1069,23"/>
+<area shape="rect" href="classIridiumNode.html#a3014d809ff5c01fe7632132083db03ee" title=" " alt="" coords="645,13,832,38"/>
+<area shape="poly" title=" " alt="" coords="866,28,832,28,832,23,866,23"/>
+<area shape="rect" href="classIridiumNode.html#a0e604ea2045e90e66ef97a53f09050c2" title=" " alt="" coords="437,13,597,38"/>
+<area shape="poly" title=" " alt="" coords="632,28,598,28,598,23,632,23"/>
+<area shape="rect" href="classIridiumNode.html#ac59e68e0bae7e761c0046c148c4a4ed1" title=" " alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -326,6 +704,69 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file_name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogData_ac7d8e8285e050694af109058cfb5e608_icgraph.png" border="0" usemap="#aclassLogData_ac7d8e8285e050694af109058cfb5e608_icgraph" alt=""/></div>
+<map name="aclassLogData_ac7d8e8285e050694af109058cfb5e608_icgraph" id="aclassLogData_ac7d8e8285e050694af109058cfb5e608_icgraph">
+<area shape="rect" title="deserialize_log_CMD_sleep" alt="" coords="1083,5,1237,45"/>
+<area shape="rect" href="classLogData.html#a3b7cbad4fcc481399b5b25e6b1754452" title="deserialize_log_CMD" alt="" coords="880,5,1035,45"/>
+<area shape="poly" title=" " alt="" coords="1069,28,1035,28,1035,23,1069,23"/>
+<area shape="rect" href="classIridiumNode.html#a3014d809ff5c01fe7632132083db03ee" title=" " alt="" coords="645,13,832,38"/>
+<area shape="poly" title=" " alt="" coords="866,28,832,28,832,23,866,23"/>
+<area shape="rect" href="classIridiumNode.html#a0e604ea2045e90e66ef97a53f09050c2" title=" " alt="" coords="437,13,597,38"/>
+<area shape="poly" title=" " alt="" coords="632,28,598,28,598,23,632,23"/>
+<area shape="rect" href="classIridiumNode.html#ac59e68e0bae7e761c0046c148c4a4ed1" title=" " alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd254b3f96a1d5ac95177b84d920153c" name="afd254b3f96a1d5ac95177b84d920153c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd254b3f96a1d5ac95177b84d920153c">&#9670;&#160;</a></span>deserialize_log_CMD_waypoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::deserialize_log_CMD_waypoint </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>bit_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classLogData.html#afd254b3f96a1d5ac95177b84d920153c" title="LogData::deserialize_log_CMD_waypoint.">LogData::deserialize_log_CMD_waypoint</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">save_file</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -368,6 +809,143 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
 
 </div>
 </div>
+<a id="a29d7d1e0be2af4f37dd3e14f245d380c" name="a29d7d1e0be2af4f37dd3e14f245d380c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d7d1e0be2af4f37dd3e14f245d380c">&#9670;&#160;</a></span>serialize_data() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::serialize_data </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>nb_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>start_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>value_max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>serialize_data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bits</td><td></td></tr>
+    <tr><td class="paramname">nb_bit</td><td></td></tr>
+    <tr><td class="paramname">start_bit</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+    <tr><td class="paramname">min</td><td></td></tr>
+    <tr><td class="paramname">max</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a53477498e0d1b56c63d44f496287fbac" name="a53477498e0d1b56c63d44f496287fbac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53477498e0d1b56c63d44f496287fbac">&#9670;&#160;</a></span>serialize_data() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::serialize_data </td>
+          <td>(</td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>nb_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>start_bit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned int &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>serialize_data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bits</td><td></td></tr>
+    <tr><td class="paramname">nb_bit</td><td></td></tr>
+    <tr><td class="paramname">start_bit</td><td></td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="aca2914c2e2d1bccf714e67e6456abf26" name="aca2914c2e2d1bccf714e67e6456abf26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca2914c2e2d1bccf714e67e6456abf26">&#9670;&#160;</a></span>serialize_log_state()</h2>
 
@@ -393,6 +971,22 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <p>Todo : change to serailize lat/long positioning instead of L93 message size in SBD0 = 30 bytes = 240 bits =&gt; message can be x2 in size 24bit for lat and long (about 1m positioning) =&gt; +6 bit</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classLogData_aca2914c2e2d1bccf714e67e6456abf26_icgraph.png" border="0" usemap="#aclassLogData_aca2914c2e2d1bccf714e67e6456abf26_icgraph" alt=""/></div>
+<map name="aclassLogData_aca2914c2e2d1bccf714e67e6456abf26_icgraph" id="aclassLogData_aca2914c2e2d1bccf714e67e6456abf26_icgraph">
+<area shape="rect" title="serialize_log_state" alt="" coords="729,35,868,75"/>
+<area shape="rect" href="classIridiumNode.html#a0e604ea2045e90e66ef97a53f09050c2" title=" " alt="" coords="479,13,639,38"/>
+<area shape="poly" title=" " alt="" coords="715,47,639,38,640,32,716,42"/>
+<area shape="rect" href="classxbee__driver_1_1xbee_1_1XbeeNode.html#abae28f4326dd8626be8474490722ff98" title=" " alt="" coords="437,63,681,103"/>
+<area shape="poly" title=" " alt="" coords="716,67,682,71,681,66,715,62"/>
+<area shape="rect" href="classIridiumNode.html#ac59e68e0bae7e761c0046c148c4a4ed1" title=" " alt="" coords="244,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="465,28,389,28,389,23,465,23"/>
+<area shape="rect" href="classIridiumNode.html#ae7de0566cff0b980c0eb2e1c1026646d" title=" " alt="" coords="5,13,196,38"/>
+<area shape="poly" title=" " alt="" coords="230,28,196,28,196,23,230,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -421,7 +1015,7 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned int&#160;</td>
-          <td class="paramname"><em>nb_bits</em> = <code>NB_BITS_LOG1</code>&#160;</td>
+          <td class="paramname"><em>nb_bits</em> = <code><a class="el" href="log__data_8h.html#a658b9ff17ca0bc5c6ee1ac56323e0adc">NB_BITS_LOG1</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -448,9 +1042,458 @@ MSG_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>msg_type_</b></td
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac7ce5e324a2c78219422628e3c427a87" name="ac7ce5e324a2c78219422628e3c427a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ce5e324a2c78219422628e3c427a87">&#9670;&#160;</a></span>battery_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::battery_ = 10.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae71a823ec77fb9555ad3d613198254d7" name="ae71a823ec77fb9555ad3d613198254d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71a823ec77fb9555ad3d613198254d7">&#9670;&#160;</a></span>current_waypoint_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::current_waypoint_ = 42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d9dae91feb3ab2498f2c84b1952c5a6" name="a9d9dae91feb3ab2498f2c84b1952c5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d9dae91feb3ab2498f2c84b1952c5a6">&#9670;&#160;</a></span>enable_depth_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::enable_depth_ = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a658f0eb5c2079149412997f80bb2f5c1" name="a658f0eb5c2079149412997f80bb2f5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658f0eb5c2079149412997f80bb2f5c1">&#9670;&#160;</a></span>enable_engine_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::enable_engine_ = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8db6160adddb878da4142ddb6bc5b1bf" name="a8db6160adddb878da4142ddb6bc5b1bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db6160adddb878da4142ddb6bc5b1bf">&#9670;&#160;</a></span>enable_flash_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::enable_flash_ = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab38e39b11b4696163e097163e9287b7b" name="ab38e39b11b4696163e097163e9287b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38e39b11b4696163e097163e9287b7b">&#9670;&#160;</a></span>enable_mission_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::enable_mission_ = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac589dc0bfc5565eb16d75375cc6f6e7a" name="ac589dc0bfc5565eb16d75375cc6f6e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac589dc0bfc5565eb16d75375cc6f6e7a">&#9670;&#160;</a></span>gnss_heading_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_heading_ = 242.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a006bf445b4ae61dac1d29aa29bd3dc58" name="a006bf445b4ae61dac1d29aa29bd3dc58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006bf445b4ae61dac1d29aa29bd3dc58">&#9670;&#160;</a></span>gnss_lat_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_lat_ = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab6fec6d6f048cbd33bc879ab5790f63f" name="ab6fec6d6f048cbd33bc879ab5790f63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fec6d6f048cbd33bc879ab5790f63f">&#9670;&#160;</a></span>gnss_long_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_long_ = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb6bec8954b83af189ca1311cf7d49c1" name="abb6bec8954b83af189ca1311cf7d49c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6bec8954b83af189ca1311cf7d49c1">&#9670;&#160;</a></span>gnss_mean_east_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_mean_east_ = 42.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2328f82545ee790b7064fde98cdc11bc" name="a2328f82545ee790b7064fde98cdc11bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2328f82545ee790b7064fde98cdc11bc">&#9670;&#160;</a></span>gnss_mean_heading_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_mean_heading_ = 242.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0549769f8c10f67cea7cb5a3bc9a4fc" name="ab0549769f8c10f67cea7cb5a3bc9a4fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0549769f8c10f67cea7cb5a3bc9a4fc">&#9670;&#160;</a></span>gnss_mean_north_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_mean_north_ = 6000042.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cd510440d726844d62b6fc0c1153133" name="a7cd510440d726844d62b6fc0c1153133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd510440d726844d62b6fc0c1153133">&#9670;&#160;</a></span>gnss_speed_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::gnss_speed_ = 4.2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af61522bd6cc153fbbe0c6cb677c7f77f" name="af61522bd6cc153fbbe0c6cb677c7f77f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61522bd6cc153fbbe0c6cb677c7f77f">&#9670;&#160;</a></span>internal_humidity_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::internal_humidity_ = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2173763d4b894d7b6716a073bdcc75db" name="a2173763d4b894d7b6716a073bdcc75db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2173763d4b894d7b6716a073bdcc75db">&#9670;&#160;</a></span>internal_pressure_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::internal_pressure_ = 742.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab7245681f39e4e75d017e98c7efd95b" name="aab7245681f39e4e75d017e98c7efd95b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab7245681f39e4e75d017e98c7efd95b">&#9670;&#160;</a></span>internal_temperature_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::internal_temperature_ = 42.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3152955a76aaf2aeadbf97d73bd0bb18" name="a3152955a76aaf2aeadbf97d73bd0bb18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3152955a76aaf2aeadbf97d73bd0bb18">&#9670;&#160;</a></span>last_cmd_received_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::last_cmd_received_ = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69026134c4c4ddb74d8d46fe17884c10" name="a69026134c4c4ddb74d8d46fe17884c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69026134c4c4ddb74d8d46fe17884c10">&#9670;&#160;</a></span>msg_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLogData.html#a1936dccf5a381a560f22bd6276abaa19">MSG_TYPE</a> LogData::msg_type_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abebfbb4e269f1eaa3a6b21ff7a3bdacd" name="abebfbb4e269f1eaa3a6b21ff7a3bdacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebfbb4e269f1eaa3a6b21ff7a3bdacd">&#9670;&#160;</a></span>offset_east_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::offset_east_ = 0.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc6472bff8a96df148c498b6e311d1cf" name="acc6472bff8a96df148c498b6e311d1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6472bff8a96df148c498b6e311d1cf">&#9670;&#160;</a></span>offset_north_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::offset_north_ = 0.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52f84dba6a1758c343f558696fa5e4dd" name="a52f84dba6a1758c343f558696fa5e4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f84dba6a1758c343f558696fa5e4dd">&#9670;&#160;</a></span>period_message_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::period_message_ = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70454d1aa1e62f82dcccf93dd10ddc5a" name="a70454d1aa1e62f82dcccf93dd10ddc5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70454d1aa1e62f82dcccf93dd10ddc5a">&#9670;&#160;</a></span>safety_batteries_limit_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_batteries_limit_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4442f061f8ede0f7dcce3d1b887960bb" name="a4442f061f8ede0f7dcce3d1b887960bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4442f061f8ede0f7dcce3d1b887960bb">&#9670;&#160;</a></span>safety_depressurization_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_depressurization_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab557ecc757ef00a153a18b7547ebe856" name="ab557ecc757ef00a153a18b7547ebe856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab557ecc757ef00a153a18b7547ebe856">&#9670;&#160;</a></span>safety_depth_limit_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_depth_limit_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a215b780805044b81368683aea57ab2b3" name="a215b780805044b81368683aea57ab2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215b780805044b81368683aea57ab2b3">&#9670;&#160;</a></span>safety_global_safety_valid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_global_safety_valid_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7546b2aab01e3cffc07d4e4e11966d74" name="a7546b2aab01e3cffc07d4e4e11966d74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7546b2aab01e3cffc07d4e4e11966d74">&#9670;&#160;</a></span>safety_piston_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_piston_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace97e70198f38ca5767ae3f8c8919f43" name="ace97e70198f38ca5767ae3f8c8919f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace97e70198f38ca5767ae3f8c8919f43">&#9670;&#160;</a></span>safety_published_frequency_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_published_frequency_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e740e0944372202073863a436654ff8" name="a0e740e0944372202073863a436654ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e740e0944372202073863a436654ff8">&#9670;&#160;</a></span>safety_seafloor_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_seafloor_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bf42ce73af96525ccae6ddfc3fce25e" name="a2bf42ce73af96525ccae6ddfc3fce25e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf42ce73af96525ccae6ddfc3fce25e">&#9670;&#160;</a></span>safety_zero_depth_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool LogData::safety_zero_depth_ = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c4b71dd9a1189b11f38ebc3e89c5253" name="a1c4b71dd9a1189b11f38ebc3e89c5253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4b71dd9a1189b11f38ebc3e89c5253">&#9670;&#160;</a></span>sleep_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LogData::sleep_time_ = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06995f751c6ffac74b800f643f1c5223" name="a06995f751c6ffac74b800f643f1c5223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06995f751c6ffac74b800f643f1c5223">&#9670;&#160;</a></span>time_now_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double LogData::time_now_ = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf026bd07dd8aa1f52706f1c50c1c620" name="abf026bd07dd8aa1f52706f1c50c1c620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf026bd07dd8aa1f52706f1c50c1c620">&#9670;&#160;</a></span>waypoint_list_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classWaypoint.html">Waypoint</a> &gt; LogData::waypoint_list_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/<a class="el" href="log__data_8h_source.html">log_data.h</a></li>
-<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/<b>log_data.cpp</b></li>
+<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/<a class="el" href="log__data_8cpp.html">log_data.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

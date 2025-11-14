@@ -9,6 +9,7 @@
   <title>Class TLV320ADC &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class WaveGenerator" href="classWaveGenerator.html" />
-    <link rel="prev" title="Class ThrusterNode" href="classThrusterNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,39 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class TLV320ADC</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv49TLV320ADC"><code class="docutils literal notranslate"><span class="pre">TLV320ADC</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC7AdcGainE"><code class="docutils literal notranslate"><span class="pre">AdcGain</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC7AdcGain8GAIN_0dBE"><code class="docutils literal notranslate"><span class="pre">GAIN_0dB</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC7AdcGain9GAIN_10dBE"><code class="docutils literal notranslate"><span class="pre">GAIN_10dB</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC7AdcGain9GAIN_20dBE"><code class="docutils literal notranslate"><span class="pre">GAIN_20dB</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC7AdcGain9GAIN_30dBE"><code class="docutils literal notranslate"><span class="pre">GAIN_30dB</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC7AdcGain9GAIN_40dBE"><code class="docutils literal notranslate"><span class="pre">GAIN_40dB</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC9TLV320ADCEPN6rclcpp4NodeE"><code class="docutils literal notranslate"><span class="pre">TLV320ADC()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADCD0Ev"><code class="docutils literal notranslate"><span class="pre">~TLV320ADC()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC8i2c_openEv"><code class="docutils literal notranslate"><span class="pre">i2c_open()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC9configureE7uint8_t"><code class="docutils literal notranslate"><span class="pre">configure()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC22set_channel_parametersEv"><code class="docutils literal notranslate"><span class="pre">set_channel_parameters()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC12set_power_upEv"><code class="docutils literal notranslate"><span class="pre">set_power_up()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC10getI2CAddrEv"><code class="docutils literal notranslate"><span class="pre">getI2CAddr()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC10setI2CAddrEi"><code class="docutils literal notranslate"><span class="pre">setI2CAddr()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC12getI2CPeriphEv"><code class="docutils literal notranslate"><span class="pre">getI2CPeriph()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N9TLV320ADC12setI2CPeriphERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">setI2CPeriph()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC12set_adc_gainE7uint8_t7uint8_t"><code class="docutils literal notranslate"><span class="pre">set_adc_gain()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC11set_wake_upEv"><code class="docutils literal notranslate"><span class="pre">set_wake_up()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC9set_resetEv"><code class="docutils literal notranslate"><span class="pre">set_reset()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC8set_pageE7uint8_t"><code class="docutils literal notranslate"><span class="pre">set_page()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC13set_i2s_32bitEv"><code class="docutils literal notranslate"><span class="pre">set_i2s_32bit()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC16set_channel_slotEv"><code class="docutils literal notranslate"><span class="pre">set_channel_slot()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC18set_channel_enableEv"><code class="docutils literal notranslate"><span class="pre">set_channel_enable()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC18set_enable_channelEv"><code class="docutils literal notranslate"><span class="pre">set_enable_channel()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC20set_enable_input_ch1E7uint8_t7uint8_t"><code class="docutils literal notranslate"><span class="pre">set_enable_input_ch1()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK9TLV320ADC16set_enable_inputE7uint8_t7uint8_t"><code class="docutils literal notranslate"><span class="pre">set_enable_input()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +85,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +100,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class TLV320ADC</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classTLV320ADC.rst.txt" rel="nofollow"> View page source</a>
@@ -265,10 +282,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classThrusterNode.html" class="btn btn-neutral float-left" title="Class ThrusterNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classWaveGenerator.html" class="btn btn-neutral float-right" title="Class WaveGenerator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

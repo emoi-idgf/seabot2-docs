@@ -49,57 +49,57 @@ Program Listing for File screen.h
    class Screen
    {
    public:
-       Screen(rclcpp::Node *n){
+     Screen(rclcpp::Node * n) {
            n_ = n;
-       }
+     }
    
-       ~Screen();
+     ~Screen();
    
-       int i2c_open();
+     int i2c_open();
    
-       void write_ip(const std::array<unsigned char, 4> &data);
+     void write_ip(const std::array < unsigned char, 4 > &data);
    
-       void write_pressure(const short &pressure);
+     void write_pressure(const short & pressure);
    
-       void write_temperature(const short &temperature);
+     void write_temperature(const short & temperature);
    
-       void write_hygro(const short &hygro);
+     void write_hygro(const short & hygro);
    
-       void write_voltage(const char &volt);
+     void write_voltage(const char & volt);
    
-       void write_robot_name(const std::string &name);
+     void write_robot_name(const std::string & name);
    
-       void write_mission_name(const std::string &mission_name);
+     void write_mission_name(const std::string & mission_name);
    
-       void write_current_waypoint(const unsigned char &wp_id);
+     void write_current_waypoint(const unsigned char & wp_id);
    
-       void write_number_waypoints(const unsigned char &id_max);
+     void write_number_waypoints(const unsigned char & id_max);
    
-       void write_time(const char &hour, const char &minute);
+     void write_time(const char & hour, const char & minute);
    
-       void write_remaining_time(const char &minute, const char &second);
+     void write_remaining_time(const char & minute, const char & second);
    
-       enum Robot_Status { ERROR=0, WARNING=1, OK=3 };
+     enum Robot_Status { ERROR=0, WARNING=1, OK=3 };
    
-       void write_robot_status(const Robot_Status &status);
+     void write_robot_status(const Robot_Status & status);
    
-       void write_screen();
+     void write_screen();
    
-       [[nodiscard]] int getI2CAddr() const;
+     [[nodiscard]] int getI2CAddr() const;
    
-       void setI2CAddr(int i2CAddr);
+     void setI2CAddr(int i2CAddr);
    
-       [[nodiscard]] const std::string &getI2CPeriph() const;
+     [[nodiscard]] const std::string & getI2CPeriph() const;
    
-       void setI2CPeriph(const std::string &i2CPeriph);
+     void setI2CPeriph(const std::string & i2CPeriph);
    
    private:
-       rclcpp::Node* n_= nullptr; 
+     rclcpp::Node * n_ = nullptr; 
    
-       int file_ = 0; 
-       int i2c_addr_ = 0x3C;
+     int file_ = 0;   
+     int i2c_addr_ = 0x3C;
    
-       std::string i2c_periph_ = "/dev/i2c-0";
+     std::string i2c_periph_ = "/dev/i2c-0";
    
    };
    

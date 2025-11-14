@@ -24,35 +24,36 @@ Program Listing for File density_node.hpp
    
    class DensityNode final : public rclcpp::Node {
    public:
-       DensityNode();
+     DensityNode();
    
    private:
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 1s; 
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 1s;   
    
-       double sea_pressure_ = 0.;
-       double temperature_ = 12.0;
-       double salinity_ = 0.;
-       double water_density_ = 1000.0;
-       double water_sound_speed_ = 1500.0;
+     double sea_pressure_ = 0.;
+     double temperature_ = 12.0;
+     double salinity_ = 0.;
+     double water_density_ = 1000.0;
+     double water_sound_speed_ = 1500.0;
    
-       TeosSea ts;
+     TeosSea ts;
    
-       rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
-       rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr
+       subscriber_temperature_data_;
    
-       rclcpp::Publisher<seabot2_msgs::msg::Density>::SharedPtr publisher_density_;
+     rclcpp::Publisher<seabot2_msgs::msg::Density>::SharedPtr publisher_density_;
    
    
-       void timer_callback();
+     void timer_callback();
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData &msg);
+     void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData & msg);
    
-       void pressure_callback(const seabot2_msgs::msg::DepthPose &msg);
+     void pressure_callback(const seabot2_msgs::msg::DepthPose & msg);
    
    private:
    

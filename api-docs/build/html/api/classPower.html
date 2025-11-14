@@ -9,6 +9,7 @@
   <title>Class Power &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class PowerNode" href="classPowerNode.html" />
-    <link rel="prev" title="Class PistonNode" href="classPistonNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,26 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class Power</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv45Power"><code class="docutils literal notranslate"><span class="pre">Power</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N5Power5PowerEPN6rclcpp4NodeE"><code class="docutils literal notranslate"><span class="pre">Power()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5PowerD0Ev"><code class="docutils literal notranslate"><span class="pre">~Power()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power8i2c_openEv"><code class="docutils literal notranslate"><span class="pre">i2c_open()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power11get_versionEv"><code class="docutils literal notranslate"><span class="pre">get_version()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK5Power10getI2CAddrEv"><code class="docutils literal notranslate"><span class="pre">getI2CAddr()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power10setI2CAddrEi"><code class="docutils literal notranslate"><span class="pre">setI2CAddr()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK5Power12getI2CPeriphEv"><code class="docutils literal notranslate"><span class="pre">getI2CPeriph()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power12setI2CPeriphERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">setI2CPeriph()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power12get_all_dataEv"><code class="docutils literal notranslate"><span class="pre">get_all_data()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power9set_sleepEv"><code class="docutils literal notranslate"><span class="pre">set_sleep()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power10cell_volt_E"><code class="docutils literal notranslate"><span class="pre">cell_volt_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power13battery_volt_E"><code class="docutils literal notranslate"><span class="pre">battery_volt_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power12esc_current_E"><code class="docutils literal notranslate"><span class="pre">esc_current_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power14motor_current_E"><code class="docutils literal notranslate"><span class="pre">motor_current_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N5Power12power_state_E"><code class="docutils literal notranslate"><span class="pre">power_state_</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +72,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +87,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class Power</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classPower.rst.txt" rel="nofollow"> View page source</a>
@@ -190,7 +194,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5Power10cell_volt_E">
-<span id="_CPPv3N5Power10cell_volt_E"></span><span id="_CPPv2N5Power10cell_volt_E"></span><span id="Power::cell_volt___std::array:float.2:"></span><span class="target" id="classPower_1a38428036d5a66b557b62874ea5320162"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cell_volt_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5Power10cell_volt_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5Power10cell_volt_E"></span><span id="_CPPv2N5Power10cell_volt_E"></span><span id="Power::cell_volt___std::array:float.2:"></span><span class="target" id="classPower_1a02db3b346cb6144052a24b3b4a11dee7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cell_volt_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5Power10cell_volt_E" title="Link to this definition"></a><br /></dt>
 <dd><p>Variables. </p>
 </dd></dl>
 
@@ -201,7 +205,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N5Power12esc_current_E">
-<span id="_CPPv3N5Power12esc_current_E"></span><span id="_CPPv2N5Power12esc_current_E"></span><span id="Power::esc_current___std::array:float.2:"></span><span class="target" id="classPower_1a442886da68d930c49d8a26783bbed68d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esc_current_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5Power12esc_current_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N5Power12esc_current_E"></span><span id="_CPPv2N5Power12esc_current_E"></span><span id="Power::esc_current___std::array:float.2:"></span><span class="target" id="classPower_1aeae868ba8d2ae1aa3c8e8323f2026130"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">array</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esc_current_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N5Power12esc_current_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -223,10 +227,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classPistonNode.html" class="btn btn-neutral float-left" title="Class PistonNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classPowerNode.html" class="btn btn-neutral float-right" title="Class PowerNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

@@ -42,5 +42,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_control__launch_8py_1a07b202ba946340edeff1b25e5c0ccc92`
+- :ref:`exhale_function_namespacecontrol__launch_1a07b202ba946340edeff1b25e5c0ccc92`
 

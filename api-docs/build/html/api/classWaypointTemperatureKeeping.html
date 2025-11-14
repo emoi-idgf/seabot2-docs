@@ -9,6 +9,7 @@
   <title>Class WaypointTemperatureKeeping &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class WaypointTemperatureProfile" href="classWaypointTemperatureProfile.html" />
-    <link rel="prev" title="Class WaypointSeafloorLanding" href="classWaypointSeafloorLanding.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,20 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class WaypointTemperatureKeeping</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv426WaypointTemperatureKeeping"><code class="docutils literal notranslate"><span class="pre">WaypointTemperatureKeeping</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N26WaypointTemperatureKeeping26WaypointTemperatureKeepingEP7Mission"><code class="docutils literal notranslate"><span class="pre">WaypointTemperatureKeeping()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N26WaypointTemperatureKeepingD0Ev"><code class="docutils literal notranslate"><span class="pre">~WaypointTemperatureKeeping()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N26WaypointTemperatureKeeping7processERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">process()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N26WaypointTemperatureKeeping12temperature_E"><code class="docutils literal notranslate"><span class="pre">temperature_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N26WaypointTemperatureKeeping18error_temperature_E"><code class="docutils literal notranslate"><span class="pre">error_temperature_</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +66,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +81,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class WaypointTemperatureKeeping</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classWaypointTemperatureKeeping.rst.txt" rel="nofollow"> View page source</a>
@@ -112,7 +110,9 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv426WaypointTemperatureKeeping">
 <span id="_CPPv326WaypointTemperatureKeeping"></span><span id="_CPPv226WaypointTemperatureKeeping"></span><span id="WaypointTemperatureKeeping"></span><span class="target" id="classWaypointTemperatureKeeping"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WaypointTemperatureKeeping</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classWaypoint.html#_CPPv48Waypoint" title="Waypoint"><span class="n"><span class="pre">Waypoint</span></span></a><a class="headerlink" href="#_CPPv426WaypointTemperatureKeeping" title="Link to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p><a class="reference internal" href="classWaypoint.html#classWaypoint"><span class="std std-ref">Waypoint</span></a> for temperature keeping. </p>
+<p>Hold a given temperature set point for a given time </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N26WaypointTemperatureKeeping26WaypointTemperatureKeepingEP7Mission">
@@ -127,7 +127,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N26WaypointTemperatureKeeping7processERKN6rclcpp4TimeE">
 <span id="_CPPv3N26WaypointTemperatureKeeping7processERKN6rclcpp4TimeE"></span><span id="_CPPv2N26WaypointTemperatureKeeping7processERKN6rclcpp4TimeE"></span><span id="WaypointTemperatureKeeping::process__rclcpp::TimeCR"></span><span class="target" id="classWaypointTemperatureKeeping_1a7c578d5be2090fd7a68f4ccbc83da54f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N26WaypointTemperatureKeeping7processERKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
-<dd><p>process </p>
+<dd><p>Process waypoint temperature keeping and set depth control setpoint. </p>
+<p>Set depth control set point acording to a temperature set point. Use the temperature gradient to control the depth, go up if temperature is below set point and down if above.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time</strong> – current time </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -136,22 +142,14 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N26WaypointTemperatureKeeping12temperature_E">
 <span id="_CPPv3N26WaypointTemperatureKeeping12temperature_E"></span><span id="_CPPv2N26WaypointTemperatureKeeping12temperature_E"></span><span id="WaypointTemperatureKeeping::temperature___double"></span><span class="target" id="classWaypointTemperatureKeeping_1ae5cdc734abd5f56c70cb4767f3308589"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">temperature_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20.0</span></span><a class="headerlink" href="#_CPPv4N26WaypointTemperatureKeeping12temperature_E" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N26WaypointTemperatureKeeping28depth_set_point_accumulator_E">
-<span id="_CPPv3N26WaypointTemperatureKeeping28depth_set_point_accumulator_E"></span><span id="_CPPv2N26WaypointTemperatureKeeping28depth_set_point_accumulator_E"></span><span id="WaypointTemperatureKeeping::depth_set_point_accumulator___double"></span><span class="target" id="classWaypointTemperatureKeeping_1a8850db4255cf154af561ff4872a9b2fd"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depth_set_point_accumulator_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N26WaypointTemperatureKeeping28depth_set_point_accumulator_E" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N26WaypointTemperatureKeeping8coeff_K_E">
-<span id="_CPPv3N26WaypointTemperatureKeeping8coeff_K_E"></span><span id="_CPPv2N26WaypointTemperatureKeeping8coeff_K_E"></span><span id="WaypointTemperatureKeeping::coeff_K___double"></span><span class="target" id="classWaypointTemperatureKeeping_1aeac391d15406fdf0bcd473093618ae4a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">coeff_K_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.03</span></span><a class="headerlink" href="#_CPPv4N26WaypointTemperatureKeeping8coeff_K_E" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Temperature set point in degree Celsius. </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N26WaypointTemperatureKeeping18error_temperature_E">
 <span id="_CPPv3N26WaypointTemperatureKeeping18error_temperature_E"></span><span id="_CPPv2N26WaypointTemperatureKeeping18error_temperature_E"></span><span id="WaypointTemperatureKeeping::error_temperature___double"></span><span class="target" id="classWaypointTemperatureKeeping_1a41bdf3638225ee4a143298e30bd30511"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_temperature_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N26WaypointTemperatureKeeping18error_temperature_E" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Temperature error in degree Celsius. </p>
+</dd></dl>
 
 </div>
 </dd></dl>
@@ -162,10 +160,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classWaypointSeafloorLanding.html" class="btn btn-neutral float-left" title="Class WaypointSeafloorLanding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classWaypointTemperatureProfile.html" class="btn btn-neutral float-right" title="Class WaypointTemperatureProfile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

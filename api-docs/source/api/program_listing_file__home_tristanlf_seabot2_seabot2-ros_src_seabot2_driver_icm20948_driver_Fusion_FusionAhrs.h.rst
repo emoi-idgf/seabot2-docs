@@ -24,47 +24,51 @@ Program Listing for File FusionAhrs.h
    //------------------------------------------------------------------------------
    // Definitions
    
-   typedef struct {
-       FusionConvention convention;
-       float gain;
-       float gyroscopeRange;
-       float accelerationRejection;
-       float magneticRejection;
-       unsigned int recoveryTriggerPeriod;
+   typedef struct
+   {
+     FusionConvention convention;
+     float gain;
+     float gyroscopeRange;
+     float accelerationRejection;
+     float magneticRejection;
+     unsigned int recoveryTriggerPeriod;
    } FusionAhrsSettings;
    
-   typedef struct {
-       FusionAhrsSettings settings;
-       FusionQuaternion quaternion;
-       FusionVector accelerometer;
-       bool initialising;
-       float rampedGain;
-       float rampedGainStep;
-       bool angularRateRecovery;
-       FusionVector halfAccelerometerFeedback;
-       FusionVector halfMagnetometerFeedback;
-       bool accelerometerIgnored;
-       int accelerationRecoveryTrigger;
-       int accelerationRecoveryTimeout;
-       bool magnetometerIgnored;
-       int magneticRecoveryTrigger;
-       int magneticRecoveryTimeout;
+   typedef struct
+   {
+     FusionAhrsSettings settings;
+     FusionQuaternion quaternion;
+     FusionVector accelerometer;
+     bool initialising;
+     float rampedGain;
+     float rampedGainStep;
+     bool angularRateRecovery;
+     FusionVector halfAccelerometerFeedback;
+     FusionVector halfMagnetometerFeedback;
+     bool accelerometerIgnored;
+     int accelerationRecoveryTrigger;
+     int accelerationRecoveryTimeout;
+     bool magnetometerIgnored;
+     int magneticRecoveryTrigger;
+     int magneticRecoveryTimeout;
    } FusionAhrs;
    
-   typedef struct {
-       float accelerationError;
-       bool accelerometerIgnored;
-       float accelerationRecoveryTrigger;
-       float magneticError;
-       bool magnetometerIgnored;
-       float magneticRecoveryTrigger;
+   typedef struct
+   {
+     float accelerationError;
+     bool accelerometerIgnored;
+     float accelerationRecoveryTrigger;
+     float magneticError;
+     bool magnetometerIgnored;
+     float magneticRecoveryTrigger;
    } FusionAhrsInternalStates;
    
-   typedef struct {
-       bool initialising;
-       bool angularRateRecovery;
-       bool accelerationRecovery;
-       bool magneticRecovery;
+   typedef struct
+   {
+     bool initialising;
+     bool angularRateRecovery;
+     bool accelerationRecovery;
+     bool magneticRecovery;
    } FusionAhrsFlags;
    
    //------------------------------------------------------------------------------
@@ -76,11 +80,17 @@ Program Listing for File FusionAhrs.h
    
    void FusionAhrsSetSettings(FusionAhrs *const ahrs, const FusionAhrsSettings *const settings);
    
-   void FusionAhrsUpdate(FusionAhrs *const ahrs, const FusionVector gyroscope, const FusionVector accelerometer, const FusionVector magnetometer, const float deltaTime);
+   void FusionAhrsUpdate(
+     FusionAhrs *const ahrs, const FusionVector gyroscope,
+     const FusionVector accelerometer, const FusionVector magnetometer, const float deltaTime);
    
-   void FusionAhrsUpdateNoMagnetometer(FusionAhrs *const ahrs, const FusionVector gyroscope, const FusionVector accelerometer, const float deltaTime);
+   void FusionAhrsUpdateNoMagnetometer(
+     FusionAhrs *const ahrs, const FusionVector gyroscope,
+     const FusionVector accelerometer, const float deltaTime);
    
-   void FusionAhrsUpdateExternalHeading(FusionAhrs *const ahrs, const FusionVector gyroscope, const FusionVector accelerometer, const float heading, const float deltaTime);
+   void FusionAhrsUpdateExternalHeading(
+     FusionAhrs *const ahrs, const FusionVector gyroscope,
+     const FusionVector accelerometer, const float heading, const float deltaTime);
    
    FusionQuaternion FusionAhrsGetQuaternion(const FusionAhrs *const ahrs);
    

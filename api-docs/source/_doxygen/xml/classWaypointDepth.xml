@@ -3,6 +3,7 @@
   <compounddef id="classWaypointDepth" kind="class" language="C++" prot="public" final="yes">
     <compoundname>WaypointDepth</compoundname>
     <basecompoundref refid="classWaypoint" prot="public" virt="non-virtual">Waypoint</basecompoundref>
+    <includes refid="waypoint_8hpp" local="no">waypoint.hpp</includes>
     <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classWaypointDepth_1a310d56d8fa4981f76b7658b13de56525" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -12,12 +13,16 @@
         <qualifiedname>WaypointDepth::depth</qualifiedname>
         <initializer>= 0.0</initializer>
         <briefdescription>
+<para>Depth set point in meter. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="38" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="38" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="75" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classxbee__driver_1_1xbee_1_1XbeeNode_1a3e7996ed3cf1da869306084a8a9cccc2" compoundref="xbee_8py" startline="363" endline="365">xbee_driver.xbee.XbeeNode.depth_callback</referencedby>
+        <referencedby refid="classWaypointDepth_1abccb938b1a7839c783a2ec1f102a5c42" compoundref="waypoint_8cpp" startline="11" endline="20">process</referencedby>
+        <referencedby refid="classxbee__driver_1_1xbee_1_1XbeeNode_1abae28f4326dd8626be8474490722ff98" compoundref="xbee_8py" startline="400" endline="405">xbee_driver.xbee.XbeeNode.timer_callback</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -37,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="30" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="30" bodyend="30"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="61" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="61" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="classWaypointDepth_1a7258d3a3eda82421c3e4eff5c9628b1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="31" column="5"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="63" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classWaypointDepth_1abccb938b1a7839c783a2ec1f102a5c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -65,18 +70,35 @@
           <declname>time</declname>
         </param>
         <briefdescription>
-<para>process </para>
+<para>Process waypoint depth and set depth control setpoint. </para>
         </briefdescription>
         <detaileddescription>
+<para>Set depth control set point with waypoint values</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="36" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp" bodystart="7" bodyend="12"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="72" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/waypoint.cpp" bodystart="11" bodyend="20"/>
+        <references refid="classWaypointDepth_1a310d56d8fa4981f76b7658b13de56525" compoundref="waypoint_8hpp" startline="75">depth</references>
+        <references refid="classMission_1a22e811abed47c4b8430f2ac044cb63bf" compoundref="mission_8hpp" startline="119" endline="122">Mission::depth_control_set_point</references>
+        <references refid="classWaypoint_1af5d91ed57ac82236555ad0abacee187e" compoundref="waypoint_8hpp" startline="50">Waypoint::mission_</references>
+        <references refid="classWaypoint_1a5b806ea31179bb7287694907120d58f7" compoundref="waypoint_8hpp" startline="44">Waypoint::velocity</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para><ref refid="classWaypoint" kindref="compound">Waypoint</ref> for depth keeping. </para>
     </briefdescription>
     <detaileddescription>
+<para>Hold a given depth set point for a given time </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">
@@ -94,6 +116,9 @@
       <node id="3">
         <label>Mission</label>
         <link refid="classMission"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>file_name_</edgelabel>
+        </childnode>
       </node>
       <node id="2">
         <label>Waypoint</label>
@@ -108,8 +133,11 @@
         <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="4">
+        <label>string</label>
+      </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="28" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="28" bodyend="39"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" line="59" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/waypoint.hpp" bodystart="59" bodyend="76"/>
     <listofallmembers>
       <member refid="classWaypointDepth_1a310d56d8fa4981f76b7658b13de56525" prot="public" virt="non-virtual"><scope>WaypointDepth</scope><name>depth</name></member>
       <member refid="classWaypoint_1ac2c73435c531a01c6dd830f0b226e19f" prot="public" virt="non-virtual"><scope>WaypointDepth</scope><name>duration</name></member>

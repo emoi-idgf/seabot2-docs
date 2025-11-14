@@ -73,13 +73,18 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTemperatureProfile-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">TemperatureProfile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="temperature__profile_8h_source.html">temperature_profile.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2c480aabe949c5c74b00b86a7e3df946" id="r_a2c480aabe949c5c74b00b86a7e3df946"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a2c480aabe949c5c74b00b86a7e3df946">TemperatureProfile</a> ()</td></tr>
+<tr class="separator:a2c480aabe949c5c74b00b86a7e3df946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e41d78be8873e916b3ef04c8377120" id="r_a18e41d78be8873e916b3ef04c8377120"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a18e41d78be8873e916b3ef04c8377120">update_temperature</a> (double temperature, double depth)</td></tr>
 <tr class="separator:a18e41d78be8873e916b3ef04c8377120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34a785469b46a1486d54acc9b289eee0" id="r_a34a785469b46a1486d54acc9b289eee0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a34a785469b46a1486d54acc9b289eee0">compute_profile</a> ()</td></tr>
@@ -87,28 +92,44 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a195310579d8c270d10896f7cbb75c160" id="r_a195310579d8c270d10896f7cbb75c160"><td class="memItemLeft" align="right" valign="top"><a id="a195310579d8c270d10896f7cbb75c160" name="a195310579d8c270d10896f7cbb75c160"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>enable_kalman_</b> = true</td></tr>
+<tr class="memitem:a195310579d8c270d10896f7cbb75c160" id="r_a195310579d8c270d10896f7cbb75c160"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a195310579d8c270d10896f7cbb75c160">enable_kalman_</a> = true</td></tr>
 <tr class="separator:a195310579d8c270d10896f7cbb75c160"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acefb491c375b46c8516d43a960c084f5" id="r_acefb491c375b46c8516d43a960c084f5"><td class="memItemLeft" align="right" valign="top"><a id="acefb491c375b46c8516d43a960c084f5" name="acefb491c375b46c8516d43a960c084f5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_valid_</b> = true</td></tr>
+<tr class="memitem:acefb491c375b46c8516d43a960c084f5" id="r_acefb491c375b46c8516d43a960c084f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#acefb491c375b46c8516d43a960c084f5">is_valid_</a> = true</td></tr>
 <tr class="separator:acefb491c375b46c8516d43a960c084f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32826d2513590f4f584d0e6fdf26adcc" id="r_a32826d2513590f4f584d0e6fdf26adcc"><td class="memItemLeft" align="right" valign="top"><a id="a32826d2513590f4f584d0e6fdf26adcc" name="a32826d2513590f4f584d0e6fdf26adcc"></a>
-rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><b>time_last_predict_</b></td></tr>
+<tr class="memitem:a32826d2513590f4f584d0e6fdf26adcc" id="r_a32826d2513590f4f584d0e6fdf26adcc"><td class="memItemLeft" align="right" valign="top">rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a32826d2513590f4f584d0e6fdf26adcc">time_last_predict_</a></td></tr>
 <tr class="separator:a32826d2513590f4f584d0e6fdf26adcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2303082b459b9507336e4d0dec4d7e78" id="r_a2303082b459b9507336e4d0dec4d7e78"><td class="memItemLeft" align="right" valign="top"><a id="a2303082b459b9507336e4d0dec4d7e78" name="a2303082b459b9507336e4d0dec4d7e78"></a>
-std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><b>forecast_dt_</b> = 0ms</td></tr>
+<tr class="memitem:a2303082b459b9507336e4d0dec4d7e78" id="r_a2303082b459b9507336e4d0dec4d7e78"><td class="memItemLeft" align="right" valign="top">std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a2303082b459b9507336e4d0dec4d7e78">forecast_dt_</a> = 0ms</td></tr>
 <tr class="separator:a2303082b459b9507336e4d0dec4d7e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06e248f69b5dadb339888a92296238c1" id="r_a06e248f69b5dadb339888a92296238c1"><td class="memItemLeft" align="right" valign="top"><a id="a06e248f69b5dadb339888a92296238c1" name="a06e248f69b5dadb339888a92296238c1"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_number_data_</b> = 100</td></tr>
+<tr class="memitem:a06e248f69b5dadb339888a92296238c1" id="r_a06e248f69b5dadb339888a92296238c1"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a06e248f69b5dadb339888a92296238c1">max_number_data_</a> = 100</td></tr>
 <tr class="separator:a06e248f69b5dadb339888a92296238c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae85d06a2517f9bd5cc86417c05acd943" id="r_ae85d06a2517f9bd5cc86417c05acd943"><td class="memItemLeft" align="right" valign="top"><a id="ae85d06a2517f9bd5cc86417c05acd943" name="ae85d06a2517f9bd5cc86417c05acd943"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>profile_slope_</b> = -0.3</td></tr>
+<tr class="memitem:ae85d06a2517f9bd5cc86417c05acd943" id="r_ae85d06a2517f9bd5cc86417c05acd943"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#ae85d06a2517f9bd5cc86417c05acd943">profile_slope_</a> = -0.3</td></tr>
 <tr class="separator:ae85d06a2517f9bd5cc86417c05acd943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1c4e2a4bc458976430d85f077dc6af7" id="r_ae1c4e2a4bc458976430d85f077dc6af7"><td class="memItemLeft" align="right" valign="top"><a id="ae1c4e2a4bc458976430d85f077dc6af7" name="ae1c4e2a4bc458976430d85f077dc6af7"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>profile_intercept_</b> = -5.0</td></tr>
+<tr class="memitem:ae1c4e2a4bc458976430d85f077dc6af7" id="r_ae1c4e2a4bc458976430d85f077dc6af7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#ae1c4e2a4bc458976430d85f077dc6af7">profile_intercept_</a> = -5.0</td></tr>
 <tr class="separator:ae1c4e2a4bc458976430d85f077dc6af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a7fa6e437a8ae7d20b05b7f9efcb1aa32" id="r_a7fa6e437a8ae7d20b05b7f9efcb1aa32"><td class="memItemLeft" align="right" valign="top">std::deque&lt; std::pair&lt; double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTemperatureProfile.html#a7fa6e437a8ae7d20b05b7f9efcb1aa32">temperature_depth_data_</a></td></tr>
+<tr class="separator:a7fa6e437a8ae7d20b05b7f9efcb1aa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2c480aabe949c5c74b00b86a7e3df946" name="a2c480aabe949c5c74b00b86a7e3df946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c480aabe949c5c74b00b86a7e3df946">&#9670;&#160;</a></span>TemperatureProfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TemperatureProfile::TemperatureProfile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a34a785469b46a1486d54acc9b289eee0" name="a34a785469b46a1486d54acc9b289eee0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34a785469b46a1486d54acc9b289eee0">&#9670;&#160;</a></span>compute_profile()</h2>
@@ -125,6 +146,20 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>profile_intercept_<
       </table>
 </div><div class="memdoc">
 <p>Compute the profile </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTemperatureProfile_a34a785469b46a1486d54acc9b289eee0_icgraph.png" border="0" usemap="#aclassTemperatureProfile_a34a785469b46a1486d54acc9b289eee0_icgraph" alt=""/></div>
+<map name="aclassTemperatureProfile_a34a785469b46a1486d54acc9b289eee0_icgraph" id="aclassTemperatureProfile_a34a785469b46a1486d54acc9b289eee0_icgraph">
+<area shape="rect" title=" " alt="" coords="693,5,839,45"/>
+<area shape="rect" href="classTemperatureProfileNode.html#a250f83c4e6f4dc1677a3eed7ec7fb012" title=" " alt="" coords="467,5,645,45"/>
+<area shape="poly" title=" " alt="" coords="680,28,646,28,646,23,680,23"/>
+<area shape="rect" href="classTemperatureProfileNode.html#a1ccb466eca15245e220a09bbee2dc22a" title=" " alt="" coords="240,5,419,45"/>
+<area shape="poly" title=" " alt="" coords="453,28,419,28,419,23,453,23"/>
+<area shape="rect" href="classTemperatureProfileNode.html#a7acd464a7496f4a709c191895e249056" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -159,12 +194,147 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>profile_intercept_<
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTemperatureProfile_a18e41d78be8873e916b3ef04c8377120_icgraph.png" border="0" usemap="#aclassTemperatureProfile_a18e41d78be8873e916b3ef04c8377120_icgraph" alt=""/></div>
+<map name="aclassTemperatureProfile_a18e41d78be8873e916b3ef04c8377120_icgraph" id="aclassTemperatureProfile_a18e41d78be8873e916b3ef04c8377120_icgraph">
+<area shape="rect" title=" " alt="" coords="693,5,856,45"/>
+<area shape="rect" href="classTemperatureProfileNode.html#a250f83c4e6f4dc1677a3eed7ec7fb012" title=" " alt="" coords="467,5,645,45"/>
+<area shape="poly" title=" " alt="" coords="679,28,645,28,645,23,679,23"/>
+<area shape="rect" href="classTemperatureProfileNode.html#a1ccb466eca15245e220a09bbee2dc22a" title=" " alt="" coords="240,5,419,45"/>
+<area shape="poly" title=" " alt="" coords="453,28,419,28,419,23,453,23"/>
+<area shape="rect" href="classTemperatureProfileNode.html#a7acd464a7496f4a709c191895e249056" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a195310579d8c270d10896f7cbb75c160" name="a195310579d8c270d10896f7cbb75c160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195310579d8c270d10896f7cbb75c160">&#9670;&#160;</a></span>enable_kalman_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TemperatureProfile::enable_kalman_ = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2303082b459b9507336e4d0dec4d7e78" name="a2303082b459b9507336e4d0dec4d7e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2303082b459b9507336e4d0dec4d7e78">&#9670;&#160;</a></span>forecast_dt_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::milliseconds TemperatureProfile::forecast_dt_ = 0ms</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acefb491c375b46c8516d43a960c084f5" name="acefb491c375b46c8516d43a960c084f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefb491c375b46c8516d43a960c084f5">&#9670;&#160;</a></span>is_valid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool TemperatureProfile::is_valid_ = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06e248f69b5dadb339888a92296238c1" name="a06e248f69b5dadb339888a92296238c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e248f69b5dadb339888a92296238c1">&#9670;&#160;</a></span>max_number_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t TemperatureProfile::max_number_data_ = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1c4e2a4bc458976430d85f077dc6af7" name="ae1c4e2a4bc458976430d85f077dc6af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c4e2a4bc458976430d85f077dc6af7">&#9670;&#160;</a></span>profile_intercept_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TemperatureProfile::profile_intercept_ = -5.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae85d06a2517f9bd5cc86417c05acd943" name="ae85d06a2517f9bd5cc86417c05acd943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae85d06a2517f9bd5cc86417c05acd943">&#9670;&#160;</a></span>profile_slope_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TemperatureProfile::profile_slope_ = -0.3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7fa6e437a8ae7d20b05b7f9efcb1aa32" name="a7fa6e437a8ae7d20b05b7f9efcb1aa32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fa6e437a8ae7d20b05b7f9efcb1aa32">&#9670;&#160;</a></span>temperature_depth_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt; std::pair &lt; double, double &gt; &gt; TemperatureProfile::temperature_depth_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32826d2513590f4f584d0e6fdf26adcc" name="a32826d2513590f4f584d0e6fdf26adcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32826d2513590f4f584d0e6fdf26adcc">&#9670;&#160;</a></span>time_last_predict_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Time TemperatureProfile::time_last_predict_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/include/seabot2_temperature_profile/<a class="el" href="temperature__profile_8h_source.html">temperature_profile.h</a></li>
-<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/<b>temperature_profile.cpp</b></li>
+<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/<a class="el" href="temperature__profile_8cpp.html">temperature_profile.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

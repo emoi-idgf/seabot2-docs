@@ -22,40 +22,41 @@ Program Listing for File piston_node.h
    using namespace std::chrono_literals;
    using namespace std;
    
-   class PistonNode final : public rclcpp::Node {
+   class PistonNode final: public rclcpp::Node {
    public:
-       PistonNode();
+     PistonNode();
    
    private:
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 100ms; 
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 100ms;   
    
-       bool is_detected_issue_reset_ = false;
-       rclcpp::Time time_detected_issue_reset_ = this->now();
-       std::chrono::milliseconds delay_detected_issue_reset_ = 5s;
+     bool is_detected_issue_reset_ = false;
+     rclcpp::Time time_detected_issue_reset_ = this->now();
+     std::chrono::milliseconds delay_detected_issue_reset_ = 5s;
    
-       Piston piston_;
+     Piston piston_;
    
-       std::chrono::seconds delay_no_data_ = 30s;
-       rclcpp::Time time_last_cmd_received_ = this->now();
-       int last_cmd_ = -1;
+     std::chrono::seconds delay_no_data_ = 30s;
+     rclcpp::Time time_last_cmd_received_ = this->now();
+     int last_cmd_ = -1;
    
-       int cpt_piston_error_ = 0;
-       const int cpt_piston_error_max_reset_ = 100;
+     int cpt_piston_error_ = 0;
+     const int cpt_piston_error_max_reset_ = 100;
    
-       std::chrono::seconds delay_reset_piston_ = 10s;
+     std::chrono::seconds delay_reset_piston_ = 10s;
    
-       rclcpp::Publisher<seabot2_msgs::msg::PistonState>::SharedPtr publisher_piston_state_;
-       rclcpp::Subscription<seabot2_msgs::msg::PistonSetPoint>::SharedPtr subscription_position_set_point_;
+     rclcpp::Publisher < seabot2_msgs::msg::PistonState > ::SharedPtr publisher_piston_state_;
+     rclcpp::Subscription < seabot2_msgs::msg::PistonSetPoint >
+     ::SharedPtr subscription_position_set_point_;
    
-       void timer_callback();
+     void timer_callback();
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void topic_position_set_point_callback(const seabot2_msgs::msg::PistonSetPoint &msg);
+     void topic_position_set_point_callback(const seabot2_msgs::msg::PistonSetPoint & msg);
    
    };
    

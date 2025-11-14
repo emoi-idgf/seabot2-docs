@@ -29,48 +29,48 @@ Program Listing for File thruster.h
    class Thruster
    {
    public:
-       static const uint8_t MOTOR_PWM_STOP = 150;
-       static const uint8_t MAX_PWM = 190;
-       static const uint8_t MIN_PWM = 110;
-       static const uint8_t ENABLE_MOTOR = 0x10;
+     static const uint8_t MOTOR_PWM_STOP = 150;
+     static const uint8_t MAX_PWM = 190;
+     static const uint8_t MIN_PWM = 110;
+     static const uint8_t ENABLE_MOTOR = 0x10;
    
    public:
-       Thruster(rclcpp::Node *n){
+     Thruster(rclcpp::Node * n) {
            n_ = n;
            i2c_open();
    
-       }
+     }
    
-       ~Thruster();
+     ~Thruster();
    
-       int i2c_open();
+     int i2c_open();
    
-       int write_cmd(const uint8_t &left, const uint8_t &right) const;
+     int write_cmd(const uint8_t & left, const uint8_t & right) const;
    
-       void write_enable_motors(bool enable);
+     void write_enable_motors(bool enable);
    
-       uint8_t& get_version();
+     uint8_t & get_version();
    
-       int getI2CAddr() const;
+     int getI2CAddr() const;
    
-       void setI2CAddr(int i2CAddr);
+     void setI2CAddr(int i2CAddr);
    
-       const std::string &getI2CPeriph() const;
+     const std::string & getI2CPeriph() const;
    
-       void setI2CPeriph(const std::string &i2CPeriph);
-   
-   private:
-       rclcpp::Node* n_= nullptr; 
-   
-       int file_ = 0; 
-       int i2c_addr_ = 0x20;
-       const int code_version_ = 0x01; 
-       uint8_t pic_code_version_=0; 
+     void setI2CPeriph(const std::string & i2CPeriph);
    
    private:
-       std::string i2c_periph_ = "/dev/i2c-1";
+     rclcpp::Node * n_ = nullptr; 
    
-       bool reverse_thruster_order_ = false; // not used ?
+     int file_ = 0;   
+     int i2c_addr_ = 0x20;
+     const int code_version_ = 0x01;   
+     uint8_t pic_code_version_ = 0; 
+   
+   private:
+     std::string i2c_periph_ = "/dev/i2c-1";
+   
+     bool reverse_thruster_order_ = false;   // not used ?
    
    
    };

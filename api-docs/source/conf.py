@@ -20,6 +20,7 @@ enable_exhale = True
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    "sphinx.ext.graphviz"
     ]
 
 if enable_breathe:

@@ -29,47 +29,47 @@ Program Listing for File depth_pose_node.hpp
    
    class DepthPoseNode : public rclcpp::Node {
    public:
-       DepthPoseNode();
+     DepthPoseNode();
    
    private:
+     double rho_ = 1025.0;
+     double g_ = 9.81;
+     double velocity_limit_ = 0.5;
    
-       double rho_ = 1025.0;
-       double g_ = 9.81;
-       double velocity_limit_ = 0.5;
+     double zero_depth_ = 1.0;
    
-       double zero_depth_ = 1.0;
+     deque<double> pressure_deque_;
+     size_t filter_window_size_ = 5;
+     int filter_median_remove_side_samples_ = 1;
    
-       deque<double> pressure_deque_;
-       size_t filter_window_size_ = 5;
-       int filter_median_remove_side_samples_ = 1;
+     double threshold_wrong_depth_measure_ = 1.0;
    
-       double threshold_wrong_depth_measure_ = 1.0;
-   
-       deque<pair<double, rclcpp::Time>> depth_memory_;
-       size_t filter_velocity_window_size_ = 6;
-       size_t velocity_dt_gap_sample_ = 5;
-       size_t filter_velocity_median_remove_side_samples_ = 1;
+     deque<pair<double, rclcpp::Time>> depth_memory_;
+     size_t filter_velocity_window_size_ = 6;
+     size_t velocity_dt_gap_sample_ = 5;
+     size_t filter_velocity_median_remove_side_samples_ = 1;
    
    // Zero depth
-       deque<double> pressure_zero_depth_deque_;
-       size_t zero_depth_window_size_ = 50;
+     deque<double> pressure_zero_depth_deque_;
+     size_t zero_depth_window_size_ = 50;
    
-       bool new_data_ = false;
+     bool new_data_ = false;
    
-       rclcpp::Subscription<seabot2_msgs::msg::PressureSensorData>::SharedPtr subscriber_pressure_data_;
-       rclcpp::Publisher<seabot2_msgs::msg::DepthPose>::SharedPtr publisher_depth_data_;
-       rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_zero_depth_ ;
+     rclcpp::Subscription<seabot2_msgs::msg::PressureSensorData>::SharedPtr subscriber_pressure_data_;
+     rclcpp::Publisher<seabot2_msgs::msg::DepthPose>::SharedPtr publisher_depth_data_;
+     rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_zero_depth_;
    
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void pressure_callback(const seabot2_msgs::msg::PressureSensorData &msg);
+     void pressure_callback(const seabot2_msgs::msg::PressureSensorData & msg);
    
-       void service_zero_pressure_callback(const std::shared_ptr<rmw_request_id_t> request_header,
-                                      const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
-                                      std::shared_ptr<std_srvs::srv::Trigger::Response> response);
+     void service_zero_pressure_callback(
+       const std::shared_ptr<rmw_request_id_t> request_header,
+       const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+       std::shared_ptr<std_srvs::srv::Trigger::Response> response);
    
    private:
    

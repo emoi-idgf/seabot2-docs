@@ -9,6 +9,7 @@
   <title>Struct GSW_SP_COEFFICIENTS &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct GSW_SPECVOL_COEFFICIENTS" href="structGSW__SPECVOL__COEFFICIENTS.html" />
-    <link rel="prev" title="Struct GSW_SAAR_DATA" href="structGSW__SAAR__DATA.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,37 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Struct GSW_SP_COEFFICIENTS</a><ul>
+<li><a class="reference internal" href="#struct-documentation">Struct Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv419GSW_SP_COEFFICIENTS"><code class="docutils literal notranslate"><span class="pre">GSW_SP_COEFFICIENTS</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS24init_GSW_SP_COEFFICIENTSEv"><code class="docutils literal notranslate"><span class="pre">init_GSW_SP_COEFFICIENTS()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2a0E"><code class="docutils literal notranslate"><span class="pre">a0</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2a1E"><code class="docutils literal notranslate"><span class="pre">a1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2a2E"><code class="docutils literal notranslate"><span class="pre">a2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2a3E"><code class="docutils literal notranslate"><span class="pre">a3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2a4E"><code class="docutils literal notranslate"><span class="pre">a4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2a5E"><code class="docutils literal notranslate"><span class="pre">a5</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2b0E"><code class="docutils literal notranslate"><span class="pre">b0</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2b1E"><code class="docutils literal notranslate"><span class="pre">b1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2b2E"><code class="docutils literal notranslate"><span class="pre">b2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2b3E"><code class="docutils literal notranslate"><span class="pre">b3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2b4E"><code class="docutils literal notranslate"><span class="pre">b4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2b5E"><code class="docutils literal notranslate"><span class="pre">b5</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2c0E"><code class="docutils literal notranslate"><span class="pre">c0</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2c1E"><code class="docutils literal notranslate"><span class="pre">c1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2c2E"><code class="docutils literal notranslate"><span class="pre">c2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2c3E"><code class="docutils literal notranslate"><span class="pre">c3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2c4E"><code class="docutils literal notranslate"><span class="pre">c4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2d1E"><code class="docutils literal notranslate"><span class="pre">d1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2d2E"><code class="docutils literal notranslate"><span class="pre">d2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2d3E"><code class="docutils literal notranslate"><span class="pre">d3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2d4E"><code class="docutils literal notranslate"><span class="pre">d4</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2e1E"><code class="docutils literal notranslate"><span class="pre">e1</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2e2E"><code class="docutils literal notranslate"><span class="pre">e2</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS2e3E"><code class="docutils literal notranslate"><span class="pre">e3</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N19GSW_SP_COEFFICIENTS1kE"><code class="docutils literal notranslate"><span class="pre">k</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +83,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +98,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Struct GSW_SP_COEFFICIENTS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/structGSW__SP__COEFFICIENTS.rst.txt" rel="nofollow"> View page source</a>
@@ -249,10 +264,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="structGSW__SAAR__DATA.html" class="btn btn-neutral float-left" title="Struct GSW_SAAR_DATA" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="structGSW__SPECVOL__COEFFICIENTS.html" class="btn btn-neutral float-right" title="Struct GSW_SPECVOL_COEFFICIENTS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

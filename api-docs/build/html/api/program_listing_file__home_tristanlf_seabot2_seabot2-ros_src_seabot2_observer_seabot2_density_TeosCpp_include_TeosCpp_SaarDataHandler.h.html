@@ -9,6 +9,7 @@
   <title>Program Listing for File SaarDataHandler.h &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -44,11 +45,11 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Program Listing for File SaarDataHandler.h</a></li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -132,25 +133,25 @@
 <span class="cm">****************************************/</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">SaarDataHandler</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">public</span><span class="o">:</span>
-<span class="w">        </span><span class="n">SaarDataHandler</span><span class="p">();</span>
-<span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">SaarDataHandler</span><span class="p">();</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">  </span><span class="n">SaarDataHandler</span><span class="p">();</span>
+<span class="w">  </span><span class="k">virtual</span><span class="w"> </span><span class="o">~</span><span class="n">SaarDataHandler</span><span class="p">();</span>
 
-<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_p_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
-<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_lats_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
-<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_longs_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
-<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_saar_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
-<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_ndepth_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
-<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_delta_sa_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_p_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_lats_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_longs_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_saar_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_ndepth_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">get_delta_sa_ref</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">pos</span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">private</span><span class="o">:</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">getSaarValue</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">tpos</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="nf">getDeltaSaValue</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">tpos</span><span class="p">);</span>
+<span class="k">private</span><span class="o">:</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="n">getSaarValue</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">tpos</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">double</span><span class="w"> </span><span class="nf">getDeltaSaValue</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">tpos</span><span class="p">);</span>
 
-<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getSaarArrayPos</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">valPos</span><span class="p">);</span>
-<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getDeltaSaArrayPos</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">valPos</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getSaarArrayPos</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">valPos</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getDeltaSaArrayPos</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">valPos</span><span class="p">);</span>
 
-<span class="w">        </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getOffset</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">arrayNumber</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isSaar</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">unsigned</span><span class="w"> </span><span class="nf">getOffset</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">arrayNumber</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">isSaar</span><span class="p">);</span>
 <span class="p">};</span>
 
 <span class="cp">#endif </span><span class="c1">// SAARDATAHANDLER_H</span>

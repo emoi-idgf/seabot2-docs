@@ -82,7 +82,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">filter_temperature_node.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_TEMPERATURE_FILTER_NODE_HPP</span></div>
+<a href="filter__temperature__node_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_TEMPERATURE_FILTER_NODE_HPP</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BUILD_TEMPERATURE_FILTER_NODE_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
@@ -96,32 +96,43 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classTemperatureFilterNode.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classTemperatureFilterNode.html">TemperatureFilterNode</a> final : <span class="keyword">public</span> rclcpp::Node {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classTemperatureFilterNode.html">TemperatureFilterNode</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_function" href="classTemperatureFilterNode.html#a5d6e041a4974f06557f6e22d1c09ff48">TemperatureFilterNode</a>();</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">size_t</span> filter_window_size_ = 5;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">size_t</span> filter_median_remove_side_samples_ = 1;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classTemperatureFilterNode.html#ac74476db51f13b343156ad225c0ce8c5">   17</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classTemperatureFilterNode.html#ac74476db51f13b343156ad225c0ce8c5">filter_window_size_</a> = 5;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classTemperatureFilterNode.html#a66620420fd56aaa5cc31e15d94eba9e9">   18</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classTemperatureFilterNode.html#a66620420fd56aaa5cc31e15d94eba9e9">filter_median_remove_side_samples_</a> = 1;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    deque&lt;double&gt; temperature_memory_;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classTemperatureFilterNode.html#a9fe8c603fc7c6cc5af1b6ffa18fb9094">   21</a></span>  deque&lt;double&gt; <a class="code hl_variable" href="classTemperatureFilterNode.html#a9fe8c603fc7c6cc5af1b6ffa18fb9094">temperature_memory_</a>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr subscriber_temperature_data_;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    rclcpp::Publisher&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr publisher_temperature_data_;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> init_parameters();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> init_interfaces();</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> temperature_callback(<span class="keyword">const</span> seabot2_msgs::msg::TemperatureSensorData &amp;msg);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">double</span> compute_filter(deque&lt;double&gt; queue) <span class="keyword">const</span>; </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classTemperatureFilterNode.html#a00ebdac3b707d1dbfcf190efc92fba64">   25</a></span>    <a class="code hl_variable" href="classTemperatureFilterNode.html#a00ebdac3b707d1dbfcf190efc92fba64">subscriber_temperature_data_</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classTemperatureFilterNode.html#afe3f46d094fcf0c8335a02a95cc3d126">   26</a></span>  rclcpp::Publisher&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr <a class="code hl_variable" href="classTemperatureFilterNode.html#afe3f46d094fcf0c8335a02a95cc3d126">publisher_temperature_data_</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTemperatureFilterNode.html#aa7e0412702204e984c5359ffe973c3c3">init_parameters</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTemperatureFilterNode.html#ab5f3ba9276d9fc1d32d1d5e5d30da795">init_interfaces</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classTemperatureFilterNode.html#a88f9b0bddcd05670395bbd3b6decf844">temperature_callback</a>(<span class="keyword">const</span> seabot2_msgs::msg::TemperatureSensorData &amp; msg);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">double</span> <a class="code hl_function" href="classTemperatureFilterNode.html#a779484260aa5e9fda981d6c5ad0b9476">compute_filter</a>(deque&lt;double&gt; queue) <span class="keyword">const</span>;   </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
 </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_TEMPERATURE_FILTER_NODE_HPP</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_TEMPERATURE_FILTER_NODE_HPP</span></div>
 <div class="ttc" id="aclassTemperatureFilterNode_html"><div class="ttname"><a href="classTemperatureFilterNode.html">TemperatureFilterNode</a></div><div class="ttdef"><b>Definition</b> filter_temperature_node.hpp:12</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_a00ebdac3b707d1dbfcf190efc92fba64"><div class="ttname"><a href="classTemperatureFilterNode.html#a00ebdac3b707d1dbfcf190efc92fba64">TemperatureFilterNode::subscriber_temperature_data_</a></div><div class="ttdeci">rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr subscriber_temperature_data_</div><div class="ttdoc">Interfaces.</div><div class="ttdef"><b>Definition</b> filter_temperature_node.hpp:25</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_a5d6e041a4974f06557f6e22d1c09ff48"><div class="ttname"><a href="classTemperatureFilterNode.html#a5d6e041a4974f06557f6e22d1c09ff48">TemperatureFilterNode::TemperatureFilterNode</a></div><div class="ttdeci">TemperatureFilterNode()</div><div class="ttdef"><b>Definition</b> filter_temperature_node.cpp:6</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_a66620420fd56aaa5cc31e15d94eba9e9"><div class="ttname"><a href="classTemperatureFilterNode.html#a66620420fd56aaa5cc31e15d94eba9e9">TemperatureFilterNode::filter_median_remove_side_samples_</a></div><div class="ttdeci">size_t filter_median_remove_side_samples_</div><div class="ttdef"><b>Definition</b> filter_temperature_node.hpp:18</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_a779484260aa5e9fda981d6c5ad0b9476"><div class="ttname"><a href="classTemperatureFilterNode.html#a779484260aa5e9fda981d6c5ad0b9476">TemperatureFilterNode::compute_filter</a></div><div class="ttdeci">double compute_filter(deque&lt; double &gt; queue) const</div><div class="ttdef"><b>Definition</b> filter_temperature_node.cpp:27</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_a88f9b0bddcd05670395bbd3b6decf844"><div class="ttname"><a href="classTemperatureFilterNode.html#a88f9b0bddcd05670395bbd3b6decf844">TemperatureFilterNode::temperature_callback</a></div><div class="ttdeci">void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData &amp;msg)</div><div class="ttdef"><b>Definition</b> filter_temperature_node.cpp:40</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_a9fe8c603fc7c6cc5af1b6ffa18fb9094"><div class="ttname"><a href="classTemperatureFilterNode.html#a9fe8c603fc7c6cc5af1b6ffa18fb9094">TemperatureFilterNode::temperature_memory_</a></div><div class="ttdeci">deque&lt; double &gt; temperature_memory_</div><div class="ttdoc">Variable.</div><div class="ttdef"><b>Definition</b> filter_temperature_node.hpp:21</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_aa7e0412702204e984c5359ffe973c3c3"><div class="ttname"><a href="classTemperatureFilterNode.html#aa7e0412702204e984c5359ffe973c3c3">TemperatureFilterNode::init_parameters</a></div><div class="ttdeci">void init_parameters()</div><div class="ttdoc">Functions.</div><div class="ttdef"><b>Definition</b> filter_temperature_node.cpp:16</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_ab5f3ba9276d9fc1d32d1d5e5d30da795"><div class="ttname"><a href="classTemperatureFilterNode.html#ab5f3ba9276d9fc1d32d1d5e5d30da795">TemperatureFilterNode::init_interfaces</a></div><div class="ttdeci">void init_interfaces()</div><div class="ttdef"><b>Definition</b> filter_temperature_node.cpp:57</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_ac74476db51f13b343156ad225c0ce8c5"><div class="ttname"><a href="classTemperatureFilterNode.html#ac74476db51f13b343156ad225c0ce8c5">TemperatureFilterNode::filter_window_size_</a></div><div class="ttdeci">size_t filter_window_size_</div><div class="ttdef"><b>Definition</b> filter_temperature_node.hpp:17</div></div>
+<div class="ttc" id="aclassTemperatureFilterNode_html_afe3f46d094fcf0c8335a02a95cc3d126"><div class="ttname"><a href="classTemperatureFilterNode.html#afe3f46d094fcf0c8335a02a95cc3d126">TemperatureFilterNode::publisher_temperature_data_</a></div><div class="ttdeci">rclcpp::Publisher&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr publisher_temperature_data_</div><div class="ttdef"><b>Definition</b> filter_temperature_node.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

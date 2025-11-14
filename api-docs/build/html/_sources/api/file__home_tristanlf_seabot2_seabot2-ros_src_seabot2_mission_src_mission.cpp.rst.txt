@@ -9,6 +9,11 @@ File mission.cpp
 .. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
 
 
+
+Definition of the :ref:`exhale_class_classMission` class methods. 
+
+
+
 .. contents:: Contents
    :local:
    :backlinks: none
@@ -21,6 +26,14 @@ Definition (``/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/missio
    :maxdepth: 1
 
    program_listing_file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_mission_src_mission.cpp.rst
+
+
+
+Detailed Description
+--------------------
+
+Copyright (c) 2025 
+
 
 
 

@@ -3,6 +3,7 @@
   <compounddef id="classWtfNode" kind="class" language="C++" prot="public" final="yes">
     <compoundname>WtfNode</compoundname>
     <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <includes refid="wtf__node_8hpp" local="no">wtf_node.hpp</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classWtfNode_1a8e9e8c69bbdfd71b9d45ea93a87a7524" prot="private" static="no" mutable="no">
         <type>rclcpp::TimerBase::SharedPtr</type>
@@ -17,7 +18,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="34" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="34" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="34" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ae7a641b4a95344a4b4334f0e4e93aa9b" prot="private" static="no" mutable="no">
         <type>std::chrono::milliseconds</type>
@@ -32,7 +34,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="35" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="35" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="35" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ae2b072e6fcbae4b071da837984bd8a9a" compoundref="wtf__node_8cpp" startline="95" endline="99">init_parameters</referencedby>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a1e14409a547b49259c32235d412ae397" prot="private" static="no" mutable="no">
         <type>string</type>
@@ -48,7 +52,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="37" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="37" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="37" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1560cec903bf4710d7a93b1f3c9ff729" compoundref="wtf__node_8cpp" startline="521" endline="534">update_robot</referencedby>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1adf8d0bc7957a3f8dee96509ea5ba9594" prot="private" static="no" mutable="no">
         <type>const array&lt; std::string, 4 &gt;</type>
@@ -57,16 +63,17 @@
         <name>gpsd_mode_string_</name>
         <qualifiedname>WtfNode::gpsd_mode_string_</qualifiedname>
         <initializer>= {&quot;NOT_SEEN&quot;,
-                                                     &quot;NO_FIX&quot;,
-                                                     &quot;2D&quot;,
-                                                     &quot;3D&quot;}</initializer>
+    &quot;NO_FIX&quot;,
+    &quot;2D&quot;,
+    &quot;3D&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="39" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="39" bodyend="42"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="39" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="39" bodyend="42"/>
+        <referencedby refid="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" compoundref="wtf__node_8cpp" startline="536" endline="560">update_gnss</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aea1e8b864a81804faac3e78f39088733" prot="private" static="no" mutable="no">
         <type>const array&lt; std::string, 6 &gt;</type>
@@ -75,18 +82,19 @@
         <name>piston_state_string_</name>
         <qualifiedname>WtfNode::piston_state_string_</qualifiedname>
         <initializer>= {&quot;SEARCH_SWITCH_BOTTOM&quot;,
-                                                        &quot;RELEASE_SWITCH_BOTTOM&quot;,
-                                                        &quot;BACK_SWITCH_BOTTOM&quot;,
-                                                        &quot;REGULATION&quot;,
-                                                        &quot;EXIT&quot;,
-                                                        &quot;BATT_LOW&quot;}</initializer>
+    &quot;RELEASE_SWITCH_BOTTOM&quot;,
+    &quot;BACK_SWITCH_BOTTOM&quot;,
+    &quot;REGULATION&quot;,
+    &quot;EXIT&quot;,
+    &quot;BATT_LOW&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="43" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="43" bodyend="48"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="43" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="43" bodyend="48"/>
+        <referencedby refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a80a76e3f9edcd12281b24c42b506453f" prot="private" static="no" mutable="no">
         <type>const array&lt; std::string, 6 &gt;</type>
@@ -95,18 +103,19 @@
         <name>power_state_string_</name>
         <qualifiedname>WtfNode::power_state_string_</qualifiedname>
         <initializer>= {&quot;IDLE&quot;,
-                                                       &quot;MEASURE_VOLTAGE&quot;,
-                                                       &quot;WIRE_DETECTION&quot;,
-                                                       &quot;POWER_ON&quot;,
-                                                       &quot;WAIT_TO_SLEEP&quot;,
-                                                       &quot;SLEEP&quot;}</initializer>
+    &quot;MEASURE_VOLTAGE&quot;,
+    &quot;WIRE_DETECTION&quot;,
+    &quot;POWER_ON&quot;,
+    &quot;WAIT_TO_SLEEP&quot;,
+    &quot;SLEEP&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="49" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="49" bodyend="54"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="49" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="49" bodyend="54"/>
+        <referencedby refid="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" compoundref="wtf__node_8cpp" startline="398" endline="427">update_power</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a0a6e383341e95b33a66765c2afd789a0" prot="private" static="no" mutable="no">
         <type>const array&lt; std::string, 8 &gt;</type>
@@ -115,18 +124,19 @@
         <name>depth_control_string_</name>
         <qualifiedname>WtfNode::depth_control_string_</qualifiedname>
         <initializer>= {&quot;SURFACE&quot;,
-                                                        &quot;SINK&quot;,
-                                                        &quot;CONTROL&quot;,
-                                                        &quot;EMERGENCY&quot;,
-                                                        &quot;PISTON_ISSUE&quot;,
-                                                        &quot;HOLD_DEPTH&quot;}</initializer>
+    &quot;SINK&quot;,
+    &quot;CONTROL&quot;,
+    &quot;EMERGENCY&quot;,
+    &quot;PISTON_ISSUE&quot;,
+    &quot;HOLD_DEPTH&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="56" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="56" bodyend="61"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="56" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="56" bodyend="61"/>
+        <referencedby refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1abb44ba929ef0e39ea954360cb26c444f" prot="private" static="no" mutable="no">
         <type>const array&lt; std::string, 8 &gt;</type>
@@ -135,18 +145,19 @@
         <name>mission_mode_string_</name>
         <qualifiedname>WtfNode::mission_mode_string_</qualifiedname>
         <initializer>= {&quot;IDLE&quot;,
-                                                        &quot;DEPTH_CONTROL&quot;,
-                                                         &quot;SEAFLOOR_LANDING&quot;,
-                                                         &quot;TEMPERATURE_KEEPING&quot;,
-                                                         &quot;TEMPERATURE_PROFILE&quot;,
-                                                         &quot;GNSS_PROFILE&quot;}</initializer>
+    &quot;DEPTH_CONTROL&quot;,
+    &quot;SEAFLOOR_LANDING&quot;,
+    &quot;TEMPERATURE_KEEPING&quot;,
+    &quot;TEMPERATURE_PROFILE&quot;,
+    &quot;GNSS_PROFILE&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="63" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="63" bodyend="68"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="63" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="63" bodyend="68"/>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a78865d6248a4505c2b62d2fa9a428067" prot="private" static="no" mutable="no">
         <type>const array&lt; std::string, 8 &gt;</type>
@@ -155,16 +166,17 @@
         <name>mission_state_string_</name>
         <qualifiedname>WtfNode::mission_state_string_</qualifiedname>
         <initializer>= {&quot;NOT_STARTED&quot;,
-                                                        &quot;RUNNING&quot;,
-                                                        &quot;ENDING&quot;,
-                                                        &quot;NO_WP&quot;}</initializer>
+    &quot;RUNNING&quot;,
+    &quot;ENDING&quot;,
+    &quot;NO_WP&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="69" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="69" bodyend="72"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="69" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="69" bodyend="72"/>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a001c78721cfc67e486a06d05e5e1c1c5" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -179,7 +191,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="75" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="75" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="75" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="75" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a1560cec903bf4710d7a93b1f3c9ff729" compoundref="wtf__node_8cpp" startline="521" endline="534">update_robot</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a411d41f82fc9dfbab23fdff4142280bd" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -193,7 +207,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="76" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="76" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="76" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="76" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a036814a38ce435fc18efd0315ba6faca" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -207,7 +223,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="77" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="77" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="77" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a90f86badb3be62731c9a89df493da9ae" compoundref="wtf__node_8cpp" startline="250" endline="267">update_internal_pressure_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ad3592c09144a6960962e8ed102dc7865" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -221,7 +239,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="78" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="78" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="78" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a96b890752040c1f13272cba9058da9ce" compoundref="wtf__node_8cpp" startline="429" endline="448">update_depth</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a85d09027d7a52922ce77674af2f5403b" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -235,7 +255,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="79" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="79" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="79" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" compoundref="wtf__node_8cpp" startline="398" endline="427">update_power</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a5523c6a8ace4417ee6573231859a9925" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -249,7 +271,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="80" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="80" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="80" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ac516bfe6e4adeed14df93ffde0893548" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -263,7 +287,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="81" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="81" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="81" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="81" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1adce9594dc7e26d3e6d0cdd1f4b9e51cc" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -277,7 +303,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="82" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="82" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="82" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1afebc5d8ad96b524df0c183dadd7a4dfa" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -291,7 +319,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="83" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="83" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="83" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" compoundref="wtf__node_8cpp" startline="536" endline="560">update_gnss</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a6ae85896e0d129b7c7c878b098285bc5" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -305,7 +336,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="84" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="84" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="84" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a1a5e0f1a51215aa9f9b96fe8e211bf4f" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -319,7 +352,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="85" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="85" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="85" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a7a6b3f16a8133b98f138b5966e18639b" compoundref="wtf__node_8cpp" startline="605" endline="618">update_log</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a8781d1afc44ade14f327b06704fd9f37" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -333,7 +368,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="86" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="86" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="86" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="86" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a6c207b019a04aa158b75235583b41551" compoundref="wtf__node_8cpp" startline="591" endline="603">update_audio</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a9f89299b6fa0e3bacfedb6d90c7a8961" prot="private" static="no" mutable="no">
         <type>WINDOW *</type>
@@ -347,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="87" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="87" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="87" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aa4906c7701300439ea3f577154084a2c" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -362,7 +399,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="89" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="89" bodyend="89"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="89" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="89" bodyend="89"/>
+        <referencedby refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" compoundref="wtf__node_8cpp" startline="74" endline="93">create_new_sub_window</referencedby>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a42dc30a10f703e91099959a70a9ef9bd" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -377,7 +416,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="89" column="24" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="89" bodyend="89"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="89" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="89" bodyend="89"/>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
+        <referencedby refid="classWtfNode_1a7a6b3f16a8133b98f138b5966e18639b" compoundref="wtf__node_8cpp" startline="605" endline="618">update_log</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a6c316d810dee27b83d0fb3f996d6bbd0" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -385,14 +426,16 @@
         <argsstring></argsstring>
         <name>windows_default_y_</name>
         <qualifiedname>WtfNode::windows_default_y_</qualifiedname>
-        <initializer>=4</initializer>
+        <initializer>= 4</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="90" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="90" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="90" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="90" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" compoundref="wtf__node_8cpp" startline="74" endline="93">create_new_sub_window</referencedby>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a083a4f4d3c7d89f5fc9135796fc054c2" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -400,14 +443,16 @@
         <argsstring></argsstring>
         <name>windows_current_y_</name>
         <qualifiedname>WtfNode::windows_current_y_</qualifiedname>
-        <initializer>= windows_default_y_</initializer>
+        <initializer>= <ref refid="classWtfNode_1a6c316d810dee27b83d0fb3f996d6bbd0" kindref="member">windows_default_y_</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="91" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="91" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="91" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="91" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" compoundref="wtf__node_8cpp" startline="74" endline="93">create_new_sub_window</referencedby>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a23c1931c22b3c1b93655238ed9bd5310" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -422,7 +467,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="91" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="91" bodyend="91"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="91" column="27" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="91" bodyend="91"/>
+        <referencedby refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" compoundref="wtf__node_8cpp" startline="74" endline="93">create_new_sub_window</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ab78bbe6b7bc5e6ea54b8e942556b25c7" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -437,7 +483,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="92" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="92" bodyend="92"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="92" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="92" bodyend="92"/>
+        <referencedby refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" compoundref="wtf__node_8cpp" startline="74" endline="93">create_new_sub_window</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a5075bdd0bb937e97d676c9c7b6a1bb4d" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::SafetyStatus2</type>
@@ -452,7 +499,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="96" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="96" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="96" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a01f3d81715b1a993541a33b96c67d135" compoundref="wtf__node_8cpp" startline="129" endline="134">safety_callback</referencedby>
+        <referencedby refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a07a67075f960c011b7c52e0334fd4936" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::DepthPose</type>
@@ -466,7 +515,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="97" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="97" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="97" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ae7d8988d9c712e129f8f56e56c18ae0d" compoundref="wtf__node_8cpp" startline="101" endline="106">depth_callback</referencedby>
+        <referencedby refid="classWtfNode_1a96b890752040c1f13272cba9058da9ce" compoundref="wtf__node_8cpp" startline="429" endline="448">update_depth</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1af28009acb0bc7d08f078364ecb5d74b8" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::Bme280Data</type>
@@ -480,7 +531,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="98" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="98" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="98" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="98" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a2b17d97da64a1d6c33f3dbd061a5c5f8" compoundref="wtf__node_8cpp" startline="108" endline="113">internal_sensor_callback</referencedby>
+        <referencedby refid="classWtfNode_1a90f86badb3be62731c9a89df493da9ae" compoundref="wtf__node_8cpp" startline="250" endline="267">update_internal_pressure_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1abc6f9b0aa76e00435b976b1ca1e63e6a" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::PowerState</type>
@@ -494,7 +547,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="99" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="99" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="99" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1aef77b8f7f60dad5fca102c2568067f2c" compoundref="wtf__node_8cpp" startline="115" endline="120">power_callback</referencedby>
+        <referencedby refid="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" compoundref="wtf__node_8cpp" startline="398" endline="427">update_power</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a117276bcf89b10879583e0572792dcb4" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::PistonState</type>
@@ -508,7 +563,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="100" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="100" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="100" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="100" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a47576dce610dbfde8f9928a0afed84ea" compoundref="wtf__node_8cpp" startline="122" endline="127">piston_callback</referencedby>
+        <referencedby refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</referencedby>
+        <referencedby refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a70e23573a0ad425237f277a61573528c" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::DepthControlSetPoint</type>
@@ -522,7 +580,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="101" column="45" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="101" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="101" column="43" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="101" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a3723fb3c87bd39abbc45b0d44e0b43a5" compoundref="wtf__node_8cpp" startline="143" endline="148">depth_control_set_point_callback</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a13f0cc13ac17cf0724befc3442047ee6" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::MissionState</type>
@@ -536,7 +596,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="102" column="37" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="102" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="102" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a25d21de1be0d1b1804da4f5a917ce900" compoundref="wtf__node_8cpp" startline="136" endline="141">mission_state_callback</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1af85207d6bd502e4aad494e8a3225d637" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::DepthControlDebug</type>
@@ -550,7 +612,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="103" column="42" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="103" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="103" column="40" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="103" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a77a40d02a63a346e50a902c99dea549a" compoundref="wtf__node_8cpp" startline="150" endline="155">depth_control_callback</referencedby>
+        <referencedby refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a855d33e955ceef6c218a87b30a7083a5" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::GpsFix</type>
@@ -564,7 +628,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="104" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="104" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="104" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="104" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a044b71182058532563eb8250a67fe374" compoundref="wtf__node_8cpp" startline="157" endline="162">gnss_callback</referencedby>
+        <referencedby refid="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" compoundref="wtf__node_8cpp" startline="536" endline="560">update_gnss</referencedby>
+        <referencedby refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aa7881c2cb9bfdcbf13d2489b23319042" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::Profile</type>
@@ -578,7 +645,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="105" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="105" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="105" column="30" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="105" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a971567bbf0b986e1f8e1d802af318ab0" compoundref="wtf__node_8cpp" startline="164" endline="169">profile_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aab9da55356f8f5cd4a0866bea81cee7c" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::Density</type>
@@ -592,7 +661,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="106" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="106" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="106" column="30" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="106" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a001eeb8bb6d344d9251c40b2428745e5" compoundref="wtf__node_8cpp" startline="171" endline="176">density_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a27546fad4a071e05dbf3d9e8e64333b9" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::TemperatureSensorData</type>
@@ -606,7 +677,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="107" column="46" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="107" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="107" column="44" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a16afb888cefaed54ccce49f3013dbc96" compoundref="wtf__node_8cpp" startline="178" endline="183">temperature_sensor_data_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1afdeea3034fd120047b058cff1833fc55" prot="private" static="no" mutable="no">
         <type>seabot2_msgs::msg::SyncDspic</type>
@@ -620,7 +693,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="108" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="108" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="108" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="108" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a7934c8526f8b9338a1dbfb2adabdc70d" compoundref="wtf__node_8cpp" startline="193" endline="198">audio_dspic_callback</referencedby>
+        <referencedby refid="classWtfNode_1a6c207b019a04aa158b75235583b41551" compoundref="wtf__node_8cpp" startline="591" endline="603">update_audio</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a8da82101c318b47a16becbf210a32dc4" prot="private" static="no" mutable="no">
         <type>deque&lt; rcl_interfaces::msg::Log &gt;</type>
@@ -634,7 +709,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="109" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="109" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="109" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="109" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac2bed35ce58ef638ad082bda40048231" compoundref="wtf__node_8cpp" startline="185" endline="191">log_callback</referencedby>
+        <referencedby refid="classWtfNode_1a7a6b3f16a8133b98f138b5966e18639b" compoundref="wtf__node_8cpp" startline="605" endline="618">update_log</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a976185b7b17898cd51d0b58ce98662be" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -649,7 +726,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="111" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="111" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="111" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="111" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a01f3d81715b1a993541a33b96c67d135" compoundref="wtf__node_8cpp" startline="129" endline="134">safety_callback</referencedby>
+        <referencedby refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aa297bbc302a0edc00a1098191283f8a2" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -664,7 +743,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="112" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="112" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="112" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="112" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ae7d8988d9c712e129f8f56e56c18ae0d" compoundref="wtf__node_8cpp" startline="101" endline="106">depth_callback</referencedby>
+        <referencedby refid="classWtfNode_1a96b890752040c1f13272cba9058da9ce" compoundref="wtf__node_8cpp" startline="429" endline="448">update_depth</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a2aa3f25abd20f3e477b3e903e6a861fa" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -679,7 +760,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="113" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="113" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="113" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="113" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a2b17d97da64a1d6c33f3dbd061a5c5f8" compoundref="wtf__node_8cpp" startline="108" endline="113">internal_sensor_callback</referencedby>
+        <referencedby refid="classWtfNode_1a90f86badb3be62731c9a89df493da9ae" compoundref="wtf__node_8cpp" startline="250" endline="267">update_internal_pressure_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a899b0400f5c62335d4dbb58b23893eed" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -694,7 +777,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="114" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="114" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="114" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1aef77b8f7f60dad5fca102c2568067f2c" compoundref="wtf__node_8cpp" startline="115" endline="120">power_callback</referencedby>
+        <referencedby refid="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" compoundref="wtf__node_8cpp" startline="398" endline="427">update_power</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a7db533c4dc61264dfac1eb0bdf4e703d" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -709,7 +794,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="115" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="115" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="115" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="115" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a47576dce610dbfde8f9928a0afed84ea" compoundref="wtf__node_8cpp" startline="122" endline="127">piston_callback</referencedby>
+        <referencedby refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a3a7e8cbf7bb8bd1ce7480dd5262433a0" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -724,7 +811,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="116" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="116" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="116" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="116" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a25d21de1be0d1b1804da4f5a917ce900" compoundref="wtf__node_8cpp" startline="136" endline="141">mission_state_callback</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a949c29b4ba1acff46b9f7a64e4df57fa" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -739,7 +828,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="117" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="117" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="117" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="117" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a3723fb3c87bd39abbc45b0d44e0b43a5" compoundref="wtf__node_8cpp" startline="143" endline="148">depth_control_set_point_callback</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1af3a4749bd2ea6280139d534e9e918d79" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -754,7 +845,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="118" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="118" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="118" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="118" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a77a40d02a63a346e50a902c99dea549a" compoundref="wtf__node_8cpp" startline="150" endline="155">depth_control_callback</referencedby>
+        <referencedby refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a92202008a39fe940a5f5788efe96cd2d" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -769,7 +862,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="119" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="119" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="119" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="119" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a044b71182058532563eb8250a67fe374" compoundref="wtf__node_8cpp" startline="157" endline="162">gnss_callback</referencedby>
+        <referencedby refid="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" compoundref="wtf__node_8cpp" startline="536" endline="560">update_gnss</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a3a7e9879e26003e5b27ce81fe7cb7099" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -784,7 +879,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="120" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="120" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="120" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a971567bbf0b986e1f8e1d802af318ab0" compoundref="wtf__node_8cpp" startline="164" endline="169">profile_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a8a7a1bc181daf6c2c2bce51698aa6f1d" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -799,7 +896,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="121" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="121" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="121" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a001eeb8bb6d344d9251c40b2428745e5" compoundref="wtf__node_8cpp" startline="171" endline="176">density_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ab7642248f67c425a9d64f641513ebdd5" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -814,7 +912,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="122" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="122" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="122" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="122" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a16afb888cefaed54ccce49f3013dbc96" compoundref="wtf__node_8cpp" startline="178" endline="183">temperature_sensor_data_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ab9638aab47cf00eadc75942b549ac212" prot="private" static="no" mutable="no">
         <type>rclcpp::Time</type>
@@ -829,7 +928,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="123" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="123" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="123" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a7934c8526f8b9338a1dbfb2adabdc70d" compoundref="wtf__node_8cpp" startline="193" endline="198">audio_dspic_callback</referencedby>
+        <referencedby refid="classWtfNode_1a6c207b019a04aa158b75235583b41551" compoundref="wtf__node_8cpp" startline="591" endline="603">update_audio</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a0e664070b500427b2ecea731e8b08d41" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -844,7 +945,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="125" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="125" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="125" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="125" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a01f3d81715b1a993541a33b96c67d135" compoundref="wtf__node_8cpp" startline="129" endline="134">safety_callback</referencedby>
+        <referencedby refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a0921a51666f4b0594289a56dddba36b7" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -859,7 +962,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="126" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="126" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="126" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="126" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ae7d8988d9c712e129f8f56e56c18ae0d" compoundref="wtf__node_8cpp" startline="101" endline="106">depth_callback</referencedby>
+        <referencedby refid="classWtfNode_1a96b890752040c1f13272cba9058da9ce" compoundref="wtf__node_8cpp" startline="429" endline="448">update_depth</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a7946969f5f3ba66632110abf705669bc" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -874,7 +979,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="127" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="127" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="127" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="127" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a2b17d97da64a1d6c33f3dbd061a5c5f8" compoundref="wtf__node_8cpp" startline="108" endline="113">internal_sensor_callback</referencedby>
+        <referencedby refid="classWtfNode_1a90f86badb3be62731c9a89df493da9ae" compoundref="wtf__node_8cpp" startline="250" endline="267">update_internal_pressure_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1af038bda3004bbca129eeeae626607404" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -889,7 +996,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="128" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="128" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="128" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="128" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1aef77b8f7f60dad5fca102c2568067f2c" compoundref="wtf__node_8cpp" startline="115" endline="120">power_callback</referencedby>
+        <referencedby refid="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" compoundref="wtf__node_8cpp" startline="398" endline="427">update_power</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a3c5a3278ab4eea8592b0160628b4b928" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -904,7 +1013,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="129" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="129" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="129" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="129" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a47576dce610dbfde8f9928a0afed84ea" compoundref="wtf__node_8cpp" startline="122" endline="127">piston_callback</referencedby>
+        <referencedby refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aed408f0f334e26e75ca196a5c4c1c75e" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -919,7 +1030,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="130" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="130" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="130" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="130" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a25d21de1be0d1b1804da4f5a917ce900" compoundref="wtf__node_8cpp" startline="136" endline="141">mission_state_callback</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a480bb41fa743680d2e50bc4022f9c939" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -934,7 +1047,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="131" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="131" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="131" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="131" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a3723fb3c87bd39abbc45b0d44e0b43a5" compoundref="wtf__node_8cpp" startline="143" endline="148">depth_control_set_point_callback</referencedby>
+        <referencedby refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1adc03dabce1bdd28f7c44268e57110943" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -949,7 +1064,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="132" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="132" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="132" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="132" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a77a40d02a63a346e50a902c99dea549a" compoundref="wtf__node_8cpp" startline="150" endline="155">depth_control_callback</referencedby>
+        <referencedby refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a40b7b2d78bfc8657873171c747ab4158" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -964,7 +1081,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="133" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="133" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="133" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="133" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a044b71182058532563eb8250a67fe374" compoundref="wtf__node_8cpp" startline="157" endline="162">gnss_callback</referencedby>
+        <referencedby refid="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" compoundref="wtf__node_8cpp" startline="536" endline="560">update_gnss</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aa0f199a59b6ae27eb4ecc650c3f2e387" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -979,7 +1098,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="134" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="134" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="134" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="134" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a971567bbf0b986e1f8e1d802af318ab0" compoundref="wtf__node_8cpp" startline="164" endline="169">profile_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1af918eddb5fcb2bd34ad8a87e10e27865" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -994,7 +1115,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="135" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="135" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="135" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="135" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a001eeb8bb6d344d9251c40b2428745e5" compoundref="wtf__node_8cpp" startline="171" endline="176">density_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1afe9c60099a2ebe121da390bc2934cb56" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -1009,7 +1132,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="136" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="136" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="136" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="136" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a16afb888cefaed54ccce49f3013dbc96" compoundref="wtf__node_8cpp" startline="178" endline="183">temperature_sensor_data_callback</referencedby>
+        <referencedby refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a56e25d3eeb23abca6e9af13fc8b29e08" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -1024,7 +1149,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="137" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="137" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="137" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="137" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a7934c8526f8b9338a1dbfb2adabdc70d" compoundref="wtf__node_8cpp" startline="193" endline="198">audio_dspic_callback</referencedby>
+        <referencedby refid="classWtfNode_1a6c207b019a04aa158b75235583b41551" compoundref="wtf__node_8cpp" startline="591" endline="603">update_audio</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aa50797b7f018d004b11583a392cfe432" prot="private" static="no" mutable="no">
         <type>size_t</type>
@@ -1039,7 +1166,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="138" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="138" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="138" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="138" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1ac2bed35ce58ef638ad082bda40048231" compoundref="wtf__node_8cpp" startline="185" endline="191">log_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aab8315b9e03b8954b774eadc94092cf3" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::SafetyStatus2 &gt;::SharedPtr</type>
@@ -1054,7 +1182,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="141" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="141" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="141" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="141" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1abacd0f3776c65010d39648c0345ceeb3" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthPose &gt;::SharedPtr</type>
@@ -1068,7 +1197,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="142" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="142" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="142" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="142" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a2da4e5f2e3968b00344ec230152a5175" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr</type>
@@ -1082,7 +1212,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="143" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="143" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="143" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="143" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a62172df65ab382f4598a54853f1eb4e4" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::PowerState &gt;::SharedPtr</type>
@@ -1096,7 +1227,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="144" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="144" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="144" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="144" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1ad80cf62b065577761a7f0f09548b76bf" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::PistonState &gt;::SharedPtr</type>
@@ -1110,7 +1242,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="145" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="145" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="145" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1afdacc5f27b820309f20fa17ec71b14bc" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::MissionState &gt;::SharedPtr</type>
@@ -1124,7 +1257,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="146" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="146" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="146" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="146" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a1b60e86f151a10f396fc7f0190b3f8e9" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthControlSetPoint &gt;::SharedPtr</type>
@@ -1138,7 +1272,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="147" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="147" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="148" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="148" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a77b8c079b0e8e37c473bf1bc5384ca84" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthControlDebug &gt;::SharedPtr</type>
@@ -1152,7 +1287,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="148" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="148" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="149" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="149" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1abb581fcf11af379831490b080393158e" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::GpsFix &gt;::SharedPtr</type>
@@ -1166,7 +1302,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="149" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="149" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="150" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="150" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aafd69d0bf05ee27c48824ce78e6e2209" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Profile &gt;::SharedPtr</type>
@@ -1180,7 +1317,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="150" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="150" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="151" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="151" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1af499174b77e6bf53d8554acecb585a04" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::Density &gt;::SharedPtr</type>
@@ -1194,7 +1332,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="151" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="151" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="152" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="152" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1aec4b5345774725cca1d4c1ed790de208" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr</type>
@@ -1208,7 +1347,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="152" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="152" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="154" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="154" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a0a31c3764c671a03bd4d42f18bae4ed6" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; rcl_interfaces::msg::Log &gt;::SharedPtr</type>
@@ -1222,7 +1362,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="153" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="153" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="155" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="155" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classWtfNode_1a5c2c9c4c8456e33725b098bc7b9a32dc" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::SyncDspic &gt;::SharedPtr</type>
@@ -1236,7 +1377,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="154" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="154" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="156" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="156" bodyend="-1"/>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -1252,7 +1394,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="29" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="13" bodyend="34"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="29" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="13" bodyend="35"/>
+        <references refid="wtf__node_8cpp_1a56e1aea61ee305e3648158362333b3a8" compoundref="wtf__node_8cpp" startline="9">COLOR_DEFAULT</references>
+        <references refid="wtf__node_8cpp_1a1c975cd775b1faedc5d288022ca574a9" compoundref="wtf__node_8cpp" startline="11">COLOR_NOT_VALID</references>
+        <references refid="wtf__node_8cpp_1a051d21309d81ec4caac403ffcda2736e" compoundref="wtf__node_8cpp" startline="10">COLOR_VALID</references>
+        <references refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</references>
+        <references refid="classWtfNode_1a1e14409a547b49259c32235d412ae397" compoundref="wtf__node_8hpp" startline="37">hostname_</references>
+        <references refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</references>
+        <references refid="classWtfNode_1ae2b072e6fcbae4b071da837984bd8a9a" compoundref="wtf__node_8cpp" startline="95" endline="99">init_parameters</references>
+        <references refid="classWtfNode_1ae7a641b4a95344a4b4334f0e4e93aa9b" compoundref="wtf__node_8hpp" startline="35">loop_dt_</references>
+        <references refid="classWtfNode_1a8e9e8c69bbdfd71b9d45ea93a87a7524" compoundref="wtf__node_8hpp" startline="34">timer_</references>
+        <references refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</references>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a37c563b33b79945ace875634c89b6a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1266,7 +1418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="30" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="67" bodyend="69"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="30" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="69" bodyend="72"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -1283,7 +1435,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="159" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="91" bodyend="94"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="161" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="95" bodyend="99"/>
+        <references refid="classWtfNode_1ae7a641b4a95344a4b4334f0e4e93aa9b" compoundref="wtf__node_8hpp" startline="35">loop_dt_</references>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1298,7 +1452,36 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="164" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="181" bodyend="224"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="166" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="200" bodyend="248"/>
+        <references refid="classWtfNode_1a7934c8526f8b9338a1dbfb2adabdc70d" compoundref="wtf__node_8cpp" startline="193" endline="198">audio_dspic_callback</references>
+        <references refid="classWtfNode_1a001eeb8bb6d344d9251c40b2428745e5" compoundref="wtf__node_8cpp" startline="171" endline="176">density_callback</references>
+        <references refid="classWtfNode_1ae7d8988d9c712e129f8f56e56c18ae0d" compoundref="wtf__node_8cpp" startline="101" endline="106">depth_callback</references>
+        <references refid="classWtfNode_1a77a40d02a63a346e50a902c99dea549a" compoundref="wtf__node_8cpp" startline="150" endline="155">depth_control_callback</references>
+        <references refid="classWtfNode_1a3723fb3c87bd39abbc45b0d44e0b43a5" compoundref="wtf__node_8cpp" startline="143" endline="148">depth_control_set_point_callback</references>
+        <references refid="classWtfNode_1a044b71182058532563eb8250a67fe374" compoundref="wtf__node_8cpp" startline="157" endline="162">gnss_callback</references>
+        <references refid="classWtfNode_1a2b17d97da64a1d6c33f3dbd061a5c5f8" compoundref="wtf__node_8cpp" startline="108" endline="113">internal_sensor_callback</references>
+        <references refid="classWtfNode_1ac2bed35ce58ef638ad082bda40048231" compoundref="wtf__node_8cpp" startline="185" endline="191">log_callback</references>
+        <references refid="classWtfNode_1a25d21de1be0d1b1804da4f5a917ce900" compoundref="wtf__node_8cpp" startline="136" endline="141">mission_state_callback</references>
+        <references refid="classWtfNode_1a47576dce610dbfde8f9928a0afed84ea" compoundref="wtf__node_8cpp" startline="122" endline="127">piston_callback</references>
+        <references refid="classWtfNode_1aef77b8f7f60dad5fca102c2568067f2c" compoundref="wtf__node_8cpp" startline="115" endline="120">power_callback</references>
+        <references refid="classWtfNode_1a971567bbf0b986e1f8e1d802af318ab0" compoundref="wtf__node_8cpp" startline="164" endline="169">profile_callback</references>
+        <references refid="classWtfNode_1a01f3d81715b1a993541a33b96c67d135" compoundref="wtf__node_8cpp" startline="129" endline="134">safety_callback</references>
+        <references refid="classWtfNode_1a5c2c9c4c8456e33725b098bc7b9a32dc" compoundref="wtf__node_8hpp" startline="156">subscriber_audio_dspic_</references>
+        <references refid="classWtfNode_1a77b8c079b0e8e37c473bf1bc5384ca84" compoundref="wtf__node_8hpp" startline="149">subscriber_control_debug_</references>
+        <references refid="classWtfNode_1af499174b77e6bf53d8554acecb585a04" compoundref="wtf__node_8hpp" startline="152">subscriber_density_</references>
+        <references refid="classWtfNode_1a1b60e86f151a10f396fc7f0190b3f8e9" compoundref="wtf__node_8hpp" startline="148">subscriber_depth_control_set_point_</references>
+        <references refid="classWtfNode_1abacd0f3776c65010d39648c0345ceeb3" compoundref="wtf__node_8hpp" startline="142">subscriber_depth_data_</references>
+        <references refid="classWtfNode_1abb581fcf11af379831490b080393158e" compoundref="wtf__node_8hpp" startline="150">subscriber_gnss_</references>
+        <references refid="classWtfNode_1a2da4e5f2e3968b00344ec230152a5175" compoundref="wtf__node_8hpp" startline="143">subscriber_internal_sensor_filter_</references>
+        <references refid="classWtfNode_1a0a31c3764c671a03bd4d42f18bae4ed6" compoundref="wtf__node_8hpp" startline="155">subscriber_log_</references>
+        <references refid="classWtfNode_1afdacc5f27b820309f20fa17ec71b14bc" compoundref="wtf__node_8hpp" startline="146">subscriber_mission_state_</references>
+        <references refid="classWtfNode_1ad80cf62b065577761a7f0f09548b76bf" compoundref="wtf__node_8hpp" startline="145">subscriber_piston_data_</references>
+        <references refid="classWtfNode_1a62172df65ab382f4598a54853f1eb4e4" compoundref="wtf__node_8hpp" startline="144">subscriber_power_data_</references>
+        <references refid="classWtfNode_1aafd69d0bf05ee27c48824ce78e6e2209" compoundref="wtf__node_8hpp" startline="151">subscriber_profile_</references>
+        <references refid="classWtfNode_1aab8315b9e03b8954b774eadc94092cf3" compoundref="wtf__node_8hpp" startline="141">subscriber_safety_</references>
+        <references refid="classWtfNode_1aec4b5345774725cca1d4c1ed790de208" compoundref="wtf__node_8hpp" startline="154">subscriber_temperature_sensor_data_</references>
+        <references refid="classWtfNode_1a16afb888cefaed54ccce49f3013dbc96" compoundref="wtf__node_8cpp" startline="178" endline="183">temperature_sensor_data_callback</references>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1313,7 +1496,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="169" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="563" bodyend="576"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="171" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="620" bodyend="634"/>
+        <references refid="classWtfNode_1a6c207b019a04aa158b75235583b41551" compoundref="wtf__node_8cpp" startline="591" endline="603">update_audio</references>
+        <references refid="classWtfNode_1a96b890752040c1f13272cba9058da9ce" compoundref="wtf__node_8cpp" startline="429" endline="448">update_depth</references>
+        <references refid="classWtfNode_1a40147e472272f265f0d61d4cd7966853" compoundref="wtf__node_8cpp" startline="492" endline="519">update_depth_control</references>
+        <references refid="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" compoundref="wtf__node_8cpp" startline="536" endline="560">update_gnss</references>
+        <references refid="classWtfNode_1a90f86badb3be62731c9a89df493da9ae" compoundref="wtf__node_8cpp" startline="250" endline="267">update_internal_pressure_windows</references>
+        <references refid="classWtfNode_1a7a6b3f16a8133b98f138b5966e18639b" compoundref="wtf__node_8cpp" startline="605" endline="618">update_log</references>
+        <references refid="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" compoundref="wtf__node_8cpp" startline="269" endline="313">update_mission_windows</references>
+        <references refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</references>
+        <references refid="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" compoundref="wtf__node_8cpp" startline="398" endline="427">update_power</references>
+        <references refid="classWtfNode_1a1560cec903bf4710d7a93b1f3c9ff729" compoundref="wtf__node_8cpp" startline="521" endline="534">update_robot</references>
+        <references refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</references>
+        <references refid="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" compoundref="wtf__node_8cpp" startline="562" endline="589">update_sensors</references>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ae7d8988d9c712e129f8f56e56c18ae0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1341,7 +1537,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="175" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="96" bodyend="100"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="177" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="101" bodyend="106"/>
+        <references refid="classWtfNode_1a07a67075f960c011b7c52e0334fd4936" compoundref="wtf__node_8hpp" startline="97">msg_depth_data_</references>
+        <references refid="classWtfNode_1a0921a51666f4b0594289a56dddba36b7" compoundref="wtf__node_8hpp" startline="126">msg_first_received_depth_data_</references>
+        <references refid="classWtfNode_1aa297bbc302a0edc00a1098191283f8a2" compoundref="wtf__node_8hpp" startline="112">time_last_depth_data_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a2b17d97da64a1d6c33f3dbd061a5c5f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1369,7 +1569,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="181" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="102" bodyend="106"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="183" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="108" bodyend="113"/>
+        <references refid="classWtfNode_1a7946969f5f3ba66632110abf705669bc" compoundref="wtf__node_8hpp" startline="127">msg_first_received_internal_sensor_filter_</references>
+        <references refid="classWtfNode_1af28009acb0bc7d08f078364ecb5d74b8" compoundref="wtf__node_8hpp" startline="98">msg_internal_sensor_filter_</references>
+        <references refid="classWtfNode_1a2aa3f25abd20f3e477b3e903e6a861fa" compoundref="wtf__node_8hpp" startline="113">time_last_internal_sensor_filter_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1aef77b8f7f60dad5fca102c2568067f2c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1397,7 +1601,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="187" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="108" bodyend="112"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="189" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="115" bodyend="120"/>
+        <references refid="classWtfNode_1af038bda3004bbca129eeeae626607404" compoundref="wtf__node_8hpp" startline="128">msg_first_received_power_data_</references>
+        <references refid="classWtfNode_1abc6f9b0aa76e00435b976b1ca1e63e6a" compoundref="wtf__node_8hpp" startline="99">msg_power_data_</references>
+        <references refid="classWtfNode_1a899b0400f5c62335d4dbb58b23893eed" compoundref="wtf__node_8hpp" startline="114">time_last_power_data_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a47576dce610dbfde8f9928a0afed84ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1425,7 +1633,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="193" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="114" bodyend="118"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="195" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="122" bodyend="127"/>
+        <references refid="classWtfNode_1a3c5a3278ab4eea8592b0160628b4b928" compoundref="wtf__node_8hpp" startline="129">msg_first_received_piston_data_</references>
+        <references refid="classWtfNode_1a117276bcf89b10879583e0572792dcb4" compoundref="wtf__node_8hpp" startline="100">msg_piston_data_</references>
+        <references refid="classWtfNode_1a7db533c4dc61264dfac1eb0bdf4e703d" compoundref="wtf__node_8hpp" startline="115">time_last_piston_data_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a01f3d81715b1a993541a33b96c67d135" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1453,7 +1665,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="199" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="120" bodyend="124"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="201" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="129" bodyend="134"/>
+        <references refid="classWtfNode_1a0e664070b500427b2ecea731e8b08d41" compoundref="wtf__node_8hpp" startline="125">msg_first_received_safety_</references>
+        <references refid="classWtfNode_1a5075bdd0bb937e97d676c9c7b6a1bb4d" compoundref="wtf__node_8hpp" startline="96">msg_safety_</references>
+        <references refid="classWtfNode_1a976185b7b17898cd51d0b58ce98662be" compoundref="wtf__node_8hpp" startline="111">time_last_safety_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a25d21de1be0d1b1804da4f5a917ce900" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1481,7 +1697,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="205" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="126" bodyend="130"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="207" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="136" bodyend="141"/>
+        <references refid="classWtfNode_1aed408f0f334e26e75ca196a5c4c1c75e" compoundref="wtf__node_8hpp" startline="130">msg_first_received_mission_state_</references>
+        <references refid="classWtfNode_1a13f0cc13ac17cf0724befc3442047ee6" compoundref="wtf__node_8hpp" startline="102">msg_mission_state_</references>
+        <references refid="classWtfNode_1a3a7e8cbf7bb8bd1ce7480dd5262433a0" compoundref="wtf__node_8hpp" startline="116">time_last_mission_state_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a3723fb3c87bd39abbc45b0d44e0b43a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1509,7 +1729,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="211" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="132" bodyend="136"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="213" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="143" bodyend="148"/>
+        <references refid="classWtfNode_1a70e23573a0ad425237f277a61573528c" compoundref="wtf__node_8hpp" startline="101">msg_depth_control_set_point_</references>
+        <references refid="classWtfNode_1a480bb41fa743680d2e50bc4022f9c939" compoundref="wtf__node_8hpp" startline="131">msg_first_received_depth_control_set_point</references>
+        <references refid="classWtfNode_1a949c29b4ba1acff46b9f7a64e4df57fa" compoundref="wtf__node_8hpp" startline="117">time_last_depth_control_set_point_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a77a40d02a63a346e50a902c99dea549a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1537,7 +1761,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="217" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="138" bodyend="142"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="219" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="150" bodyend="155"/>
+        <references refid="classWtfNode_1af85207d6bd502e4aad494e8a3225d637" compoundref="wtf__node_8hpp" startline="103">msg_depth_control_</references>
+        <references refid="classWtfNode_1adc03dabce1bdd28f7c44268e57110943" compoundref="wtf__node_8hpp" startline="132">msg_first_received_depth_control_</references>
+        <references refid="classWtfNode_1af3a4749bd2ea6280139d534e9e918d79" compoundref="wtf__node_8hpp" startline="118">time_last_depth_control_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a044b71182058532563eb8250a67fe374" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1565,7 +1793,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="223" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="144" bodyend="148"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="225" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="157" bodyend="162"/>
+        <references refid="classWtfNode_1a40b7b2d78bfc8657873171c747ab4158" compoundref="wtf__node_8hpp" startline="133">msg_first_received_gnss_</references>
+        <references refid="classWtfNode_1a855d33e955ceef6c218a87b30a7083a5" compoundref="wtf__node_8hpp" startline="104">msg_gnss_</references>
+        <references refid="classWtfNode_1a92202008a39fe940a5f5788efe96cd2d" compoundref="wtf__node_8hpp" startline="119">time_last_gnss_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a971567bbf0b986e1f8e1d802af318ab0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1593,7 +1825,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="229" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="150" bodyend="154"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="231" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="164" bodyend="169"/>
+        <references refid="classWtfNode_1aa0f199a59b6ae27eb4ecc650c3f2e387" compoundref="wtf__node_8hpp" startline="134">msg_first_received_profile_</references>
+        <references refid="classWtfNode_1aa7881c2cb9bfdcbf13d2489b23319042" compoundref="wtf__node_8hpp" startline="105">msg_profile_</references>
+        <references refid="classWtfNode_1a3a7e9879e26003e5b27ce81fe7cb7099" compoundref="wtf__node_8hpp" startline="120">time_last_profile_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a001eeb8bb6d344d9251c40b2428745e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1621,7 +1857,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="235" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="156" bodyend="160"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="237" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="171" bodyend="176"/>
+        <references refid="classWtfNode_1aab9da55356f8f5cd4a0866bea81cee7c" compoundref="wtf__node_8hpp" startline="106">msg_density_</references>
+        <references refid="classWtfNode_1af918eddb5fcb2bd34ad8a87e10e27865" compoundref="wtf__node_8hpp" startline="135">msg_first_received_density_</references>
+        <references refid="classWtfNode_1a8a7a1bc181daf6c2c2bce51698aa6f1d" compoundref="wtf__node_8hpp" startline="121">time_last_density_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a16afb888cefaed54ccce49f3013dbc96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1649,7 +1889,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="241" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="162" bodyend="166"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="243" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="178" bodyend="183"/>
+        <references refid="classWtfNode_1afe9c60099a2ebe121da390bc2934cb56" compoundref="wtf__node_8hpp" startline="136">msg_first_received_temperature_sensor_data_</references>
+        <references refid="classWtfNode_1a27546fad4a071e05dbf3d9e8e64333b9" compoundref="wtf__node_8hpp" startline="107">msg_temperature_sensor_data_</references>
+        <references refid="classWtfNode_1ab7642248f67c425a9d64f641513ebdd5" compoundref="wtf__node_8hpp" startline="122">time_last_temperature_sensor_data_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ac2bed35ce58ef638ad082bda40048231" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1677,7 +1921,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="247" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="168" bodyend="173"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="249" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="185" bodyend="191"/>
+        <references refid="classWtfNode_1a8da82101c318b47a16becbf210a32dc4" compoundref="wtf__node_8hpp" startline="109">msg_queue_log_</references>
+        <references refid="classWtfNode_1aa50797b7f018d004b11583a392cfe432" compoundref="wtf__node_8hpp" startline="138">msg_queue_log_size_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a7934c8526f8b9338a1dbfb2adabdc70d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1705,7 +1952,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="253" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="175" bodyend="179"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="255" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="193" bodyend="198"/>
+        <references refid="classWtfNode_1afdeea3034fd120047b058cff1833fc55" compoundref="wtf__node_8hpp" startline="108">msg_audio_dspic_</references>
+        <references refid="classWtfNode_1a56e25d3eeb23abca6e9af13fc8b29e08" compoundref="wtf__node_8hpp" startline="137">msg_first_received_audio_dspic_</references>
+        <references refid="classWtfNode_1ab9638aab47cf00eadc75942b549ac212" compoundref="wtf__node_8hpp" startline="123">time_last_audio_dspic_</references>
+        <referencedby refid="classWtfNode_1a1c20ca976b7d5ccc238ad13a3afa11b8" compoundref="wtf__node_8cpp" startline="200" endline="248">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1720,7 +1971,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="258" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="298" bodyend="352"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="260" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="331" bodyend="396"/>
+        <references refid="wtf__node_8cpp_1a56e1aea61ee305e3648158362333b3a8" compoundref="wtf__node_8cpp" startline="9">COLOR_DEFAULT</references>
+        <references refid="classWtfNode_1a0e664070b500427b2ecea731e8b08d41" compoundref="wtf__node_8hpp" startline="125">msg_first_received_safety_</references>
+        <references refid="classWtfNode_1a855d33e955ceef6c218a87b30a7083a5" compoundref="wtf__node_8hpp" startline="104">msg_gnss_</references>
+        <references refid="classWtfNode_1a5075bdd0bb937e97d676c9c7b6a1bb4d" compoundref="wtf__node_8hpp" startline="96">msg_safety_</references>
+        <references refid="classWtfNode_1a8910ca3c3c9e33f9bc5c050b9cc24aa8" compoundref="wtf__node_8cpp" startline="320" endline="329">set_color_valid</references>
+        <references refid="classWtfNode_1a976185b7b17898cd51d0b58ce98662be" compoundref="wtf__node_8hpp" startline="111">time_last_safety_</references>
+        <references refid="classWtfNode_1a411d41f82fc9dfbab23fdff4142280bd" compoundref="wtf__node_8hpp" startline="76">windows_safety_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1afac0c50d70b42f692de9e4f9504d8862" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1735,7 +1994,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="263" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="243" bodyend="282"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="265" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="269" bodyend="313"/>
+        <references refid="classWtfNode_1abb44ba929ef0e39ea954360cb26c444f" compoundref="wtf__node_8hpp" startline="63" endline="68">mission_mode_string_</references>
+        <references refid="classWtfNode_1a78865d6248a4505c2b62d2fa9a428067" compoundref="wtf__node_8hpp" startline="69" endline="72">mission_state_string_</references>
+        <references refid="classWtfNode_1a70e23573a0ad425237f277a61573528c" compoundref="wtf__node_8hpp" startline="101">msg_depth_control_set_point_</references>
+        <references refid="classWtfNode_1a480bb41fa743680d2e50bc4022f9c939" compoundref="wtf__node_8hpp" startline="131">msg_first_received_depth_control_set_point</references>
+        <references refid="classWtfNode_1aed408f0f334e26e75ca196a5c4c1c75e" compoundref="wtf__node_8hpp" startline="130">msg_first_received_mission_state_</references>
+        <references refid="classWtfNode_1a13f0cc13ac17cf0724befc3442047ee6" compoundref="wtf__node_8hpp" startline="102">msg_mission_state_</references>
+        <references refid="classWtfNode_1a949c29b4ba1acff46b9f7a64e4df57fa" compoundref="wtf__node_8hpp" startline="117">time_last_depth_control_set_point_</references>
+        <references refid="classWtfNode_1a3a7e8cbf7bb8bd1ce7480dd5262433a0" compoundref="wtf__node_8hpp" startline="116">time_last_mission_state_</references>
+        <references refid="classWtfNode_1adce9594dc7e26d3e6d0cdd1f4b9e51cc" compoundref="wtf__node_8hpp" startline="82">windows_mission_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a90f86badb3be62731c9a89df493da9ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1750,7 +2019,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="268" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="226" bodyend="241"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="270" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="250" bodyend="267"/>
+        <references refid="classWtfNode_1a7946969f5f3ba66632110abf705669bc" compoundref="wtf__node_8hpp" startline="127">msg_first_received_internal_sensor_filter_</references>
+        <references refid="classWtfNode_1af28009acb0bc7d08f078364ecb5d74b8" compoundref="wtf__node_8hpp" startline="98">msg_internal_sensor_filter_</references>
+        <references refid="classWtfNode_1a2aa3f25abd20f3e477b3e903e6a861fa" compoundref="wtf__node_8hpp" startline="113">time_last_internal_sensor_filter_</references>
+        <references refid="classWtfNode_1a036814a38ce435fc18efd0315ba6faca" compoundref="wtf__node_8hpp" startline="77">windows_internal_pressure_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ada14096e7f9587ed99917bb4e23ef57d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1765,7 +2039,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="273" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="354" bodyend="381"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="275" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="398" bodyend="427"/>
+        <references refid="classWtfNode_1af038bda3004bbca129eeeae626607404" compoundref="wtf__node_8hpp" startline="128">msg_first_received_power_data_</references>
+        <references refid="classWtfNode_1abc6f9b0aa76e00435b976b1ca1e63e6a" compoundref="wtf__node_8hpp" startline="99">msg_power_data_</references>
+        <references refid="classWtfNode_1a80a76e3f9edcd12281b24c42b506453f" compoundref="wtf__node_8hpp" startline="49" endline="54">power_state_string_</references>
+        <references refid="classWtfNode_1a899b0400f5c62335d4dbb58b23893eed" compoundref="wtf__node_8hpp" startline="114">time_last_power_data_</references>
+        <references refid="classWtfNode_1a85d09027d7a52922ce77674af2f5403b" compoundref="wtf__node_8hpp" startline="79">windows_power_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a96b890752040c1f13272cba9058da9ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1780,7 +2060,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="278" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="383" bodyend="401"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="280" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="429" bodyend="448"/>
+        <references refid="classWtfNode_1a07a67075f960c011b7c52e0334fd4936" compoundref="wtf__node_8hpp" startline="97">msg_depth_data_</references>
+        <references refid="classWtfNode_1a0921a51666f4b0594289a56dddba36b7" compoundref="wtf__node_8hpp" startline="126">msg_first_received_depth_data_</references>
+        <references refid="classWtfNode_1aa297bbc302a0edc00a1098191283f8a2" compoundref="wtf__node_8hpp" startline="112">time_last_depth_data_</references>
+        <references refid="classWtfNode_1ad3592c09144a6960962e8ed102dc7865" compoundref="wtf__node_8hpp" startline="78">windows_depth_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ae480cb172c0a463c3699a5593817634b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1795,7 +2080,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="283" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="403" bodyend="442"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="285" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="450" bodyend="490"/>
+        <references refid="classWtfNode_1ad2fb483c72ae088a7550fb479d70da52" compoundref="wtf__node_8cpp" startline="315" endline="318">get_bool_text</references>
+        <references refid="classWtfNode_1a3c5a3278ab4eea8592b0160628b4b928" compoundref="wtf__node_8hpp" startline="129">msg_first_received_piston_data_</references>
+        <references refid="classWtfNode_1a117276bcf89b10879583e0572792dcb4" compoundref="wtf__node_8hpp" startline="100">msg_piston_data_</references>
+        <references refid="classWtfNode_1aea1e8b864a81804faac3e78f39088733" compoundref="wtf__node_8hpp" startline="43" endline="48">piston_state_string_</references>
+        <references refid="classWtfNode_1a7db533c4dc61264dfac1eb0bdf4e703d" compoundref="wtf__node_8hpp" startline="115">time_last_piston_data_</references>
+        <references refid="classWtfNode_1ac516bfe6e4adeed14df93ffde0893548" compoundref="wtf__node_8hpp" startline="81">windows_piston_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a1560cec903bf4710d7a93b1f3c9ff729" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1810,7 +2102,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="288" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="470" bodyend="482"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="290" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="521" bodyend="534"/>
+        <references refid="classWtfNode_1a1e14409a547b49259c32235d412ae397" compoundref="wtf__node_8hpp" startline="37">hostname_</references>
+        <references refid="classWtfNode_1a001c78721cfc67e486a06d05e5e1c1c5" compoundref="wtf__node_8hpp" startline="75">windows_robot_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a40147e472272f265f0d61d4cd7966853" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1825,7 +2120,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="293" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="444" bodyend="468"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="295" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="492" bodyend="519"/>
+        <references refid="classWtfNode_1a0a6e383341e95b33a66765c2afd789a0" compoundref="wtf__node_8hpp" startline="56" endline="61">depth_control_string_</references>
+        <references refid="classWtfNode_1af85207d6bd502e4aad494e8a3225d637" compoundref="wtf__node_8hpp" startline="103">msg_depth_control_</references>
+        <references refid="classWtfNode_1adc03dabce1bdd28f7c44268e57110943" compoundref="wtf__node_8hpp" startline="132">msg_first_received_depth_control_</references>
+        <references refid="classWtfNode_1a117276bcf89b10879583e0572792dcb4" compoundref="wtf__node_8hpp" startline="100">msg_piston_data_</references>
+        <references refid="classWtfNode_1af3a4749bd2ea6280139d534e9e918d79" compoundref="wtf__node_8hpp" startline="118">time_last_depth_control_</references>
+        <references refid="classWtfNode_1a5523c6a8ace4417ee6573231859a9925" compoundref="wtf__node_8hpp" startline="80">windows_depth_control_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1aa5ba73d3f72a72d4dab24a9bfe7b2c4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1840,7 +2142,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="298" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="484" bodyend="507"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="300" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="536" bodyend="560"/>
+        <references refid="wtf__node_8cpp_1a56e1aea61ee305e3648158362333b3a8" compoundref="wtf__node_8cpp" startline="9">COLOR_DEFAULT</references>
+        <references refid="classWtfNode_1adf8d0bc7957a3f8dee96509ea5ba9594" compoundref="wtf__node_8hpp" startline="39" endline="42">gpsd_mode_string_</references>
+        <references refid="classWtfNode_1a40b7b2d78bfc8657873171c747ab4158" compoundref="wtf__node_8hpp" startline="133">msg_first_received_gnss_</references>
+        <references refid="classWtfNode_1a855d33e955ceef6c218a87b30a7083a5" compoundref="wtf__node_8hpp" startline="104">msg_gnss_</references>
+        <references refid="classWtfNode_1a92202008a39fe940a5f5788efe96cd2d" compoundref="wtf__node_8hpp" startline="119">time_last_gnss_</references>
+        <references refid="classWtfNode_1afebc5d8ad96b524df0c183dadd7a4dfa" compoundref="wtf__node_8hpp" startline="83">windows_gnss_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ac16cbd6e4e6114971a4d7baa12901a03" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1855,7 +2164,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="303" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="509" bodyend="535"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="305" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="562" bodyend="589"/>
+        <references refid="classWtfNode_1aab9da55356f8f5cd4a0866bea81cee7c" compoundref="wtf__node_8hpp" startline="106">msg_density_</references>
+        <references refid="classWtfNode_1af918eddb5fcb2bd34ad8a87e10e27865" compoundref="wtf__node_8hpp" startline="135">msg_first_received_density_</references>
+        <references refid="classWtfNode_1aa0f199a59b6ae27eb4ecc650c3f2e387" compoundref="wtf__node_8hpp" startline="134">msg_first_received_profile_</references>
+        <references refid="classWtfNode_1afe9c60099a2ebe121da390bc2934cb56" compoundref="wtf__node_8hpp" startline="136">msg_first_received_temperature_sensor_data_</references>
+        <references refid="classWtfNode_1aa7881c2cb9bfdcbf13d2489b23319042" compoundref="wtf__node_8hpp" startline="105">msg_profile_</references>
+        <references refid="classWtfNode_1a27546fad4a071e05dbf3d9e8e64333b9" compoundref="wtf__node_8hpp" startline="107">msg_temperature_sensor_data_</references>
+        <references refid="classWtfNode_1a3a7e9879e26003e5b27ce81fe7cb7099" compoundref="wtf__node_8hpp" startline="120">time_last_profile_</references>
+        <references refid="classWtfNode_1afebc5d8ad96b524df0c183dadd7a4dfa" compoundref="wtf__node_8hpp" startline="83">windows_gnss_</references>
+        <references refid="classWtfNode_1a6ae85896e0d129b7c7c878b098285bc5" compoundref="wtf__node_8hpp" startline="84">windows_sensors_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a6c207b019a04aa158b75235583b41551" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1870,7 +2189,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="308" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="537" bodyend="548"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="310" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="591" bodyend="603"/>
+        <references refid="classWtfNode_1afdeea3034fd120047b058cff1833fc55" compoundref="wtf__node_8hpp" startline="108">msg_audio_dspic_</references>
+        <references refid="classWtfNode_1a56e25d3eeb23abca6e9af13fc8b29e08" compoundref="wtf__node_8hpp" startline="137">msg_first_received_audio_dspic_</references>
+        <references refid="classWtfNode_1ab9638aab47cf00eadc75942b549ac212" compoundref="wtf__node_8hpp" startline="123">time_last_audio_dspic_</references>
+        <references refid="classWtfNode_1a8781d1afc44ade14f327b06704fd9f37" compoundref="wtf__node_8hpp" startline="86">windows_audio_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a7a6b3f16a8133b98f138b5966e18639b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1885,7 +2209,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="313" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="550" bodyend="561"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="315" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="605" bodyend="618"/>
+        <references refid="classWtfNode_1a8da82101c318b47a16becbf210a32dc4" compoundref="wtf__node_8hpp" startline="109">msg_queue_log_</references>
+        <references refid="classWtfNode_1a1a5e0f1a51215aa9f9b96fe8e211bf4f" compoundref="wtf__node_8hpp" startline="85">windows_log_</references>
+        <references refid="classWtfNode_1a42dc30a10f703e91099959a70a9ef9bd" compoundref="wtf__node_8hpp" startline="89" endline="89">windows_max_x_</references>
+        <referencedby refid="classWtfNode_1a04b286270383f4c50f0dae9c442b08d7" compoundref="wtf__node_8cpp" startline="620" endline="634">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>WINDOW *</type>
@@ -1912,7 +2240,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="330" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="71" bodyend="89"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="332" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="74" bodyend="93"/>
+        <references refid="classWtfNode_1a23c1931c22b3c1b93655238ed9bd5310" compoundref="wtf__node_8hpp" startline="91" endline="91">windows_current_x_</references>
+        <references refid="classWtfNode_1a083a4f4d3c7d89f5fc9135796fc054c2" compoundref="wtf__node_8hpp" startline="91">windows_current_y_</references>
+        <references refid="classWtfNode_1a6c316d810dee27b83d0fb3f996d6bbd0" compoundref="wtf__node_8hpp" startline="90">windows_default_y_</references>
+        <references refid="classWtfNode_1aa4906c7701300439ea3f577154084a2c" compoundref="wtf__node_8hpp" startline="89" endline="89">windows_max_y_</references>
+        <references refid="classWtfNode_1ab78bbe6b7bc5e6ea54b8e942556b25c7" compoundref="wtf__node_8hpp" startline="92" endline="92">windows_width_max_</references>
+        <referencedby refid="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" compoundref="wtf__node_8cpp" startline="37" endline="67">create_windows</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ac96291f7add6e63ac7b60e9aa53caefe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1928,7 +2262,25 @@
         <inbodydescription>
 <para>| - - - x | y height, width, point_x, point_y</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="335" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="36" bodyend="65"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="337" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="37" bodyend="67"/>
+        <references refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" compoundref="wtf__node_8cpp" startline="74" endline="93">create_new_sub_window</references>
+        <references refid="classWtfNode_1a8781d1afc44ade14f327b06704fd9f37" compoundref="wtf__node_8hpp" startline="86">windows_audio_</references>
+        <references refid="classWtfNode_1a083a4f4d3c7d89f5fc9135796fc054c2" compoundref="wtf__node_8hpp" startline="91">windows_current_y_</references>
+        <references refid="classWtfNode_1a6c316d810dee27b83d0fb3f996d6bbd0" compoundref="wtf__node_8hpp" startline="90">windows_default_y_</references>
+        <references refid="classWtfNode_1ad3592c09144a6960962e8ed102dc7865" compoundref="wtf__node_8hpp" startline="78">windows_depth_</references>
+        <references refid="classWtfNode_1a5523c6a8ace4417ee6573231859a9925" compoundref="wtf__node_8hpp" startline="80">windows_depth_control_</references>
+        <references refid="classWtfNode_1afebc5d8ad96b524df0c183dadd7a4dfa" compoundref="wtf__node_8hpp" startline="83">windows_gnss_</references>
+        <references refid="classWtfNode_1a036814a38ce435fc18efd0315ba6faca" compoundref="wtf__node_8hpp" startline="77">windows_internal_pressure_</references>
+        <references refid="classWtfNode_1a1a5e0f1a51215aa9f9b96fe8e211bf4f" compoundref="wtf__node_8hpp" startline="85">windows_log_</references>
+        <references refid="classWtfNode_1a42dc30a10f703e91099959a70a9ef9bd" compoundref="wtf__node_8hpp" startline="89" endline="89">windows_max_x_</references>
+        <references refid="classWtfNode_1aa4906c7701300439ea3f577154084a2c" compoundref="wtf__node_8hpp" startline="89" endline="89">windows_max_y_</references>
+        <references refid="classWtfNode_1adce9594dc7e26d3e6d0cdd1f4b9e51cc" compoundref="wtf__node_8hpp" startline="82">windows_mission_</references>
+        <references refid="classWtfNode_1ac516bfe6e4adeed14df93ffde0893548" compoundref="wtf__node_8hpp" startline="81">windows_piston_</references>
+        <references refid="classWtfNode_1a85d09027d7a52922ce77674af2f5403b" compoundref="wtf__node_8hpp" startline="79">windows_power_</references>
+        <references refid="classWtfNode_1a001c78721cfc67e486a06d05e5e1c1c5" compoundref="wtf__node_8hpp" startline="75">windows_robot_</references>
+        <references refid="classWtfNode_1a411d41f82fc9dfbab23fdff4142280bd" compoundref="wtf__node_8hpp" startline="76">windows_safety_</references>
+        <references refid="classWtfNode_1a6ae85896e0d129b7c7c878b098285bc5" compoundref="wtf__node_8hpp" startline="84">windows_sensors_</references>
+        <referencedby refid="classWtfNode_1a4320bab40e3acb950609832b97e94979" compoundref="wtf__node_8cpp" startline="13" endline="35">WtfNode</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -1958,7 +2310,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="318" column="24" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="288" bodyend="296"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="320" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="320" bodyend="329"/>
+        <references refid="wtf__node_8cpp_1a1c975cd775b1faedc5d288022ca574a9" compoundref="wtf__node_8cpp" startline="11">COLOR_NOT_VALID</references>
+        <references refid="wtf__node_8cpp_1a051d21309d81ec4caac403ffcda2736e" compoundref="wtf__node_8cpp" startline="10">COLOR_VALID</references>
+        <referencedby refid="classWtfNode_1a6cc167732d18a03a779280649fc3dfea" compoundref="wtf__node_8cpp" startline="331" endline="396">update_safety_windows</referencedby>
       </memberdef>
       <memberdef kind="function" id="classWtfNode_1ad2fb483c72ae088a7550fb479d70da52" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -1988,7 +2343,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="325" column="24" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="284" bodyend="286"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="327" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/src/wtf_node.cpp" bodystart="315" bodyend="318"/>
+        <referencedby refid="classWtfNode_1ae480cb172c0a463c3699a5593817634b" compoundref="wtf__node_8cpp" startline="450" endline="490">update_piston</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -2012,12 +2368,81 @@
         <link refid="classWtfNode"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>hostname_</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>gpsd_mode_string_</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>piston_state_string_</edgelabel>
+          <edgelabel>power_state_string_</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>depth_control_string_</edgelabel>
+          <edgelabel>mission_mode_string_</edgelabel>
+          <edgelabel>mission_state_string_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>msg_safety_</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>msg_depth_data_</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>msg_internal_sensor_filter_</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>msg_power_data_</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>msg_piston_data_</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>msg_mission_state_</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>msg_gnss_</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>array&lt; std::string, 4 &gt;</label>
+      </node>
+      <node id="5">
+        <label>array&lt; std::string, 6 &gt;</label>
+      </node>
+      <node id="6">
+        <label>array&lt; std::string, 8 &gt;</label>
       </node>
       <node id="2">
         <label>rclcpp::Node</label>
       </node>
+      <node id="9">
+        <label>Bme280Data</label>
+      </node>
+      <node id="8">
+        <label>DepthPose</label>
+      </node>
+      <node id="13">
+        <label>GpsFix</label>
+      </node>
+      <node id="12">
+        <label>MissionState</label>
+      </node>
+      <node id="11">
+        <label>PistonState</label>
+      </node>
+      <node id="10">
+        <label>PowerState</label>
+      </node>
+      <node id="7">
+        <label>SafetyStatus2</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="27" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="27" bodyend="337"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" line="27" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_wtf/include/seabot2_wtf/wtf_node.hpp" bodystart="27" bodyend="339"/>
     <listofallmembers>
       <member refid="classWtfNode_1a7934c8526f8b9338a1dbfb2adabdc70d" prot="private" virt="non-virtual"><scope>WtfNode</scope><name>audio_dspic_callback</name></member>
       <member refid="classWtfNode_1a0ff2344a7f787a4459a4715ae5c962af" prot="private" virt="non-virtual"><scope>WtfNode</scope><name>create_new_sub_window</name></member>

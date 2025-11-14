@@ -76,7 +76,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">FusionMath.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -118,10 +119,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="574,77,695,120,693,125,572,82"/>
 <area shape="rect" href="FusionOffset_8h.html" title="Gyroscope offset correction algorithm for run&#45;time calibration of the gyroscope offset." alt="" coords="904,123,1087,192"/>
 <area shape="poly" title=" " alt="" coords="574,55,725,83,892,120,904,123,903,129,891,125,724,88,573,61"/>
-<area shape="rect" href="FusionConverter_8h_source.html" title=" " alt="" coords="218,357,405,441"/>
+<area shape="rect" href="FusionConverter_8h.html" title=" " alt="" coords="218,357,405,441"/>
 <area shape="poly" title=" " alt="" coords="381,322,348,359,344,356,377,318"/>
-<area shape="rect" href="icm20948__node_8h_source.html" title=" " alt="" coords="429,357,615,441"/>
+<area shape="rect" href="icm20948__node_8h.html" title=" " alt="" coords="429,357,615,441"/>
 <area shape="poly" title=" " alt="" coords="456,318,489,356,485,359,452,322"/>
+<area shape="rect" href="icm20948__node_8cpp.html" title=" " alt="" coords="325,489,508,559"/>
+<area shape="poly" title=" " alt="" coords="358,450,390,488,386,491,354,454"/>
+<area shape="poly" title=" " alt="" coords="480,454,447,491,443,488,476,450"/>
 <area shape="poly" title=" " alt="" coords="202,194,326,238,324,243,200,199"/>
 <area shape="rect" href="FusionAhrs_8c.html" title="AHRS algorithm to combine gyroscope, accelerometer, and magnetometer measurements into a single measu..." alt="" coords="5,240,188,309"/>
 <area shape="poly" title=" " alt="" coords="99,206,99,240,94,240,94,206"/>
@@ -156,65 +160,1827 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a175c7e3d6cbfd58191f764a2cff57519" id="r_a175c7e3d6cbfd58191f764a2cff57519"><td class="memItemLeft" align="right" valign="top"><a id="a175c7e3d6cbfd58191f764a2cff57519" name="a175c7e3d6cbfd58191f764a2cff57519"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FUSION_VECTOR_ZERO</b>&#160;&#160;&#160;((<a class="el" href="unionFusionVector.html">FusionVector</a>){ .array = {0.0f, 0.0f, 0.0f} })</td></tr>
-<tr class="memdesc:a175c7e3d6cbfd58191f764a2cff57519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of zeros. <br /></td></tr>
+<tr class="memitem:a175c7e3d6cbfd58191f764a2cff57519" id="r_a175c7e3d6cbfd58191f764a2cff57519"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a175c7e3d6cbfd58191f764a2cff57519">FUSION_VECTOR_ZERO</a>&#160;&#160;&#160;((<a class="el" href="unionFusionVector.html">FusionVector</a>) {.array = {0.0f, 0.0f, 0.0f}})</td></tr>
+<tr class="memdesc:a175c7e3d6cbfd58191f764a2cff57519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of zeros.  <br /></td></tr>
 <tr class="separator:a175c7e3d6cbfd58191f764a2cff57519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0c0cdc4a4093c618b152bfb19f48c52" id="r_aa0c0cdc4a4093c618b152bfb19f48c52"><td class="memItemLeft" align="right" valign="top"><a id="aa0c0cdc4a4093c618b152bfb19f48c52" name="aa0c0cdc4a4093c618b152bfb19f48c52"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FUSION_VECTOR_ONES</b>&#160;&#160;&#160;((<a class="el" href="unionFusionVector.html">FusionVector</a>){ .array = {1.0f, 1.0f, 1.0f} })</td></tr>
-<tr class="memdesc:aa0c0cdc4a4093c618b152bfb19f48c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of ones. <br /></td></tr>
+<tr class="memitem:aa0c0cdc4a4093c618b152bfb19f48c52" id="r_aa0c0cdc4a4093c618b152bfb19f48c52"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#aa0c0cdc4a4093c618b152bfb19f48c52">FUSION_VECTOR_ONES</a>&#160;&#160;&#160;((<a class="el" href="unionFusionVector.html">FusionVector</a>) {.array = {1.0f, 1.0f, 1.0f}})</td></tr>
+<tr class="memdesc:aa0c0cdc4a4093c618b152bfb19f48c52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector of ones.  <br /></td></tr>
 <tr class="separator:aa0c0cdc4a4093c618b152bfb19f48c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5501ca56d440773167a54cfeac1d54af" id="r_a5501ca56d440773167a54cfeac1d54af"><td class="memItemLeft" align="right" valign="top"><a id="a5501ca56d440773167a54cfeac1d54af" name="a5501ca56d440773167a54cfeac1d54af"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FUSION_IDENTITY_QUATERNION</b>&#160;&#160;&#160;((<a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>){ .array = {1.0f, 0.0f, 0.0f, 0.0f} })</td></tr>
-<tr class="memdesc:a5501ca56d440773167a54cfeac1d54af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity quaternion. <br /></td></tr>
+<tr class="memitem:a5501ca56d440773167a54cfeac1d54af" id="r_a5501ca56d440773167a54cfeac1d54af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a5501ca56d440773167a54cfeac1d54af">FUSION_IDENTITY_QUATERNION</a>&#160;&#160;&#160;((<a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>) {.array = {1.0f, 0.0f, 0.0f, 0.0f}})</td></tr>
+<tr class="memdesc:a5501ca56d440773167a54cfeac1d54af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity quaternion.  <br /></td></tr>
 <tr class="separator:a5501ca56d440773167a54cfeac1d54af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaaaa6a9359e36347b4d9efacb09fc43" id="r_adaaaa6a9359e36347b4d9efacb09fc43"><td class="memItemLeft" align="right" valign="top"><a id="adaaaa6a9359e36347b4d9efacb09fc43" name="adaaaa6a9359e36347b4d9efacb09fc43"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FUSION_IDENTITY_MATRIX</b>&#160;&#160;&#160;((<a class="el" href="unionFusionMatrix.html">FusionMatrix</a>){ .array = {{1.0f, 0.0f, 0.0f}, {0.0f, 1.0f, 0.0f}, {0.0f, 0.0f, 1.0f}} })</td></tr>
-<tr class="memdesc:adaaaa6a9359e36347b4d9efacb09fc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity matrix. <br /></td></tr>
+<tr class="memitem:adaaaa6a9359e36347b4d9efacb09fc43" id="r_adaaaa6a9359e36347b4d9efacb09fc43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#adaaaa6a9359e36347b4d9efacb09fc43">FUSION_IDENTITY_MATRIX</a></td></tr>
+<tr class="memdesc:adaaaa6a9359e36347b4d9efacb09fc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identity matrix.  <br /></td></tr>
 <tr class="separator:adaaaa6a9359e36347b4d9efacb09fc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a42e7f9a3c303b708badbb458854c87" id="r_a8a42e7f9a3c303b708badbb458854c87"><td class="memItemLeft" align="right" valign="top"><a id="a8a42e7f9a3c303b708badbb458854c87" name="a8a42e7f9a3c303b708badbb458854c87"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FUSION_EULER_ZERO</b>&#160;&#160;&#160;((<a class="el" href="unionFusionEuler.html">FusionEuler</a>){ .array = {0.0f, 0.0f, 0.0f} })</td></tr>
-<tr class="memdesc:a8a42e7f9a3c303b708badbb458854c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Euler angles of zero. <br /></td></tr>
+<tr class="memitem:a8a42e7f9a3c303b708badbb458854c87" id="r_a8a42e7f9a3c303b708badbb458854c87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a8a42e7f9a3c303b708badbb458854c87">FUSION_EULER_ZERO</a>&#160;&#160;&#160;((<a class="el" href="unionFusionEuler.html">FusionEuler</a>) {.array = {0.0f, 0.0f, 0.0f}})</td></tr>
+<tr class="memdesc:a8a42e7f9a3c303b708badbb458854c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Euler angles of zero.  <br /></td></tr>
 <tr class="separator:a8a42e7f9a3c303b708badbb458854c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae71449b1cc6e6250b91f539153a7a0d3" id="r_ae71449b1cc6e6250b91f539153a7a0d3"><td class="memItemLeft" align="right" valign="top"><a id="ae71449b1cc6e6250b91f539153a7a0d3" name="ae71449b1cc6e6250b91f539153a7a0d3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>M_PI</b>&#160;&#160;&#160;(3.14159265358979323846)</td></tr>
-<tr class="memdesc:ae71449b1cc6e6250b91f539153a7a0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pi. May not be defined in math.h. <br /></td></tr>
+<tr class="memitem:ae71449b1cc6e6250b91f539153a7a0d3" id="r_ae71449b1cc6e6250b91f539153a7a0d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a>&#160;&#160;&#160;(3.14159265358979323846)</td></tr>
+<tr class="memdesc:ae71449b1cc6e6250b91f539153a7a0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pi. May not be defined in math.h.  <br /></td></tr>
 <tr class="separator:ae71449b1cc6e6250b91f539153a7a0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a955f504eccf76b4eb2489c0adab03121" id="r_a955f504eccf76b4eb2489c0adab03121"><td class="memItemLeft" align="right" valign="top"><a id="a955f504eccf76b4eb2489c0adab03121" name="a955f504eccf76b4eb2489c0adab03121"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A</b>&#160;&#160;&#160;vectorA.axis</td></tr>
+<tr class="memitem:a955f504eccf76b4eb2489c0adab03121" id="r_a955f504eccf76b4eb2489c0adab03121"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a955f504eccf76b4eb2489c0adab03121">A</a>&#160;&#160;&#160;vectorA.axis</td></tr>
 <tr class="separator:a955f504eccf76b4eb2489c0adab03121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111da81ae5883147168bbb8366377b10" id="r_a111da81ae5883147168bbb8366377b10"><td class="memItemLeft" align="right" valign="top"><a id="a111da81ae5883147168bbb8366377b10" name="a111da81ae5883147168bbb8366377b10"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>B</b>&#160;&#160;&#160;vectorB.axis</td></tr>
+<tr class="memitem:a111da81ae5883147168bbb8366377b10" id="r_a111da81ae5883147168bbb8366377b10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a111da81ae5883147168bbb8366377b10">B</a>&#160;&#160;&#160;vectorB.axis</td></tr>
 <tr class="separator:a111da81ae5883147168bbb8366377b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a955f504eccf76b4eb2489c0adab03121" id="r_a955f504eccf76b4eb2489c0adab03121"><td class="memItemLeft" align="right" valign="top"><a id="a955f504eccf76b4eb2489c0adab03121" name="a955f504eccf76b4eb2489c0adab03121"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>A</b>&#160;&#160;&#160;quaternionA.element</td></tr>
+<tr class="memitem:a955f504eccf76b4eb2489c0adab03121" id="r_a955f504eccf76b4eb2489c0adab03121"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a955f504eccf76b4eb2489c0adab03121">A</a>&#160;&#160;&#160;quaternionA.element</td></tr>
 <tr class="separator:a955f504eccf76b4eb2489c0adab03121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a111da81ae5883147168bbb8366377b10" id="r_a111da81ae5883147168bbb8366377b10"><td class="memItemLeft" align="right" valign="top"><a id="a111da81ae5883147168bbb8366377b10" name="a111da81ae5883147168bbb8366377b10"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>B</b>&#160;&#160;&#160;quaternionB.element</td></tr>
+<tr class="memitem:a111da81ae5883147168bbb8366377b10" id="r_a111da81ae5883147168bbb8366377b10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a111da81ae5883147168bbb8366377b10">B</a>&#160;&#160;&#160;quaternionB.element</td></tr>
 <tr class="separator:a111da81ae5883147168bbb8366377b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top"><a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>Q</b>&#160;&#160;&#160;quaternion.element</td></tr>
+<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907">Q</a>&#160;&#160;&#160;quaternion.element</td></tr>
 <tr class="separator:acbcee443d6d55cb8600b3f240f5cf907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af40a326b23c68a27cebe60f16634a2cb" id="r_af40a326b23c68a27cebe60f16634a2cb"><td class="memItemLeft" align="right" valign="top"><a id="af40a326b23c68a27cebe60f16634a2cb" name="af40a326b23c68a27cebe60f16634a2cb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>V</b>&#160;&#160;&#160;vector.axis</td></tr>
+<tr class="memitem:af40a326b23c68a27cebe60f16634a2cb" id="r_af40a326b23c68a27cebe60f16634a2cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#af40a326b23c68a27cebe60f16634a2cb">V</a>&#160;&#160;&#160;vector.axis</td></tr>
 <tr class="separator:af40a326b23c68a27cebe60f16634a2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top"><a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>Q</b>&#160;&#160;&#160;quaternion.element</td></tr>
+<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907">Q</a>&#160;&#160;&#160;quaternion.element</td></tr>
 <tr class="separator:acbcee443d6d55cb8600b3f240f5cf907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c71a5e59a53413cd6c270266d63b031" id="r_a5c71a5e59a53413cd6c270266d63b031"><td class="memItemLeft" align="right" valign="top"><a id="a5c71a5e59a53413cd6c270266d63b031" name="a5c71a5e59a53413cd6c270266d63b031"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>R</b>&#160;&#160;&#160;matrix.element</td></tr>
+<tr class="memitem:a5c71a5e59a53413cd6c270266d63b031" id="r_a5c71a5e59a53413cd6c270266d63b031"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a5c71a5e59a53413cd6c270266d63b031">R</a>&#160;&#160;&#160;matrix.element</td></tr>
 <tr class="separator:a5c71a5e59a53413cd6c270266d63b031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top"><a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>Q</b>&#160;&#160;&#160;quaternion.element</td></tr>
+<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907">Q</a>&#160;&#160;&#160;quaternion.element</td></tr>
 <tr class="separator:acbcee443d6d55cb8600b3f240f5cf907"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top"><a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>Q</b>&#160;&#160;&#160;quaternion.element</td></tr>
+<tr class="memitem:acbcee443d6d55cb8600b3f240f5cf907" id="r_acbcee443d6d55cb8600b3f240f5cf907"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#acbcee443d6d55cb8600b3f240f5cf907">Q</a>&#160;&#160;&#160;quaternion.element</td></tr>
 <tr class="separator:acbcee443d6d55cb8600b3f240f5cf907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7d5c84abc4531eae68b69f1a9bd7a109" id="r_a7d5c84abc4531eae68b69f1a9bd7a109"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a7d5c84abc4531eae68b69f1a9bd7a109">FusionDegreesToRadians</a> (const float degrees)</td></tr>
+<tr class="memdesc:a7d5c84abc4531eae68b69f1a9bd7a109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include this definition or add as a preprocessor definition to use normal square root operations.  <br /></td></tr>
+<tr class="separator:a7d5c84abc4531eae68b69f1a9bd7a109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2873913881e775a84c117e29616b4e" id="r_a6a2873913881e775a84c117e29616b4e"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a6a2873913881e775a84c117e29616b4e">FusionRadiansToDegrees</a> (const float radians)</td></tr>
+<tr class="memdesc:a6a2873913881e775a84c117e29616b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts radians to degrees.  <br /></td></tr>
+<tr class="separator:a6a2873913881e775a84c117e29616b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9f389455766ff907bb8d77eca0651d" id="r_a1e9f389455766ff907bb8d77eca0651d"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a1e9f389455766ff907bb8d77eca0651d">FusionAsin</a> (const float value)</td></tr>
+<tr class="memdesc:a1e9f389455766ff907bb8d77eca0651d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the arc sine of the value.  <br /></td></tr>
+<tr class="separator:a1e9f389455766ff907bb8d77eca0651d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a2703be59beda3108cbad3269f2217" id="r_ad6a2703be59beda3108cbad3269f2217"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#ad6a2703be59beda3108cbad3269f2217">FusionFastInverseSqrt</a> (const float x)</td></tr>
+<tr class="memdesc:ad6a2703be59beda3108cbad3269f2217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the reciprocal of the square root. See <a href="https://pizer.wordpress.com/2008/10/12/fast-inverse-square-root/">https://pizer.wordpress.com/2008/10/12/fast-inverse-square-root/</a>.  <br /></td></tr>
+<tr class="separator:ad6a2703be59beda3108cbad3269f2217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296db176fe1f4d6390a647e729fe3fd7" id="r_a296db176fe1f4d6390a647e729fe3fd7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a296db176fe1f4d6390a647e729fe3fd7">FusionVectorIsZero</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:a296db176fe1f4d6390a647e729fe3fd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the vector is zero.  <br /></td></tr>
+<tr class="separator:a296db176fe1f4d6390a647e729fe3fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d1d8d9f51de0e0416174c1007c9897" id="r_ab3d1d8d9f51de0e0416174c1007c9897"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#ab3d1d8d9f51de0e0416174c1007c9897">FusionVectorAdd</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorA, const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorB)</td></tr>
+<tr class="memdesc:ab3d1d8d9f51de0e0416174c1007c9897"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of two vectors.  <br /></td></tr>
+<tr class="separator:ab3d1d8d9f51de0e0416174c1007c9897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a659292169bcad0816f6c46e5ce003" id="r_a51a659292169bcad0816f6c46e5ce003"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a51a659292169bcad0816f6c46e5ce003">FusionVectorSubtract</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorA, const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorB)</td></tr>
+<tr class="memdesc:a51a659292169bcad0816f6c46e5ce003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns vector B subtracted from vector A.  <br /></td></tr>
+<tr class="separator:a51a659292169bcad0816f6c46e5ce003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0f543173685c0912b438ac6b4cbe05" id="r_adc0f543173685c0912b438ac6b4cbe05"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#adc0f543173685c0912b438ac6b4cbe05">FusionVectorSum</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:adc0f543173685c0912b438ac6b4cbe05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of the elements.  <br /></td></tr>
+<tr class="separator:adc0f543173685c0912b438ac6b4cbe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb6f43a8c7c7409516b8909166b0143" id="r_afcb6f43a8c7c7409516b8909166b0143"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#afcb6f43a8c7c7409516b8909166b0143">FusionVectorMultiplyScalar</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vector, const float scalar)</td></tr>
+<tr class="memdesc:afcb6f43a8c7c7409516b8909166b0143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the multiplication of a vector by a scalar.  <br /></td></tr>
+<tr class="separator:afcb6f43a8c7c7409516b8909166b0143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c1911b63e50ef1e74213dda2556b7d" id="r_a02c1911b63e50ef1e74213dda2556b7d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a02c1911b63e50ef1e74213dda2556b7d">FusionVectorHadamardProduct</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorA, const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorB)</td></tr>
+<tr class="memdesc:a02c1911b63e50ef1e74213dda2556b7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Hadamard product (element-wise multiplication).  <br /></td></tr>
+<tr class="separator:a02c1911b63e50ef1e74213dda2556b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98cb9b0f001b1e17e65e801811436e90" id="r_a98cb9b0f001b1e17e65e801811436e90"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a98cb9b0f001b1e17e65e801811436e90">FusionVectorCrossProduct</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorA, const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorB)</td></tr>
+<tr class="memdesc:a98cb9b0f001b1e17e65e801811436e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cross product.  <br /></td></tr>
+<tr class="separator:a98cb9b0f001b1e17e65e801811436e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e54dd1e67961cdfe729a8eee91594f8" id="r_a0e54dd1e67961cdfe729a8eee91594f8"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a0e54dd1e67961cdfe729a8eee91594f8">FusionVectorDotProduct</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorA, const <a class="el" href="unionFusionVector.html">FusionVector</a> vectorB)</td></tr>
+<tr class="memdesc:a0e54dd1e67961cdfe729a8eee91594f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dot product.  <br /></td></tr>
+<tr class="separator:a0e54dd1e67961cdfe729a8eee91594f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb5a2791581cb9068ca27be0cee09b5" id="r_a5bb5a2791581cb9068ca27be0cee09b5"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a5bb5a2791581cb9068ca27be0cee09b5">FusionVectorMagnitudeSquared</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:a5bb5a2791581cb9068ca27be0cee09b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector magnitude squared.  <br /></td></tr>
+<tr class="separator:a5bb5a2791581cb9068ca27be0cee09b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811ea7a6321937c86260d6712965bebf" id="r_a811ea7a6321937c86260d6712965bebf"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a811ea7a6321937c86260d6712965bebf">FusionVectorMagnitude</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:a811ea7a6321937c86260d6712965bebf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector magnitude.  <br /></td></tr>
+<tr class="separator:a811ea7a6321937c86260d6712965bebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe720e5e588a4e46f6225ddb5894ae3d" id="r_abe720e5e588a4e46f6225ddb5894ae3d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#abe720e5e588a4e46f6225ddb5894ae3d">FusionVectorNormalise</a> (const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:abe720e5e588a4e46f6225ddb5894ae3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the normalised vector.  <br /></td></tr>
+<tr class="separator:abe720e5e588a4e46f6225ddb5894ae3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1bb23dc219da0184530a5a7cab8093" id="r_a4c1bb23dc219da0184530a5a7cab8093"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a4c1bb23dc219da0184530a5a7cab8093">FusionQuaternionAdd</a> (const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternionA, const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternionB)</td></tr>
+<tr class="memdesc:a4c1bb23dc219da0184530a5a7cab8093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of two quaternions.  <br /></td></tr>
+<tr class="separator:a4c1bb23dc219da0184530a5a7cab8093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d5e91951071668a79b0f2db6916cd1" id="r_a19d5e91951071668a79b0f2db6916cd1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a19d5e91951071668a79b0f2db6916cd1">FusionQuaternionMultiply</a> (const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternionA, const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternionB)</td></tr>
+<tr class="memdesc:a19d5e91951071668a79b0f2db6916cd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the multiplication of two quaternions.  <br /></td></tr>
+<tr class="separator:a19d5e91951071668a79b0f2db6916cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63282e8273c44fcbb7dc299ec8e66e98" id="r_a63282e8273c44fcbb7dc299ec8e66e98"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a63282e8273c44fcbb7dc299ec8e66e98">FusionQuaternionMultiplyVector</a> (const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternion, const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:a63282e8273c44fcbb7dc299ec8e66e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the multiplication of a quaternion with a vector. This is a normal quaternion multiplication where the vector is treated a quaternion with a W element value of zero. The quaternion is post- multiplied by the vector.  <br /></td></tr>
+<tr class="separator:a63282e8273c44fcbb7dc299ec8e66e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a7a1f28ea8c3163bf2c701fa1689f4" id="r_a18a7a1f28ea8c3163bf2c701fa1689f4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a18a7a1f28ea8c3163bf2c701fa1689f4">FusionQuaternionNormalise</a> (const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternion)</td></tr>
+<tr class="memdesc:a18a7a1f28ea8c3163bf2c701fa1689f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the normalised quaternion.  <br /></td></tr>
+<tr class="separator:a18a7a1f28ea8c3163bf2c701fa1689f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24763e8774933daf4427d30076782914" id="r_a24763e8774933daf4427d30076782914"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a24763e8774933daf4427d30076782914">FusionMatrixMultiplyVector</a> (const <a class="el" href="unionFusionMatrix.html">FusionMatrix</a> matrix, const <a class="el" href="unionFusionVector.html">FusionVector</a> vector)</td></tr>
+<tr class="memdesc:a24763e8774933daf4427d30076782914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the multiplication of a matrix with a vector.  <br /></td></tr>
+<tr class="separator:a24763e8774933daf4427d30076782914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16601f5d377e62ef475fb44c4748c9ff" id="r_a16601f5d377e62ef475fb44c4748c9ff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionMatrix.html">FusionMatrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#a16601f5d377e62ef475fb44c4748c9ff">FusionQuaternionToMatrix</a> (const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternion)</td></tr>
+<tr class="memdesc:a16601f5d377e62ef475fb44c4748c9ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a quaternion to a rotation matrix.  <br /></td></tr>
+<tr class="separator:a16601f5d377e62ef475fb44c4748c9ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48e95900c10d60ff8ea84687f59f4f1" id="r_ae48e95900c10d60ff8ea84687f59f4f1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="unionFusionEuler.html">FusionEuler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FusionMath_8h.html#ae48e95900c10d60ff8ea84687f59f4f1">FusionQuaternionToEuler</a> (const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> quaternion)</td></tr>
+<tr class="memdesc:ae48e95900c10d60ff8ea84687f59f4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a quaternion to ZYX Euler angles in degrees.  <br /></td></tr>
+<tr class="separator:ae48e95900c10d60ff8ea84687f59f4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Math library. </p>
 <dl class="section author"><dt>Author</dt><dd>Seb Madgwick </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a955f504eccf76b4eb2489c0adab03121" name="a955f504eccf76b4eb2489c0adab03121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955f504eccf76b4eb2489c0adab03121">&#9670;&#160;</a></span>A <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A&#160;&#160;&#160;vectorA.axis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a955f504eccf76b4eb2489c0adab03121" name="a955f504eccf76b4eb2489c0adab03121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955f504eccf76b4eb2489c0adab03121">&#9670;&#160;</a></span>A <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define A&#160;&#160;&#160;quaternionA.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a111da81ae5883147168bbb8366377b10" name="a111da81ae5883147168bbb8366377b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111da81ae5883147168bbb8366377b10">&#9670;&#160;</a></span>B <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B&#160;&#160;&#160;vectorB.axis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a111da81ae5883147168bbb8366377b10" name="a111da81ae5883147168bbb8366377b10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a111da81ae5883147168bbb8366377b10">&#9670;&#160;</a></span>B <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define B&#160;&#160;&#160;quaternionB.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a42e7f9a3c303b708badbb458854c87" name="a8a42e7f9a3c303b708badbb458854c87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a42e7f9a3c303b708badbb458854c87">&#9670;&#160;</a></span>FUSION_EULER_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUSION_EULER_ZERO&#160;&#160;&#160;((<a class="el" href="unionFusionEuler.html">FusionEuler</a>) {.array = {0.0f, 0.0f, 0.0f}})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Euler angles of zero. </p>
+
+</div>
+</div>
+<a id="adaaaa6a9359e36347b4d9efacb09fc43" name="adaaaa6a9359e36347b4d9efacb09fc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaaa6a9359e36347b4d9efacb09fc43">&#9670;&#160;</a></span>FUSION_IDENTITY_MATRIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUSION_IDENTITY_MATRIX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">      ((<a class="code hl_union" href="unionFusionMatrix.html">FusionMatrix</a>) {.array = {{1.0f, 0.0f, 0.0f}, {0.0f, 1.0f, 0.0f}, \</div>
+<div class="line">      {0.0f, 0.0f, 1.0f}}})</div>
+<div class="ttc" id="aunionFusionMatrix_html"><div class="ttname"><a href="unionFusionMatrix.html">FusionMatrix</a></div><div class="ttdoc">3x3 matrix in row-major order. See http://en.wikipedia.org/wiki/Row-major_order</div><div class="ttdef"><b>Definition</b> FusionMath.h:53</div></div>
+</div><!-- fragment -->
+<p>Identity matrix. </p>
+
+</div>
+</div>
+<a id="a5501ca56d440773167a54cfeac1d54af" name="a5501ca56d440773167a54cfeac1d54af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5501ca56d440773167a54cfeac1d54af">&#9670;&#160;</a></span>FUSION_IDENTITY_QUATERNION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUSION_IDENTITY_QUATERNION&#160;&#160;&#160;((<a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>) {.array = {1.0f, 0.0f, 0.0f, 0.0f}})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identity quaternion. </p>
+
+</div>
+</div>
+<a id="aa0c0cdc4a4093c618b152bfb19f48c52" name="aa0c0cdc4a4093c618b152bfb19f48c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c0cdc4a4093c618b152bfb19f48c52">&#9670;&#160;</a></span>FUSION_VECTOR_ONES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUSION_VECTOR_ONES&#160;&#160;&#160;((<a class="el" href="unionFusionVector.html">FusionVector</a>) {.array = {1.0f, 1.0f, 1.0f}})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vector of ones. </p>
+
+</div>
+</div>
+<a id="a175c7e3d6cbfd58191f764a2cff57519" name="a175c7e3d6cbfd58191f764a2cff57519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175c7e3d6cbfd58191f764a2cff57519">&#9670;&#160;</a></span>FUSION_VECTOR_ZERO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUSION_VECTOR_ZERO&#160;&#160;&#160;((<a class="el" href="unionFusionVector.html">FusionVector</a>) {.array = {0.0f, 0.0f, 0.0f}})</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vector of zeros. </p>
+
+</div>
+</div>
+<a id="ae71449b1cc6e6250b91f539153a7a0d3" name="ae71449b1cc6e6250b91f539153a7a0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71449b1cc6e6250b91f539153a7a0d3">&#9670;&#160;</a></span>M_PI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_PI&#160;&#160;&#160;(3.14159265358979323846)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pi. May not be defined in math.h. </p>
+
+</div>
+</div>
+<a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcee443d6d55cb8600b3f240f5cf907">&#9670;&#160;</a></span>Q <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Q&#160;&#160;&#160;quaternion.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcee443d6d55cb8600b3f240f5cf907">&#9670;&#160;</a></span>Q <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Q&#160;&#160;&#160;quaternion.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcee443d6d55cb8600b3f240f5cf907">&#9670;&#160;</a></span>Q <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Q&#160;&#160;&#160;quaternion.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbcee443d6d55cb8600b3f240f5cf907" name="acbcee443d6d55cb8600b3f240f5cf907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcee443d6d55cb8600b3f240f5cf907">&#9670;&#160;</a></span>Q <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define Q&#160;&#160;&#160;quaternion.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c71a5e59a53413cd6c270266d63b031" name="a5c71a5e59a53413cd6c270266d63b031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c71a5e59a53413cd6c270266d63b031">&#9670;&#160;</a></span>R</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R&#160;&#160;&#160;matrix.element</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af40a326b23c68a27cebe60f16634a2cb" name="af40a326b23c68a27cebe60f16634a2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af40a326b23c68a27cebe60f16634a2cb">&#9670;&#160;</a></span>V</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define V&#160;&#160;&#160;vector.axis</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a1e9f389455766ff907bb8d77eca0651d" name="a1e9f389455766ff907bb8d77eca0651d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9f389455766ff907bb8d77eca0651d">&#9670;&#160;</a></span>FusionAsin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionAsin </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the arc sine of the value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Arc sine of the value. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a1e9f389455766ff907bb8d77eca0651d_icgraph.png" border="0" usemap="#aFusionMath_8h_a1e9f389455766ff907bb8d77eca0651d_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a1e9f389455766ff907bb8d77eca0651d_icgraph" id="aFusionMath_8h_a1e9f389455766ff907bb8d77eca0651d_icgraph">
+<area shape="rect" title="Returns the arc sine of the value." alt="" coords="1017,31,1109,56"/>
+<area shape="rect" href="FusionAhrs_8c.html#a2dd9d3225d8576dd39c0530122830d22" title="Returns the AHRS algorithm internal states." alt="" coords="763,5,969,31"/>
+<area shape="poly" title=" " alt="" coords="1003,38,965,33,965,28,1004,33"/>
+<area shape="rect" href="FusionMath_8h.html#ae48e95900c10d60ff8ea84687f59f4f1" title="Converts a quaternion to ZYX Euler angles in degrees." alt="" coords="775,55,957,80"/>
+<area shape="poly" title=" " alt="" coords="1004,53,958,59,957,54,1003,48"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="493,31,715,56"/>
+<area shape="poly" title=" " alt="" coords="749,32,715,35,715,30,749,27"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,23,445,63"/>
+<area shape="poly" title=" " alt="" coords="480,46,446,46,446,41,480,41"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,31,233,56"/>
+<area shape="poly" title=" " alt="" coords="268,46,234,46,234,41,268,41"/>
+<area shape="poly" title=" " alt="" coords="760,60,715,56,715,51,761,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d5c84abc4531eae68b69f1a9bd7a109" name="a7d5c84abc4531eae68b69f1a9bd7a109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5c84abc4531eae68b69f1a9bd7a109">&#9670;&#160;</a></span>FusionDegreesToRadians()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionDegreesToRadians </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>degrees</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Include this definition or add as a preprocessor definition to use normal square root operations. </p>
+<p>Converts degrees to radians. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">degrees</td><td>Degrees. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Radians. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a7d5c84abc4531eae68b69f1a9bd7a109_icgraph.png" border="0" usemap="#aFusionMath_8h_a7d5c84abc4531eae68b69f1a9bd7a109_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a7d5c84abc4531eae68b69f1a9bd7a109_icgraph" id="aFusionMath_8h_a7d5c84abc4531eae68b69f1a9bd7a109_icgraph">
+<area shape="rect" title="Include this definition or add as a preprocessor definition to use normal square root operations." alt="" coords="1012,132,1196,157"/>
+<area shape="rect" href="FusionAhrs_8c.html#ae5f216caed51d9f84aa5219c24b17ec4" title="Sets the heading of the orientation measurement provided by the AHRS algorithm. This function can be ..." alt="" coords="796,107,964,132"/>
+<area shape="poly" title=" " alt="" coords="998,135,964,131,965,126,998,130"/>
+<area shape="rect" href="FusionAhrs_8c.html#a300bd4d7b409124f9541554bd53d2d2e" title="Sets the AHRS algorithm settings." alt="" coords="797,56,963,81"/>
+<area shape="poly" title=" " alt="" coords="1056,130,963,97,924,84,925,79,965,91,1058,125"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="810,156,950,181"/>
+<area shape="poly" title=" " alt="" coords="998,159,950,164,950,159,998,153"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,206,718,246"/>
+<area shape="poly" title=" " alt="" coords="1062,165,1016,182,965,197,837,217,718,226,718,221,836,212,963,191,1014,177,1060,160"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,107,748,132"/>
+<area shape="poly" title=" " alt="" coords="782,122,748,122,748,117,782,117"/>
+<area shape="rect" href="FusionAhrs_8c.html#ac753e0112b48de5247710bdde3a77dcd" title="Initialises the AHRS algorithm structure." alt="" coords="546,5,695,31"/>
+<area shape="poly" title=" " alt="" coords="800,56,686,33,687,28,801,51"/>
+<area shape="rect" href="classICM20948Node.html#a08c73f04f9a0174b2c519355f279eaf6" title="Functions." alt="" coords="288,49,439,89"/>
+<area shape="poly" title=" " alt="" coords="783,71,439,71,439,66,783,66"/>
+<area shape="poly" title=" " alt="" coords="542,36,439,57,438,51,541,31"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,105,233,131"/>
+<area shape="poly" title=" " alt="" coords="275,89,184,108,182,103,274,84"/>
+<area shape="poly" title=" " alt="" coords="799,156,688,135,689,129,800,151"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,156,731,181"/>
+<area shape="poly" title=" " alt="" coords="796,171,732,171,732,166,796,166"/>
+<area shape="poly" title=" " alt="" coords="809,187,712,209,711,203,808,182"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,130,445,170"/>
+<area shape="poly" title=" " alt="" coords="496,162,445,159,446,153,496,157"/>
+<area shape="poly" title=" " alt="" coords="268,140,216,133,217,128,268,135"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad6a2703be59beda3108cbad3269f2217" name="ad6a2703be59beda3108cbad3269f2217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a2703be59beda3108cbad3269f2217">&#9670;&#160;</a></span>FusionFastInverseSqrt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionFastInverseSqrt </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the reciprocal of the square root. See <a href="https://pizer.wordpress.com/2008/10/12/fast-inverse-square-root/">https://pizer.wordpress.com/2008/10/12/fast-inverse-square-root/</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Operand. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reciprocal of the square root of x. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_ad6a2703be59beda3108cbad3269f2217_icgraph.png" border="0" usemap="#aFusionMath_8h_ad6a2703be59beda3108cbad3269f2217_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_ad6a2703be59beda3108cbad3269f2217_icgraph" id="aFusionMath_8h_ad6a2703be59beda3108cbad3269f2217_icgraph">
+<area shape="rect" title="Calculates the reciprocal of the square root. See https://pizer.wordpress.com/2008/10/12/fast&#45;inverse..." alt="" coords="1521,71,1685,97"/>
+<area shape="rect" href="FusionMath_8h.html#a18a7a1f28ea8c3163bf2c701fa1689f4" title="Returns the normalised quaternion." alt="" coords="1271,33,1473,58"/>
+<area shape="poly" title=" " alt="" coords="1513,72,1448,61,1449,55,1514,66"/>
+<area shape="rect" href="FusionMath_8h.html#abe720e5e588a4e46f6225ddb5894ae3d" title="Returns the normalised vector." alt="" coords="1286,95,1458,121"/>
+<area shape="poly" title=" " alt="" coords="1508,97,1458,102,1458,96,1507,91"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="1257,56,936,80,936,75,1257,51"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+<area shape="poly" title=" " alt="" coords="1272,106,936,89,936,83,1272,100"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1061,121,1145,146"/>
+<area shape="poly" title=" " alt="" coords="1273,120,1146,132,1145,127,1272,115"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="984,170,1223,195"/>
+<area shape="poly" title=" " alt="" coords="1324,128,1223,160,1171,172,1170,167,1222,155,1322,123"/>
+<area shape="poly" title=" " alt="" coords="1047,124,926,98,927,93,1048,119"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24763e8774933daf4427d30076782914" name="a24763e8774933daf4427d30076782914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24763e8774933daf4427d30076782914">&#9670;&#160;</a></span>FusionMatrixMultiplyVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionMatrixMultiplyVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionMatrix.html">FusionMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the multiplication of a matrix with a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>Matrix. </td></tr>
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Multiplication of a matrix with a vector. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a24763e8774933daf4427d30076782914_icgraph.png" border="0" usemap="#aFusionMath_8h_a24763e8774933daf4427d30076782914_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a24763e8774933daf4427d30076782914_icgraph" id="aFusionMath_8h_a24763e8774933daf4427d30076782914_icgraph">
+<area shape="rect" title="Returns the multiplication of a matrix with a vector." alt="" coords="1005,31,1205,56"/>
+<area shape="rect" href="FusionCalibration_8h.html#ad2bfcd433b1d4e96dafb7fb1440d6e6a" title="Gyroscope and accelerometer calibration model." alt="" coords="769,5,951,31"/>
+<area shape="poly" title=" " alt="" coords="991,34,951,30,951,25,992,29"/>
+<area shape="rect" href="FusionCalibration_8h.html#a27bfd795bdbec878375cdc651c0f88a9" title="Magnetometer calibration model." alt="" coords="763,55,957,80"/>
+<area shape="poly" title=" " alt="" coords="992,57,958,60,957,55,992,52"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="493,31,715,56"/>
+<area shape="poly" title=" " alt="" coords="756,31,715,35,715,30,755,26"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,23,445,63"/>
+<area shape="poly" title=" " alt="" coords="480,46,446,46,446,41,480,41"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,31,233,56"/>
+<area shape="poly" title=" " alt="" coords="268,46,234,46,234,41,268,41"/>
+<area shape="poly" title=" " alt="" coords="749,60,715,56,715,51,749,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c1bb23dc219da0184530a5a7cab8093" name="a4c1bb23dc219da0184530a5a7cab8093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1bb23dc219da0184530a5a7cab8093">&#9670;&#160;</a></span>FusionQuaternionAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> FusionQuaternionAdd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternionA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternionB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the sum of two quaternions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quaternionA</td><td>Quaternion A. </td></tr>
+    <tr><td class="paramname">quaternionB</td><td>Quaternion B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum of two quaternions. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a4c1bb23dc219da0184530a5a7cab8093_icgraph.png" border="0" usemap="#aFusionMath_8h_a4c1bb23dc219da0184530a5a7cab8093_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a4c1bb23dc219da0184530a5a7cab8093_icgraph" id="aFusionMath_8h_a4c1bb23dc219da0184530a5a7cab8093_icgraph">
+<area shape="rect" title="Returns the sum of two quaternions." alt="" coords="984,70,1145,95"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="970,85,936,85,936,80,970,80"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a19d5e91951071668a79b0f2db6916cd1" name="a19d5e91951071668a79b0f2db6916cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19d5e91951071668a79b0f2db6916cd1">&#9670;&#160;</a></span>FusionQuaternionMultiply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> FusionQuaternionMultiply </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternionA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternionB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the multiplication of two quaternions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quaternionA</td><td>Quaternion A (to be post-multiplied). </td></tr>
+    <tr><td class="paramname">quaternionB</td><td>Quaternion B (to be pre-multiplied). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Multiplication of two quaternions. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a19d5e91951071668a79b0f2db6916cd1_icgraph.png" border="0" usemap="#aFusionMath_8h_a19d5e91951071668a79b0f2db6916cd1_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a19d5e91951071668a79b0f2db6916cd1_icgraph" id="aFusionMath_8h_a19d5e91951071668a79b0f2db6916cd1_icgraph">
+<area shape="rect" title="Returns the multiplication of two quaternions." alt="" coords="524,5,713,31"/>
+<area shape="rect" href="FusionAhrs_8c.html#ae5f216caed51d9f84aa5219c24b17ec4" title="Sets the heading of the orientation measurement provided by the AHRS algorithm. This function can be ..." alt="" coords="308,5,476,31"/>
+<area shape="poly" title=" " alt="" coords="510,21,476,21,476,15,510,15"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="5,5,260,31"/>
+<area shape="poly" title=" " alt="" coords="294,21,260,21,260,15,294,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63282e8273c44fcbb7dc299ec8e66e98" name="a63282e8273c44fcbb7dc299ec8e66e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63282e8273c44fcbb7dc299ec8e66e98">&#9670;&#160;</a></span>FusionQuaternionMultiplyVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> FusionQuaternionMultiplyVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the multiplication of a quaternion with a vector. This is a normal quaternion multiplication where the vector is treated a quaternion with a W element value of zero. The quaternion is post- multiplied by the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quaternion</td><td>Quaternion. </td></tr>
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Multiplication of a quaternion with a vector. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a63282e8273c44fcbb7dc299ec8e66e98_icgraph.png" border="0" usemap="#aFusionMath_8h_a63282e8273c44fcbb7dc299ec8e66e98_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a63282e8273c44fcbb7dc299ec8e66e98_icgraph" id="aFusionMath_8h_a63282e8273c44fcbb7dc299ec8e66e98_icgraph">
+<area shape="rect" title="Returns the multiplication of a quaternion with a vector. This is a normal quaternion multiplication ..." alt="" coords="984,63,1173,103"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="970,85,936,85,936,80,970,80"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18a7a1f28ea8c3163bf2c701fa1689f4" name="a18a7a1f28ea8c3163bf2c701fa1689f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a7a1f28ea8c3163bf2c701fa1689f4">&#9670;&#160;</a></span>FusionQuaternionNormalise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a> FusionQuaternionNormalise </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalised quaternion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quaternion</td><td>Quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normalised quaternion. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_cgraph.png" border="0" usemap="#aFusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_cgraph" alt=""/></div>
+<map name="aFusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_cgraph" id="aFusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_cgraph">
+<area shape="rect" title="Returns the normalised quaternion." alt="" coords="5,5,208,31"/>
+<area shape="rect" href="FusionMath_8h.html#ad6a2703be59beda3108cbad3269f2217" title="Calculates the reciprocal of the square root. See https://pizer.wordpress.com/2008/10/12/fast&#45;inverse..." alt="" coords="256,5,420,31"/>
+<area shape="poly" title=" " alt="" coords="208,15,242,15,242,21,208,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_icgraph.png" border="0" usemap="#aFusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_icgraph" id="aFusionMath_8h_a18a7a1f28ea8c3163bf2c701fa1689f4_icgraph">
+<area shape="rect" title="Returns the normalised quaternion." alt="" coords="984,70,1187,95"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="970,85,936,85,936,80,970,80"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae48e95900c10d60ff8ea84687f59f4f1" name="ae48e95900c10d60ff8ea84687f59f4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48e95900c10d60ff8ea84687f59f4f1">&#9670;&#160;</a></span>FusionQuaternionToEuler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionEuler.html">FusionEuler</a> FusionQuaternionToEuler </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a quaternion to ZYX Euler angles in degrees. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quaternion</td><td>Quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Euler angles in degrees. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_cgraph.png" border="0" usemap="#aFusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_cgraph" alt=""/></div>
+<map name="aFusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_cgraph" id="aFusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_cgraph">
+<area shape="rect" title="Converts a quaternion to ZYX Euler angles in degrees." alt="" coords="5,31,188,56"/>
+<area shape="rect" href="FusionMath_8h.html#a1e9f389455766ff907bb8d77eca0651d" title="Returns the arc sine of the value." alt="" coords="282,5,374,31"/>
+<area shape="poly" title=" " alt="" coords="188,31,268,22,268,27,189,36"/>
+<area shape="rect" href="FusionMath_8h.html#a6a2873913881e775a84c117e29616b4e" title="Converts radians to degrees." alt="" coords="236,55,420,80"/>
+<area shape="poly" title=" " alt="" coords="189,50,223,54,222,59,188,55"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_icgraph.png" border="0" usemap="#aFusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_icgraph" id="aFusionMath_8h_ae48e95900c10d60ff8ea84687f59f4f1_icgraph">
+<area shape="rect" title="Converts a quaternion to ZYX Euler angles in degrees." alt="" coords="763,13,945,38"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="493,13,715,38"/>
+<area shape="poly" title=" " alt="" coords="749,28,715,28,715,23,749,23"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="480,28,446,28,446,23,480,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a16601f5d377e62ef475fb44c4748c9ff" name="a16601f5d377e62ef475fb44c4748c9ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16601f5d377e62ef475fb44c4748c9ff">&#9670;&#160;</a></span>FusionQuaternionToMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionMatrix.html">FusionMatrix</a> FusionQuaternionToMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionQuaternion.html">FusionQuaternion</a>&#160;</td>
+          <td class="paramname"><em>quaternion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a quaternion to a rotation matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">quaternion</td><td>Quaternion. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a6a2873913881e775a84c117e29616b4e" name="a6a2873913881e775a84c117e29616b4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2873913881e775a84c117e29616b4e">&#9670;&#160;</a></span>FusionRadiansToDegrees()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionRadiansToDegrees </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>radians</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts radians to degrees. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radians</td><td>Radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Degrees. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a6a2873913881e775a84c117e29616b4e_icgraph.png" border="0" usemap="#aFusionMath_8h_a6a2873913881e775a84c117e29616b4e_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a6a2873913881e775a84c117e29616b4e_icgraph" id="aFusionMath_8h_a6a2873913881e775a84c117e29616b4e_icgraph">
+<area shape="rect" title="Converts radians to degrees." alt="" coords="1049,55,1233,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a2dd9d3225d8576dd39c0530122830d22" title="Returns the AHRS algorithm internal states." alt="" coords="779,5,985,31"/>
+<area shape="poly" title=" " alt="" coords="1060,55,949,33,950,28,1061,49"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="763,55,1001,80"/>
+<area shape="poly" title=" " alt="" coords="1036,70,1001,70,1001,65,1036,65"/>
+<area shape="rect" href="FusionMath_8h.html#ae48e95900c10d60ff8ea84687f59f4f1" title="Converts a quaternion to ZYX Euler angles in degrees." alt="" coords="791,104,973,129"/>
+<area shape="poly" title=" " alt="" coords="1061,85,950,107,949,101,1060,80"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="493,55,715,80"/>
+<area shape="poly" title=" " alt="" coords="797,36,677,57,676,52,796,30"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,47,445,87"/>
+<area shape="poly" title=" " alt="" coords="480,70,446,70,446,65,480,65"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,55,233,80"/>
+<area shape="poly" title=" " alt="" coords="268,70,234,70,234,65,268,65"/>
+<area shape="poly" title=" " alt="" coords="796,104,676,83,677,77,797,99"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab3d1d8d9f51de0e0416174c1007c9897" name="ab3d1d8d9f51de0e0416174c1007c9897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d1d8d9f51de0e0416174c1007c9897">&#9670;&#160;</a></span>FusionVectorAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionVectorAdd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the sum of two vectors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectorA</td><td>Vector A. </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Vector B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum of two vectors. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_ab3d1d8d9f51de0e0416174c1007c9897_icgraph.png" border="0" usemap="#aFusionMath_8h_ab3d1d8d9f51de0e0416174c1007c9897_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_ab3d1d8d9f51de0e0416174c1007c9897_icgraph" id="aFusionMath_8h_ab3d1d8d9f51de0e0416174c1007c9897_icgraph">
+<area shape="rect" title="Returns the sum of two vectors." alt="" coords="1081,55,1212,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a7d81dbd72e592de5737dba762597e639" title="Returns the linear acceleration measurement equal to the accelerometer measurement with the 1 g of gr..." alt="" coords="796,5,1033,31"/>
+<area shape="poly" title=" " alt="" coords="1077,54,1033,45,979,33,980,28,1034,39,1078,49"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="845,104,985,129"/>
+<area shape="poly" title=" " alt="" coords="1074,85,976,107,975,101,1073,80"/>
+<area shape="rect" href="FusionOffset_8c.html#a7a767f0f96ae165e5d90881be32400ef" title="Updates the gyroscope offset algorithm and returns the corrected gyroscope measurement." alt="" coords="839,55,990,80"/>
+<area shape="poly" title=" " alt="" coords="1067,70,990,70,990,65,1067,65"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,47,731,72"/>
+<area shape="poly" title=" " alt="" coords="811,35,712,49,711,44,810,30"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,39,445,79"/>
+<area shape="poly" title=" " alt="" coords="496,62,446,62,446,57,496,57"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,47,233,72"/>
+<area shape="poly" title=" " alt="" coords="268,62,234,62,234,57,268,57"/>
+<area shape="poly" title=" " alt="" coords="835,104,686,75,687,69,836,99"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,97,718,137"/>
+<area shape="poly" title=" " alt="" coords="831,119,718,119,718,114,831,114"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,161,748,187"/>
+<area shape="poly" title=" " alt="" coords="836,135,687,164,686,159,835,129"/>
+<area shape="poly" title=" " alt="" coords="826,68,731,65,731,60,826,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a98cb9b0f001b1e17e65e801811436e90" name="a98cb9b0f001b1e17e65e801811436e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98cb9b0f001b1e17e65e801811436e90">&#9670;&#160;</a></span>FusionVectorCrossProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionVectorCrossProduct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the cross product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectorA</td><td>Vector A. </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Vector B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Cross product. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a98cb9b0f001b1e17e65e801811436e90_icgraph.png" border="0" usemap="#aFusionMath_8h_a98cb9b0f001b1e17e65e801811436e90_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a98cb9b0f001b1e17e65e801811436e90_icgraph" id="aFusionMath_8h_a98cb9b0f001b1e17e65e801811436e90_icgraph">
+<area shape="rect" title="Returns the cross product." alt="" coords="1271,95,1461,121"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1061,45,1145,70"/>
+<area shape="poly" title=" " alt="" coords="1286,95,1145,68,1146,63,1287,90"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="1257,105,936,89,936,84,1257,100"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="984,146,1223,171"/>
+<area shape="poly" title=" " alt="" coords="1287,126,1170,149,1169,143,1286,121"/>
+<area shape="poly" title=" " alt="" coords="1048,66,937,78,936,73,1047,61"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e54dd1e67961cdfe729a8eee91594f8" name="a0e54dd1e67961cdfe729a8eee91594f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e54dd1e67961cdfe729a8eee91594f8">&#9670;&#160;</a></span>FusionVectorDotProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionVectorDotProduct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the dot product. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectorA</td><td>Vector A. </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Vector B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Dot product. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_cgraph.png" border="0" usemap="#aFusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_cgraph" alt=""/></div>
+<map name="aFusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_cgraph" id="aFusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_cgraph">
+<area shape="rect" title="Returns the dot product." alt="" coords="5,31,183,56"/>
+<area shape="rect" href="FusionMath_8h.html#a02c1911b63e50ef1e74213dda2556b7d" title="Calculates the Hadamard product (element&#45;wise multiplication)." alt="" coords="231,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="183,32,217,28,217,33,183,37"/>
+<area shape="rect" href="FusionMath_8h.html#adc0f543173685c0912b438ac6b4cbe05" title="Returns the sum of the elements." alt="" coords="275,55,409,80"/>
+<area shape="poly" title=" " alt="" coords="183,49,261,57,261,62,183,55"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_icgraph.png" border="0" usemap="#aFusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_icgraph" id="aFusionMath_8h_a0e54dd1e67961cdfe729a8eee91594f8_icgraph">
+<area shape="rect" title="Returns the dot product." alt="" coords="1116,70,1293,95"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="984,70,1068,95"/>
+<area shape="poly" title=" " alt="" coords="1102,85,1068,85,1068,80,1102,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="970,85,936,85,936,80,970,80"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a02c1911b63e50ef1e74213dda2556b7d" name="a02c1911b63e50ef1e74213dda2556b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c1911b63e50ef1e74213dda2556b7d">&#9670;&#160;</a></span>FusionVectorHadamardProduct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionVectorHadamardProduct </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the Hadamard product (element-wise multiplication). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectorA</td><td>Vector A. </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Vector B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Hadamard product. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a02c1911b63e50ef1e74213dda2556b7d_icgraph.png" border="0" usemap="#aFusionMath_8h_a02c1911b63e50ef1e74213dda2556b7d_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a02c1911b63e50ef1e74213dda2556b7d_icgraph" id="aFusionMath_8h_a02c1911b63e50ef1e74213dda2556b7d_icgraph">
+<area shape="rect" title="Calculates the Hadamard product (element&#45;wise multiplication)." alt="" coords="1835,105,2057,131"/>
+<area shape="rect" href="FusionCalibration_8h.html#ad2bfcd433b1d4e96dafb7fb1440d6e6a" title="Gyroscope and accelerometer calibration model." alt="" coords="809,5,990,31"/>
+<area shape="poly" title=" " alt="" coords="1873,105,1709,73,1512,45,1369,33,1226,25,990,20,990,15,1227,20,1369,27,1512,39,1710,68,1874,100"/>
+<area shape="rect" href="FusionMath_8h.html#a0e54dd1e67961cdfe729a8eee91594f8" title="Returns the dot product." alt="" coords="1585,180,1762,205"/>
+<area shape="poly" title=" " alt="" coords="1886,137,1721,183,1720,177,1884,132"/>
+<area shape="rect" href="FusionMath_8h.html#a5bb5a2791581cb9068ca27be0cee09b5" title="Returns the vector magnitude squared." alt="" coords="1560,105,1787,131"/>
+<area shape="poly" title=" " alt="" coords="1821,121,1787,121,1787,115,1821,115"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,55,731,80"/>
+<area shape="poly" title=" " alt="" coords="814,36,694,57,693,52,813,30"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,47,445,87"/>
+<area shape="poly" title=" " alt="" coords="496,70,446,70,446,65,496,65"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,55,233,80"/>
+<area shape="poly" title=" " alt="" coords="268,70,234,70,234,65,268,65"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1128,257,1212,283"/>
+<area shape="poly" title=" " alt="" coords="1577,210,1213,266,1212,261,1576,205"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="829,175,969,200"/>
+<area shape="poly" title=" " alt="" coords="1113,259,1050,241,935,203,937,197,1051,235,1115,253"/>
+<area shape="poly" title=" " alt="" coords="855,172,650,83,652,78,857,167"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,138,718,178"/>
+<area shape="poly" title=" " alt="" coords="815,181,718,171,718,166,816,176"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,203,748,228"/>
+<area shape="poly" title=" " alt="" coords="816,198,747,205,747,200,815,193"/>
+<area shape="poly" title=" " alt="" coords="1546,117,1315,122,1182,131,1051,147,991,161,937,177,936,172,989,156,1050,142,1182,126,1315,116,1546,112"/>
+<area shape="rect" href="FusionMath_8h.html#a811ea7a6321937c86260d6712965bebf" title="Returns the vector magnitude." alt="" coords="1337,55,1512,80"/>
+<area shape="poly" title=" " alt="" coords="1596,105,1487,83,1488,77,1597,100"/>
+<area shape="rect" href="FusionMath_8h.html#abe720e5e588a4e46f6225ddb5894ae3d" title="Returns the normalised vector." alt="" coords="1339,168,1511,193"/>
+<area shape="poly" title=" " alt="" coords="1610,137,1477,170,1475,165,1609,131"/>
+<area shape="rect" href="FusionAhrs_8c.html#a2dd9d3225d8576dd39c0530122830d22" title="Returns the AHRS algorithm internal states." alt="" coords="796,55,1003,80"/>
+<area shape="poly" title=" " alt="" coords="1323,70,1003,70,1003,65,1323,65"/>
+<area shape="poly" title=" " alt="" coords="782,70,732,70,732,65,782,65"/>
+<area shape="poly" title=" " alt="" coords="1385,201,1290,241,1213,263,1211,258,1288,235,1383,197"/>
+<area shape="poly" title=" " alt="" coords="1325,194,1289,197,1117,199,969,194,970,189,1117,193,1289,191,1325,189"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="1051,156,1289,181"/>
+<area shape="poly" title=" " alt="" coords="1325,179,1289,177,1290,172,1325,173"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a296db176fe1f4d6390a647e729fe3fd7" name="a296db176fe1f4d6390a647e729fe3fd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296db176fe1f4d6390a647e729fe3fd7">&#9670;&#160;</a></span>FusionVectorIsZero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool FusionVectorIsZero </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the vector is zero. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the vector is zero. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a296db176fe1f4d6390a647e729fe3fd7_icgraph.png" border="0" usemap="#aFusionMath_8h_a296db176fe1f4d6390a647e729fe3fd7_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a296db176fe1f4d6390a647e729fe3fd7_icgraph" id="aFusionMath_8h_a296db176fe1f4d6390a647e729fe3fd7_icgraph">
+<area shape="rect" title="Returns true if the vector is zero." alt="" coords="984,70,1131,95"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="970,85,936,85,936,80,970,80"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a811ea7a6321937c86260d6712965bebf" name="a811ea7a6321937c86260d6712965bebf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a811ea7a6321937c86260d6712965bebf">&#9670;&#160;</a></span>FusionVectorMagnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionVectorMagnitude </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the vector magnitude. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector magnitude. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a811ea7a6321937c86260d6712965bebf_cgraph.png" border="0" usemap="#aFusionMath_8h_a811ea7a6321937c86260d6712965bebf_cgraph" alt=""/></div>
+<map name="aFusionMath_8h_a811ea7a6321937c86260d6712965bebf_cgraph" id="aFusionMath_8h_a811ea7a6321937c86260d6712965bebf_cgraph">
+<area shape="rect" title="Returns the vector magnitude." alt="" coords="5,31,180,56"/>
+<area shape="rect" href="FusionMath_8h.html#a5bb5a2791581cb9068ca27be0cee09b5" title="Returns the vector magnitude squared." alt="" coords="228,31,455,56"/>
+<area shape="poly" title=" " alt="" coords="180,41,214,41,214,46,180,46"/>
+<area shape="rect" href="FusionMath_8h.html#a02c1911b63e50ef1e74213dda2556b7d" title="Calculates the Hadamard product (element&#45;wise multiplication)." alt="" coords="503,5,725,31"/>
+<area shape="poly" title=" " alt="" coords="455,30,489,27,489,32,455,35"/>
+<area shape="rect" href="FusionMath_8h.html#adc0f543173685c0912b438ac6b4cbe05" title="Returns the sum of the elements." alt="" coords="547,55,681,80"/>
+<area shape="poly" title=" " alt="" coords="455,51,533,58,533,63,455,56"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a811ea7a6321937c86260d6712965bebf_icgraph.png" border="0" usemap="#aFusionMath_8h_a811ea7a6321937c86260d6712965bebf_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a811ea7a6321937c86260d6712965bebf_icgraph" id="aFusionMath_8h_a811ea7a6321937c86260d6712965bebf_icgraph">
+<area shape="rect" title="Returns the vector magnitude." alt="" coords="1017,13,1192,38"/>
+<area shape="rect" href="FusionAhrs_8c.html#a2dd9d3225d8576dd39c0530122830d22" title="Returns the AHRS algorithm internal states." alt="" coords="763,13,969,38"/>
+<area shape="poly" title=" " alt="" coords="1004,28,970,28,970,23,1004,23"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="493,13,715,38"/>
+<area shape="poly" title=" " alt="" coords="749,28,715,28,715,23,749,23"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="480,28,446,28,446,23,480,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5bb5a2791581cb9068ca27be0cee09b5" name="a5bb5a2791581cb9068ca27be0cee09b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb5a2791581cb9068ca27be0cee09b5">&#9670;&#160;</a></span>FusionVectorMagnitudeSquared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionVectorMagnitudeSquared </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the vector magnitude squared. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector magnitude squared. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_cgraph.png" border="0" usemap="#aFusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_cgraph" alt=""/></div>
+<map name="aFusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_cgraph" id="aFusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_cgraph">
+<area shape="rect" title="Returns the vector magnitude squared." alt="" coords="5,31,232,56"/>
+<area shape="rect" href="FusionMath_8h.html#a02c1911b63e50ef1e74213dda2556b7d" title="Calculates the Hadamard product (element&#45;wise multiplication)." alt="" coords="280,5,503,31"/>
+<area shape="poly" title=" " alt="" coords="232,30,266,27,267,32,232,35"/>
+<area shape="rect" href="FusionMath_8h.html#adc0f543173685c0912b438ac6b4cbe05" title="Returns the sum of the elements." alt="" coords="324,55,459,80"/>
+<area shape="poly" title=" " alt="" coords="232,51,311,58,310,63,232,56"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_icgraph.png" border="0" usemap="#aFusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_icgraph" id="aFusionMath_8h_a5bb5a2791581cb9068ca27be0cee09b5_icgraph">
+<area shape="rect" title="Returns the vector magnitude squared." alt="" coords="1560,57,1787,82"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="829,82,969,107"/>
+<area shape="poly" title=" " alt="" coords="1546,76,969,95,969,90,1546,71"/>
+<area shape="rect" href="FusionMath_8h.html#a811ea7a6321937c86260d6712965bebf" title="Returns the vector magnitude." alt="" coords="1337,6,1512,31"/>
+<area shape="poly" title=" " alt="" coords="1596,56,1487,34,1488,29,1597,51"/>
+<area shape="rect" href="FusionMath_8h.html#abe720e5e588a4e46f6225ddb5894ae3d" title="Returns the normalised vector." alt="" coords="1339,131,1511,157"/>
+<area shape="poly" title=" " alt="" coords="1618,89,1469,134,1467,129,1616,84"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="833,81,672,41,673,36,835,76"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,119,718,159"/>
+<area shape="poly" title=" " alt="" coords="816,110,719,126,718,121,815,105"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,69,748,94"/>
+<area shape="poly" title=" " alt="" coords="815,93,748,90,748,85,816,88"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+<area shape="rect" href="FusionAhrs_8c.html#a2dd9d3225d8576dd39c0530122830d22" title="Returns the AHRS algorithm internal states." alt="" coords="796,10,1003,35"/>
+<area shape="poly" title=" " alt="" coords="1323,22,1003,25,1003,19,1323,17"/>
+<area shape="poly" title=" " alt="" coords="782,26,732,27,732,22,782,21"/>
+<area shape="poly" title=" " alt="" coords="1387,165,1341,183,1290,197,1223,210,1169,216,1116,213,1050,197,1007,179,968,155,912,109,915,105,971,151,1010,175,1051,192,1117,208,1169,211,1222,204,1289,192,1339,178,1385,160"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1128,107,1212,133"/>
+<area shape="poly" title=" " alt="" coords="1324,137,1212,127,1212,121,1325,132"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="1051,157,1289,182"/>
+<area shape="poly" title=" " alt="" coords="1325,157,1290,160,1289,155,1325,151"/>
+<area shape="poly" title=" " alt="" coords="1114,118,969,104,970,99,1115,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afcb6f43a8c7c7409516b8909166b0143" name="afcb6f43a8c7c7409516b8909166b0143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb6f43a8c7c7409516b8909166b0143">&#9670;&#160;</a></span>FusionVectorMultiplyScalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionVectorMultiplyScalar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>scalar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the multiplication of a vector by a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+    <tr><td class="paramname">scalar</td><td>Scalar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Multiplication of a vector by a scalar. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_afcb6f43a8c7c7409516b8909166b0143_icgraph.png" border="0" usemap="#aFusionMath_8h_afcb6f43a8c7c7409516b8909166b0143_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_afcb6f43a8c7c7409516b8909166b0143_icgraph" id="aFusionMath_8h_afcb6f43a8c7c7409516b8909166b0143_icgraph">
+<area shape="rect" title="Returns the multiplication of a vector by a scalar." alt="" coords="1501,72,1700,97"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="801,128,941,153"/>
+<area shape="poly" title=" " alt="" coords="1559,105,1509,123,1454,138,1384,149,1312,157,1170,162,1042,158,941,151,942,145,1042,153,1170,156,1312,151,1383,144,1453,133,1508,118,1557,100"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="995,47,1233,72"/>
+<area shape="poly" title=" " alt="" coords="1487,81,1233,68,1234,63,1488,76"/>
+<area shape="rect" href="FusionOffset_8c.html#a7a767f0f96ae165e5d90881be32400ef" title="Updates the gyroscope offset algorithm and returns the corrected gyroscope measurement." alt="" coords="796,5,947,31"/>
+<area shape="poly" title=" " alt="" coords="1535,72,1453,55,1313,39,1174,28,947,21,947,15,1174,23,1314,33,1454,50,1536,66"/>
+<area shape="rect" href="FusionMath_8h.html#abe720e5e588a4e46f6225ddb5894ae3d" title="Returns the normalised vector." alt="" coords="1281,97,1453,123"/>
+<area shape="poly" title=" " alt="" coords="1488,100,1454,103,1453,98,1487,94"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,15,731,40"/>
+<area shape="poly" title=" " alt="" coords="828,125,649,42,651,38,830,120"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,150,718,190"/>
+<area shape="poly" title=" " alt="" coords="788,153,718,161,718,156,787,148"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,100,748,125"/>
+<area shape="poly" title=" " alt="" coords="787,134,734,128,735,123,788,129"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,7,445,47"/>
+<area shape="poly" title=" " alt="" coords="496,30,446,30,446,25,496,25"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,15,233,40"/>
+<area shape="poly" title=" " alt="" coords="268,30,234,30,234,25,268,25"/>
+<area shape="poly" title=" " alt="" coords="782,24,732,26,731,21,782,19"/>
+<area shape="poly" title=" " alt="" coords="1295,128,1234,137,1077,145,942,145,942,140,1077,140,1233,131,1294,123"/>
+<area shape="poly" title=" " alt="" coords="1289,97,1178,75,1179,69,1290,92"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1072,96,1156,121"/>
+<area shape="poly" title=" " alt="" coords="1268,112,1156,112,1156,106,1268,107"/>
+<area shape="poly" title=" " alt="" coords="1059,119,942,134,941,129,1058,113"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abe720e5e588a4e46f6225ddb5894ae3d" name="abe720e5e588a4e46f6225ddb5894ae3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe720e5e588a4e46f6225ddb5894ae3d">&#9670;&#160;</a></span>FusionVectorNormalise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionVectorNormalise </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the normalised vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Normalised vector. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_cgraph.png" border="0" usemap="#aFusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_cgraph" alt=""/></div>
+<map name="aFusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_cgraph" id="aFusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_cgraph">
+<area shape="rect" title="Returns the normalised vector." alt="" coords="5,55,177,80"/>
+<area shape="rect" href="FusionMath_8h.html#ad6a2703be59beda3108cbad3269f2217" title="Calculates the reciprocal of the square root. See https://pizer.wordpress.com/2008/10/12/fast&#45;inverse..." alt="" coords="257,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="155,52,260,31,261,36,156,57"/>
+<area shape="rect" href="FusionMath_8h.html#a5bb5a2791581cb9068ca27be0cee09b5" title="Returns the vector magnitude squared." alt="" coords="225,55,452,80"/>
+<area shape="poly" title=" " alt="" coords="178,65,212,65,212,70,178,70"/>
+<area shape="rect" href="FusionMath_8h.html#afcb6f43a8c7c7409516b8909166b0143" title="Returns the multiplication of a vector by a scalar." alt="" coords="239,104,438,129"/>
+<area shape="poly" title=" " alt="" coords="156,77,261,99,260,104,155,83"/>
+<area shape="rect" href="FusionMath_8h.html#a02c1911b63e50ef1e74213dda2556b7d" title="Calculates the Hadamard product (element&#45;wise multiplication)." alt="" coords="500,31,723,56"/>
+<area shape="poly" title=" " alt="" coords="452,55,486,52,487,57,452,60"/>
+<area shape="rect" href="FusionMath_8h.html#adc0f543173685c0912b438ac6b4cbe05" title="Returns the sum of the elements." alt="" coords="544,80,679,105"/>
+<area shape="poly" title=" " alt="" coords="452,75,531,83,530,88,452,81"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_icgraph.png" border="0" usemap="#aFusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_icgraph" id="aFusionMath_8h_abe720e5e588a4e46f6225ddb5894ae3d_icgraph">
+<area shape="rect" title="Returns the normalised vector." alt="" coords="1271,95,1443,121"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1061,45,1145,70"/>
+<area shape="poly" title=" " alt="" coords="1278,95,1145,68,1146,63,1279,90"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="796,70,936,95"/>
+<area shape="poly" title=" " alt="" coords="1256,106,936,89,936,84,1257,100"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="984,146,1223,171"/>
+<area shape="poly" title=" " alt="" coords="1279,126,1168,149,1167,143,1278,121"/>
+<area shape="poly" title=" " alt="" coords="1048,66,937,78,936,73,1047,61"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,13,731,38"/>
+<area shape="poly" title=" " alt="" coords="807,69,747,53,689,41,690,35,749,48,808,64"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,63,718,103"/>
+<area shape="poly" title=" " alt="" coords="782,85,718,85,718,80,782,80"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,127,748,153"/>
+<area shape="poly" title=" " alt="" coords="808,102,749,117,690,130,689,125,747,112,807,97"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="496,28,446,28,446,23,496,23"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51a659292169bcad0816f6c46e5ce003" name="a51a659292169bcad0816f6c46e5ce003"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a659292169bcad0816f6c46e5ce003">&#9670;&#160;</a></span>FusionVectorSubtract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="unionFusionVector.html">FusionVector</a> FusionVectorSubtract </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorA</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vectorB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns vector B subtracted from vector A. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vectorA</td><td>Vector A. </td></tr>
+    <tr><td class="paramname">vectorB</td><td>Vector B. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector B subtracted from vector A. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_a51a659292169bcad0816f6c46e5ce003_icgraph.png" border="0" usemap="#aFusionMath_8h_a51a659292169bcad0816f6c46e5ce003_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_a51a659292169bcad0816f6c46e5ce003_icgraph" id="aFusionMath_8h_a51a659292169bcad0816f6c46e5ce003_icgraph">
+<area shape="rect" title="Returns vector B subtracted from vector A." alt="" coords="1048,80,1207,105"/>
+<area shape="rect" href="FusionAhrs_8c.html#a7d81dbd72e592de5737dba762597e639" title="Returns the linear acceleration measurement equal to the accelerometer measurement with the 1 g of gr..." alt="" coords="763,5,1000,31"/>
+<area shape="poly" title=" " alt="" coords="1085,77,999,45,955,33,956,28,1001,39,1087,72"/>
+<area shape="rect" href="FusionCalibration_8h.html#ad2bfcd433b1d4e96dafb7fb1440d6e6a" title="Gyroscope and accelerometer calibration model." alt="" coords="791,55,972,80"/>
+<area shape="poly" title=" " alt="" coords="1034,86,972,79,973,74,1034,80"/>
+<area shape="rect" href="FusionCalibration_8h.html#a27bfd795bdbec878375cdc651c0f88a9" title="Magnetometer calibration model." alt="" coords="784,104,979,129"/>
+<area shape="poly" title=" " alt="" coords="1034,104,979,110,978,105,1034,99"/>
+<area shape="rect" href="FusionOffset_8c.html#a7a767f0f96ae165e5d90881be32400ef" title="Updates the gyroscope offset algorithm and returns the corrected gyroscope measurement." alt="" coords="806,153,957,179"/>
+<area shape="poly" title=" " alt="" coords="1085,113,1001,143,951,156,949,151,999,138,1083,108"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="493,80,715,105"/>
+<area shape="poly" title=" " alt="" coords="799,36,763,45,642,82,640,77,762,39,797,31"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,73,445,113"/>
+<area shape="poly" title=" " alt="" coords="480,95,446,95,446,90,480,90"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,80,233,105"/>
+<area shape="poly" title=" " alt="" coords="268,95,234,95,234,90,268,90"/>
+<area shape="poly" title=" " alt="" coords="777,80,715,85,715,80,776,74"/>
+<area shape="poly" title=" " alt="" coords="770,110,715,105,715,100,770,104"/>
+<area shape="poly" title=" " alt="" coords="802,153,762,143,643,108,645,103,763,138,804,148"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc0f543173685c0912b438ac6b4cbe05" name="adc0f543173685c0912b438ac6b4cbe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0f543173685c0912b438ac6b4cbe05">&#9670;&#160;</a></span>FusionVectorSum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static float FusionVectorSum </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="unionFusionVector.html">FusionVector</a>&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the sum of the elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sum of the elements. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="FusionMath_8h_adc0f543173685c0912b438ac6b4cbe05_icgraph.png" border="0" usemap="#aFusionMath_8h_adc0f543173685c0912b438ac6b4cbe05_icgraph" alt=""/></div>
+<map name="aFusionMath_8h_adc0f543173685c0912b438ac6b4cbe05_icgraph" id="aFusionMath_8h_adc0f543173685c0912b438ac6b4cbe05_icgraph">
+<area shape="rect" title="Returns the sum of the elements." alt="" coords="1835,107,1969,132"/>
+<area shape="rect" href="FusionMath_8h.html#a0e54dd1e67961cdfe729a8eee91594f8" title="Returns the dot product." alt="" coords="1585,51,1762,76"/>
+<area shape="poly" title=" " alt="" coords="1836,106,1725,79,1727,73,1837,101"/>
+<area shape="rect" href="FusionMath_8h.html#a5bb5a2791581cb9068ca27be0cee09b5" title="Returns the vector magnitude squared." alt="" coords="1560,131,1787,156"/>
+<area shape="poly" title=" " alt="" coords="1821,130,1787,134,1787,129,1820,125"/>
+<area shape="rect" href="FusionAhrs_8c.html#a6566aeb4b57e290309dd24a04bf33591" title="Returns the feedback." alt="" coords="1128,5,1212,31"/>
+<area shape="poly" title=" " alt="" coords="1571,57,1212,24,1213,19,1571,52"/>
+<area shape="rect" href="FusionAhrs_8c.html#af98205155fc3110da2e6bf410f33b4c0" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and magnetometer measurements." alt="" coords="829,109,969,135"/>
+<area shape="poly" title=" " alt="" coords="1115,28,1052,45,979,78,922,111,919,107,976,73,1050,39,1113,23"/>
+<area shape="rect" href="classICM20948Node.html#aabe75047bf58406cdbe6fbfade1ab0c5" title=" " alt="" coords="510,175,731,200"/>
+<area shape="poly" title=" " alt="" coords="832,140,676,177,675,172,831,135"/>
+<area shape="rect" href="FusionAhrs_8c.html#a5b23b676f809c0b8a78b0cad9f29abb7" title="Updates the AHRS algorithm using the gyroscope, accelerometer, and heading measurements." alt="" coords="523,105,718,145"/>
+<area shape="poly" title=" " alt="" coords="815,125,718,126,718,121,815,120"/>
+<area shape="rect" href="FusionAhrs_8c.html#a16cba1de9039e57f2e25789e6ee64601" title="Updates the AHRS algorithm using the gyroscope and accelerometer measurements only." alt="" coords="493,55,748,80"/>
+<area shape="poly" title=" " alt="" coords="820,109,686,83,687,77,821,104"/>
+<area shape="rect" href="classICM20948Node.html#a98c751e7fdf90985604bec6652ac0826" title=" " alt="" coords="281,167,445,207"/>
+<area shape="poly" title=" " alt="" coords="496,190,446,190,446,185,496,185"/>
+<area shape="rect" href="classICM20948Node.html#a28a6f6aaef14cf172f6a3799f8a7dfce" title=" " alt="" coords="5,175,233,200"/>
+<area shape="poly" title=" " alt="" coords="268,190,234,190,234,185,268,185"/>
+<area shape="poly" title=" " alt="" coords="1546,143,969,127,969,121,1546,137"/>
+<area shape="rect" href="FusionMath_8h.html#a811ea7a6321937c86260d6712965bebf" title="Returns the vector magnitude." alt="" coords="1337,207,1512,232"/>
+<area shape="poly" title=" " alt="" coords="1619,163,1468,209,1467,204,1617,157"/>
+<area shape="rect" href="FusionMath_8h.html#abe720e5e588a4e46f6225ddb5894ae3d" title="Returns the normalised vector." alt="" coords="1339,81,1511,107"/>
+<area shape="poly" title=" " alt="" coords="1595,131,1489,109,1490,104,1596,125"/>
+<area shape="rect" href="FusionAhrs_8c.html#a2dd9d3225d8576dd39c0530122830d22" title="Returns the AHRS algorithm internal states." alt="" coords="796,185,1003,211"/>
+<area shape="poly" title=" " alt="" coords="1323,218,1003,205,1003,200,1323,213"/>
+<area shape="poly" title=" " alt="" coords="782,196,732,194,732,189,782,191"/>
+<area shape="poly" title=" " alt="" coords="1381,78,1289,45,1212,27,1213,22,1290,39,1383,73"/>
+<area shape="poly" title=" " alt="" coords="1325,102,970,121,969,116,1324,97"/>
+<area shape="rect" href="FusionCompass_8c.html#a84edef505185c1a5fd2ad3b1d97071ff" title="Calculates the magnetic heading." alt="" coords="1051,55,1289,80"/>
+<area shape="poly" title=" " alt="" coords="1325,86,1289,82,1290,77,1325,81"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

@@ -48,10 +48,10 @@
         <link refid="Fusion_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c</label>
         <link refid="FusionAhrs_8c"/>
       </node>
@@ -60,16 +60,24 @@
         <link refid="FusionAhrs_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="3">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/FusionConverter.h</label>
-        <link refid="FusionConverter_8h_source"/>
+        <link refid="FusionConverter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h</label>
+        <link refid="icm20948__node_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="4">
-        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h</label>
-        <link refid="icm20948__node_8h_source"/>
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp</label>
+        <link refid="icm20948__node_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="structFusionAhrsSettings" prot="public">FusionAhrsSettings</innerclass>
@@ -103,7 +111,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="80" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="46" bodyend="57" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="80" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="84" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="46" bodyend="58" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="84" declcolumn="6"/>
+        <references refid="structFusionAhrsSettings_1acd413468c3155cf766b0bc2c78a44a9f" compoundref="FusionAhrs_8h" startline="26">FusionAhrsSettings::convention</references>
+        <references refid="FusionAhrs_8c_1aa05080527ed7c189f1f751a1b3a57484" compoundref="FusionAhrs_8c" startline="65" endline="80">FusionAhrsReset</references>
+        <references refid="FusionAhrs_8c_1a300bd4d7b409124f9541554bd53d2d2e" compoundref="FusionAhrs_8c" startline="87" endline="108">FusionAhrsSetSettings</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605afc59e27fd8ebc5541a2f54e54ee32655" compoundref="FusionConvention_8h" startline="18">FusionConventionNwu</references>
+        <referencedby refid="classICM20948Node_1a08c73f04f9a0174b2c519355f279eaf6" compoundref="icm20948__node_8cpp" startline="24" endline="175">ICM20948Node::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1aa05080527ed7c189f1f751a1b3a57484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +144,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="82" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="64" bodyend="78" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="82" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="86" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="65" bodyend="80" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="86" declcolumn="6"/>
+        <references refid="structFusionAhrs_1ace8975cadf7d8209065b957fb05fb778" compoundref="FusionAhrs_8h" startline="51">FusionAhrs::accelerationRecoveryTimeout</references>
+        <references refid="structFusionAhrs_1aa9d4efb76bd1fd5089faf2804951f5cc" compoundref="FusionAhrs_8h" startline="50">FusionAhrs::accelerationRecoveryTrigger</references>
+        <references refid="structFusionAhrs_1a7d125618fe66554526f663a21ca86378" compoundref="FusionAhrs_8h" startline="42">FusionAhrs::accelerometer</references>
+        <references refid="structFusionAhrs_1a3d637714785c7f138f3075825b2097fe" compoundref="FusionAhrs_8h" startline="49">FusionAhrs::accelerometerIgnored</references>
+        <references refid="structFusionAhrs_1a824c442f44865741b626e7a5dc859df8" compoundref="FusionAhrs_8h" startline="46">FusionAhrs::angularRateRecovery</references>
+        <references refid="FusionMath_8h_1a5501ca56d440773167a54cfeac1d54af" compoundref="FusionMath_8h" startline="98">FUSION_IDENTITY_QUATERNION</references>
+        <references refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" compoundref="FusionMath_8h" startline="88">FUSION_VECTOR_ZERO</references>
+        <references refid="structFusionAhrs_1afa2c976b8a7f1ea07316f0148c3d0bed" compoundref="FusionAhrs_8h" startline="47">FusionAhrs::halfAccelerometerFeedback</references>
+        <references refid="structFusionAhrs_1a280e183559ef96089963e1a5e171f134" compoundref="FusionAhrs_8h" startline="48">FusionAhrs::halfMagnetometerFeedback</references>
+        <references refid="FusionAhrs_8c_1a9c729ed62d65a8cb443029fe63e50d44" compoundref="FusionAhrs_8c" startline="21">INITIAL_GAIN</references>
+        <references refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" compoundref="FusionAhrs_8h" startline="43">FusionAhrs::initialising</references>
+        <references refid="structFusionAhrs_1a5d4f69745e5146c2c6e50ae4074f77aa" compoundref="FusionAhrs_8h" startline="54">FusionAhrs::magneticRecoveryTimeout</references>
+        <references refid="structFusionAhrs_1ac8492e45878193bb9b24d88604e2e751" compoundref="FusionAhrs_8h" startline="53">FusionAhrs::magneticRecoveryTrigger</references>
+        <references refid="structFusionAhrs_1a68ae6bb940d44b052d40d6fd89d92b5a" compoundref="FusionAhrs_8h" startline="52">FusionAhrs::magnetometerIgnored</references>
+        <references refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" compoundref="FusionAhrs_8h" startline="41">FusionAhrs::quaternion</references>
+        <references refid="structFusionAhrs_1a65f1b2b35130425e4cf567eed8201b32" compoundref="FusionAhrs_8h" startline="44">FusionAhrs::rampedGain</references>
+        <references refid="structFusionAhrsSettings_1abe4fc627b1e35d834936d78d7b333534" compoundref="FusionAhrs_8h" startline="31">FusionAhrsSettings::recoveryTriggerPeriod</references>
+        <references refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" compoundref="FusionAhrs_8h" startline="40">FusionAhrs::settings</references>
+        <referencedby refid="FusionAhrs_8c_1ac753e0112b48de5247710bdde3a77dcd" compoundref="FusionAhrs_8c" startline="46" endline="58">FusionAhrsInitialise</referencedby>
+        <referencedby refid="FusionAhrs_8c_1af98205155fc3110da2e6bf410f33b4c0" compoundref="FusionAhrs_8c" startline="119" endline="244">FusionAhrsUpdate</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a300bd4d7b409124f9541554bd53d2d2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +204,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="84" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="85" bodyend="102" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="84" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="88" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="87" bodyend="108" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="88" declcolumn="6"/>
+        <references refid="structFusionAhrs_1ace8975cadf7d8209065b957fb05fb778" compoundref="FusionAhrs_8h" startline="51">FusionAhrs::accelerationRecoveryTimeout</references>
+        <references refid="structFusionAhrsSettings_1aa4c8b2ee3042d049c86e4d0af2d9b026" compoundref="FusionAhrs_8h" startline="29">FusionAhrsSettings::accelerationRejection</references>
+        <references refid="structFusionAhrsSettings_1acd413468c3155cf766b0bc2c78a44a9f" compoundref="FusionAhrs_8h" startline="26">FusionAhrsSettings::convention</references>
+        <references refid="FusionMath_8h_1a7d5c84abc4531eae68b69f1a9bd7a109" compoundref="FusionMath_8h" startline="132" endline="135">FusionDegreesToRadians</references>
+        <references refid="structFusionAhrsSettings_1a74d957f5916e193a76ebf37859ddb586" compoundref="FusionAhrs_8h" startline="27">FusionAhrsSettings::gain</references>
+        <references refid="structFusionAhrsSettings_1a3c8b5605ba2a8353c6d5951822975729" compoundref="FusionAhrs_8h" startline="28">FusionAhrsSettings::gyroscopeRange</references>
+        <references refid="FusionAhrs_8c_1a9c729ed62d65a8cb443029fe63e50d44" compoundref="FusionAhrs_8c" startline="21">INITIAL_GAIN</references>
+        <references refid="FusionAhrs_8c_1a8316308d431356c7e6028e901b81582f" compoundref="FusionAhrs_8c" startline="26">INITIALISATION_PERIOD</references>
+        <references refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" compoundref="FusionAhrs_8h" startline="43">FusionAhrs::initialising</references>
+        <references refid="structFusionAhrs_1a5d4f69745e5146c2c6e50ae4074f77aa" compoundref="FusionAhrs_8h" startline="54">FusionAhrs::magneticRecoveryTimeout</references>
+        <references refid="structFusionAhrsSettings_1a55f0709c69e58ea0e03199b720c9dc61" compoundref="FusionAhrs_8h" startline="30">FusionAhrsSettings::magneticRejection</references>
+        <references refid="structFusionAhrs_1a65f1b2b35130425e4cf567eed8201b32" compoundref="FusionAhrs_8h" startline="44">FusionAhrs::rampedGain</references>
+        <references refid="structFusionAhrs_1aae6d501a1815186c96aace01e6e61a4b" compoundref="FusionAhrs_8h" startline="45">FusionAhrs::rampedGainStep</references>
+        <references refid="structFusionAhrsSettings_1abe4fc627b1e35d834936d78d7b333534" compoundref="FusionAhrs_8h" startline="31">FusionAhrsSettings::recoveryTriggerPeriod</references>
+        <references refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" compoundref="FusionAhrs_8h" startline="40">FusionAhrs::settings</references>
+        <referencedby refid="FusionAhrs_8c_1ac753e0112b48de5247710bdde3a77dcd" compoundref="FusionAhrs_8c" startline="46" endline="58">FusionAhrsInitialise</referencedby>
+        <referencedby refid="classICM20948Node_1a08c73f04f9a0174b2c519355f279eaf6" compoundref="icm20948__node_8cpp" startline="24" endline="175">ICM20948Node::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1af98205155fc3110da2e6bf410f33b4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -247,7 +297,50 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="86" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="113" bodyend="217" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="86" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="90" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="119" bodyend="244" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="90" declcolumn="6"/>
+        <references refid="structFusionAhrs_1ace8975cadf7d8209065b957fb05fb778" compoundref="FusionAhrs_8h" startline="51">FusionAhrs::accelerationRecoveryTimeout</references>
+        <references refid="structFusionAhrs_1aa9d4efb76bd1fd5089faf2804951f5cc" compoundref="FusionAhrs_8h" startline="50">FusionAhrs::accelerationRecoveryTrigger</references>
+        <references refid="structFusionAhrsSettings_1aa4c8b2ee3042d049c86e4d0af2d9b026" compoundref="FusionAhrs_8h" startline="29">FusionAhrsSettings::accelerationRejection</references>
+        <references refid="structFusionAhrs_1a7d125618fe66554526f663a21ca86378" compoundref="FusionAhrs_8h" startline="42">FusionAhrs::accelerometer</references>
+        <references refid="structFusionAhrs_1a3d637714785c7f138f3075825b2097fe" compoundref="FusionAhrs_8h" startline="49">FusionAhrs::accelerometerIgnored</references>
+        <references refid="structFusionAhrs_1a824c442f44865741b626e7a5dc859df8" compoundref="FusionAhrs_8h" startline="46">FusionAhrs::angularRateRecovery</references>
+        <references refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17">FusionVector::axis</references>
+        <references refid="FusionAhrs_8c_1a0cb76a40af6c599083e6cc8a7f86033d" compoundref="FusionAhrs_8c" startline="336" endline="345">Clamp</references>
+        <references refid="FusionAhrs_8c_1a6566aeb4b57e290309dd24a04bf33591" compoundref="FusionAhrs_8c" startline="321" endline="327">Feedback</references>
+        <references refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" compoundref="FusionMath_8h" startline="88">FUSION_VECTOR_ZERO</references>
+        <references refid="FusionAhrs_8c_1aa05080527ed7c189f1f751a1b3a57484" compoundref="FusionAhrs_8c" startline="65" endline="80">FusionAhrsReset</references>
+        <references refid="FusionMath_8h_1a7d5c84abc4531eae68b69f1a9bd7a109" compoundref="FusionMath_8h" startline="132" endline="135">FusionDegreesToRadians</references>
+        <references refid="FusionMath_8h_1a4c1bb23dc219da0184530a5a7cab8093" compoundref="FusionMath_8h" startline="360" endline="371">FusionQuaternionAdd</references>
+        <references refid="FusionMath_8h_1a63282e8273c44fcbb7dc299ec8e66e98" compoundref="FusionMath_8h" startline="405" endline="420">FusionQuaternionMultiplyVector</references>
+        <references refid="FusionMath_8h_1a18a7a1f28ea8c3163bf2c701fa1689f4" compoundref="FusionMath_8h" startline="427" endline="444">FusionQuaternionNormalise</references>
+        <references refid="FusionMath_8h_1ab3d1d8d9f51de0e0416174c1007c9897" compoundref="FusionMath_8h" startline="211" endline="219">FusionVectorAdd</references>
+        <references refid="FusionMath_8h_1a98cb9b0f001b1e17e65e801811436e90" compoundref="FusionMath_8h" startline="289" endline="303">FusionVectorCrossProduct</references>
+        <references refid="FusionMath_8h_1a296db176fe1f4d6390a647e729fe3fd7" compoundref="FusionMath_8h" startline="200" endline="203">FusionVectorIsZero</references>
+        <references refid="FusionMath_8h_1a5bb5a2791581cb9068ca27be0cee09b5" compoundref="FusionMath_8h" startline="321" endline="324">FusionVectorMagnitudeSquared</references>
+        <references refid="FusionMath_8h_1afcb6f43a8c7c7409516b8909166b0143" compoundref="FusionMath_8h" startline="255" endline="263">FusionVectorMultiplyScalar</references>
+        <references refid="FusionMath_8h_1abe720e5e588a4e46f6225ddb5894ae3d" compoundref="FusionMath_8h" startline="341" endline="349">FusionVectorNormalise</references>
+        <references refid="structFusionAhrsSettings_1a74d957f5916e193a76ebf37859ddb586" compoundref="FusionAhrs_8h" startline="27">FusionAhrsSettings::gain</references>
+        <references refid="structFusionAhrsSettings_1a3c8b5605ba2a8353c6d5951822975729" compoundref="FusionAhrs_8h" startline="28">FusionAhrsSettings::gyroscopeRange</references>
+        <references refid="structFusionAhrs_1afa2c976b8a7f1ea07316f0148c3d0bed" compoundref="FusionAhrs_8h" startline="47">FusionAhrs::halfAccelerometerFeedback</references>
+        <references refid="FusionAhrs_8c_1a44bb9f0d6fc81a4faba2e9daff7b9c87" compoundref="FusionAhrs_8c" startline="251" endline="275">HalfGravity</references>
+        <references refid="FusionAhrs_8c_1a6d75bfdb53c78b0a62955bb026d99c35" compoundref="FusionAhrs_8c" startline="282" endline="313">HalfMagnetic</references>
+        <references refid="structFusionAhrs_1a280e183559ef96089963e1a5e171f134" compoundref="FusionAhrs_8h" startline="48">FusionAhrs::halfMagnetometerFeedback</references>
+        <references refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" compoundref="FusionAhrs_8h" startline="43">FusionAhrs::initialising</references>
+        <references refid="structFusionAhrs_1a5d4f69745e5146c2c6e50ae4074f77aa" compoundref="FusionAhrs_8h" startline="54">FusionAhrs::magneticRecoveryTimeout</references>
+        <references refid="structFusionAhrs_1ac8492e45878193bb9b24d88604e2e751" compoundref="FusionAhrs_8h" startline="53">FusionAhrs::magneticRecoveryTrigger</references>
+        <references refid="structFusionAhrsSettings_1a55f0709c69e58ea0e03199b720c9dc61" compoundref="FusionAhrs_8h" startline="30">FusionAhrsSettings::magneticRejection</references>
+        <references refid="structFusionAhrs_1a68ae6bb940d44b052d40d6fd89d92b5a" compoundref="FusionAhrs_8h" startline="52">FusionAhrs::magnetometerIgnored</references>
+        <references refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" compoundref="FusionAhrs_8h" startline="41">FusionAhrs::quaternion</references>
+        <references refid="structFusionAhrs_1a65f1b2b35130425e4cf567eed8201b32" compoundref="FusionAhrs_8h" startline="44">FusionAhrs::rampedGain</references>
+        <references refid="structFusionAhrs_1aae6d501a1815186c96aace01e6e61a4b" compoundref="FusionAhrs_8h" startline="45">FusionAhrs::rampedGainStep</references>
+        <references refid="structFusionAhrsSettings_1abe4fc627b1e35d834936d78d7b333534" compoundref="FusionAhrs_8h" startline="31">FusionAhrsSettings::recoveryTriggerPeriod</references>
+        <references refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" compoundref="FusionAhrs_8h" startline="40">FusionAhrs::settings</references>
+        <references refid="unionFusionVector_1ab34ed3670d1b32e46f607bb6ef61b391" compoundref="FusionMath_8h" startline="28">FusionVector::x</references>
+        <references refid="unionFusionVector_1a2fa58cbe872d045ea569eaae7835beef" compoundref="FusionMath_8h" startline="29">FusionVector::y</references>
+        <references refid="unionFusionVector_1a829a8887dbb7298e7f357e47a19ab887" compoundref="FusionMath_8h" startline="30">FusionVector::z</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
+        <referencedby refid="FusionAhrs_8c_1a5b23b676f809c0b8a78b0cad9f29abb7" compoundref="FusionAhrs_8c" startline="378" endline="399">FusionAhrsUpdateExternalHeading</referencedby>
+        <referencedby refid="FusionAhrs_8c_1a16cba1de9039e57f2e25789e6ee64601" compoundref="FusionAhrs_8c" startline="355" endline="367">FusionAhrsUpdateNoMagnetometer</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a16cba1de9039e57f2e25789e6ee64601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -311,7 +404,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="88" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="324" bodyend="333" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="88" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="94" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="355" bodyend="367" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="94" declcolumn="6"/>
+        <references refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" compoundref="FusionMath_8h" startline="88">FUSION_VECTOR_ZERO</references>
+        <references refid="FusionAhrs_8c_1ae5f216caed51d9f84aa5219c24b17ec4" compoundref="FusionAhrs_8c" startline="539" endline="552">FusionAhrsSetHeading</references>
+        <references refid="FusionAhrs_8c_1af98205155fc3110da2e6bf410f33b4c0" compoundref="FusionAhrs_8c" startline="119" endline="244">FusionAhrsUpdate</references>
+        <references refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" compoundref="FusionAhrs_8h" startline="43">FusionAhrs::initialising</references>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a5b23b676f809c0b8a78b0cad9f29abb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -387,7 +484,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="90" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="344" bodyend="362" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="90" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="98" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="378" bodyend="399" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="98" declcolumn="6"/>
+        <references refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17">FusionVector::axis</references>
+        <references refid="FusionAhrs_8c_1af98205155fc3110da2e6bf410f33b4c0" compoundref="FusionAhrs_8c" startline="119" endline="244">FusionAhrsUpdate</references>
+        <references refid="FusionMath_8h_1a7d5c84abc4531eae68b69f1a9bd7a109" compoundref="FusionMath_8h" startline="132" endline="135">FusionDegreesToRadians</references>
+        <references refid="FusionAhrs_8c_1acbcee443d6d55cb8600b3f240f5cf907">Q</references>
+        <references refid="unionFusionVector_1ab34ed3670d1b32e46f607bb6ef61b391" compoundref="FusionMath_8h" startline="28">FusionVector::x</references>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a2a347b0aec6ab1da57cd4036a836a37c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref></type>
@@ -417,7 +519,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="92" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="369" bodyend="371" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="92" declcolumn="18"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="102" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="406" bodyend="409" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="102" declcolumn="18"/>
+        <references refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" compoundref="FusionAhrs_8h" startline="41">FusionAhrs::quaternion</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1aff782cded23b64d70cdeb48db2ecfa49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -457,7 +561,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="94" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="378" bodyend="380" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="94" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="104" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="416" bodyend="419" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="104" declcolumn="6"/>
+        <references refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" compoundref="FusionAhrs_8h" startline="41">FusionAhrs::quaternion</references>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a7d81dbd72e592de5737dba762597e639" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
@@ -487,7 +592,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="96" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="388" bodyend="410" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="96" declcolumn="14"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="106" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="427" bodyend="450" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="106" declcolumn="14"/>
+        <references refid="structFusionAhrs_1a7d125618fe66554526f663a21ca86378" compoundref="FusionAhrs_8h" startline="42">FusionAhrs::accelerometer</references>
+        <references refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17">FusionVector::axis</references>
+        <references refid="structFusionAhrsSettings_1acd413468c3155cf766b0bc2c78a44a9f" compoundref="FusionAhrs_8h" startline="26">FusionAhrsSettings::convention</references>
+        <references refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" compoundref="FusionMath_8h" startline="88">FUSION_VECTOR_ZERO</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605a81e3e285adb8785f59da76344d098382" compoundref="FusionConvention_8h" startline="19">FusionConventionEnu</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605ab553c1aa5c6bbc28e429db072dae5e88" compoundref="FusionConvention_8h" startline="20">FusionConventionNed</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605afc59e27fd8ebc5541a2f54e54ee32655" compoundref="FusionConvention_8h" startline="18">FusionConventionNwu</references>
+        <references refid="FusionMath_8h_1ab3d1d8d9f51de0e0416174c1007c9897" compoundref="FusionMath_8h" startline="211" endline="219">FusionVectorAdd</references>
+        <references refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" compoundref="FusionMath_8h" startline="227" endline="237">FusionVectorSubtract</references>
+        <references refid="FusionAhrs_8c_1acbcee443d6d55cb8600b3f240f5cf907">Q</references>
+        <references refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" compoundref="FusionAhrs_8h" startline="40">FusionAhrs::settings</references>
+        <references refid="unionFusionVector_1ab34ed3670d1b32e46f607bb6ef61b391" compoundref="FusionMath_8h" startline="28">FusionVector::x</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a7be838eeb1bf104bc9330fd82d48a6fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
@@ -517,7 +635,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="98" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="418" bodyend="449" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="98" declcolumn="14"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="108" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="458" bodyend="490" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="108" declcolumn="14"/>
+        <references refid="FusionAhrs_8c_1a955f504eccf76b4eb2489c0adab03121">A</references>
+        <references refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17">FusionVector::axis</references>
+        <references refid="structFusionAhrsSettings_1acd413468c3155cf766b0bc2c78a44a9f" compoundref="FusionAhrs_8h" startline="26">FusionAhrsSettings::convention</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605a81e3e285adb8785f59da76344d098382" compoundref="FusionConvention_8h" startline="19">FusionConventionEnu</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605ab553c1aa5c6bbc28e429db072dae5e88" compoundref="FusionConvention_8h" startline="20">FusionConventionNed</references>
+        <references refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605afc59e27fd8ebc5541a2f54e54ee32655" compoundref="FusionConvention_8h" startline="18">FusionConventionNwu</references>
+        <references refid="FusionAhrs_8c_1acbcee443d6d55cb8600b3f240f5cf907">Q</references>
+        <references refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" compoundref="FusionAhrs_8h" startline="40">FusionAhrs::settings</references>
+        <references refid="unionFusionVector_1ab34ed3670d1b32e46f607bb6ef61b391" compoundref="FusionMath_8h" startline="28">FusionVector::x</references>
+        <references refid="unionFusionVector_1a829a8887dbb7298e7f357e47a19ab887" compoundref="FusionMath_8h" startline="30">FusionVector::z</references>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a2dd9d3225d8576dd39c0530122830d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structFusionAhrsInternalStates" kindref="compound">FusionAhrsInternalStates</ref></type>
@@ -547,7 +675,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="100" column="26" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="456" bodyend="466" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="100" declcolumn="26"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="110" column="26" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="497" bodyend="514" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="110" declcolumn="26"/>
+        <references refid="structFusionAhrsInternalStates_1aeb508ac8b5bf70ee345f0cb6c2125272" compoundref="FusionAhrs_8h" startline="62">FusionAhrsInternalStates::accelerationError</references>
+        <references refid="structFusionAhrs_1aa9d4efb76bd1fd5089faf2804951f5cc" compoundref="FusionAhrs_8h" startline="50">FusionAhrs::accelerationRecoveryTrigger</references>
+        <references refid="structFusionAhrs_1a3d637714785c7f138f3075825b2097fe" compoundref="FusionAhrs_8h" startline="49">FusionAhrs::accelerometerIgnored</references>
+        <references refid="FusionMath_8h_1a1e9f389455766ff907bb8d77eca0651d" compoundref="FusionMath_8h" startline="155" endline="164">FusionAsin</references>
+        <references refid="FusionMath_8h_1a6a2873913881e775a84c117e29616b4e" compoundref="FusionMath_8h" startline="142" endline="145">FusionRadiansToDegrees</references>
+        <references refid="FusionMath_8h_1a811ea7a6321937c86260d6712965bebf" compoundref="FusionMath_8h" startline="331" endline="334">FusionVectorMagnitude</references>
+        <references refid="structFusionAhrs_1afa2c976b8a7f1ea07316f0148c3d0bed" compoundref="FusionAhrs_8h" startline="47">FusionAhrs::halfAccelerometerFeedback</references>
+        <references refid="structFusionAhrs_1a280e183559ef96089963e1a5e171f134" compoundref="FusionAhrs_8h" startline="48">FusionAhrs::halfMagnetometerFeedback</references>
+        <references refid="structFusionAhrs_1ac8492e45878193bb9b24d88604e2e751" compoundref="FusionAhrs_8h" startline="53">FusionAhrs::magneticRecoveryTrigger</references>
+        <references refid="structFusionAhrs_1a68ae6bb940d44b052d40d6fd89d92b5a" compoundref="FusionAhrs_8h" startline="52">FusionAhrs::magnetometerIgnored</references>
+        <references refid="structFusionAhrsSettings_1abe4fc627b1e35d834936d78d7b333534" compoundref="FusionAhrs_8h" startline="31">FusionAhrsSettings::recoveryTriggerPeriod</references>
+        <references refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" compoundref="FusionAhrs_8h" startline="40">FusionAhrs::settings</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1a348b373ad797b71aa7e395df500ba0a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structFusionAhrsFlags" kindref="compound">FusionAhrsFlags</ref></type>
@@ -577,7 +718,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="102" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="473" bodyend="481" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="102" declcolumn="17"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="112" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="521" bodyend="530" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="112" declcolumn="17"/>
+        <references refid="structFusionAhrs_1ace8975cadf7d8209065b957fb05fb778" compoundref="FusionAhrs_8h" startline="51">FusionAhrs::accelerationRecoveryTimeout</references>
+        <references refid="structFusionAhrs_1aa9d4efb76bd1fd5089faf2804951f5cc" compoundref="FusionAhrs_8h" startline="50">FusionAhrs::accelerationRecoveryTrigger</references>
+        <references refid="structFusionAhrs_1a824c442f44865741b626e7a5dc859df8" compoundref="FusionAhrs_8h" startline="46">FusionAhrs::angularRateRecovery</references>
+        <references refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" compoundref="FusionAhrs_8h" startline="43">FusionAhrs::initialising</references>
+        <references refid="structFusionAhrsFlags_1afafaf4ebaef73170e6f1de781f9c565a" compoundref="FusionAhrs_8h" startline="75">FusionAhrsFlags::initialising</references>
+        <references refid="structFusionAhrs_1a5d4f69745e5146c2c6e50ae4074f77aa" compoundref="FusionAhrs_8h" startline="54">FusionAhrs::magneticRecoveryTimeout</references>
+        <references refid="structFusionAhrs_1ac8492e45878193bb9b24d88604e2e751" compoundref="FusionAhrs_8h" startline="53">FusionAhrs::magneticRecoveryTrigger</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionAhrs_8h_1ae5f216caed51d9f84aa5219c24b17ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -617,7 +766,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="104" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="490" bodyend="502" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="104" declcolumn="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" line="114" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.c" bodystart="539" bodyend="552" declfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h" declline="114" declcolumn="6"/>
+        <references refid="unionFusionQuaternion_1afa74ea4ce823aebbc385767c99c6a2d0">FusionQuaternion::element</references>
+        <references refid="FusionMath_8h_1a7d5c84abc4531eae68b69f1a9bd7a109" compoundref="FusionMath_8h" startline="132" endline="135">FusionDegreesToRadians</references>
+        <references refid="FusionMath_8h_1a19d5e91951071668a79b0f2db6916cd1" compoundref="FusionMath_8h" startline="379" endline="394">FusionQuaternionMultiply</references>
+        <references refid="FusionAhrs_8c_1acbcee443d6d55cb8600b3f240f5cf907">Q</references>
+        <references refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" compoundref="FusionAhrs_8h" startline="41">FusionAhrs::quaternion</references>
+        <references refid="unionFusionQuaternion_1ab1f18105a048c4f60642a84d5bb1cdce" compoundref="FusionMath_8h" startline="42">FusionQuaternion::w</references>
+        <referencedby refid="FusionAhrs_8c_1a16cba1de9039e57f2e25789e6ee64601" compoundref="FusionAhrs_8c" startline="355" endline="367">FusionAhrsUpdateNoMagnetometer</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -643,82 +799,92 @@
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="structFusionAhrsSettings" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref><sp/>convention;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gyroscopeRange;</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>accelerationRejection;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magneticRejection;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>recoveryTriggerPeriod;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}<sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref>;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37" refid="structFusionAhrs" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref><sp/>settings;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref><sp/>quaternion;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialising;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rampedGain;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rampedGainStep;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>angularRateRecovery;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>halfAccelerometerFeedback;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>halfMagnetometerFeedback;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>accelerometerIgnored;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>accelerationRecoveryTrigger;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>accelerationRecoveryTimeout;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>magnetometerIgnored;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>magneticRecoveryTrigger;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>magneticRecoveryTimeout;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}<sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref>;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58" refid="structFusionAhrsInternalStates" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>accelerationError;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>accelerometerIgnored;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>accelerationRecoveryTrigger;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magneticError;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>magnetometerIgnored;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magneticRecoveryTrigger;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">}<sp/><ref refid="structFusionAhrsInternalStates" kindref="compound">FusionAhrsInternalStates</ref>;</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70" refid="structFusionAhrsFlags" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>initialising;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>angularRateRecovery;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>accelerationRecovery;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>magneticRecovery;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal">}<sp/><ref refid="structFusionAhrsFlags" kindref="compound">FusionAhrsFlags</ref>;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1ac753e0112b48de5247710bdde3a77dcd" kindref="member">FusionAhrsInitialise</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1aa05080527ed7c189f1f751a1b3a57484" kindref="member">FusionAhrsReset</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="24" refid="structFusionAhrsSettings" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26" refid="structFusionAhrsSettings_1acd413468c3155cf766b0bc2c78a44a9f" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="FusionConvention_8h_1a1e84474f3ec646056c61b557c08e9605" kindref="member">FusionConvention</ref><sp/><ref refid="structFusionAhrsSettings_1acd413468c3155cf766b0bc2c78a44a9f" kindref="member">convention</ref>;</highlight></codeline>
+<codeline lineno="27" refid="structFusionAhrsSettings_1a74d957f5916e193a76ebf37859ddb586" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings_1a74d957f5916e193a76ebf37859ddb586" kindref="member">gain</ref>;</highlight></codeline>
+<codeline lineno="28" refid="structFusionAhrsSettings_1a3c8b5605ba2a8353c6d5951822975729" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings_1a3c8b5605ba2a8353c6d5951822975729" kindref="member">gyroscopeRange</ref>;</highlight></codeline>
+<codeline lineno="29" refid="structFusionAhrsSettings_1aa4c8b2ee3042d049c86e4d0af2d9b026" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings_1aa4c8b2ee3042d049c86e4d0af2d9b026" kindref="member">accelerationRejection</ref>;</highlight></codeline>
+<codeline lineno="30" refid="structFusionAhrsSettings_1a55f0709c69e58ea0e03199b720c9dc61" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings_1a55f0709c69e58ea0e03199b720c9dc61" kindref="member">magneticRejection</ref>;</highlight></codeline>
+<codeline lineno="31" refid="structFusionAhrsSettings_1abe4fc627b1e35d834936d78d7b333534" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings_1abe4fc627b1e35d834936d78d7b333534" kindref="member">recoveryTriggerPeriod</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="structFusionAhrs" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref><sp/><ref refid="structFusionAhrs_1ac8556dc85f9cfdf6d5001ba80246b1ca" kindref="member">settings</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref><sp/><ref refid="structFusionAhrs_1aa783e4058c63639b8bbd30cc373e0394" kindref="member">quaternion</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structFusionAhrs_1a7d125618fe66554526f663a21ca86378" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="structFusionAhrs_1a7d125618fe66554526f663a21ca86378" kindref="member">accelerometer</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1a2ce8c979b7996bd695fe997afcf0ed09" kindref="member">initialising</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structFusionAhrs_1a65f1b2b35130425e4cf567eed8201b32" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1a65f1b2b35130425e4cf567eed8201b32" kindref="member">rampedGain</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structFusionAhrs_1aae6d501a1815186c96aace01e6e61a4b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1aae6d501a1815186c96aace01e6e61a4b" kindref="member">rampedGainStep</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structFusionAhrs_1a824c442f44865741b626e7a5dc859df8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1a824c442f44865741b626e7a5dc859df8" kindref="member">angularRateRecovery</ref>;</highlight></codeline>
+<codeline lineno="47" refid="structFusionAhrs_1afa2c976b8a7f1ea07316f0148c3d0bed" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="structFusionAhrs_1afa2c976b8a7f1ea07316f0148c3d0bed" kindref="member">halfAccelerometerFeedback</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structFusionAhrs_1a280e183559ef96089963e1a5e171f134" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="structFusionAhrs_1a280e183559ef96089963e1a5e171f134" kindref="member">halfMagnetometerFeedback</ref>;</highlight></codeline>
+<codeline lineno="49" refid="structFusionAhrs_1a3d637714785c7f138f3075825b2097fe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1a3d637714785c7f138f3075825b2097fe" kindref="member">accelerometerIgnored</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structFusionAhrs_1aa9d4efb76bd1fd5089faf2804951f5cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1aa9d4efb76bd1fd5089faf2804951f5cc" kindref="member">accelerationRecoveryTrigger</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structFusionAhrs_1ace8975cadf7d8209065b957fb05fb778" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1ace8975cadf7d8209065b957fb05fb778" kindref="member">accelerationRecoveryTimeout</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structFusionAhrs_1a68ae6bb940d44b052d40d6fd89d92b5a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1a68ae6bb940d44b052d40d6fd89d92b5a" kindref="member">magnetometerIgnored</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structFusionAhrs_1ac8492e45878193bb9b24d88604e2e751" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1ac8492e45878193bb9b24d88604e2e751" kindref="member">magneticRecoveryTrigger</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structFusionAhrs_1a5d4f69745e5146c2c6e50ae4074f77aa" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs_1a5d4f69745e5146c2c6e50ae4074f77aa" kindref="member">magneticRecoveryTimeout</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="structFusionAhrsInternalStates" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62" refid="structFusionAhrsInternalStates_1aeb508ac8b5bf70ee345f0cb6c2125272" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsInternalStates_1aeb508ac8b5bf70ee345f0cb6c2125272" kindref="member">accelerationError</ref>;</highlight></codeline>
+<codeline lineno="63" refid="structFusionAhrsInternalStates_1ab3ea3f6b3b183200027bfd5a319ccb9c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsInternalStates_1ab3ea3f6b3b183200027bfd5a319ccb9c" kindref="member">accelerometerIgnored</ref>;</highlight></codeline>
+<codeline lineno="64" refid="structFusionAhrsInternalStates_1afcde2689d1ddae8b7b928c078b3e870c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsInternalStates_1afcde2689d1ddae8b7b928c078b3e870c" kindref="member">accelerationRecoveryTrigger</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structFusionAhrsInternalStates_1a6b892f891d5ba2d21f34af5d449304e0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsInternalStates_1a6b892f891d5ba2d21f34af5d449304e0" kindref="member">magneticError</ref>;</highlight></codeline>
+<codeline lineno="66" refid="structFusionAhrsInternalStates_1a1dfba1ac45edaad24e71613b7a2b0519" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsInternalStates_1a1dfba1ac45edaad24e71613b7a2b0519" kindref="member">magnetometerIgnored</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structFusionAhrsInternalStates_1a81bd96156e458e1082d382a173495a5f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsInternalStates_1a81bd96156e458e1082d382a173495a5f" kindref="member">magneticRecoveryTrigger</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}<sp/><ref refid="structFusionAhrsInternalStates" kindref="compound">FusionAhrsInternalStates</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structFusionAhrsFlags" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75" refid="structFusionAhrsFlags_1afafaf4ebaef73170e6f1de781f9c565a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsFlags_1afafaf4ebaef73170e6f1de781f9c565a" kindref="member">initialising</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structFusionAhrsFlags_1a2050fede4d5ccd82b3490b25fcb533ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsFlags_1a2050fede4d5ccd82b3490b25fcb533ca" kindref="member">angularRateRecovery</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structFusionAhrsFlags_1aebe15b43942ef8ddadef919b7ece82f2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsFlags_1aebe15b43942ef8ddadef919b7ece82f2" kindref="member">accelerationRecovery</ref>;</highlight></codeline>
+<codeline lineno="78" refid="structFusionAhrsFlags_1ac67edcd6a36c190195f27d548e5bc322" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsFlags_1ac67edcd6a36c190195f27d548e5bc322" kindref="member">magneticRecovery</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}<sp/><ref refid="structFusionAhrsFlags" kindref="compound">FusionAhrsFlags</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>declarations</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1a300bd4d7b409124f9541554bd53d2d2e" kindref="member">FusionAhrsSetSettings</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>settings);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1ac753e0112b48de5247710bdde3a77dcd" kindref="member">FusionAhrsInitialise</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1af98205155fc3110da2e6bf410f33b4c0" kindref="member">FusionAhrsUpdate</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>magnetometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1aa05080527ed7c189f1f751a1b3a57484" kindref="member">FusionAhrsReset</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1a16cba1de9039e57f2e25789e6ee64601" kindref="member">FusionAhrsUpdateNoMagnetometer</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1a300bd4d7b409124f9541554bd53d2d2e" kindref="member">FusionAhrsSetSettings</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrsSettings" kindref="compound">FusionAhrsSettings</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>settings);</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1a5b23b676f809c0b8a78b0cad9f29abb7" kindref="member">FusionAhrsUpdateExternalHeading</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>heading,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref><sp/><ref refid="FusionAhrs_8h_1a2a347b0aec6ab1da57cd4036a836a37c" kindref="member">FusionAhrsGetQuaternion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1af98205155fc3110da2e6bf410f33b4c0" kindref="member">FusionAhrsUpdate</ref>(</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>magnetometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1aff782cded23b64d70cdeb48db2ecfa49" kindref="member">FusionAhrsSetQuaternion</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref><sp/>quaternion);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionAhrs_8h_1a7d81dbd72e592de5737dba762597e639" kindref="member">FusionAhrsGetLinearAcceleration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1a16cba1de9039e57f2e25789e6ee64601" kindref="member">FusionAhrsUpdateNoMagnetometer</ref>(</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionAhrs_8h_1a7be838eeb1bf104bc9330fd82d48a6fb" kindref="member">FusionAhrsGetEarthAcceleration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><ref refid="structFusionAhrsInternalStates" kindref="compound">FusionAhrsInternalStates</ref><sp/><ref refid="FusionAhrs_8h_1a2dd9d3225d8576dd39c0530122830d22" kindref="member">FusionAhrsGetInternalStates</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1a5b23b676f809c0b8a78b0cad9f29abb7" kindref="member">FusionAhrsUpdateExternalHeading</ref>(</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>accelerometer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>heading,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaTime);</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><ref refid="structFusionAhrsFlags" kindref="compound">FusionAhrsFlags</ref><sp/><ref refid="FusionAhrs_8h_1a348b373ad797b71aa7e395df500ba0a0" kindref="member">FusionAhrsGetFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref><sp/><ref refid="FusionAhrs_8h_1a2a347b0aec6ab1da57cd4036a836a37c" kindref="member">FusionAhrsGetQuaternion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1ae5f216caed51d9f84aa5219c24b17ec4" kindref="member">FusionAhrsSetHeading</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>heading);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1aff782cded23b64d70cdeb48db2ecfa49" kindref="member">FusionAhrsSetQuaternion</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionQuaternion" kindref="compound">FusionQuaternion</ref><sp/>quaternion);</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionAhrs_8h_1a7d81dbd72e592de5737dba762597e639" kindref="member">FusionAhrsGetLinearAcceleration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionAhrs_8h_1a7be838eeb1bf104bc9330fd82d48a6fb" kindref="member">FusionAhrsGetEarthAcceleration</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><ref refid="structFusionAhrsInternalStates" kindref="compound">FusionAhrsInternalStates</ref><sp/><ref refid="FusionAhrs_8h_1a2dd9d3225d8576dd39c0530122830d22" kindref="member">FusionAhrsGetInternalStates</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="structFusionAhrsFlags" kindref="compound">FusionAhrsFlags</ref><sp/><ref refid="FusionAhrs_8h_1a348b373ad797b71aa7e395df500ba0a0" kindref="member">FusionAhrsGetFlags</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionAhrs_8h_1ae5f216caed51d9f84aa5219c24b17ec4" kindref="member">FusionAhrsSetHeading</ref>(<ref refid="structFusionAhrs" kindref="compound">FusionAhrs</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ahrs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>heading);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionAhrs.h"/>
   </compounddef>

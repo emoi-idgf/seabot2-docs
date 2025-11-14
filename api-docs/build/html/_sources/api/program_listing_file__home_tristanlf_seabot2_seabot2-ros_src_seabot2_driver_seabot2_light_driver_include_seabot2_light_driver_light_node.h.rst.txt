@@ -22,40 +22,42 @@ Program Listing for File light_node.h
    using namespace std::chrono_literals;
    using namespace std;
    
-   class LightNode final : public rclcpp::Node {
+   class LightNode final: public rclcpp::Node {
    public:
-       LightNode();
-       ~LightNode() override;
+     LightNode();
+     ~LightNode() override;
    
    private:
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 100ms; 
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 100ms;   
    
-       Light light_;
+     Light light_;
    
-       rclcpp::Service<seabot2_srvs::srv::Light>::SharedPtr service_light_ ;
-       rclcpp::Service<std_srvs::srv::SetBool>::SharedPtr service_flash_surface_ ;
+     rclcpp::Service < seabot2_srvs::srv::Light > ::SharedPtr service_light_;
+     rclcpp::Service < std_srvs::srv::SetBool > ::SharedPtr service_flash_surface_;
    
-       rclcpp::Time time_turn_off_light_ = this->now();
-       bool special_flash_ = false;
-       bool light_is_on_ = false;
-       bool is_surface_ = false;
-       const int nb_surface_flash_ = 1;
+     rclcpp::Time time_turn_off_light_ = this->now();
+     bool special_flash_ = false;
+     bool light_is_on_ = false;
+     bool is_surface_ = false;
+     const int nb_surface_flash_ = 1;
    
-       void timer_callback();
+     void timer_callback();
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void service_flash_surface_callback(const std::shared_ptr<rmw_request_id_t> request_header,
-                                                      const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
-                                                      std::shared_ptr<std_srvs::srv::SetBool::Response> response);
+     void service_flash_surface_callback(
+       const std::shared_ptr < rmw_request_id_t > request_header,
+       const std::shared_ptr < std_srvs::srv::SetBool::Request > request,
+       std::shared_ptr < std_srvs::srv::SetBool::Response > response);
    
-       void service_light_callback(const std::shared_ptr<rmw_request_id_t> request_header,
-                                   const std::shared_ptr<seabot2_srvs::srv::Light::Request> request,
-                                              std::shared_ptr<seabot2_srvs::srv::Light::Response> response);
+     void service_light_callback(
+       const std::shared_ptr < rmw_request_id_t > request_header,
+       const std::shared_ptr < seabot2_srvs::srv::Light::Request > request,
+       std::shared_ptr < seabot2_srvs::srv::Light::Response > response);
    
    };
    

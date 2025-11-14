@@ -71,16 +71,24 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classMissionNode-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MissionNode Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Handles ROS2 interfaces and the mission manager.  
+ <a href="classMissionNode.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="mission__node_8hpp_source.html">mission_node.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MissionNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMissionNode__inherit__graph.png" border="0" usemap="#aMissionNode_inherit__map" alt="Inheritance graph"/></div>
 <map name="aMissionNode_inherit__map" id="aMissionNode_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,112,104"/>
+<area shape="rect" title="Handles ROS2 interfaces and the mission manager." alt="" coords="5,79,112,104"/>
 <area shape="rect" title=" " alt="" coords="7,5,110,31"/>
 <area shape="poly" title=" " alt="" coords="61,44,61,79,56,79,56,44"/>
 </map>
@@ -90,14 +98,1250 @@ Collaboration diagram for MissionNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMissionNode__coll__graph.png" border="0" usemap="#aMissionNode_coll__map" alt="Collaboration graph"/></div>
 <map name="aMissionNode_coll__map" id="aMissionNode_coll__map">
-<area shape="rect" title=" " alt="" coords="5,79,112,104"/>
-<area shape="rect" title=" " alt="" coords="7,5,110,31"/>
-<area shape="poly" title=" " alt="" coords="61,44,61,79,56,79,56,44"/>
+<area shape="rect" title="Handles ROS2 interfaces and the mission manager." alt="" coords="103,185,210,211"/>
+<area shape="rect" title=" " alt="" coords="5,95,108,121"/>
+<area shape="poly" title=" " alt="" coords="82,128,145,183,142,187,79,132"/>
+<area shape="rect" href="classMission.html" title="Handles the mission management." alt="" coords="314,95,386,121"/>
+<area shape="poly" title=" " alt="" coords="314,129,183,188,181,183,311,124"/>
+<area shape="rect" title=" " alt="" coords="149,5,207,31"/>
+<area shape="poly" title=" " alt="" coords="177,44,171,94,161,186,155,185,166,93,172,44"/>
+<area shape="poly" title=" " alt="" coords="214,35,329,93,326,98,211,39"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a210c7569d64bb3872762eda0e0880743" id="r_a210c7569d64bb3872762eda0e0880743"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743">MissionNode</a> ()</td></tr>
+<tr class="memdesc:a210c7569d64bb3872762eda0e0880743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classMission.html" title="Handles the mission management.">Mission</a> Node object.  <br /></td></tr>
+<tr class="separator:a210c7569d64bb3872762eda0e0880743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af883a167a9496d6473a8b38e7d3c4884" id="r_af883a167a9496d6473a8b38e7d3c4884"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#af883a167a9496d6473a8b38e7d3c4884">init_parameters</a> ()</td></tr>
+<tr class="memdesc:af883a167a9496d6473a8b38e7d3c4884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init and get parameters of the Node.  <br /></td></tr>
+<tr class="separator:af883a167a9496d6473a8b38e7d3c4884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630070c0bfbf02a9a851193d41351622" id="r_a630070c0bfbf02a9a851193d41351622"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622">init_interfaces</a> ()</td></tr>
+<tr class="memdesc:a630070c0bfbf02a9a851193d41351622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init interfaces of this node.  <br /></td></tr>
+<tr class="separator:a630070c0bfbf02a9a851193d41351622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31360b92f51c1e19df0369ae01dfc5c" id="r_ac31360b92f51c1e19df0369ae01dfc5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#ac31360b92f51c1e19df0369ae01dfc5c">timer_callback</a> ()</td></tr>
+<tr class="memdesc:ac31360b92f51c1e19df0369ae01dfc5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a step of the mission management process and publish depth control setpoint.  <br /></td></tr>
+<tr class="separator:ac31360b92f51c1e19df0369ae01dfc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c884ae315b1e07538ef74cbc4f712e" id="r_a29c884ae315b1e07538ef74cbc4f712e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a29c884ae315b1e07538ef74cbc4f712e">depth_callback</a> (const seabot2_msgs::msg::DepthPose::SharedPtr msg)</td></tr>
+<tr class="memdesc:a29c884ae315b1e07538ef74cbc4f712e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates depth.  <br /></td></tr>
+<tr class="separator:a29c884ae315b1e07538ef74cbc4f712e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654cde58df15ce43f9889f811904804f" id="r_a654cde58df15ce43f9889f811904804f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a654cde58df15ce43f9889f811904804f">temperature_callback</a> (const seabot2_msgs::msg::TemperatureSensorData::SharedPtr msg)</td></tr>
+<tr class="memdesc:a654cde58df15ce43f9889f811904804f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates temperature.  <br /></td></tr>
+<tr class="separator:a654cde58df15ce43f9889f811904804f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae921ef8e5969a77084756f65a4e91bc" id="r_aae921ef8e5969a77084756f65a4e91bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aae921ef8e5969a77084756f65a4e91bc">service_mission_reload_callback</a> (const std::shared_ptr&lt; rmw_request_id_t &gt; request_header, const std::shared_ptr&lt; std_srvs::srv::Trigger::Request &gt; request, std::shared_ptr&lt; std_srvs::srv::Trigger::Response &gt; response)</td></tr>
+<tr class="separator:aae921ef8e5969a77084756f65a4e91bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09f83e8a66b11c7db60cbe54526d29a" id="r_ac09f83e8a66b11c7db60cbe54526d29a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#ac09f83e8a66b11c7db60cbe54526d29a">call_light</a> ()</td></tr>
+<tr class="memdesc:ac09f83e8a66b11c7db60cbe54526d29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls light service.  <br /></td></tr>
+<tr class="separator:ac09f83e8a66b11c7db60cbe54526d29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90b719b138f2bb6bfa1ced9bd5630989" id="r_a90b719b138f2bb6bfa1ced9bd5630989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a90b719b138f2bb6bfa1ced9bd5630989">call_log_params</a> () const</td></tr>
+<tr class="memdesc:a90b719b138f2bb6bfa1ced9bd5630989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls log params service.  <br /></td></tr>
+<tr class="separator:a90b719b138f2bb6bfa1ced9bd5630989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33aab22ae169a4d830f44de315e6571" id="r_aa33aab22ae169a4d830f44de315e6571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aa33aab22ae169a4d830f44de315e6571">call_restart_bag</a> () const</td></tr>
+<tr class="memdesc:aa33aab22ae169a4d830f44de315e6571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls restart bag.  <br /></td></tr>
+<tr class="separator:aa33aab22ae169a4d830f44de315e6571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef3cca810237968950882ce4ca428b39" id="r_aef3cca810237968950882ce4ca428b39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39">load_mission</a> ()</td></tr>
+<tr class="memdesc:aef3cca810237968950882ce4ca428b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts rosbag and loads the mission from the mission file.  <br /></td></tr>
+<tr class="separator:aef3cca810237968950882ce4ca428b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a54da7a76ed28d89ec0bc9fa3344d70ac" id="r_a54da7a76ed28d89ec0bc9fa3344d70ac"><td class="memItemLeft" align="right" valign="top">rclcpp::TimerBase::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a54da7a76ed28d89ec0bc9fa3344d70ac">timer_</a></td></tr>
+<tr class="memdesc:a54da7a76ed28d89ec0bc9fa3344d70ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">rclcpp timer  <br /></td></tr>
+<tr class="separator:a54da7a76ed28d89ec0bc9fa3344d70ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed46034bcba118cbcf8c1fc666309f6d" id="r_aed46034bcba118cbcf8c1fc666309f6d"><td class="memItemLeft" align="right" valign="top">std::chrono::milliseconds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aed46034bcba118cbcf8c1fc666309f6d">loop_dt_</a> = std::chrono::milliseconds(1000)</td></tr>
+<tr class="memdesc:aed46034bcba118cbcf8c1fc666309f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">loop dt (ms)  <br /></td></tr>
+<tr class="separator:aed46034bcba118cbcf8c1fc666309f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38b6c59f36921d1cba99619504e1097" id="r_aa38b6c59f36921d1cba99619504e1097"><td class="memItemLeft" align="right" valign="top">rclcpp::CallbackGroup::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aa38b6c59f36921d1cba99619504e1097">callback_group_</a></td></tr>
+<tr class="memdesc:aa38b6c59f36921d1cba99619504e1097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reentrant callback group to avoid deadlocks between synchronous service calls.  <br /></td></tr>
+<tr class="separator:aa38b6c59f36921d1cba99619504e1097"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a284568df6184b8d7e320868d4e3c11" id="r_a3a284568df6184b8d7e320868d4e3c11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMission.html">Mission</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a3a284568df6184b8d7e320868d4e3c11">mission_</a></td></tr>
+<tr class="memdesc:a3a284568df6184b8d7e320868d4e3c11"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMission.html" title="Handles the mission management.">Mission</a> manager.  <br /></td></tr>
+<tr class="separator:a3a284568df6184b8d7e320868d4e3c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533c67e7a7f96ff590e0d689bfb69d5a" id="r_a533c67e7a7f96ff590e0d689bfb69d5a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a533c67e7a7f96ff590e0d689bfb69d5a">mission_file_name_</a> = &quot;mission.xml&quot;</td></tr>
+<tr class="separator:a533c67e7a7f96ff590e0d689bfb69d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbcd65c857726e5697430ef6eba74252" id="r_abbcd65c857726e5697430ef6eba74252"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#abbcd65c857726e5697430ef6eba74252">mission_path_</a> = &quot;./&quot;</td></tr>
+<tr class="separator:abbcd65c857726e5697430ef6eba74252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f1ef230273fc75f29f3bfeb6c8b60c" id="r_ac1f1ef230273fc75f29f3bfeb6c8b60c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#ac1f1ef230273fc75f29f3bfeb6c8b60c">flash_next_waypoint_time_</a> = 5.0</td></tr>
+<tr class="memdesc:ac1f1ef230273fc75f29f3bfeb6c8b60c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flash signal duration when a new waypoint is targeted.  <br /></td></tr>
+<tr class="separator:ac1f1ef230273fc75f29f3bfeb6c8b60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0915e06fb4556ff8979e2da71831fea9" id="r_a0915e06fb4556ff8979e2da71831fea9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a0915e06fb4556ff8979e2da71831fea9">flash_number_</a> = 2</td></tr>
+<tr class="memdesc:a0915e06fb4556ff8979e2da71831fea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of flashes in the pattern when a new waypoint is targeted.  <br /></td></tr>
+<tr class="separator:a0915e06fb4556ff8979e2da71831fea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba6c0a5d6b6b4a2a5b23d0f83d0802e1" id="r_aba6c0a5d6b6b4a2a5b23d0f83d0802e1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aba6c0a5d6b6b4a2a5b23d0f83d0802e1">limit_velocity_default_</a> = 0.02</td></tr>
+<tr class="separator:aba6c0a5d6b6b4a2a5b23d0f83d0802e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266a390fc613182c3e788e4f5561c2b6" id="r_a266a390fc613182c3e788e4f5561c2b6"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; seabot2_msgs::msg::MissionState &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a266a390fc613182c3e788e4f5561c2b6">publisher_mission_state_</a></td></tr>
+<tr class="memdesc:a266a390fc613182c3e788e4f5561c2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes MissionState msgs on the /mission/mission_state topic.  <br /></td></tr>
+<tr class="separator:a266a390fc613182c3e788e4f5561c2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0133b721c927e2a4f2108792cc801dfe" id="r_a0133b721c927e2a4f2108792cc801dfe"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; seabot2_msgs::msg::DepthControlSetPoint &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a0133b721c927e2a4f2108792cc801dfe">publisher_depth_control_set_point_</a></td></tr>
+<tr class="memdesc:a0133b721c927e2a4f2108792cc801dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes DepthControlSetPoint msgs on the /mission/depth_control_set_point topic.  <br /></td></tr>
+<tr class="separator:a0133b721c927e2a4f2108792cc801dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7970c1da0ad937dbbddffb84f9263f" id="r_a7b7970c1da0ad937dbbddffb84f9263f"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; seabot2_msgs::msg::TemperatureKeepingDebug &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a7b7970c1da0ad937dbbddffb84f9263f">publisher_temperature_keeping_debug_</a></td></tr>
+<tr class="memdesc:a7b7970c1da0ad937dbbddffb84f9263f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes TemperatureKeepingDebug msgs on the /mission/temperature_keeping_debug topic.  <br /></td></tr>
+<tr class="separator:a7b7970c1da0ad937dbbddffb84f9263f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a486850fa36b9db7c3b67175107abb" id="r_a22a486850fa36b9db7c3b67175107abb"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; seabot2_msgs::msg::DepthPose &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a22a486850fa36b9db7c3b67175107abb">subscriber_depth_data_</a></td></tr>
+<tr class="memdesc:a22a486850fa36b9db7c3b67175107abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to DepthPose msgs from the /observer/depth topic.  <br /></td></tr>
+<tr class="separator:a22a486850fa36b9db7c3b67175107abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f724d4fd05ff66e1b0709e57c512fbd" id="r_a2f724d4fd05ff66e1b0709e57c512fbd"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a2f724d4fd05ff66e1b0709e57c512fbd">subscriber_temperature_data_</a></td></tr>
+<tr class="memdesc:a2f724d4fd05ff66e1b0709e57c512fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribes to DepthPose msgs from the /observer/temperature topic.  <br /></td></tr>
+<tr class="separator:a2f724d4fd05ff66e1b0709e57c512fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc2a9cb4e477f26bcf539a82a21fad2" id="r_a2fc2a9cb4e477f26bcf539a82a21fad2"><td class="memItemLeft" align="right" valign="top">rclcpp::Client&lt; seabot2_srvs::srv::Light &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#a2fc2a9cb4e477f26bcf539a82a21fad2">client_light_</a></td></tr>
+<tr class="memdesc:a2fc2a9cb4e477f26bcf539a82a21fad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client for the /driver/light service.  <br /></td></tr>
+<tr class="separator:a2fc2a9cb4e477f26bcf539a82a21fad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3728a740cb0376be1b76714d9e2854" id="r_ade3728a740cb0376be1b76714d9e2854"><td class="memItemLeft" align="right" valign="top">rclcpp::Client&lt; std_srvs::srv::Trigger &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#ade3728a740cb0376be1b76714d9e2854">client_log_parameters_</a></td></tr>
+<tr class="memdesc:ade3728a740cb0376be1b76714d9e2854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client for the /observer/log_parameters service.  <br /></td></tr>
+<tr class="separator:ade3728a740cb0376be1b76714d9e2854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07da3c8f42d9f7e47aaddd990065c2e" id="r_ab07da3c8f42d9f7e47aaddd990065c2e"><td class="memItemLeft" align="right" valign="top">rclcpp::Client&lt; std_srvs::srv::Trigger &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#ab07da3c8f42d9f7e47aaddd990065c2e">client_bag_recorder_</a></td></tr>
+<tr class="memdesc:ab07da3c8f42d9f7e47aaddd990065c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Client for the /observer/restart_bag service.  <br /></td></tr>
+<tr class="separator:ab07da3c8f42d9f7e47aaddd990065c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaadf52a938a4846df92365dd3b9e67" id="r_aeeaadf52a938a4846df92365dd3b9e67"><td class="memItemLeft" align="right" valign="top">rclcpp::Service&lt; std_srvs::srv::Trigger &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMissionNode.html#aeeaadf52a938a4846df92365dd3b9e67">service_mission_reload_</a></td></tr>
+<tr class="memdesc:aeeaadf52a938a4846df92365dd3b9e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service /mission/mission_reload.  <br /></td></tr>
+<tr class="separator:aeeaadf52a938a4846df92365dd3b9e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Handles ROS2 interfaces and the mission manager. </p>
+<p>This class is responsible for providing ROS2 interfaces to the mission manager </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a210c7569d64bb3872762eda0e0880743" name="a210c7569d64bb3872762eda0e0880743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210c7569d64bb3872762eda0e0880743">&#9670;&#160;</a></span>MissionNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MissionNode::MissionNode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="classMission.html" title="Handles the mission management.">Mission</a> Node object. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a210c7569d64bb3872762eda0e0880743_cgraph.png" border="0" usemap="#aclassMissionNode_a210c7569d64bb3872762eda0e0880743_cgraph" alt=""/></div>
+<map name="aclassMissionNode_a210c7569d64bb3872762eda0e0880743_cgraph" id="aclassMissionNode_a210c7569d64bb3872762eda0e0880743_cgraph">
+<area shape="rect" title="Construct a new Mission Node object." alt="" coords="5,249,204,274"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="257,109,464,134"/>
+<area shape="poly" title=" " alt="" coords="128,246,323,138,326,143,130,251"/>
+<area shape="rect" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="783,198,983,223"/>
+<area shape="poly" title=" " alt="" coords="172,246,252,235,391,223,531,215,769,209,769,214,531,221,391,228,252,240,173,251"/>
+<area shape="rect" href="classMissionNode.html#af883a167a9496d6473a8b38e7d3c4884" title="Init and get parameters of the Node." alt="" coords="252,249,469,274"/>
+<area shape="poly" title=" " alt="" coords="204,259,238,259,238,264,204,264"/>
+<area shape="rect" href="classMission.html#aa1e8e302152d1143dbfa274e4039524c" title=" " alt="" coords="517,249,728,274"/>
+<area shape="poly" title=" " alt="" coords="166,271,252,284,361,290,469,284,546,274,547,279,470,289,361,295,252,289,165,277"/>
+<area shape="rect" href="classMissionNode.html#ac31360b92f51c1e19df0369ae01dfc5c" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="286,544,435,584"/>
+<area shape="poly" title=" " alt="" coords="119,273,336,532,332,535,115,276"/>
+<area shape="rect" href="classMissionNode.html#a29c884ae315b1e07538ef74cbc4f712e" title="Updates depth." alt="" coords="547,5,698,45"/>
+<area shape="poly" title=" " alt="" coords="390,106,516,55,539,47,541,52,518,60,392,111"/>
+<area shape="rect" href="classMissionNode.html#aae921ef8e5969a77084756f65a4e91bc" title=" " alt="" coords="528,133,717,173"/>
+<area shape="poly" title=" " alt="" coords="464,131,514,137,514,143,464,137"/>
+<area shape="rect" href="classMissionNode.html#a654cde58df15ce43f9889f811904804f" title="Updates temperature." alt="" coords="525,69,720,109"/>
+<area shape="poly" title=" " alt="" coords="464,106,511,100,512,106,464,111"/>
+<area shape="rect" href="classMission.html#a92c10183c1413a6a20db65f4430bd8cb" title="Update current depth from observations." alt="" coords="798,13,967,38"/>
+<area shape="poly" title=" " alt="" coords="698,23,784,23,784,28,698,28"/>
+<area shape="poly" title=" " alt="" coords="715,171,812,192,810,198,713,176"/>
+<area shape="rect" href="classMissionNode.html#a90b719b138f2bb6bfa1ced9bd5630989" title="Calls log params service." alt="" coords="1065,133,1229,173"/>
+<area shape="poly" title=" " alt="" coords="941,195,1050,171,1052,177,943,201"/>
+<area shape="rect" href="classMissionNode.html#aa33aab22ae169a4d830f44de315e6571" title="Calls restart bag." alt="" coords="1037,198,1256,223"/>
+<area shape="poly" title=" " alt="" coords="983,208,1024,208,1024,213,983,213"/>
+<area shape="rect" href="classMission.html#a7112351f066fadfd8031a21f554cde2d" title="Load mission parameters from mission file." alt="" coords="1063,247,1230,273"/>
+<area shape="poly" title=" " alt="" coords="952,221,1065,242,1064,247,951,226"/>
+<area shape="rect" href="classMission.html#a1434087832daae1d3bde1c24415c15fd" title="Decode waypoints under the paths property tree." alt="" coords="1304,247,1475,273"/>
+<area shape="poly" title=" " alt="" coords="1230,257,1290,257,1290,263,1230,263"/>
+<area shape="poly" title=" " alt="" coords="1352,249,1344,239,1348,229,1364,223,1389,221,1422,225,1434,234,1431,238,1420,229,1389,226,1365,228,1352,233,1349,238,1356,245"/>
+<area shape="rect" href="classMission.html#a8f5bf7fae43017d847873324159a83d6" title="Decode unspecific waypoint parameters." alt="" coords="1523,126,1717,151"/>
+<area shape="poly" title=" " alt="" coords="1403,245,1453,204,1486,181,1522,162,1543,153,1545,158,1524,166,1489,186,1456,208,1406,249"/>
+<area shape="rect" href="classMission.html#acf7db280e97fea829602f3a55bf21e65" title="Decode depth waypoint parameters." alt="" coords="1523,176,1717,216"/>
+<area shape="poly" title=" " alt="" coords="1436,245,1533,217,1535,222,1437,250"/>
+<area shape="rect" href="classMission.html#ac89061f5df74657c16e929ab1d387214" title="Decode GNSS profile waypoint parameters." alt="" coords="1523,240,1717,280"/>
+<area shape="poly" title=" " alt="" coords="1475,257,1509,257,1509,263,1475,263"/>
+<area shape="rect" href="classMission.html#ace24cc39c20353b381836e17c611116a" title="Decode Temperature keeping waypoint parameters." alt="" coords="1523,304,1717,344"/>
+<area shape="poly" title=" " alt="" coords="1437,270,1535,298,1533,303,1436,275"/>
+<area shape="rect" href="classMission.html#a197edb5d2e7a0ad7139e1f5af64fa213" title="Decode Temperature profile waypoint parameters." alt="" coords="1523,368,1717,408"/>
+<area shape="poly" title=" " alt="" coords="1407,271,1457,311,1524,354,1538,360,1536,365,1521,358,1454,315,1403,275"/>
+<area shape="rect" href="classMission.html#ad5c4d830895bbb25cea7261057f27c55" title="Update current temperature from observations." alt="" coords="776,77,989,102"/>
+<area shape="poly" title=" " alt="" coords="720,87,762,87,762,92,720,92"/>
+<area shape="poly" title=" " alt="" coords="368,543,388,499,419,443,462,385,488,359,516,336,544,320,570,310,618,302,668,298,696,294,727,284,791,257,846,228,848,233,793,261,729,289,697,299,668,304,619,307,572,315,547,324,519,341,491,363,466,389,424,446,392,502,372,545"/>
+<area shape="poly" title=" " alt="" coords="365,543,383,492,414,425,457,353,485,320,516,291,540,277,543,281,519,295,489,324,462,356,418,427,388,494,370,545"/>
+<area shape="rect" href="classMissionNode.html#ac09f83e8a66b11c7db60cbe54526d29a" title="Calls light service." alt="" coords="536,350,709,375"/>
+<area shape="poly" title=" " alt="" coords="372,542,395,508,427,465,468,422,516,386,531,378,534,383,519,390,472,426,431,469,399,511,376,545"/>
+<area shape="rect" href="classMission.html#a1b345e38681b70447214f2b0b7fc2e10" title="Get the currently targeted waypoint id." alt="" coords="545,400,700,440"/>
+<area shape="poly" title=" " alt="" coords="384,542,442,497,516,451,535,442,537,447,519,456,445,501,387,546"/>
+<area shape="rect" href="classMission.html#a8533e2431f9d37c3f2ad60474d043b16" title="Get the current waypoint temperature keeping object." alt="" coords="534,465,711,519"/>
+<area shape="poly" title=" " alt="" coords="434,541,520,517,521,523,435,547"/>
+<area shape="rect" href="classMission.html#a632aaf775fbcfb76a3a30fd5372459f9" title="Get const reference to the missions&#39;s current depth control set point message." alt="" coords="550,544,695,584"/>
+<area shape="poly" title=" " alt="" coords="436,561,536,561,536,567,436,567"/>
+<area shape="rect" href="classMission.html#a4b71dabf2bf96be0eabe8cdd311614c6" title="Get the mission mode." alt="" coords="521,609,724,634"/>
+<area shape="poly" title=" " alt="" coords="436,578,551,603,550,608,435,583"/>
+<area shape="rect" href="classMission.html#aa050ca35dce90f2daf15151cdf7a7cf0" title="Get the mission state." alt="" coords="543,659,702,699"/>
+<area shape="poly" title=" " alt="" coords="397,582,453,613,518,644,538,652,536,657,516,649,451,618,394,587"/>
+<area shape="rect" href="classMission.html#a194272f5d818e1ae1e98be72daa1b95f" title="Get the number of waypoints in the mission." alt="" coords="543,723,702,763"/>
+<area shape="poly" title=" " alt="" coords="380,582,437,644,476,679,519,708,532,715,529,720,516,713,473,683,433,648,376,586"/>
+<area shape="rect" href="classMission.html#a61d14bab3b7bca468b1a018712157d85" title="Get the time to next waypoint." alt="" coords="543,787,702,827"/>
+<area shape="poly" title=" " alt="" coords="374,583,395,623,427,674,469,727,519,773,532,781,530,785,516,777,465,731,422,677,390,626,369,585"/>
+<area shape="rect" href="classMission.html#ac1cf7debe744ac9430e06ce69b764913" title="Check if the current waypoint is of the given type." alt="" coords="550,851,695,891"/>
+<area shape="poly" title=" " alt="" coords="370,583,388,635,418,703,461,775,488,808,519,837,539,849,536,853,516,841,485,811,457,778,413,705,383,637,365,585"/>
+<area shape="rect" href="classMission.html#acc7e824639354098c5cb5bd0594512df" title="Executes a step of the mission management process." alt="" coords="540,915,705,941"/>
+<area shape="poly" title=" " alt="" coords="368,584,381,646,408,732,428,778,453,823,483,865,519,901,529,908,526,912,516,905,479,868,448,826,423,780,403,734,376,647,362,585"/>
+<area shape="rect" href="classMission.html#a58e98f88221dedc91f3bd39f8e33f035" title="Set depth control set point to surface when mission is not running." alt="" coords="811,908,955,948"/>
+<area shape="poly" title=" " alt="" coords="705,925,797,925,797,931,705,931"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac09f83e8a66b11c7db60cbe54526d29a" name="ac09f83e8a66b11c7db60cbe54526d29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09f83e8a66b11c7db60cbe54526d29a">&#9670;&#160;</a></span>call_light()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::call_light </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls light service. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_ac09f83e8a66b11c7db60cbe54526d29a_icgraph.png" border="0" usemap="#aclassMissionNode_ac09f83e8a66b11c7db60cbe54526d29a_icgraph" alt=""/></div>
+<map name="aclassMissionNode_ac09f83e8a66b11c7db60cbe54526d29a_icgraph" id="aclassMissionNode_ac09f83e8a66b11c7db60cbe54526d29a_icgraph">
+<area shape="rect" title="Calls light service." alt="" coords="449,13,623,38"/>
+<area shape="rect" href="classMissionNode.html#ac31360b92f51c1e19df0369ae01dfc5c" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="252,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="435,28,401,28,401,23,435,23"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,13,204,38"/>
+<area shape="poly" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a90b719b138f2bb6bfa1ced9bd5630989" name="a90b719b138f2bb6bfa1ced9bd5630989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b719b138f2bb6bfa1ced9bd5630989">&#9670;&#160;</a></span>call_log_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::call_log_params </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls log params service. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a90b719b138f2bb6bfa1ced9bd5630989_icgraph.png" border="0" usemap="#aclassMissionNode_a90b719b138f2bb6bfa1ced9bd5630989_icgraph" alt=""/></div>
+<map name="aclassMissionNode_a90b719b138f2bb6bfa1ced9bd5630989_icgraph" id="aclassMissionNode_a90b719b138f2bb6bfa1ced9bd5630989_icgraph">
+<area shape="rect" title="Calls log params service." alt="" coords="992,30,1156,70"/>
+<area shape="rect" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="744,38,944,63"/>
+<area shape="poly" title=" " alt="" coords="978,53,944,53,944,48,978,48"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,38,204,63"/>
+<area shape="poly" title=" " alt="" coords="782,37,696,21,571,10,474,9,377,15,252,27,168,40,167,35,252,22,376,10,474,4,572,5,696,16,783,31"/>
+<area shape="rect" href="classMissionNode.html#aae921ef8e5969a77084756f65a4e91bc" title=" " alt="" coords="507,30,696,70"/>
+<area shape="poly" title=" " alt="" coords="730,53,696,53,696,48,730,48"/>
+<area shape="rect" href="classMissionNode.html#ac31360b92f51c1e19df0369ae01dfc5c" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="281,88,430,128"/>
+<area shape="poly" title=" " alt="" coords="780,69,696,85,555,100,431,108,430,102,555,95,696,80,779,63"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="252,38,459,63"/>
+<area shape="poly" title=" " alt="" coords="493,53,459,53,459,48,493,48"/>
+<area shape="poly" title=" " alt="" coords="238,53,204,53,204,48,238,48"/>
+<area shape="poly" title=" " alt="" coords="267,90,160,66,162,60,268,85"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa33aab22ae169a4d830f44de315e6571" name="aa33aab22ae169a4d830f44de315e6571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33aab22ae169a4d830f44de315e6571">&#9670;&#160;</a></span>call_restart_bag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::call_restart_bag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls restart bag. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_aa33aab22ae169a4d830f44de315e6571_icgraph.png" border="0" usemap="#aclassMissionNode_aa33aab22ae169a4d830f44de315e6571_icgraph" alt=""/></div>
+<map name="aclassMissionNode_aa33aab22ae169a4d830f44de315e6571_icgraph" id="aclassMissionNode_aa33aab22ae169a4d830f44de315e6571_icgraph">
+<area shape="rect" title="Calls restart bag." alt="" coords="992,38,1211,63"/>
+<area shape="rect" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="744,38,944,63"/>
+<area shape="poly" title=" " alt="" coords="979,53,944,53,944,48,979,48"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,38,204,63"/>
+<area shape="poly" title=" " alt="" coords="782,37,696,21,571,10,474,9,377,15,252,27,168,40,167,35,252,22,376,10,474,4,572,5,696,16,783,31"/>
+<area shape="rect" href="classMissionNode.html#aae921ef8e5969a77084756f65a4e91bc" title=" " alt="" coords="507,30,696,70"/>
+<area shape="poly" title=" " alt="" coords="730,53,696,53,696,48,730,48"/>
+<area shape="rect" href="classMissionNode.html#ac31360b92f51c1e19df0369ae01dfc5c" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="281,88,430,128"/>
+<area shape="poly" title=" " alt="" coords="780,69,696,85,555,100,431,108,430,102,555,95,696,80,779,63"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="252,38,459,63"/>
+<area shape="poly" title=" " alt="" coords="493,53,459,53,459,48,493,48"/>
+<area shape="poly" title=" " alt="" coords="238,53,204,53,204,48,238,48"/>
+<area shape="poly" title=" " alt="" coords="267,90,160,66,162,60,268,85"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29c884ae315b1e07538ef74cbc4f712e" name="a29c884ae315b1e07538ef74cbc4f712e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c884ae315b1e07538ef74cbc4f712e">&#9670;&#160;</a></span>depth_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::depth_callback </td>
+          <td>(</td>
+          <td class="paramtype">const seabot2_msgs::msg::DepthPose::SharedPtr&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates depth. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a29c884ae315b1e07538ef74cbc4f712e_cgraph.png" border="0" usemap="#aclassMissionNode_a29c884ae315b1e07538ef74cbc4f712e_cgraph" alt=""/></div>
+<map name="aclassMissionNode_a29c884ae315b1e07538ef74cbc4f712e_cgraph" id="aclassMissionNode_a29c884ae315b1e07538ef74cbc4f712e_cgraph">
+<area shape="rect" title="Updates depth." alt="" coords="5,5,156,45"/>
+<area shape="rect" href="classMission.html#a92c10183c1413a6a20db65f4430bd8cb" title="Update current depth from observations." alt="" coords="204,13,373,38"/>
+<area shape="poly" title=" " alt="" coords="156,23,190,23,190,28,156,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a29c884ae315b1e07538ef74cbc4f712e_icgraph.png" border="0" usemap="#aclassMissionNode_a29c884ae315b1e07538ef74cbc4f712e_icgraph" alt=""/></div>
+<map name="aclassMissionNode_a29c884ae315b1e07538ef74cbc4f712e_icgraph" id="aclassMissionNode_a29c884ae315b1e07538ef74cbc4f712e_icgraph">
+<area shape="rect" title="Updates depth." alt="" coords="507,5,657,45"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="252,13,459,38"/>
+<area shape="poly" title=" " alt="" coords="493,28,459,28,459,23,493,23"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,13,204,38"/>
+<area shape="poly" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a630070c0bfbf02a9a851193d41351622" name="a630070c0bfbf02a9a851193d41351622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630070c0bfbf02a9a851193d41351622">&#9670;&#160;</a></span>init_interfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::init_interfaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Init interfaces of this node. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a630070c0bfbf02a9a851193d41351622_cgraph.png" border="0" usemap="#aclassMissionNode_a630070c0bfbf02a9a851193d41351622_cgraph" alt=""/></div>
+<map name="aclassMissionNode_a630070c0bfbf02a9a851193d41351622_cgraph" id="aclassMissionNode_a630070c0bfbf02a9a851193d41351622_cgraph">
+<area shape="rect" title="Init interfaces of this node." alt="" coords="5,77,212,103"/>
+<area shape="rect" href="classMissionNode.html#a29c884ae315b1e07538ef74cbc4f712e" title="Updates depth." alt="" coords="282,6,433,46"/>
+<area shape="poly" title=" " alt="" coords="159,75,268,46,269,51,160,80"/>
+<area shape="rect" href="classMissionNode.html#aae921ef8e5969a77084756f65a4e91bc" title=" " alt="" coords="263,70,452,110"/>
+<area shape="poly" title=" " alt="" coords="212,87,249,87,249,93,212,93"/>
+<area shape="rect" href="classMissionNode.html#a654cde58df15ce43f9889f811904804f" title="Updates temperature." alt="" coords="260,134,455,174"/>
+<area shape="poly" title=" " alt="" coords="160,100,266,128,265,133,159,105"/>
+<area shape="rect" href="classMission.html#a92c10183c1413a6a20db65f4430bd8cb" title="Update current depth from observations." alt="" coords="525,13,694,39"/>
+<area shape="poly" title=" " alt="" coords="433,23,511,23,511,29,433,29"/>
+<area shape="rect" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="509,77,709,103"/>
+<area shape="poly" title=" " alt="" coords="452,87,495,87,495,93,452,93"/>
+<area shape="rect" href="classMissionNode.html#a90b719b138f2bb6bfa1ced9bd5630989" title="Calls log params service." alt="" coords="791,13,955,53"/>
+<area shape="poly" title=" " alt="" coords="668,75,777,51,778,56,669,80"/>
+<area shape="rect" href="classMissionNode.html#aa33aab22ae169a4d830f44de315e6571" title="Calls restart bag." alt="" coords="764,77,983,103"/>
+<area shape="poly" title=" " alt="" coords="709,87,750,87,750,93,709,93"/>
+<area shape="rect" href="classMission.html#a7112351f066fadfd8031a21f554cde2d" title="Load mission parameters from mission file." alt="" coords="790,127,957,152"/>
+<area shape="poly" title=" " alt="" coords="678,100,791,121,790,127,677,105"/>
+<area shape="rect" href="classMission.html#a1434087832daae1d3bde1c24415c15fd" title="Decode waypoints under the paths property tree." alt="" coords="1031,127,1201,152"/>
+<area shape="poly" title=" " alt="" coords="957,137,1017,137,1017,142,957,142"/>
+<area shape="poly" title=" " alt="" coords="1079,128,1071,118,1075,108,1090,102,1116,100,1148,104,1161,113,1157,118,1146,109,1116,105,1091,107,1078,112,1076,118,1083,125"/>
+<area shape="rect" href="classMission.html#a8f5bf7fae43017d847873324159a83d6" title="Decode unspecific waypoint parameters." alt="" coords="1249,5,1444,31"/>
+<area shape="poly" title=" " alt="" coords="1130,124,1180,84,1213,61,1248,41,1269,32,1271,37,1250,46,1216,65,1183,88,1133,129"/>
+<area shape="rect" href="classMission.html#acf7db280e97fea829602f3a55bf21e65" title="Decode depth waypoint parameters." alt="" coords="1249,55,1444,95"/>
+<area shape="poly" title=" " alt="" coords="1162,124,1260,96,1262,102,1164,129"/>
+<area shape="rect" href="classMission.html#ac89061f5df74657c16e929ab1d387214" title="Decode GNSS profile waypoint parameters." alt="" coords="1249,119,1444,159"/>
+<area shape="poly" title=" " alt="" coords="1202,137,1236,137,1236,142,1202,142"/>
+<area shape="rect" href="classMission.html#ace24cc39c20353b381836e17c611116a" title="Decode Temperature keeping waypoint parameters." alt="" coords="1249,183,1444,223"/>
+<area shape="poly" title=" " alt="" coords="1164,150,1262,177,1260,182,1162,155"/>
+<area shape="rect" href="classMission.html#a197edb5d2e7a0ad7139e1f5af64fa213" title="Decode Temperature profile waypoint parameters." alt="" coords="1249,247,1444,287"/>
+<area shape="poly" title=" " alt="" coords="1133,150,1183,190,1251,233,1265,240,1263,245,1248,238,1180,195,1130,154"/>
+<area shape="rect" href="classMission.html#ad5c4d830895bbb25cea7261057f27c55" title="Update current temperature from observations." alt="" coords="503,141,716,167"/>
+<area shape="poly" title=" " alt="" coords="455,151,489,151,489,157,455,157"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a630070c0bfbf02a9a851193d41351622_icgraph.png" border="0" usemap="#aclassMissionNode_a630070c0bfbf02a9a851193d41351622_icgraph" alt=""/></div>
+<map name="aclassMissionNode_a630070c0bfbf02a9a851193d41351622_icgraph" id="aclassMissionNode_a630070c0bfbf02a9a851193d41351622_icgraph">
+<area shape="rect" title="Init interfaces of this node." alt="" coords="252,5,459,31"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,5,204,31"/>
+<area shape="poly" title=" " alt="" coords="238,21,204,21,204,15,238,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af883a167a9496d6473a8b38e7d3c4884" name="af883a167a9496d6473a8b38e7d3c4884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af883a167a9496d6473a8b38e7d3c4884">&#9670;&#160;</a></span>init_parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::init_parameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Init and get parameters of the Node. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_af883a167a9496d6473a8b38e7d3c4884_icgraph.png" border="0" usemap="#aclassMissionNode_af883a167a9496d6473a8b38e7d3c4884_icgraph" alt=""/></div>
+<map name="aclassMissionNode_af883a167a9496d6473a8b38e7d3c4884_icgraph" id="aclassMissionNode_af883a167a9496d6473a8b38e7d3c4884_icgraph">
+<area shape="rect" title="Init and get parameters of the Node." alt="" coords="252,5,469,31"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,5,204,31"/>
+<area shape="poly" title=" " alt="" coords="239,21,204,21,204,15,239,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef3cca810237968950882ce4ca428b39" name="aef3cca810237968950882ce4ca428b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef3cca810237968950882ce4ca428b39">&#9670;&#160;</a></span>load_mission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MissionNode::load_mission </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restarts rosbag and loads the mission from the mission file. </p>
+<p>Also calls for log of parameters</p>
+<dl class="section return"><dt>Returns</dt><dd>EXIT_SUCCESS if mission has been loaded correctly, </dd>
+<dd>
+EXIT_FAILURE otherwise </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_aef3cca810237968950882ce4ca428b39_cgraph.png" border="0" usemap="#aclassMissionNode_aef3cca810237968950882ce4ca428b39_cgraph" alt=""/></div>
+<map name="aclassMissionNode_aef3cca810237968950882ce4ca428b39_cgraph" id="aclassMissionNode_aef3cca810237968950882ce4ca428b39_cgraph">
+<area shape="rect" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="5,77,205,103"/>
+<area shape="rect" href="classMissionNode.html#a90b719b138f2bb6bfa1ced9bd5630989" title="Calls log params service." alt="" coords="281,13,445,53"/>
+<area shape="poly" title=" " alt="" coords="163,75,267,51,268,56,164,80"/>
+<area shape="rect" href="classMissionNode.html#aa33aab22ae169a4d830f44de315e6571" title="Calls restart bag." alt="" coords="253,77,472,103"/>
+<area shape="poly" title=" " alt="" coords="205,87,240,87,240,93,205,93"/>
+<area shape="rect" href="classMission.html#a7112351f066fadfd8031a21f554cde2d" title="Load mission parameters from mission file." alt="" coords="279,127,446,152"/>
+<area shape="poly" title=" " alt="" coords="173,100,283,121,282,127,172,105"/>
+<area shape="rect" href="classMission.html#a1434087832daae1d3bde1c24415c15fd" title="Decode waypoints under the paths property tree." alt="" coords="520,127,691,152"/>
+<area shape="poly" title=" " alt="" coords="446,137,506,137,506,142,446,142"/>
+<area shape="poly" title=" " alt="" coords="568,128,560,118,564,108,580,102,605,100,638,104,650,113,647,118,636,109,605,105,581,107,568,112,565,118,572,125"/>
+<area shape="rect" href="classMission.html#a8f5bf7fae43017d847873324159a83d6" title="Decode unspecific waypoint parameters." alt="" coords="739,5,933,31"/>
+<area shape="poly" title=" " alt="" coords="619,124,669,84,702,61,738,41,759,32,761,37,740,46,705,65,672,88,622,129"/>
+<area shape="rect" href="classMission.html#acf7db280e97fea829602f3a55bf21e65" title="Decode depth waypoint parameters." alt="" coords="739,55,933,95"/>
+<area shape="poly" title=" " alt="" coords="652,124,749,96,751,102,653,129"/>
+<area shape="rect" href="classMission.html#ac89061f5df74657c16e929ab1d387214" title="Decode GNSS profile waypoint parameters." alt="" coords="739,119,933,159"/>
+<area shape="poly" title=" " alt="" coords="691,137,725,137,725,142,691,142"/>
+<area shape="rect" href="classMission.html#ace24cc39c20353b381836e17c611116a" title="Decode Temperature keeping waypoint parameters." alt="" coords="739,183,933,223"/>
+<area shape="poly" title=" " alt="" coords="653,150,751,177,749,182,652,155"/>
+<area shape="rect" href="classMission.html#a197edb5d2e7a0ad7139e1f5af64fa213" title="Decode Temperature profile waypoint parameters." alt="" coords="739,247,933,287"/>
+<area shape="poly" title=" " alt="" coords="623,150,673,190,740,233,754,240,752,245,737,238,670,195,619,154"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_aef3cca810237968950882ce4ca428b39_icgraph.png" border="0" usemap="#aclassMissionNode_aef3cca810237968950882ce4ca428b39_icgraph" alt=""/></div>
+<map name="aclassMissionNode_aef3cca810237968950882ce4ca428b39_icgraph" id="aclassMissionNode_aef3cca810237968950882ce4ca428b39_icgraph">
+<area shape="rect" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="744,38,944,63"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,38,204,63"/>
+<area shape="poly" title=" " alt="" coords="782,37,696,21,571,10,474,9,377,15,252,27,168,40,167,35,252,22,376,10,474,4,572,5,696,16,783,31"/>
+<area shape="rect" href="classMissionNode.html#aae921ef8e5969a77084756f65a4e91bc" title=" " alt="" coords="507,30,696,70"/>
+<area shape="poly" title=" " alt="" coords="730,53,696,53,696,48,730,48"/>
+<area shape="rect" href="classMissionNode.html#ac31360b92f51c1e19df0369ae01dfc5c" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="281,88,430,128"/>
+<area shape="poly" title=" " alt="" coords="780,69,696,85,555,100,431,108,430,102,555,95,696,80,779,63"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="252,38,459,63"/>
+<area shape="poly" title=" " alt="" coords="493,53,459,53,459,48,493,48"/>
+<area shape="poly" title=" " alt="" coords="238,53,204,53,204,48,238,48"/>
+<area shape="poly" title=" " alt="" coords="267,90,160,66,162,60,268,85"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aae921ef8e5969a77084756f65a4e91bc" name="aae921ef8e5969a77084756f65a4e91bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae921ef8e5969a77084756f65a4e91bc">&#9670;&#160;</a></span>service_mission_reload_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::service_mission_reload_callback </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; rmw_request_id_t &gt;&#160;</td>
+          <td class="paramname"><em>request_header</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; std_srvs::srv::Trigger::Request &gt;&#160;</td>
+          <td class="paramname"><em>request</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; std_srvs::srv::Trigger::Response &gt;&#160;</td>
+          <td class="paramname"><em>response</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request_header</td><td></td></tr>
+    <tr><td class="paramname">request</td><td></td></tr>
+    <tr><td class="paramname">response</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_aae921ef8e5969a77084756f65a4e91bc_cgraph.png" border="0" usemap="#aclassMissionNode_aae921ef8e5969a77084756f65a4e91bc_cgraph" alt=""/></div>
+<map name="aclassMissionNode_aae921ef8e5969a77084756f65a4e91bc_cgraph" id="aclassMissionNode_aae921ef8e5969a77084756f65a4e91bc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,70,195,110"/>
+<area shape="rect" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="243,77,443,103"/>
+<area shape="poly" title=" " alt="" coords="195,87,229,87,229,93,195,93"/>
+<area shape="rect" href="classMissionNode.html#a90b719b138f2bb6bfa1ced9bd5630989" title="Calls log params service." alt="" coords="518,13,682,53"/>
+<area shape="poly" title=" " alt="" coords="400,75,504,51,505,56,401,80"/>
+<area shape="rect" href="classMissionNode.html#aa33aab22ae169a4d830f44de315e6571" title="Calls restart bag." alt="" coords="491,77,709,103"/>
+<area shape="poly" title=" " alt="" coords="443,87,477,87,477,93,443,93"/>
+<area shape="rect" href="classMission.html#a7112351f066fadfd8031a21f554cde2d" title="Load mission parameters from mission file." alt="" coords="517,127,683,152"/>
+<area shape="poly" title=" " alt="" coords="410,100,520,121,519,127,409,105"/>
+<area shape="rect" href="classMission.html#a1434087832daae1d3bde1c24415c15fd" title="Decode waypoints under the paths property tree." alt="" coords="757,127,928,152"/>
+<area shape="poly" title=" " alt="" coords="684,137,744,137,744,142,684,142"/>
+<area shape="poly" title=" " alt="" coords="805,128,797,118,801,108,817,102,843,100,875,104,887,113,884,118,873,109,843,105,818,107,805,112,802,118,809,125"/>
+<area shape="rect" href="classMission.html#a8f5bf7fae43017d847873324159a83d6" title="Decode unspecific waypoint parameters." alt="" coords="976,5,1171,31"/>
+<area shape="poly" title=" " alt="" coords="856,124,906,84,939,61,975,41,996,32,998,37,977,46,942,65,909,88,860,129"/>
+<area shape="rect" href="classMission.html#acf7db280e97fea829602f3a55bf21e65" title="Decode depth waypoint parameters." alt="" coords="976,55,1171,95"/>
+<area shape="poly" title=" " alt="" coords="889,124,987,96,988,102,890,129"/>
+<area shape="rect" href="classMission.html#ac89061f5df74657c16e929ab1d387214" title="Decode GNSS profile waypoint parameters." alt="" coords="976,119,1171,159"/>
+<area shape="poly" title=" " alt="" coords="928,137,962,137,962,142,928,142"/>
+<area shape="rect" href="classMission.html#ace24cc39c20353b381836e17c611116a" title="Decode Temperature keeping waypoint parameters." alt="" coords="976,183,1171,223"/>
+<area shape="poly" title=" " alt="" coords="890,150,988,177,987,182,889,155"/>
+<area shape="rect" href="classMission.html#a197edb5d2e7a0ad7139e1f5af64fa213" title="Decode Temperature profile waypoint parameters." alt="" coords="976,247,1171,287"/>
+<area shape="poly" title=" " alt="" coords="860,150,910,190,977,233,992,240,990,245,975,238,907,195,857,154"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_aae921ef8e5969a77084756f65a4e91bc_icgraph.png" border="0" usemap="#aclassMissionNode_aae921ef8e5969a77084756f65a4e91bc_icgraph" alt=""/></div>
+<map name="aclassMissionNode_aae921ef8e5969a77084756f65a4e91bc_icgraph" id="aclassMissionNode_aae921ef8e5969a77084756f65a4e91bc_icgraph">
+<area shape="rect" title=" " alt="" coords="507,5,696,45"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="252,13,459,38"/>
+<area shape="poly" title=" " alt="" coords="493,28,459,28,459,23,493,23"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,13,204,38"/>
+<area shape="poly" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a654cde58df15ce43f9889f811904804f" name="a654cde58df15ce43f9889f811904804f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654cde58df15ce43f9889f811904804f">&#9670;&#160;</a></span>temperature_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::temperature_callback </td>
+          <td>(</td>
+          <td class="paramtype">const seabot2_msgs::msg::TemperatureSensorData::SharedPtr&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates temperature. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a654cde58df15ce43f9889f811904804f_cgraph.png" border="0" usemap="#aclassMissionNode_a654cde58df15ce43f9889f811904804f_cgraph" alt=""/></div>
+<map name="aclassMissionNode_a654cde58df15ce43f9889f811904804f_cgraph" id="aclassMissionNode_a654cde58df15ce43f9889f811904804f_cgraph">
+<area shape="rect" title="Updates temperature." alt="" coords="5,5,200,45"/>
+<area shape="rect" href="classMission.html#ad5c4d830895bbb25cea7261057f27c55" title="Update current temperature from observations." alt="" coords="248,13,461,38"/>
+<area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_a654cde58df15ce43f9889f811904804f_icgraph.png" border="0" usemap="#aclassMissionNode_a654cde58df15ce43f9889f811904804f_icgraph" alt=""/></div>
+<map name="aclassMissionNode_a654cde58df15ce43f9889f811904804f_icgraph" id="aclassMissionNode_a654cde58df15ce43f9889f811904804f_icgraph">
+<area shape="rect" title="Updates temperature." alt="" coords="507,5,701,45"/>
+<area shape="rect" href="classMissionNode.html#a630070c0bfbf02a9a851193d41351622" title="Init interfaces of this node." alt="" coords="252,13,459,38"/>
+<area shape="poly" title=" " alt="" coords="493,28,459,28,459,23,493,23"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,13,204,38"/>
+<area shape="poly" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac31360b92f51c1e19df0369ae01dfc5c" name="ac31360b92f51c1e19df0369ae01dfc5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31360b92f51c1e19df0369ae01dfc5c">&#9670;&#160;</a></span>timer_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MissionNode::timer_callback </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Executes a step of the mission management process and publish depth control setpoint. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_cgraph.png" border="0" usemap="#aclassMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_cgraph" alt=""/></div>
+<map name="aclassMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_cgraph" id="aclassMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_cgraph">
+<area shape="rect" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="5,346,155,386"/>
+<area shape="rect" href="classMissionNode.html#ac09f83e8a66b11c7db60cbe54526d29a" title="Calls light service." alt="" coords="221,5,395,31"/>
+<area shape="poly" title=" " alt="" coords="80,345,88,286,107,204,122,159,143,116,169,76,201,41,208,36,212,40,204,45,173,79,147,119,127,161,112,205,93,287,85,346"/>
+<area shape="rect" href="classMission.html#a1b345e38681b70447214f2b0b7fc2e10" title="Get the currently targeted waypoint id." alt="" coords="231,55,385,95"/>
+<area shape="poly" title=" " alt="" coords="82,345,94,297,117,232,151,164,174,133,201,105,217,94,220,99,204,109,178,136,156,167,121,234,99,298,88,346"/>
+<area shape="rect" href="classMission.html#a8533e2431f9d37c3f2ad60474d043b16" title="Get the current waypoint temperature keeping object." alt="" coords="219,120,397,175"/>
+<area shape="poly" title=" " alt="" coords="88,345,129,268,162,224,201,185,209,180,212,184,204,189,166,227,134,271,92,347"/>
+<area shape="rect" href="classMission.html#a632aaf775fbcfb76a3a30fd5372459f9" title="Get const reference to the missions&#39;s current depth control set point message." alt="" coords="235,199,381,239"/>
+<area shape="poly" title=" " alt="" coords="96,344,140,296,169,271,201,249,221,239,224,244,204,254,173,275,144,300,100,347"/>
+<area shape="rect" href="classMission.html#a4b71dabf2bf96be0eabe8cdd311614c6" title="Get the mission mode." alt="" coords="207,264,409,289"/>
+<area shape="poly" title=" " alt="" coords="113,343,155,321,202,300,230,290,232,295,204,304,157,325,116,348"/>
+<area shape="rect" href="classMission.html#aa050ca35dce90f2daf15151cdf7a7cf0" title="Get the mission state." alt="" coords="229,314,387,354"/>
+<area shape="poly" title=" " alt="" coords="155,353,214,344,215,350,155,358"/>
+<area shape="rect" href="classMission.html#a194272f5d818e1ae1e98be72daa1b95f" title="Get the number of waypoints in the mission." alt="" coords="229,378,387,418"/>
+<area shape="poly" title=" " alt="" coords="155,374,215,382,214,388,155,379"/>
+<area shape="rect" href="classMission.html#a61d14bab3b7bca468b1a018712157d85" title="Get the time to next waypoint." alt="" coords="229,442,387,482"/>
+<area shape="poly" title=" " alt="" coords="117,384,204,428,223,435,221,440,202,432,114,389"/>
+<area shape="rect" href="classMission.html#ac1cf7debe744ac9430e06ce69b764913" title="Check if the current waypoint is of the given type." alt="" coords="235,506,381,546"/>
+<area shape="poly" title=" " alt="" coords="97,385,141,438,171,467,204,492,224,502,221,507,201,496,168,471,137,442,93,388"/>
+<area shape="rect" href="classMission.html#aa1e8e302152d1143dbfa274e4039524c" title=" " alt="" coords="203,571,413,596"/>
+<area shape="poly" title=" " alt="" coords="91,385,106,423,130,469,163,516,204,556,216,563,213,567,201,560,159,520,125,472,101,425,86,387"/>
+<area shape="rect" href="classMissionNode.html#aef3cca810237968950882ce4ca428b39" title="Restarts rosbag and loads the mission from the mission file." alt="" coords="208,620,408,645"/>
+<area shape="poly" title=" " alt="" coords="88,385,100,431,123,491,157,553,179,581,204,605,213,611,210,616,201,609,175,585,152,556,118,493,95,433,83,387"/>
+<area shape="rect" href="classMission.html#acc7e824639354098c5cb5bd0594512df" title="Executes a step of the mission management process." alt="" coords="225,673,391,699"/>
+<area shape="poly" title=" " alt="" coords="86,386,96,440,117,512,132,551,152,589,176,624,204,655,219,665,216,670,201,659,172,627,147,592,128,553,112,514,91,441,81,387"/>
+<area shape="rect" href="classMissionNode.html#a90b719b138f2bb6bfa1ced9bd5630989" title="Calls log params service." alt="" coords="489,530,653,570"/>
+<area shape="poly" title=" " alt="" coords="371,617,412,605,436,593,460,580,480,572,482,577,462,584,439,597,414,610,373,623"/>
+<area shape="rect" href="classMissionNode.html#aa33aab22ae169a4d830f44de315e6571" title="Calls restart bag." alt="" coords="461,595,680,620"/>
+<area shape="poly" title=" " alt="" coords="408,620,447,617,448,622,409,626"/>
+<area shape="rect" href="classMission.html#a7112351f066fadfd8031a21f554cde2d" title="Load mission parameters from mission file." alt="" coords="487,644,654,669"/>
+<area shape="poly" title=" " alt="" coords="409,639,474,645,473,650,408,644"/>
+<area shape="rect" href="classMission.html#a1434087832daae1d3bde1c24415c15fd" title="Decode waypoints under the paths property tree." alt="" coords="728,644,899,669"/>
+<area shape="poly" title=" " alt="" coords="654,654,714,654,714,659,654,659"/>
+<area shape="poly" title=" " alt="" coords="776,646,768,636,772,626,788,620,813,617,846,621,858,631,855,635,844,626,813,623,789,625,776,630,773,635,780,642"/>
+<area shape="rect" href="classMission.html#a8f5bf7fae43017d847873324159a83d6" title="Decode unspecific waypoint parameters." alt="" coords="947,523,1141,548"/>
+<area shape="poly" title=" " alt="" coords="827,642,877,601,910,578,946,558,967,550,969,555,948,563,913,583,880,605,830,646"/>
+<area shape="rect" href="classMission.html#acf7db280e97fea829602f3a55bf21e65" title="Decode depth waypoint parameters." alt="" coords="947,573,1141,613"/>
+<area shape="poly" title=" " alt="" coords="860,641,957,614,959,619,861,646"/>
+<area shape="rect" href="classMission.html#ac89061f5df74657c16e929ab1d387214" title="Decode GNSS profile waypoint parameters." alt="" coords="947,637,1141,677"/>
+<area shape="poly" title=" " alt="" coords="899,654,933,654,933,659,899,659"/>
+<area shape="rect" href="classMission.html#ace24cc39c20353b381836e17c611116a" title="Decode Temperature keeping waypoint parameters." alt="" coords="947,701,1141,741"/>
+<area shape="poly" title=" " alt="" coords="861,667,959,694,957,700,860,672"/>
+<area shape="rect" href="classMission.html#a197edb5d2e7a0ad7139e1f5af64fa213" title="Decode Temperature profile waypoint parameters." alt="" coords="947,765,1141,805"/>
+<area shape="poly" title=" " alt="" coords="831,667,881,708,948,750,962,757,960,762,945,755,878,712,827,672"/>
+<area shape="rect" href="classMission.html#a58e98f88221dedc91f3bd39f8e33f035" title="Set depth control set point to surface when mission is not running." alt="" coords="499,694,643,734"/>
+<area shape="poly" title=" " alt="" coords="391,692,485,702,485,708,391,697"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_icgraph.png" border="0" usemap="#aclassMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_icgraph" alt=""/></div>
+<map name="aclassMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_icgraph" id="aclassMissionNode_ac31360b92f51c1e19df0369ae01dfc5c_icgraph">
+<area shape="rect" title="Executes a step of the mission management process and publish depth control setpoint." alt="" coords="252,5,401,45"/>
+<area shape="rect" href="classMissionNode.html#a210c7569d64bb3872762eda0e0880743" title="Construct a new Mission Node object." alt="" coords="5,13,204,38"/>
+<area shape="poly" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa38b6c59f36921d1cba99619504e1097" name="aa38b6c59f36921d1cba99619504e1097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38b6c59f36921d1cba99619504e1097">&#9670;&#160;</a></span>callback_group_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::CallbackGroup::SharedPtr MissionNode::callback_group_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reentrant callback group to avoid deadlocks between synchronous service calls. </p>
+
+</div>
+</div>
+<a id="ab07da3c8f42d9f7e47aaddd990065c2e" name="ab07da3c8f42d9f7e47aaddd990065c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07da3c8f42d9f7e47aaddd990065c2e">&#9670;&#160;</a></span>client_bag_recorder_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr MissionNode::client_bag_recorder_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client for the /observer/restart_bag service. </p>
+
+</div>
+</div>
+<a id="a2fc2a9cb4e477f26bcf539a82a21fad2" name="a2fc2a9cb4e477f26bcf539a82a21fad2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc2a9cb4e477f26bcf539a82a21fad2">&#9670;&#160;</a></span>client_light_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Client&lt;seabot2_srvs::srv::Light&gt;::SharedPtr MissionNode::client_light_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client for the /driver/light service. </p>
+
+</div>
+</div>
+<a id="ade3728a740cb0376be1b76714d9e2854" name="ade3728a740cb0376be1b76714d9e2854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade3728a740cb0376be1b76714d9e2854">&#9670;&#160;</a></span>client_log_parameters_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Client&lt;std_srvs::srv::Trigger&gt;::SharedPtr MissionNode::client_log_parameters_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Client for the /observer/log_parameters service. </p>
+
+</div>
+</div>
+<a id="ac1f1ef230273fc75f29f3bfeb6c8b60c" name="ac1f1ef230273fc75f29f3bfeb6c8b60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f1ef230273fc75f29f3bfeb6c8b60c">&#9670;&#160;</a></span>flash_next_waypoint_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MissionNode::flash_next_waypoint_time_ = 5.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flash signal duration when a new waypoint is targeted. </p>
+
+</div>
+</div>
+<a id="a0915e06fb4556ff8979e2da71831fea9" name="a0915e06fb4556ff8979e2da71831fea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0915e06fb4556ff8979e2da71831fea9">&#9670;&#160;</a></span>flash_number_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MissionNode::flash_number_ = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of flashes in the pattern when a new waypoint is targeted. </p>
+
+</div>
+</div>
+<a id="aba6c0a5d6b6b4a2a5b23d0f83d0802e1" name="aba6c0a5d6b6b4a2a5b23d0f83d0802e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba6c0a5d6b6b4a2a5b23d0f83d0802e1">&#9670;&#160;</a></span>limit_velocity_default_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MissionNode::limit_velocity_default_ = 0.02</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed46034bcba118cbcf8c1fc666309f6d" name="aed46034bcba118cbcf8c1fc666309f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed46034bcba118cbcf8c1fc666309f6d">&#9670;&#160;</a></span>loop_dt_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::milliseconds MissionNode::loop_dt_ = std::chrono::milliseconds(1000)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>loop dt (ms) </p>
+
+</div>
+</div>
+<a id="a3a284568df6184b8d7e320868d4e3c11" name="a3a284568df6184b8d7e320868d4e3c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a284568df6184b8d7e320868d4e3c11">&#9670;&#160;</a></span>mission_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMission.html">Mission</a> MissionNode::mission_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classMission.html" title="Handles the mission management.">Mission</a> manager. </p>
+
+</div>
+</div>
+<a id="a533c67e7a7f96ff590e0d689bfb69d5a" name="a533c67e7a7f96ff590e0d689bfb69d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533c67e7a7f96ff590e0d689bfb69d5a">&#9670;&#160;</a></span>mission_file_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MissionNode::mission_file_name_ = &quot;mission.xml&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbcd65c857726e5697430ef6eba74252" name="abbcd65c857726e5697430ef6eba74252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbcd65c857726e5697430ef6eba74252">&#9670;&#160;</a></span>mission_path_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string MissionNode::mission_path_ = &quot;./&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0133b721c927e2a4f2108792cc801dfe" name="a0133b721c927e2a4f2108792cc801dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0133b721c927e2a4f2108792cc801dfe">&#9670;&#160;</a></span>publisher_depth_control_set_point_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Publisher&lt;seabot2_msgs::msg::DepthControlSetPoint&gt;::SharedPtr MissionNode::publisher_depth_control_set_point_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publishes DepthControlSetPoint msgs on the /mission/depth_control_set_point topic. </p>
+
+</div>
+</div>
+<a id="a266a390fc613182c3e788e4f5561c2b6" name="a266a390fc613182c3e788e4f5561c2b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a266a390fc613182c3e788e4f5561c2b6">&#9670;&#160;</a></span>publisher_mission_state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Publisher&lt;seabot2_msgs::msg::MissionState&gt;::SharedPtr MissionNode::publisher_mission_state_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publishes MissionState msgs on the /mission/mission_state topic. </p>
+
+</div>
+</div>
+<a id="a7b7970c1da0ad937dbbddffb84f9263f" name="a7b7970c1da0ad937dbbddffb84f9263f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7970c1da0ad937dbbddffb84f9263f">&#9670;&#160;</a></span>publisher_temperature_keeping_debug_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Publisher&lt;seabot2_msgs::msg::TemperatureKeepingDebug&gt;::SharedPtr MissionNode::publisher_temperature_keeping_debug_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Publishes TemperatureKeepingDebug msgs on the /mission/temperature_keeping_debug topic. </p>
+
+</div>
+</div>
+<a id="aeeaadf52a938a4846df92365dd3b9e67" name="aeeaadf52a938a4846df92365dd3b9e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeaadf52a938a4846df92365dd3b9e67">&#9670;&#160;</a></span>service_mission_reload_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr MissionNode::service_mission_reload_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Service /mission/mission_reload. </p>
+
+</div>
+</div>
+<a id="a22a486850fa36b9db7c3b67175107abb" name="a22a486850fa36b9db7c3b67175107abb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22a486850fa36b9db7c3b67175107abb">&#9670;&#160;</a></span>subscriber_depth_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr MissionNode::subscriber_depth_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscribes to DepthPose msgs from the /observer/depth topic. </p>
+
+</div>
+</div>
+<a id="a2f724d4fd05ff66e1b0709e57c512fbd" name="a2f724d4fd05ff66e1b0709e57c512fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f724d4fd05ff66e1b0709e57c512fbd">&#9670;&#160;</a></span>subscriber_temperature_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Subscription&lt;seabot2_msgs::msg::TemperatureSensorData&gt;::SharedPtr MissionNode::subscriber_temperature_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscribes to DepthPose msgs from the /observer/temperature topic. </p>
+
+</div>
+</div>
+<a id="a54da7a76ed28d89ec0bc9fa3344d70ac" name="a54da7a76ed28d89ec0bc9fa3344d70ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54da7a76ed28d89ec0bc9fa3344d70ac">&#9670;&#160;</a></span>timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::TimerBase::SharedPtr MissionNode::timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>rclcpp timer </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/include/seabot2_mission/<a class="el" href="mission__node_8hpp_source.html">mission_node.hpp</a></li>
-<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/<b>mission_node.cpp</b></li>
+<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_mission/src/<a class="el" href="mission__node_8cpp.html">mission_node.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

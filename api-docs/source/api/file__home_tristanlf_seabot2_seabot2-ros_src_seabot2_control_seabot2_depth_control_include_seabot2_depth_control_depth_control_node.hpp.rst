@@ -77,7 +77,7 @@ Namespaces
 
 - :ref:`namespace_Eigen`
 
-- :ref:`namespace_std__chrono_literals`
+- :ref:`namespace_std`
 
 
 Classes

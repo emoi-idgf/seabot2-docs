@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bme280_5fintf_0',['bme280_intf',['../group__BME280.html#ga142fcd9cb1e99b793488e9b3b1e6766e',1,'bme280_defs.h']]]
+  ['adcgain_0',['AdcGain',['../classTLV320ADC.html#a82381df21b1a23e239b7f7d10c87e082',1,'TLV320ADC']]],
+  ['ak09916_5fmode_5fe_1',['AK09916_mode_e',['../icm20948__register_8h.html#a0a0acd7d4569a3719bf0dc97548e8447',1,'icm20948_register.h']]]
 ];

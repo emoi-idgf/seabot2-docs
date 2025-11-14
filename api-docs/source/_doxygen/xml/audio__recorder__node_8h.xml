@@ -40,7 +40,7 @@
       </node>
       <node id="11">
         <label>seabot2_audio_recorder/dspic_acoustic.h</label>
-        <link refid="dspic__acoustic_8h_source"/>
+        <link refid="dspic__acoustic_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -60,7 +60,7 @@
       </node>
       <node id="3">
         <label>seabot2_audio_recorder/tlv320adc.h</label>
-        <link refid="tlv320adc_8h_source"/>
+        <link refid="tlv320adc_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -124,6 +124,18 @@
         <label>unistd.h</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h</label>
+        <link refid="audio__recorder__node_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/src/audio_recorder_node.cpp</label>
+        <link refid="audio__recorder__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classAudioRecorderNode" prot="public">AudioRecorderNode</innerclass>
     <briefdescription>
     </briefdescription>
@@ -138,8 +150,8 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUILD_RECORDER_NODE_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_audio_recorder/tlv320adc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_audio_recorder/dspic_acoustic.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tlv320adc_8h" kindref="compound">seabot2_audio_recorder/tlv320adc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dspic__acoustic_8h" kindref="compound">seabot2_audio_recorder/dspic_acoustic.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -152,86 +164,88 @@
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23" refid="classAudioRecorderNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAudioRecorderNode" kindref="compound">AudioRecorderNode</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="23" refid="classAudioRecorderNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAudioRecorderNode" kindref="compound">AudioRecorderNode</ref><sp/>final:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAudioRecorderNode" kindref="compound">AudioRecorderNode</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><ref refid="classAudioRecorderNode_1a8283003d7d6bce484ee594604b1dd3a4" kindref="member">AudioRecorderNode</ref>();</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAudioRecorderNode" kindref="compound">~AudioRecorderNode</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classAudioRecorderNode_1a34cf86b1ca6eaa3e237d5399ee8d6a62" kindref="member">~AudioRecorderNode</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>get_arecord_command()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classAudioRecorderNode_1abfa55e4a27c52e3322289b5d0990720c" kindref="member">get_arecord_command</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>audio_frequency_<sp/>=<sp/>192000;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>audio_max_file_time_<sp/>=<sp/>600;<sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>audio_nb_channels_<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>audio_nb_bits_<sp/>=<sp/>32;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>audio_device_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;plughw:CARD=sndrpii2scard&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>audio_command_last_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>audio_hdd_space_limit_stop_<sp/>=<sp/>500;<sp/></highlight><highlight class="comment">//<sp/>MB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classAudioRecorderNode_1ae7f217d0b8d69b34feb4dfa686a0cf0e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ae7f217d0b8d69b34feb4dfa686a0cf0e" kindref="member">audio_frequency_</ref><sp/>=<sp/>192000;</highlight></codeline>
+<codeline lineno="34" refid="classAudioRecorderNode_1a1b5d534c9df8912d85d8ef8df12c78ba" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a1b5d534c9df8912d85d8ef8df12c78ba" kindref="member">audio_max_file_time_</ref><sp/>=<sp/>600;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classAudioRecorderNode_1a7887ada267b73f287e72697bf4a2403f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a7887ada267b73f287e72697bf4a2403f" kindref="member">audio_nb_channels_</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="36" refid="classAudioRecorderNode_1a91e55218eadb2b42558e54fd065ea58f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a91e55218eadb2b42558e54fd065ea58f" kindref="member">audio_nb_bits_</ref><sp/>=<sp/>32;</highlight></codeline>
+<codeline lineno="37" refid="classAudioRecorderNode_1ac04eaf448fef2eacd7e98e400883a82b" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classAudioRecorderNode_1ac04eaf448fef2eacd7e98e400883a82b" kindref="member">audio_device_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;plughw:CARD=sndrpii2scard&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38" refid="classAudioRecorderNode_1af2a8c6e5093fa321bb575f5aa582a9dc" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classAudioRecorderNode_1af2a8c6e5093fa321bb575f5aa582a9dc" kindref="member">audio_command_last_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39" refid="classAudioRecorderNode_1ae381bf0b350828697d16499460d6699c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ae381bf0b350828697d16499460d6699c" kindref="member">audio_hdd_space_limit_stop_</ref><sp/>=<sp/>500;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MB</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>audio_save_directory_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/audio/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="classAudioRecorderNode_1a4f3a83eb7f1531195579ebf6d11ddcb9" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classAudioRecorderNode_1a4f3a83eb7f1531195579ebf6d11ddcb9" kindref="member">audio_save_directory_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/audio/&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/>timer_;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/><sp/>loop_safety_dt_<sp/>=<sp/>5s;<sp/></highlight><highlight class="comment">//<sp/>loop<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classAudioRecorderNode_1a1f303654adb0615aa20141d5f3f7156c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classAudioRecorderNode_1a1f303654adb0615aa20141d5f3f7156c" kindref="member">timer_</ref>;</highlight></codeline>
+<codeline lineno="45" refid="classAudioRecorderNode_1a20645d54dfeacf9c7b1c2487d8841f7b" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><sp/><ref refid="classAudioRecorderNode_1a20645d54dfeacf9c7b1c2487d8841f7b" kindref="member">loop_safety_dt_</ref><sp/>=<sp/>5s;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/>callback_group_;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>workingDirectory_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>thread_currently_running_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::future&lt;int&gt;<sp/>subprocessFuture_;</highlight></codeline>
+<codeline lineno="47" refid="classAudioRecorderNode_1abf688b448c0789ee01c463ec484053c6" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/><ref refid="classAudioRecorderNode_1abf688b448c0789ee01c463ec484053c6" kindref="member">callback_group_</ref>;</highlight></codeline>
+<codeline lineno="48" refid="classAudioRecorderNode_1a8d20fcc7bfba9817f2e74f5b1eb0be84" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classAudioRecorderNode_1a8d20fcc7bfba9817f2e74f5b1eb0be84" kindref="member">workingDirectory_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49" refid="classAudioRecorderNode_1af72e59eb4c468d15928d8241b7f2ad49" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1af72e59eb4c468d15928d8241b7f2ad49" kindref="member">thread_currently_running_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50" refid="classAudioRecorderNode_1a2859784c603bf95d7a971cf43b261c20" refkind="member"><highlight class="normal"><sp/><sp/>std::future<sp/>&lt;<sp/>int<sp/>&gt;<sp/><ref refid="classAudioRecorderNode_1a2859784c603bf95d7a971cf43b261c20" kindref="member">subprocessFuture_</ref>;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTLV320ADC" kindref="compound">TLV320ADC</ref><sp/>tlv_;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classDspicAcoustic" kindref="compound">DspicAcoustic</ref><sp/>dspic_;</highlight></codeline>
+<codeline lineno="52" refid="classAudioRecorderNode_1ae97a88754ba33afaa325855baa3e3733" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classTLV320ADC" kindref="compound">TLV320ADC</ref><sp/><ref refid="classAudioRecorderNode_1ae97a88754ba33afaa325855baa3e3733" kindref="member">tlv_</ref>;</highlight></codeline>
+<codeline lineno="53" refid="classAudioRecorderNode_1a98a2701eba8770d7abe1e33b0fb48784" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classDspicAcoustic" kindref="compound">DspicAcoustic</ref><sp/><ref refid="classAudioRecorderNode_1a98a2701eba8770d7abe1e33b0fb48784" kindref="member">dspic_</ref>;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>gain_ch1_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>gain_ch2_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>robot_code_<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>duration_between_shoot_<sp/>=<sp/>30;<sp/></highlight><highlight class="comment">//s</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>time_slot_duration_<sp/>=<sp/>5;<sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classAudioRecorderNode_1ac9acd791737ac97746c55b29aa57f946" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classAudioRecorderNode_1ac9acd791737ac97746c55b29aa57f946" kindref="member">gain_ch1_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56" refid="classAudioRecorderNode_1a20f9c6cd2133d1b975438648110bc79e" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classAudioRecorderNode_1a20f9c6cd2133d1b975438648110bc79e" kindref="member">gain_ch2_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57" refid="classAudioRecorderNode_1a5670a0b5369c30db39fe334212f09627" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="classAudioRecorderNode_1a5670a0b5369c30db39fe334212f09627" kindref="member">robot_code_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58" refid="classAudioRecorderNode_1aa16fb4f4425d8529204e87528e5deb6b" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="classAudioRecorderNode_1aa16fb4f4425d8529204e87528e5deb6b" kindref="member">duration_between_shoot_</ref><sp/>=<sp/>30;<sp/><sp/><sp/></highlight><highlight class="comment">//s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classAudioRecorderNode_1a1d87fe3a51a11adedc8bee77c69d56b8" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="classAudioRecorderNode_1a1d87fe3a51a11adedc8bee77c69d56b8" kindref="member">time_slot_duration_</ref><sp/>=<sp/>5;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>s</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_sound_tx_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_chirp_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>frequency_middle_<sp/>=<sp/>40000;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>frequency_range_<sp/>=<sp/>5000;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>signal_function_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61" refid="classAudioRecorderNode_1af37a7c5570d0593769df67167b61d071" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1af37a7c5570d0593769df67167b61d071" kindref="member">enable_sound_tx_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62" refid="classAudioRecorderNode_1a41885d24e3c53edd31f245a0c3c124cf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a41885d24e3c53edd31f245a0c3c124cf" kindref="member">enable_chirp_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63" refid="classAudioRecorderNode_1a563211b65fdbb37ab8e535c9cbacd49a" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="classAudioRecorderNode_1a563211b65fdbb37ab8e535c9cbacd49a" kindref="member">frequency_middle_</ref><sp/>=<sp/>40000;</highlight></codeline>
+<codeline lineno="64" refid="classAudioRecorderNode_1a5887259f72fa5254d6d96d57385b386c" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="classAudioRecorderNode_1a5887259f72fa5254d6d96d57385b386c" kindref="member">frequency_range_</ref><sp/>=<sp/>5000;</highlight></codeline>
+<codeline lineno="65" refid="classAudioRecorderNode_1ab3e5c717257daed15b37029a33f94f86" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classAudioRecorderNode_1ab3e5c717257daed15b37029a33f94f86" kindref="member">signal_function_</ref><sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>gnss_fix_once_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dspic_posix_fix_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67" refid="classAudioRecorderNode_1a867ba0041952b650c9b2d6b4c3258f7e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a867ba0041952b650c9b2d6b4c3258f7e" kindref="member">gnss_fix_once_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68" refid="classAudioRecorderNode_1ae8960f4853da37e4de75976049525a73" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ae8960f4853da37e4de75976049525a73" kindref="member">dspic_posix_fix_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr<sp/>service_rosbag_;</highlight></codeline>
+<codeline lineno="71" refid="classAudioRecorderNode_1a0b6210f7e14d0c9a437c7afb22d71add" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service<sp/>&lt;<sp/>std_srvs::srv::SetBool<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classAudioRecorderNode_1a0b6210f7e14d0c9a437c7afb22d71add" kindref="member">service_rosbag_</ref>;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Service&lt;std_srvs::srv::SetBool&gt;::SharedPtr<sp/>service_chirp_;</highlight></codeline>
+<codeline lineno="73" refid="classAudioRecorderNode_1ab1639fe46c43b36e3779e8a7a0650e26" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Service<sp/>&lt;<sp/>std_srvs::srv::SetBool<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classAudioRecorderNode_1ab1639fe46c43b36e3779e8a7a0650e26" kindref="member">service_chirp_</ref>;</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;std_msgs::msg::Bool&gt;::SharedPtr<sp/>publisher_record_;</highlight></codeline>
+<codeline lineno="75" refid="classAudioRecorderNode_1a85a65fab6e4a15cff7ae2ee21ee23f10" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>std_msgs::msg::Bool<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classAudioRecorderNode_1a85a65fab6e4a15cff7ae2ee21ee23f10" kindref="member">publisher_record_</ref>;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::SyncDspic&gt;::SharedPtr<sp/>publisher_dspic_debug_;</highlight></codeline>
+<codeline lineno="77" refid="classAudioRecorderNode_1afab3f7bd6aec648a0ad13287bc3bd807" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>seabot2_msgs::msg::SyncDspic<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classAudioRecorderNode_1afab3f7bd6aec648a0ad13287bc3bd807" kindref="member">publisher_dspic_debug_</ref>;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr<sp/>subscriber_gnss_data_;</highlight></codeline>
+<codeline lineno="79" refid="classAudioRecorderNode_1a4a8b48995a822eca78ca65b2346a7e9c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::GpsFix<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classAudioRecorderNode_1a4a8b48995a822eca78ca65b2346a7e9c" kindref="member">subscriber_gnss_data_</ref>;</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>manage_subprocess(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>start_new_audio);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a4b994f95b042d7dd5537578fdab76335" kindref="member">manage_subprocess</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>start_new_audio);</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>wait_kill();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ace497c55ee85aa1a86cf28eb992c990b" kindref="member">wait_kill</ref>();</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a939c50013ddcbb3c18a6d70d641e2d9c" kindref="member">init_parameters</ref>();</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ac782bed9fc1ddc1024df824c301b7b97" kindref="member">init_interfaces</ref>();</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callback_trigger(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gpsd_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GpsFix<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_callback();</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>chirp_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;rmw_request_id_t&gt;<sp/>request_header,</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Request&gt;<sp/>request,</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::shared_ptr&lt;std_srvs::srv::SetBool::Response&gt;<sp/>response);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_RECORDER_NODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ab2bf4318958c703a14096d0838d5c360" kindref="member">callback_trigger</ref>(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr<sp/>&lt;<sp/>rmw_request_id_t<sp/>&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr<sp/>&lt;<sp/>std_srvs::srv::SetBool::Request<sp/>&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr<sp/>&lt;<sp/>std_srvs::srv::SetBool::Response<sp/>&gt;<sp/>response);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a3ab2c7bba2d347025e25cb5420d2e59c" kindref="member">gpsd_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GpsFix<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1ae331238f7cbde0dd3c55156cb3db0cd1" kindref="member">timer_callback</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAudioRecorderNode_1a7d0f85d127b0b324332d96640dfec50b" kindref="member">chirp_callback</ref>(</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr<sp/>&lt;<sp/>rmw_request_id_t<sp/>&gt;<sp/>request_header,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::shared_ptr<sp/>&lt;<sp/>std_srvs::srv::SetBool::Request<sp/>&gt;<sp/>request,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr<sp/>&lt;<sp/>std_srvs::srv::SetBool::Response<sp/>&gt;<sp/>response);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_RECORDER_NODE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_audio_recorder/include/seabot2_audio_recorder/audio_recorder_node.h"/>
   </compounddef>

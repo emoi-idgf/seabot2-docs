@@ -7,7 +7,7 @@
     <incdepgraph>
       <node id="2">
         <label>seabot2_power_filter/filter_power_node.hpp</label>
-        <link refid="filter__power__node_8hpp_source"/>
+        <link refid="filter__power__node_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/src/filter_power_node.cpp" line="76" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/src/filter_power_node.cpp" bodystart="76" bodyend="81"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/src/filter_power_node.cpp" line="90" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/src/filter_power_node.cpp" bodystart="90" bodyend="96"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -65,82 +65,97 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_power_filter/filter_power_node.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="filter__power__node_8hpp" kindref="compound">seabot2_power_filter/filter_power_node.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::sort</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">placeholders;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">FilterPowerNode::FilterPowerNode()</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;filter_power_node&quot;</highlight><highlight class="normal">){</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Filter_power_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FilterPowerNode::init_parameters()<sp/>{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;filter_window_size&quot;</highlight><highlight class="normal">,<sp/>filter_window_size_);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;filter_median_remove_side_samples&quot;</highlight><highlight class="normal">,<sp/>filter_median_remove_side_samples_);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>filter_window_size_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;filter_window_size&quot;</highlight><highlight class="normal">,<sp/>filter_window_size_);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>filter_median_remove_side_samples_<sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;filter_median_remove_side_samples&quot;</highlight><highlight class="normal">,<sp/>filter_median_remove_side_samples_);</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>FilterPowerNode::compute_filter(deque&lt;double&gt;<sp/>queue)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>sort(queue.begin(),<sp/>queue.end());</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>deque&lt;double&gt;<sp/>queue_median(queue.begin()+filter_median_remove_side_samples_,<sp/>queue.end()-filter_median_remove_side_samples_);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>data_sum<sp/>=<sp/>std::accumulate(queue_median.begin(),<sp/>queue_median.end(),<sp/>0.0);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_sum<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(queue_median.size());</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FilterPowerNode::power_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;msg)<sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>seabot2_msgs::msg::PowerState<sp/>msg_filter;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_filter.header.stamp<sp/>=<sp/>msg.header.stamp;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_filter.power_state<sp/>=<sp/>msg.power_state;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>battery_volt_memory_.push_front(msg.battery_volt);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>motor_current_memory_.push_front(msg.motor_current);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++)</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esc_current_memory_[i].push_front(msg.esc_current[i]);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cell_volt_memory_[i].push_front(msg.cell_volt[i]);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(battery_volt_memory_.size()&gt;filter_window_size_)<sp/>{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>battery_volt_memory_.pop_back();</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>motor_current_memory_.pop_back();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++)</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esc_current_memory_[i].pop_back();</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++)</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cell_volt_memory_[i].pop_back();</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="6" refid="classFilterPowerNode_1af89caeb3e90efdecd968bb4ced9b0bb8" refkind="member"><highlight class="normal"><ref refid="classFilterPowerNode_1af89caeb3e90efdecd968bb4ced9b0bb8" kindref="member">FilterPowerNode::FilterPowerNode</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">:<sp/>Node(</highlight><highlight class="stringliteral">&quot;filter_power_node&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1affeeaeeeafd0fd9a133bbb28ab4ece91" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1a581794518c75121dd9f9b755733f6504" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>RCLCPP_INFO(this-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Filter_power_node]<sp/>Start<sp/>Ok&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classFilterPowerNode_1affeeaeeeafd0fd9a133bbb28ab4ece91" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1affeeaeeeafd0fd9a133bbb28ab4ece91" kindref="member">FilterPowerNode::init_parameters</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;filter_window_size&quot;</highlight><highlight class="normal">,<sp/><ref refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" kindref="member">filter_window_size_</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>this-&gt;declare_parameter&lt;long&gt;(</highlight><highlight class="stringliteral">&quot;filter_median_remove_side_samples&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" kindref="member">filter_median_remove_side_samples_</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" kindref="member">filter_window_size_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;filter_window_size&quot;</highlight><highlight class="normal">,<sp/><ref refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" kindref="member">filter_window_size_</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" kindref="member">filter_median_remove_side_samples_</ref><sp/>=<sp/>this-&gt;get_parameter_or(</highlight><highlight class="stringliteral">&quot;filter_median_remove_side_samples&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" kindref="member">filter_median_remove_side_samples_</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" kindref="member">FilterPowerNode::compute_filter</ref>(deque&lt;double&gt;<sp/>queue)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="28"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>sort(queue.begin(),<sp/>queue.end());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>deque&lt;double&gt;<sp/>queue_median(queue.begin()<sp/>+<sp/><ref refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" kindref="member">filter_median_remove_side_samples_</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>queue.end()<sp/>-<sp/><ref refid="classFilterPowerNode_1aa747637dc45afe8740178c118ea10d5e" kindref="member">filter_median_remove_side_samples_</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>data_sum<sp/>=<sp/>std::accumulate(queue_median.begin(),<sp/>queue_median.end(),<sp/>0.0);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data_sum<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(queue_median.size());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classFilterPowerNode_1a70a915f76cd00bec6685b7388efc348d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1a70a915f76cd00bec6685b7388efc348d" kindref="member">FilterPowerNode::power_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>seabot2_msgs::msg::PowerState<sp/>msg_filter;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>msg_filter.header.stamp<sp/>=<sp/>msg.header.stamp;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>msg_filter.power_state<sp/>=<sp/>msg.power_state;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" kindref="member">battery_volt_memory_</ref>.push_front(msg.battery_volt);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1aba0bdae59a626ad5abd559c0dac2e0c8" kindref="member">motor_current_memory_</ref>.push_front(msg.motor_current);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1af23cc8926ff9a19b73222502cc64152e" kindref="member">esc_current_memory_</ref>[i].push_front(msg.esc_current[i]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1aa6a3a607b9bcd313d154dcfa4067cd29" kindref="member">cell_volt_memory_</ref>[i].push_front(msg.cell_volt[i]);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(battery_volt_memory_.size()==filter_window_size_){</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.battery_volt<sp/>=<sp/>compute_filter(battery_volt_memory_);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.motor_current<sp/>=<sp/>compute_filter(motor_current_memory_);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.header.stamp<sp/>=<sp/>msg.header.stamp;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++)</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.esc_current[i]<sp/>=<sp/>compute_filter(esc_current_memory_[i]);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++)</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.cell_volt[i]<sp/>=<sp/>compute_filter(cell_volt_memory_[i]);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>publisher_power_data_-&gt;publish(msg_filter);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FilterPowerNode::init_interfaces()<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>publisher_power_data_<sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::PowerState&gt;(</highlight><highlight class="stringliteral">&quot;power&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>subscriber_power_data_<sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PowerState&gt;(</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/power&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;FilterPowerNode::power_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::spin(std::make_shared&lt;FilterPowerNode&gt;());</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" kindref="member">battery_volt_memory_</ref>.size()<sp/>&gt;<sp/><ref refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" kindref="member">filter_window_size_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" kindref="member">battery_volt_memory_</ref>.pop_back();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1aba0bdae59a626ad5abd559c0dac2e0c8" kindref="member">motor_current_memory_</ref>.pop_back();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1af23cc8926ff9a19b73222502cc64152e" kindref="member">esc_current_memory_</ref>[i].pop_back();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1aa6a3a607b9bcd313d154dcfa4067cd29" kindref="member">cell_volt_memory_</ref>[i].pop_back();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" kindref="member">battery_volt_memory_</ref>.size()<sp/>==<sp/><ref refid="classFilterPowerNode_1acb4ee5f475f24fa240b88bccc2aa0b18" kindref="member">filter_window_size_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_filter.battery_volt<sp/>=<sp/><ref refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" kindref="member">compute_filter</ref>(<ref refid="classFilterPowerNode_1ad2c625165b8dade76806cd59a004c967" kindref="member">battery_volt_memory_</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_filter.motor_current<sp/>=<sp/><ref refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" kindref="member">compute_filter</ref>(<ref refid="classFilterPowerNode_1aba0bdae59a626ad5abd559c0dac2e0c8" kindref="member">motor_current_memory_</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>msg_filter.header.stamp<sp/>=<sp/>msg.header.stamp;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.esc_current[i]<sp/>=<sp/><ref refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" kindref="member">compute_filter</ref>(<ref refid="classFilterPowerNode_1af23cc8926ff9a19b73222502cc64152e" kindref="member">esc_current_memory_</ref>[i]);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>msg_filter.cell_volt[i]<sp/>=<sp/><ref refid="classFilterPowerNode_1afa788e6634231789a483eecdab5b0db3" kindref="member">compute_filter</ref>(<ref refid="classFilterPowerNode_1aa6a3a607b9bcd313d154dcfa4067cd29" kindref="member">cell_volt_memory_</ref>[i]);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classFilterPowerNode_1a93a9b9f944d8e124b65ad966c24d725a" kindref="member">publisher_power_data_</ref>-&gt;publish(msg_filter);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="classFilterPowerNode_1a581794518c75121dd9f9b755733f6504" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classFilterPowerNode_1a581794518c75121dd9f9b755733f6504" kindref="member">FilterPowerNode::init_interfaces</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1a93a9b9f944d8e124b65ad966c24d725a" kindref="member">publisher_power_data_</ref><sp/>=<sp/>this-&gt;create_publisher&lt;seabot2_msgs::msg::PowerState&gt;(</highlight><highlight class="stringliteral">&quot;power&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="classFilterPowerNode_1af3c2a1a987a3a29875f492f736b43eb9" kindref="member">subscriber_power_data_</ref><sp/>=<sp/>this-&gt;create_subscription&lt;seabot2_msgs::msg::PowerState&gt;(</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;/driver/power&quot;</highlight><highlight class="normal">,<sp/>10,<sp/>std::bind(&amp;<ref refid="classFilterPowerNode_1a70a915f76cd00bec6685b7388efc348d" kindref="member">FilterPowerNode::power_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>_1));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="filter__power__node_8cpp_1a638b85ceffac097c2aa79b76ba8c055e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="filter__power__node_8cpp_1a638b85ceffac097c2aa79b76ba8c055e" kindref="member">main</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>rclcpp::init(argc,<sp/>argv);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>rclcpp::spin(std::make_shared&lt;FilterPowerNode&gt;());</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>rclcpp::shutdown();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_power_filter/src/filter_power_node.cpp"/>
   </compounddef>

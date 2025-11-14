@@ -22,28 +22,29 @@ Program Listing for File log_parameter_node.hpp
    
    class LogParameterNode final : public rclcpp::Node {
    public:
-       LogParameterNode();
+     LogParameterNode();
    
    private:
+     rclcpp::Publisher<seabot2_msgs::msg::LogParameter>::SharedPtr publisher_parameters_;
+     rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_log_parameters_;
    
-       rclcpp::Publisher<seabot2_msgs::msg::LogParameter>::SharedPtr publisher_parameters_;
-       rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr service_log_parameters_;
-   
-       rclcpp::CallbackGroup::SharedPtr callback_group_;
+     rclcpp::CallbackGroup::SharedPtr callback_group_;
    
    
-       void init_interfaces();
+     void init_interfaces();
    
-       void record_parameters();
+     void record_parameters();
    
-       std::vector<std::string> get_param_list(const std::string &node_name);
+     std::vector<std::string> get_param_list(const std::string & node_name);
    
-       void get_param_values(const std::string &node_name,
-                                               const std::vector<std::string> &param_name);
+     void get_param_values(
+       const std::string & node_name,
+       const std::vector<std::string> & param_name);
    
-       void service_record(const std::shared_ptr<rmw_request_id_t> request_header,
-                                             const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
-                                             std::shared_ptr<std_srvs::srv::Trigger::Response> response);
+     void service_record(
+       const std::shared_ptr<rmw_request_id_t> request_header,
+       const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+       std::shared_ptr<std_srvs::srv::Trigger::Response> response);
    
    private:
    

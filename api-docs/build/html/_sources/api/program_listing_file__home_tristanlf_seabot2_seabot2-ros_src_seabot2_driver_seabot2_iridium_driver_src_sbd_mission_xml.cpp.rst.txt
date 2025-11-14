@@ -21,17 +21,19 @@ Program Listing for File mission_xml.cpp
    #include <iostream>
    namespace pt = boost::property_tree;
    
-   MissionXML::MissionXML(LogData &log){
+   MissionXML::MissionXML(LogData & log)
+   {
      m_log = log;
    }
    
-   void MissionXML::write(const std::string &filename) const{
+   void MissionXML::write(const std::string & filename) const
+   {
      // Create an empty property tree object.
      pt::ptree m_tree;
    
    
      // TODO !!! WRONG
-     if(m_log.msg_type_ == LogData::CMD_MISSION_NEW){
+     if(m_log.msg_type_ == LogData::CMD_MISSION_NEW) {
    //      time_t gtime = static_cast<time_t>(m_log.start_time_);
    //      struct tm *timeinfo = gmtime(&gtime);
    //
@@ -44,23 +46,23 @@ Program Listing for File mission_xml.cpp
    //
    //      m_tree.add_child("mission.offset.start_time_utc", tree_offset);
    //      m_tree.put("mission.paths.<xmlattr>.type", "0");
-     }
-     else{
+     } else {
          // Load xml
-         pt::read_xml(filename, m_tree, 4);
+       pt::read_xml(filename, m_tree, 4);
      }
    
-     for(const Waypoint &w:m_log.waypoint_list_){
+     for(const Waypoint & w:m_log.waypoint_list_) {
        pt::ptree sub_tree_wp;
        sub_tree_wp.put("waypoint.duration", w.duration);
-       if(w.enable_thrusters){
-           sub_tree_wp.put("waypoint.east", w.east);
-           sub_tree_wp.put("waypoint.north", w.north);
+       if(w.enable_thrusters) {
+         sub_tree_wp.put("waypoint.east", w.east);
+         sub_tree_wp.put("waypoint.north", w.north);
        }
        sub_tree_wp.put("waypoint.depth", w.depth);
    
-       if(w.seafloor_landing)
-           sub_tree_wp.put("waypoint.seafloor_landing", true);
+       if(w.seafloor_landing) {
+         sub_tree_wp.put("waypoint.seafloor_landing", true);
+       }
    
        m_tree.add_child("mission.paths.waypoint", sub_tree_wp.get_child("waypoint"));
      }

@@ -77,6 +77,18 @@
         <label>stdint.h</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp</label>
+        <link refid="bme280__node_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/src/bme280_node.cpp</label>
+        <link refid="bme280__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classBme280Node" prot="public">Bme280Node</innerclass>
     <sectiondef kind="var">
       <memberdef kind="variable" id="bme280__node_8hpp_1a6fb021f1c9bd6c7fc72f1c0f24b81b38" prot="public" static="no" mutable="no">
@@ -91,6 +103,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" line="20" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_bme280_driver/include/pressure_bme280_driver/bme280_node.hpp" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classDepthControlNode_1ab64f6dc3c337fe2a2b8f823997fe9f1a" compoundref="depth__control__node_8cpp" startline="246" endline="265">DepthControlNode::generate_velocity_pairs</referencedby>
+        <referencedby refid="classSafetyNode_1ad826ef991798bb44aa0c131a744d2787" compoundref="safety__node_8cpp" startline="418" endline="456">SafetyNode::get_ram_cpu</referencedby>
+        <referencedby refid="classBme280Node_1a8e26815c7eca86dea8ee57c1533c4010" compoundref="bme280__node_8cpp" startline="57" endline="121">Bme280Node::sensor_init</referencedby>
+        <referencedby refid="bme280__node_8cpp_1a1c52ea79a1832a5f73afd49c7a106d17" compoundref="bme280__node_8cpp" startline="12" endline="15">user_i2c_read</referencedby>
+        <referencedby refid="bme280__node_8cpp_1a8560c855d9900415d2f146fd0b0bbbb6" compoundref="bme280__node_8cpp" startline="17" endline="20">user_i2c_write</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -117,51 +134,51 @@
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="20" refid="bme280__node_8hpp_1a6fb021f1c9bd6c7fc72f1c0f24b81b38" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="bme280__node_8hpp_1a6fb021f1c9bd6c7fc72f1c0f24b81b38" kindref="member">file</ref>;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22" refid="classBme280Node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classBme280Node" kindref="compound">Bme280Node</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBme280Node" kindref="compound">Bme280Node</ref>()</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;bme280_node&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensor_init();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timer_<sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_dt_,<sp/>std::bind(&amp;Bme280Node::timer_callback,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/>timer_;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/><sp/>loop_dt_<sp/>=<sp/>200ms;<sp/></highlight><highlight class="comment">//<sp/>loop<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classBme280Node_1a61188bbfa0fe52742a601923d0578881" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classBme280Node_1a61188bbfa0fe52742a601923d0578881" kindref="member">Bme280Node</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>:<sp/>Node(</highlight><highlight class="stringliteral">&quot;bme280_node&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBme280Node_1aeacb8095615b36dd37f78db2717c6308" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBme280Node_1a530fdfd657c2a913e0b98d3f77d1c7d5" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBme280Node_1a8e26815c7eca86dea8ee57c1533c4010" kindref="member">sensor_init</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBme280Node_1aca0ff09e6550027dddcb16c2402ba624" kindref="member">timer_</ref><sp/>=<sp/>this-&gt;create_wall_timer(</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBme280Node_1a57b96ee36ae26e53f69eb37fe6326474" kindref="member">loop_dt_</ref>,<sp/>std::bind(&amp;<ref refid="classBme280Node_1a6418f8a8acc56216ae3597b2d34d7ddd" kindref="member">Bme280Node::timer_callback</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39" refid="classBme280Node_1aca0ff09e6550027dddcb16c2402ba624" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classBme280Node_1aca0ff09e6550027dddcb16c2402ba624" kindref="member">timer_</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classBme280Node_1a57b96ee36ae26e53f69eb37fe6326474" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><sp/><ref refid="classBme280Node_1a57b96ee36ae26e53f69eb37fe6326474" kindref="member">loop_dt_</ref><sp/>=<sp/>200ms;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>loop<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr<sp/>publisher_sensor_;</highlight></codeline>
+<codeline lineno="42" refid="classBme280Node_1aaa4c9e1b9a61e56863e9521b51a72eff" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr<sp/><ref refid="classBme280Node_1aaa4c9e1b9a61e56863e9521b51a72eff" kindref="member">publisher_sensor_</ref>;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pressure_<sp/>=<sp/>0.0;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature_<sp/>=<sp/>0.0;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>humidity_<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="44" refid="classBme280Node_1aa245cd7550604cf55c9c0cb1099d6bfe" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1aa245cd7550604cf55c9c0cb1099d6bfe" kindref="member">pressure_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="45" refid="classBme280Node_1afba1a4a1b9f28c1ffc8d324225f0ba87" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1afba1a4a1b9f28c1ffc8d324225f0ba87" kindref="member">temperature_</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="46" refid="classBme280Node_1ac6b4a5095ea5ed4655e789f2eb45754c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1ac6b4a5095ea5ed4655e789f2eb45754c" kindref="member">humidity_</ref><sp/>=<sp/>0.0;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>i2c_periph_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-0&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>primary_i2c_address_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/>dev_;</highlight></codeline>
+<codeline lineno="48" refid="classBme280Node_1a5ca705432c362c2e2266e991eb8d5940" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a5ca705432c362c2e2266e991eb8d5940" kindref="member">i2c_periph_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49" refid="classBme280Node_1a202d415634be22444c1a0de132289be4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a202d415634be22444c1a0de132289be4" kindref="member">primary_i2c_address_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50" refid="classBme280Node_1a48a41acb1c07393d18a469a9fa9945c5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbme280__dev" kindref="compound">bme280_dev</ref><sp/><ref refid="classBme280Node_1a48a41acb1c07393d18a469a9fa9945c5" kindref="member">dev_</ref>;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_callback();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a6418f8a8acc56216ae3597b2d34d7ddd" kindref="member">timer_callback</ref>();</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_sensor_mode()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1aa03f38d39e8787ff5a96349ab4cabebe" kindref="member">print_sensor_mode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sensor_init();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a8e26815c7eca86dea8ee57c1533c4010" kindref="member">sensor_init</ref>();</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_calib_settings()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a864a36e2bc6be131739ffd813b473bb8" kindref="member">print_calib_settings</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_settings()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a7a18a072d759480cea1a6ef1c36de1b8" kindref="member">print_settings</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1aeacb8095615b36dd37f78db2717c6308" kindref="member">init_parameters</ref>();</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBme280Node_1a530fdfd657c2a913e0b98d3f77d1c7d5" kindref="member">init_interfaces</ref>();</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['xb_5fleft_0',['xb_left',['../structGSW__BALTIC__DATA.html#a92486e62f76ce89dd042eda8de14d4d2',1,'GSW_BALTIC_DATA']]],
-  ['xbee_5fencryption_5fkey_1',['xbee_encryption_key',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#a2b5b4e65e5caa83c9d34d542394efe0c',1,'xbee_driver::xbee::XbeeNode']]],
-  ['xhat_5f_2',['xhat_',['../classKalman.html#aeb4208c32e041e59377f815334651bbb',1,'Kalman']]]
+  ['u_5fdebug_5f_0',['u_debug_',['../classDepthControl.html#afcb3b799c7fbbc92d401e9b1836f5eff',1,'DepthControl']]],
+  ['uart_5fbaudrate_5f_1',['uart_baudrate_',['../classPingNode.html#a435a5400a300676864a4d43a9034bc40',1,'PingNode']]],
+  ['uart_5fport_5f_2',['uart_port_',['../classPingNode.html#a0151c0a3e096780418dc5724c08452bb',1,'PingNode']]]
 ];

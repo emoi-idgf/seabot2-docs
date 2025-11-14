@@ -116,7 +116,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" line="40" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" bodystart="40" bodyend="45"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" line="40" column="6" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" bodystart="40" bodyend="46"/>
+        <references refid="FusionOffset_8c_1a3eee30c75f512762430e9310600697e3" compoundref="FusionOffset_8c" startline="20">CUTOFF_FREQUENCY</references>
+        <references refid="structFusionOffset_1a4943e3fca9108305b116ffc2bf3d06b7" compoundref="FusionOffset_8h" startline="25">FusionOffset::filterCoefficient</references>
+        <references refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" compoundref="FusionMath_8h" startline="88">FUSION_VECTOR_ZERO</references>
+        <references refid="structFusionOffset_1acb07ddbfa9311b99c838f8bea3806fea" compoundref="FusionOffset_8h" startline="28">FusionOffset::gyroscopeOffset</references>
+        <references refid="FusionMath_8h_1ae71449b1cc6e6250b91f539153a7a0d3" compoundref="FusionMath_8h" startline="115">M_PI</references>
+        <references refid="FusionOffset_8c_1a45ba202b05caf39795aeca91b0ae547e" compoundref="FusionOffset_8c" startline="25">TIMEOUT</references>
+        <references refid="structFusionOffset_1ab450ab0c4f2b62f80e95b76302c013ad" compoundref="FusionOffset_8h" startline="26">FusionOffset::timeout</references>
+        <references refid="structFusionOffset_1adf501421f9fa649403708065730e8dae" compoundref="FusionOffset_8h" startline="27">FusionOffset::timer</references>
+        <referencedby refid="classICM20948Node_1a08c73f04f9a0174b2c519355f279eaf6" compoundref="icm20948__node_8cpp" startline="24" endline="175">ICM20948Node::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionOffset_8c_1a7a767f0f96ae165e5d90881be32400ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
@@ -158,7 +167,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" line="54" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" bodystart="54" bodyend="74"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" line="55" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c" bodystart="55" bodyend="79"/>
+        <references refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17">FusionVector::axis</references>
+        <references refid="structFusionOffset_1a4943e3fca9108305b116ffc2bf3d06b7" compoundref="FusionOffset_8h" startline="25">FusionOffset::filterCoefficient</references>
+        <references refid="FusionMath_8h_1ab3d1d8d9f51de0e0416174c1007c9897" compoundref="FusionMath_8h" startline="211" endline="219">FusionVectorAdd</references>
+        <references refid="FusionMath_8h_1afcb6f43a8c7c7409516b8909166b0143" compoundref="FusionMath_8h" startline="255" endline="263">FusionVectorMultiplyScalar</references>
+        <references refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" compoundref="FusionMath_8h" startline="227" endline="237">FusionVectorSubtract</references>
+        <references refid="structFusionOffset_1acb07ddbfa9311b99c838f8bea3806fea" compoundref="FusionOffset_8h" startline="28">FusionOffset::gyroscopeOffset</references>
+        <references refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" compoundref="FusionOffset_8c" startline="30">THRESHOLD</references>
+        <references refid="structFusionOffset_1ab450ab0c4f2b62f80e95b76302c013ad" compoundref="FusionOffset_8h" startline="26">FusionOffset::timeout</references>
+        <references refid="structFusionOffset_1adf501421f9fa649403708065730e8dae" compoundref="FusionOffset_8h" startline="27">FusionOffset::timer</references>
+        <references refid="unionFusionVector_1ab34ed3670d1b32e46f607bb6ef61b391" compoundref="FusionMath_8h" startline="28">FusionVector::x</references>
+        <references refid="unionFusionVector_1a2fa58cbe872d045ea569eaae7835beef" compoundref="FusionMath_8h" startline="29">FusionVector::y</references>
+        <references refid="unionFusionVector_1a829a8887dbb7298e7f357e47a19ab887" compoundref="FusionMath_8h" startline="30">FusionVector::z</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -180,46 +202,51 @@
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUTOFF_FREQUENCY<sp/>(0.02f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="FusionOffset_8c_1a3eee30c75f512762430e9310600697e3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CUTOFF_FREQUENCY<sp/>(0.02f)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMEOUT<sp/>(5)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="FusionOffset_8c_1a45ba202b05caf39795aeca91b0ae547e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIMEOUT<sp/>(5)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>THRESHOLD<sp/>(3.0f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>THRESHOLD<sp/>(3.0f)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionOffset_8c_1a72ddbeac61763d6b4e12f6f9c064dd5a" kindref="member">FusionOffsetInitialise</ref>(<ref refid="structFusionOffset" kindref="compound">FusionOffset</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sampleRate)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;filterCoefficient<sp/>=<sp/>2.0f<sp/>*<sp/>(float)<sp/><ref refid="FusionMath_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>*<sp/><ref refid="FusionOffset_8c_1a3eee30c75f512762430e9310600697e3" kindref="member">CUTOFF_FREQUENCY</ref><sp/>*<sp/>(1.0f<sp/>/<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>sampleRate);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;timeout<sp/>=<sp/><ref refid="FusionOffset_8c_1a45ba202b05caf39795aeca91b0ae547e" kindref="member">TIMEOUT</ref><sp/>*<sp/>sampleRate;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;timer<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;gyroscopeOffset<sp/>=<sp/><ref refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" kindref="member">FUSION_VECTOR_ZERO</ref>;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionOffset_8c_1a7a767f0f96ae165e5d90881be32400ef" kindref="member">FusionOffsetUpdate</ref>(<ref refid="structFusionOffset" kindref="compound">FusionOffset</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>offset,<sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope)<sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Subtract<sp/>offset<sp/>from<sp/>gyroscope<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>gyroscope<sp/>=<sp/>FusionVectorSubtract(gyroscope,<sp/>offset-&gt;gyroscopeOffset);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>timer<sp/>if<sp/>gyroscope<sp/>not<sp/>stationary</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((fabs(gyroscope.axis.x)<sp/>&gt;<sp/><ref refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" kindref="member">THRESHOLD</ref>)<sp/>||<sp/>(fabs(gyroscope.axis.y)<sp/>&gt;<sp/><ref refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" kindref="member">THRESHOLD</ref>)<sp/>||<sp/>(fabs(gyroscope.axis.z)<sp/>&gt;<sp/><ref refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" kindref="member">THRESHOLD</ref>))<sp/>{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset-&gt;timer<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gyroscope;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>timer<sp/>while<sp/>gyroscope<sp/>stationary</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(offset-&gt;timer<sp/>&lt;<sp/>offset-&gt;timeout)<sp/>{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>offset-&gt;timer++;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gyroscope;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>offset<sp/>if<sp/>timer<sp/>has<sp/>elapsed</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;gyroscopeOffset<sp/>=<sp/>FusionVectorAdd(offset-&gt;gyroscopeOffset,<sp/>FusionVectorMultiplyScalar(gyroscope,<sp/>offset-&gt;filterCoefficient));</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gyroscope;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="FusionOffset_8c_1a72ddbeac61763d6b4e12f6f9c064dd5a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="FusionOffset_8c_1a72ddbeac61763d6b4e12f6f9c064dd5a" kindref="member">FusionOffsetInitialise</ref>(<ref refid="structFusionOffset" kindref="compound">FusionOffset</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>offset,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sampleRate)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1a4943e3fca9108305b116ffc2bf3d06b7" kindref="member">filterCoefficient</ref><sp/>=<sp/>2.0f<sp/>*<sp/>(float)<sp/><ref refid="FusionMath_8h_1ae71449b1cc6e6250b91f539153a7a0d3" kindref="member">M_PI</ref><sp/>*<sp/><ref refid="FusionOffset_8c_1a3eee30c75f512762430e9310600697e3" kindref="member">CUTOFF_FREQUENCY</ref><sp/>*<sp/>(1.0f<sp/>/<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)<sp/>sampleRate);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1ab450ab0c4f2b62f80e95b76302c013ad" kindref="member">timeout</ref><sp/>=<sp/><ref refid="FusionOffset_8c_1a45ba202b05caf39795aeca91b0ae547e" kindref="member">TIMEOUT</ref><sp/>*<sp/>sampleRate;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1adf501421f9fa649403708065730e8dae" kindref="member">timer</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1acb07ddbfa9311b99c838f8bea3806fea" kindref="member">gyroscopeOffset</ref><sp/>=<sp/><ref refid="FusionMath_8h_1a175c7e3d6cbfd58191f764a2cff57519" kindref="member">FUSION_VECTOR_ZERO</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="FusionOffset_8c_1a7a767f0f96ae165e5d90881be32400ef" refkind="member"><highlight class="normal"><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionOffset_8c_1a7a767f0f96ae165e5d90881be32400ef" kindref="member">FusionOffsetUpdate</ref>(<ref refid="structFusionOffset" kindref="compound">FusionOffset</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>offset,<sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>gyroscope)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Subtract<sp/>offset<sp/>from<sp/>gyroscope<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>gyroscope<sp/>=<sp/><ref refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" kindref="member">FusionVectorSubtract</ref>(gyroscope,<sp/>offset-&gt;<ref refid="structFusionOffset_1acb07ddbfa9311b99c838f8bea3806fea" kindref="member">gyroscopeOffset</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>timer<sp/>if<sp/>gyroscope<sp/>not<sp/>stationary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((fabs(gyroscope.<ref refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17" kindref="member">axis</ref>.<ref refid="unionFusionVector_1ab34ed3670d1b32e46f607bb6ef61b391" kindref="member">x</ref>)<sp/>&gt;<sp/><ref refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" kindref="member">THRESHOLD</ref>)<sp/>||<sp/>(fabs(gyroscope.<ref refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17" kindref="member">axis</ref>.<ref refid="unionFusionVector_1a2fa58cbe872d045ea569eaae7835beef" kindref="member">y</ref>)<sp/>&gt;<sp/><ref refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" kindref="member">THRESHOLD</ref>)<sp/>||</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>(fabs(gyroscope.<ref refid="unionFusionVector_1aef0afe5a56c03732d1dbba7660fbdd17" kindref="member">axis</ref>.<ref refid="unionFusionVector_1a829a8887dbb7298e7f357e47a19ab887" kindref="member">z</ref>)<sp/>&gt;<sp/><ref refid="FusionOffset_8c_1a4679d8ea8690999a6c6c7c0cb245c879" kindref="member">THRESHOLD</ref>))</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1adf501421f9fa649403708065730e8dae" kindref="member">timer</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gyroscope;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>timer<sp/>while<sp/>gyroscope<sp/>stationary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(offset-&gt;<ref refid="structFusionOffset_1adf501421f9fa649403708065730e8dae" kindref="member">timer</ref><sp/>&lt;<sp/>offset-&gt;<ref refid="structFusionOffset_1ab450ab0c4f2b62f80e95b76302c013ad" kindref="member">timeout</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1adf501421f9fa649403708065730e8dae" kindref="member">timer</ref>++;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gyroscope;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>offset<sp/>if<sp/>timer<sp/>has<sp/>elapsed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>offset-&gt;<ref refid="structFusionOffset_1acb07ddbfa9311b99c838f8bea3806fea" kindref="member">gyroscopeOffset</ref><sp/>=<sp/><ref refid="FusionMath_8h_1ab3d1d8d9f51de0e0416174c1007c9897" kindref="member">FusionVectorAdd</ref>(offset-&gt;<ref refid="structFusionOffset_1acb07ddbfa9311b99c838f8bea3806fea" kindref="member">gyroscopeOffset</ref>,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionMath_8h_1afcb6f43a8c7c7409516b8909166b0143" kindref="member">FusionVectorMultiplyScalar</ref>(gyroscope,<sp/>offset-&gt;<ref refid="structFusionOffset_1a4943e3fca9108305b116ffc2bf3d06b7" kindref="member">filterCoefficient</ref>));</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gyroscope;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionOffset.c"/>
   </compounddef>

@@ -82,7 +82,7 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">bme280_node.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_BME280_NODE_HPP</span></div>
+<a href="bme280__node_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BUILD_BME280_NODE_HPP</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BUILD_BME280_NODE_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
@@ -101,52 +101,54 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span>std::chrono_literals;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">using namespace </span>std;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">inline</span> <span class="keywordtype">int</span> file;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="bme280__node_8hpp.html#a6fb021f1c9bd6c7fc72f1c0f24b81b38">   20</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="bme280__node_8hpp.html#a6fb021f1c9bd6c7fc72f1c0f24b81b38">file</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classBme280Node.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classBme280Node.html">Bme280Node</a> final : <span class="keyword">public</span> rclcpp::Node {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="classBme280Node.html">Bme280Node</a>()</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            : Node(<span class="stringliteral">&quot;bme280_node&quot;</span>) {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        init_parameters();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        init_interfaces();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        sensor_init();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        timer_ = this-&gt;create_wall_timer(</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                loop_dt_, std::bind(&amp;Bme280Node::timer_callback, <span class="keyword">this</span>));</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    rclcpp::TimerBase::SharedPtr timer_;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::chrono::milliseconds  loop_dt_ = 200ms; <span class="comment">// loop dt</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classBme280Node.html#a61188bbfa0fe52742a601923d0578881">   24</a></span>  <a class="code hl_function" href="classBme280Node.html#a61188bbfa0fe52742a601923d0578881">Bme280Node</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  : Node(<span class="stringliteral">&quot;bme280_node&quot;</span>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="classBme280Node.html#aeacb8095615b36dd37f78db2717c6308">init_parameters</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="classBme280Node.html#a530fdfd657c2a913e0b98d3f77d1c7d5">init_interfaces</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="classBme280Node.html#a8e26815c7eca86dea8ee57c1533c4010">sensor_init</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="classBme280Node.html#aca0ff09e6550027dddcb16c2402ba624">timer_</a> = this-&gt;create_wall_timer(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <a class="code hl_variable" href="classBme280Node.html#a57b96ee36ae26e53f69eb37fe6326474">loop_dt_</a>, std::bind(&amp;<a class="code hl_function" href="classBme280Node.html#a6418f8a8acc56216ae3597b2d34d7ddd">Bme280Node::timer_callback</a>, <span class="keyword">this</span>));</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classBme280Node.html#aca0ff09e6550027dddcb16c2402ba624">   39</a></span>  rclcpp::TimerBase::SharedPtr <a class="code hl_variable" href="classBme280Node.html#aca0ff09e6550027dddcb16c2402ba624">timer_</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classBme280Node.html#a57b96ee36ae26e53f69eb37fe6326474">   40</a></span>  std::chrono::milliseconds  <a class="code hl_variable" href="classBme280Node.html#a57b96ee36ae26e53f69eb37fe6326474">loop_dt_</a> = 200ms;   <span class="comment">// loop dt</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    rclcpp::Publisher&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr publisher_sensor_;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classBme280Node.html#aaa4c9e1b9a61e56863e9521b51a72eff">   42</a></span>  rclcpp::Publisher&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr <a class="code hl_variable" href="classBme280Node.html#aaa4c9e1b9a61e56863e9521b51a72eff">publisher_sensor_</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">double</span> pressure_ = 0.0;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">double</span> temperature_ = 0.0;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">double</span> humidity_ = 0.0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classBme280Node.html#aa245cd7550604cf55c9c0cb1099d6bfe">   44</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classBme280Node.html#aa245cd7550604cf55c9c0cb1099d6bfe">pressure_</a> = 0.0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classBme280Node.html#afba1a4a1b9f28c1ffc8d324225f0ba87">   45</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classBme280Node.html#afba1a4a1b9f28c1ffc8d324225f0ba87">temperature_</a> = 0.0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classBme280Node.html#ac6b4a5095ea5ed4655e789f2eb45754c">   46</a></span>  <span class="keywordtype">double</span> <a class="code hl_variable" href="classBme280Node.html#ac6b4a5095ea5ed4655e789f2eb45754c">humidity_</a> = 0.0;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">string</span> i2c_periph_ = <span class="stringliteral">&quot;/dev/i2c-0&quot;</span>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">bool</span> primary_i2c_address_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structbme280__dev.html">bme280_dev</a> dev_;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classBme280Node.html#a5ca705432c362c2e2266e991eb8d5940">   48</a></span>  <span class="keywordtype">string</span> <a class="code hl_variable" href="classBme280Node.html#a5ca705432c362c2e2266e991eb8d5940">i2c_periph_</a> = <span class="stringliteral">&quot;/dev/i2c-0&quot;</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classBme280Node.html#a202d415634be22444c1a0de132289be4">   49</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classBme280Node.html#a202d415634be22444c1a0de132289be4">primary_i2c_address_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classBme280Node.html#a48a41acb1c07393d18a469a9fa9945c5">   50</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structbme280__dev.html">bme280_dev</a> <a class="code hl_variable" href="classBme280Node.html#a48a41acb1c07393d18a469a9fa9945c5">dev_</a>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> timer_callback();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#a6418f8a8acc56216ae3597b2d34d7ddd">timer_callback</a>();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> print_sensor_mode() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#aa03f38d39e8787ff5a96349ab4cabebe">print_sensor_mode</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> sensor_init();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#a8e26815c7eca86dea8ee57c1533c4010">sensor_init</a>();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> print_calib_settings() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#a864a36e2bc6be131739ffd813b473bb8">print_calib_settings</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> print_settings() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#a7a18a072d759480cea1a6ef1c36de1b8">print_settings</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> init_parameters();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#aeacb8095615b36dd37f78db2717c6308">init_parameters</a>();</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> init_interfaces();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classBme280Node.html#a530fdfd657c2a913e0b98d3f77d1c7d5">init_interfaces</a>();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 </div>
@@ -154,7 +156,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif </span><span class="comment">//BUILD_BME280_NODE_HPP</span></div>
 <div class="ttc" id="abme280_8h_html"><div class="ttname"><a href="bme280_8h.html">bme280.h</a></div><div class="ttdoc">Sensor driver for BME280 sensor.</div></div>
 <div class="ttc" id="abme280__defs_8h_html"><div class="ttname"><a href="bme280__defs_8h.html">bme280_defs.h</a></div><div class="ttdoc">Sensor driver for BME280 sensor.</div></div>
+<div class="ttc" id="abme280__node_8hpp_html_a6fb021f1c9bd6c7fc72f1c0f24b81b38"><div class="ttname"><a href="bme280__node_8hpp.html#a6fb021f1c9bd6c7fc72f1c0f24b81b38">file</a></div><div class="ttdeci">int file</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:20</div></div>
 <div class="ttc" id="aclassBme280Node_html"><div class="ttname"><a href="classBme280Node.html">Bme280Node</a></div><div class="ttdef"><b>Definition</b> bme280_node.hpp:22</div></div>
+<div class="ttc" id="aclassBme280Node_html_a202d415634be22444c1a0de132289be4"><div class="ttname"><a href="classBme280Node.html#a202d415634be22444c1a0de132289be4">Bme280Node::primary_i2c_address_</a></div><div class="ttdeci">bool primary_i2c_address_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:49</div></div>
+<div class="ttc" id="aclassBme280Node_html_a48a41acb1c07393d18a469a9fa9945c5"><div class="ttname"><a href="classBme280Node.html#a48a41acb1c07393d18a469a9fa9945c5">Bme280Node::dev_</a></div><div class="ttdeci">struct bme280_dev dev_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:50</div></div>
+<div class="ttc" id="aclassBme280Node_html_a530fdfd657c2a913e0b98d3f77d1c7d5"><div class="ttname"><a href="classBme280Node.html#a530fdfd657c2a913e0b98d3f77d1c7d5">Bme280Node::init_interfaces</a></div><div class="ttdeci">void init_interfaces()</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:166</div></div>
+<div class="ttc" id="aclassBme280Node_html_a57b96ee36ae26e53f69eb37fe6326474"><div class="ttname"><a href="classBme280Node.html#a57b96ee36ae26e53f69eb37fe6326474">Bme280Node::loop_dt_</a></div><div class="ttdeci">std::chrono::milliseconds loop_dt_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:40</div></div>
+<div class="ttc" id="aclassBme280Node_html_a5ca705432c362c2e2266e991eb8d5940"><div class="ttname"><a href="classBme280Node.html#a5ca705432c362c2e2266e991eb8d5940">Bme280Node::i2c_periph_</a></div><div class="ttdeci">string i2c_periph_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:48</div></div>
+<div class="ttc" id="aclassBme280Node_html_a61188bbfa0fe52742a601923d0578881"><div class="ttname"><a href="classBme280Node.html#a61188bbfa0fe52742a601923d0578881">Bme280Node::Bme280Node</a></div><div class="ttdeci">Bme280Node()</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:24</div></div>
+<div class="ttc" id="aclassBme280Node_html_a6418f8a8acc56216ae3597b2d34d7ddd"><div class="ttname"><a href="classBme280Node.html#a6418f8a8acc56216ae3597b2d34d7ddd">Bme280Node::timer_callback</a></div><div class="ttdeci">void timer_callback()</div><div class="ttdoc">Functions.</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:39</div></div>
+<div class="ttc" id="aclassBme280Node_html_a7a18a072d759480cea1a6ef1c36de1b8"><div class="ttname"><a href="classBme280Node.html#a7a18a072d759480cea1a6ef1c36de1b8">Bme280Node::print_settings</a></div><div class="ttdeci">void print_settings() const</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:147</div></div>
+<div class="ttc" id="aclassBme280Node_html_a864a36e2bc6be131739ffd813b473bb8"><div class="ttname"><a href="classBme280Node.html#a864a36e2bc6be131739ffd813b473bb8">Bme280Node::print_calib_settings</a></div><div class="ttdeci">void print_calib_settings() const</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:123</div></div>
+<div class="ttc" id="aclassBme280Node_html_a8e26815c7eca86dea8ee57c1533c4010"><div class="ttname"><a href="classBme280Node.html#a8e26815c7eca86dea8ee57c1533c4010">Bme280Node::sensor_init</a></div><div class="ttdeci">void sensor_init()</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:57</div></div>
+<div class="ttc" id="aclassBme280Node_html_aa03f38d39e8787ff5a96349ab4cabebe"><div class="ttname"><a href="classBme280Node.html#aa03f38d39e8787ff5a96349ab4cabebe">Bme280Node::print_sensor_mode</a></div><div class="ttdeci">void print_sensor_mode() const</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:159</div></div>
+<div class="ttc" id="aclassBme280Node_html_aa245cd7550604cf55c9c0cb1099d6bfe"><div class="ttname"><a href="classBme280Node.html#aa245cd7550604cf55c9c0cb1099d6bfe">Bme280Node::pressure_</a></div><div class="ttdeci">double pressure_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:44</div></div>
+<div class="ttc" id="aclassBme280Node_html_aaa4c9e1b9a61e56863e9521b51a72eff"><div class="ttname"><a href="classBme280Node.html#aaa4c9e1b9a61e56863e9521b51a72eff">Bme280Node::publisher_sensor_</a></div><div class="ttdeci">rclcpp::Publisher&lt; seabot2_msgs::msg::Bme280Data &gt;::SharedPtr publisher_sensor_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:42</div></div>
+<div class="ttc" id="aclassBme280Node_html_ac6b4a5095ea5ed4655e789f2eb45754c"><div class="ttname"><a href="classBme280Node.html#ac6b4a5095ea5ed4655e789f2eb45754c">Bme280Node::humidity_</a></div><div class="ttdeci">double humidity_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:46</div></div>
+<div class="ttc" id="aclassBme280Node_html_aca0ff09e6550027dddcb16c2402ba624"><div class="ttname"><a href="classBme280Node.html#aca0ff09e6550027dddcb16c2402ba624">Bme280Node::timer_</a></div><div class="ttdeci">rclcpp::TimerBase::SharedPtr timer_</div><div class="ttdoc">Variables.</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:39</div></div>
+<div class="ttc" id="aclassBme280Node_html_aeacb8095615b36dd37f78db2717c6308"><div class="ttname"><a href="classBme280Node.html#aeacb8095615b36dd37f78db2717c6308">Bme280Node::init_parameters</a></div><div class="ttdeci">void init_parameters()</div><div class="ttdef"><b>Definition</b> bme280_node.cpp:27</div></div>
+<div class="ttc" id="aclassBme280Node_html_afba1a4a1b9f28c1ffc8d324225f0ba87"><div class="ttname"><a href="classBme280Node.html#afba1a4a1b9f28c1ffc8d324225f0ba87">Bme280Node::temperature_</a></div><div class="ttdeci">double temperature_</div><div class="ttdef"><b>Definition</b> bme280_node.hpp:45</div></div>
 <div class="ttc" id="astructbme280__dev_html"><div class="ttname"><a href="structbme280__dev.html">bme280_dev</a></div><div class="ttdoc">bme280 device structure</div><div class="ttdef"><b>Definition</b> bme280_defs.h:341</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

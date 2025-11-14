@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['fusion_5feuler_5fzero_0',['FUSION_EULER_ZERO',['../FusionMath_8h.html#a8a42e7f9a3c303b708badbb458854c87',1,'FusionMath.h']]],
-  ['fusion_5fidentity_5fmatrix_1',['FUSION_IDENTITY_MATRIX',['../FusionMath_8h.html#adaaaa6a9359e36347b4d9efacb09fc43',1,'FusionMath.h']]],
-  ['fusion_5fidentity_5fquaternion_2',['FUSION_IDENTITY_QUATERNION',['../FusionMath_8h.html#a5501ca56d440773167a54cfeac1d54af',1,'FusionMath.h']]],
-  ['fusion_5fvector_5fones_3',['FUSION_VECTOR_ONES',['../FusionMath_8h.html#aa0c0cdc4a4093c618b152bfb19f48c52',1,'FusionMath.h']]],
-  ['fusion_5fvector_5fzero_4',['FUSION_VECTOR_ZERO',['../FusionMath_8h.html#a175c7e3d6cbfd58191f764a2cff57519',1,'FusionMath.h']]]
+  ['b_0',['b',['../FusionMath_8h.html#a111da81ae5883147168bbb8366377b10',1,'B:&#160;FusionMath.h'],['../FusionMath_8h.html#a111da81ae5883147168bbb8366377b10',1,'B:&#160;FusionMath.h']]],
+  ['batt_5fmax_1',['BATT_MAX',['../log__data_8h.html#ac873c87f494ea2b22e7eb5fc74ad5a82',1,'log_data.h']]],
+  ['batt_5fmin_2',['BATT_MIN',['../log__data_8h.html#a6d377d62681dec0ff8b30dd658a87352',1,'log_data.h']]]
 ];

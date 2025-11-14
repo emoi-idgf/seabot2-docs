@@ -15,22 +15,22 @@ Program Listing for File alpha_solver.cpp
    //
    
    #include "seabot2_depth_control/alpha_solver.h"
-   #include <iostream>
-   //#include "ibex/ibex_Function.h"
-   //#include "ibex/ibex_SepFwdBwd.h"
-   #include "rclcpp/rclcpp.hpp"
    
+   #include <iostream>
    #include <chrono>
    
-   using namespace std;
-   //using namespace ibex;
+   // #include "ibex/ibex_Function.h"
+   // #include "ibex/ibex_SepFwdBwd.h"
+   #include "rclcpp/rclcpp.hpp"
+   
+   // using namespace ibex;
    
    pair<bool, double> AlphaSolver::exist_in_memory(const double beta)
    {
      if(enable_test_in_memory_) {
-       for (auto & i: computed_memory_) {
-   //            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "[alpha_solver] Test beta = %f match beta_memory = %f", beta,
-   //                        i[0]);
+       for (auto & i : computed_memory_) {
+         // RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
+         // "[alpha_solver] Test beta = %f match beta_memory = %f", beta, i[0]);
          if (abs(i[0] - beta) < 0.001) {
            return {true, i[1]};
          }
@@ -43,7 +43,8 @@ Program Listing for File alpha_solver.cpp
    {
      array<double, 2> a = {beta, alpha};
      computed_memory_.push_back(a);
-   //    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "[alpha_solver] Add beta = %f, alpha = %f", beta, alpha);
+     // RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
+     // "[alpha_solver] Add beta = %f, alpha = %f", beta, alpha);
    }
    
    double AlphaSolver::compute_alpha(const double velocity_limit)
@@ -55,7 +56,8 @@ Program Listing for File alpha_solver.cpp
        return exist.second;
      } else {
    //        if(enable_test_in_memory_)
-   //            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "[alpha_solver] Not found, compute new alpha (velocity_limit = %f)", velocity_limit);
+   //            RCLCPP_INFO(rclcpp::get_logger("rclcpp"),
+   //            "[alpha_solver] Not found, compute new alpha (velocity_limit = %f)", velocity_limit);
    //        auto beta = Interval(velocity_limit);
    //        IntervalVector x_init(2);
    //        x_init[0] = Interval(0., z_search_max_); // z

@@ -3,10 +3,11 @@
   <compounddef id="classBufferedAsyncSerial" kind="class" language="C++" prot="public">
     <compoundname>BufferedAsyncSerial</compoundname>
     <basecompoundref refid="classAsyncSerial" prot="public" virt="non-virtual">AsyncSerial</basecompoundref>
+    <includes refid="BufferedAsyncSerial_8h" local="no">BufferedAsyncSerial.h</includes>
     <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classBufferedAsyncSerial_1a6e14d7d424ead87ce722cc57113e8329" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" prot="private" static="no" mutable="no">
         <type>std::vector&lt; char &gt;</type>
-        <definition>std::vector&lt;char&gt; BufferedAsyncSerial::readQueue</definition>
+        <definition>std::vector&lt; char &gt; BufferedAsyncSerial::readQueue</definition>
         <argsstring></argsstring>
         <name>readQueue</name>
         <qualifiedname>BufferedAsyncSerial::readQueue</qualifiedname>
@@ -16,7 +17,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="96" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" bodystart="96" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="97" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" compoundref="BufferedAsyncSerial_8cpp" startline="49" endline="55">read</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1ad5ee3fa826eb9a5d8e48f0c27149bfda" compoundref="BufferedAsyncSerial_8cpp" startline="39" endline="47">read</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1a33fdd36dc921aa8c506c90b52441c172" compoundref="BufferedAsyncSerial_8cpp" startline="76" endline="80">readCallback</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1a4ac460f8b50222394dc0cf0fec47f159" compoundref="BufferedAsyncSerial_8cpp" startline="57" endline="63">readString</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" compoundref="BufferedAsyncSerial_8cpp" startline="65" endline="74">readStringUntil</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" prot="private" static="no" mutable="no">
         <type>std::mutex</type>
@@ -30,7 +36,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="97" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="98" column="14" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" bodystart="98" bodyend="-1"/>
+        <referencedby refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" compoundref="BufferedAsyncSerial_8cpp" startline="49" endline="55">read</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1ad5ee3fa826eb9a5d8e48f0c27149bfda" compoundref="BufferedAsyncSerial_8cpp" startline="39" endline="47">read</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1a33fdd36dc921aa8c506c90b52441c172" compoundref="BufferedAsyncSerial_8cpp" startline="76" endline="80">readCallback</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1a4ac460f8b50222394dc0cf0fec47f159" compoundref="BufferedAsyncSerial_8cpp" startline="57" endline="63">readString</referencedby>
+        <referencedby refid="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" compoundref="BufferedAsyncSerial_8cpp" startline="65" endline="74">readStringUntil</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -46,7 +57,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="17" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="21" bodyend="24"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="17" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="21" bodyend="25"/>
+        <references refid="classBufferedAsyncSerial_1a33fdd36dc921aa8c506c90b52441c172" compoundref="BufferedAsyncSerial_8cpp" startline="76" endline="80">readCallback</references>
+        <references refid="classAsyncSerial_1a2020c5f77a8006ed5746449da1814891" compoundref="AsyncSerial_8cpp" startline="272" endline="275">AsyncSerial::setReadCallback</references>
       </memberdef>
       <memberdef kind="function" id="classBufferedAsyncSerial_1a41db81338678ab592aaa6189103b414c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -147,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="30" column="5"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="30" column="3"/>
       </memberdef>
       <memberdef kind="function" id="classBufferedAsyncSerial_1ad5ee3fa826eb9a5d8e48f0c27149bfda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -189,7 +202,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="49" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="37" bodyend="45"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="49" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="39" bodyend="47"/>
+        <references refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" compoundref="BufferedAsyncSerial_8h" startline="97">readQueue</references>
+        <references refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" compoundref="BufferedAsyncSerial_8h" startline="98">readQueueMutex</references>
       </memberdef>
       <memberdef kind="function" id="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; char &gt;</type>
@@ -206,7 +221,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="55" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="47" bodyend="53"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="55" column="16" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="49" bodyend="55"/>
+        <references refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" compoundref="BufferedAsyncSerial_8h" startline="97">readQueue</references>
+        <references refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" compoundref="BufferedAsyncSerial_8h" startline="98">readQueueMutex</references>
       </memberdef>
       <memberdef kind="function" id="classBufferedAsyncSerial_1a4ac460f8b50222394dc0cf0fec47f159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -223,7 +240,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="64" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="55" bodyend="61"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="64" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="57" bodyend="63"/>
+        <references refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" compoundref="BufferedAsyncSerial_8h" startline="97">readQueue</references>
+        <references refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" compoundref="BufferedAsyncSerial_8h" startline="98">readQueueMutex</references>
       </memberdef>
       <memberdef kind="function" id="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -255,7 +274,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="75" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="63" bodyend="72"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="75" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="65" bodyend="74"/>
+        <references refid="classBufferedAsyncSerial_1ab5dc4c00dd3c8feeaef2c57f0520de68" compoundref="BufferedAsyncSerial_8cpp" startline="82" endline="103">findStringInVector</references>
+        <references refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" compoundref="BufferedAsyncSerial_8h" startline="97">readQueue</references>
+        <references refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" compoundref="BufferedAsyncSerial_8h" startline="98">readQueueMutex</references>
+        <referencedby refid="classSBD_1a1e3dd8657cb587b2b238edfda4420186" compoundref="sbd_8cpp" startline="49" endline="209">SBD::read</referencedby>
       </memberdef>
       <memberdef kind="function" id="classBufferedAsyncSerial_1a385796d6f383544cf253c15b66e4eb13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -269,7 +292,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="77" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="105" bodyend="108"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="77" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="105" bodyend="108"/>
+        <references refid="classAsyncSerial_1a79c529d01fb7df3ed2ad5d771141f7a7" compoundref="AsyncSerial_8cpp" startline="277" endline="281">AsyncSerial::clearReadCallback</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -294,7 +318,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="84" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="74" bodyend="78"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="84" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="76" bodyend="80"/>
+        <references refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" compoundref="BufferedAsyncSerial_8h" startline="97">readQueue</references>
+        <references refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" compoundref="BufferedAsyncSerial_8h" startline="98">readQueueMutex</references>
+        <referencedby refid="classBufferedAsyncSerial_1a6f8045e40a5b9e96f3474b29c00cf6ec" compoundref="BufferedAsyncSerial_8cpp" startline="21" endline="25">BufferedAsyncSerial</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -338,7 +365,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="93" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="80" bodyend="103"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="93" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/serial/BufferedAsyncSerial.cpp" bodystart="82" bodyend="103"/>
+        <referencedby refid="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" compoundref="BufferedAsyncSerial_8cpp" startline="65" endline="74">readStringUntil</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -379,7 +407,7 @@
         <label>boost::noncopyable</label>
       </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="14" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" bodystart="15" bodyend="98"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" line="14" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/serial/BufferedAsyncSerial.h" bodystart="15" bodyend="99"/>
     <listofallmembers>
       <member refid="classAsyncSerial_1aff78d677d0b72f9929448240313ca8f7" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>AsyncSerial</name></member>
       <member refid="classAsyncSerial_1a7d2011315081fc53de7faf0f5ecb0124" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>AsyncSerial</name></member>
@@ -387,22 +415,28 @@
       <member refid="classBufferedAsyncSerial_1a41db81338678ab592aaa6189103b414c" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>BufferedAsyncSerial</name></member>
       <member refid="classAsyncSerial_1a79c529d01fb7df3ed2ad5d771141f7a7" prot="protected" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>clearReadCallback</name></member>
       <member refid="classAsyncSerial_1a5cf2bac916cb71ec14b3fa35c2de7653" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>close</name></member>
+      <member refid="classAsyncSerial_1a12d08755b8056665542785076733bb69" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>doClose</name></member>
+      <member refid="classAsyncSerial_1a619a92467cfe9dfc749ceba29165339e" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>doRead</name></member>
+      <member refid="classAsyncSerial_1abcbfe8d69a6c5d6da421281af608951d" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>doWrite</name></member>
       <member refid="classAsyncSerial_1aa49b3afe4d51dbda4e39aaa2d1b59432" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>errorStatus</name></member>
       <member refid="classBufferedAsyncSerial_1ab5dc4c00dd3c8feeaef2c57f0520de68" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>findStringInVector</name></member>
       <member refid="classAsyncSerial_1ac9fb38b9235d90f9c87ef2767cbde800" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>isOpen</name></member>
       <member refid="classAsyncSerial_1ac703c6e3ee89e5821536ce7381a31238" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>open</name></member>
+      <member refid="classAsyncSerial_1a46e4e5b7495fdcb41f198d5dbd0475c6" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>pimpl</name></member>
       <member refid="classBufferedAsyncSerial_1ad5ee3fa826eb9a5d8e48f0c27149bfda" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>read</name></member>
       <member refid="classBufferedAsyncSerial_1ace6bba84ff120bcf28ebd0dec49db9a3" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>read</name></member>
       <member refid="classAsyncSerial_1afa843216d519512f1f325a1b8849be26" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readBufferSize</name></member>
       <member refid="classBufferedAsyncSerial_1a33fdd36dc921aa8c506c90b52441c172" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readCallback</name></member>
-      <member refid="classBufferedAsyncSerial_1a6e14d7d424ead87ce722cc57113e8329" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readQueue</name></member>
+      <member refid="classAsyncSerial_1aa3049c366dc6937e8222e410958f5d32" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readEnd</name></member>
+      <member refid="classBufferedAsyncSerial_1a67428b86bb52bc3f265bde03e36410e3" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readQueue</name></member>
       <member refid="classBufferedAsyncSerial_1a5f249f8998832a4f11acd06d299e4991" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readQueueMutex</name></member>
       <member refid="classBufferedAsyncSerial_1a4ac460f8b50222394dc0cf0fec47f159" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readString</name></member>
       <member refid="classBufferedAsyncSerial_1a1977bd9ded2ae1ab084f2ccb27e6511e" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>readStringUntil</name></member>
       <member refid="classAsyncSerial_1afb60a8e6ae2469094fe11d52e4336648" prot="protected" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>setErrorStatus</name></member>
-      <member refid="classAsyncSerial_1ad6e207716e4e54b84666fe392de38115" prot="protected" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>setReadCallback</name></member>
+      <member refid="classAsyncSerial_1a2020c5f77a8006ed5746449da1814891" prot="protected" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>setReadCallback</name></member>
       <member refid="classAsyncSerial_1a5a7e4aa37924e593ba7636be0be0bf0a" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>write</name></member>
       <member refid="classAsyncSerial_1a8f3665e55608b07fa9eb4e9d93b3ee95" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>write</name></member>
+      <member refid="classAsyncSerial_1a3d8e2919f4fdd59cb09d6c64ddab92d8" prot="private" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>writeEnd</name></member>
       <member refid="classAsyncSerial_1aa4285acd9b327cef013b0437cf188da7" prot="public" virt="non-virtual"><scope>BufferedAsyncSerial</scope><name>writeString</name></member>
       <member refid="classAsyncSerial_1aac97fceec15171d8161bbc89b5b37474" prot="public" virt="pure-virtual"><scope>BufferedAsyncSerial</scope><name>~AsyncSerial</name></member>
       <member refid="classBufferedAsyncSerial_1a385796d6f383544cf253c15b66e4eb13" prot="public" virt="virtual"><scope>BufferedAsyncSerial</scope><name>~BufferedAsyncSerial</name></member>

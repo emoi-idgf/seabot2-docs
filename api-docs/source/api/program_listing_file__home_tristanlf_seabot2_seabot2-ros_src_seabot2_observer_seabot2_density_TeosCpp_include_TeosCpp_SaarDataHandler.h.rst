@@ -66,25 +66,25 @@ Program Listing for File SaarDataHandler.h
    ****************************************/
    class SaarDataHandler
    {
-       public:
-           SaarDataHandler();
-           virtual ~SaarDataHandler();
+   public:
+     SaarDataHandler();
+     virtual ~SaarDataHandler();
    
-           const double get_p_ref(unsigned pos);
-           const double get_lats_ref(unsigned pos);
-           const double get_longs_ref(unsigned pos);
-           const double get_saar_ref(unsigned pos);
-           const double get_ndepth_ref(unsigned pos);
-           const double get_delta_sa_ref(unsigned pos);
+     const double get_p_ref(unsigned pos);
+     const double get_lats_ref(unsigned pos);
+     const double get_longs_ref(unsigned pos);
+     const double get_saar_ref(unsigned pos);
+     const double get_ndepth_ref(unsigned pos);
+     const double get_delta_sa_ref(unsigned pos);
    
-       private:
-           double getSaarValue(unsigned tpos);
-           double getDeltaSaValue(unsigned tpos);
+   private:
+     double getSaarValue(unsigned tpos);
+     double getDeltaSaValue(unsigned tpos);
    
-           unsigned getSaarArrayPos(unsigned valPos);
-           unsigned getDeltaSaArrayPos(unsigned valPos);
+     unsigned getSaarArrayPos(unsigned valPos);
+     unsigned getDeltaSaArrayPos(unsigned valPos);
    
-           unsigned getOffset(unsigned arrayNumber, bool isSaar);
+     unsigned getOffset(unsigned arrayNumber, bool isSaar);
    };
    
    #endif // SAARDATAHANDLER_H

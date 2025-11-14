@@ -9,6 +9,7 @@
   <title>Class WaypointDepth &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class WaypointGNSSProfile" href="classWaypointGNSSProfile.html" />
-    <link rel="prev" title="Class Waypoint" href="classWaypoint.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,19 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class WaypointDepth</a><ul>
+<li><a class="reference internal" href="#inheritance-relationships">Inheritance Relationships</a><ul>
+<li><a class="reference internal" href="#base-type">Base Type</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv413WaypointDepth"><code class="docutils literal notranslate"><span class="pre">WaypointDepth</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N13WaypointDepth13WaypointDepthEP7Mission"><code class="docutils literal notranslate"><span class="pre">WaypointDepth()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13WaypointDepthD0Ev"><code class="docutils literal notranslate"><span class="pre">~WaypointDepth()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13WaypointDepth7processERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">process()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N13WaypointDepth5depthE"><code class="docutils literal notranslate"><span class="pre">depth</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +65,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +80,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class WaypointDepth</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classWaypointDepth.rst.txt" rel="nofollow"> View page source</a>
@@ -112,7 +109,9 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv413WaypointDepth">
 <span id="_CPPv313WaypointDepth"></span><span id="_CPPv213WaypointDepth"></span><span id="WaypointDepth"></span><span class="target" id="classWaypointDepth"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WaypointDepth</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="classWaypoint.html#_CPPv48Waypoint" title="Waypoint"><span class="n"><span class="pre">Waypoint</span></span></a><a class="headerlink" href="#_CPPv413WaypointDepth" title="Link to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p><a class="reference internal" href="classWaypoint.html#classWaypoint"><span class="std std-ref">Waypoint</span></a> for depth keeping. </p>
+<p>Hold a given depth set point for a given time </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N13WaypointDepth13WaypointDepthEP7Mission">
@@ -127,7 +126,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N13WaypointDepth7processERKN6rclcpp4TimeE">
 <span id="_CPPv3N13WaypointDepth7processERKN6rclcpp4TimeE"></span><span id="_CPPv2N13WaypointDepth7processERKN6rclcpp4TimeE"></span><span id="WaypointDepth::process__rclcpp::TimeCR"></span><span class="target" id="classWaypointDepth_1abccb938b1a7839c783a2ec1f102a5c42"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">rclcpp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Time</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N13WaypointDepth7processERKN6rclcpp4TimeE" title="Link to this definition"></a><br /></dt>
-<dd><p>process </p>
+<dd><p>Process waypoint depth and set depth control setpoint. </p>
+<p>Set depth control set point with waypoint values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>time</strong> – current time </p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -136,7 +141,8 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13WaypointDepth5depthE">
 <span id="_CPPv3N13WaypointDepth5depthE"></span><span id="_CPPv2N13WaypointDepth5depthE"></span><span id="WaypointDepth::depth__double"></span><span class="target" id="classWaypointDepth_1a310d56d8fa4981f76b7658b13de56525"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">depth</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N13WaypointDepth5depthE" title="Link to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Depth set point in meter. </p>
+</dd></dl>
 
 </div>
 </dd></dl>
@@ -147,10 +153,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classWaypoint.html" class="btn btn-neutral float-left" title="Class Waypoint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classWaypointGNSSProfile.html" class="btn btn-neutral float-right" title="Class WaypointGNSSProfile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

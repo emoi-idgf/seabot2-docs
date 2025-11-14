@@ -29,11 +29,13 @@ Program Listing for File sbd.h
    
      ~SBD();
    
-       const static std::string SBD_TOKEN_OK;
-       const static std::string SBD_TOKEN_READY;
-       const static std::string SBD_TOKEN_SEPARATOR;
+     const static std::string SBD_TOKEN_OK;
+     const static std::string SBD_TOKEN_READY;
+     const static std::string SBD_TOKEN_SEPARATOR;
    
-     int init(const std::string &serial_port_name="/dev/ttyAMA0", const unsigned int &baud_rate=19200);
+     int init(
+       const std::string & serial_port_name = "/dev/ttyAMA0",
+       const unsigned int & baud_rate = 19200);
    
      void disable_echo();
    
@@ -41,41 +43,41 @@ Program Listing for File sbd.h
    
      void disable_flow_control();
    
-     int cmd_CSQ(bool fast=true);
+     int cmd_CSQ(bool fast = true);
    
      long long cmd_get_imei();
    
      int cmd_copy_MO_MT();
    
-     int cmd_write_message(const std::string &data);
+     int cmd_write_message(const std::string & data);
    
      std::string cmd_read_message();
    
      int cmd_status();
    
-     int cmd_flush_message(const bool &MO, const bool &MT);
+     int cmd_flush_message(const bool & MO, const bool & MT);
    
      int cmd_session();
    
-     int cmd_enable_alert(const bool &enable=true);
+     int cmd_enable_alert(const bool & enable = true);
    
-     int cmd_enable_indicator_reporting(const bool &enable=true);
+     int cmd_enable_indicator_reporting(const bool & enable = true);
    
      int cmd_trafic_management_status();
    
-     void set_gnss(const double &latitude, const double &longitude);
+     void set_gnss(const double & latitude, const double & longitude);
    
-     int cmd_set_registration_mode(const int &mode);
+     int cmd_set_registration_mode(const int & mode);
    
      void read();
    
-     bool sbd_power(const bool &enable);
+     bool sbd_power(const bool & enable);
    
-     void set_debug(const bool &val);
+     void set_debug(const bool & val);
    
    private:
    
-     void write(const std::string &at_cmd);
+     void write(const std::string & at_cmd);
    
    private:
      BufferedAsyncSerial serial_;
@@ -93,7 +95,7 @@ Program Listing for File sbd.h
    
      bool in_session_ = false;
    
-     omp_lock_t lock_data{};
+     omp_lock_t lock_data {};
    
    
      int STATUS_MO_ = -2;
@@ -169,224 +171,256 @@ Program Listing for File sbd.h
      bool is_flush_valid();
      bool is_flush_return();
      bool is_ready();
-     void set_ready(const bool &val);
+     void set_ready(const bool & val);
    
    };
    
-   inline void SBD::set_debug(const bool &val){
+   inline void SBD::set_debug(const bool & val)
+   {
      debug_ = val;
    }
    
-   inline void SBD::set_gnss(const double &latitude, const double &longitude){
+   inline void SBD::set_gnss(const double & latitude, const double & longitude)
+   {
      latitude_ = latitude;
      longitude_ = longitude;
      valid_gnss_ = true;
    }
    
-   inline int SBD::get_status_mo(){
+   inline int SBD::get_status_mo()
+   {
      omp_set_lock(&lock_data);
      int result = STATUS_MO_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_status_momsn(){
+   inline int SBD::get_status_momsn()
+   {
      omp_set_lock(&lock_data);
      int result = STATUS_MOMSN_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_status_mt(){
+   inline int SBD::get_status_mt()
+   {
      omp_set_lock(&lock_data);
      int result = STATUS_MT_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_status_mtmsn(){
+   inline int SBD::get_status_mtmsn()
+   {
      omp_set_lock(&lock_data);
      int result = STATUS_MTMSN_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_status_ra(){
+   inline int SBD::get_status_ra()
+   {
      omp_set_lock(&lock_data);
      int result = STATUS_RA_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_waiting(){
+   inline int SBD::get_waiting()
+   {
      omp_set_lock(&lock_data);
      int result = waiting_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_session_mo(){
+   inline int SBD::get_session_mo()
+   {
      omp_set_lock(&lock_data);
      int result = SESSION_MO_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_session_momsn(){
+   inline int SBD::get_session_momsn()
+   {
      omp_set_lock(&lock_data);
      int result = SESSION_MOMSN_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_session_mt(){
+   inline int SBD::get_session_mt()
+   {
      omp_set_lock(&lock_data);
      int result = SESSION_MT_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_session_mtmsn(){
+   inline int SBD::get_session_mtmsn()
+   {
      omp_set_lock(&lock_data);
      int result = SESSION_MTMSN_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_csq(){
+   inline int SBD::get_csq()
+   {
      omp_set_lock(&lock_data);
      int result = CSQ_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_copy_mo_mt_size(){
+   inline int SBD::get_copy_mo_mt_size()
+   {
      omp_set_lock(&lock_data);
      int result = copy_MO_MT_size_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline long long SBD::get_imei(){
+   inline long long SBD::get_imei()
+   {
      omp_set_lock(&lock_data);
      long result = imei_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_write_return(){
+   inline int SBD::get_write_return()
+   {
      omp_set_lock(&lock_data);
      int result = ready_return_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline std::string SBD::get_read_msg_data(){
+   inline std::string SBD::get_read_msg_data()
+   {
      omp_set_lock(&lock_data);
      std::string result = read_msg_data_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_indicator_signal(){
+   inline int SBD::get_indicator_signal()
+   {
      omp_set_lock(&lock_data);
      int result = indicator_signal_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_indicator_service(){
+   inline int SBD::get_indicator_service()
+   {
      omp_set_lock(&lock_data);
      int result = indicator_service_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_indicator_antenna(){
+   inline int SBD::get_indicator_antenna()
+   {
      omp_set_lock(&lock_data);
      int result = indicator_antenna_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline bool SBD::get_ring_alert(){
+   inline bool SBD::get_ring_alert()
+   {
      omp_set_lock(&lock_data);
      bool result = ring_alert_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_ring_alert_code(){
+   inline int SBD::get_ring_alert_code()
+   {
      omp_set_lock(&lock_data);
      int result = ring_alert_code_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_trafic_management_status(){
+   inline int SBD::get_trafic_management_status()
+   {
      omp_set_lock(&lock_data);
      int result = trafic_management_status_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_trafic_management_time(){
+   inline int SBD::get_trafic_management_time()
+   {
      omp_set_lock(&lock_data);
      int result = trafic_management_time_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline bool SBD::get_areg_new_event(){
+   inline bool SBD::get_areg_new_event()
+   {
      omp_set_lock(&lock_data);
      bool result = areg_new_event_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_areg_event(){
+   inline int SBD::get_areg_event()
+   {
      omp_set_lock(&lock_data);
      int result = areg_event_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline int SBD::get_areg_error_code(){
+   inline int SBD::get_areg_error_code()
+   {
      omp_set_lock(&lock_data);
      int result = areg_error_code_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline bool SBD::is_in_session(){
+   inline bool SBD::is_in_session()
+   {
      omp_set_lock(&lock_data);
      bool result = in_session_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline bool SBD::is_flush_valid(){
-       omp_set_lock(&lock_data);
-       bool result = valid_flush_;
-       omp_unset_lock(&lock_data);
-       return result;
+   inline bool SBD::is_flush_valid()
+   {
+     omp_set_lock(&lock_data);
+     bool result = valid_flush_;
+     omp_unset_lock(&lock_data);
+     return result;
    }
    
-   inline bool SBD::is_flush_return(){
-       omp_set_lock(&lock_data);
-       bool result = return_flush_;
-       omp_unset_lock(&lock_data);
-       return result;
+   inline bool SBD::is_flush_return()
+   {
+     omp_set_lock(&lock_data);
+     bool result = return_flush_;
+     omp_unset_lock(&lock_data);
+     return result;
    }
    
-   inline bool SBD::is_ready(){
+   inline bool SBD::is_ready()
+   {
      omp_set_lock(&lock_data);
      bool result = READY_;
      omp_unset_lock(&lock_data);
      return result;
    }
    
-   inline void SBD::set_ready(const bool &val){
+   inline void SBD::set_ready(const bool & val)
+   {
      omp_set_lock(&lock_data);
      READY_ = val;
      omp_unset_lock(&lock_data);

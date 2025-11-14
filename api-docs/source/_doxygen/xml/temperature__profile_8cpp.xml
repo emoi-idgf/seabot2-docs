@@ -6,7 +6,7 @@
     <incdepgraph>
       <node id="2">
         <label>seabot2_temperature_profile/temperature_profile.h</label>
-        <link refid="temperature__profile_8h_source"/>
+        <link refid="temperature__profile_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -40,41 +40,46 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_temperature_profile/temperature_profile.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="temperature__profile_8h" kindref="compound">seabot2_temperature_profile/temperature_profile.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">TemperatureProfile::TemperatureProfile(){</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperatureProfile_1a18e41d78be8873e916b3ef04c8377120" kindref="member">TemperatureProfile::update_temperature</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>depth){</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_depth_data_.emplace_back(temperature,<sp/>depth);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temperature_depth_data_.size()&gt;max_number_data_)</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature_depth_data_.pop_front();</highlight></codeline>
-<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperatureProfile_1a34a785469b46a1486d54acc9b289eee0" kindref="member">TemperatureProfile::compute_profile</ref>(){</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temperature_depth_data_.size()&gt;10){</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VectorXd<sp/>data_temp(temperature_depth_data_.size());</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VectorXd<sp/>data_depth(temperature_depth_data_.size());</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>the<sp/>vector<sp/>data_temp<sp/>and<sp/>data_depth<sp/>for<sp/>the<sp/>least<sp/>squares<sp/>problem</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::transform(temperature_depth_data_.begin(),<sp/>temperature_depth_data_.end(),<sp/>data_temp.data(),</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;double,<sp/>double&gt;&amp;<sp/>p)<sp/>{<sp/>return<sp/>p.first;<sp/>});</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::transform(temperature_depth_data_.begin(),<sp/>temperature_depth_data_.end(),<sp/>data_depth.data(),</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;double,<sp/>double&gt;&amp;<sp/>p)<sp/>{<sp/>return<sp/>p.second;<sp/>});</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>the<sp/>matrix<sp/>A<sp/>by<sp/>stacking<sp/>x<sp/>and<sp/>a<sp/>column<sp/>of<sp/>ones</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MatrixXd<sp/>A(temperature_depth_data_.size(),<sp/>2);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A<sp/>&lt;&lt;<sp/>data_temp,<sp/>VectorXd::Ones(temperature_depth_data_.size());</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Solve<sp/>the<sp/>least<sp/>squares<sp/>problem</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>VectorXd<sp/>coefficients<sp/>=<sp/>A.jacobiSvd(ComputeThinU<sp/>|<sp/>ComputeThinV).solve(data_depth);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>slope<sp/>(a)<sp/>and<sp/>intercept<sp/>(b)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>profile_slope_<sp/>=<sp/>coefficients[0];</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>profile_intercept_<sp/>=<sp/>coefficients[1];</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="3" refid="classTemperatureProfile_1a2c480aabe949c5c74b00b86a7e3df946" refkind="member"><highlight class="normal"><ref refid="classTemperatureProfile_1a2c480aabe949c5c74b00b86a7e3df946" kindref="member">TemperatureProfile::TemperatureProfile</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classTemperatureProfile_1a18e41d78be8873e916b3ef04c8377120" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperatureProfile_1a18e41d78be8873e916b3ef04c8377120" kindref="member">TemperatureProfile::update_temperature</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>temperature,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>depth)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.emplace_back(temperature,<sp/>depth);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.size()<sp/>&gt;<sp/><ref refid="classTemperatureProfile_1a06e248f69b5dadb339888a92296238c1" kindref="member">max_number_data_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.pop_front();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classTemperatureProfile_1a34a785469b46a1486d54acc9b289eee0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTemperatureProfile_1a34a785469b46a1486d54acc9b289eee0" kindref="member">TemperatureProfile::compute_profile</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.size()<sp/>&gt;<sp/>10)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>VectorXd<sp/>data_temp(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.size());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>VectorXd<sp/>data_depth(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.size());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>the<sp/>vector<sp/>data_temp<sp/>and<sp/>data_depth<sp/>for<sp/>the<sp/>least<sp/>squares<sp/>problem</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::transform(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.begin(),<sp/><ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.end(),<sp/>data_temp.data(),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;double,<sp/>double&gt;<sp/>&amp;<sp/>p)<sp/>{return<sp/>p.first;});</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::transform(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.begin(),<sp/><ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.end(),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>data_depth.data(),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;double,<sp/>double&gt;<sp/>&amp;<sp/>p)<sp/>{return<sp/>p.second;});</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>the<sp/>matrix<sp/>A<sp/>by<sp/>stacking<sp/>x<sp/>and<sp/>a<sp/>column<sp/>of<sp/>ones</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>MatrixXd<sp/><ref refid="FusionAhrs_8c_1a955f504eccf76b4eb2489c0adab03121" kindref="member">A</ref>(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.size(),<sp/>2);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionAhrs_8c_1a955f504eccf76b4eb2489c0adab03121" kindref="member">A</ref><sp/>&lt;&lt;<sp/>data_temp,<sp/>VectorXd::Ones(<ref refid="classTemperatureProfile_1a7fa6e437a8ae7d20b05b7f9efcb1aa32" kindref="member">temperature_depth_data_</ref>.size());</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Solve<sp/>the<sp/>least<sp/>squares<sp/>problem</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>VectorXd<sp/>coefficients<sp/>=<sp/><ref refid="FusionAhrs_8c_1a955f504eccf76b4eb2489c0adab03121" kindref="member">A</ref>.jacobiSvd(ComputeThinU<sp/>|<sp/>ComputeThinV).solve(data_depth);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>slope<sp/>(a)<sp/>and<sp/>intercept<sp/>(b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperatureProfile_1ae85d06a2517f9bd5cc86417c05acd943" kindref="member">profile_slope_</ref><sp/>=<sp/>coefficients[0];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTemperatureProfile_1ae1c4e2a4bc458976430d85f077dc6af7" kindref="member">profile_intercept_</ref><sp/>=<sp/>coefficients[1];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_temperature_profile/src/temperature_profile.cpp"/>
   </compounddef>

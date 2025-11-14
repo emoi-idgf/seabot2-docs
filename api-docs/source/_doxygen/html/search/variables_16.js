@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['x_0',['x',['../unionFusionQuaternion.html#ad4122700728a6eaedab7e1dab70ca2ba',1,'FusionQuaternion::x'],['../unionFusionVector.html#ab34ed3670d1b32e46f607bb6ef61b391',1,'FusionVector::x']]],
+  ['x_5fforcast_5f_1',['x_forcast_',['../classKalman.html#a0982ec8658333dff6a1c68c0d6282704',1,'Kalman']]],
+  ['xb_5fleft_2',['xb_left',['../structGSW__BALTIC__DATA.html#a92486e62f76ce89dd042eda8de14d4d2',1,'GSW_BALTIC_DATA']]],
+  ['xb_5fright_3',['xb_right',['../structGSW__BALTIC__DATA.html#abbeeb4331c7f514463154b033725a06e',1,'GSW_BALTIC_DATA']]],
+  ['xbee_4',['xbee',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#a1a2c45ec15569de0ee725e21f811d5e5',1,'xbee_driver::xbee::XbeeNode']]],
+  ['xbee_5fencryption_5fkey_5',['xbee_encryption_key',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#a2b5b4e65e5caa83c9d34d542394efe0c',1,'xbee_driver::xbee::XbeeNode']]],
+  ['xbee_5fnetwork_5fid_6',['xbee_network_id',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#a69c9bb39b06e0539f1e2558c4e9957e3',1,'xbee_driver::xbee::XbeeNode']]],
+  ['xbee_5fnode_5fid_7',['xbee_node_id',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#a56f9d42acfb693b4c443573416a886ce',1,'xbee_driver::xbee::XbeeNode']]],
+  ['xhat_5f_8',['xhat_',['../classKalman.html#ab42185d8553789a95f6881c7e9eb090a',1,'Kalman']]],
+  ['xml_5fdepth_9',['XML_DEPTH',['../classMission.html#a938c943ea09edbaf6af2f8b691b955f4',1,'Mission']]],
+  ['xml_5fdepth_5flegacy_10',['XML_DEPTH_LEGACY',['../classMission.html#a1286fb0a2b10ed9b63444d5d464d25cc',1,'Mission']]],
+  ['xml_5fgnss_5fprofile_11',['XML_GNSS_PROFILE',['../classMission.html#a12e66dd868d92ccc9dd3255d92367266',1,'Mission']]],
+  ['xml_5fseafloor_5flanding_12',['XML_SEAFLOOR_LANDING',['../classMission.html#a74fb4d3444f2bc5c6e0ac309a4e41115',1,'Mission']]],
+  ['xml_5ftemperature_5fkeeping_13',['XML_TEMPERATURE_KEEPING',['../classMission.html#a881f8f95bfc81e86388acd97aa2ce8ff',1,'Mission']]],
+  ['xml_5ftemperature_5fprofile_14',['XML_TEMPERATURE_PROFILE',['../classMission.html#a872ebbb60df4c51c0fae3dc0354041f3',1,'Mission']]],
+  ['xml_5ftype_15',['XML_TYPE',['../classMission.html#a041c3fb809ebecdd3b1e99919320c569',1,'Mission']]],
+  ['xnet_16',['xnet',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#afde573e979e506ba4e175e6277797898',1,'xbee_driver::xbee::XbeeNode']]],
+  ['xnet_5fdiscovery_5fcallback_17',['xnet_discovery_callback',['../classxbee__driver_1_1xbee_1_1XbeeNode.html#aaa9c3aaf7583775033c51d70bb5ce5d6',1,'xbee_driver::xbee::XbeeNode']]],
+  ['xx_18',['xx',['../unionFusionMatrix.html#a2139a1cb3131b7ded3af31c70d0a5e88',1,'FusionMatrix']]],
+  ['xy_19',['xy',['../unionFusionMatrix.html#ab6a8b8011c152807fcbdd8b916566956',1,'FusionMatrix']]],
+  ['xz_20',['xz',['../unionFusionMatrix.html#ab30a6edf8c0bc398bbef26a6964cbd96',1,'FusionMatrix']]]
+];

@@ -9,6 +9,7 @@
   <title>Class DepthControl &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class DepthControlNode" href="classDepthControlNode.html" />
-    <link rel="prev" title="Class DensityNode" href="classDensityNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,111 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class DepthControl</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv412DepthControl"><code class="docutils literal notranslate"><span class="pre">DepthControl</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINEE"><code class="docutils literal notranslate"><span class="pre">STATE_MACHINE</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE13STATE_SURFACEE"><code class="docutils literal notranslate"><span class="pre">STATE_SURFACE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE10STATE_SINKE"><code class="docutils literal notranslate"><span class="pre">STATE_SINK</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE13STATE_CONTROLE"><code class="docutils literal notranslate"><span class="pre">STATE_CONTROL</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE18STATE_PISTON_ISSUEE"><code class="docutils literal notranslate"><span class="pre">STATE_PISTON_ISSUE</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE16STATE_HOLD_DEPTHE"><code class="docutils literal notranslate"><span class="pre">STATE_HOLD_DEPTH</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE19STATE_COMPUTE_ALPHAE"><code class="docutils literal notranslate"><span class="pre">STATE_COMPUTE_ALPHA</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13STATE_MACHINE10STATE_STOPE"><code class="docutils literal notranslate"><span class="pre">STATE_STOP</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12DepthControlERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">DepthControl()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12update_stateERKdRKdRKdRKdRKdRKdRKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">update_state()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13update_pistonERKiRKbRKbRKiRKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">update_piston()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12update_depthERKdRKd"><code class="docutils literal notranslate"><span class="pre">update_depth()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13update_safetyERKbRKf"><code class="docutils literal notranslate"><span class="pre">update_safety()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl15update_waypointERKfRKdRKN6rclcpp4TimeERKb"><code class="docutils literal notranslate"><span class="pre">update_waypoint()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl14update_densityERKf"><code class="docutils literal notranslate"><span class="pre">update_density()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18update_temperatureERKf"><code class="docutils literal notranslate"><span class="pre">update_temperature()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl9compute_uEdd"><code class="docutils literal notranslate"><span class="pre">compute_u()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12update_coeffEv"><code class="docutils literal notranslate"><span class="pre">update_coeff()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18state_machine_stepERKN6rclcpp8DurationERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">state_machine_step()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl14set_start_timeERKN6rclcpp4TimeE"><code class="docutils literal notranslate"><span class="pre">set_start_time()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl9update_ABEv"><code class="docutils literal notranslate"><span class="pre">update_AB()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK12DepthControl14fz_computationEd"><code class="docutils literal notranslate"><span class="pre">fz_computation()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4NK12DepthControl25fz_derivative_computationEd"><code class="docutils literal notranslate"><span class="pre">fz_derivative_computation()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl6debug_E"><code class="docutils literal notranslate"><span class="pre">debug_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13alpha_solver_E"><code class="docutils literal notranslate"><span class="pre">alpha_solver_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl10emergency_E"><code class="docutils literal notranslate"><span class="pre">emergency_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12limit_depth_E"><code class="docutils literal notranslate"><span class="pre">limit_depth_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12physics_rho_E"><code class="docutils literal notranslate"><span class="pre">physics_rho_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl10physics_g_E"><code class="docutils literal notranslate"><span class="pre">physics_g_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl11robot_mass_E"><code class="docutils literal notranslate"><span class="pre">robot_mass_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl17robot_added_mass_E"><code class="docutils literal notranslate"><span class="pre">robot_added_mass_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl15robot_diameter_E"><code class="docutils literal notranslate"><span class="pre">robot_diameter_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13screw_thread_E"><code class="docutils literal notranslate"><span class="pre">screw_thread_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl14tick_per_turn_E"><code class="docutils literal notranslate"><span class="pre">tick_per_turn_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl16piston_diameter_E"><code class="docutils literal notranslate"><span class="pre">piston_diameter_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl22piston_max_tick_value_E"><code class="docutils literal notranslate"><span class="pre">piston_max_tick_value_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl17degree_to_kelvin_E"><code class="docutils literal notranslate"><span class="pre">degree_to_kelvin_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl15tick_to_volume_E"><code class="docutils literal notranslate"><span class="pre">tick_to_volume_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl8coeff_A_E"><code class="docutils literal notranslate"><span class="pre">coeff_A_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl8coeff_B_E"><code class="docutils literal notranslate"><span class="pre">coeff_B_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_positive_E"><code class="docutils literal notranslate"><span class="pre">fz_model_boundary_velocity_positive_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl36fz_model_boundary_velocity_negative_E"><code class="docutils literal notranslate"><span class="pre">fz_model_boundary_velocity_negative_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl41fz_derivative_at_model_boundary_positive_E"><code class="docutils literal notranslate"><span class="pre">fz_derivative_at_model_boundary_positive_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl37fz_offset_at_model_boundary_positive_E"><code class="docutils literal notranslate"><span class="pre">fz_offset_at_model_boundary_positive_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl41fz_derivative_at_model_boundary_negative_E"><code class="docutils literal notranslate"><span class="pre">fz_derivative_at_model_boundary_negative_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl37fz_offset_at_model_boundary_negative_E"><code class="docutils literal notranslate"><span class="pre">fz_offset_at_model_boundary_negative_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl16root_regulation_E"><code class="docutils literal notranslate"><span class="pre">root_regulation_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl20limit_depth_control_E"><code class="docutils literal notranslate"><span class="pre">limit_depth_control_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl17flow_piston_sink_E"><code class="docutils literal notranslate"><span class="pre">flow_piston_sink_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl32piston_reach_position_dead_zone_E"><code class="docutils literal notranslate"><span class="pre">piston_reach_position_dead_zone_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18piston_hysteresis_E"><code class="docutils literal notranslate"><span class="pre">piston_hysteresis_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl14motor_max_rpm_E"><code class="docutils literal notranslate"><span class="pre">motor_max_rpm_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl9flow_max_E"><code class="docutils literal notranslate"><span class="pre">flow_max_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl32piston_flow_security_percentage_E"><code class="docutils literal notranslate"><span class="pre">piston_flow_security_percentage_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18hold_depth_enable_E"><code class="docutils literal notranslate"><span class="pre">hold_depth_enable_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl31hold_depth_validation_duration_E"><code class="docutils literal notranslate"><span class="pre">hold_depth_validation_duration_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl27hold_depth_validation_time_E"><code class="docutils literal notranslate"><span class="pre">hold_depth_validation_time_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl22hold_depth_validation_E"><code class="docutils literal notranslate"><span class="pre">hold_depth_validation_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl23hold_depth_value_enter_E"><code class="docutils literal notranslate"><span class="pre">hold_depth_value_enter_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl22hold_depth_value_exit_E"><code class="docutils literal notranslate"><span class="pre">hold_depth_value_exit_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl20hold_velocity_enter_E"><code class="docutils literal notranslate"><span class="pre">hold_velocity_enter_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl19hold_velocity_exit_E"><code class="docutils literal notranslate"><span class="pre">hold_velocity_exit_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl15control_filter_E"><code class="docutils literal notranslate"><span class="pre">control_filter_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18delta_velocity_lb_E"><code class="docutils literal notranslate"><span class="pre">delta_velocity_lb_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18delta_velocity_ub_E"><code class="docutils literal notranslate"><span class="pre">delta_velocity_ub_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18delta_position_lb_E"><code class="docutils literal notranslate"><span class="pre">delta_position_lb_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18delta_position_ub_E"><code class="docutils literal notranslate"><span class="pre">delta_position_ub_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl20safety_time_no_data_E"><code class="docutils literal notranslate"><span class="pre">safety_time_no_data_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl16piston_position_E"><code class="docutils literal notranslate"><span class="pre">piston_position_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18piston_switch_top_E"><code class="docutils literal notranslate"><span class="pre">piston_switch_top_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl21piston_switch_bottom_E"><code class="docutils literal notranslate"><span class="pre">piston_switch_bottom_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13piston_state_E"><code class="docutils literal notranslate"><span class="pre">piston_state_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl17piston_set_point_E"><code class="docutils literal notranslate"><span class="pre">piston_set_point_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl8is_exit_E"><code class="docutils literal notranslate"><span class="pre">is_exit_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl26time_last_kalman_callback_E"><code class="docutils literal notranslate"><span class="pre">time_last_kalman_callback_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl26time_last_piston_callback_E"><code class="docutils literal notranslate"><span class="pre">time_last_piston_callback_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl16kalman_velocity_E"><code class="docutils literal notranslate"><span class="pre">kalman_velocity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13kalman_depth_E"><code class="docutils literal notranslate"><span class="pre">kalman_depth_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl20kalman_total_offset_E"><code class="docutils literal notranslate"><span class="pre">kalman_total_offset_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl11kalman_chi_E"><code class="docutils literal notranslate"><span class="pre">kalman_chi_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12kalman_chi2_E"><code class="docutils literal notranslate"><span class="pre">kalman_chi2_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl10kalman_cz_E"><code class="docutils literal notranslate"><span class="pre">kalman_cz_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl14piston_volume_E"><code class="docutils literal notranslate"><span class="pre">piston_volume_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl13depth_fusion_E"><code class="docutils literal notranslate"><span class="pre">depth_fusion_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl16depth_set_point_E"><code class="docutils literal notranslate"><span class="pre">depth_set_point_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl15limit_velocity_E"><code class="docutils literal notranslate"><span class="pre">limit_velocity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl20limit_velocity_last_E"><code class="docutils literal notranslate"><span class="pre">limit_velocity_last_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl18approach_velocity_E"><code class="docutils literal notranslate"><span class="pre">approach_velocity_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl12temperature_E"><code class="docutils literal notranslate"><span class="pre">temperature_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl9pressure_E"><code class="docutils literal notranslate"><span class="pre">pressure_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl24last_waypoint_max_delay_E"><code class="docutils literal notranslate"><span class="pre">last_waypoint_max_delay_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl19last_waypoint_time_E"><code class="docutils literal notranslate"><span class="pre">last_waypoint_time_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl17regulation_state_E"><code class="docutils literal notranslate"><span class="pre">regulation_state_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl8y_debug_E"><code class="docutils literal notranslate"><span class="pre">y_debug_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl9dy_debug_E"><code class="docutils literal notranslate"><span class="pre">dy_debug_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl8u_debug_E"><code class="docutils literal notranslate"><span class="pre">u_debug_</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl10optimize_uERNSt5arrayIdXL4EEEE"><code class="docutils literal notranslate"><span class="pre">optimize_u()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N12DepthControl15PISTON_STATE_OKE"><code class="docutils literal notranslate"><span class="pre">PISTON_STATE_OK</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +157,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +172,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class DepthControl</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classDepthControl.rst.txt" rel="nofollow"> View page source</a>
@@ -566,7 +655,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12DepthControl16piston_position_E">
-<span id="_CPPv3N12DepthControl16piston_position_E"></span><span id="_CPPv2N12DepthControl16piston_position_E"></span><span id="DepthControl::piston_position___l"></span><span class="target" id="classDepthControl_1a16471dfb5798872cbba6ddd686aac8f1"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_position_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16piston_position_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N12DepthControl16piston_position_E"></span><span id="_CPPv2N12DepthControl16piston_position_E"></span><span id="DepthControl::piston_position___int64_t"></span><span class="target" id="classDepthControl_1a3db4274c7b5984e40b8da78ab70527e5"></span><span class="n"><span class="pre">int64_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_position_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl16piston_position_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -581,7 +670,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12DepthControl13piston_state_E">
-<span id="_CPPv3N12DepthControl13piston_state_E"></span><span id="_CPPv2N12DepthControl13piston_state_E"></span><span id="DepthControl::piston_state___i"></span><span class="target" id="classDepthControl_1ab796a883665d94cf4ea62c9aff0c767e"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_state_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl13piston_state_E" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N12DepthControl13piston_state_E"></span><span id="_CPPv2N12DepthControl13piston_state_E"></span><span id="DepthControl::piston_state___int32_t"></span><span class="target" id="classDepthControl_1a3d16ab6fa6539288e826a4ff4a42862d"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">piston_state_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N12DepthControl13piston_state_E" title="Link to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -737,10 +826,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classDensityNode.html" class="btn btn-neutral float-left" title="Class DensityNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classDepthControlNode.html" class="btn btn-neutral float-right" title="Class DepthControlNode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

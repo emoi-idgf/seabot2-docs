@@ -64,10 +64,22 @@
         <link refid="thruster_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_thruster_driver/include/seabot2_thruster_driver/thruster_node.h</label>
-        <link refid="thruster__node_8h_source"/>
+        <link refid="thruster__node_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_thruster_driver/src/thruster.cpp</label>
+        <link refid="thruster_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_thruster_driver/src/thruster_node.cpp</label>
+        <link refid="thruster__node_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classThruster" prot="public">Thruster</innerclass>
@@ -95,48 +107,48 @@
 <codeline lineno="17" refid="classThruster" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classThruster" kindref="compound">Thruster</ref></highlight></codeline>
 <codeline lineno="18"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>MOTOR_PWM_STOP<sp/>=<sp/>150;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>MAX_PWM<sp/>=<sp/>190;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>MIN_PWM<sp/>=<sp/>110;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>ENABLE_MOTOR<sp/>=<sp/>0x10;</highlight></codeline>
+<codeline lineno="20" refid="classThruster_1a9d79442cf417ae2c2511e501dbc4d3cc" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classThruster_1a9d79442cf417ae2c2511e501dbc4d3cc" kindref="member">MOTOR_PWM_STOP</ref><sp/>=<sp/>150;</highlight></codeline>
+<codeline lineno="21" refid="classThruster_1aa0402f931b0ffcd76fe98b5185f65af4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classThruster_1aa0402f931b0ffcd76fe98b5185f65af4" kindref="member">MAX_PWM</ref><sp/>=<sp/>190;</highlight></codeline>
+<codeline lineno="22" refid="classThruster_1a69effe4434fcecc87117a597de35293b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classThruster_1a69effe4434fcecc87117a597de35293b" kindref="member">MIN_PWM</ref><sp/>=<sp/>110;</highlight></codeline>
+<codeline lineno="23" refid="classThruster_1aaab95cdc6c559d6fba8859b0ddc3f84a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classThruster_1aaab95cdc6c559d6fba8859b0ddc3f84a" kindref="member">ENABLE_MOTOR</ref><sp/>=<sp/>0x10;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29" refid="classThruster_1ace8d9f394460e7c6681f28ed06fe0d6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classThruster_1ace8d9f394460e7c6681f28ed06fe0d6c" kindref="member">Thruster</ref>(rclcpp::Node<sp/>*n){</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n_<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="29" refid="classThruster_1ace8d9f394460e7c6681f28ed06fe0d6c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classThruster_1ace8d9f394460e7c6681f28ed06fe0d6c" kindref="member">Thruster</ref>(rclcpp::Node<sp/>*<sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classThruster_1a3e0d2d75b4ecce101f12dc1ffa302ce9" kindref="member">n_</ref><sp/>=<sp/>n;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classThruster_1a52ccb9d0cef85272db45982ba8cbf854" kindref="member">i2c_open</ref>();</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classThruster" kindref="compound">~Thruster</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="classThruster_1ab74595a2e9325261377c099dc416d324" kindref="member">~Thruster</ref>();</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1a52ccb9d0cef85272db45982ba8cbf854" kindref="member">i2c_open</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1a52ccb9d0cef85272db45982ba8cbf854" kindref="member">i2c_open</ref>();</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1ae73185445d1cb6ac06d7bc7859e0e082" kindref="member">write_cmd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;right)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1ae73185445d1cb6ac06d7bc7859e0e082" kindref="member">write_cmd</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;<sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>&amp;<sp/>right)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classThruster_1a2d8c522649a8066798c6cd949d67ab53" kindref="member">write_enable_motors</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classThruster_1a2d8c522649a8066798c6cd949d67ab53" kindref="member">write_enable_motors</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t&amp;<sp/><ref refid="classThruster_1a2460f13f13ca1b2a3de53f7709d79bab" kindref="member">get_version</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint8_t<sp/>&amp;<sp/><ref refid="classThruster_1a2460f13f13ca1b2a3de53f7709d79bab" kindref="member">get_version</ref>();</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1ac1100b1d740216573039f830cc1e409f" kindref="member">getI2CAddr</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1ac1100b1d740216573039f830cc1e409f" kindref="member">getI2CAddr</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setI2CAddr(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classThruster_1ab500f34ea5239771b741df569063edff" kindref="member">setI2CAddr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr);</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;getI2CPeriph()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/><ref refid="classThruster_1abb70f956483b5a55946a3fb1a0c14ab6" kindref="member">getI2CPeriph</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setI2CPeriph(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;i2CPeriph);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classThruster_1ad475796b2d75e4c91b1b60fbaf2d83d5" kindref="member">setI2CPeriph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>i2CPeriph);</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Node*<sp/>n_=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="80" refid="classThruster_1a3e0d2d75b4ecce101f12dc1ffa302ce9" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Node<sp/>*<sp/><ref refid="classThruster_1a3e0d2d75b4ecce101f12dc1ffa302ce9" kindref="member">n_</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>file_<sp/>=<sp/>0;<sp/></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2c_addr_<sp/>=<sp/>0x20;</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code_version_<sp/>=<sp/>0x01;<sp/></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>pic_code_version_=0;<sp/></highlight></codeline>
+<codeline lineno="82" refid="classThruster_1adf5a096007532cff1e6b819d6a8a58a8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1adf5a096007532cff1e6b819d6a8a58a8" kindref="member">file_</ref><sp/>=<sp/>0;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="classThruster_1a1f34ccddfef7cb699ef506cc04b00ec2" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1a1f34ccddfef7cb699ef506cc04b00ec2" kindref="member">i2c_addr_</ref><sp/>=<sp/>0x20;</highlight></codeline>
+<codeline lineno="84" refid="classThruster_1adc612f007a01f8d7465e1a1c6d85c2a4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classThruster_1adc612f007a01f8d7465e1a1c6d85c2a4" kindref="member">code_version_</ref><sp/>=<sp/>0x01;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="classThruster_1ad63b54f98ee009f4a48048beb9cec6b8" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="classThruster_1ad63b54f98ee009f4a48048beb9cec6b8" kindref="member">pic_code_version_</ref><sp/>=<sp/>0;<sp/></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>i2c_periph_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88" refid="classThruster_1a72075ec7e2a78ea63431a12f0e744725" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classThruster_1a72075ec7e2a78ea63431a12f0e744725" kindref="member">i2c_periph_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/i2c-1&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>reverse_thruster_order_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>not<sp/>used<sp/>?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classThruster_1aca48b0f7c7fc6f87d484a211d5c35d73" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classThruster_1aca48b0f7c7fc6f87d484a211d5c35d73" kindref="member">reverse_thruster_order_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>used<sp/>?</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal">};</highlight></codeline>

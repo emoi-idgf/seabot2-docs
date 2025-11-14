@@ -3,6 +3,7 @@
   <compounddef id="classDensityNode" kind="class" language="C++" prot="public" final="yes">
     <compoundname>DensityNode</compoundname>
     <basecompoundref prot="public" virt="non-virtual">rclcpp::Node</basecompoundref>
+    <includes refid="density__node_8hpp" local="no">density_node.hpp</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classDensityNode_1aa0bff63a7c4a39f2c5a43e07b0bdd728" prot="private" static="no" mutable="no">
         <type>rclcpp::TimerBase::SharedPtr</type>
@@ -17,7 +18,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="19" column="34" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="19" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="19" column="32" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1aba204eabe4d098c86d0933f526743a3d" compoundref="density__node_8cpp" startline="5" endline="16">DensityNode</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a847fd476136271bde6439dde042cd02f" prot="private" static="no" mutable="no">
         <type>std::chrono::milliseconds</type>
@@ -32,7 +34,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="20" column="31" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="20" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="20" column="29" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1aba204eabe4d098c86d0933f526743a3d" compoundref="density__node_8cpp" startline="5" endline="16">DensityNode</referencedby>
+        <referencedby refid="classDensityNode_1aa34bcc243c9eea137cd137499eeeb398" compoundref="density__node_8cpp" startline="18" endline="26">init_parameters</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a9120171b24969d0698bdadf76d0b1e76" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -49,7 +53,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="23" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="23" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="23" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1aa1534269124d9a1b40ddeb06511f9f91" compoundref="density__node_8cpp" startline="33" endline="36">pressure_callback</referencedby>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1afc9af8408d9e9aacee16f4364eef0178" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -64,7 +70,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="24" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="24" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="24" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1af4b4bdc5279f3e2876a053f5af7e1f06" compoundref="density__node_8cpp" startline="28" endline="31">temperature_callback</referencedby>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a998462c58de85e54450e2d1ffc7e673d" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -79,7 +87,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="25" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="25" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="25" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1aa34bcc243c9eea137cd137499eeeb398" compoundref="density__node_8cpp" startline="18" endline="26">init_parameters</referencedby>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a76939d971080d88e79d2154e0943abd3" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -94,7 +104,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="26" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="26" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="26" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1aa31a6f6dbc485fb08508a3764b381c76" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -109,7 +120,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="27" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="27" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="27" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a29e2f9e5eafebe1813eca8eac5ed9334" prot="private" static="no" mutable="no">
         <type><ref refid="classTeosSea" kindref="compound">TeosSea</ref></type>
@@ -123,7 +135,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="29" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="29" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="29" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a9d25cd72041f235c5b5d5f4dcbd042d7" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::DepthPose &gt;::SharedPtr</type>
@@ -138,7 +151,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="32" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="32" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="32" column="36" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" compoundref="density__node_8cpp" startline="38" endline="47">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1aaeca0bb81ad10965e61aad752fca3316" prot="private" static="no" mutable="no">
         <type>rclcpp::Subscription&lt; seabot2_msgs::msg::TemperatureSensorData &gt;::SharedPtr</type>
@@ -152,7 +166,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="33" column="38" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="33" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="34" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" compoundref="density__node_8cpp" startline="38" endline="47">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classDensityNode_1a159f73e3565f5a47653d9c98c28914a0" prot="private" static="no" mutable="no">
         <type>rclcpp::Publisher&lt; seabot2_msgs::msg::Density &gt;::SharedPtr</type>
@@ -166,7 +181,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="35" column="35" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="35" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="36" column="33" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" compoundref="density__node_8cpp" startline="38" endline="47">init_interfaces</referencedby>
+        <referencedby refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -182,7 +199,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="15" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="5" bodyend="15"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="15" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="5" bodyend="16"/>
+        <references refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" compoundref="density__node_8cpp" startline="38" endline="47">init_interfaces</references>
+        <references refid="classDensityNode_1aa34bcc243c9eea137cd137499eeeb398" compoundref="density__node_8cpp" startline="18" endline="26">init_parameters</references>
+        <references refid="classDensityNode_1a847fd476136271bde6439dde042cd02f" compoundref="density__node_8hpp" startline="20">loop_dt_</references>
+        <references refid="classDensityNode_1aa0bff63a7c4a39f2c5a43e07b0bdd728" compoundref="density__node_8hpp" startline="19">timer_</references>
+        <references refid="classDensityNode_1a2bcca4122e45e4f107f2530f5b43a9b9" compoundref="density__node_8cpp" startline="49" endline="64">timer_callback</references>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -201,7 +223,17 @@
         <inbodydescription>
 <para>% SA = Absolute Salinity [ g/kg ] % t = in-situ temperature (ITS-90) [ deg C ] % p = sea pressure [ dbar ] ( i.e. absolute pressure - 10.1325 dbar )</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="42" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="43" bodyend="57"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="43" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="49" bodyend="64"/>
+        <references refid="classTeosSea_1adca40ac5a1ec7159802d6c30a806678f" compoundref="TeosSea_8cpp" startline="1279" endline="1282">TeosSea::gsw_rho_t_exact</references>
+        <references refid="classTeosSea_1aeb6bc77318e1f2f3aaaa16ed0d360c99" compoundref="TeosSea_8cpp" startline="1554" endline="1563">TeosSea::gsw_sound_speed_t_exact</references>
+        <references refid="classDensityNode_1a159f73e3565f5a47653d9c98c28914a0" compoundref="density__node_8hpp" startline="36">publisher_density_</references>
+        <references refid="classDensityNode_1a998462c58de85e54450e2d1ffc7e673d" compoundref="density__node_8hpp" startline="25">salinity_</references>
+        <references refid="classDensityNode_1a9120171b24969d0698bdadf76d0b1e76" compoundref="density__node_8hpp" startline="23">sea_pressure_</references>
+        <references refid="classDensityNode_1afc9af8408d9e9aacee16f4364eef0178" compoundref="density__node_8hpp" startline="24">temperature_</references>
+        <references refid="classDensityNode_1a29e2f9e5eafebe1813eca8eac5ed9334" compoundref="density__node_8hpp" startline="29">ts</references>
+        <references refid="classDensityNode_1a76939d971080d88e79d2154e0943abd3" compoundref="density__node_8hpp" startline="26">water_density_</references>
+        <references refid="classDensityNode_1aa31a6f6dbc485fb08508a3764b381c76" compoundref="density__node_8hpp" startline="27">water_sound_speed_</references>
+        <referencedby refid="classDensityNode_1aba204eabe4d098c86d0933f526743a3d" compoundref="density__node_8cpp" startline="5" endline="16">DensityNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classDensityNode_1aa34bcc243c9eea137cd137499eeeb398" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -216,7 +248,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="47" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="17" bodyend="24"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="48" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="18" bodyend="26"/>
+        <references refid="classDensityNode_1a847fd476136271bde6439dde042cd02f" compoundref="density__node_8hpp" startline="20">loop_dt_</references>
+        <references refid="classDensityNode_1a998462c58de85e54450e2d1ffc7e673d" compoundref="density__node_8hpp" startline="25">salinity_</references>
+        <referencedby refid="classDensityNode_1aba204eabe4d098c86d0933f526743a3d" compoundref="density__node_8cpp" startline="5" endline="16">DensityNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +266,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="52" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="34" bodyend="41"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="53" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="38" bodyend="47"/>
+        <references refid="classDensityNode_1aa1534269124d9a1b40ddeb06511f9f91" compoundref="density__node_8cpp" startline="33" endline="36">pressure_callback</references>
+        <references refid="classDensityNode_1a159f73e3565f5a47653d9c98c28914a0" compoundref="density__node_8hpp" startline="36">publisher_density_</references>
+        <references refid="classDensityNode_1a9d25cd72041f235c5b5d5f4dcbd042d7" compoundref="density__node_8hpp" startline="32">subscriber_depth_data_</references>
+        <references refid="classDensityNode_1aaeca0bb81ad10965e61aad752fca3316" compoundref="density__node_8hpp" startline="34">subscriber_temperature_data_</references>
+        <references refid="classDensityNode_1af4b4bdc5279f3e2876a053f5af7e1f06" compoundref="density__node_8cpp" startline="28" endline="31">temperature_callback</references>
+        <referencedby refid="classDensityNode_1aba204eabe4d098c86d0933f526743a3d" compoundref="density__node_8cpp" startline="5" endline="16">DensityNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classDensityNode_1af4b4bdc5279f3e2876a053f5af7e1f06" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,7 +300,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="58" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="26" bodyend="28"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="59" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="28" bodyend="31"/>
+        <references refid="classDensityNode_1afc9af8408d9e9aacee16f4364eef0178" compoundref="density__node_8hpp" startline="24">temperature_</references>
+        <referencedby refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" compoundref="density__node_8cpp" startline="38" endline="47">init_interfaces</referencedby>
       </memberdef>
       <memberdef kind="function" id="classDensityNode_1aa1534269124d9a1b40ddeb06511f9f91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -287,7 +330,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="64" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="30" bodyend="32"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="65" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/src/density_node.cpp" bodystart="33" bodyend="36"/>
+        <references refid="classDensityNode_1a9120171b24969d0698bdadf76d0b1e76" compoundref="density__node_8hpp" startline="23">sea_pressure_</references>
+        <referencedby refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" compoundref="density__node_8cpp" startline="38" endline="47">init_interfaces</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -311,12 +356,81 @@
         <link refid="classDensityNode"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ts</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>GSW_BALTIC_DATA</label>
+        <link refid="structGSW__BALTIC__DATA"/>
+      </node>
+      <node id="11">
+        <label>GSW_FREEZING_POLY_COEFFICIENTS</label>
+        <link refid="structGSW__FREEZING__POLY__COEFFICIENTS"/>
+      </node>
+      <node id="12">
+        <label>GSW_GIBBS_ICE_COEFFICIENTS</label>
+        <link refid="structGSW__GIBBS__ICE__COEFFICIENTS"/>
+      </node>
+      <node id="10">
+        <label>GSW_SAAR_DATA</label>
+        <link refid="structGSW__SAAR__DATA"/>
+      </node>
+      <node id="7">
+        <label>GSW_SPECVOL_COEFFICIENTS</label>
+        <link refid="structGSW__SPECVOL__COEFFICIENTS"/>
+      </node>
+      <node id="8">
+        <label>GSW_SP_COEFFICIENTS</label>
+        <link refid="structGSW__SP__COEFFICIENTS"/>
+      </node>
+      <node id="6">
+        <label>GSW_TEOS10_CONSTANTS</label>
+        <link refid="structGSW__TEOS10__CONSTANTS"/>
+      </node>
+      <node id="5">
+        <label>SaarDataHandler</label>
+        <link refid="classSaarDataHandler"/>
+      </node>
+      <node id="4">
+        <label>TeosBase</label>
+        <link refid="classTeosBase"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>pSaarData</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>gtc</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>gsvco</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>gspc</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>gbalt</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>gsaar</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>gfpc</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>gic</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>TeosSea</label>
+        <link refid="classTeosSea"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
       </node>
       <node id="2">
         <label>rclcpp::Node</label>
       </node>
     </collaborationgraph>
-    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="13" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="13" bodyend="68"/>
+    <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" line="13" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_observer/seabot2_density/include/seabot2_density/density_node.hpp" bodystart="13" bodyend="69"/>
     <listofallmembers>
       <member refid="classDensityNode_1aba204eabe4d098c86d0933f526743a3d" prot="public" virt="non-virtual"><scope>DensityNode</scope><name>DensityNode</name></member>
       <member refid="classDensityNode_1a7bea046008846dbf56da50b79aa106c5" prot="private" virt="non-virtual"><scope>DensityNode</scope><name>init_interfaces</name></member>

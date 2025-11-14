@@ -29,79 +29,79 @@ Program Listing for File piston.h
    #define REGISTER_DATA_SIZE 18
    #define REGISTER_SET_POINT 0x00
    
-   #define CONVERSION_BRIDGE (3.3/4096.)
+   #define CONVERSION_BRIDGE (3.3 / 4096.)
    #define CONVERSION_CURRENT CONVERSION_BRIDGE /*(CONVERSION_BRIDGE * 1000.0/264.0)*/
    
    class Piston
    {
    public:
-       explicit Piston(rclcpp::Node *n){
-           n_ = n;
-       }
+     explicit Piston(rclcpp::Node *n)
+     {
+       n_ = n;
+     }
    
-       ~Piston();
+     ~Piston();
    
-       int i2c_open();
+     int i2c_open();
    
-       uint8_t& get_version();
+     uint8_t & get_version();
    
-       int getI2CAddr() const;
+     int getI2CAddr() const;
    
-       void setI2CAddr(int i2CAddr);
+     void setI2CAddr(int i2CAddr);
    
-       const std::string &getI2CPeriph() const;
+     const std::string & getI2CPeriph() const;
    
-       void setI2CPeriph(const std::string &i2CPeriph);
+     void setI2CPeriph(const std::string & i2CPeriph);
    
-       enum state_piston { PISTON_SEARCH_SWITCH_BOTTOM=0,
-                           PISTON_RELEASE_SWITCH_BOTTOM=1,
-                           PISTON_BACK_SWITCH_BOTTOM=2,
-                           PISTON_REGULATION=3,
-                           PISTON_EXIT=4,
-                           PISTON_LOW_BATT=5
-       };
+     enum state_piston { PISTON_SEARCH_SWITCH_BOTTOM=0,
+       PISTON_RELEASE_SWITCH_BOTTOM=1,
+       PISTON_BACK_SWITCH_BOTTOM=2,
+       PISTON_REGULATION=3,
+       PISTON_EXIT=4,
+       PISTON_LOW_BATT=5};
    
    private:
-       rclcpp::Node* n_= nullptr; 
+     rclcpp::Node * n_ = nullptr; 
    
-       int file_ = 0; 
-       std::string i2c_periph_ = "/dev/i2c-1";
-       int i2c_addr_ = 0x1E;
-       const int code_version_ = 0x06; 
-       uint8_t pic_code_version_=0; 
-   
-   public:
-       double R1_ = 3.9; // kOhms
-       double R2_ = 18.0; // kOhms
+     int file_ = 0;   
+     std::string i2c_periph_ = "/dev/i2c-1";
+     int i2c_addr_ = 0x1E;
+     const int code_version_ = 0x06;   
+     uint8_t pic_code_version_ = 0; 
    
    public:
-       int position_ = 0;
-       int position_last_ = 0;
-       bool switch_top_ = false;
-       bool switch_bottom_ = false;
-       int state_ = PISTON_SEARCH_SWITCH_BOTTOM;
-       bool enable_ = false;
-       int position_set_point_ = 0;
-       float battery_voltage_ = 0;
-       float motor_current_ = 0;
-       int motor_set_point_ = 0;
-       int motor_cmd_ = 0;
-       bool motor_sens_ = false;
+     double R1_ = 3.9;   // kOhms
+     double R2_ = 18.0;   // kOhms
    
    public:
-       int set_piston_reset() const;
+     int position_ = 0;
+     int position_last_ = 0;
+     bool switch_top_ = false;
+     bool switch_bottom_ = false;
+     int state_ = PISTON_SEARCH_SWITCH_BOTTOM;
+     bool enable_ = false;
+     int position_set_point_ = 0;
+     float battery_voltage_ = 0;
+     float motor_current_ = 0;
+     int motor_set_point_ = 0;
+     int motor_cmd_ = 0;
+     bool motor_sens_ = false;
    
-       int set_piston_exit() const;
+   public:
+     int set_piston_reset() const;
    
-       int set_piston_regulation() const;
+     int set_piston_exit() const;
    
-       void set_regulation_dead_zone(const __u16 &val) const;
+     int set_piston_regulation() const;
    
-       void set_regulation_proportional(const __u16 &val) const;
+     void set_regulation_dead_zone(const __u16 & val) const;
    
-       int set_position(const int32_t &val) const;
+     void set_regulation_proportional(const __u16 & val) const;
    
-       int get_all_data();
+     int set_position(const int32_t & val) const;
+   
+     int get_all_data();
    
    };
    

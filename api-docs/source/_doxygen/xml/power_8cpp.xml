@@ -7,7 +7,7 @@
     <incdepgraph>
       <node id="2">
         <label>seabot2_power_driver/power.h</label>
-        <link refid="power_8h_source"/>
+        <link refid="power_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -66,85 +66,102 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;seabot2_power_driver/power.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="power_8h" kindref="compound">seabot2_power_driver/power.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sys/ioctl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">Power::~Power(){</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>close(file_);</highlight></codeline>
-<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1aa33ceadfd301214431cc79ff1f088829" kindref="member">Power::i2c_open</ref>(){</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>file_<sp/>=<sp/>open(i2c_periph_.c_str(),<sp/>O_RDWR);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file_<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Failed<sp/>to<sp/>open<sp/>the<sp/>I2C<sp/>bus<sp/>(%s)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>i2c_periph_.c_str(),<sp/>strerror(file_));</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>ioctl(file_,<sp/>I2C_SLAVE,<sp/>i2c_addr_);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),</highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Failed<sp/>to<sp/>acquire<sp/>bus<sp/>access<sp/>and/or<sp/>talk<sp/>to<sp/>slave<sp/>(0x%X)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>I2C_SLAVE,<sp/>strerror(result));</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPower_1a06d6793217377bc567b72a677eadfc93" kindref="member">get_version</ref>()!=code_version_)</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Wrong<sp/>PIC<sp/>code<sp/>version&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>usleep(100000);</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1a8c15938842b9c9b18f1326d6419f7f42" kindref="member">Power::get_all_data</ref>(){</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>__u8<sp/>buff[REGISTER_DATA_SIZE];</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_read_i2c_block_data(file_,<sp/>REGISTER_DATA_READ,<sp/>REGISTER_DATA_SIZE,<sp/>buff)<sp/>!=<sp/>REGISTER_DATA_SIZE)<sp/>{</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Error<sp/>Reading<sp/>data&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++){</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPower_1a38428036d5a66b557b62874ea5320162" kindref="member">cell_volt_</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">((int)buff[2*i]<sp/>+<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(buff[2*i+1])&lt;&lt;8))/16.0<sp/>*<sp/>CONVERT_BRIDGE_BATTERY<sp/>*<sp/>((R1_[i]+R2_[i])/R1_[i]);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>battery_volt_<sp/>=<sp/>std::max(<ref refid="classPower_1a38428036d5a66b557b62874ea5320162" kindref="member">cell_volt_</ref>[0],<sp/><ref refid="classPower_1a38428036d5a66b557b62874ea5320162" kindref="member">cell_volt_</ref>[1]);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;2;<sp/>i++){<sp/></highlight><highlight class="comment">//<sp/>4,5<sp/>6,7</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>esc_current_[i]<sp/>=<sp/>(((int)buff[2<sp/>*<sp/>i<sp/>+<sp/>4]<sp/>+<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(buff[2<sp/>*<sp/>i<sp/>+<sp/>1<sp/>+<sp/>4])<sp/>&lt;&lt;<sp/>8))<sp/>*<sp/>CONVERT_BRIDGE_CURRENT<sp/>-<sp/>3.3/2.0)<sp/>*<sp/>CONVERT_CURRENT_V_to_A;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>motor_current_<sp/>=<sp/>(((int)buff[8]<sp/>+<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)buff[9]<sp/>&lt;&lt;<sp/>8))<sp/>*<sp/>CONVERT_BRIDGE_CURRENT<sp/>-3.3/2.0)<sp/>*<sp/>CONVERT_CURRENT_V_to_A;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>power_state_<sp/>=<sp/>buff[10];</highlight></codeline>
+<codeline lineno="4" refid="classPower_1a02fbe8faaab8776a6a43e979ad2c9a44" refkind="member"><highlight class="normal"><ref refid="classPower_1a02fbe8faaab8776a6a43e979ad2c9a44" kindref="member">Power::~Power</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>close(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref>);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classPower_1aa33ceadfd301214431cc79ff1f088829" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1aa33ceadfd301214431cc79ff1f088829" kindref="member">Power::i2c_open</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref><sp/>=<sp/>open(<ref refid="classPower_1a3df2e2f2d1f58702d43598d783a86c41" kindref="member">i2c_periph_</ref>.c_str(),<sp/>O_RDWR);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref><sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classPower_1a0518d740d9bacffe1f9a4328f9912999" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Failed<sp/>to<sp/>open<sp/>the<sp/>I2C<sp/>bus<sp/>(%s)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPower_1a3df2e2f2d1f58702d43598d783a86c41" kindref="member">i2c_periph_</ref>.c_str(),<sp/>strerror(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref>));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>ioctl(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref>,<sp/>I2C_SLAVE,<sp/><ref refid="classPower_1a8d33db69da3274bf9e6c17e11913066f" kindref="member">i2c_addr_</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classPower_1a0518d740d9bacffe1f9a4328f9912999" kindref="member">n_</ref>-&gt;get_logger(),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Failed<sp/>to<sp/>acquire<sp/>bus<sp/>access<sp/>and/or<sp/>talk<sp/>to<sp/>slave<sp/>(0x%X)<sp/>-<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>I2C_SLAVE,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>strerror(result));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classPower_1a06d6793217377bc567b72a677eadfc93" kindref="member">get_version</ref>()<sp/>!=<sp/><ref refid="classPower_1a3f1e919dfa880f66dc3a4f1758327330" kindref="member">code_version_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classPower_1a0518d740d9bacffe1f9a4328f9912999" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Wrong<sp/>PIC<sp/>code<sp/>version&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>usleep(100000);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classPower_1a8c15938842b9c9b18f1326d6419f7f42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1a8c15938842b9c9b18f1326d6419f7f42" kindref="member">Power::get_all_data</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>__u8<sp/>buff[<ref refid="power_8h_1a4317edb9e80ba6e3424a2c39db36932b" kindref="member">REGISTER_DATA_SIZE</ref>];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_read_i2c_block_data(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref>,<sp/><ref refid="power_8h_1abfa5b3f75a469a1cdaac60abc209b53d" kindref="member">REGISTER_DATA_READ</ref>,<sp/><ref refid="power_8h_1a4317edb9e80ba6e3424a2c39db36932b" kindref="member">REGISTER_DATA_SIZE</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>buff)<sp/>!=<sp/><ref refid="power_8h_1a4317edb9e80ba6e3424a2c39db36932b" kindref="member">REGISTER_DATA_SIZE</ref>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classPower_1a0518d740d9bacffe1f9a4328f9912999" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Error<sp/>Reading<sp/>data&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPower_1a02db3b346cb6144052a24b3b4a11dee7" kindref="member">cell_volt_</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">((int)buff[2<sp/>*<sp/>i]<sp/>+<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(buff[2<sp/>*<sp/>i<sp/>+<sp/>1])<sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8))<sp/>/<sp/>16.0<sp/>*<sp/><ref refid="power_8h_1a1724e5ed4b7fe7f63bb23f4e83d53615" kindref="member">CONVERT_BRIDGE_BATTERY</ref><sp/>*<sp/>((<ref refid="classPower_1acbc327d6801bf01214081548ac456245" kindref="member">R1_</ref>[i]<sp/>+<sp/><ref refid="classPower_1af8b32fb98bdea4372bf1f391b14bcad0" kindref="member">R2_</ref>[i])<sp/>/<sp/><ref refid="classPower_1acbc327d6801bf01214081548ac456245" kindref="member">R1_</ref>[i]);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1ad9c4e80b12ebd78a3fe7412ed44ef2ad" kindref="member">Power::set_sleep</ref>(){</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_write_byte_data(file_,<sp/>0x00,<sp/>0x02))<sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RCLCPP_WARN(n_-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Error<sp/>sending<sp/>sleep<sp/>cmd&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">uint8_t&amp;<sp/><ref refid="classPower_1a06d6793217377bc567b72a677eadfc93" kindref="member">Power::get_version</ref>(){</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>pic_code_version_<sp/>=<sp/>i2c_smbus_read_byte_data(file_,<sp/>0xC0);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pic_code_version_;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" kindref="member">Power::getI2CAddr</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_addr_;</highlight></codeline>
-<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Power::setI2CAddr(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr)<sp/>{</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_addr_<sp/>=<sp/>i2CAddr;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;Power::getI2CPeriph()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i2c_periph_;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Power::setI2CPeriph(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;i2CPeriph)<sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>i2c_periph_<sp/>=<sp/>i2CPeriph;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPower_1a80c07525a3091b8ecde0a4e813f87235" kindref="member">battery_volt_</ref><sp/>=<sp/>std::max(<ref refid="classPower_1a02db3b346cb6144052a24b3b4a11dee7" kindref="member">cell_volt_</ref>[0],<sp/><ref refid="classPower_1a02db3b346cb6144052a24b3b4a11dee7" kindref="member">cell_volt_</ref>[1]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>2;<sp/>i++)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>4,5<sp/>6,7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPower_1aeae868ba8d2ae1aa3c8e8323f2026130" kindref="member">esc_current_</ref>[i]<sp/>=<sp/>(((int)buff[2<sp/>*<sp/>i<sp/>+<sp/>4]<sp/>+<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(buff[2<sp/>*<sp/>i<sp/>+<sp/>1<sp/>+<sp/>4])<sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8))<sp/>*<sp/><ref refid="power_8h_1a41297765da1eb40d795865cade93ab16" kindref="member">CONVERT_BRIDGE_CURRENT</ref><sp/>-<sp/>3.3<sp/>/<sp/>2.0)<sp/>*<sp/><ref refid="power_8h_1a54c7e6b49e349e58641acbe15dc1e868" kindref="member">CONVERT_CURRENT_V_to_A</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPower_1a2579a81d031018bf182244d4c1f0d22e" kindref="member">motor_current_</ref><sp/>=<sp/>(((int)buff[8]<sp/>+<sp/>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)buff[9]<sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>8))<sp/>*<sp/><ref refid="power_8h_1a41297765da1eb40d795865cade93ab16" kindref="member">CONVERT_BRIDGE_CURRENT</ref><sp/>-<sp/>3.3<sp/>/<sp/>2.0)<sp/>*<sp/><ref refid="power_8h_1a54c7e6b49e349e58641acbe15dc1e868" kindref="member">CONVERT_CURRENT_V_to_A</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPower_1afdeefcc65bbf723dda9d5b3cb29f0d1f" kindref="member">power_state_</ref><sp/>=<sp/>buff[10];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classPower_1ad9c4e80b12ebd78a3fe7412ed44ef2ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1ad9c4e80b12ebd78a3fe7412ed44ef2ad" kindref="member">Power::set_sleep</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_smbus_write_byte_data(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref>,<sp/>0x00,<sp/>0x02))<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>RCLCPP_WARN(<ref refid="classPower_1a0518d740d9bacffe1f9a4328f9912999" kindref="member">n_</ref>-&gt;get_logger(),<sp/></highlight><highlight class="stringliteral">&quot;[Power_driver]<sp/>Error<sp/>sending<sp/>sleep<sp/>cmd&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classPower_1a06d6793217377bc567b72a677eadfc93" refkind="member"><highlight class="normal">uint8_t<sp/>&amp;<sp/><ref refid="classPower_1a06d6793217377bc567b72a677eadfc93" kindref="member">Power::get_version</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="classPower_1a1f68f15ab0479b7bb557d6a626a65e48" kindref="member">pic_code_version_</ref><sp/>=<sp/>i2c_smbus_read_byte_data(<ref refid="classPower_1a78a7a490cdc8159552894e7d687cb96d" kindref="member">file_</ref>,<sp/>0xC0);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPower_1a1f68f15ab0479b7bb557d6a626a65e48" kindref="member">pic_code_version_</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPower_1ac70e2a5cb2e674f18b2cc002bdc77f84" kindref="member">Power::getI2CAddr</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="81"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPower_1a8d33db69da3274bf9e6c17e11913066f" kindref="member">i2c_addr_</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classPower_1ac627a3a731db2eefa6a8508c69664253" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPower_1ac627a3a731db2eefa6a8508c69664253" kindref="member">Power::setI2CAddr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i2CAddr)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="classPower_1a8d33db69da3274bf9e6c17e11913066f" kindref="member">i2c_addr_</ref><sp/>=<sp/>i2CAddr;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classPower_1a30be9ee7f32c25e0795432053faf30e8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/><ref refid="classPower_1a30be9ee7f32c25e0795432053faf30e8" kindref="member">Power::getI2CPeriph</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="91"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPower_1a3df2e2f2d1f58702d43598d783a86c41" kindref="member">i2c_periph_</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classPower_1a2b637c4d8695c2d59c1252b8344c4f8d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPower_1a2b637c4d8695c2d59c1252b8344c4f8d" kindref="member">Power::setI2CPeriph</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>i2CPeriph)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="classPower_1a3df2e2f2d1f58702d43598d783a86c41" kindref="member">i2c_periph_</ref><sp/>=<sp/>i2CPeriph;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_power_driver/src/power.cpp"/>
   </compounddef>

@@ -22,11 +22,12 @@ Program Listing for File FusionOffset.h
    //------------------------------------------------------------------------------
    // Definitions
    
-   typedef struct {
-       float filterCoefficient;
-       unsigned int timeout;
-       unsigned int timer;
-       FusionVector gyroscopeOffset;
+   typedef struct
+   {
+     float filterCoefficient;
+     unsigned int timeout;
+     unsigned int timer;
+     FusionVector gyroscopeOffset;
    } FusionOffset;
    
    //------------------------------------------------------------------------------

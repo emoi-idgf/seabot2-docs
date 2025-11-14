@@ -55,7 +55,7 @@
       </node>
       <node id="14">
         <label>seabot2_iridium_driver/sbd/log_data.h</label>
-        <link refid="log__data_8h_source"/>
+        <link refid="log__data_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
@@ -65,7 +65,7 @@
       </node>
       <node id="16">
         <label>seabot2_iridium_driver/sbd/mission_xml.h</label>
-        <link refid="mission__xml_8h_source"/>
+        <link refid="mission__xml_8h"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
@@ -73,7 +73,7 @@
       </node>
       <node id="4">
         <label>seabot2_iridium_driver/sbd/sbd.h</label>
-        <link refid="sbd_8h_source"/>
+        <link refid="sbd_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
@@ -83,7 +83,7 @@
       </node>
       <node id="7">
         <label>seabot2_iridium_driver/serial/AsyncSerial.h</label>
-        <link refid="AsyncSerial_8h_source"/>
+        <link refid="AsyncSerial_8h"/>
         <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -97,7 +97,7 @@
       </node>
       <node id="6">
         <label>seabot2_iridium_driver/serial/BufferedAsyncSerial.h</label>
-        <link refid="BufferedAsyncSerial_8h_source"/>
+        <link refid="BufferedAsyncSerial_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
@@ -167,6 +167,18 @@
         <label>vector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/iridium_node.h</label>
+        <link refid="iridium__node_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/iridium_node.cpp</label>
+        <link refid="iridium__node_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="classIridiumNode" prot="public">IridiumNode</innerclass>
     <briefdescription>
     </briefdescription>
@@ -182,9 +194,9 @@
 <codeline lineno="7"><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rclcpp/rclcpp.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_iridium_driver/sbd/sbd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_iridium_driver/sbd/log_data.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_iridium_driver/sbd/mission_xml.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sbd_8h" kindref="compound">seabot2_iridium_driver/sbd/sbd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="log__data_8h" kindref="compound">seabot2_iridium_driver/sbd/log_data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mission__xml_8h" kindref="compound">seabot2_iridium_driver/sbd/mission_xml.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/depth_pose.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;seabot2_msgs/msg/bme280_data.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
@@ -201,88 +213,89 @@
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std::chrono_literals;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29" refid="classIridiumNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classIridiumNode" kindref="compound">IridiumNode</ref><sp/>final<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
+<codeline lineno="29" refid="classIridiumNode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classIridiumNode" kindref="compound">IridiumNode</ref><sp/>final:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>rclcpp::Node<sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classIridiumNode" kindref="compound">IridiumNode</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="classIridiumNode_1ae7de0566cff0b980c0eb2e1c1026646d" kindref="member">IridiumNode</ref>();</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/>timer_read_,<sp/>timer_write_;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/>loop_serial_read_<sp/>=<sp/>10ms;<sp/></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/>loop_serial_write_<sp/>=<sp/>1000ms;<sp/></highlight></codeline>
+<codeline lineno="36" refid="classIridiumNode_1a4068d7bc60102bfbf02a99ce64ef7ec4" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::TimerBase::SharedPtr<sp/><ref refid="classIridiumNode_1a4068d7bc60102bfbf02a99ce64ef7ec4" kindref="member">timer_read_</ref>,<sp/><ref refid="classIridiumNode_1a15b0c4a795c951618958ae1a852284d1" kindref="member">timer_write_</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classIridiumNode_1a9f2543783e97c349665b4666ee2d7fe2" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><ref refid="classIridiumNode_1a9f2543783e97c349665b4666ee2d7fe2" kindref="member">loop_serial_read_</ref><sp/>=<sp/>10ms;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="classIridiumNode_1aa64db31e9e7534a7f8da988b6229cc67" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><ref refid="classIridiumNode_1aa64db31e9e7534a7f8da988b6229cc67" kindref="member">loop_serial_write_</ref><sp/>=<sp/>1000ms;<sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/>callback_group_;</highlight></codeline>
+<codeline lineno="40" refid="classIridiumNode_1ae7723190524cc24e1f84f0baf4b5ba6f" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::CallbackGroup::SharedPtr<sp/><ref refid="classIridiumNode_1ae7723190524cc24e1f84f0baf4b5ba6f" kindref="member">callback_group_</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSBD" kindref="compound">SBD</ref><sp/>sbd_;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLogData" kindref="compound">LogData</ref><sp/>log_state_;</highlight></codeline>
+<codeline lineno="42" refid="classIridiumNode_1ac5d8a1f0b15b00ec545bbdb165e90d77" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classSBD" kindref="compound">SBD</ref><sp/><ref refid="classIridiumNode_1ac5d8a1f0b15b00ec545bbdb165e90d77" kindref="member">sbd_</ref>;</highlight></codeline>
+<codeline lineno="43" refid="classIridiumNode_1aa482b65ca5e4889f27b0cc1357f81f2d" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classLogData" kindref="compound">LogData</ref><sp/><ref refid="classIridiumNode_1aa482b65ca5e4889f27b0cc1357f81f2d" kindref="member">log_state_</ref>;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_iridium_sending_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid_fix_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_surface_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>mission_path_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>mission_file_name_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mission.xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45" refid="classIridiumNode_1a32aba6a607b1ff080d157b3b49172c2e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a32aba6a607b1ff080d157b3b49172c2e" kindref="member">enable_iridium_sending_</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46" refid="classIridiumNode_1a23f0b13535e8e674fd80de6e0893098a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a23f0b13535e8e674fd80de6e0893098a" kindref="member">valid_fix_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47" refid="classIridiumNode_1ac93eb898c69bc385c00764514f7e937a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1ac93eb898c69bc385c00764514f7e937a" kindref="member">is_surface_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48" refid="classIridiumNode_1a61e588b80ee16f8d52e9a9e2201c6d23" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classIridiumNode_1a61e588b80ee16f8d52e9a9e2201c6d23" kindref="member">mission_path_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;./&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49" refid="classIridiumNode_1a75266b003a034bb82c153266e8d53c9c" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classIridiumNode_1a75266b003a034bb82c153266e8d53c9c" kindref="member">mission_file_name_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;mission.xml&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>last_time_communication_<sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::seconds<sp/>time_between_communication_<sp/>=<sp/>900s;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::milliseconds<sp/><sp/>surface_wait_time_<sp/>=<sp/>5000ms;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>surface_depth_limit_<sp/>=<sp/>0.5;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>surface_is_valid_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>surface_time_detected_<sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>time_last_log_version_<sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::seconds<sp/>delay_last_log_version_<sp/>=<sp/>30s;</highlight></codeline>
+<codeline lineno="51" refid="classIridiumNode_1aeee128dee505b363b51ee271b9aa115c" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/><ref refid="classIridiumNode_1aeee128dee505b363b51ee271b9aa115c" kindref="member">last_time_communication_</ref><sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
+<codeline lineno="52" refid="classIridiumNode_1a35383a7d30e9d7fee9eeb4b0ec2da755" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::seconds<sp/><ref refid="classIridiumNode_1a35383a7d30e9d7fee9eeb4b0ec2da755" kindref="member">time_between_communication_</ref><sp/>=<sp/>900s;</highlight></codeline>
+<codeline lineno="53" refid="classIridiumNode_1ad7eb6d9019325350528ff81e821daa90" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::milliseconds<sp/><sp/><ref refid="classIridiumNode_1ad7eb6d9019325350528ff81e821daa90" kindref="member">surface_wait_time_</ref><sp/>=<sp/>5000ms;</highlight></codeline>
+<codeline lineno="54" refid="classIridiumNode_1a35911ce259010110fba16871939d5828" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a35911ce259010110fba16871939d5828" kindref="member">surface_depth_limit_</ref><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="55" refid="classIridiumNode_1a980f857450bdf65d11e0393b0cde73bf" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a980f857450bdf65d11e0393b0cde73bf" kindref="member">surface_is_valid_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56" refid="classIridiumNode_1a471edcedf050177de0e28f4fc3d0b4c8" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/><ref refid="classIridiumNode_1a471edcedf050177de0e28f4fc3d0b4c8" kindref="member">surface_time_detected_</ref><sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
+<codeline lineno="57" refid="classIridiumNode_1a1690a566f8aab71d1dcc6a6195d397f2" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/><ref refid="classIridiumNode_1a1690a566f8aab71d1dcc6a6195d397f2" kindref="member">time_last_log_version_</ref><sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
+<codeline lineno="58" refid="classIridiumNode_1a9967bebe43198a9f7e6985bbfa0b0339" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::seconds<sp/><ref refid="classIridiumNode_1a9967bebe43198a9f7e6985bbfa0b0339" kindref="member">delay_last_log_version_</ref><sp/>=<sp/>30s;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fix_latitude_<sp/>=<sp/>0.;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fix_longitude_<sp/>=<sp/>0.;</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Time<sp/>time_last_gnss_<sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::seconds<sp/>delay_last_gnss_<sp/>=<sp/>10s;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable_iridium_gnss_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60" refid="classIridiumNode_1a0f213cfa8e5da32d087b6822fa841218" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a0f213cfa8e5da32d087b6822fa841218" kindref="member">fix_latitude_</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="61" refid="classIridiumNode_1aa674d641d396932761f78619c7d87031" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1aa674d641d396932761f78619c7d87031" kindref="member">fix_longitude_</ref><sp/>=<sp/>0.;</highlight></codeline>
+<codeline lineno="62" refid="classIridiumNode_1a4dd4b2964969874bcbb9438d7709b763" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Time<sp/><ref refid="classIridiumNode_1a4dd4b2964969874bcbb9438d7709b763" kindref="member">time_last_gnss_</ref><sp/>=<sp/>rclcpp::Time(0.,<sp/>RCL_ROS_TIME);</highlight></codeline>
+<codeline lineno="63" refid="classIridiumNode_1ad16d38454107fae2210db0b7d570cd41" refkind="member"><highlight class="normal"><sp/><sp/>std::chrono::seconds<sp/><ref refid="classIridiumNode_1ad16d38454107fae2210db0b7d570cd41" kindref="member">delay_last_gnss_</ref><sp/>=<sp/>10s;</highlight></codeline>
+<codeline lineno="64" refid="classIridiumNode_1aecd4ebbf6e62627c46df05f052431c2f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1aecd4ebbf6e62627c46df05f052431c2f" kindref="member">enable_iridium_gnss_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>serial_port_name_<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/iridium&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>serial_baud_rate_<sp/>=<sp/>19200;</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sbd_debug_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66" refid="classIridiumNode_1afc5048bccd2b3e8ab91ceea12ba3a9df" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="classIridiumNode_1afc5048bccd2b3e8ab91ceea12ba3a9df" kindref="member">serial_port_name_</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/dev/iridium&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67" refid="classIridiumNode_1a46c6182cc5b38de4398fa73905472bad" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a46c6182cc5b38de4398fa73905472bad" kindref="member">serial_baud_rate_</ref><sp/>=<sp/>19200;</highlight></codeline>
+<codeline lineno="68" refid="classIridiumNode_1a94ff4bae8773429ab3242d7e6141ef04" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a94ff4bae8773429ab3242d7e6141ef04" kindref="member">sbd_debug_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::Bme280Data&gt;::SharedPtr<sp/>subscriber_internal_sensor_filter_;</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::PowerState&gt;::SharedPtr<sp/>subscriber_power_data_;</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::SafetyStatus2&gt;::SharedPtr<sp/>subscriber_safety_data_;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::GpsFix&gt;::SharedPtr<sp/>subscriber_gnss_data_;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::GnssPose&gt;::SharedPtr<sp/>subscriber_gnss_pose_;</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::DepthPose&gt;::SharedPtr<sp/>subscriber_depth_;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Subscription&lt;seabot2_msgs::msg::MissionState<sp/>&gt;::SharedPtr<sp/>subscriber_mission;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::IridiumSession&gt;::SharedPtr<sp/>publisher_iridium_session_;</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;seabot2_msgs::msg::IridiumStatus&gt;::SharedPtr<sp/>publisher_iridium_status_;</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>rclcpp::Publisher&lt;std_msgs::msg::String&gt;::SharedPtr<sp/>publisher_iridium_log_;</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_read_callback();</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>timer_write_callback();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_parameters();</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init_interfaces();</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>internal_sensor_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Bme280Data<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>power_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>safety_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mission_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::MissionState<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>depth_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gpsd_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GpsFix<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>gnss_pose_callback(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GnssPose<sp/>&amp;msg);</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_decode(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;data_raw);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>process();</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_IRIDIUM_NODE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::Bme280Data<sp/>&gt;</highlight></codeline>
+<codeline lineno="72" refid="classIridiumNode_1a6413c233045bed464871a3c87090f49a" refkind="member"><highlight class="normal"><sp/><sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a6413c233045bed464871a3c87090f49a" kindref="member">subscriber_internal_sensor_filter_</ref>;</highlight></codeline>
+<codeline lineno="73" refid="classIridiumNode_1a823d04cea5d461f0d00dd6ff839fe730" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::PowerState<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a823d04cea5d461f0d00dd6ff839fe730" kindref="member">subscriber_power_data_</ref>;</highlight></codeline>
+<codeline lineno="74" refid="classIridiumNode_1a20d295494193032f4ad04084dda62685" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a20d295494193032f4ad04084dda62685" kindref="member">subscriber_safety_data_</ref>;</highlight></codeline>
+<codeline lineno="75" refid="classIridiumNode_1a54d667f01ccb68ae1fb18868fd079a17" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::GpsFix<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a54d667f01ccb68ae1fb18868fd079a17" kindref="member">subscriber_gnss_data_</ref>;</highlight></codeline>
+<codeline lineno="76" refid="classIridiumNode_1a5f5e42ca0b758c2e1f394fb19f2c92b4" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::GnssPose<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a5f5e42ca0b758c2e1f394fb19f2c92b4" kindref="member">subscriber_gnss_pose_</ref>;</highlight></codeline>
+<codeline lineno="77" refid="classIridiumNode_1a03452805f5c930c19e256fbaf51f1a7b" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::DepthPose<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a03452805f5c930c19e256fbaf51f1a7b" kindref="member">subscriber_depth_</ref>;</highlight></codeline>
+<codeline lineno="78" refid="classIridiumNode_1a4dcf1e004014ca09e5653436fc88ede7" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Subscription<sp/>&lt;<sp/>seabot2_msgs::msg::MissionState<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a4dcf1e004014ca09e5653436fc88ede7" kindref="member">subscriber_mission</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classIridiumNode_1a412dbe3ee479229dba230c3eab5bc5fd" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>seabot2_msgs::msg::IridiumSession<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a412dbe3ee479229dba230c3eab5bc5fd" kindref="member">publisher_iridium_session_</ref>;</highlight></codeline>
+<codeline lineno="81" refid="classIridiumNode_1a232568ce28b89baedd0e5b928a1e1e87" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>seabot2_msgs::msg::IridiumStatus<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a232568ce28b89baedd0e5b928a1e1e87" kindref="member">publisher_iridium_status_</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classIridiumNode_1a8559e29a0dfcbb0049a7570f337ff6dc" refkind="member"><highlight class="normal"><sp/><sp/>rclcpp::Publisher<sp/>&lt;<sp/>std_msgs::msg::String<sp/>&gt;<sp/>::SharedPtr<sp/><ref refid="classIridiumNode_1a8559e29a0dfcbb0049a7570f337ff6dc" kindref="member">publisher_iridium_log_</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a4917dff47ccdd28b840846632d1a319a" kindref="member">timer_read_callback</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1ac59e68e0bae7e761c0046c148c4a4ed1" kindref="member">timer_write_callback</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a1903b6d43549ef24083af5eb6b692947" kindref="member">init_parameters</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a84de2613e344f511c601811ecf928eb5" kindref="member">init_interfaces</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1ad48d93f7123465e763d4ae7940bdb967" kindref="member">internal_sensor_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::Bme280Data<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a2a627bf2120aca9efbdc88d216a0529f" kindref="member">power_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::PowerState<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a0f54dd1dfbc5271ea5a2122d0c77942e" kindref="member">safety_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::SafetyStatus2<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a617ed00085279d966a1ce7f74f6773c2" kindref="member">mission_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::MissionState<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a8017bba1992aaa7215149162dd80c16c" kindref="member">depth_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::DepthPose<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1aee731ad73cf4ddb7fe02b0838a169908" kindref="member">gpsd_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GpsFix<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a401849ec08c03fea963398af5fa280ae" kindref="member">gnss_pose_callback</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>seabot2_msgs::msg::GnssPose<sp/>&amp;<sp/>msg);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a3014d809ff5c01fe7632132083db03ee" kindref="member">call_decode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>data_raw);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classIridiumNode_1a0e604ea2045e90e66ef97a53f09050c2" kindref="member">process</ref>();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//BUILD_IRIDIUM_NODE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/iridium_node.h"/>
   </compounddef>

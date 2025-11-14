@@ -37,7 +37,7 @@
         <link refid="Fusion_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -48,11 +48,19 @@
       </node>
       <node id="3">
         <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/FusionConverter.h</label>
-        <link refid="FusionConverter_8h_source"/>
+        <link refid="FusionConverter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h</label>
+        <link refid="icm20948__node_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
       </node>
       <node id="4">
-        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/include/icm20948_driver/icm20948_node.h</label>
-        <link refid="icm20948__node_8h_source"/>
+        <label>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/src/icm20948_node.cpp</label>
+        <link refid="icm20948__node_8cpp"/>
       </node>
     </invincdepgraph>
     <sectiondef kind="func">
@@ -120,7 +128,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" line="26" column="28" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" bodystart="26" bodyend="28"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" line="26" column="28" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" bodystart="26" bodyend="32"/>
+        <references refid="FusionMath_8h_1a24763e8774933daf4427d30076782914" compoundref="FusionMath_8h" startline="455" endline="467">FusionMatrixMultiplyVector</references>
+        <references refid="FusionMath_8h_1a02c1911b63e50ef1e74213dda2556b7d" compoundref="FusionMath_8h" startline="271" endline="281">FusionVectorHadamardProduct</references>
+        <references refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" compoundref="FusionMath_8h" startline="227" endline="237">FusionVectorSubtract</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
       <memberdef kind="function" id="FusionCalibration_8h_1a27bfd795bdbec878375cdc651c0f88a9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="unionFusionVector" kindref="compound">FusionVector</ref></type>
@@ -174,7 +186,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" line="37" column="28" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" bodystart="37" bodyend="39"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" line="41" column="28" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h" bodystart="41" bodyend="47"/>
+        <references refid="FusionMath_8h_1a24763e8774933daf4427d30076782914" compoundref="FusionMath_8h" startline="455" endline="467">FusionMatrixMultiplyVector</references>
+        <references refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" compoundref="FusionMath_8h" startline="227" endline="237">FusionVectorSubtract</references>
+        <referencedby refid="classICM20948Node_1aabe75047bf58406cdbe6fbfade1ab0c5" compoundref="icm20948__node_8cpp" startline="221" endline="311">ICM20948Node::compute_ahrs</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -198,18 +213,26 @@
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inline<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>FusionCalibrationInertial(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>uncalibrated,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref><sp/>misalignment,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>sensitivity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>offset)<sp/>{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FusionMatrixMultiplyVector(misalignment,<sp/>FusionVectorHadamardProduct(FusionVectorSubtract(uncalibrated,<sp/>offset),<sp/>sensitivity));</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>FusionCalibrationMagnetic(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>uncalibrated,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref><sp/>softIronMatrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>hardIronOffset)<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FusionMatrixMultiplyVector(softIronMatrix,<sp/>FusionVectorSubtract(uncalibrated,<sp/>hardIronOffset));</highlight></codeline>
-<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="FusionCalibration_8h_1ad2bfcd433b1d4e96dafb7fb1440d6e6a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionCalibration_8h_1ad2bfcd433b1d4e96dafb7fb1440d6e6a" kindref="member">FusionCalibrationInertial</ref>(</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>uncalibrated,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref><sp/>misalignment,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>sensitivity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>offset)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="FusionMath_8h_1a24763e8774933daf4427d30076782914" kindref="member">FusionMatrixMultiplyVector</ref>(misalignment,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionMath_8h_1a02c1911b63e50ef1e74213dda2556b7d" kindref="member">FusionVectorHadamardProduct</ref>(<ref refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" kindref="member">FusionVectorSubtract</ref>(uncalibrated,<sp/>offset),<sp/>sensitivity));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="FusionCalibration_8h_1a27bfd795bdbec878375cdc651c0f88a9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/><ref refid="FusionCalibration_8h_1a27bfd795bdbec878375cdc651c0f88a9" kindref="member">FusionCalibrationMagnetic</ref>(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>uncalibrated,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionMatrix" kindref="compound">FusionMatrix</ref><sp/>softIronMatrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="unionFusionVector" kindref="compound">FusionVector</ref><sp/>hardIronOffset)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="FusionMath_8h_1a24763e8774933daf4427d30076782914" kindref="member">FusionMatrixMultiplyVector</ref>(softIronMatrix,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="FusionMath_8h_1a51a659292169bcad0816f6c46e5ce003" kindref="member">FusionVectorSubtract</ref>(uncalibrated,<sp/>hardIronOffset));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>file</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/icm20948_driver/Fusion/FusionCalibration.h"/>
   </compounddef>

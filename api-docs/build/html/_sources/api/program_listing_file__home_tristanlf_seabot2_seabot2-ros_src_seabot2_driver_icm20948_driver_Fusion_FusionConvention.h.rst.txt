@@ -17,10 +17,11 @@ Program Listing for File FusionConvention.h
    //------------------------------------------------------------------------------
    // Definitions
    
-   typedef enum {
-       FusionConventionNwu, /* North-West-Up */
-       FusionConventionEnu, /* East-North-Up */
-       FusionConventionNed, /* North-East-Down */
+   typedef enum
+   {
+     FusionConventionNwu,   /* North-West-Up */
+     FusionConventionEnu,   /* East-North-Up */
+     FusionConventionNed,   /* North-East-Down */
    } FusionConvention;
    
    #endif

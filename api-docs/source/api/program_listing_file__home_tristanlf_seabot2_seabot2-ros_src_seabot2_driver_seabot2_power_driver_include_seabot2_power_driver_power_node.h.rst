@@ -21,27 +21,27 @@ Program Listing for File power_node.h
    using namespace std::chrono_literals;
    using namespace std;
    
-   class PowerNode final : public rclcpp::Node {
+   class PowerNode final: public rclcpp::Node {
    public:
-       PowerNode();
+     PowerNode();
    
    private:
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 500ms; 
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 500ms;   
    
-       Power power_;
+     Power power_;
    
-       rclcpp::Publisher<seabot2_msgs::msg::PowerState>::SharedPtr publisher_power_state_;
+     rclcpp::Publisher < seabot2_msgs::msg::PowerState > ::SharedPtr publisher_power_state_;
    
-       rclcpp::Time time_turn_off_light_ = this->now();
-       bool light_is_on_ = false;
+     rclcpp::Time time_turn_off_light_ = this->now();
+     bool light_is_on_ = false;
    
-       void timer_callback();
+     void timer_callback();
    
-       void init_parameters();
+     void init_parameters();
    
-       void init_interfaces();
+     void init_interfaces();
    };
    
    #endif //BUILD_POWER_NODE_H

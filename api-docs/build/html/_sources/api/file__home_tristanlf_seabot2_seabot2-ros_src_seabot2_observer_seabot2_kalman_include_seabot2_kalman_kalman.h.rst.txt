@@ -46,8 +46,6 @@ Included By
 
 - :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_observer_seabot2_kalman_src_kalman.cpp`
 
-- :ref:`file__home_tristanlf_seabot2_seabot2-ros_src_seabot2_simulator_include_seabot2_simulator_simulator.h`
-
 
 
 

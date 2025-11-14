@@ -33,40 +33,39 @@ Program Listing for File kalman_node.hpp
    
    class KalmanNode final : public rclcpp::Node {
    public:
-       KalmanNode();
+     KalmanNode();
    
    private:
+     rclcpp::TimerBase::SharedPtr timer_;
+     std::chrono::milliseconds loop_dt_ = 200ms;   
    
-       rclcpp::TimerBase::SharedPtr timer_;
-       std::chrono::milliseconds loop_dt_ = 200ms; 
-   
-       Kalman k_;
-   
-   
-       rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
-       rclcpp::Subscription<seabot2_msgs::msg::PistonState>::SharedPtr subscriber_state_data_;
-       rclcpp::Subscription<seabot2_msgs::msg::Density>::SharedPtr subscriber_density_;
-       rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_;
-   
-       rclcpp::Publisher<seabot2_msgs::msg::KalmanState>::SharedPtr publisher_kalman_;
+     Kalman k_;
    
    
-       void init_parameters();
+     rclcpp::Subscription<seabot2_msgs::msg::DepthPose>::SharedPtr subscriber_depth_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::PistonState>::SharedPtr subscriber_state_data_;
+     rclcpp::Subscription<seabot2_msgs::msg::Density>::SharedPtr subscriber_density_;
+     rclcpp::Subscription<seabot2_msgs::msg::TemperatureSensorData>::SharedPtr subscriber_temperature_;
    
-       void init_interfaces();
-   
-       void state_callback(const seabot2_msgs::msg::PistonState &msg);
-   
-       void depth_callback(const seabot2_msgs::msg::DepthPose &msg);
-   
-       void density_callback(const seabot2_msgs::msg::Density &msg);
-   
-       void pressure_callback(const seabot2_msgs::msg::PressureSensorData &msg);
-   
-       void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData &msg);
+     rclcpp::Publisher<seabot2_msgs::msg::KalmanState>::SharedPtr publisher_kalman_;
    
    
-       void publish_data();
+     void init_parameters();
+   
+     void init_interfaces();
+   
+     void state_callback(const seabot2_msgs::msg::PistonState & msg);
+   
+     void depth_callback(const seabot2_msgs::msg::DepthPose & msg);
+   
+     void density_callback(const seabot2_msgs::msg::Density & msg);
+   
+     void pressure_callback(const seabot2_msgs::msg::PressureSensorData & msg);
+   
+     void temperature_callback(const seabot2_msgs::msg::TemperatureSensorData & msg);
+   
+   
+     void publish_data();
    
    };
    #endif //BUILD_KALMANN_NODE_HPP

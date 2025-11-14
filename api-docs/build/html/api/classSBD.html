@@ -9,6 +9,7 @@
   <title>Class SBD &mdash; Seabot2 ROS2 API 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
       <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
 
   
@@ -21,9 +22,7 @@
       <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class Screen" href="classScreen.html" />
-    <link rel="prev" title="Class SafetyNode" href="classSafetyNode.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,20 +45,66 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">API</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">Seabot2 C++ API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#seabot2">Seabot2</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#unions">Unions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l4"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Class SBD</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a><ul>
+<li><a class="reference internal" href="#_CPPv43SBD"><code class="docutils literal notranslate"><span class="pre">SBD</span></code></a><ul>
+<li><a class="reference internal" href="#_CPPv4N3SBD3SBDEv"><code class="docutils literal notranslate"><span class="pre">SBD()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBDD0Ev"><code class="docutils literal notranslate"><span class="pre">~SBD()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD4initERKNSt6stringERKj"><code class="docutils literal notranslate"><span class="pre">init()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD12disable_echoEv"><code class="docutils literal notranslate"><span class="pre">disable_echo()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD10ignore_dtrEv"><code class="docutils literal notranslate"><span class="pre">ignore_dtr()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD20disable_flow_controlEv"><code class="docutils literal notranslate"><span class="pre">disable_flow_control()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD7cmd_CSQEb"><code class="docutils literal notranslate"><span class="pre">cmd_CSQ()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD12cmd_get_imeiEv"><code class="docutils literal notranslate"><span class="pre">cmd_get_imei()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD14cmd_copy_MO_MTEv"><code class="docutils literal notranslate"><span class="pre">cmd_copy_MO_MT()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD17cmd_write_messageERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">cmd_write_message()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD16cmd_read_messageEv"><code class="docutils literal notranslate"><span class="pre">cmd_read_message()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD10cmd_statusEv"><code class="docutils literal notranslate"><span class="pre">cmd_status()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD17cmd_flush_messageERKbRKb"><code class="docutils literal notranslate"><span class="pre">cmd_flush_message()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD11cmd_sessionEv"><code class="docutils literal notranslate"><span class="pre">cmd_session()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD16cmd_enable_alertERKb"><code class="docutils literal notranslate"><span class="pre">cmd_enable_alert()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD30cmd_enable_indicator_reportingERKb"><code class="docutils literal notranslate"><span class="pre">cmd_enable_indicator_reporting()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD28cmd_trafic_management_statusEv"><code class="docutils literal notranslate"><span class="pre">cmd_trafic_management_status()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD8set_gnssERKdRKd"><code class="docutils literal notranslate"><span class="pre">set_gnss()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD25cmd_set_registration_modeERKi"><code class="docutils literal notranslate"><span class="pre">cmd_set_registration_mode()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD4readEv"><code class="docutils literal notranslate"><span class="pre">read()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD9sbd_powerERKb"><code class="docutils literal notranslate"><span class="pre">sbd_power()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD9set_debugERKb"><code class="docutils literal notranslate"><span class="pre">set_debug()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD13get_status_moEv"><code class="docutils literal notranslate"><span class="pre">get_status_mo()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD16get_status_momsnEv"><code class="docutils literal notranslate"><span class="pre">get_status_momsn()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD13get_status_mtEv"><code class="docutils literal notranslate"><span class="pre">get_status_mt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD16get_status_mtmsnEv"><code class="docutils literal notranslate"><span class="pre">get_status_mtmsn()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD13get_status_raEv"><code class="docutils literal notranslate"><span class="pre">get_status_ra()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD11get_waitingEv"><code class="docutils literal notranslate"><span class="pre">get_waiting()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD14get_session_moEv"><code class="docutils literal notranslate"><span class="pre">get_session_mo()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD17get_session_momsnEv"><code class="docutils literal notranslate"><span class="pre">get_session_momsn()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD14get_session_mtEv"><code class="docutils literal notranslate"><span class="pre">get_session_mt()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD17get_session_mtmsnEv"><code class="docutils literal notranslate"><span class="pre">get_session_mtmsn()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD7get_csqEv"><code class="docutils literal notranslate"><span class="pre">get_csq()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD19get_copy_mo_mt_sizeEv"><code class="docutils literal notranslate"><span class="pre">get_copy_mo_mt_size()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD8get_imeiEv"><code class="docutils literal notranslate"><span class="pre">get_imei()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD16get_write_returnEv"><code class="docutils literal notranslate"><span class="pre">get_write_return()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD17get_read_msg_dataEv"><code class="docutils literal notranslate"><span class="pre">get_read_msg_data()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD20get_indicator_signalEv"><code class="docutils literal notranslate"><span class="pre">get_indicator_signal()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD21get_indicator_serviceEv"><code class="docutils literal notranslate"><span class="pre">get_indicator_service()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD21get_indicator_antennaEv"><code class="docutils literal notranslate"><span class="pre">get_indicator_antenna()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD14get_ring_alertEv"><code class="docutils literal notranslate"><span class="pre">get_ring_alert()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD19get_ring_alert_codeEv"><code class="docutils literal notranslate"><span class="pre">get_ring_alert_code()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD28get_trafic_management_statusEv"><code class="docutils literal notranslate"><span class="pre">get_trafic_management_status()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD26get_trafic_management_timeEv"><code class="docutils literal notranslate"><span class="pre">get_trafic_management_time()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD18get_areg_new_eventEv"><code class="docutils literal notranslate"><span class="pre">get_areg_new_event()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD14get_areg_eventEv"><code class="docutils literal notranslate"><span class="pre">get_areg_event()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD19get_areg_error_codeEv"><code class="docutils literal notranslate"><span class="pre">get_areg_error_code()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD13is_in_sessionEv"><code class="docutils literal notranslate"><span class="pre">is_in_session()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD14is_flush_validEv"><code class="docutils literal notranslate"><span class="pre">is_flush_valid()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD15is_flush_returnEv"><code class="docutils literal notranslate"><span class="pre">is_flush_return()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD8is_readyEv"><code class="docutils literal notranslate"><span class="pre">is_ready()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD9set_readyERKb"><code class="docutils literal notranslate"><span class="pre">set_ready()</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD12SBD_TOKEN_OKE"><code class="docutils literal notranslate"><span class="pre">SBD_TOKEN_OK</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD15SBD_TOKEN_READYE"><code class="docutils literal notranslate"><span class="pre">SBD_TOKEN_READY</span></code></a></li>
+<li><a class="reference internal" href="#_CPPv4N3SBD19SBD_TOKEN_SEPARATORE"><code class="docutils literal notranslate"><span class="pre">SBD_TOKEN_SEPARATOR</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -67,7 +112,7 @@
 </ul>
 </li>
 </ul>
-
+</div>
         </div>
       </div>
     </nav>
@@ -82,7 +127,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="library_root.html">Seabot2 C++ API</a></li>
       <li class="breadcrumb-item active">Class SBD</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api/classSBD.rst.txt" rel="nofollow"> View page source</a>
@@ -516,10 +560,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classSafetyNode.html" class="btn btn-neutral float-left" title="Class SafetyNode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classScreen.html" class="btn btn-neutral float-right" title="Class Screen" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

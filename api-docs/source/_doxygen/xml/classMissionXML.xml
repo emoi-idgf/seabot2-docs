@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classMissionXML" kind="class" language="C++" prot="public">
     <compoundname>MissionXML</compoundname>
+    <includes refid="mission__xml_8h" local="no">mission_xml.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classMissionXML_1a8e81956cc017b6f688d1585d07342761" prot="private" static="no" mutable="no">
         <type><ref refid="classLogData" kindref="compound">LogData</ref></type>
@@ -16,6 +17,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" line="24" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classMissionXML_1a785bdbb4cfe9b95f2b9c6490236184ce" compoundref="mission__xml_8cpp" startline="12" endline="15">MissionXML</referencedby>
+        <referencedby refid="classMissionXML_1abeb55700556f3ed46266def388bd2c47" compoundref="mission__xml_8cpp" startline="17" endline="65">write</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -46,7 +49,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" line="15" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/mission_xml.cpp" bodystart="12" bodyend="14"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" line="15" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/mission_xml.cpp" bodystart="12" bodyend="15"/>
+        <references refid="classMissionXML_1a8e81956cc017b6f688d1585d07342761" compoundref="mission__xml_8h" startline="24">m_log</references>
       </memberdef>
       <memberdef kind="function" id="classMissionXML_1abeb55700556f3ed46266def388bd2c47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -76,13 +80,31 @@
         <inbodydescription>
 <para>******************** HEADER ******************** ///</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" line="21" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/mission_xml.cpp" bodystart="16" bodyend="63"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" line="21" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/src/sbd/mission_xml.cpp" bodystart="17" bodyend="65"/>
+        <references refid="classLogData_1a1936dccf5a381a560f22bd6276abaa19a6a1bc712015dc8444044e0c42d21b02d" compoundref="log__data_8h" startline="90">LogData::CMD_MISSION_NEW</references>
+        <references refid="classMissionXML_1a8e81956cc017b6f688d1585d07342761" compoundref="mission__xml_8h" startline="24">m_log</references>
+        <references refid="classLogData_1a69026134c4c4ddb74d8d46fe17884c10" compoundref="log__data_8h" startline="294">LogData::msg_type_</references>
+        <references refid="classLogData_1abf026bd07dd8aa1f52706f1c50c1c620" compoundref="log__data_8h" startline="272">LogData::waypoint_list_</references>
+        <referencedby refid="classIridiumNode_1a3014d809ff5c01fe7632132083db03ee" compoundref="iridium__node_8cpp" startline="259" endline="294">IridiumNode::call_decode</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>LogData</label>
+        <link refid="classLogData"/>
+      </node>
+      <node id="1">
+        <label>MissionXML</label>
+        <link refid="classMissionXML"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_log</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" line="7" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_iridium_driver/include/seabot2_iridium_driver/sbd/mission_xml.h" bodystart="8" bodyend="26"/>
     <listofallmembers>
       <member refid="classMissionXML_1a8e81956cc017b6f688d1585d07342761" prot="private" virt="non-virtual"><scope>MissionXML</scope><name>m_log</name></member>

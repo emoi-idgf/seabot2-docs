@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
   <compounddef id="classLight" kind="class" language="C++" prot="public">
     <compoundname>Light</compoundname>
+    <includes refid="light_8h" local="no">light.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classLight_1a4b221f2ab7bcd3c8854b91be07497873" prot="private" static="no" mutable="no">
         <type>rclcpp::Node *</type>
@@ -16,7 +17,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="60" column="18" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="60" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="60" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" compoundref="light_8cpp" startline="48" endline="55">get_light_enable</referencedby>
+        <referencedby refid="classLight_1a62ef68324e00b79aa289f7953ff58110" compoundref="light_8cpp" startline="9" endline="32">i2c_open</referencedby>
+        <referencedby refid="classLight_1afbb734839a4ab686642fd0df129b176a" compoundref="light_8h" startline="29" endline="31">Light</referencedby>
+        <referencedby refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" compoundref="light_8cpp" startline="34" endline="46">set_light_enable</referencedby>
+        <referencedby refid="classLight_1a1c59510fece4651906b11c6def6d2a59" compoundref="light_8cpp" startline="66" endline="73">set_pattern</referencedby>
+        <referencedby refid="classLight_1a6db16bef32be3c82e236495250143d22" compoundref="light_8cpp" startline="57" endline="64">set_power</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1a466b977fef3bd4a683f678671eaa710f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -32,7 +39,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="62" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="62" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" compoundref="light_8cpp" startline="48" endline="55">get_light_enable</referencedby>
+        <referencedby refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" compoundref="light_8cpp" startline="91" endline="95">get_version</referencedby>
+        <referencedby refid="classLight_1a62ef68324e00b79aa289f7953ff58110" compoundref="light_8cpp" startline="9" endline="32">i2c_open</referencedby>
+        <referencedby refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" compoundref="light_8cpp" startline="34" endline="46">set_light_enable</referencedby>
+        <referencedby refid="classLight_1a1c59510fece4651906b11c6def6d2a59" compoundref="light_8cpp" startline="66" endline="73">set_pattern</referencedby>
+        <referencedby refid="classLight_1a6db16bef32be3c82e236495250143d22" compoundref="light_8cpp" startline="57" endline="64">set_power</referencedby>
+        <referencedby refid="classLight_1ad0e59fad13bb6cfadc25b2c477e9ddc7" compoundref="light_8cpp" startline="4" endline="7">~Light</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -48,7 +62,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="63" column="17" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="63" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="63" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classLight_1a09eef091f32c184451f3e7c33fcf2c02" compoundref="light_8cpp" startline="107" endline="110">getI2CPeriph</referencedby>
+        <referencedby refid="classLight_1a62ef68324e00b79aa289f7953ff58110" compoundref="light_8cpp" startline="9" endline="32">i2c_open</referencedby>
+        <referencedby refid="classLight_1a591875c4db2f45c82ff9d5d11140f10b" compoundref="light_8cpp" startline="112" endline="115">setI2CPeriph</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -63,7 +80,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="64" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="64" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" compoundref="light_8cpp" startline="97" endline="100">getI2CAddr</referencedby>
+        <referencedby refid="classLight_1a62ef68324e00b79aa289f7953ff58110" compoundref="light_8cpp" startline="9" endline="32">i2c_open</referencedby>
+        <referencedby refid="classLight_1a0c6f1ece6632eae09466063077f7f113" compoundref="light_8cpp" startline="102" endline="105">setI2CAddr</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1abe73ea1e65e4735650192fdfad7ca6bb" prot="private" static="no" mutable="no">
         <type>const int</type>
@@ -78,7 +98,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="65" column="15" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="65" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="65" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classLight_1a62ef68324e00b79aa289f7953ff58110" compoundref="light_8cpp" startline="9" endline="32">i2c_open</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1af58beed7c80699ff4230ddd84aaa4cc3" prot="private" static="no" mutable="no">
         <type>uint8_t</type>
@@ -86,7 +107,7 @@
         <argsstring></argsstring>
         <name>pic_code_version_</name>
         <qualifiedname>Light::pic_code_version_</qualifiedname>
-        <initializer>=0</initializer>
+        <initializer>= 0</initializer>
         <briefdescription>
 <para>Code version of the expected hardware. </para>
         </briefdescription>
@@ -94,7 +115,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="66" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="66" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="66" column="11" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" compoundref="light_8cpp" startline="91" endline="95">get_version</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -112,7 +134,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="69" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="69" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="69" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="69" bodyend="-1"/>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
+        <referencedby refid="classLight_1ade5099705c5c6e033074eee0b54d1670" compoundref="light_8cpp" startline="75" endline="89">set_flash_number</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1a007ed0cb64ebac749e19355783ca11f4" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -127,7 +151,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="70" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="70" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="70" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
+        <referencedby refid="classLight_1ade5099705c5c6e033074eee0b54d1670" compoundref="light_8cpp" startline="75" endline="89">set_flash_number</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classLight_1a2587ef2a62748113486a8b0e0b1d0c9b" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -142,7 +168,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="71" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="71" bodyend="-1"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="71" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
+        <referencedby refid="classLight_1ade5099705c5c6e033074eee0b54d1670" compoundref="light_8cpp" startline="75" endline="89">set_flash_number</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -163,7 +191,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="29" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="29" bodyend="31"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="29" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="29" bodyend="31"/>
+        <references refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" compoundref="light_8h" startline="60">n_</references>
       </memberdef>
       <memberdef kind="function" id="classLight_1ad0e59fad13bb6cfadc25b2c477e9ddc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -177,7 +206,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="33" column="5" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="4" bodyend="6"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="33" column="3" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="4" bodyend="7"/>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
       </memberdef>
       <memberdef kind="function" id="classLight_1a62ef68324e00b79aa289f7953ff58110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -195,7 +225,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="39" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="8" bodyend="26"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="39" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="9" bodyend="32"/>
+        <references refid="classLight_1abe73ea1e65e4735650192fdfad7ca6bb" compoundref="light_8h" startline="65">code_version_</references>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
+        <references refid="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" compoundref="light_8cpp" startline="91" endline="95">get_version</references>
+        <references refid="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" compoundref="light_8h" startline="64">i2c_addr_</references>
+        <references refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" compoundref="light_8h" startline="63">i2c_periph_</references>
+        <references refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" compoundref="light_8h" startline="60">n_</references>
+        <referencedby refid="classLightNode_1a8d7faf5a21ba49058f0a44378823dd85" compoundref="light__node_8cpp" startline="5" endline="20">LightNode::LightNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1aae2130a0fbd8e545b0ab76420209b3c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>uint8_t &amp;</type>
@@ -212,7 +249,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="45" column="13" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="73" bodyend="76"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="45" column="12" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="91" bodyend="95"/>
+        <references refid="light_8h_1ad5003733db85e9d2720dd83336f77e23" compoundref="light_8h" startline="20">CODE_VERSION</references>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
+        <references refid="classLight_1af58beed7c80699ff4230ddd84aaa4cc3" compoundref="light_8h" startline="66">pic_code_version_</references>
+        <referencedby refid="classLight_1a62ef68324e00b79aa289f7953ff58110" compoundref="light_8cpp" startline="9" endline="32">i2c_open</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1aea22e7b62cd81be7d5c9ea035085f0da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -229,7 +270,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="51" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="78" bodyend="80"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="51" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="97" bodyend="100"/>
+        <references refid="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" compoundref="light_8h" startline="64">i2c_addr_</references>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1a0c6f1ece6632eae09466063077f7f113" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -247,7 +290,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="53" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="82" bodyend="84"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="53" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="102" bodyend="105"/>
+        <references refid="classLight_1adc43c5cd69d4bfccc1c51a306ab6cd68" compoundref="light_8h" startline="64">i2c_addr_</references>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1a09eef091f32c184451f3e7c33fcf2c02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const std::string &amp;</type>
@@ -261,7 +306,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="55" column="23" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="86" bodyend="88"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="55" column="22" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="107" bodyend="110"/>
+        <references refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" compoundref="light_8h" startline="63">i2c_periph_</references>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1a591875c4db2f45c82ff9d5d11140f10b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -279,7 +326,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="57" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="90" bodyend="92"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="57" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="112" bodyend="115"/>
+        <references refid="classLight_1ac2daae3f96204d954b9e61d48aecb5f7" compoundref="light_8h" startline="63">i2c_periph_</references>
+        <referencedby refid="classLightNode_1a79ae9611c88cff3a3c38bd1412c62ecd" compoundref="light__node_8cpp" startline="50" endline="71">LightNode::init_parameters</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1a5552f461bf2167e13e6b57b4b3887eba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -307,7 +356,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="79" column="9" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="28" bodyend="39"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="79" column="7" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="34" bodyend="46"/>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
+        <references refid="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" compoundref="light_8cpp" startline="48" endline="55">get_light_enable</references>
+        <references refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" compoundref="light_8h" startline="60">n_</references>
+        <references refid="light_8h_1ac45415a251dc7fb58d4b35b85646263d" compoundref="light_8h" startline="17">REGISTER_LIGHT_ENABLE</references>
+        <referencedby refid="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" compoundref="light__node_8cpp" startline="73" endline="93">LightNode::service_light_callback</referencedby>
+        <referencedby refid="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" compoundref="light__node_8cpp" startline="29" endline="48">LightNode::timer_callback</referencedby>
+        <referencedby refid="classLightNode_1a3b257d7990ad32be87ede663390b7f55" compoundref="light__node_8cpp" startline="22" endline="27">LightNode::~LightNode</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1a18c571e501f1b6fb4a05c27fa4b7ed88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -324,7 +380,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="85" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="41" bodyend="47"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="85" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="48" bodyend="55"/>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
+        <references refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" compoundref="light_8h" startline="60">n_</references>
+        <references refid="light_8h_1ac45415a251dc7fb58d4b35b85646263d" compoundref="light_8h" startline="17">REGISTER_LIGHT_ENABLE</references>
+        <referencedby refid="classLightNode_1a8d7faf5a21ba49058f0a44378823dd85" compoundref="light__node_8cpp" startline="5" endline="20">LightNode::LightNode</referencedby>
+        <referencedby refid="classLight_1a5552f461bf2167e13e6b57b4b3887eba" compoundref="light_8cpp" startline="34" endline="46">set_light_enable</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1a6db16bef32be3c82e236495250143d22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -352,7 +413,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="91" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="49" bodyend="54"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="91" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="57" bodyend="64"/>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
+        <references refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" compoundref="light_8h" startline="60">n_</references>
+        <references refid="light_8h_1a7af72017db9863b364c203aafd133e6b" compoundref="light_8h" startline="18">REGISTER_LIGHT_POWER</references>
       </memberdef>
       <memberdef kind="function" id="classLight_1a1c59510fece4651906b11c6def6d2a59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,7 +425,7 @@
         <name>set_pattern</name>
         <qualifiedname>Light::set_pattern</qualifiedname>
         <param>
-          <type>const std::array&lt; __u8, NB_PATTERN &gt; &amp;</type>
+          <type>const std::array&lt; __u8, <ref refid="light_8h_1a4b89ee24c712fcd59eb930e513545a0d" kindref="member">NB_PATTERN</ref> &gt; &amp;</type>
           <declname>pattern</declname>
         </param>
         <briefdescription>
@@ -380,7 +444,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="97" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="56" bodyend="59"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="97" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="66" bodyend="73"/>
+        <references refid="classLight_1a466b977fef3bd4a683f678671eaa710f" compoundref="light_8h" startline="62">file_</references>
+        <references refid="classLight_1a4b221f2ab7bcd3c8854b91be07497873" compoundref="light_8h" startline="60">n_</references>
+        <references refid="light_8h_1a65daea6b1b03871f1f721705ee6ca4fd" compoundref="light_8h" startline="19">REGISTER_LIGHT_PATTERN</references>
+        <referencedby refid="classLight_1ade5099705c5c6e033074eee0b54d1670" compoundref="light_8cpp" startline="75" endline="89">set_flash_number</referencedby>
       </memberdef>
       <memberdef kind="function" id="classLight_1ade5099705c5c6e033074eee0b54d1670" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -409,13 +477,32 @@
         <inbodydescription>
 <para>in 0.1s ?</para>
         </inbodydescription>
-        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="103" column="10" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="61" bodyend="71"/>
+        <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="103" column="8" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/src/light.cpp" bodystart="75" bodyend="89"/>
+        <references refid="classLight_1ac474431242ef71a219e0da98e381259a" compoundref="light_8h" startline="69">flash_duration_</references>
+        <references refid="classLight_1a2587ef2a62748113486a8b0e0b1d0c9b" compoundref="light_8h" startline="71">flash_pause_between_flash_</references>
+        <references refid="classLight_1a007ed0cb64ebac749e19355783ca11f4" compoundref="light_8h" startline="70">flash_pause_end_</references>
+        <references refid="light_8h_1a4b89ee24c712fcd59eb930e513545a0d" compoundref="light_8h" startline="21">NB_PATTERN</references>
+        <references refid="classLight_1a1c59510fece4651906b11c6def6d2a59" compoundref="light_8cpp" startline="66" endline="73">set_pattern</references>
+        <referencedby refid="classLightNode_1ad8ff5de8dcbc21da9662bdcac441cb7e" compoundref="light__node_8cpp" startline="73" endline="93">LightNode::service_light_callback</referencedby>
+        <referencedby refid="classLightNode_1a5d0f83633a0d6be6b14ec2423fd8d9b0" compoundref="light__node_8cpp" startline="29" endline="48">LightNode::timer_callback</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Light</label>
+        <link refid="classLight"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>i2c_periph_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
     <location file="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" line="23" column="1" bodyfile="/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/seabot2_light_driver/include/seabot2_light_driver/light.h" bodystart="24" bodyend="104"/>
     <listofallmembers>
       <member refid="classLight_1abe73ea1e65e4735650192fdfad7ca6bb" prot="private" virt="non-virtual"><scope>Light</scope><name>code_version_</name></member>

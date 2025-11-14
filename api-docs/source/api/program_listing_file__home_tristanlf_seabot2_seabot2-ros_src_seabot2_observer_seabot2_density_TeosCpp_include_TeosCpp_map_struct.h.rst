@@ -29,16 +29,16 @@ Program Listing for File map_struct.h
    
    struct ARRAYINFO
    {
-       unsigned begins;
-       unsigned ends;
-       unsigned elements;
-       bool wasRepeatValue;
+     unsigned begins;
+     unsigned ends;
+     unsigned elements;
+     bool wasRepeatValue;
    
-       void init()
-       {
-           begins = ends = elements = 0;
-           wasRepeatValue = true;
-       };
+     void init()
+     {
+       begins = ends = elements = 0;
+       wasRepeatValue = true;
+     }
    };
    
    #endif // MAP_STRUCT_H_INCLUDED

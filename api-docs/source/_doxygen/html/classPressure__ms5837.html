@@ -72,15 +72,31 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classPressure__ms5837-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Pressure_ms5837 Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="pressure__ms5837_8h_source.html">pressure_ms5837.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Pressure_ms5837:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837__coll__graph.png" border="0" usemap="#aPressure__ms5837_coll__map" alt="Collaboration graph"/></div>
+<map name="aPressure__ms5837_coll__map" id="aPressure__ms5837_coll__map">
+<area shape="rect" title=" " alt="" coords="5,93,143,119"/>
+<area shape="rect" title=" " alt="" coords="45,5,103,31"/>
+<area shape="poly" title=" " alt="" coords="77,45,77,93,71,93,71,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5fb1cb8ebe8fac67b1f6362354d0f2d" id="r_ad5fb1cb8ebe8fac67b1f6362354d0f2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ad5fb1cb8ebe8fac67b1f6362354d0f2d">Pressure_ms5837</a> (rclcpp::Node *n)</td></tr>
 <tr class="separator:ad5fb1cb8ebe8fac67b1f6362354d0f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76d60e36c0666d52520e2af00a7f60b" id="r_ad76d60e36c0666d52520e2af00a7f60b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ad76d60e36c0666d52520e2af00a7f60b">~Pressure_ms5837</a> ()</td></tr>
+<tr class="separator:ad76d60e36c0666d52520e2af00a7f60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca7dc4535886c41a06ec1363cfeb3e44" id="r_aca7dc4535886c41a06ec1363cfeb3e44"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#aca7dc4535886c41a06ec1363cfeb3e44">init_sensor</a> ()</td></tr>
 <tr class="separator:aca7dc4535886c41a06ec1363cfeb3e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad50578aa60997393fa57437ff2ae7a04" id="r_ad50578aa60997393fa57437ff2ae7a04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ad50578aa60997393fa57437ff2ae7a04">measure</a> ()</td></tr>
@@ -101,13 +117,61 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6704e522269e18e1985722556ae961d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75835492b84efec50cdd5d506ee3e967" id="r_a75835492b84efec50cdd5d506ee3e967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a75835492b84efec50cdd5d506ee3e967">setI2CPeriph</a> (const std::string &amp;i2CPeriph)</td></tr>
 <tr class="separator:a75835492b84efec50cdd5d506ee3e967"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adef4418f6926f6605f29445a52fac52e" id="r_adef4418f6926f6605f29445a52fac52e"><td class="memItemLeft" align="right" valign="top"><a id="adef4418f6926f6605f29445a52fac52e" name="adef4418f6926f6605f29445a52fac52e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (const u_int16_t val, const long unsigned int index)</td></tr>
+<tr class="memitem:adef4418f6926f6605f29445a52fac52e" id="r_adef4418f6926f6605f29445a52fac52e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#adef4418f6926f6605f29445a52fac52e">setCoefficient</a> (const u_int16_t val, const long unsigned int index)</td></tr>
 <tr class="separator:adef4418f6926f6605f29445a52fac52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d67ba7ccf04776cb7ad47dc5fc8ccc8" id="r_a3d67ba7ccf04776cb7ad47dc5fc8ccc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a3d67ba7ccf04776cb7ad47dc5fc8ccc8">setD1</a> (u_int32_t d1)</td></tr>
 <tr class="separator:a3d67ba7ccf04776cb7ad47dc5fc8ccc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8e54d4d7a60308486f4dc709930dd7f" id="r_ad8e54d4d7a60308486f4dc709930dd7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ad8e54d4d7a60308486f4dc709930dd7f">setD2</a> (u_int32_t d2)</td></tr>
 <tr class="separator:ad8e54d4d7a60308486f4dc709930dd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a74d30d3a98c7a6b029f74048fa1a2985" id="r_a74d30d3a98c7a6b029f74048fa1a2985"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a74d30d3a98c7a6b029f74048fa1a2985">i2c_open</a> ()</td></tr>
+<tr class="separator:a74d30d3a98c7a6b029f74048fa1a2985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd221dc6b9caf1e0e856e32c2e7cbfe" id="r_aadd221dc6b9caf1e0e856e32c2e7cbfe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#aadd221dc6b9caf1e0e856e32c2e7cbfe">measure_D1</a> ()</td></tr>
+<tr class="separator:aadd221dc6b9caf1e0e856e32c2e7cbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9780b2b51e9aaf97b4cfaf0a95adee2" id="r_ad9780b2b51e9aaf97b4cfaf0a95adee2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ad9780b2b51e9aaf97b4cfaf0a95adee2">measure_D2</a> ()</td></tr>
+<tr class="separator:ad9780b2b51e9aaf97b4cfaf0a95adee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ada4596ee635ba895507a1fa9e0b52604" id="r_ada4596ee635ba895507a1fa9e0b52604"><td class="memItemLeft" align="right" valign="top">rclcpp::Node *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ada4596ee635ba895507a1fa9e0b52604">n_</a> = nullptr</td></tr>
+<tr class="separator:ada4596ee635ba895507a1fa9e0b52604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4e6a01050e89414ea5a9a43d668df0" id="r_a3b4e6a01050e89414ea5a9a43d668df0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a3b4e6a01050e89414ea5a9a43d668df0">file_</a> = 0</td></tr>
+<tr class="memdesc:a3b4e6a01050e89414ea5a9a43d668df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to rclcpp Node.  <br /></td></tr>
+<tr class="separator:a3b4e6a01050e89414ea5a9a43d668df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990c25340351f6bbaaf958f57bf82911" id="r_a990c25340351f6bbaaf958f57bf82911"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a990c25340351f6bbaaf958f57bf82911">i2c_addr_</a> = 0x76</td></tr>
+<tr class="memdesc:a990c25340351f6bbaaf958f57bf82911"><td class="mdescLeft">&#160;</td><td class="mdescRight">File to the i2c port.  <br /></td></tr>
+<tr class="separator:a990c25340351f6bbaaf958f57bf82911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d2cc316b8b3c1f0d3b7782024fb9fb" id="r_ad8d2cc316b8b3c1f0d3b7782024fb9fb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ad8d2cc316b8b3c1f0d3b7782024fb9fb">i2c_periph_</a> = &quot;/dev/i2c-0&quot;</td></tr>
+<tr class="memdesc:ad8d2cc316b8b3c1f0d3b7782024fb9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C add of the sensor.  <br /></td></tr>
+<tr class="separator:ad8d2cc316b8b3c1f0d3b7782024fb9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6952ef66a5a7f5efbfcbda42d1ad4cc8" id="r_a6952ef66a5a7f5efbfcbda42d1ad4cc8"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a6952ef66a5a7f5efbfcbda42d1ad4cc8">p_min_out_range_</a> = 0.7</td></tr>
+<tr class="memdesc:a6952ef66a5a7f5efbfcbda42d1ad4cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C port.  <br /></td></tr>
+<tr class="separator:a6952ef66a5a7f5efbfcbda42d1ad4cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bcb0ae603c709f6993b69cf0b05520f" id="r_a9bcb0ae603c709f6993b69cf0b05520f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a9bcb0ae603c709f6993b69cf0b05520f">p_max_out_range_</a> = 30.0</td></tr>
+<tr class="memdesc:a9bcb0ae603c709f6993b69cf0b05520f"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum pression allowed in bar  <br /></td></tr>
+<tr class="separator:a9bcb0ae603c709f6993b69cf0b05520f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aba3f51365d8a3ab671e6ae2b709e06" id="r_a5aba3f51365d8a3ab671e6ae2b709e06"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a5aba3f51365d8a3ab671e6ae2b709e06">t_min_out_range_</a> = 0.0</td></tr>
+<tr class="memdesc:a5aba3f51365d8a3ab671e6ae2b709e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum pression allowed in bar  <br /></td></tr>
+<tr class="separator:a5aba3f51365d8a3ab671e6ae2b709e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ec0ab45fdbcb2afc4ab33ece917c6be" id="r_a8ec0ab45fdbcb2afc4ab33ece917c6be"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a8ec0ab45fdbcb2afc4ab33ece917c6be">t_max_out_range_</a> = 80.0</td></tr>
+<tr class="memdesc:a8ec0ab45fdbcb2afc4ab33ece917c6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum temperature allowed in degree  <br /></td></tr>
+<tr class="separator:a8ec0ab45fdbcb2afc4ab33ece917c6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8b8131e17b3e1c41f8b45a4c6974b3" id="r_aee8b8131e17b3e1c41f8b45a4c6974b3"><td class="memItemLeft" align="right" valign="top">std::array&lt; u_int16_t, 7 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#aee8b8131e17b3e1c41f8b45a4c6974b3">C_</a></td></tr>
+<tr class="memdesc:aee8b8131e17b3e1c41f8b45a4c6974b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">maximum temperature allowed degree  <br /></td></tr>
+<tr class="separator:aee8b8131e17b3e1c41f8b45a4c6974b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08508d39b3cae4e895f1730a9b9a51d" id="r_aa08508d39b3cae4e895f1730a9b9a51d"><td class="memItemLeft" align="right" valign="top">u_int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#aa08508d39b3cae4e895f1730a9b9a51d">D1_</a></td></tr>
+<tr class="memdesc:aa08508d39b3cae4e895f1730a9b9a51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory calibration coefficients.  <br /></td></tr>
+<tr class="separator:aa08508d39b3cae4e895f1730a9b9a51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac00e1edd8165382c3e0254540610790f" id="r_ac00e1edd8165382c3e0254540610790f"><td class="memItemLeft" align="right" valign="top">u_int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#ac00e1edd8165382c3e0254540610790f">D2_</a></td></tr>
+<tr class="separator:ac00e1edd8165382c3e0254540610790f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ed24d84b37e790a1eb6bf08294be5b" id="r_a33ed24d84b37e790a1eb6bf08294be5b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a33ed24d84b37e790a1eb6bf08294be5b">pressure_</a> = 1.0</td></tr>
+<tr class="memdesc:a33ed24d84b37e790a1eb6bf08294be5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Digital pressure and temperature value.  <br /></td></tr>
+<tr class="separator:a33ed24d84b37e790a1eb6bf08294be5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce2bf15da8bee1434234fc9afc27b5e" id="r_a3ce2bf15da8bee1434234fc9afc27b5e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPressure__ms5837.html#a3ce2bf15da8bee1434234fc9afc27b5e">temperature_</a> = 10.0</td></tr>
+<tr class="memdesc:a3ce2bf15da8bee1434234fc9afc27b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">in bar  <br /></td></tr>
+<tr class="separator:a3ce2bf15da8bee1434234fc9afc27b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad5fb1cb8ebe8fac67b1f6362354d0f2d" name="ad5fb1cb8ebe8fac67b1f6362354d0f2d"></a>
@@ -142,6 +206,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
 
 </div>
 </div>
+<a id="ad76d60e36c0666d52520e2af00a7f60b" name="ad76d60e36c0666d52520e2af00a7f60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76d60e36c0666d52520e2af00a7f60b">&#9670;&#160;</a></span>~Pressure_ms5837()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Pressure_ms5837::~Pressure_ms5837 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac212918637be8921c1fbb023897b75b0" name="ac212918637be8921c1fbb023897b75b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac212918637be8921c1fbb023897b75b0">&#9670;&#160;</a></span>compute()</h2>
@@ -161,6 +242,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
 <p>Accurate temperature</p>
 <p>in bar (/10 if in mbar)</p>
 <p>detection of overpressure (&gt;300m)</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_ac212918637be8921c1fbb023897b75b0_icgraph.png" border="0" usemap="#aclassPressure__ms5837_ac212918637be8921c1fbb023897b75b0_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_ac212918637be8921c1fbb023897b75b0_icgraph" id="aclassPressure__ms5837_ac212918637be8921c1fbb023897b75b0_icgraph">
+<area shape="rect" title=" " alt="" coords="688,13,891,38"/>
+<area shape="rect" href="classPressure__ms5837.html#ad50578aa60997393fa57437ff2ae7a04" title=" " alt="" coords="437,13,640,38"/>
+<area shape="poly" title=" " alt="" coords="674,28,640,28,640,23,674,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a7ea03852f48f8e182883580f41ddcab6" title="Functions." alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -188,6 +283,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
 </div><div class="memdoc">
 <p>Getter to the pressure measured by <a class="el" href="classPressure__ms5837.html#ad50578aa60997393fa57437ff2ae7a04">measure()</a> </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <p>Getter to the pression measured by the sensor </p><dl class="section return"><dt>Returns</dt><dd>pressure in bar </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_a077176ddc20aa2d246e48a415264d155_icgraph.png" border="0" usemap="#aclassPressure__ms5837_a077176ddc20aa2d246e48a415264d155_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_a077176ddc20aa2d246e48a415264d155_icgraph" id="aclassPressure__ms5837_a077176ddc20aa2d246e48a415264d155_icgraph">
+<area shape="rect" title=" " alt="" coords="437,5,604,45"/>
+<area shape="rect" href="classPressureMS5837Node.html#a7ea03852f48f8e182883580f41ddcab6" title="Functions." alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -215,6 +322,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
 </div><div class="memdoc">
 <p>Getter to the temperature measured by <a class="el" href="classPressure__ms5837.html#ad50578aa60997393fa57437ff2ae7a04">measure()</a> </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <p>Getter to the temperature measured by the sensor </p><dl class="section return"><dt>Returns</dt><dd>temperature in degree </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_abc4dcd0e59d4e8e46991c712816edd64_icgraph.png" border="0" usemap="#aclassPressure__ms5837_abc4dcd0e59d4e8e46991c712816edd64_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_abc4dcd0e59d4e8e46991c712816edd64_icgraph" id="aclassPressure__ms5837_abc4dcd0e59d4e8e46991c712816edd64_icgraph">
+<area shape="rect" title=" " alt="" coords="437,5,604,45"/>
+<area shape="rect" href="classPressureMS5837Node.html#a7ea03852f48f8e182883580f41ddcab6" title="Functions." alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -233,6 +352,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_a7448101fd65cbfa88c6feea9f342df9a_icgraph.png" border="0" usemap="#aclassPressure__ms5837_a7448101fd65cbfa88c6feea9f342df9a_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_a7448101fd65cbfa88c6feea9f342df9a_icgraph" id="aclassPressure__ms5837_a7448101fd65cbfa88c6feea9f342df9a_icgraph">
+<area shape="rect" title=" " alt="" coords="437,13,655,38"/>
+<area shape="rect" href="classPressureMS5837Node.html#ae54dd8046cab69f01752a425c76d651e" title=" " alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -251,6 +382,55 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_a6704e522269e18e1985722556ae961d2_icgraph.png" border="0" usemap="#aclassPressure__ms5837_a6704e522269e18e1985722556ae961d2_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_a6704e522269e18e1985722556ae961d2_icgraph" id="aclassPressure__ms5837_a6704e522269e18e1985722556ae961d2_icgraph">
+<area shape="rect" title=" " alt="" coords="437,13,665,38"/>
+<area shape="rect" href="classPressureMS5837Node.html#ae54dd8046cab69f01752a425c76d651e" title=" " alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,389,28,389,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a74d30d3a98c7a6b029f74048fa1a2985" name="a74d30d3a98c7a6b029f74048fa1a2985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d30d3a98c7a6b029f74048fa1a2985">&#9670;&#160;</a></span>i2c_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pressure_ms5837::i2c_open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_a74d30d3a98c7a6b029f74048fa1a2985_icgraph.png" border="0" usemap="#aclassPressure__ms5837_a74d30d3a98c7a6b029f74048fa1a2985_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_a74d30d3a98c7a6b029f74048fa1a2985_icgraph" id="aclassPressure__ms5837_a74d30d3a98c7a6b029f74048fa1a2985_icgraph">
+<area shape="rect" title=" " alt="" coords="440,13,643,38"/>
+<area shape="rect" href="classPressure__ms5837.html#aca7dc4535886c41a06ec1363cfeb3e44" title=" " alt="" coords="225,5,392,45"/>
+<area shape="poly" title=" " alt="" coords="426,28,392,28,392,23,426,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -269,6 +449,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
       </table>
 </div><div class="memdoc">
 <p>Initialize the sensor </p><dl class="section return"><dt>Returns</dt><dd>true if successful </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_cgraph.png" border="0" usemap="#aclassPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_cgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_cgraph" id="aclassPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,172,63"/>
+<area shape="rect" href="classPressure__ms5837.html#a74d30d3a98c7a6b029f74048fa1a2985" title=" " alt="" coords="220,5,423,31"/>
+<area shape="poly" title=" " alt="" coords="172,32,206,28,207,33,173,37"/>
+<area shape="rect" href="classPressure__ms5837.html#a2912ce7456ee302890b68b8f8e89a63d" title=" " alt="" coords="232,55,411,80"/>
+<area shape="poly" title=" " alt="" coords="173,49,219,54,218,59,172,55"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_icgraph.png" border="0" usemap="#aclassPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_icgraph" id="aclassPressure__ms5837_aca7dc4535886c41a06ec1363cfeb3e44_icgraph">
+<area shape="rect" title=" " alt="" coords="225,5,392,45"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -287,6 +489,112 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
       </table>
 </div><div class="memdoc">
 <p>Ask sensor to measure pressure and temperature </p><dl class="section return"><dt>Returns</dt><dd>true if successful </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_cgraph.png" border="0" usemap="#aclassPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_cgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_cgraph" id="aclassPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_cgraph">
+<area shape="rect" title=" " alt="" coords="5,55,208,80"/>
+<area shape="rect" href="classPressure__ms5837.html#ac212918637be8921c1fbb023897b75b0" title=" " alt="" coords="268,5,471,31"/>
+<area shape="poly" title=" " alt="" coords="174,52,287,31,288,36,175,57"/>
+<area shape="rect" href="classPressure__ms5837.html#aadd221dc6b9caf1e0e856e32c2e7cbfe" title=" " alt="" coords="256,55,483,80"/>
+<area shape="poly" title=" " alt="" coords="208,65,242,65,242,70,208,70"/>
+<area shape="rect" href="classPressure__ms5837.html#ad9780b2b51e9aaf97b4cfaf0a95adee2" title=" " alt="" coords="256,104,483,129"/>
+<area shape="poly" title=" " alt="" coords="175,77,288,99,287,104,174,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_icgraph.png" border="0" usemap="#aclassPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_icgraph" id="aclassPressure__ms5837_ad50578aa60997393fa57437ff2ae7a04_icgraph">
+<area shape="rect" title=" " alt="" coords="437,13,640,38"/>
+<area shape="rect" href="classPressureMS5837Node.html#a7ea03852f48f8e182883580f41ddcab6" title="Functions." alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aadd221dc6b9caf1e0e856e32c2e7cbfe" name="aadd221dc6b9caf1e0e856e32c2e7cbfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd221dc6b9caf1e0e856e32c2e7cbfe">&#9670;&#160;</a></span>measure_D1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pressure_ms5837::measure_D1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read Digital Pressure </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_aadd221dc6b9caf1e0e856e32c2e7cbfe_icgraph.png" border="0" usemap="#aclassPressure__ms5837_aadd221dc6b9caf1e0e856e32c2e7cbfe_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_aadd221dc6b9caf1e0e856e32c2e7cbfe_icgraph" id="aclassPressure__ms5837_aadd221dc6b9caf1e0e856e32c2e7cbfe_icgraph">
+<area shape="rect" title=" " alt="" coords="688,13,915,38"/>
+<area shape="rect" href="classPressure__ms5837.html#ad50578aa60997393fa57437ff2ae7a04" title=" " alt="" coords="437,13,640,38"/>
+<area shape="poly" title=" " alt="" coords="674,28,640,28,640,23,674,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a7ea03852f48f8e182883580f41ddcab6" title="Functions." alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9780b2b51e9aaf97b4cfaf0a95adee2" name="ad9780b2b51e9aaf97b4cfaf0a95adee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9780b2b51e9aaf97b4cfaf0a95adee2">&#9670;&#160;</a></span>measure_D2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Pressure_ms5837::measure_D2 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read Digital Temperature </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_ad9780b2b51e9aaf97b4cfaf0a95adee2_icgraph.png" border="0" usemap="#aclassPressure__ms5837_ad9780b2b51e9aaf97b4cfaf0a95adee2_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_ad9780b2b51e9aaf97b4cfaf0a95adee2_icgraph" id="aclassPressure__ms5837_ad9780b2b51e9aaf97b4cfaf0a95adee2_icgraph">
+<area shape="rect" title=" " alt="" coords="688,13,915,38"/>
+<area shape="rect" href="classPressure__ms5837.html#ad50578aa60997393fa57437ff2ae7a04" title=" " alt="" coords="437,13,640,38"/>
+<area shape="poly" title=" " alt="" coords="674,28,640,28,640,23,674,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a7ea03852f48f8e182883580f41ddcab6" title="Functions." alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -305,6 +613,54 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
       </table>
 </div><div class="memdoc">
 <p>Ask the sensor to reset </p><dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_a2912ce7456ee302890b68b8f8e89a63d_icgraph.png" border="0" usemap="#aclassPressure__ms5837_a2912ce7456ee302890b68b8f8e89a63d_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_a2912ce7456ee302890b68b8f8e89a63d_icgraph" id="aclassPressure__ms5837_a2912ce7456ee302890b68b8f8e89a63d_icgraph">
+<area shape="rect" title=" " alt="" coords="440,13,619,38"/>
+<area shape="rect" href="classPressure__ms5837.html#aca7dc4535886c41a06ec1363cfeb3e44" title=" " alt="" coords="225,5,392,45"/>
+<area shape="poly" title=" " alt="" coords="426,28,392,28,392,23,426,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adef4418f6926f6605f29445a52fac52e" name="adef4418f6926f6605f29445a52fac52e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef4418f6926f6605f29445a52fac52e">&#9670;&#160;</a></span>setCoefficient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pressure_ms5837::setCoefficient </td>
+          <td>(</td>
+          <td class="paramtype">const u_int16_t&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const long unsigned int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -377,6 +733,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_ac9d35faf933a1ae53127a524ff881609_icgraph.png" border="0" usemap="#aclassPressure__ms5837_ac9d35faf933a1ae53127a524ff881609_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_ac9d35faf933a1ae53127a524ff881609_icgraph" id="aclassPressure__ms5837_ac9d35faf933a1ae53127a524ff881609_icgraph">
+<area shape="rect" title=" " alt="" coords="437,13,653,38"/>
+<area shape="rect" href="classPressureMS5837Node.html#ae54dd8046cab69f01752a425c76d651e" title=" " alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -401,12 +769,333 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setCoefficient</b> (c
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPressure__ms5837_a75835492b84efec50cdd5d506ee3e967_icgraph.png" border="0" usemap="#aclassPressure__ms5837_a75835492b84efec50cdd5d506ee3e967_icgraph" alt=""/></div>
+<map name="aclassPressure__ms5837_a75835492b84efec50cdd5d506ee3e967_icgraph" id="aclassPressure__ms5837_a75835492b84efec50cdd5d506ee3e967_icgraph">
+<area shape="rect" title=" " alt="" coords="437,13,664,38"/>
+<area shape="rect" href="classPressureMS5837Node.html#ae54dd8046cab69f01752a425c76d651e" title=" " alt="" coords="225,5,389,45"/>
+<area shape="poly" title=" " alt="" coords="424,28,390,28,390,23,424,23"/>
+<area shape="rect" href="classPressureMS5837Node.html#a82f1accec47deb9806f79ce9ff3906e8" title=" " alt="" coords="5,5,177,45"/>
+<area shape="poly" title=" " alt="" coords="211,28,178,28,178,23,211,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aee8b8131e17b3e1c41f8b45a4c6974b3" name="aee8b8131e17b3e1c41f8b45a4c6974b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8b8131e17b3e1c41f8b45a4c6974b3">&#9670;&#160;</a></span>C_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;u_int16_t, 7&gt; Pressure_ms5837::C_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maximum temperature allowed degree </p>
+
+</div>
+</div>
+<a id="aa08508d39b3cae4e895f1730a9b9a51d" name="aa08508d39b3cae4e895f1730a9b9a51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08508d39b3cae4e895f1730a9b9a51d">&#9670;&#160;</a></span>D1_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">u_int32_t Pressure_ms5837::D1_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Factory calibration coefficients. </p>
+
+</div>
+</div>
+<a id="ac00e1edd8165382c3e0254540610790f" name="ac00e1edd8165382c3e0254540610790f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00e1edd8165382c3e0254540610790f">&#9670;&#160;</a></span>D2_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">u_int32_t Pressure_ms5837::D2_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b4e6a01050e89414ea5a9a43d668df0" name="a3b4e6a01050e89414ea5a9a43d668df0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b4e6a01050e89414ea5a9a43d668df0">&#9670;&#160;</a></span>file_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pressure_ms5837::file_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to rclcpp Node. </p>
+
+</div>
+</div>
+<a id="a990c25340351f6bbaaf958f57bf82911" name="a990c25340351f6bbaaf958f57bf82911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990c25340351f6bbaaf958f57bf82911">&#9670;&#160;</a></span>i2c_addr_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Pressure_ms5837::i2c_addr_ = 0x76</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File to the i2c port. </p>
+
+</div>
+</div>
+<a id="ad8d2cc316b8b3c1f0d3b7782024fb9fb" name="ad8d2cc316b8b3c1f0d3b7782024fb9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d2cc316b8b3c1f0d3b7782024fb9fb">&#9670;&#160;</a></span>i2c_periph_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Pressure_ms5837::i2c_periph_ = &quot;/dev/i2c-0&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>I2C add of the sensor. </p>
+
+</div>
+</div>
+<a id="ada4596ee635ba895507a1fa9e0b52604" name="ada4596ee635ba895507a1fa9e0b52604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4596ee635ba895507a1fa9e0b52604">&#9670;&#160;</a></span>n_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rclcpp::Node* Pressure_ms5837::n_ = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bcb0ae603c709f6993b69cf0b05520f" name="a9bcb0ae603c709f6993b69cf0b05520f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bcb0ae603c709f6993b69cf0b05520f">&#9670;&#160;</a></span>p_max_out_range_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Pressure_ms5837::p_max_out_range_ = 30.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>minimum pression allowed in bar </p>
+
+</div>
+</div>
+<a id="a6952ef66a5a7f5efbfcbda42d1ad4cc8" name="a6952ef66a5a7f5efbfcbda42d1ad4cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6952ef66a5a7f5efbfcbda42d1ad4cc8">&#9670;&#160;</a></span>p_min_out_range_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Pressure_ms5837::p_min_out_range_ = 0.7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>I2C port. </p>
+
+</div>
+</div>
+<a id="a33ed24d84b37e790a1eb6bf08294be5b" name="a33ed24d84b37e790a1eb6bf08294be5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ed24d84b37e790a1eb6bf08294be5b">&#9670;&#160;</a></span>pressure_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pressure_ms5837::pressure_ = 1.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Digital pressure and temperature value. </p>
+
+</div>
+</div>
+<a id="a8ec0ab45fdbcb2afc4ab33ece917c6be" name="a8ec0ab45fdbcb2afc4ab33ece917c6be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ec0ab45fdbcb2afc4ab33ece917c6be">&#9670;&#160;</a></span>t_max_out_range_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Pressure_ms5837::t_max_out_range_ = 80.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>minimum temperature allowed in degree </p>
+
+</div>
+</div>
+<a id="a5aba3f51365d8a3ab671e6ae2b709e06" name="a5aba3f51365d8a3ab671e6ae2b709e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aba3f51365d8a3ab671e6ae2b709e06">&#9670;&#160;</a></span>t_min_out_range_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float Pressure_ms5837::t_min_out_range_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>maximum pression allowed in bar </p>
+
+</div>
+</div>
+<a id="a3ce2bf15da8bee1434234fc9afc27b5e" name="a3ce2bf15da8bee1434234fc9afc27b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce2bf15da8bee1434234fc9afc27b5e">&#9670;&#160;</a></span>temperature_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pressure_ms5837::temperature_ = 10.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>in bar </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5837_driver/include/pressure_ms5837_driver/<a class="el" href="pressure__ms5837_8h_source.html">pressure_ms5837.h</a></li>
-<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5837_driver/src/<b>pressure_ms5837.cpp</b></li>
+<li>/home/tristanlf/seabot2/seabot2-ros/src/seabot2_driver/pressure_ms5837_driver/src/<a class="el" href="pressure__ms5837_8cpp.html">pressure_ms5837.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
